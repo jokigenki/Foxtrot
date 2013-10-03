@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Inputs:"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="&amp;quot;Facing Right?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;Walking&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="80">
+                    <int id="0" val="Outputs:"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="100">
+                    <int id="0" val="&amp;quot;Is Falling?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute"/>
+                </comment-short>
+                <set-val-46-9 comment="false" x="26" y="120">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-46-9>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <comment-short comment="false" x="37" y="65">
+                            <int id="0" val="Clear Current Anim Category Is Same As &amp;lt;Animation Category&amp;gt;"/>
+                        </comment-short>
+                        <custom-91 comment="false" x="37" y="85">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-46-6 comment="false" id="1" x="0" y="0"/>
+                        </custom-91>
+                        <stop comment="false" x="37" y="117"/>
+                    </group>
+                    <get-val-46-9 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="149">
+                    <group eventID="-1" id="-1">
+                        <say-this comment="false" x="37" y="192">
+                            <int id="0" val="CheckFalling"/>
+                        </say-this>
+                        <if comment="false" x="37" y="212">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="242">
+                                    <int id="0" val="Clear Current Anim Category Is Same As &amp;lt;Animation Category&amp;gt;"/>
+                                </comment-short>
+                                <custom-91 comment="false" x="48" y="262">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-46-6 comment="false" id="1" x="0" y="0"/>
+                                </custom-91>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-46-2 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <as-boolean comment="false" id="0" x="0" y="0">
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="On Ground?"/>
+                            </actor-get-prop>
+                        </as-boolean>
+                    </not>
+                </if>
+                <else comment="false" x="26" y="318">
+                    <group eventID="-1" id="-1">
+                        <comment-short comment="false" x="37" y="338">
+                            <int id="0" val="Clear Current Anim Category Is Same As &amp;lt;Animation Category&amp;gt;"/>
+                        </comment-short>
+                        <custom-91 comment="false" x="37" y="358">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-46-6 comment="false" id="1" x="0" y="0"/>
+                        </custom-91>
+                        <stop comment="false" x="37" y="390"/>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="422">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="452">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Falling?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-46-2 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <else comment="false" x="26" y="496">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="516">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Falling?"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <if comment="false" x="37" y="548">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="586">
+                                    <int id="0" val="Custom: Loop &amp;lt;Fall Right Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="606">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-46-3 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-46-6 comment="false" id="2" x="0" y="0"/>
+                                </custom-90>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                        <else comment="false" x="37" y="650">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="670">
+                                    <int id="0" val="Custom: Loop &amp;lt;Fall Left Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="690">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-46-4 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-46-6 comment="false" id="2" x="0" y="0"/>
+                                </custom-90>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+                <set-val-46-1 comment="false" x="26" y="746">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-46-1>
+                <if comment="false" x="26" y="779">
+                    <group eventID="-1" id="-1">
+                        <set-val-46-5 comment="false" x="37" y="817">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                        </set-val-46-5>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="On Ground?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receive-message comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-46-2 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-46-2>
+                <if comment="false" x="26" y="65">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="108"/>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="On Ground?"/>
+                        </actor-get-prop>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <get-val-46-1 comment="false" id="1" x="0" y="0"/>
+                        </lesseq>
+                    </or>
+                </if>
+                <if comment="false" x="26" y="140">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="178"/>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Wall Sliding?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+                <if comment="false" x="26" y="210">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="263"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-46-2 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <abs comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-val-46-5 comment="false" id="0" x="0" y="0"/>
+                                    <get-xy comment="false" id="1" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                </minus>
+                            </abs>
+                            <int id="1" val="3"/>
+                        </lesseq>
+                    </and>
+                </if>
+                <set-val-46-2 comment="false" x="26" y="295">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-46-2>
+            </group>
+            <int id="0" val="CheckFalling"/>
+        </receive-message>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

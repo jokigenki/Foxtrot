@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-256-3 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-256-3>
+                <custom-261 comment="false" x="26" y="65">
+                    <ACTOR eid="this" id="0"/>
+                </custom-261>
+                <if comment="false" x="26" y="92">
+                    <group eventID="1" id="-1">
+                        <custom-88 comment="false" x="37" y="130">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-256-1 comment="false" id="1" x="0" y="0"/>
+                        </custom-88>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Facing Right?"/>
+                        </actor-get-prop>
+                        <true comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <else comment="false" x="26" y="174">
+                    <group eventID="1" id="-1">
+                        <custom-88 comment="false" x="37" y="194">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-256-2 comment="false" id="1" x="0" y="0"/>
+                        </custom-88>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="65">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <if comment="false" x="37" y="92">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="125">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Reload On Death PM"/>
+                                    <int id="2" val="Reload"/>
+                                </say>
+                            </group>
+                            <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Reload On Death PM"/>
+                            </is-snippet-enableda>
+                        </if>
+                    </group>
+                    <code-short comment="false" id="0" x="0" y="0">
+                        <int id="0" val="animationHasFinished ()"/>
+                    </code-short>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom-code comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="public function animationHasFinished ():Bool&#10;{&#10;&#9;return _IsKilled &amp;amp;&amp;amp;&#10;&#9;&#9;(!actor.isAnimationPlaying() ||&#10;&#9;&#9;(actor.getAnimation() != _LeftAnimation &amp;amp;&amp;amp;&#10;&#9;&#9;actor.getAnimation() != _RightAnimation));&#10;}&#10;"/>
+                </code-long>
+            </group>
+        </event-custom-code>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

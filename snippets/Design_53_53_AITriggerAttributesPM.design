@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="2" id="-1">
+                                <set-val-53-8 comment="false" x="48" y="95">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-53-8>
+                                <incdec comment="false" x="48" y="120">
+                                    <int id="0" val="4"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                                <if comment="false" x="48" y="147">
+                                    <group eventID="2" id="-1">
+                                        <if comment="false" x="59" y="182">
+                                            <group eventID="2" id="-1">
+                                                <shout comment="false" x="70" y="225">
+                                                    <get-val-53-9 comment="false" id="0" x="0" y="0"/>
+                                                    <get-val-53-7 comment="false" id="1" x="0" y="0"/>
+                                                </shout>
+                                            </group>
+                                            <not comment="false" id="0" x="0" y="0">
+                                                <custom-65 comment="false" id="0" x="0" y="0">
+                                                    <get-val-53-9 comment="false" id="0" x="0" y="0"/>
+                                                </custom-65>
+                                            </not>
+                                        </if>
+                                        <else comment="false" x="59" y="269">
+                                            <group eventID="2" id="-1">
+                                                <scene-shout comment="false" x="70" y="289">
+                                                    <get-val-53-7 comment="false" id="0" x="0" y="0"/>
+                                                </scene-shout>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <str-empty comment="false" id="0" x="0" y="0">
+                                            <get-val-53-7 comment="false" id="0" x="0" y="0"/>
+                                        </str-empty>
+                                    </not>
+                                </if>
+                                <if comment="false" x="48" y="338">
+                                    <group eventID="2" id="-1">
+                                        <die comment="false" x="59" y="373">
+                                            <ACTOR eid="this" id="0"/>
+                                        </die>
+                                    </group>
+                                    <and comment="false" id="0" x="0" y="0">
+                                        <more comment="false" id="0" x="0" y="0">
+                                            <get-val-53-5 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="-1"/>
+                                        </more>
+                                        <moreeq comment="false" id="1" x="0" y="0">
+                                            <get-val-53-4 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-53-5 comment="false" id="1" x="0" y="0"/>
+                                        </moreeq>
+                                    </and>
+                                </if>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-53-8 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
+                    </group>
+                    <get-val-53-6 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="436">
+                    <group eventID="2" id="-1">
+                        <set-val-53-8 comment="false" x="37" y="456">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-53-8>
+                    </group>
+                </else>
+                <set-val-53-6 comment="false" x="26" y="493">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-53-6>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="103"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <length-list comment="false" id="0" x="0" y="0">
+                                <get-val-53-2 comment="false" id="0" x="0" y="0"/>
+                            </length-list>
+                            <int id="1" val="0"/>
+                        </more>
+                        <not comment="false" id="1" x="0" y="0">
+                            <contains-item comment="false" id="0" x="0" y="0">
+                                <get-val-53-2 comment="false" id="0" x="0" y="0"/>
+                                <tostring comment="false" id="1" x="0" y="0">
+                                    <getatype comment="false" id="0" x="0" y="0">
+                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                    </getatype>
+                                </tostring>
+                            </contains-item>
+                        </not>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="135">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="188"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <length-list comment="false" id="0" x="0" y="0">
+                                <get-val-53-3 comment="false" id="0" x="0" y="0"/>
+                            </length-list>
+                            <int id="1" val="0"/>
+                        </more>
+                        <contains-item comment="false" id="1" x="0" y="0">
+                            <get-val-53-3 comment="false" id="0" x="0" y="0"/>
+                            <tostring comment="false" id="1" x="0" y="0">
+                                <getatype comment="false" id="0" x="0" y="0">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                </getatype>
+                            </tostring>
+                        </contains-item>
+                    </and>
+                </if>
+                <set-val-53-6 comment="false" x="26" y="220">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-53-6>
+            </group>
+        </collide>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

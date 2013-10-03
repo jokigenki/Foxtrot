@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="93"/>
+                    </group>
+                    <contains-item comment="false" id="0" x="0" y="0">
+                        <get-val-172-6 comment="false" id="0" x="0" y="0"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <getatype comment="false" id="0" x="0" y="0">
+                                <other-actor comment="false" id="0" x="0" y="0"/>
+                            </getatype>
+                        </tostring>
+                    </contains-item>
+                </if>
+                <if comment="false" x="26" y="125">
+                    <group eventID="1" id="-1">
+                        <custom-264 comment="false" x="37" y="158">
+                            <ACTOR eid="this" id="0"/>
+                            <get-dxy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-dxy>
+                            <get-val-172-3 comment="false" id="2" x="0" y="0"/>
+                        </custom-264>
+                    </group>
+                    <collision-top comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-top>
+                </if>
+                <else-if comment="false" x="26" y="210">
+                    <group eventID="1" id="-1">
+                        <custom-264 comment="false" x="37" y="243">
+                            <ACTOR eid="this" id="0"/>
+                            <get-dxy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-dxy>
+                            <get-val-172-4 comment="false" id="2" x="0" y="0"/>
+                        </custom-264>
+                    </group>
+                    <collision-bottom comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-bottom>
+                </else-if>
+                <else-if comment="false" x="26" y="295">
+                    <group eventID="1" id="-1">
+                        <custom-264 comment="false" x="37" y="328">
+                            <ACTOR eid="this" id="0"/>
+                            <get-dxy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                            <get-val-172-2 comment="false" id="2" x="0" y="0"/>
+                        </custom-264>
+                    </group>
+                    <collision-left comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-left>
+                </else-if>
+                <else-if comment="false" x="26" y="380">
+                    <group eventID="1" id="-1">
+                        <custom-264 comment="false" x="37" y="413">
+                            <ACTOR eid="this" id="0"/>
+                            <get-dxy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                            <get-val-172-1 comment="false" id="2" x="0" y="0"/>
+                        </custom-264>
+                    </group>
+                    <collision-right comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-right>
+                </else-if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-1-264 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <stop comment="false" x="37" y="85"/>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <get-byobval-172-264-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </less>
+                        <less comment="false" id="1" x="0" y="0">
+                            <abs comment="false" id="0" x="0" y="0">
+                                <get-byobval-172-264-1 comment="false" id="0" x="0" y="0"/>
+                            </abs>
+                            <int id="1" val="1"/>
+                        </less>
+                    </or>
+                </if>
+                <if comment="false" x="26" y="117">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="152">
+                            <group eventID="2" id="-1">
+                                <say comment="false" x="48" y="190">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-172-5 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Killed"/>
+                                </say>
+                            </group>
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <get-val-172-5 comment="false" id="1" x="0" y="0"/>
+                            </has-snippet>
+                        </if>
+                        <else-if comment="false" x="37" y="234">
+                            <group eventID="2" id="-1">
+                                <say comment="false" x="48" y="267">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Default Kill Behaviour PM"/>
+                                    <int id="2" val="Killed"/>
+                                </say>
+                            </group>
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Default Kill Behaviour PM"/>
+                            </has-snippet>
+                        </else-if>
+                        <else comment="false" x="37" y="306">
+                            <group eventID="2" id="-1">
+                                <die comment="false" x="48" y="326">
+                                    <ACTOR eid="this" id="0"/>
+                                </die>
+                                <if comment="false" x="48" y="353">
+                                    <group eventID="1" id="-1">
+                                        <say comment="false" x="59" y="386">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Reload On Death PM"/>
+                                            <int id="2" val="Reload"/>
+                                        </say>
+                                    </group>
+                                    <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Reload On Death PM"/>
+                                    </is-snippet-enableda>
+                                </if>
+                            </group>
+                        </else>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <abs comment="false" id="0" x="0" y="0">
+                            <get-byobval-172-264-1 comment="false" id="0" x="0" y="0"/>
+                        </abs>
+                        <get-byobval-172-264-2 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+            </group>
+            <int id="0" val=""/>
+            <get-byobval-172-264-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-172-264-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-1-264>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

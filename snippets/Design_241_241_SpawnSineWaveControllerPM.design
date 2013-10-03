@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-241-3 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-241-3 comment="false" id="0" x="0" y="0"/>
+                        <get-attribute comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Spawn PM"/>
+                            <int id="2" val="_SpawnRepeatDelay"/>
+                        </get-attribute>
+                    </plus>
+                </set-val-241-3>
+                <code-long comment="false" x="26" y="78">
+                    <int id="0" val="// give a value between 0 and amplitude&#10;var m2 = (_MaximumValue - _MinimumValue) / 2;&#10;var value = m2 * Math.sin(_Frequency * (_CurrentTime + _StartTime)) + m2 + _MinimumValue;"/>
+                </code-long>
+                <set-attribute comment="false" x="26" y="238">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Spawn PM"/>
+                    <int id="2" val="_SpawnRepeatDelay"/>
+                    <code-short comment="false" id="3" x="0" y="0">
+                        <int id="0" val="value"/>
+                    </code-short>
+                </set-attribute>
+            </group>
+            <int id="0" val="Spawned"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-241-3 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-241-3>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

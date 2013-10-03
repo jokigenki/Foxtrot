@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Custom: distance between &amp;lt;Pivot&amp;gt; and Self"/>
+                </comment-short>
+                <set-val-51-3 comment="false" x="26" y="60">
+                    <custom-64 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="5"/>
+                        <ACTOR eid="this" id="1"/>
+                    </custom-64>
+                </set-val-51-3>
+                <set-val-51-4 comment="false" x="26" y="93">
+                    <atan2 comment="false" id="0" x="0" y="0">
+                        <minus comment="false" id="0" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="2"/>
+                            </get-xy>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="5"/>
+                                <int id="1" val="2"/>
+                            </get-xy>
+                        </minus>
+                        <minus comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="5"/>
+                                <int id="1" val="3"/>
+                            </get-xy>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="5"/>
+                                <int id="1" val="3"/>
+                            </get-xy>
+                        </minus>
+                    </atan2>
+                </set-val-51-4>
+                <set-val-51-1 comment="false" x="26" y="136">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                    </minus>
+                </set-val-51-1>
+                <set-val-51-2 comment="false" x="26" y="174">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                    </minus>
+                </set-val-51-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-xy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-val-51-1 comment="false" id="0" x="0" y="0"/>
+                        <plus comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="5"/>
+                                <int id="1" val="2"/>
+                            </get-xy>
+                            <times comment="false" id="1" x="0" y="0">
+                                <trig-master comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <to-degreesradians comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="1"/>
+                                            <getdir comment="false" id="1" x="0" y="0">
+                                                <ACTOR eid="var" id="0" vid="5"/>
+                                            </getdir>
+                                        </to-degreesradians>
+                                        <get-val-51-4 comment="false" id="1" x="0" y="0"/>
+                                    </plus>
+                                </trig-master>
+                                <get-val-51-3 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </plus>
+                    </plus>
+                </set-xy>
+                <set-xy comment="false" x="26" y="126">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-val-51-2 comment="false" id="0" x="0" y="0"/>
+                        <plus comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="5"/>
+                                <int id="1" val="3"/>
+                            </get-xy>
+                            <times comment="false" id="1" x="0" y="0">
+                                <trig-master comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <to-degreesradians comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="1"/>
+                                            <getdir comment="false" id="1" x="0" y="0">
+                                                <ACTOR eid="var" id="0" vid="5"/>
+                                            </getdir>
+                                        </to-degreesradians>
+                                        <get-val-51-4 comment="false" id="1" x="0" y="0"/>
+                                    </plus>
+                                </trig-master>
+                                <get-val-51-3 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </plus>
+                    </plus>
+                </set-xy>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

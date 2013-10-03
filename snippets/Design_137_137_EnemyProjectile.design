@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <collision-foreach comment="false" x="37" y="80">
+                            <group eventID="1" id="-1">
+                                <set-val-137-3 comment="false" x="48" y="100">
+                                    <collision-xynxy comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="2"/>
+                                    </collision-xynxy>
+                                </set-val-137-3>
+                                <set-val-137-4 comment="false" x="48" y="133">
+                                    <collision-xynxy comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="3"/>
+                                    </collision-xynxy>
+                                </set-val-137-4>
+                            </group>
+                        </collision-foreach>
+                        <custom-287 comment="false" x="37" y="178">
+                            <this-actor comment="false" id="0" x="0" y="0"/>
+                            <get-val-137-2 comment="false" id="1" x="0" y="0"/>
+                            <get-val-137-3 comment="false" id="2" x="0" y="0"/>
+                            <get-val-137-4 comment="false" id="3" x="0" y="0"/>
+                        </custom-287>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <str-empty comment="false" id="0" x="0" y="0">
+                            <get-val-137-2 comment="false" id="0" x="0" y="0"/>
+                        </str-empty>
+                    </not>
+                </if>
+                <else comment="false" x="26" y="222">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="242">
+                            <this-actor comment="false" id="0" x="0" y="0"/>
+                        </die>
+                    </group>
+                </else>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

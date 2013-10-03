@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="70">
+                            <group eventID="1" id="-1">
+                                <set-font-new comment="false" x="48" y="105">
+                                    <FONT eid="312" id="0"/>
+                                </set-font-new>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-game-val-9 comment="false" id="0" x="0" y="0"/>
+                                    <get-game-val-8 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <int id="1" val="11"/>
+                            </less>
+                        </if>
+                        <else comment="false" x="37" y="144">
+                            <group eventID="1" id="-1">
+                                <set-font-new comment="false" x="48" y="164">
+                                    <FONT eid="308" id="0"/>
+                                </set-font-new>
+                            </group>
+                        </else>
+                        <draw-text comment="false" x="37" y="203">
+                            <custom-309 comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-game-val-9 comment="false" id="0" x="0" y="0"/>
+                                    <get-game-val-8 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </custom-309>
+                            <get-val-203-1 comment="false" id="1" x="0" y="0"/>
+                            <get-val-203-2 comment="false" id="2" x="0" y="0"/>
+                        </draw-text>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        <scene-get-attribute comment="false" id="1" x="0" y="0">
+                            <int id="0" val="Speed Run Timer PM"/>
+                            <int id="1" val="_TimerRunning"/>
+                        </scene-get-attribute>
+                    </and>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-1-309 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="if (__TimeNumber &amp;lt; 0) return &amp;quot;0:00&amp;quot;;&#10;var mins = Math.floor(__TimeNumber / 60);&#10;var secs = __TimeNumber - (mins * 60);&#10;&#10;var minsString = Std.string(mins);&#10;var secsString = secs &amp;lt; 10 ? &amp;quot;0&amp;quot; + secs : &amp;quot;&amp;quot; + secs;&#10;&#10;return minsString + &amp;quot;:&amp;quot; + secsString;"/>
+                </code-long>
+            </group>
+            <get-byobval-203-309-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-309>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

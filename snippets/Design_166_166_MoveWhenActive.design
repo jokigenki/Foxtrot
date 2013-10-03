@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-166-4 comment="false" x="26" y="40">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-166-4>
+                <set-val-166-5 comment="false" x="26" y="73">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-166-5>
+                <if comment="false" x="26" y="106">
+                    <group eventID="1" id="-1">
+                        <set-val-166-10 comment="false" x="37" y="136">
+                            <get-val-166-6 comment="false" id="0" x="0" y="0"/>
+                        </set-val-166-10>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-166-10 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;if (_MoveDelay &amp;gt; 0)&#10;{&#10;&#9;runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void&#10;&#9;{&#10;&#9;&#9;if (_IsActive) actor.moveTo(_XTarget, _YTarget, _MoveTime, trans);&#10;&#9;});&#10;} else {&#10;&#9;actor.moveTo(_XTarget, _YTarget, _MoveTime, trans);&#10;}&#10;"/>
+                </code-long>
+            </group>
+            <int id="0" val="Activated"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;actor.moveTo(_XStart, _YStart, _ReturnTime, trans);"/>
+                </code-long>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+</groups>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <die comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+                <set-game-val-9 comment="false" x="26" y="74">
+                    <get-val-205-1 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-9>
+                <set-game-val-13 comment="false" x="26" y="99">
+                    <get-val-205-2 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-13>
+                <set-game-val-14 comment="false" x="26" y="124">
+                    <get-val-205-3 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-14>
+                <set-game-val-15 comment="false" x="26" y="149">
+                    <get-val-205-5 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-15>
+                <set-game-val-4 comment="false" x="26" y="174">
+                    <get-val-205-4 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-4>
+                <scene-say comment="false" x="26" y="199">
+                    <int id="0" val="Speed Run Timer PM"/>
+                    <int id="1" val="TimerReset"/>
+                </scene-say>
+                <set-game-val-10 comment="false" x="26" y="219">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-10>
+                <scene-reload-new comment="false" x="26" y="244">
+                    <int id="0" val="0"/>
+                    <int id="1" val="0.5"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0.5"/>
+                </scene-reload-new>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <ACTORTYPE eid="9" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="65">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="3" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <create-region comment="false" x="26" y="40">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <int id="1" val="4"/>
+                    </minus>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <int id="1" val="9"/>
+                    </minus>
+                    <int id="2" val="16"/>
+                    <int id="3" val="8"/>
+                </create-region>
+                <set-val-66-11 comment="false" x="26" y="78">
+                    <REGION eid="lastcreated" id="0"/>
+                </set-val-66-11>
+                <dolater comment="false" x="26" y="105">
+                    <group eventID="3" id="-1">
+                        <custom-253 comment="false" x="37" y="132">
+                            <get-val-66-13 comment="false" id="0" x="0" y="0"/>
+                            <get-val-66-1 comment="false" id="1" x="0" y="0"/>
+                        </custom-253>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+                <set-val-66-14 comment="false" x="26" y="169">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-66-14>
+                <custom-454 comment="false" x="26" y="194">
+                    <ACTOR eid="this" id="0"/>
+                </custom-454>
+            </group>
+        </init>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <custom-409 comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                </custom-409>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="var" id="1" vid="11"/>
+            <GROUP eid="0" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-3-409 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-66-14 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-66-14>
+                <set-val-66-1 comment="false" x="26" y="65">
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-66-1 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </set-val-66-1>
+                <custom-253 comment="false" x="26" y="95">
+                    <get-val-66-13 comment="false" id="0" x="0" y="0"/>
+                    <get-val-66-1 comment="false" id="1" x="0" y="0"/>
+                </custom-253>
+                <custom-code comment="false" x="26" y="120">
+                    <int id="0" val="dispatchEvent();"/>
+                </custom-code>
+                <custom-454 comment="false" x="26" y="140">
+                    <ACTOR eid="this" id="0"/>
+                </custom-454>
+            </group>
+            <int id="0" val=""/>
+        </receiver-3-409>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <custom-410 comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                </custom-410>
+            </group>
+            <int id="0" val="1"/>
+            <REGION eid="var" id="1" vid="11"/>
+            <GROUP eid="0" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <receiver-4-410 comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <set-val-66-14 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-66-14>
+                <custom-code comment="false" x="26" y="65">
+                    <int id="0" val="dispatchEvent();"/>
+                </custom-code>
+                <custom-454 comment="false" x="26" y="85">
+                    <ACTOR eid="this" id="0"/>
+                </custom-454>
+            </group>
+            <int id="0" val=""/>
+        </receiver-4-410>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <custom-409 comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                </custom-409>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="var" id="1" vid="11"/>
+            <GROUP eid="8" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <custom-410 comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                </custom-410>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="var" id="1" vid="11"/>
+            <GROUP eid="8" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <receiver-5-454 comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="90">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-66-4 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <get-val-66-1 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="134">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="154">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-66-10 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-66-14 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="210">
+                    <group eventID="5" id="-1">
+                        <if comment="false" x="37" y="230">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="255">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-66-2 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <get-val-66-1 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="299">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="319">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-66-3 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val=""/>
+        </receiver-5-454>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-custom-code comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="public function dispatchEvent () &#10;{&#10;&#9;var actorname = scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(actor);&#10;&#9;actorname = actorname.split(&amp;quot; &amp;quot;).join(&amp;quot;&amp;quot;);&#10;&#9;shoutToScene(&amp;quot;_customEvent_&amp;quot; + actorname + &amp;quot;Switched&amp;quot; + (_IsActive ? &amp;quot;On&amp;quot; : &amp;quot;Off&amp;quot;));&#10;}"/>
+                </code-long>
+            </group>
+        </event-custom-code>
+    </group>
+    <group eventID="11" id="-1"/>
+</groups>

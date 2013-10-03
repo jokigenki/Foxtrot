@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <load-game comment="false" x="37" y="70">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="95">
+                                    <group eventID="1" id="-1">
+                                        <set-game-val-16 comment="false" x="59" y="120">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-16>
+                                        <if comment="false" x="59" y="145">
+                                            <group eventID="1" id="-1">
+                                                <dolater comment="false" x="70" y="190">
+                                                    <group eventID="1" id="-1">
+                                                        <print comment="false" x="81" y="217">
+                                                            <str-combine comment="false" id="0" x="0" y="0">
+                                                                <int id="0" val="Last scene: "/>
+                                                                <get-game-val-21 comment="false" id="1" x="0" y="0"/>
+                                                            </str-combine>
+                                                        </print>
+                                                        <set-attribute comment="false" x="81" y="247">
+                                                            <ACTOR eid="18" id="0"/>
+                                                            <int id="1" val="Collectable Door PM"/>
+                                                            <int id="2" val="_Destination"/>
+                                                            <get-game-val-21 comment="false" id="3" x="0" y="0"/>
+                                                        </set-attribute>
+                                                        <say comment="false" x="81" y="279">
+                                                            <ACTOR eid="18" id="0"/>
+                                                            <int id="1" val="Collectable Door PM"/>
+                                                            <int id="2" val="HasDestination"/>
+                                                        </say>
+                                                    </group>
+                                                    <int id="0" val="0.5"/>
+                                                    <ACTOR eid="lastcreated" id="2"/>
+                                                </dolater>
+                                            </group>
+                                            <and comment="false" id="0" x="0" y="0">
+                                                <noteq comment="false" id="0" x="0" y="0">
+                                                    <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                                    <int id="1" val="none"/>
+                                                </noteq>
+                                                <noteq comment="false" id="1" x="0" y="0">
+                                                    <get-item comment="false" id="0" x="0" y="0">
+                                                        <str-split comment="false" id="0" x="0" y="0">
+                                                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                                            <int id="1" val="|"/>
+                                                        </str-split>
+                                                        <int id="1" val="1"/>
+                                                    </get-item>
+                                                    <int id="1" val="_Home"/>
+                                                </noteq>
+                                            </and>
+                                        </if>
+                                    </group>
+                                    <load-success comment="false" id="0" x="0" y="0"/>
+                                </if>
+                                <else comment="false" x="48" y="342">
+                                    <group eventID="1" id="-1">
+                                        <set-game-val-16 comment="false" x="59" y="362">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-16>
+                                    </group>
+                                </else>
+                            </group>
+                        </load-game>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-16 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="1">
+        <play-sound4 comment="false" x="369" y="24">
+            <int id="0" val="1"/>
+            <SOUND eid="466" id="1"/>
+        </play-sound4>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

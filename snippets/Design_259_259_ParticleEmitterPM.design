@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-259-8 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-259-8>
+                <if comment="false" x="26" y="60">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="85">
+                            <group eventID="1" id="-1">
+                                <custom-452 comment="false" x="48" y="115">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-452>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-259-7 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="154">
+                            <group eventID="1" id="-1">
+                                <dolater comment="false" x="48" y="174">
+                                    <group eventID="1" id="-1">
+                                        <custom-452 comment="false" x="59" y="206">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-452>
+                                    </group>
+                                    <get-val-259-7 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-259-2 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="9" id="-1">
+                        <set-val-259-2 comment="false" x="37" y="70">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-259-2>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-259-2 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+            <int id="0" val="Activated"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-259-2 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-259-2>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-att-bool comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="1" id="-1">
+                        <custom-452 comment="false" x="37" y="77">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-452>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-259-7 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <else comment="false" x="26" y="116">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="136">
+                            <group eventID="1" id="-1">
+                                <custom-452 comment="false" x="48" y="168">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-452>
+                            </group>
+                            <get-val-259-7 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="2"/>
+            <true comment="false" id="1" x="0" y="0"/>
+        </event-att-bool>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="9" id="0">
+        <receiver-5-448 comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <set-val-259-8 comment="false" x="26" y="45">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-259-8 comment="false" id="0" x="0" y="0"/>
+                        <get-byobval-259-448-1 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-259-8>
+            </group>
+            <get-byobval-259-448-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-259-448-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-5-448>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <receiver-6-449 comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <create-actor3 comment="false" x="26" y="45">
+                    <get-val-259-5 comment="false" id="0" x="0" y="0"/>
+                    <get-xy comment="false" id="1" x="0" y="0">
+                        <get-byobval-259-449-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                    <get-xy comment="false" id="2" x="0" y="0">
+                        <get-byobval-259-449-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <setlayer comment="false" x="26" y="90">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <getlayer comment="false" id="1" x="0" y="0">
+                        <get-byobval-259-449-0 comment="false" id="0" x="0" y="0"/>
+                    </getlayer>
+                </setlayer>
+                <push-shove2 comment="false" x="26" y="135">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <randint comment="false" id="2" x="0" y="0">
+                        <get-val-259-9 comment="false" id="0" x="0" y="0"/>
+                        <get-val-259-10 comment="false" id="1" x="0" y="0"/>
+                    </randint>
+                    <randint comment="false" id="3" x="0" y="0">
+                        <get-val-259-11 comment="false" id="0" x="0" y="0"/>
+                        <get-val-259-12 comment="false" id="1" x="0" y="0"/>
+                    </randint>
+                </push-shove2>
+                <incdec comment="false" x="26" y="172">
+                    <int id="0" val="8"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="1"/>
+                </incdec>
+            </group>
+            <get-byobval-259-449-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-6-449>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <receiver-7-450 comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <set-val-259-8 comment="false" x="26" y="45">
+                    <int id="0" val="0"/>
+                </set-val-259-8>
+            </group>
+            <get-byobval-259-450-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-7-450>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <receiver-8-451 comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <return comment="false" x="26" y="45">
+                    <get-val-259-8 comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-259-451-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-8-451>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <receiver-9-452 comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <stop comment="false" x="37" y="75"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-259-2 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <custom-449 comment="false" x="26" y="107">
+                    <get-byobval-259-452-0 comment="false" id="0" x="0" y="0"/>
+                </custom-449>
+                <periodic comment="false" x="26" y="139">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="171">
+                            <group eventID="2" id="-1">
+                                <cancel comment="false" x="48" y="201"/>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-259-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-259-3 comment="false" id="1" x="0" y="0"/>
+                            </moreeq>
+                        </if>
+                        <custom-449 comment="false" x="37" y="233">
+                            <get-byobval-259-452-0 comment="false" id="0" x="0" y="0"/>
+                        </custom-449>
+                    </group>
+                    <get-val-259-6 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+            </group>
+            <get-byobval-259-452-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-9-452>
+    </group>
+    <group eventID="13" id="-1"/>
+</groups>

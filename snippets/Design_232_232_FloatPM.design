@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <set-xy comment="false" x="37" y="93">
+                            <other-actor comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-xy>
+                    </group>
+                    <contains-item comment="false" id="0" x="0" y="0">
+                        <get-val-232-1 comment="false" id="0" x="0" y="0"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <getatype comment="false" id="0" x="0" y="0">
+                                <other-actor comment="false" id="0" x="0" y="0"/>
+                            </getatype>
+                        </tostring>
+                    </contains-item>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="93"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-type2 comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </collision-type2>
+                        <not comment="false" id="1" x="0" y="0">
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <other-actor comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Squasher PM"/>
+                            </has-snippet>
+                        </not>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="125">
+                    <group eventID="1" id="-1">
+                        <set-val-29-8 comment="false" x="37" y="158">
+                            <other-actor comment="false" id="0" x="0" y="0"/>
+                        </set-val-29-8>
+                    </group>
+                    <collision-left comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-left>
+                </if>
+                <if comment="false" x="26" y="202">
+                    <group eventID="1" id="-1">
+                        <set-val-29-9 comment="false" x="37" y="235">
+                            <other-actor comment="false" id="0" x="0" y="0"/>
+                        </set-val-29-9>
+                    </group>
+                    <collision-right comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-right>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="88">
+                            <group eventID="2" id="-1">
+                                <custom-287 comment="false" x="48" y="131">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-29-7 comment="false" id="1" x="0" y="0"/>
+                                    <randint comment="false" id="2" x="0" y="0">
+                                        <int id="0" val="-1"/>
+                                        <int id="1" val="1"/>
+                                    </randint>
+                                    <int id="3" val="-2"/>
+                                </custom-287>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <custom-63 comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="var" id="0" vid="9"/>
+                                    </custom-63>
+                                    <custom-61 comment="false" id="1" x="0" y="0">
+                                        <ACTOR eid="var" id="0" vid="8"/>
+                                    </custom-61>
+                                </minus>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-wh>
+                            </less>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <custom-65 comment="false" id="0" x="0" y="0">
+                                <get-val-29-8 comment="false" id="0" x="0" y="0"/>
+                            </custom-65>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-65 comment="false" id="0" x="0" y="0">
+                                <get-val-29-9 comment="false" id="0" x="0" y="0"/>
+                            </custom-65>
+                        </not>
+                    </and>
+                </if>
+                <custom-code comment="false" x="26" y="187">
+                    <int id="0" val="_HitLeftActor = null;"/>
+                </custom-code>
+                <custom-code comment="false" x="26" y="207">
+                    <int id="0" val="_HitRightActor = null;"/>
+                </custom-code>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

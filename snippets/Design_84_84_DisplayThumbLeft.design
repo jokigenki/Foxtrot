@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="73">
+                            <ACTORTYPE eid="131" id="0"/>
+                            <int id="1" val="0"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </screen-wh>
+                                <int id="1" val="138"/>
+                            </minus>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <set-val-84-1 comment="false" x="37" y="118">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-84-1>
+                        <actor-set-prop comment="false" x="37" y="145">
+                            <ACTOR eid="var" id="0" vid="1"/>
+                            <int id="1" val="_KillOnControl"/>
+                            <int id="2" val="Left"/>
+                        </actor-set-prop>
+                        <actors-of-type3 comment="false" x="37" y="172">
+                            <group eventID="1" id="-1">
+                                <actor-set-prop comment="false" x="48" y="204">
+                                    <ACTOR eid="var" id="0" vid="1"/>
+                                    <int id="1" val="_TargetActor"/>
+                                    <actor-of-type comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                            </group>
+                            <ACTORTYPE eid="9" id="0"/>
+                        </actors-of-type3>
+                    </group>
+                    <is-platform comment="false" id="0" x="0" y="0">
+                        <int id="0" val="6"/>
+                    </is-platform>
+                </if>
+            </group>
+            <int id="0" val="DisplayThumbLeft"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <die comment="false" x="26" y="40">
+                    <ACTOR eid="var" id="0" vid="1"/>
+                </die>
+            </group>
+            <int id="0" val="RemoveThumbLeft"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

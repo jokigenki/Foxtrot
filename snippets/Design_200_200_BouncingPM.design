@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="1" id="-1">
+                                <custom-94 comment="false" x="48" y="108">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Jump"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <dolater comment="false" x="48" y="140">
+                                    <group eventID="1" id="-1">
+                                        <custom-94 comment="false" x="59" y="172">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Jump"/>
+                                            <false comment="false" id="2" x="0" y="0"/>
+                                        </custom-94>
+                                    </group>
+                                    <get-val-200-2 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <eq comment="false" id="0" x="0" y="0">
+                                    <actor-get-prop comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="On Ground?"/>
+                                    </actor-get-prop>
+                                    <true comment="false" id="1" x="0" y="0"/>
+                                </eq>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <custom-93 comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Jump"/>
+                                    </custom-93>
+                                </not>
+                            </and>
+                        </if>
+                    </group>
+                    <get-val-200-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="240">
+                    <group eventID="1" id="-1">
+                        <custom-94 comment="false" x="37" y="260">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Jump"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                    </group>
+                </else>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-200-1 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-200-1>
+            </group>
+            <int id="0" val="Activated"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-200-1 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-200-1>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

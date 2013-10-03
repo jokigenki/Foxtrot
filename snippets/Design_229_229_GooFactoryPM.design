@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="3" id="0">
+        <receiver-7-391 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var blocks:Array&amp;lt;Actor&amp;gt; = [__actor1, __actor2, __actor3, __actor4];&#10;var links:Array&amp;lt;Array&amp;lt;Int&amp;gt;&amp;gt; = [[1,2,3],[2,3],[3]];&#10;for (index0 in 0...links.length)&#10;{&#10;&#9;var a1 = blocks[index0];&#10;&#9;if (!a1.hasBehavior(&amp;quot;Goo Particle PM&amp;quot;)) continue;&#10;&#9;var blockLinks = links[index0];&#10;&#9;var l = Std.int(blockLinks.length);&#10;&#9;for (index1 in 0...l)&#10;&#9;{&#10;&#9;&#9;var blockIndex = blockLinks[index1];&#10;&#9;&#9;var a2 = blocks[blockIndex];&#10;&#9;&#9;if (!a2.hasBehavior(&amp;quot;Goo Particle PM&amp;quot;)) continue;&#10;&#9;&#9;if (!a1.say(&amp;quot;Goo Particle PM&amp;quot;, &amp;quot;IsLinkedTo&amp;quot;, [a2]))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;scripts.Design_222_222_JointsExtras._customBlock_CreateDistanceJointWithParams(a1,a1.getX(),a1.getY(),a2,a2.getX(),a2.getY(),__damping,__frequency);&#10;&#9;&#9;&#9;a1.say(&amp;quot;Goo Particle PM&amp;quot;, &amp;quot;AddLink&amp;quot;, [a2]);&#10;&#9;&#9;&#9;a2.say(&amp;quot;Goo Particle PM&amp;quot;, &amp;quot;AddLink&amp;quot;, [a1]);&#10;&#9;&#9;}&#10;&#9;}&#10;}"/>
+                </code-long>
+            </group>
+            <get-byobval-229-383-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-229-383-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-229-383-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-229-383-3 comment="false" id="3" x="0" y="0"/>
+            <get-byobval-229-383-4 comment="false" id="4" x="0" y="0"/>
+            <get-byobval-229-383-5 comment="false" id="5" x="0" y="0"/>
+        </receiver-7-391>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-8-392 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var blocks = scripts.Design_229_229_GooFactoryPM._customBlock_CreateNSquare(__side, __actortype, __x, __y);&#10;var limit = Std.int(__side -1);&#10;var s = Std.int(__side);&#10;for (col in 0...limit)&#10;{&#10;&#9;for (row in 0...limit)&#10;&#9;{&#10;&#9;&#9;scripts.Design_229_229_GooFactoryPM._customBlock_JoinActors(&#10;&#9;&#9;&#9;blocks[col + (row * s)],&#10;&#9;&#9;&#9;blocks[col + (row * s) + 1],&#10;&#9;&#9;&#9;blocks[col + ((row + 1) * s)],&#10;&#9;&#9;&#9;blocks[col + ((row + 1) * s) + 1],&#10;&#9;&#9;&#9;__damping,&#10;&#9;&#9;&#9;__frequency);&#10;&#9;&#9;&#9;&#10;&#9;}&#10;}"/>
+                </code-long>
+            </group>
+            <get-byobval-229-384-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-229-384-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-229-384-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-229-384-3 comment="false" id="3" x="0" y="0"/>
+            <get-byobval-229-384-4 comment="false" id="4" x="0" y="0"/>
+            <get-byobval-229-384-5 comment="false" id="5" x="0" y="0"/>
+        </receiver-8-392>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="7" id="0">
+        <receiver-13-389 comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var blockSize = 0.0;&#10;var last = null;&#10;var xpos = __x;&#10;var ypos = __y;&#10;var blocks = new Array&amp;lt;Actor&amp;gt;();&#10;for (row in 0...Std.int(__side))&#10;{&#10;&#9;for (col in 0...Std.int(__side))&#10;&#9;{&#10;&#9;&#9;last = Engine.engine.getRecycledActorOfType(__actortype, xpos, ypos, Script.FRONT);&#9;&#9;&#10;&#9;&#9;Script.lastCreatedActor = last;&#10;&#9;&#9;if (col == 0 || col == __side - 1 || row == 0 || row == __side - 1)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;last.setAnimation(&amp;quot;Edge&amp;quot;);&#10;&#9;&#9;}&#10;&#9;&#9;if (blockSize == 0)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;blockSize = last.getWidth();&#10;&#9;&#9;}&#10;&#9;&#9;xpos += blockSize - 2;&#10;&#9;&#9;blocks.push(last);&#10;&#9;}&#10;&#10;&#9;xpos = __x;&#10;&#9;ypos += blockSize - 2;&#10;}&#10;&#10;return blocks;"/>
+                </code-long>
+            </group>
+            <get-byobval-229-414-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-229-414-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-229-414-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-229-414-3 comment="false" id="3" x="0" y="0"/>
+        </receiver-13-389>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <receiver-14-390 comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var blocks = scripts.Design_229_229_GooFactoryPM._customBlock_CreateNSquare(4,__actortype, __x, __y);&#10;var links = [5,9,13,12,8,4,0,1,2,3,7,11,15,14,10,16];&#10;var last = null;&#10;for (i in 0...links.length)&#10;{&#10;&#9;if (last == null)&#10;&#9;{&#10;&#9;&#9;last = blocks[links[i]];&#10;&#9;} else {&#10;&#9;&#9;var next = blocks[links[i]];&#10;&#9;&#9;scripts.Design_222_222_JointsExtras._customBlock_CreateDistanceJointWithParams(last,last.getX(),last.getY(),next,next.getX(),next.getY(),__damping,__frequency);&#10;&#9;&#9;last.say(&amp;quot;Goo Particle PM&amp;quot;, &amp;quot;AddLink&amp;quot;, [next]);&#10;&#9;&#9;next.say(&amp;quot;Goo Particle PM&amp;quot;, &amp;quot;AddLink&amp;quot;, [last]);&#10;&#9;&#9;last = next;&#10;&#9;}&#10;}&#10;"/>
+                </code-long>
+            </group>
+            <get-byobval-229-415-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-229-415-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-229-415-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-229-415-3 comment="false" id="3" x="0" y="0"/>
+            <get-byobval-229-415-4 comment="false" id="4" x="0" y="0"/>
+        </receiver-14-390>
+    </group>
+    <group eventID="8" id="-1"/>
+</groups>

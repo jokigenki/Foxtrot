@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="4" desc="" eventsnippetid="93" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="4" name="_Larder" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
+    <layers>
+        <layer color="255,200,0" id="3" name="Camera Gizmo" order="0"/>
+        <layer color="0,255,0" id="2" name="Player" order="2"/>
+        <layer color="64,64,64" id="4" name="Triggers" order="3"/>
+        <layer color="0,0,255" id="1" name="Ground" order="4"/>
+    </layers>
+    <color-bg blue="255" green="255" red="255"/>
+    <backgrounds>
+        <ref id="191"/>
+    </backgrounds>
+    <foregrounds/>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="256" y="256" z="2"/>
+        <actor a="0.0" aid="5" c="true" group="3" id="142" name="Gold Key 5" sx="1.0" sy="1.0" x="157" y="253" z="3">
+            <snippets>
+                <s enabled="true" id="91">
+                    <prop id="1" list="0" val="KeyCollected"/>
+                    <prop id="2" list="0" val="5"/>
+                    <prop id="3" list="0" val="OutsideKey"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="90"/>
+                <s enabled="true" id="120">
+                    <prop id="1" list="0" val="KeyCollected"/>
+                    <prop id="2" list="0" val="_Home|_Outside|A"/>
+                    <prop id="3" list="0" val="_Home"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="7" c="true" group="3" id="189" name="Egg In Larder 7" sx="1.0" sy="1.0" x="406" y="100" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_01"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="9" c="true" group="3" id="189" name="Egg In Larder 9" sx="1.0" sy="1.0" x="424" y="100" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_02"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="10" c="true" group="3" id="189" name="Egg In Larder 10" sx="1.0" sy="1.0" x="440" y="100" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_03"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="11" c="true" group="3" id="189" name="Egg In Larder 11" sx="1.0" sy="1.0" x="456" y="100" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_04"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="12" c="true" group="3" id="189" name="Egg In Larder 12" sx="1.0" sy="1.0" x="472" y="100" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_05"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="13" c="true" group="3" id="189" name="Egg In Larder 13" sx="1.0" sy="1.0" x="489" y="100" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_06"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="14" c="true" group="3" id="189" name="Egg In Larder 14" sx="1.0" sy="1.0" x="406" y="120" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_07"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="15" c="true" group="3" id="189" name="Egg In Larder 15" sx="1.0" sy="1.0" x="424" y="120" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_08"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="17" c="true" group="3" id="189" name="Egg In Larder 17" sx="1.0" sy="1.0" x="457" y="120" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_10"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="16" c="true" group="3" id="189" name="Egg In Larder 16" sx="1.0" sy="1.0" x="440" y="120" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_09"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="21" c="true" group="3" id="189" name="Egg In Larder 21" sx="1.0" sy="1.0" x="472" y="120" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_Speed"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1Speed"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="20" c="true" group="2" id="223" name="Door Green2 20" sx="1.0" sy="1.0" x="308" y="256" z="4">
+            <snippets>
+                <s enabled="true" id="159"/>
+                <s enabled="true" id="92">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="Open"/>
+                    <prop id="3" list="0" val="Closed"/>
+                    <prop id="4" list="0" val="Opening"/>
+                    <prop id="6" list="0" val="_Larder|_Home|A"/>
+                    <prop id="9" list="0" val="3"/>
+                    <prop id="13" list="0" val=""/>
+                    <prop id="14" list="0" val="A"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="true"/>
+                </s>
+                <s enabled="true" id="133">
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val=""/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="false"/>
+                    <prop id="21" list="0" val=""/>
+                    <prop id="20" list="0" val="false"/>
+                    <prop id="23" list="0" val=""/>
+                    <prop id="25" list="0" val=""/>
+                    <prop id="24" list="0" val="UseDoor"/>
+                    <prop id="27" list="0" val="0"/>
+                    <prop id="26" list="0" val="1"/>
+                    <prop id="29" list="0" val="4"/>
+                    <prop id="28" list="0" val=""/>
+                    <prop id="30" list="0" val="4"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="22" c="true" group="3" id="189" name="Egg In Larder 22" sx="1.0" sy="1.0" x="489" y="120" z="3">
+            <snippets>
+                <s enabled="true" id="127">
+                    <prop id="1" list="0" val="Egg1_Boss"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1Boss"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="126"/>
+            </snippets>
+        </actor>
+    </actors>
+    <snippets>
+        <s enabled="true" id="19">
+            <prop id="1" list="0" val="false"/>
+            <prop id="2" list="0" val="false"/>
+            <prop id="4" list="0" val="3"/>
+            <prop id="7" list="0" val="0"/>
+            <prop id="8" list="0" val="0"/>
+            <prop id="9" list="0" val="false"/>
+            <prop id="10" list="0" val="5"/>
+            <prop id="11" list="0" val="0"/>
+            <prop id="12" list="0" val="false"/>
+        </s>
+        <s enabled="true" id="21"/>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="4"/>
+        </s>
+    </snippets>
+    <terrain>
+        <p pts="4,480.0,272.0,0.0,272.0,0.0,0.0,480.0,0.0" x="80.0" y="32.0"/>
+        <p pts="4,448.0,0.0,0.0,0.0,0.0,240.0,448.0,240.0" x="96.0" y="48.0"/>
+    </terrain>
+</scene>

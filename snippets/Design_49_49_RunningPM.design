@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <comment-long comment="false" x="26" y="40">
+                    <int id="0" val="**Note** - This Behavior requires the &amp;quot;Walking&amp;quot; Behavior to function properly. "/>
+                </comment-long>
+                <comment-short comment="false" x="26" y="120">
+                    <int id="0" val="Inputs: ----------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="140">
+                    <int id="0" val="&amp;quot;Facing Right?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;Walking&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="160">
+                    <int id="0" val="Outputs: ---------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="180">
+                    <int id="0" val="&amp;quot;Is Running?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute"/>
+                </comment-short>
+                <set-val-49-3 comment="false" x="26" y="200">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-49-3>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <get-val-49-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <comment-short comment="false" x="26" y="97">
+                    <int id="0" val="Custom: Is &amp;quot;Run&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="117">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="160">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <set-val-49-3 comment="false" x="37" y="192">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-49-3>
+                        <comment-short comment="false" x="37" y="217">
+                            <int id="0" val="Custom: Get Walk Accel for Self"/>
+                        </comment-short>
+                        <set-val-49-4 comment="false" x="37" y="237">
+                            <custom-117 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-117>
+                        </set-val-49-4>
+                        <comment-short comment="false" x="37" y="270">
+                            <int id="0" val="Custom: Get Max Walk Speed for Self"/>
+                        </comment-short>
+                        <set-val-49-5 comment="false" x="37" y="290">
+                            <custom-118 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-118>
+                        </set-val-49-5>
+                        <comment-short comment="false" x="37" y="323">
+                            <int id="0" val="Custom: For Self Set Walk Accel to &amp;lt;Acceleration&amp;gt;, For Self Set Max Walk Speed to &amp;lt;Mid Run Speed&amp;gt;"/>
+                        </comment-short>
+                        <custom-72 comment="false" x="37" y="343">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-49-8 comment="false" id="1" x="0" y="0"/>
+                        </custom-72>
+                        <custom-71 comment="false" x="37" y="375">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-49-9 comment="false" id="1" x="0" y="0"/>
+                        </custom-71>
+                        <stop comment="false" x="37" y="407"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Run"/>
+                            </custom-93>
+                            <get-val-49-3 comment="false" id="1" x="0" y="0"/>
+                        </and>
+                        <as-boolean comment="false" id="1" x="0" y="0">
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="On Ground?"/>
+                            </actor-get-prop>
+                        </as-boolean>
+                    </and>
+                </if>
+                <comment-short comment="false" x="26" y="439">
+                    <int id="0" val="Custom: Is &amp;quot;Run&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="459">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="502">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <comment-short comment="false" x="37" y="534">
+                            <int id="0" val="Custom: Clear Current Anim Category If Same As &amp;lt;Animation Category&amp;gt;"/>
+                        </comment-short>
+                        <custom-91 comment="false" x="37" y="554">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-49-21 comment="false" id="1" x="0" y="0"/>
+                        </custom-91>
+                        <set-val-49-6 comment="false" x="37" y="586">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-49-6>
+                        <set-val-49-3 comment="false" x="37" y="611">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-49-3>
+                        <set-val-49-7 comment="false" x="37" y="636">
+                            <int id="0" val="0"/>
+                        </set-val-49-7>
+                        <comment-short comment="false" x="37" y="656">
+                            <int id="0" val="Custom: For Self Set Walk Accel to &amp;lt;Old Accel&amp;gt;, For Self Set Max Walk Speed To &amp;lt;Old Max Speed&amp;gt;"/>
+                        </comment-short>
+                        <custom-72 comment="false" x="37" y="676">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-49-4 comment="false" id="1" x="0" y="0"/>
+                        </custom-72>
+                        <custom-71 comment="false" x="37" y="708">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-49-5 comment="false" id="1" x="0" y="0"/>
+                        </custom-71>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-49-3 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Run"/>
+                            </custom-93>
+                        </not>
+                    </and>
+                </if>
+                <comment-short comment="false" x="26" y="752">
+                    <int id="0" val="Custom: Is &amp;quot;Right&amp;quot; on for Self, Is &amp;quot;Left&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="772">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="815">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <comment-short comment="false" x="37" y="847">
+                            <int id="0" val="Custom: Clear Current Anim Category If Same As &amp;lt;Animation Category&amp;gt;"/>
+                        </comment-short>
+                        <custom-91 comment="false" x="37" y="867">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-49-21 comment="false" id="1" x="0" y="0"/>
+                        </custom-91>
+                        <set-val-49-6 comment="false" x="37" y="899">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-49-6>
+                        <stop comment="false" x="37" y="924"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Right"/>
+                            </custom-93>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Left"/>
+                            </custom-93>
+                        </not>
+                    </and>
+                </if>
+                <comment-short comment="false" x="26" y="956">
+                    <int id="0" val="Custom: Is &amp;quot;Run&amp;quot; on for Self, Is &amp;quot;Left&amp;quot; on for Self, Is &amp;quot;Right&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="976">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="1019">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <custom-93 comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Run"/>
+                        </custom-93>
+                        <or comment="false" id="1" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Left"/>
+                            </custom-93>
+                            <custom-93 comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Right"/>
+                            </custom-93>
+                        </or>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="1063">
+                    <group eventID="-1" id="-1">
+                        <say-this comment="false" x="37" y="1101">
+                            <int id="0" val="SetAnimation"/>
+                        </say-this>
+                        <if comment="false" x="37" y="1121">
+                            <group eventID="-1" id="-1">
+                                <set-val-49-6 comment="false" x="48" y="1164">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-49-6>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <abs comment="false" id="0" x="0" y="0">
+                                    <get-dxy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-dxy>
+                                </abs>
+                                <get-val-49-10 comment="false" id="1" x="0" y="0"/>
+                            </less>
+                        </if>
+                        <if comment="false" x="37" y="1201">
+                            <group eventID="-1" id="-1">
+                                <stop comment="false" x="48" y="1244"/>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <abs comment="false" id="0" x="0" y="0">
+                                    <get-dxy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-dxy>
+                                </abs>
+                                <get-val-49-9 comment="false" id="1" x="0" y="0"/>
+                            </less>
+                        </if>
+                        <incdec comment="false" x="37" y="1276">
+                            <int id="0" val="7"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                        <if comment="false" x="37" y="1303">
+                            <group eventID="-1" id="-1">
+                                <set-val-49-6 comment="false" x="48" y="1348">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-49-6>
+                                <comment-short comment="false" x="48" y="1373">
+                                    <int id="0" val="Custom: For Self Set Max Walk Speed to &amp;lt;Max Run Speed&amp;gt;"/>
+                                </comment-short>
+                                <custom-71 comment="false" x="48" y="1393">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-49-10 comment="false" id="1" x="0" y="0"/>
+                                </custom-71>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <moreeq comment="false" id="0" x="0" y="0">
+                                    <get-val-49-7 comment="false" id="0" x="0" y="0"/>
+                                    <div comment="false" id="1" x="0" y="0">
+                                        <times comment="false" id="0" x="0" y="0">
+                                            <get-val-49-13 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="1000"/>
+                                        </times>
+                                        <stepsize comment="false" id="1" x="0" y="0"/>
+                                    </div>
+                                </moreeq>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-val-49-6 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                            </and>
+                        </if>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receive-message comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="93"/>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <not comment="false" id="0" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-49-11 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                            </not>
+                            <not comment="false" id="1" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-49-12 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                            </not>
+                        </and>
+                        <not comment="false" id="1" x="0" y="0">
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="On Ground?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </not>
+                    </or>
+                </if>
+                <if comment="false" x="26" y="125">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="163">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="211">
+                                    <int id="0" val="Custom: Loop &amp;lt;Slip Right Animation&amp;gt; for Self Using &amp;quot;Running&amp;quot;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="231">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-49-17 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-90>
+                                <stop comment="false" x="48" y="263"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-49-11 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                                <and comment="false" id="1" x="0" y="0">
+                                    <lesseq comment="false" id="0" x="0" y="0">
+                                        <get-dxy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                        </get-dxy>
+                                        <int id="1" val="-1"/>
+                                    </lesseq>
+                                    <get-val-49-14 comment="false" id="1" x="0" y="0"/>
+                                </and>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="295">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="320">
+                                    <int id="0" val="Custom: Loop &amp;lt;Full Run Right Animation&amp;gt; for Self Using &amp;quot;Running&amp;quot;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="340">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-49-19 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-90>
+                            </group>
+                            <get-val-49-6 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="384">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="404">
+                                    <int id="0" val="Custom: Loop &amp;lt;Run Right Animation&amp;gt; for Self Using &amp;quot;Running&amp;quot;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="424">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-49-15 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-90>
+                            </group>
+                        </else>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Facing Right?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+                <else comment="false" x="26" y="480">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="500">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="548">
+                                    <int id="0" val="Custom: Loop &amp;lt;Slip Left Animation&amp;gt; for Self Using &amp;quot;Running&amp;quot;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="568">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-49-18 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-90>
+                                <stop comment="false" x="48" y="600"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-49-12 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                                <and comment="false" id="1" x="0" y="0">
+                                    <moreeq comment="false" id="0" x="0" y="0">
+                                        <get-dxy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                        </get-dxy>
+                                        <int id="1" val="1"/>
+                                    </moreeq>
+                                    <get-val-49-14 comment="false" id="1" x="0" y="0"/>
+                                </and>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="632">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="657">
+                                    <int id="0" val="Custom: Loop &amp;lt;Full Run Left Animation&amp;gt; for Self Using &amp;quot;Running&amp;quot;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="677">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-49-20 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-90>
+                            </group>
+                            <get-val-49-6 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="721">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="741">
+                                    <int id="0" val="Custom: Loop &amp;lt;Run Left Animation&amp;gt; for Self Using &amp;quot;Running&amp;quot;"/>
+                                </comment-short>
+                                <custom-90 comment="false" x="48" y="761">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-49-16 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-90>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="SetAnimation"/>
+        </receive-message>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

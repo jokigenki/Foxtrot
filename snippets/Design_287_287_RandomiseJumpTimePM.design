@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <set-attribute comment="false" x="37" y="72">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Bouncing PM"/>
+                            <int id="2" val="_JumpTime"/>
+                            <plus comment="false" id="3" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <random comment="false" id="0" x="0" y="0"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <get-val-287-2 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-287-3 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                </times>
+                                <get-val-287-3 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-attribute>
+                    </group>
+                    <get-val-287-1 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

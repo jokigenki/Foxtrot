@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="93">
+                            <group eventID="1" id="-1">
+                                <custom-287 comment="false" x="48" y="131">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <get-val-148-6 comment="false" id="1" x="0" y="0"/>
+                                    <randint comment="false" id="2" x="0" y="0">
+                                        <int id="0" val="-1"/>
+                                        <int id="1" val="1"/>
+                                    </randint>
+                                    <int id="3" val="-2"/>
+                                </custom-287>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-top comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-top>
+                                <get-val-148-4 comment="false" id="1" x="0" y="0"/>
+                            </and>
+                        </if>
+                        <else-if comment="false" x="37" y="175">
+                            <group eventID="1" id="-1">
+                                <custom-287 comment="false" x="48" y="213">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <get-val-148-6 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="1"/>
+                                    <int id="3" val="-2"/>
+                                </custom-287>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-left comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-left>
+                                <get-val-148-2 comment="false" id="1" x="0" y="0"/>
+                            </and>
+                        </else-if>
+                        <else-if comment="false" x="37" y="257">
+                            <group eventID="1" id="-1">
+                                <custom-287 comment="false" x="48" y="295">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <get-val-148-6 comment="false" id="1" x="0" y="0"/>
+                                    <randint comment="false" id="2" x="0" y="0">
+                                        <int id="0" val="-1"/>
+                                        <int id="1" val="1"/>
+                                    </randint>
+                                    <int id="3" val="-2"/>
+                                </custom-287>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-bottom comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-bottom>
+                                <get-val-148-3 comment="false" id="1" x="0" y="0"/>
+                            </and>
+                        </else-if>
+                        <else-if comment="false" x="37" y="339">
+                            <group eventID="1" id="-1">
+                                <custom-287 comment="false" x="48" y="377">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <get-val-148-6 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="-1"/>
+                                    <int id="3" val="-2"/>
+                                </custom-287>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-right comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-right>
+                                <get-val-148-1 comment="false" id="1" x="0" y="0"/>
+                            </and>
+                        </else-if>
+                    </group>
+                    <contains-item comment="false" id="0" x="0" y="0">
+                        <get-val-148-5 comment="false" id="0" x="0" y="0"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <getatype comment="false" id="0" x="0" y="0">
+                                <other-actor comment="false" id="0" x="0" y="0"/>
+                            </getatype>
+                        </tostring>
+                    </contains-item>
+                </if>
+                <if comment="false" x="26" y="433">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="458">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <get-val-148-7 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

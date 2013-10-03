@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <receiver-1-57 comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return __ScaledActor.bodyScale.x;"/>
+                </custom-code>
+            </group>
+            <get-byobval-27-581-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-57>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-2-56 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return __ScaledActor.bodyScale.y;"/>
+                </custom-code>
+            </group>
+            <get-byobval-27-582-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-2-56>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receiver-3-59 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var stage1 = __FirstActor.stage;&#10;var stage2 = __SecondActor.stage;&#10;if (stage1 == null || stage2 == null) return false;&#10;var bounds1 = __FirstActor.getBounds(stage1);&#10;var bounds2 = __SecondActor.getBounds(stage2);&#10;&#10;if (bounds1.right &amp;lt; bounds2.left) return false;&#10;if (bounds1.left &amp;gt; bounds2.right) return false;&#10;&#10;return true;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-584-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-584-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-3-59>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-4-60 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var stage1 = __FirstActor.stage;&#10;var stage2 = __SecondActor.stage;&#10;if (stage1 == null || stage2 == null) return false;&#10;var bounds1 = __FirstActor.getBounds(stage1);&#10;var bounds2 = __SecondActor.getBounds(stage2);&#10;&#10;if (bounds1.bottom &amp;lt; bounds2.top) return false;&#10;if (bounds1.top &amp;gt; bounds2.bottom) return false;&#10;&#10;return true;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-589-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-589-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-4-60>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-14-63 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var aParent = __Actor.parent;&#10;if (aParent == null) return 0;&#10;var bounds1 = __Actor.getBounds(aParent);&#10;return bounds1.left /  Engine.SCALE;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-604-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-14-63>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <receiver-15-61 comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var aParent = __Actor.parent;&#10;if (aParent == null) return 0;&#10;var bounds1 = __Actor.getBounds(aParent);&#10;return bounds1.right /  Engine.SCALE;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-605-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-15-61>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <receiver-16-62 comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var aParent = __Actor.parent;&#10;if (aParent == null) return 0;&#10;var bounds1 = __Actor.getBounds(aParent);&#10;return bounds1.top / Engine.SCALE;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-606-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-16-62>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <receiver-18-66 comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var aParent = __Actor.parent;&#10;if (aParent == null) return 0;&#10;var bounds1 = __Actor.getBounds(aParent);&#10;return bounds1.bottom / Engine.SCALE;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-608-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-18-66>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <receiver-20-65 comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return __Actor == null;"/>
+                </custom-code>
+            </group>
+            <get-byobval-27-614-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-20-65>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <receiver-22-64 comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var xDist = __FirstActor.getXCenter() - __SecondActor.getXCenter();&#10;var yDist = __FirstActor.getYCenter() - __SecondActor.getYCenter();&#10;var dist = Math.sqrt((xDist * xDist) + (yDist * yDist));&#10;&#10;return dist;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-626-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-626-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-22-64>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <receiver-29-58 comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var aParent = __Actor.parent;&#10;if (aParent == null) return false;&#10;var bounds1 = __Actor.getBounds(aParent);&#10;var screenX = __Actor.getScreenX();&#10;var screenY = __Actor.getScreenY();&#10;return __x &amp;gt;= bounds1.left - screenX &amp;amp;&amp;amp;&#10;&#9;__x &amp;lt;= bounds1.right - screenX &amp;amp;&amp;amp; &#10;&#9;__y &amp;gt;=bounds1.top - screenY &amp;amp;&amp;amp;&#10;&#9;__y &amp;lt;= bounds1.bottom - screenY;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-694-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-694-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-27-694-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-29-58>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <receiver-30-126 comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="12" id="-1">
+                        <stop comment="false" x="37" y="88"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <get-byobval-27-126-0 comment="false" id="0" x="0" y="0"/>
+                        </getanim>
+                        <get-byobval-27-126-1 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <setanim comment="false" x="26" y="120">
+                    <get-byobval-27-126-0 comment="false" id="0" x="0" y="0"/>
+                    <get-byobval-27-126-1 comment="false" id="1" x="0" y="0"/>
+                </setanim>
+            </group>
+            <get-byobval-27-126-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-126-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-30-126>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <receiver-31-127 comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="13" id="-1">
+                        <stop comment="false" x="37" y="88"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <get-byobval-27-127-0 comment="false" id="0" x="0" y="0"/>
+                        </getanim>
+                        <get-byobval-27-127-1 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="120">
+                    <group eventID="13" id="-1">
+                        <custom-90 comment="false" x="37" y="158">
+                            <get-byobval-27-127-0 comment="false" id="0" x="0" y="0"/>
+                            <get-byobval-27-127-1 comment="false" id="1" x="0" y="0"/>
+                            <get-byobval-27-127-2 comment="false" id="2" x="0" y="0"/>
+                        </custom-90>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <get-byobval-27-127-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Animation Manager"/>
+                    </has-snippet>
+                </if>
+                <else comment="false" x="26" y="202">
+                    <group eventID="13" id="-1">
+                        <setanim comment="false" x="37" y="222">
+                            <get-byobval-27-127-0 comment="false" id="0" x="0" y="0"/>
+                            <get-byobval-27-127-1 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-27-127-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-127-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-27-127-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-31-127>
+    </group>
+    <group eventID="13" id="-1"/>
+    <group eventID="14" id="0">
+        <receiver-32-128 comment="false" x="15" y="15">
+            <group eventID="14" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="13" id="-1">
+                        <stop comment="false" x="37" y="88"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <get-byobval-27-128-0 comment="false" id="0" x="0" y="0"/>
+                        </getanim>
+                        <get-byobval-27-128-1 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <custom-88 comment="false" x="26" y="120">
+                    <get-byobval-27-128-0 comment="false" id="0" x="0" y="0"/>
+                    <get-byobval-27-128-1 comment="false" id="1" x="0" y="0"/>
+                </custom-88>
+            </group>
+            <get-byobval-27-128-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-128-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-32-128>
+    </group>
+    <group eventID="14" id="-1"/>
+    <group eventID="15" id="0">
+        <receiver-35-234 comment="false" x="15" y="15">
+            <group eventID="15" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="for (item in cast(__Values, Array&amp;lt;Dynamic&amp;gt;))&#10;{&#10;&#9;var attributes;&#10;&#9;var str = &amp;quot;&amp;quot; + item;&#10;&#9;if (str.indexOf(&amp;quot;:&amp;quot;) == -1)&#10;&#9;{&#10;&#9;&#9;attributes = str.split(&amp;quot;=&amp;quot;);&#10;&#9;&#9;setValue(null, __Actor, attributes[0], attributes[1]);&#10;&#9;} else {&#10;&#9;&#9;var behaviourValues = str.split(&amp;quot;:&amp;quot;);&#10;&#9;&#9;var behaviour = behaviourValues[0];&#10;&#9;&#9;attributes = behaviourValues[1].split(&amp;quot;=&amp;quot;);&#10;&#9;&#9;setValue(behaviour, __Actor, attributes[0], attributes[1]);&#10;&#9;}&#10;}&#10;&#10;}&#10;&#10;private static function setValue (behaviour:String, actor:Actor, key:String, value:String)&#10;{&#10;&#9;switch (value)&#10;&#9;{&#10;&#9;&#9;case &amp;quot;true&amp;quot;:&#10;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, true);&#10;&#9;&#9;&#9;else actor.setValue(behaviour, key, true);&#10;&#9;&#9;case &amp;quot;false&amp;quot;:&#10;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, false);&#10;&#9;&#9;&#9;else actor.setValue(behaviour, key, false);&#10;&#9;&#9;default:&#10;&#9;&#9;&#9;var fValue = Std.parseFloat(value);&#10;&#9;&#9;&#9;if (Std.string(fValue) == value)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, fValue);&#10;&#9;&#9;&#9;&#9;else actor.setValue(behaviour, key, fValue);&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;else &#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, value);&#10;&#9;&#9;&#9;&#9;else actor.setValue(behaviour, key, value);&#10;&#9;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;private static function close () {"/>
+                </code-long>
+            </group>
+            <get-byobval-27-234-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-234-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-35-234>
+    </group>
+    <group eventID="15" id="-1"/>
+    <group eventID="17" id="0">
+        <receiver-38-240 comment="false" x="15" y="15">
+            <group eventID="17" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return __Actor.name;"/>
+                </custom-code>
+            </group>
+            <get-byobval-27-240-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-38-240>
+    </group>
+    <group eventID="17" id="-1"/>
+    <group eventID="16" id="0">
+        <receiver-37-239 comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return __Actor.ID;"/>
+                </custom-code>
+            </group>
+            <get-byobval-27-239-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-37-239>
+    </group>
+    <group eventID="16" id="-1"/>
+    <group eventID="19" id="0">
+        <receiver-46-252 comment="false" x="15" y="15">
+            <group eventID="19" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var allActors = Engine.engine.allActors;&#10;for (actorOnScreen in allActors)&#10;{&#10;&#9;if (actorOnScreen != null &amp;amp;&amp;amp; !actorOnScreen.dead &amp;amp;&amp;amp; !actorOnScreen.recycled &amp;amp;&amp;amp; actorOnScreen.isOnScreenCache)&#10;&#9;{&#10;&#9;&#9;if (actorOnScreen.name + &amp;quot; &amp;quot; + actorOnScreen.ID == __Name)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;return actorOnScreen;&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;return null;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-252-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-46-252>
+    </group>
+    <group eventID="19" id="-1"/>
+    <group eventID="18" id="0">
+        <receiver-39-241 comment="false" x="15" y="15">
+            <group eventID="18" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return __Actor.name + &amp;quot; &amp;quot;  + __Actor.ID;"/>
+                </custom-code>
+            </group>
+            <get-byobval-27-241-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-39-241>
+    </group>
+    <group eventID="18" id="-1"/>
+    <group eventID="21" id="0">
+        <receiver-50-285 comment="false" x="15" y="15">
+            <group eventID="21" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var script = __Actor.behaviors.cache.get(__BehaviourName).script;&#10;return Reflect.hasField(script, __AttributeName);"/>
+                </code-long>
+            </group>
+            <get-byobval-27-285-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-285-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-27-285-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-50-285>
+    </group>
+    <group eventID="21" id="-1"/>
+    <group eventID="20" id="0">
+        <receiver-47-278 comment="false" x="15" y="15">
+            <group eventID="20" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var value = __Actor.getActorValue(__AttributeName);&#10;return value != null;"/>
+                </code-long>
+            </group>
+            <get-byobval-27-278-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-278-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-47-278>
+    </group>
+    <group eventID="20" id="-1"/>
+    <group eventID="22" id="0">
+        <receiver-52-287 comment="false" x="36" y="29">
+            <group eventID="22" id="-1">
+                <if comment="false" x="47" y="59">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="58" y="97">
+                            <group eventID="2" id="-1">
+                                <set-attribute comment="false" x="69" y="135">
+                                    <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-27-287-1 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="_KillX"/>
+                                    <get-byobval-27-287-2 comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                            </group>
+                            <custom-285 comment="false" id="0" x="0" y="0">
+                                <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="_KillX"/>
+                                <get-byobval-27-287-1 comment="false" id="2" x="0" y="0"/>
+                            </custom-285>
+                        </if>
+                        <if comment="false" x="58" y="179">
+                            <group eventID="2" id="-1">
+                                <set-attribute comment="false" x="69" y="217">
+                                    <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-27-287-1 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="_KillY"/>
+                                    <get-byobval-27-287-3 comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                            </group>
+                            <custom-285 comment="false" id="0" x="0" y="0">
+                                <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="_KillX"/>
+                                <get-byobval-27-287-1 comment="false" id="2" x="0" y="0"/>
+                            </custom-285>
+                        </if>
+                        <say comment="false" x="58" y="261">
+                            <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                            <get-byobval-27-287-1 comment="false" id="1" x="0" y="0"/>
+                            <int id="2" val="Killed"/>
+                        </say>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                        <get-byobval-27-287-1 comment="false" id="1" x="0" y="0"/>
+                    </has-snippet>
+                </if>
+                <else-if comment="false" x="47" y="305">
+                    <group eventID="3" id="-1">
+                        <custom-287 comment="false" x="58" y="343">
+                            <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Default Kill Behaviour PM"/>
+                            <get-byobval-27-287-2 comment="false" id="2" x="0" y="0"/>
+                            <get-byobval-27-287-3 comment="false" id="3" x="0" y="0"/>
+                        </custom-287>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Default Kill Behaviour PM"/>
+                    </has-snippet>
+                </else-if>
+                <else comment="false" x="47" y="387">
+                    <group eventID="3" id="-1">
+                        <custom-code comment="false" x="58" y="407">
+                            <int id="0" val="Engine.engine.recycleActor(__Actor);"/>
+                        </custom-code>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-27-287-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-287-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-27-287-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-27-287-3 comment="false" id="3" x="0" y="0"/>
+        </receiver-52-287>
+    </group>
+    <group eventID="22" id="-1"/>
+</groups>

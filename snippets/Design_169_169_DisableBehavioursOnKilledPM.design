@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <for-each comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="1" id="-1">
+                                <actor-enabledisable-snippet comment="false" x="48" y="103">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <for-each-item comment="false" id="2" x="0" y="0"/>
+                                </actor-enabledisable-snippet>
+                            </group>
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <for-each-item comment="false" id="1" x="0" y="0"/>
+                            </has-snippet>
+                        </if>
+                    </group>
+                    <get-val-169-1 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <set-dxy comment="false" x="26" y="159">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                </set-dxy>
+                <set-dxy comment="false" x="26" y="186">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="0"/>
+                </set-dxy>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-1-261 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="4" id="-1">
+                        <say comment="false" x="37" y="78">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Disable Behaviours On Killed PM"/>
+                            <int id="2" val="Killed"/>
+                        </say>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Disable Behaviours On Killed PM"/>
+                    </has-snippet>
+                </if>
+                <set-dxy comment="false" x="26" y="117">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                </set-dxy>
+                <set-dxy comment="false" x="26" y="144">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="0"/>
+                </set-dxy>
+            </group>
+            <get-byobval-169-261-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-261>
+    </group>
+    <group eventID="4" id="-1"/>
+</groups>

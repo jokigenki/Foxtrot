@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <create-region comment="false" x="37" y="75">
+                            <custom-63 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-63>
+                            <custom-62 comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-62>
+                            <get-wh comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-wh>
+                            <get-wh comment="false" id="3" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-wh>
+                        </create-region>
+                        <set-val-188-1 comment="false" x="37" y="108">
+                            <REGION eid="lastcreated" id="0"/>
+                        </set-val-188-1>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <as-boolean comment="false" id="0" x="0" y="0">
+                            <get-val-188-1 comment="false" id="0" x="0" y="0"/>
+                        </as-boolean>
+                    </not>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <say comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Displays Popup PM"/>
+                    <int id="2" val="RefreshPopup"/>
+                </say>
+            </group>
+            <int id="0" val="0"/>
+            <get-val-188-1 comment="false" id="1" x="0" y="0"/>
+            <get-val-188-2 comment="false" id="2" x="0" y="0"/>
+        </event-type-region>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <custom-297 comment="false" x="26" y="47"/>
+            </group>
+            <int id="0" val="1"/>
+            <get-val-188-1 comment="false" id="1" x="0" y="0"/>
+            <get-val-188-2 comment="false" id="2" x="0" y="0"/>
+        </event-type-region>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <custom-296 comment="false" x="37" y="88">
+                            <get-val-188-6 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-val-188-4 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-val-188-5 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </custom-296>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <has-snippet comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Usable Item PM"/>
+                        </has-snippet>
+                        <less comment="false" id="1" x="0" y="0">
+                            <get-attribute comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Usable Item PM"/>
+                                <int id="2" val="_CurrentNumberOfUses"/>
+                            </get-attribute>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-attribute comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Usable Item PM"/>
+                                    <int id="2" val="_ActivateAfterNumberOfUses"/>
+                                </get-attribute>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </less>
+                    </and>
+                </if>
+                <else comment="false" x="26" y="145">
+                    <group eventID="2" id="-1">
+                        <custom-296 comment="false" x="37" y="165">
+                            <get-val-188-3 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-val-188-4 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-val-188-5 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </custom-296>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="RefreshPopup"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+</groups>

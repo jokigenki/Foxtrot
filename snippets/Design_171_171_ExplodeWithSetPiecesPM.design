@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <print comment="false" x="26" y="40">
+                    <int id="0" val="KILLED"/>
+                </print>
+                <repeat comment="false" x="26" y="60">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="85">
+                            <ACTORTYPE eid="var" id="0" vid="4"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-xy comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <set-val-171-14 comment="false" x="37" y="125">
+                            <loopindex comment="false" id="0" x="0" y="0"/>
+                        </set-val-171-14>
+                        <if comment="false" x="37" y="150">
+                            <group eventID="1" id="-1">
+                                <incdec comment="false" x="48" y="188">
+                                    <int id="0" val="14"/>
+                                    <int id="1" val="1"/>
+                                    <get-num-frames comment="false" id="2" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                    </get-num-frames>
+                                </incdec>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-171-14 comment="false" id="0" x="0" y="0"/>
+                                <get-num-frames comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </get-num-frames>
+                            </more>
+                        </if>
+                        <setanim comment="false" x="37" y="240">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <str-combine comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="p"/>
+                                    <get-val-171-14 comment="false" id="1" x="0" y="0"/>
+                                </str-combine>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <get-val-171-10 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <die comment="false" x="26" y="294">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

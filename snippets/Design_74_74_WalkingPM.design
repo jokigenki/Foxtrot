@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Inputs: ----------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="&amp;quot;On Ground?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;On Ground&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="80">
+                    <int id="0" val="&amp;quot;Is Running?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;PM Jumping&amp;quot; Behavior (NOT required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="100">
+                    <int id="0" val="&amp;quot;Is Ducking?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;PM Ducking&amp;quot; Behavior (NOT required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="120">
+                    <int id="0" val="&amp;quot;Is Slope Sliding?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;Slope Detection&amp;quot; Behavior (NOT required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="140">
+                    <int id="0" val="Outputs: ---------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="160">
+                    <int id="0" val="&amp;quot;Facing Right?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute"/>
+                </comment-short>
+                <actor-set-prop comment="false" x="26" y="180">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Facing Right?"/>
+                    <true comment="false" id="2" x="0" y="0"/>
+                </actor-set-prop>
+                <set-val-74-13 comment="false" x="26" y="212">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-74-13>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <for-each comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="-1" id="-1">
+                                <stop comment="false" x="48" y="113"/>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <tostring comment="false" id="1" x="0" y="0">
+                                        <for-each-item comment="false" id="0" x="0" y="0"/>
+                                    </tostring>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                    </group>
+                    <get-val-74-11 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <if comment="false" x="26" y="157">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="182"/>
+                    </group>
+                    <get-val-74-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <comment-short comment="false" x="26" y="214">
+                    <int id="0" val="Custom: Is &amp;quot;Right&amp;quot; on for Self, Is &amp;quot;Left&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="234">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="277">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Facing Right?"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <if comment="false" x="37" y="309">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="347">
+                                    <int id="0" val="Loop &amp;lt;Walk Right Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
+                                </comment-short>
+                                <custom-127 comment="false" x="48" y="367">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-74-6 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-74-12 comment="false" id="2" x="0" y="0"/>
+                                </custom-127>
+                                <custom-471 comment="false" x="48" y="399">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-471>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="On Ground?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                        <comment-short comment="false" x="37" y="438">
+                            <int id="0" val="Custom: Self At Max Walking Speed"/>
+                        </comment-short>
+                        <if comment="false" x="37" y="458">
+                            <group eventID="-1" id="-1">
+                                <stop comment="false" x="48" y="491"/>
+                            </group>
+                            <custom-111 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-111>
+                        </if>
+                        <push-shove comment="false" x="37" y="523">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                            <int id="3" val="0"/>
+                            <get-val-74-3 comment="false" id="4" x="0" y="0"/>
+                        </push-shove>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <custom-93 comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Right"/>
+                        </custom-93>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Left"/>
+                            </custom-93>
+                        </not>
+                    </and>
+                </if>
+                <comment-short comment="false" x="26" y="567">
+                    <int id="0" val="Custom: Is &amp;quot;Left&amp;quot; on for Self, Is &amp;quot;Right&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="587">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="630">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Facing Right?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <if comment="false" x="37" y="662">
+                            <group eventID="-1" id="-1">
+                                <comment-short comment="false" x="48" y="700">
+                                    <int id="0" val="Custom: Loop &amp;lt;Walk Left Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
+                                </comment-short>
+                                <custom-127 comment="false" x="48" y="720">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-74-7 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-74-12 comment="false" id="2" x="0" y="0"/>
+                                </custom-127>
+                                <custom-471 comment="false" x="48" y="752">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-471>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="On Ground?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                        <comment-short comment="false" x="37" y="791">
+                            <int id="0" val="Custom: Self At Max Walking Speed"/>
+                        </comment-short>
+                        <if comment="false" x="37" y="811">
+                            <group eventID="-1" id="-1">
+                                <stop comment="false" x="48" y="844"/>
+                            </group>
+                            <custom-111 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-111>
+                        </if>
+                        <push-shove comment="false" x="37" y="876">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="-1"/>
+                            <int id="3" val="0"/>
+                            <get-val-74-3 comment="false" id="4" x="0" y="0"/>
+                        </push-shove>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <custom-93 comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Left"/>
+                        </custom-93>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Right"/>
+                            </custom-93>
+                        </not>
+                    </and>
+                </if>
+                <comment-short comment="false" x="26" y="920">
+                    <int id="0" val="Custom: Is &amp;quot;Right&amp;quot; on for Self, Is &amp;quot;Left&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="940">
+                    <group eventID="-1" id="-1">
+                        <set-val-74-13 comment="false" x="37" y="983">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-74-13>
+                        <if comment="false" x="37" y="1008">
+                            <group eventID="-1" id="-1">
+                                <if comment="false" x="48" y="1046">
+                                    <group eventID="-1" id="-1">
+                                        <comment-short comment="false" x="59" y="1084">
+                                            <int id="0" val="Loop &amp;lt;Idle Right Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
+                                        </comment-short>
+                                        <custom-127 comment="false" x="59" y="1104">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-74-8 comment="false" id="1" x="0" y="0"/>
+                                            <get-val-74-12 comment="false" id="2" x="0" y="0"/>
+                                        </custom-127>
+                                    </group>
+                                    <as-boolean comment="false" id="0" x="0" y="0">
+                                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Facing Right?"/>
+                                        </actor-get-prop>
+                                    </as-boolean>
+                                </if>
+                                <else comment="false" x="48" y="1148">
+                                    <group eventID="-1" id="-1">
+                                        <comment-short comment="false" x="59" y="1168">
+                                            <int id="0" val="Loop &amp;lt;Idle Left Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
+                                        </comment-short>
+                                        <custom-127 comment="false" x="59" y="1188">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-74-9 comment="false" id="1" x="0" y="0"/>
+                                            <get-val-74-12 comment="false" id="2" x="0" y="0"/>
+                                        </custom-127>
+                                    </group>
+                                </else>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="On Ground?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Right"/>
+                            </custom-93>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Left"/>
+                            </custom-93>
+                        </not>
+                    </and>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receiver-1-111 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="88">
+                            <group eventID="-1" id="-1">
+                                <set-dxy comment="false" x="48" y="113">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-74-4 comment="false" id="2" x="0" y="0"/>
+                                </set-dxy>
+                            </group>
+                            <get-val-74-5 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <return comment="false" x="37" y="157">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <as-boolean comment="false" id="0" x="0" y="0">
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Facing Right?"/>
+                            </actor-get-prop>
+                        </as-boolean>
+                        <moreeq comment="false" id="1" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                            <get-val-74-4 comment="false" id="1" x="0" y="0"/>
+                        </moreeq>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="194">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="242">
+                            <group eventID="-1" id="-1">
+                                <set-dxy comment="false" x="48" y="267">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <neg comment="false" id="2" x="0" y="0">
+                                        <get-val-74-4 comment="false" id="0" x="0" y="0"/>
+                                    </neg>
+                                </set-dxy>
+                            </group>
+                            <get-val-74-5 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <return comment="false" x="37" y="316">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </not>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                            <neg comment="false" id="1" x="0" y="0">
+                                <get-val-74-4 comment="false" id="0" x="0" y="0"/>
+                            </neg>
+                        </lesseq>
+                    </and>
+                </if>
+                <return comment="false" x="26" y="353">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-74-11-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-111>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-2-115 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-74-3 comment="false" x="26" y="45">
+                    <get-byobval-74-14-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-74-3>
+            </group>
+            <get-byobval-74-14-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-74-14-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-2-115>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-3-117 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <return comment="false" x="26" y="45">
+                    <get-val-74-3 comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-74-15-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-3-117>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <receiver-4-114 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-74-4 comment="false" x="26" y="45">
+                    <get-byobval-74-16-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-74-4>
+            </group>
+            <get-byobval-74-16-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-74-16-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-4-114>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <receiver-5-118 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <return comment="false" x="26" y="45">
+                    <get-val-74-4 comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-74-17-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-5-118>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <receiver-6-116 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-74-10 comment="false" x="26" y="45">
+                    <get-byobval-74-18-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-74-10>
+            </group>
+            <get-byobval-74-18-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-74-18-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-6-116>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <receiver-7-113 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-74-5 comment="false" x="26" y="45">
+                    <get-byobval-74-19-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-74-5>
+            </group>
+            <get-byobval-74-19-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-74-19-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-7-113>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <receiver-8-112 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <set-dxy comment="false" x="37" y="93">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <times comment="false" id="2" x="0" y="0">
+                                <get-dxy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-dxy>
+                                <get-byobval-74-472-1 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </set-dxy>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <abs comment="false" id="0" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <get-byobval-74-472-0 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                        </abs>
+                        <get-val-74-4 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+            </group>
+            <get-byobval-74-472-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-74-472-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-8-112>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <receiver-9-471 comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-val-74-13 comment="false" x="37" y="65">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-74-13>
+                        <dolater comment="false" x="37" y="90">
+                            <group eventID="2" id="-1">
+                                <set-val-74-13 comment="false" x="48" y="117">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-74-13>
+                            </group>
+                            <int id="0" val="0.3"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                        <if comment="false" x="37" y="154">
+                            <group eventID="11" id="-1">
+                                <play-sound4 comment="false" x="48" y="189">
+                                    <int id="0" val="0"/>
+                                    <custom-477 comment="false" id="1" x="0" y="0">
+                                        <custom-538 comment="false" id="0" x="0" y="0">
+                                            <get-val-74-14 comment="false" id="0" x="0" y="0"/>
+                                        </custom-538>
+                                    </custom-477>
+                                </play-sound4>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <is-empty comment="false" id="0" x="0" y="0">
+                                    <get-val-74-14 comment="false" id="0" x="0" y="0"/>
+                                </is-empty>
+                            </not>
+                        </if>
+                    </group>
+                    <get-val-74-13 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val=""/>
+        </receiver-9-471>
+    </group>
+    <group eventID="11" id="-1"/>
+</groups>

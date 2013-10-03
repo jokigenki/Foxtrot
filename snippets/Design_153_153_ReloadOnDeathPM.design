@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <custom-344 comment="false" x="37" y="65"/>
+                    </group>
+                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="97">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="127">
+                            <group eventID="2" id="-1">
+                                <scene-say comment="false" x="48" y="152">
+                                    <int id="0" val="Reload Scene On Death PM"/>
+                                    <int id="1" val="Reload"/>
+                                </scene-say>
+                            </group>
+                            <scene-has-snippet comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Reload Scene On Death PM"/>
+                            </scene-has-snippet>
+                        </if>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <is-transitioning comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <else comment="false" x="26" y="196">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="216">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="243">
+                                    <group eventID="2" id="-1">
+                                        <scene-say comment="false" x="59" y="268">
+                                            <int id="0" val="Reload Scene On Death PM"/>
+                                            <int id="1" val="Reload"/>
+                                        </scene-say>
+                                    </group>
+                                    <scene-has-snippet comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="Reload Scene On Death PM"/>
+                                    </scene-has-snippet>
+                                </if>
+                            </group>
+                            <int id="0" val="1"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="Reload"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

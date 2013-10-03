@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="83">
+                            <group eventID="1" id="-1">
+                                <dolater comment="false" x="48" y="121">
+                                    <group eventID="1" id="-1">
+                                        <if comment="false" x="59" y="153">
+                                            <group eventID="1" id="-1">
+                                                <set-dxy comment="false" x="70" y="186">
+                                                    <ACTOR eid="this" id="0"/>
+                                                    <int id="1" val="0"/>
+                                                    <get-val-194-3 comment="false" id="2" x="0" y="0"/>
+                                                </set-dxy>
+                                            </group>
+                                            <is-in-region comment="false" id="0" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                                <REGION eid="var" id="1" vid="1"/>
+                                            </is-in-region>
+                                        </if>
+                                    </group>
+                                    <get-val-194-5 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <get-dxy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-dxy>
+                                <get-val-194-3 comment="false" id="1" x="0" y="0"/>
+                            </noteq>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-193-4 comment="false" id="0" x="0" y="0"/>
+                        <is-in-region comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-193-1 comment="false" id="1" x="0" y="0"/>
+                        </is-in-region>
+                    </and>
+                </if>
+                <else-if comment="false" x="26" y="266">
+                    <group eventID="1" id="-1">
+                        <set-dxy comment="false" x="37" y="304">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-attribute comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Horizontal Movement Left PM"/>
+                            <int id="2" val="_IsActive"/>
+                        </get-attribute>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-194-4 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-194-4>
+            </group>
+            <int id="0" val="Activated"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-194-4 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-194-4>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

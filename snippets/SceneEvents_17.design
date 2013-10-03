@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <create-actor3 comment="false" x="26" y="40">
+                    <ACTORTYPE eid="196" id="0"/>
+                    <int id="1" val="520"/>
+                    <int id="2" val="256"/>
+                    <int id="3" val="2"/>
+                </create-actor3>
+                <fadeInOut comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="2"/>
+                    <int id="3" val="9"/>
+                </fadeInOut>
+                <create-actor3 comment="false" x="26" y="94">
+                    <ACTORTYPE eid="205" id="0"/>
+                    <int id="1" val="488"/>
+                    <int id="2" val="289"/>
+                    <int id="3" val="2"/>
+                </create-actor3>
+                <fadeInOut comment="false" x="26" y="121">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="2"/>
+                    <int id="3" val="9"/>
+                </fadeInOut>
+                <set-attribute comment="false" x="26" y="148">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="Inventory Collectable PM"/>
+                    <int id="2" val="_Collectioneventname"/>
+                    <int id="3" val="EggCollected"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="175">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="Inventory Collectable PM"/>
+                    <int id="2" val="_CollectableId"/>
+                    <int id="3" val="Egg1_Boss"/>
+                </set-attribute>
+                <setanim comment="false" x="26" y="202">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="Egg1_Boss"/>
+                </setanim>
+                <print comment="false" x="26" y="229">
+                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                </print>
+                <if comment="false" x="26" y="254">
+                    <group eventID="2" id="-1">
+                        <set-val-175-2 comment="false" x="37" y="279">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-175-2>
+                        <for-each comment="false" x="37" y="304">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="329">
+                                    <group eventID="1" id="-1">
+                                        <print comment="false" x="59" y="364">
+                                            <str-combine comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="Missing: "/>
+                                                <for-each-item comment="false" id="1" x="0" y="0"/>
+                                            </str-combine>
+                                        </print>
+                                        <set-val-175-2 comment="false" x="59" y="394">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-175-2>
+                                        <break comment="false" x="59" y="419"/>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <contains-item comment="false" id="0" x="0" y="0">
+                                            <get-game-val-11 comment="false" id="0" x="0" y="0"/>
+                                            <for-each-item comment="false" id="1" x="0" y="0"/>
+                                        </contains-item>
+                                    </not>
+                                </if>
+                            </group>
+                            <get-game-val-13 comment="false" id="0" x="0" y="0"/>
+                        </for-each>
+                        <if comment="false" x="37" y="463">
+                            <group eventID="1" id="-1">
+                                <print comment="false" x="48" y="488">
+                                    <int id="0" val="SPEED RUN COMPLETE!"/>
+                                </print>
+                                <scene-say comment="false" x="48" y="508">
+                                    <int id="0" val="Speed Run Timer PM"/>
+                                    <int id="1" val="CompleteSpeedRun"/>
+                                </scene-say>
+                            </group>
+                            <get-val-175-2 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val="RoosterKilled"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="3" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="3" id="-1">
+                        <comment-short comment="false" x="37" y="90">
+                            <int id="0" val="Custom: Is &amp;quot;Jump&amp;quot; on for &amp;lt;this actor&amp;gt; "/>
+                        </comment-short>
+                        <if comment="false" x="37" y="110">
+                            <group eventID="2" id="-1">
+                                <stop comment="false" x="48" y="148"/>
+                            </group>
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <this-actor comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Jump"/>
+                            </custom-93>
+                        </if>
+                        <if comment="false" x="37" y="180">
+                            <group eventID="3" id="-1">
+                                <stop comment="false" x="48" y="228"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-right comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-right>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="AI Trigger Attributes PM"/>
+                                        <int id="2" val="_TriggerOnRight"/>
+                                    </get-attribute>
+                                </not>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="260">
+                            <group eventID="3" id="-1">
+                                <stop comment="false" x="48" y="308"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-left comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-left>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="AI Trigger Attributes PM"/>
+                                        <int id="2" val="_TriggerOnLeft"/>
+                                    </get-attribute>
+                                </not>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="340">
+                            <group eventID="3" id="-1">
+                                <stop comment="false" x="48" y="388"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-top comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-top>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="AI Trigger Attributes PM"/>
+                                        <int id="2" val="_TriggerOnTop"/>
+                                    </get-attribute>
+                                </not>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="420">
+                            <group eventID="3" id="-1">
+                                <stop comment="false" x="48" y="468"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <collision-bottom comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </collision-bottom>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="AI Trigger Attributes PM"/>
+                                        <int id="2" val="_TriggerOnBottom"/>
+                                    </get-attribute>
+                                </not>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="500">
+                            <group eventID="1" id="-1">
+                                <stop comment="false" x="48" y="548"/>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <as-boolean comment="false" id="0" x="0" y="0">
+                                    <actor-get-prop comment="false" id="0" x="0" y="0">
+                                        <this-actor comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="On Ground?"/>
+                                    </actor-get-prop>
+                                </as-boolean>
+                            </not>
+                        </if>
+                        <comment-short comment="false" x="37" y="580">
+                            <int id="0" val="Custom: Get bottom for &amp;lt;this actor&amp;gt;, Get top for &amp;lt;other actor&amp;gt;"/>
+                        </comment-short>
+                        <if comment="false" x="37" y="600">
+                            <group eventID="2" id="-1">
+                                <stop comment="false" x="48" y="648"/>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <custom-66 comment="false" id="0" x="0" y="0">
+                                        <this-actor comment="false" id="0" x="0" y="0"/>
+                                    </custom-66>
+                                    <custom-62 comment="false" id="1" x="0" y="0">
+                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                    </custom-62>
+                                </minus>
+                                <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                            </more>
+                        </if>
+                        <comment-short comment="false" x="37" y="680">
+                            <int id="0" val="Custom: Set &amp;quot;Jump&amp;quot; to &amp;lt;true&amp;gt; for Self"/>
+                        </comment-short>
+                        <custom-94 comment="false" x="37" y="700">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Jump"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                        <dolater comment="false" x="37" y="732">
+                            <group eventID="1" id="-1">
+                                <comment-short comment="false" x="48" y="782">
+                                    <int id="0" val="Custom: Set &amp;quot;Jump&amp;quot; to &amp;lt;false&amp;gt; for Self"/>
+                                </comment-short>
+                                <custom-94 comment="false" x="48" y="802">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Jump"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-36-4 comment="false" id="0" x="0" y="0"/>
+                                <get-attribute comment="false" id="1" x="0" y="0">
+                                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="AI Trigger Attributes PM"/>
+                                    <int id="2" val="_TriggerValue"/>
+                                </get-attribute>
+                            </times>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-attribute comment="false" id="0" x="0" y="0">
+                            <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="AI Trigger Attributes PM"/>
+                            <int id="2" val="_TriggerId"/>
+                        </get-attribute>
+                        <int id="1" val="Jump Over"/>
+                    </eq>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <ACTORTYPE eid="230" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

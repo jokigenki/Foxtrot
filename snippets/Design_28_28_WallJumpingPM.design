@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Inputs: ----------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="&amp;quot;On Ground?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;On Ground&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="80">
+                    <int id="0" val="&amp;quot;Facing Right?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;PM Walking&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="100">
+                    <int id="0" val="Outputs: ---------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="120">
+                    <int id="0" val="&amp;quot;Is Wall Jumping?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute"/>
+                </comment-short>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <get-val-28-16 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <set-val-28-4 comment="false" x="26" y="97">
+                    <get-val-28-2 comment="false" id="0" x="0" y="0"/>
+                </set-val-28-4>
+                <set-val-28-5 comment="false" x="26" y="122">
+                    <get-val-28-3 comment="false" id="0" x="0" y="0"/>
+                </set-val-28-5>
+                <set-val-28-2 comment="false" x="26" y="147">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-28-2>
+                <set-val-28-3 comment="false" x="26" y="172">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-28-3>
+                <if comment="false" x="26" y="197">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="235">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Wall Jumping?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <custom-91 comment="false" x="37" y="267">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-28-17 comment="false" id="1" x="0" y="0"/>
+                        </custom-91>
+                        <set-val-28-6 comment="false" x="37" y="299">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-28-6>
+                        <set-val-28-7 comment="false" x="37" y="324">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-28-7>
+                        <stop comment="false" x="37" y="349"/>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="On Ground?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+                <comment-short comment="false" x="26" y="381">
+                    <int id="0" val="Custom: &amp;quot;Jump&amp;quot; was switched on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="401">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="434">
+                            <group eventID="-1" id="-1">
+                                <set-val-28-6 comment="false" x="48" y="472">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-28-6>
+                                <if comment="false" x="48" y="497">
+                                    <group eventID="-1" id="-1">
+                                        <dolater comment="false" x="59" y="532">
+                                            <group eventID="-1" id="-1">
+                                                <if comment="false" x="70" y="559">
+                                                    <group eventID="-1" id="-1">
+                                                        <set-val-28-6 comment="false" x="81" y="594">
+                                                            <false comment="false" id="0" x="0" y="0"/>
+                                                        </set-val-28-6>
+                                                    </group>
+                                                    <and comment="false" id="0" x="0" y="0">
+                                                        <not comment="false" id="0" x="0" y="0">
+                                                            <get-val-28-4 comment="false" id="0" x="0" y="0"/>
+                                                        </not>
+                                                        <not comment="false" id="1" x="0" y="0">
+                                                            <get-val-28-5 comment="false" id="0" x="0" y="0"/>
+                                                        </not>
+                                                    </and>
+                                                </if>
+                                            </group>
+                                            <int id="0" val="0.15"/>
+                                            <ACTOR eid="this" id="2"/>
+                                        </dolater>
+                                    </group>
+                                    <and comment="false" id="0" x="0" y="0">
+                                        <not comment="false" id="0" x="0" y="0">
+                                            <get-val-28-4 comment="false" id="0" x="0" y="0"/>
+                                        </not>
+                                        <not comment="false" id="1" x="0" y="0">
+                                            <get-val-28-5 comment="false" id="0" x="0" y="0"/>
+                                        </not>
+                                    </and>
+                                </if>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="On Ground?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                    </group>
+                    <custom-92 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Jump"/>
+                    </custom-92>
+                </if>
+                <if comment="false" x="26" y="679">
+                    <group eventID="-1" id="-1">
+                        <set-val-28-9 comment="false" x="37" y="704">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-28-9>
+                    </group>
+                    <get-val-28-6 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <comment-short comment="false" x="26" y="741">
+                    <int id="0" val="Custom: Is &amp;quot;Jump&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="761">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="804">
+                            <group eventID="-1" id="-1">
+                                <set-val-28-6 comment="false" x="48" y="847">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-28-6>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <as-boolean comment="false" id="0" x="0" y="0">
+                                    <actor-get-prop comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="On Ground?"/>
+                                    </actor-get-prop>
+                                </as-boolean>
+                            </not>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-28-6 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-93 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Jump"/>
+                            </custom-93>
+                        </not>
+                    </and>
+                </if>
+                <comment-short comment="false" x="26" y="896">
+                    <int id="0" val="Custom: Is &amp;quot;Jump&amp;quot; on for Self"/>
+                </comment-short>
+                <if comment="false" x="26" y="916">
+                    <group eventID="-1" id="-1">
+                        <set-val-28-6 comment="false" x="37" y="969">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-28-6>
+                        <set-val-28-7 comment="false" x="37" y="994">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-28-7>
+                        <if comment="false" x="37" y="1019">
+                            <group eventID="-1" id="-1">
+                                <set-val-28-7 comment="false" x="48" y="1044">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-28-7>
+                                <set-val-28-10 comment="false" x="48" y="1069">
+                                    <int id="0" val="0"/>
+                                </set-val-28-10>
+                                <set-val-28-9 comment="false" x="48" y="1089">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-28-9>
+                                <set-dxy comment="false" x="48" y="1114">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                                <push-shove2 comment="false" x="48" y="1141">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-28-11 comment="false" id="2" x="0" y="0"/>
+                                    <get-val-28-13 comment="false" id="3" x="0" y="0"/>
+                                </push-shove2>
+                                <actor-set-prop comment="false" x="48" y="1173">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                                <custom-73 comment="false" x="48" y="1205">
+                                    <ACTOR eid="this" id="0"/>
+                                    <true comment="false" id="1" x="0" y="0"/>
+                                </custom-73>
+                                <custom-96 comment="false" x="48" y="1237">
+                                    <ACTOR eid="this" id="0"/>
+                                    <true comment="false" id="1" x="0" y="0"/>
+                                </custom-96>
+                                <custom-55 comment="false" x="48" y="1269">
+                                    <ACTOR eid="this" id="0"/>
+                                    <true comment="false" id="1" x="0" y="0"/>
+                                </custom-55>
+                            </group>
+                            <get-val-28-4 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <if comment="false" x="37" y="1313">
+                            <group eventID="-1" id="-1">
+                                <set-val-28-7 comment="false" x="48" y="1338">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-28-7>
+                                <set-val-28-10 comment="false" x="48" y="1363">
+                                    <int id="0" val="0"/>
+                                </set-val-28-10>
+                                <set-val-28-9 comment="false" x="48" y="1383">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-28-9>
+                                <set-dxy comment="false" x="48" y="1408">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                                <push-shove2 comment="false" x="48" y="1435">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-28-12 comment="false" id="2" x="0" y="0"/>
+                                    <get-val-28-13 comment="false" id="3" x="0" y="0"/>
+                                </push-shove2>
+                                <actor-set-prop comment="false" x="48" y="1467">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                                <custom-73 comment="false" x="48" y="1499">
+                                    <ACTOR eid="this" id="0"/>
+                                    <true comment="false" id="1" x="0" y="0"/>
+                                </custom-73>
+                                <custom-96 comment="false" x="48" y="1531">
+                                    <ACTOR eid="this" id="0"/>
+                                    <true comment="false" id="1" x="0" y="0"/>
+                                </custom-96>
+                                <custom-55 comment="false" x="48" y="1563">
+                                    <ACTOR eid="this" id="0"/>
+                                    <true comment="false" id="1" x="0" y="0"/>
+                                </custom-55>
+                            </group>
+                            <get-val-28-5 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <custom-93 comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Jump"/>
+                        </custom-93>
+                        <and comment="false" id="1" x="0" y="0">
+                            <and comment="false" id="0" x="0" y="0">
+                                <get-val-28-9 comment="false" id="0" x="0" y="0"/>
+                                <get-val-28-6 comment="false" id="1" x="0" y="0"/>
+                            </and>
+                            <not comment="false" id="1" x="0" y="0">
+                                <as-boolean comment="false" id="0" x="0" y="0">
+                                    <actor-get-prop comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="On Ground?"/>
+                                    </actor-get-prop>
+                                </as-boolean>
+                            </not>
+                        </and>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="1619">
+                    <group eventID="-1" id="-1">
+                        <incdec comment="false" x="37" y="1644">
+                            <int id="0" val="10"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                        <if comment="false" x="37" y="1671">
+                            <group eventID="-1" id="-1">
+                                <actor-set-prop comment="false" x="48" y="1706">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Is Wall Jumping?"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-28-10 comment="false" id="0" x="0" y="0"/>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <times comment="false" id="0" x="0" y="0">
+                                        <int id="0" val=".1"/>
+                                        <int id="1" val="1000"/>
+                                    </times>
+                                    <stepsize comment="false" id="1" x="0" y="0"/>
+                                </div>
+                            </moreeq>
+                        </if>
+                        <if comment="false" x="37" y="1750">
+                            <group eventID="-1" id="-1">
+                                <custom-73 comment="false" x="48" y="1785">
+                                    <ACTOR eid="this" id="0"/>
+                                    <false comment="false" id="1" x="0" y="0"/>
+                                </custom-73>
+                                <custom-96 comment="false" x="48" y="1817">
+                                    <ACTOR eid="this" id="0"/>
+                                    <false comment="false" id="1" x="0" y="0"/>
+                                </custom-96>
+                                <custom-55 comment="false" x="48" y="1849">
+                                    <ACTOR eid="this" id="0"/>
+                                    <false comment="false" id="1" x="0" y="0"/>
+                                </custom-55>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-28-10 comment="false" id="0" x="0" y="0"/>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <times comment="false" id="0" x="0" y="0">
+                                        <int id="0" val=".2"/>
+                                        <int id="1" val="1000"/>
+                                    </times>
+                                    <stepsize comment="false" id="1" x="0" y="0"/>
+                                </div>
+                            </moreeq>
+                        </if>
+                    </group>
+                    <get-val-28-7 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="1905">
+                    <group eventID="-1" id="-1">
+                        <custom-73 comment="false" x="37" y="1925">
+                            <ACTOR eid="this" id="0"/>
+                            <false comment="false" id="1" x="0" y="0"/>
+                        </custom-73>
+                        <custom-96 comment="false" x="37" y="1957">
+                            <ACTOR eid="this" id="0"/>
+                            <false comment="false" id="1" x="0" y="0"/>
+                        </custom-96>
+                        <custom-55 comment="false" x="37" y="1989">
+                            <ACTOR eid="this" id="0"/>
+                            <false comment="false" id="1" x="0" y="0"/>
+                        </custom-55>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="2033">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="2071">
+                            <group eventID="-1" id="-1">
+                                <custom-90 comment="false" x="48" y="2109">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-28-14 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-28-17 comment="false" id="2" x="0" y="0"/>
+                                </custom-90>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                        <else comment="false" x="37" y="2153">
+                            <group eventID="-1" id="-1">
+                                <custom-90 comment="false" x="48" y="2173">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-28-15 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-28-17 comment="false" id="2" x="0" y="0"/>
+                                </custom-90>
+                            </group>
+                        </else>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Wall Jumping?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="88"/>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <collision-type comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="3"/>
+                        </collision-type>
+                        <not comment="false" id="1" x="0" y="0">
+                            <collision-type comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="2"/>
+                            </collision-type>
+                        </not>
+                    </or>
+                </if>
+                <if comment="false" x="26" y="120">
+                    <group eventID="-1" id="-1">
+                        <set-val-28-2 comment="false" x="37" y="153">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-28-2>
+                        <actor-set-prop comment="false" x="37" y="178">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Wall Jumping?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <comment-short comment="false" x="37" y="210">
+                            <int id="0" val="Custom: Clear Current Anim Category If Same As &amp;lt;Animation Category&amp;gt;"/>
+                        </comment-short>
+                        <custom-91 comment="false" x="37" y="230">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-28-17 comment="false" id="1" x="0" y="0"/>
+                        </custom-91>
+                    </group>
+                    <collision-left comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-left>
+                </if>
+                <if comment="false" x="26" y="274">
+                    <group eventID="-1" id="-1">
+                        <set-val-28-3 comment="false" x="37" y="307">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-28-3>
+                        <actor-set-prop comment="false" x="37" y="332">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Wall Jumping?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <comment-short comment="false" x="37" y="364">
+                            <int id="0" val="Custom: Clear Current Anim Category If Same As &amp;lt;Animation Category&amp;gt;"/>
+                        </comment-short>
+                        <custom-91 comment="false" x="37" y="384">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-28-17 comment="false" id="1" x="0" y="0"/>
+                        </custom-91>
+                    </group>
+                    <collision-right comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-right>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-2-67 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-28-16 comment="false" x="26" y="45">
+                    <get-byobval-28-370-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-28-16>
+            </group>
+            <get-byobval-28-370-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-28-370-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-2-67>
+    </group>
+    <group eventID="4" id="-1"/>
+</groups>

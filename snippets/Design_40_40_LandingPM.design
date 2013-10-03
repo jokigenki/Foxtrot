@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Inputs:"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="&amp;quot;Facing Right?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;Walking&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="80">
+                    <int id="0" val="Outputs:"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="100">
+                    <int id="0" val="none"/>
+                </comment-short>
+                <set-val-40-11 comment="false" x="26" y="120">
+                    <int id="0" val="0"/>
+                </set-val-40-11>
+                <set-val-40-8 comment="false" x="26" y="140">
+                    <int id="0" val="0"/>
+                </set-val-40-8>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <get-val-40-19 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <comment-short comment="false" x="26" y="97">
+                    <int id="0" val="Custom: Check landing movement"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="117">
+                    <int id="0" val="check every other frame to prevent false positives"/>
+                </comment-short>
+                <if comment="false" x="26" y="137">
+                    <group eventID="2" id="-1">
+                        <set-val-40-11 comment="false" x="37" y="167">
+                            <int id="0" val="1"/>
+                        </set-val-40-11>
+                        <stop comment="false" x="37" y="187"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-40-11 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <set-val-40-11 comment="false" x="26" y="219">
+                    <int id="0" val="0"/>
+                </set-val-40-11>
+                <set-val-40-9 comment="false" x="26" y="239">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-40-9>
+                <if comment="false" x="26" y="272">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="302">
+                            <group eventID="2" id="-1">
+                                <set-val-40-1 comment="false" x="48" y="332">
+                                    <get-val-40-9 comment="false" id="0" x="0" y="0"/>
+                                </set-val-40-1>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-40-9 comment="false" id="0" x="0" y="0"/>
+                                <get-val-40-1 comment="false" id="1" x="0" y="0"/>
+                            </less>
+                        </if>
+                        <set-val-40-7 comment="false" x="37" y="369">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-40-7>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-40-9 comment="false" id="0" x="0" y="0"/>
+                        <get-val-40-8 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+                <else-if comment="false" x="26" y="406">
+                    <group eventID="2" id="-1">
+                        <set-val-40-12 comment="false" x="37" y="441">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-40-12>
+                        <set-val-40-7 comment="false" x="37" y="466">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-40-7>
+                        <if comment="false" x="37" y="491">
+                            <group eventID="2" id="-1">
+                                <set-val-40-10 comment="false" x="48" y="521">
+                                    <moreeq comment="false" id="0" x="0" y="0">
+                                        <minus comment="false" id="0" x="0" y="0">
+                                            <get-val-40-9 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-40-1 comment="false" id="1" x="0" y="0"/>
+                                        </minus>
+                                        <get-val-40-6 comment="false" id="1" x="0" y="0"/>
+                                    </moreeq>
+                                </set-val-40-10>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-40-6 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <if comment="false" x="37" y="568">
+                            <group eventID="2" id="-1">
+                                <if comment="false" x="48" y="601">
+                                    <group eventID="2" id="-1">
+                                        <comment-short comment="false" x="59" y="626">
+                                            <int id="0" val="Custom: Play &amp;lt;Big Landing Right&amp;gt; Once for Self"/>
+                                        </comment-short>
+                                        <custom-88 comment="false" x="59" y="646">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-40-5 comment="false" id="1" x="0" y="0"/>
+                                        </custom-88>
+                                    </group>
+                                    <get-val-40-10 comment="false" id="0" x="0" y="0"/>
+                                </if>
+                                <else comment="false" x="48" y="690">
+                                    <group eventID="2" id="-1">
+                                        <comment-short comment="false" x="59" y="710">
+                                            <int id="0" val="Custom: Play &amp;lt;Normal Landing Right&amp;gt; Once for Self"/>
+                                        </comment-short>
+                                        <custom-88 comment="false" x="59" y="730">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-40-3 comment="false" id="1" x="0" y="0"/>
+                                        </custom-88>
+                                    </group>
+                                </else>
+                            </group>
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Facing Right?"/>
+                            </actor-get-prop>
+                        </if>
+                        <else comment="false" x="37" y="786">
+                            <group eventID="2" id="-1">
+                                <if comment="false" x="48" y="806">
+                                    <group eventID="2" id="-1">
+                                        <comment-short comment="false" x="59" y="831">
+                                            <int id="0" val="Custom: Play &amp;lt;Big Landing Left&amp;gt; Once for Self"/>
+                                        </comment-short>
+                                        <custom-88 comment="false" x="59" y="851">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-40-4 comment="false" id="1" x="0" y="0"/>
+                                        </custom-88>
+                                    </group>
+                                    <get-val-40-10 comment="false" id="0" x="0" y="0"/>
+                                </if>
+                                <else comment="false" x="48" y="895">
+                                    <group eventID="2" id="-1">
+                                        <comment-short comment="false" x="59" y="915">
+                                            <int id="0" val="Custom: Play &amp;lt;Normal Landing Left&amp;gt; Once for Self"/>
+                                        </comment-short>
+                                        <custom-88 comment="false" x="59" y="935">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-40-2 comment="false" id="1" x="0" y="0"/>
+                                        </custom-88>
+                                    </group>
+                                </else>
+                            </group>
+                        </else>
+                        <set-val-40-1 comment="false" x="37" y="991">
+                            <int id="0" val="1000000"/>
+                        </set-val-40-1>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <eq comment="false" id="0" x="0" y="0">
+                            <get-val-40-9 comment="false" id="0" x="0" y="0"/>
+                            <get-val-40-8 comment="false" id="1" x="0" y="0"/>
+                        </eq>
+                        <get-val-40-7 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </else-if>
+                <else-if comment="false" x="26" y="1023">
+                    <group eventID="2" id="-1">
+                        <set-val-40-7 comment="false" x="37" y="1053">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-40-7>
+                        <set-val-40-1 comment="false" x="37" y="1078">
+                            <int id="0" val="1000000"/>
+                        </set-val-40-1>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-40-7 comment="false" id="0" x="0" y="0"/>
+                        <true comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </else-if>
+                <set-val-40-8 comment="false" x="26" y="1110">
+                    <get-val-40-9 comment="false" id="0" x="0" y="0"/>
+                </set-val-40-8>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receiver-1-80 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <comment-short comment="false" x="37" y="65">
+                            <int id="0" val="Custom: Is in landing animation"/>
+                        </comment-short>
+                        <if comment="false" x="37" y="85">
+                            <group eventID="2" id="-1">
+                                <set-fric-bounce comment="false" x="48" y="118">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-40-17 comment="false" id="2" x="0" y="0"/>
+                                </set-fric-bounce>
+                            </group>
+                            <custom-81 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-81>
+                        </if>
+                        <comment-short comment="false" x="37" y="162">
+                            <int id="0" val="Custom: Is in big landing animation"/>
+                        </comment-short>
+                        <else-if comment="false" x="37" y="182">
+                            <group eventID="3" id="-1">
+                                <set-fric-bounce comment="false" x="48" y="215">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-40-18 comment="false" id="2" x="0" y="0"/>
+                                </set-fric-bounce>
+                            </group>
+                            <custom-82 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-82>
+                        </else-if>
+                        <else comment="false" x="37" y="259">
+                            <group eventID="3" id="-1">
+                                <set-val-40-12 comment="false" x="48" y="279">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-40-12>
+                                <set-fric-bounce comment="false" x="48" y="304">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-40-16 comment="false" id="2" x="0" y="0"/>
+                                </set-fric-bounce>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-40-12 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val=""/>
+        </receiver-1-80>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-2-81 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <return comment="false" x="26" y="40">
+                    <or comment="false" id="0" x="0" y="0">
+                        <eq comment="false" id="0" x="0" y="0">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                            <get-val-40-2 comment="false" id="1" x="0" y="0"/>
+                        </eq>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                            <get-val-40-3 comment="false" id="1" x="0" y="0"/>
+                        </eq>
+                    </or>
+                </return>
+            </group>
+            <int id="0" val=""/>
+        </receiver-2-81>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-3-82 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <return comment="false" x="26" y="40">
+                    <or comment="false" id="0" x="0" y="0">
+                        <eq comment="false" id="0" x="0" y="0">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                            <get-val-40-4 comment="false" id="1" x="0" y="0"/>
+                        </eq>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                            <get-val-40-5 comment="false" id="1" x="0" y="0"/>
+                        </eq>
+                    </or>
+                </return>
+            </group>
+            <int id="0" val=""/>
+        </receiver-3-82>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <receiver-2-330 comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="Engine.engine.setGameAttribute(__Attribute, __Value);"/>
+                </custom-code>
+            </group>
+            <get-byobval-207-330-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-207-330-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-2-330>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-3-331 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return Engine.engine.getGameAttribute(__Attribute);"/>
+                </custom-code>
+            </group>
+            <get-byobval-207-331-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-3-331>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receiver-4-332 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <custom-code comment="false" x="26" y="40">
+                    <int id="0" val="return Engine.engine.scene;"/>
+                </custom-code>
+            </group>
+        </receiver-4-332>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-5-333 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <custom-code comment="false" x="26" y="40">
+                    <int id="0" val="return Engine.engine.scene.name;"/>
+                </custom-code>
+            </group>
+        </receiver-5-333>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-6-336 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="Engine.engine.shout(__EventName);"/>
+                </custom-code>
+            </group>
+            <get-byobval-207-336-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-6-336>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom-import comment="false" x="15" y="13">
+            <group eventID="7" id="-1">
+                <custom-code comment="false" x="26" y="38">
+                    <int id="0" val="import com.stencyl.Data;"/>
+                </custom-code>
+            </group>
+        </event-custom-import>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="9" id="0">
+        <receiver-10-477 comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="for(r in Data.get().resources)&#10;{&#10;&#9;if(r != null &amp;amp;&amp;amp; __SoundName == r.name)&#10;&#9;{&#10;&#9;&#9;return cast(Data.get().resources.get(r.ID), Sound);&#10;&#9;}&#10;}&#10;&#10;return null;"/>
+                </code-long>
+            </group>
+            <get-byobval-207-477-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-10-477>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <receiver-11-478 comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="for (r in Data.get().resources)&#10;{&#10;&#9;if(r != null &amp;amp;&amp;amp; __ResourceName == r.name)&#10;&#9;{&#10;&#9;&#9;return r.ID;&#9;&#10;&#9;}&#10;}&#10;&#9;&#9;&#9;&#10;return 0;"/>
+                </code-long>
+            </group>
+            <get-byobval-207-478-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-11-478>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <receiver-13-501 comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="return __Text.split(__Divider);"/>
+                </custom-code>
+            </group>
+            <get-byobval-207-501-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-207-501-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-13-501>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <receiver-14-538 comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <return comment="false" x="26" y="45">
+                    <get-item comment="false" id="0" x="0" y="0">
+                        <get-byobval-207-538-0 comment="false" id="0" x="0" y="0"/>
+                        <code-short comment="false" id="1" x="0" y="0">
+                            <int id="0" val="Math.floor(Math.random() * __List.length)"/>
+                        </code-short>
+                    </get-item>
+                </return>
+            </group>
+            <get-byobval-207-538-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-14-538>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <receiver-15-539 comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var index = Math.floor(Math.random() * __Colours.length);&#10;var colours = __Colours[index].split(&amp;quot;|&amp;quot;);&#10;var r = Std.parseInt(colours[0]);&#10;var g = Std.parseInt(colours[1]);&#10;var b = Std.parseInt(colours[2]);&#10;return Utils.getColorRGB(r, g, b);"/>
+                </code-long>
+            </group>
+            <get-byobval-207-539-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-15-539>
+    </group>
+    <group eventID="13" id="-1"/>
+</groups>

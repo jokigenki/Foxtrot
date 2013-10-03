@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-110-2 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-110-2 comment="false" id="0" x="0" y="0"/>
+                        <get-val-110-1 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-110-2>
+                <if comment="false" x="26" y="70">
+                    <group eventID="2" id="-1">
+                        <set-val-110-2 comment="false" x="37" y="105">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <scene-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </scene-wh>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-wh>
+                            </minus>
+                        </set-val-110-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <lesseq comment="false" id="0" x="0" y="0">
+                            <get-val-110-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </lesseq>
+                        <less comment="false" id="1" x="0" y="0">
+                            <get-val-110-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </less>
+                    </and>
+                </if>
+                <else-if comment="false" x="26" y="155">
+                    <group eventID="2" id="-1">
+                        <set-val-110-2 comment="false" x="37" y="198">
+                            <int id="0" val="0"/>
+                        </set-val-110-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <moreeq comment="false" id="0" x="0" y="0">
+                            <get-val-110-2 comment="false" id="0" x="0" y="0"/>
+                            <scene-wh comment="false" id="1" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </scene-wh>
+                        </moreeq>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-val-110-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </more>
+                    </and>
+                </else-if>
+                <set-xy comment="false" x="26" y="230">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-val-110-2 comment="false" id="2" x="0" y="0"/>
+                </set-xy>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1">
+        <screen-wh comment="false" x="759" y="-10">
+            <int id="0" val="0"/>
+        </screen-wh>
+    </group>
+    <group eventID="3" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-110-2 comment="false" x="26" y="40">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-110-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

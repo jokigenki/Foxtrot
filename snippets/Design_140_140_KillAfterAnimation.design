@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <custom-261 comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </custom-261>
+                <set-val-140-3 comment="false" x="26" y="67">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-140-3>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <setanim comment="false" x="37" y="83">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-140-1 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                        <set-val-140-2 comment="false" x="37" y="115">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-140-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-140-3 comment="false" id="0" x="0" y="0"/>
+                        <noteq comment="false" id="1" x="0" y="0">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                            <get-val-140-1 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="152">
+                    <group eventID="5" id="-1">
+                        <die comment="false" x="37" y="195">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <if comment="false" x="37" y="222">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="255">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Reload On Death PM"/>
+                                    <int id="2" val="Reload"/>
+                                </say>
+                            </group>
+                            <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Reload On Death PM"/>
+                            </is-snippet-enableda>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-140-2 comment="false" id="0" x="0" y="0"/>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <get-frame comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </get-frame>
+                            <get-num-frames comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </get-num-frames>
+                        </eq>
+                    </and>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-140-3 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-140-3>
+                <set-val-140-2 comment="false" x="26" y="65">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-140-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="6" id="-1"/>
+</groups>

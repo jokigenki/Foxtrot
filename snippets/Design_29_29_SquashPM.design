@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="var isActor = event.thisCollidedWithActor;"/>
+                </custom-code>
+                <if comment="false" x="26" y="65">
+                    <group eventID="1" id="-1">
+                        <custom-code comment="false" x="37" y="108">
+                            <int id="0" val="var i = 0;"/>
+                        </custom-code>
+                        <if comment="false" x="37" y="128">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="176">
+                                    <group eventID="1" id="-1">
+                                        <set-val-29-14 comment="false" x="59" y="209">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-val-29-14>
+                                        <if comment="false" x="59" y="234">
+                                            <group eventID="1" id="-1">
+                                                <set-val-29-10 comment="false" x="70" y="259">
+                                                    <custom-66 comment="false" id="0" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                    </custom-66>
+                                                </set-val-29-10>
+                                            </group>
+                                            <code-short comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="isActor"/>
+                                            </code-short>
+                                        </if>
+                                        <else comment="false" x="59" y="309">
+                                            <group eventID="1" id="-1">
+                                                <collision-foreach comment="false" x="70" y="329">
+                                                    <group eventID="1" id="-1">
+                                                        <set-val-29-10 comment="false" x="81" y="349">
+                                                            <collision-xynxy comment="false" id="0" x="0" y="0">
+                                                                <int id="0" val="1"/>
+                                                            </collision-xynxy>
+                                                        </set-val-29-10>
+                                                    </group>
+                                                </collision-foreach>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <collision-top comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <int id="1" val="0"/>
+                                    </collision-top>
+                                </if>
+                                <if comment="false" x="48" y="418">
+                                    <group eventID="1" id="-1">
+                                        <set-val-29-15 comment="false" x="59" y="451">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-val-29-15>
+                                        <if comment="false" x="59" y="476">
+                                            <group eventID="1" id="-1">
+                                                <set-val-29-11 comment="false" x="70" y="501">
+                                                    <custom-62 comment="false" id="0" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                    </custom-62>
+                                                </set-val-29-11>
+                                            </group>
+                                            <code-short comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="isActor"/>
+                                            </code-short>
+                                        </if>
+                                        <else comment="false" x="59" y="551">
+                                            <group eventID="1" id="-1">
+                                                <collision-foreach comment="false" x="70" y="571">
+                                                    <group eventID="1" id="-1">
+                                                        <set-val-29-11 comment="false" x="81" y="591">
+                                                            <collision-xynxy comment="false" id="0" x="0" y="0">
+                                                                <int id="0" val="1"/>
+                                                            </collision-xynxy>
+                                                        </set-val-29-11>
+                                                    </group>
+                                                </collision-foreach>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <collision-bottom comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <int id="1" val="0"/>
+                                    </collision-bottom>
+                                </if>
+                            </group>
+                            <or comment="false" id="0" x="0" y="0">
+                                <not comment="false" id="0" x="0" y="0">
+                                    <code-short comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="isActor"/>
+                                    </code-short>
+                                </not>
+                                <as-boolean comment="false" id="1" x="0" y="0">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="Squasher PM"/>
+                                        <int id="2" val="_SquashVertically"/>
+                                    </get-attribute>
+                                </as-boolean>
+                            </or>
+                        </if>
+                        <if comment="false" x="37" y="672">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="720">
+                                    <group eventID="1" id="-1">
+                                        <set-val-29-16 comment="false" x="59" y="753">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-val-29-16>
+                                        <if comment="false" x="59" y="778">
+                                            <group eventID="1" id="-1">
+                                                <set-val-29-12 comment="false" x="70" y="803">
+                                                    <custom-61 comment="false" id="0" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                    </custom-61>
+                                                </set-val-29-12>
+                                            </group>
+                                            <code-short comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="isActor"/>
+                                            </code-short>
+                                        </if>
+                                        <else comment="false" x="59" y="853">
+                                            <group eventID="1" id="-1">
+                                                <collision-foreach comment="false" x="70" y="873">
+                                                    <group eventID="1" id="-1">
+                                                        <set-val-29-12 comment="false" x="81" y="893">
+                                                            <collision-xynxy comment="false" id="0" x="0" y="0">
+                                                                <int id="0" val="0"/>
+                                                            </collision-xynxy>
+                                                        </set-val-29-12>
+                                                    </group>
+                                                </collision-foreach>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <collision-left comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <int id="1" val="0"/>
+                                    </collision-left>
+                                </if>
+                                <if comment="false" x="48" y="962">
+                                    <group eventID="1" id="-1">
+                                        <set-val-29-17 comment="false" x="59" y="995">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-val-29-17>
+                                        <if comment="false" x="59" y="1020">
+                                            <group eventID="1" id="-1">
+                                                <set-val-29-13 comment="false" x="70" y="1045">
+                                                    <custom-63 comment="false" id="0" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                    </custom-63>
+                                                </set-val-29-13>
+                                            </group>
+                                            <code-short comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="isActor"/>
+                                            </code-short>
+                                        </if>
+                                        <else comment="false" x="59" y="1095">
+                                            <group eventID="1" id="-1">
+                                                <collision-foreach comment="false" x="70" y="1115">
+                                                    <group eventID="1" id="-1">
+                                                        <set-val-29-13 comment="false" x="81" y="1135">
+                                                            <collision-xynxy comment="false" id="0" x="0" y="0">
+                                                                <int id="0" val="0"/>
+                                                            </collision-xynxy>
+                                                        </set-val-29-13>
+                                                    </group>
+                                                </collision-foreach>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <collision-right comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <int id="1" val="0"/>
+                                    </collision-right>
+                                </if>
+                            </group>
+                            <or comment="false" id="0" x="0" y="0">
+                                <not comment="false" id="0" x="0" y="0">
+                                    <code-short comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="isActor"/>
+                                    </code-short>
+                                </not>
+                                <as-boolean comment="false" id="1" x="0" y="0">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="Squasher PM"/>
+                                        <int id="2" val="_SquashHorizontally"/>
+                                    </get-attribute>
+                                </as-boolean>
+                            </or>
+                        </if>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <code-short comment="false" id="0" x="0" y="0">
+                                <int id="0" val="isActor"/>
+                            </code-short>
+                        </not>
+                        <has-snippet comment="false" id="1" x="0" y="0">
+                            <other-actor comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Squasher PM"/>
+                        </has-snippet>
+                    </or>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1">
+        <other-actor comment="false" x="251" y="1073"/>
+    </group>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-val-29-20 comment="false" x="37" y="70">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-29-20>
+                        <if comment="false" x="37" y="95">
+                            <group eventID="2" id="-1">
+                                <custom-287 comment="false" x="48" y="138">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-29-7 comment="false" id="1" x="0" y="0"/>
+                                    <randint comment="false" id="2" x="0" y="0">
+                                        <int id="0" val="-1"/>
+                                        <int id="1" val="1"/>
+                                    </randint>
+                                    <int id="3" val="-2"/>
+                                </custom-287>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-val-29-11 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-29-10 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-wh comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-wh>
+                                    <get-val-29-18 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </less>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-29-14 comment="false" id="0" x="0" y="0"/>
+                        <get-val-29-15 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="194">
+                    <group eventID="2" id="-1">
+                        <set-val-29-20 comment="false" x="37" y="224">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-29-20>
+                        <if comment="false" x="37" y="249">
+                            <group eventID="2" id="-1">
+                                <custom-287 comment="false" x="48" y="292">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-29-7 comment="false" id="1" x="0" y="0"/>
+                                    <randint comment="false" id="2" x="0" y="0">
+                                        <int id="0" val="-1"/>
+                                        <int id="1" val="1"/>
+                                    </randint>
+                                    <int id="3" val="-2"/>
+                                </custom-287>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-val-29-13 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-29-12 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-wh comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-wh>
+                                    <get-val-29-19 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </less>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-29-16 comment="false" id="0" x="0" y="0"/>
+                        <get-val-29-17 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <set-val-29-15 comment="false" x="26" y="348">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-29-15>
+                <set-val-29-14 comment="false" x="26" y="373">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-29-14>
+                <set-val-29-16 comment="false" x="26" y="398">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-29-16>
+                <set-val-29-17 comment="false" x="26" y="423">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-29-17>
+                <set-val-29-20 comment="false" x="26" y="448">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-29-20>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

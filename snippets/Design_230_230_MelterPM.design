@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="83">
+                            <group eventID="1" id="-1">
+                                <set-attribute comment="false" x="48" y="139">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Meltable PM"/>
+                                    <int id="2" val="_MeltX"/>
+                                    <get-xy comment="false" id="3" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                </set-attribute>
+                                <set-attribute comment="false" x="48" y="179">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Meltable PM"/>
+                                    <int id="2" val="_MeltY"/>
+                                    <minus comment="false" id="3" x="0" y="0">
+                                        <plus comment="false" id="0" x="0" y="0">
+                                            <get-xy comment="false" id="0" x="0" y="0">
+                                                <this-actor comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="1"/>
+                                            </get-xy>
+                                            <int id="1" val="0"/>
+                                        </plus>
+                                        <times comment="false" id="1" x="0" y="0">
+                                            <get-val-230-2 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="4"/>
+                                        </times>
+                                    </minus>
+                                </set-attribute>
+                                <say comment="false" x="48" y="234">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Meltable PM"/>
+                                    <int id="2" val="Melt"/>
+                                </say>
+                                <incdec comment="false" x="48" y="266">
+                                    <int id="0" val="2"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <roundnew comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <custom-66 comment="false" id="1" x="0" y="0">
+                                        <this-actor comment="false" id="0" x="0" y="0"/>
+                                    </custom-66>
+                                </roundnew>
+                                <roundnew comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <custom-66 comment="false" id="1" x="0" y="0">
+                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                    </custom-66>
+                                </roundnew>
+                            </eq>
+                        </if>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <other-actor comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Meltable PM"/>
+                    </has-snippet>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-230-2 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-230-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-33-2 comment="false" x="26" y="47">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-33-2>
+                <set-val-33-3 comment="false" x="26" y="72">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-33-3>
+                <if comment="false" x="26" y="97">
+                    <group eventID="1" id="-1">
+                        <set-val-33-3 comment="false" x="37" y="127">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-33-3>
+                        <stop comment="false" x="37" y="152"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                        <get-val-33-1 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <set-val-33-1 comment="false" x="26" y="184">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                </set-val-33-1>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <ACTORTYPE eid="230" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="1" id="-1">
+                                <comment-short comment="false" x="48" y="113">
+                                    <int id="0" val="Custom: Is &amp;quot;Left&amp;quot; on for Self"/>
+                                </comment-short>
+                                <if comment="false" x="48" y="133">
+                                    <group eventID="1" id="-1">
+                                        <comment-short comment="false" x="59" y="166">
+                                            <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;true&amp;gt; for Self"/>
+                                        </comment-short>
+                                        <custom-94 comment="false" x="59" y="186">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Right"/>
+                                            <true comment="false" id="2" x="0" y="0"/>
+                                        </custom-94>
+                                        <comment-short comment="false" x="59" y="218">
+                                            <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;false&amp;gt; for Self"/>
+                                        </comment-short>
+                                        <custom-94 comment="false" x="59" y="238">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Left"/>
+                                            <false comment="false" id="2" x="0" y="0"/>
+                                        </custom-94>
+                                    </group>
+                                    <custom-93 comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Left"/>
+                                    </custom-93>
+                                </if>
+                                <comment-short comment="false" x="48" y="282">
+                                    <int id="0" val="Custom: Is &amp;quot;Right&amp;quot; on for Self"/>
+                                </comment-short>
+                                <else-if comment="false" x="48" y="302">
+                                    <group eventID="1" id="-1">
+                                        <comment-short comment="false" x="59" y="335">
+                                            <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;true&amp;gt; for Self"/>
+                                        </comment-short>
+                                        <custom-94 comment="false" x="59" y="355">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Left"/>
+                                            <true comment="false" id="2" x="0" y="0"/>
+                                        </custom-94>
+                                        <comment-short comment="false" x="59" y="387">
+                                            <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;false&amp;gt; for Self"/>
+                                        </comment-short>
+                                        <custom-94 comment="false" x="59" y="407">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Right"/>
+                                            <false comment="false" id="2" x="0" y="0"/>
+                                        </custom-94>
+                                    </group>
+                                    <custom-93 comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Right"/>
+                                    </custom-93>
+                                </else-if>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <get-val-33-3 comment="false" id="0" x="0" y="0"/>
+                                <eq comment="false" id="1" x="0" y="0">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <get-val-33-1 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="AI Trigger Attributes PM"/>
+                                        <int id="2" val="_TriggerId"/>
+                                    </get-attribute>
+                                    <int id="1" val="Turn Around"/>
+                                </eq>
+                            </and>
+                        </if>
+                    </group>
+                    <get-val-33-2 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="475">
+                    <group eventID="2" id="-1">
+                        <set-val-33-1 comment="false" x="37" y="495">
+                            <ACTOR eid="this" id="0"/>
+                        </set-val-33-1>
+                    </group>
+                </else>
+                <set-val-33-2 comment="false" x="26" y="534">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-33-2>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

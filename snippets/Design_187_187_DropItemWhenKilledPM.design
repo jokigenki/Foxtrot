@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-actor-create-kill comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <print comment="false" x="26" y="42">
+                    <int id="0" val="DROP!"/>
+                </print>
+                <comment-short comment="false" x="26" y="62">
+                    <int id="0" val="GA: Collected Items"/>
+                </comment-short>
+                <if comment="false" x="26" y="82">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="112"/>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <get-val-187-6 comment="false" id="0" x="0" y="0"/>
+                    </custom-326>
+                </if>
+                <print comment="false" x="26" y="144">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Creating: "/>
+                        <get-val-187-6 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </print>
+                <create-actor3 comment="false" x="26" y="174">
+                    <get-val-187-1 comment="false" id="0" x="0" y="0"/>
+                    <get-xy comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="2"/>
+                    </get-xy>
+                    <get-xy comment="false" id="2" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="3"/>
+                    </get-xy>
+                    <int id="3" val="1"/>
+                </create-actor3>
+                <if comment="false" x="26" y="214">
+                    <group eventID="1" id="-1">
+                        <push-shove comment="false" x="37" y="244">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-val-187-2 comment="false" id="2" x="0" y="0"/>
+                            <get-val-187-3 comment="false" id="3" x="0" y="0"/>
+                            <get-val-187-4 comment="false" id="4" x="0" y="0"/>
+                        </push-shove>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-val-187-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </noteq>
+                </if>
+                <custom-234 comment="false" x="26" y="288">
+                    <get-val-187-5 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="lastcreated" id="1"/>
+                </custom-234>
+                <if comment="false" x="26" y="320">
+                    <group eventID="1" id="-1">
+                        <set-attribute comment="false" x="37" y="353">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="Inventory Collectable PM"/>
+                            <int id="2" val="_CollectableId"/>
+                            <get-val-187-6 comment="false" id="3" x="0" y="0"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="385">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="Inventory Collectable PM"/>
+                            <int id="2" val="_Collectioneventname"/>
+                            <get-val-187-7 comment="false" id="3" x="0" y="0"/>
+                        </set-attribute>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="lastcreated" id="0"/>
+                        <int id="1" val="Inventory Collectable PM"/>
+                    </has-snippet>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="this" id="1"/>
+        </event-actor-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

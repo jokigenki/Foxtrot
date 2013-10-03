@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Custom: Create New Inventory, Update Inventory"/>
+                </comment-short>
+                <custom-53 comment="false" x="26" y="60"/>
+                <custom-50 comment="false" x="26" y="80"/>
+                <scene-shout comment="false" x="26" y="100">
+                    <int id="0" val="InventoryUpdated"/>
+                </scene-shout>
+            </group>
+            <int id="0" val="ItemAddedToInventory"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-2-50 comment="false" x="1" y="6">
+            <group eventID="4" id="-1">
+                <comment-short comment="false" x="12" y="31">
+                    <int id="0" val="Custom: Clear Inventory Actors"/>
+                </comment-short>
+                <custom-51 comment="false" x="12" y="51"/>
+                <clear-list comment="false" x="12" y="71">
+                    <get-val-22-8 comment="false" id="0" x="0" y="0"/>
+                </clear-list>
+                <comment-short comment="false" x="12" y="96">
+                    <int id="0" val="GA: Inventory"/>
+                </comment-short>
+                <for-each comment="false" x="12" y="116">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="23" y="141">
+                            <group eventID="1" id="-1">
+                                <print comment="false" x="34" y="176">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="Adding from inventory: "/>
+                                        <for-each-item comment="false" id="1" x="0" y="0"/>
+                                    </str-combine>
+                                </print>
+                                <add-list comment="false" x="34" y="206">
+                                    <get-val-22-4 comment="false" id="0" x="0" y="0"/>
+                                    <for-each-item comment="false" id="1" x="0" y="0"/>
+                                </add-list>
+                                <comment-short comment="false" x="34" y="231">
+                                    <int id="0" val="Try to create an inventory item (only once per item type!)"/>
+                                </comment-short>
+                                <if comment="false" x="34" y="251">
+                                    <group eventID="4" id="-1">
+                                        <add-list comment="false" x="45" y="286">
+                                            <get-val-22-8 comment="false" id="0" x="0" y="0"/>
+                                            <for-each-item comment="false" id="1" x="0" y="0"/>
+                                        </add-list>
+                                        <comment-short comment="false" x="45" y="311">
+                                            <int id="0" val="Custom: Create Actor for &amp;quot;&amp;lt;item&amp;gt; &amp;amp; &amp;quot; Inventory&amp;quot;&amp;quot; at x:&amp;quot;&amp;lt;x (on screen)&amp;gt; of &amp;lt;Inventory Holder&amp;gt;&amp;quot; + &amp;lt;Current Width&amp;gt;&amp;quot; y:&amp;quot;&amp;lt;y (on screen)&amp;gt; of &amp;lt;Inventory Holder&amp;gt; + &amp;lt;Inventory Border Y&amp;gt;&amp;quot;"/>
+                                        </comment-short>
+                                        <set-val-22-7 comment="false" x="45" y="331">
+                                            <custom-48 comment="false" id="0" x="0" y="0">
+                                                <str-combine comment="false" id="0" x="0" y="0">
+                                                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                                                    <int id="1" val=" Inventory"/>
+                                                </str-combine>
+                                                <plus comment="false" id="1" x="0" y="0">
+                                                    <get-xy comment="false" id="0" x="0" y="0">
+                                                        <ACTOR eid="var" id="0" vid="5"/>
+                                                        <int id="1" val="4"/>
+                                                    </get-xy>
+                                                    <get-val-22-1 comment="false" id="1" x="0" y="0"/>
+                                                </plus>
+                                                <plus comment="false" id="2" x="0" y="0">
+                                                    <get-xy comment="false" id="0" x="0" y="0">
+                                                        <ACTOR eid="var" id="0" vid="5"/>
+                                                        <int id="1" val="5"/>
+                                                    </get-xy>
+                                                    <get-val-22-3 comment="false" id="1" x="0" y="0"/>
+                                                </plus>
+                                            </custom-48>
+                                        </set-val-22-7>
+                                        <comment-short comment="false" x="45" y="381">
+                                            <int id="0" val="Custom: &amp;lt;Last Actor&amp;gt; is null"/>
+                                        </comment-short>
+                                        <if comment="false" x="45" y="401">
+                                            <group eventID="4" id="-1">
+                                                <incdec comment="false" x="56" y="439">
+                                                    <int id="0" val="1"/>
+                                                    <int id="1" val="0"/>
+                                                    <plus comment="false" id="2" x="0" y="0">
+                                                        <get-wh comment="false" id="0" x="0" y="0">
+                                                            <ACTOR eid="var" id="0" vid="7"/>
+                                                            <int id="1" val="0"/>
+                                                        </get-wh>
+                                                        <get-val-22-6 comment="false" id="1" x="0" y="0"/>
+                                                    </plus>
+                                                </incdec>
+                                            </group>
+                                            <not comment="false" id="0" x="0" y="0">
+                                                <custom-65 comment="false" id="0" x="0" y="0">
+                                                    <ACTOR eid="var" id="0" vid="7"/>
+                                                </custom-65>
+                                            </not>
+                                        </if>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <contains-item comment="false" id="0" x="0" y="0">
+                                            <get-val-22-8 comment="false" id="0" x="0" y="0"/>
+                                            <for-each-item comment="false" id="1" x="0" y="0"/>
+                                        </contains-item>
+                                    </not>
+                                </if>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <contains-item comment="false" id="0" x="0" y="0">
+                                    <get-val-22-4 comment="false" id="0" x="0" y="0"/>
+                                    <for-each-item comment="false" id="1" x="0" y="0"/>
+                                </contains-item>
+                            </not>
+                        </if>
+                    </group>
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+            </group>
+        </receiver-2-50>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-4-49 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <for-each comment="false" x="26" y="45">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="70">
+                            <group eventID="3" id="-1">
+                                <return comment="false" x="48" y="100">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </return>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-byobval-22-638-0 comment="false" id="0" x="0" y="0"/>
+                                <for-each-item comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                    </group>
+                    <get-val-22-4 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <return comment="false" x="26" y="149">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-22-638-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-4-49>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <receiver-7-48 comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="if (getActorTypeByName(__TypeName) == null) return null;&#10;return createRecycledActor(getActorTypeByName(__TypeName), __x, __y, Script.FRONT);"/>
+                </code-long>
+            </group>
+            <get-byobval-22-647-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-22-647-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-22-647-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-7-48>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <receiver-8-54 comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <comment-short comment="false" x="26" y="45">
+                    <int id="0" val="Custom: &amp;quot;Get Number of &amp;lt;Type Name&amp;gt;&amp;quot;"/>
+                </comment-short>
+                <set-game-att comment="false" x="26" y="65">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <get-byobval-22-648-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="s"/>
+                    </str-combine>
+                    <plus comment="false" id="1" x="0" y="0">
+                        <custom-47 comment="false" id="0" x="0" y="0">
+                            <get-byobval-22-648-0 comment="false" id="0" x="0" y="0"/>
+                        </custom-47>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-game-att>
+            </group>
+            <get-byobval-22-648-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-8-54>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <receiver-9-53 comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Items will be placed in Inventory New before being moved to the inventory proper, so they are only counted once"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="GA: Inventory New"/>
+                </comment-short>
+                <for-each comment="false" x="26" y="80">
+                    <group eventID="8" id="-1">
+                        <comment-short comment="false" x="37" y="105">
+                            <int id="0" val="GA: Inventory"/>
+                        </comment-short>
+                        <add-list comment="false" x="37" y="125">
+                            <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                            <for-each-item comment="false" id="1" x="0" y="0"/>
+                        </add-list>
+                        <comment-short comment="false" x="37" y="150">
+                            <int id="0" val="Custom: Increment &amp;lt;item&amp;gt;"/>
+                        </comment-short>
+                        <custom-54 comment="false" x="37" y="170">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                        </custom-54>
+                    </group>
+                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <comment-short comment="false" x="26" y="207">
+                    <int id="0" val="GA: Inventory New"/>
+                </comment-short>
+                <clear-list comment="false" x="26" y="227">
+                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                </clear-list>
+            </group>
+        </receiver-9-53>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <receiver-10-47 comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <return comment="false" x="26" y="45">
+                    <get-game-att comment="false" id="0" x="0" y="0">
+                        <str-combine comment="false" id="0" x="0" y="0">
+                            <str-trim comment="false" id="0" x="0" y="0">
+                                <get-byobval-22-650-0 comment="false" id="0" x="0" y="0"/>
+                            </str-trim>
+                            <int id="1" val="s"/>
+                        </str-combine>
+                    </get-game-att>
+                </return>
+            </group>
+            <get-byobval-22-650-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-10-47>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="11" id="0">
+        <receiver-12-52 comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <comment-short comment="false" x="26" y="45">
+                    <int id="0" val="Custom: &amp;quot;Get Number of &amp;lt;Type Name&amp;gt;&amp;quot;"/>
+                </comment-short>
+                <set-game-att comment="false" x="26" y="65">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <get-byobval-22-654-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="s"/>
+                    </str-combine>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <custom-47 comment="false" id="0" x="0" y="0">
+                            <get-byobval-22-654-0 comment="false" id="0" x="0" y="0"/>
+                        </custom-47>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-game-att>
+                <comment-short comment="false" x="26" y="100">
+                    <int id="0" val="GA: Inventory"/>
+                </comment-short>
+                <remove-item comment="false" x="26" y="120">
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                    <get-byobval-22-654-0 comment="false" id="1" x="0" y="0"/>
+                </remove-item>
+                <remove-item comment="false" x="26" y="145">
+                    <get-val-22-4 comment="false" id="0" x="0" y="0"/>
+                    <get-byobval-22-654-0 comment="false" id="1" x="0" y="0"/>
+                </remove-item>
+                <comment-short comment="false" x="26" y="170">
+                    <int id="0" val="GA: Inventory"/>
+                </comment-short>
+                <print comment="false" x="26" y="190">
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </print>
+                <print comment="false" x="26" y="220">
+                    <get-byobval-22-654-0 comment="false" id="0" x="0" y="0"/>
+                </print>
+                <comment-short comment="false" x="26" y="245">
+                    <int id="0" val="Custom: Update Inventory"/>
+                </comment-short>
+                <custom-50 comment="false" x="26" y="265"/>
+            </group>
+            <get-byobval-22-654-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-12-52>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <receiver-13-51 comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <for-each comment="false" x="26" y="40">
+                    <group eventID="12" id="-1">
+                        <die comment="false" x="37" y="65">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                        </die>
+                    </group>
+                    <get-val-22-9 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <set-val-22-1 comment="false" x="26" y="109">
+                    <get-val-22-2 comment="false" id="0" x="0" y="0"/>
+                </set-val-22-1>
+                <clear-list comment="false" x="26" y="134">
+                    <get-val-22-4 comment="false" id="0" x="0" y="0"/>
+                </clear-list>
+            </group>
+        </receiver-13-51>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <set-val-22-1 comment="false" x="26" y="40">
+                    <get-val-22-2 comment="false" id="0" x="0" y="0"/>
+                </set-val-22-1>
+                <comment-short comment="false" x="26" y="65">
+                    <int id="0" val="Custom: Create New Inventory, Update Inventory"/>
+                </comment-short>
+                <custom-53 comment="false" x="26" y="85"/>
+                <custom-50 comment="false" x="26" y="105"/>
+            </group>
+            <int id="0" val="InventoryHolderReady"/>
+        </event-custom>
+    </group>
+    <group eventID="13" id="-1"/>
+</groups>

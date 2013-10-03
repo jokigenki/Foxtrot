@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-253-4 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-253-4>
+            </group>
+            <int id="0" val="Activated"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <set-val-253-4 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-253-4>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="8" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="8" id="-1">
+                                <set-stroke-color comment="false" x="48" y="90">
+                                    <get-val-253-19 comment="false" id="0" x="0" y="0"/>
+                                </set-stroke-color>
+                                <set-thickness comment="false" x="48" y="122">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-253-13 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </plus>
+                                </set-thickness>
+                                <draw-line comment="false" x="48" y="152">
+                                    <get-val-253-5 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-253-6 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-253-10 comment="false" id="2" x="0" y="0"/>
+                                    <get-val-253-11 comment="false" id="3" x="0" y="0"/>
+                                </draw-line>
+                            </group>
+                            <get-val-253-20 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <set-stroke-color comment="false" x="37" y="189">
+                            <custom-539 comment="false" id="0" x="0" y="0">
+                                <get-val-253-18 comment="false" id="0" x="0" y="0"/>
+                            </custom-539>
+                        </set-stroke-color>
+                        <set-thickness comment="false" x="37" y="226">
+                            <get-val-253-13 comment="false" id="0" x="0" y="0"/>
+                        </set-thickness>
+                        <draw-line comment="false" x="37" y="251">
+                            <get-val-253-5 comment="false" id="0" x="0" y="0"/>
+                            <get-val-253-6 comment="false" id="1" x="0" y="0"/>
+                            <get-val-253-10 comment="false" id="2" x="0" y="0"/>
+                            <get-val-253-11 comment="false" id="3" x="0" y="0"/>
+                        </draw-line>
+                        <repeat comment="false" x="37" y="276">
+                            <group eventID="8" id="-1">
+                                <if comment="false" x="48" y="301">
+                                    <group eventID="8" id="-1">
+                                        <set-color comment="false" x="59" y="331">
+                                            <get-val-253-19 comment="false" id="0" x="0" y="0"/>
+                                        </set-color>
+                                    </group>
+                                    <less comment="false" id="0" x="0" y="0">
+                                        <random comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="0.25"/>
+                                    </less>
+                                </if>
+                                <else comment="false" x="48" y="375">
+                                    <group eventID="8" id="-1">
+                                        <set-color comment="false" x="59" y="395">
+                                            <custom-539 comment="false" id="0" x="0" y="0">
+                                                <get-val-253-18 comment="false" id="0" x="0" y="0"/>
+                                            </custom-539>
+                                        </set-color>
+                                    </group>
+                                </else>
+                                <drawfill-rect comment="false" x="48" y="444">
+                                    <int id="0" val="1"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <get-val-253-10 comment="false" id="0" x="0" y="0"/>
+                                        <randint comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="-3"/>
+                                            <int id="1" val="3"/>
+                                        </randint>
+                                    </plus>
+                                    <plus comment="false" id="2" x="0" y="0">
+                                        <get-val-253-11 comment="false" id="0" x="0" y="0"/>
+                                        <randint comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="-3"/>
+                                            <int id="1" val="3"/>
+                                        </randint>
+                                    </plus>
+                                    <int id="3" val="2"/>
+                                    <int id="4" val="2"/>
+                                </drawfill-rect>
+                            </group>
+                            <int id="0" val="5"/>
+                        </repeat>
+                    </group>
+                    <get-val-253-12 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="9" id="-1">
+                        <set-val-253-12 comment="false" x="37" y="70">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-253-12>
+                        <stop comment="false" x="37" y="95"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-253-4 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="127">
+                    <group eventID="9" id="-1">
+                        <code-long comment="false" x="37" y="157">
+                            <int id="0" val="var currentDistX = 0.0;&#10;var currentDistY = 0.0;&#10;var currentDist = 1000000.0;&#10;&#10;_HasCollision = false;&#10;_FrameCount = 0;&#10;var startX = actor.getX() + _XOffset;&#10;var startY = actor.getY() + _YOffset;&#10;var targetX = startX + _BeamTargetX;&#10;var targetY = startY + _BeamTargetY;&#10;var results:Array&amp;lt;Dynamic&amp;gt; = RaycastAPI.rayCast(startX, startY, targetX, targetY);&#10;&#10;_FirstCollisionActor = null;&#10;for (i in 0...results.length)&#10;{&#10;&#9;var item:Array&amp;lt;Dynamic&amp;gt; = results[i];&#10;&#9;var collisionActor:Actor = item[1];&#10;&#9;if (collisionActor.hasBehavior(&amp;quot;Transparent PM&amp;quot;) == true) continue;&#10;&#9;//TODO: Reflection&#10;&#9;&#10;&#9;_HasCollision = true;&#10;&#9;var distX = actor.getX() - item[2];&#10;&#9;var distY = actor.getY() - item[3];&#10;&#9;var dist = (distX * distX) + (distY * distY);&#10;&#9;if (dist &amp;lt; currentDist)&#10;&#9;{&#10;&#9;&#9;currentDist = dist;&#10;&#9;&#9;_FirstCollisionActor = collisionActor;&#10;&#9;&#9;_CollisionX = item[2] - actor.getX();&#10;&#9;&#9;_CollisionY = item[3] - actor.getY();&#10;&#9;}&#10;}&#10;&#10;if (_FirstCollisionActor != null)&#10;{&#10;&#9;if (_FirstCollisionActor.hasBehavior(&amp;quot;Meltable PM&amp;quot;) == true)&#10;&#9;{&#10;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Meltable PM&amp;quot;, &amp;quot;_customEvent_Melt&amp;quot;);&#10;&#9;}&#10;&#9;else if (_FirstCollisionActor.hasBehavior(&amp;quot;Killable By Laser PM&amp;quot;) == true)&#10;&#9;{&#10;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Killable By Laser PM&amp;quot;,&amp;quot;_customEvent_Killed&amp;quot;);&#10;&#9;}&#10;}"/>
+                        </code-long>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-253-8 comment="false" id="0" x="0" y="0"/>
+                        <get-val-253-9 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <else comment="false" x="26" y="329">
+                    <group eventID="9" id="-1">
+                        <incdec comment="false" x="37" y="349">
+                            <int id="0" val="8"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                </else>
+            </group>
+        </step>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <custom-code comment="false" x="26" y="40">
+                    <int id="0" val="updateTarget();"/>
+                </custom-code>
+            </group>
+        </init>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-custom-code comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="public function updateTarget ()&#10;{&#10;&#9;var rads = _Degrees * Math.PI / 180;&#10;&#9;_cos = Math.cos(rads);&#10;&#9;_sin = Math.sin(rads);&#10;&#9;_BeamTargetX = _cos * 500;&#10;&#9;_BeamTargetY = _sin * 500;&#10;}&#10;"/>
+                </code-long>
+            </group>
+        </event-custom-code>
+    </group>
+    <group eventID="11" id="-1"/>
+</groups>

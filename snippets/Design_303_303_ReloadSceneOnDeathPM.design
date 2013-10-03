@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <custom-344 comment="false" x="37" y="65"/>
+                    </group>
+                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="97">
+                    <group eventID="-1" id="-1">
+                        <scene-change-new comment="false" x="37" y="127">
+                            <get-val-303-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                            <get-val-303-1 comment="false" id="2" x="0" y="0"/>
+                            <int id="3" val="0"/>
+                            <get-val-303-1 comment="false" id="4" x="0" y="0"/>
+                        </scene-change-new>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <is-transitioning comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <else comment="false" x="26" y="171">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="191">
+                            <group eventID="1" id="-1">
+                                <scene-change-new comment="false" x="48" y="218">
+                                    <get-val-303-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-303-1 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="0"/>
+                                    <get-val-303-1 comment="false" id="4" x="0" y="0"/>
+                                </scene-change-new>
+                            </group>
+                            <int id="0" val="1"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="Reload"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

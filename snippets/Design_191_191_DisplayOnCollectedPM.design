@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-actor-create-kill comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="72">
+                            <getatype comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getatype>
+                            <div comment="false" id="1" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </screen-wh>
+                                <int id="1" val="2"/>
+                            </div>
+                            <div comment="false" id="2" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </screen-wh>
+                                <int id="1" val="2"/>
+                            </div>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <set-attribute comment="false" x="37" y="117">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="Display On Collected PM"/>
+                            <int id="2" val="_IsDisplaying"/>
+                            <true comment="false" id="3" x="0" y="0"/>
+                        </set-attribute>
+                        <setanim comment="false" x="37" y="149">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <str-combine comment="false" id="0" x="0" y="0">
+                                    <tostring comment="false" id="0" x="0" y="0">
+                                        <getanim comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                        </getanim>
+                                    </tostring>
+                                    <int id="1" val=" Collected"/>
+                                </str-combine>
+                            </string-to-anim>
+                        </setanim>
+                        <scaleTo comment="false" x="37" y="204">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <get-val-191-5 comment="false" id="1" x="0" y="0"/>
+                            <get-val-191-5 comment="false" id="2" x="0" y="0"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-191-3 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="this" id="1"/>
+        </event-actor-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="2" id="-1">
+                                <scaleTo comment="false" x="48" y="92">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-191-4 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-191-4 comment="false" id="2" x="0" y="0"/>
+                                    <get-val-191-1 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="8"/>
+                                </scaleTo>
+                                <dolater comment="false" x="48" y="124">
+                                    <group eventID="2" id="-1">
+                                        <fadeInOut comment="false" x="59" y="156">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                            <get-val-191-2 comment="false" id="2" x="0" y="0"/>
+                                            <int id="3" val="9"/>
+                                        </fadeInOut>
+                                        <dolater comment="false" x="59" y="188">
+                                            <group eventID="2" id="-1">
+                                                <die comment="false" x="70" y="220">
+                                                    <ACTOR eid="this" id="0"/>
+                                                </die>
+                                            </group>
+                                            <get-val-191-2 comment="false" id="0" x="0" y="0"/>
+                                            <ACTOR eid="this" id="2"/>
+                                        </dolater>
+                                    </group>
+                                    <get-val-191-1 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <get-val-191-3 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

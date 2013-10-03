@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <create-region comment="false" x="26" y="40">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                        <div comment="false" id="1" x="0" y="0">
+                            <get-val-133-29 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </div>
+                    </minus>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <div comment="false" id="1" x="0" y="0">
+                            <get-val-133-30 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </div>
+                    </minus>
+                    <get-val-133-29 comment="false" id="2" x="0" y="0"/>
+                    <get-val-133-30 comment="false" id="3" x="0" y="0"/>
+                </create-region>
+                <set-val-133-27 comment="false" x="26" y="78">
+                    <int id="0" val="0"/>
+                </set-val-133-27>
+                <set-val-133-16 comment="false" x="26" y="98">
+                    <REGION eid="lastcreated" id="0"/>
+                </set-val-133-16>
+                <set-val-133-17 comment="false" x="26" y="125">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-133-17>
+                <set-val-133-19 comment="false" x="26" y="150">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-133-19>
+                <dolater comment="false" x="26" y="175">
+                    <group eventID="1" id="-1">
+                        <set-val-133-19 comment="false" x="37" y="202">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-19>
+                    </group>
+                    <int id="0" val="1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-type-region comment="false" x="15" y="14">
+            <group eventID="2" id="-1">
+                <set-val-133-17 comment="false" x="26" y="46">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-133-17>
+                <set-val-133-27 comment="false" x="26" y="71">
+                    <int id="0" val="0"/>
+                </set-val-133-27>
+                <if comment="false" x="26" y="91">
+                    <group eventID="2" id="-1">
+                        <comment-short comment="false" x="37" y="116">
+                            <int id="0" val="Custom: Set Prevent Jump to &amp;lt;true&amp;gt; for &amp;lt;the actor&amp;gt;"/>
+                        </comment-short>
+                        <custom-98 comment="false" x="37" y="136">
+                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                            <true comment="false" id="1" x="0" y="0"/>
+                        </custom-98>
+                        <set-val-133-18 comment="false" x="37" y="168">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-18>
+                        <set-val-133-17 comment="false" x="37" y="193">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-17>
+                        <set-val-133-21 comment="false" x="37" y="218">
+                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-21>
+                    </group>
+                    <get-val-133-20 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="var" id="1" vid="16"/>
+            <get-val-133-14 comment="false" id="2" x="0" y="0"/>
+        </event-type-region>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <comment-short comment="false" x="26" y="47">
+                    <int id="0" val="Custom: Set Prevent Jump to &amp;lt;false&amp;gt; for &amp;lt;the actor&amp;gt;"/>
+                </comment-short>
+                <custom-98 comment="false" x="26" y="67">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                    <false comment="false" id="1" x="0" y="0"/>
+                </custom-98>
+                <set-val-133-17 comment="false" x="26" y="99">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-133-17>
+            </group>
+            <int id="0" val="1"/>
+            <REGION eid="var" id="1" vid="16"/>
+            <get-val-133-14 comment="false" id="2" x="0" y="0"/>
+        </event-type-region>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <stop comment="false" x="37" y="78"/>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-133-19 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <custom-65 comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="21"/>
+                        </custom-65>
+                    </or>
+                </if>
+                <comment-short comment="false" x="26" y="110">
+                    <int id="0" val="Custom: Is &amp;quot;UseObject&amp;quot; on for &amp;lt;Actor By Item&amp;gt;"/>
+                </comment-short>
+                <if comment="false" x="26" y="130">
+                    <group eventID="4" id="-1">
+                        <if comment="false" x="37" y="163">
+                            <group eventID="1" id="-1">
+                                <set-val-133-17 comment="false" x="48" y="188">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-133-17>
+                                <incdec comment="false" x="48" y="213">
+                                    <int id="0" val="27"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                                <if comment="false" x="48" y="240">
+                                    <group eventID="4" id="-1">
+                                        <scene-shout comment="false" x="59" y="270">
+                                            <get-val-133-23 comment="false" id="0" x="0" y="0"/>
+                                        </scene-shout>
+                                        <shout comment="false" x="59" y="295">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-133-24 comment="false" id="1" x="0" y="0"/>
+                                        </shout>
+                                        <shout comment="false" x="59" y="327">
+                                            <ACTOR eid="var" id="0" vid="21"/>
+                                            <get-val-133-25 comment="false" id="1" x="0" y="0"/>
+                                        </shout>
+                                    </group>
+                                    <moreeq comment="false" id="0" x="0" y="0">
+                                        <get-val-133-27 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-133-26 comment="false" id="1" x="0" y="0"/>
+                                    </moreeq>
+                                </if>
+                                <else comment="false" x="48" y="371">
+                                    <group eventID="4" id="-1">
+                                        <shout comment="false" x="59" y="391">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-133-28 comment="false" id="1" x="0" y="0"/>
+                                        </shout>
+                                        <set-val-133-18 comment="false" x="59" y="423">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-val-133-18>
+                                    </group>
+                                </else>
+                            </group>
+                            <get-val-133-17 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <custom-93 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="21"/>
+                        <int id="1" val="UseObject"/>
+                    </custom-93>
+                </if>
+                <else-if comment="false" x="26" y="484">
+                    <group eventID="4" id="-1">
+                        <set-val-133-18 comment="false" x="37" y="509">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-18>
+                        <set-val-133-17 comment="false" x="37" y="534">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-17>
+                    </group>
+                    <get-val-133-18 comment="false" id="0" x="0" y="0"/>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-3-198 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-attribute comment="false" x="26" y="45">
+                    <get-byobval-133-198-0 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="Usable Item PM"/>
+                    <int id="2" val="_IsEnabled"/>
+                    <get-byobval-133-198-1 comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+            </group>
+            <get-byobval-133-198-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-133-198-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-3-198>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>

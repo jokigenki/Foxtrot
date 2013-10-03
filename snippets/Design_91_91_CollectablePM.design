@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-collide-actortogroup comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <die comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+                <if comment="false" x="26" y="74">
+                    <group eventID="3" id="-1">
+                        <custom-327 comment="false" x="37" y="109">
+                            <get-val-91-3 comment="false" id="0" x="0" y="0"/>
+                            <getatype comment="false" id="1" x="0" y="0">
+                                <this-actor comment="false" id="0" x="0" y="0"/>
+                            </getatype>
+                        </custom-327>
+                        <scene-shout comment="false" x="37" y="154">
+                            <get-val-91-1 comment="false" id="0" x="0" y="0"/>
+                        </scene-shout>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <str-empty comment="false" id="0" x="0" y="0">
+                            <get-val-91-3 comment="false" id="0" x="0" y="0"/>
+                        </str-empty>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="191">
+                    <group eventID="1" id="-1">
+                        <shout comment="false" x="37" y="234">
+                            <get-val-91-2 comment="false" id="0" x="0" y="0"/>
+                            <get-val-91-1 comment="false" id="1" x="0" y="0"/>
+                        </shout>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <custom-65 comment="false" id="0" x="0" y="0">
+                            <get-val-91-2 comment="false" id="0" x="0" y="0"/>
+                        </custom-65>
+                    </not>
+                </if>
+                <save-game comment="false" x="26" y="278">
+                    <group eventID="1" id="-1"/>
+                </save-game>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <GROUP eid="0" id="1"/>
+        </event-collide-actortogroup>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="70">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <get-val-91-3 comment="false" id="0" x="0" y="0"/>
+                    </custom-326>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

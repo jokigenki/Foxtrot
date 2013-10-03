@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="5" desc="" eventsnippetid="105" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="11" name="Farm1_09" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
+    <layers>
+        <layer color="255,255,0" id="5" name="secret areas" order="0"/>
+        <layer color="255,200,0" id="3" name="Camera Gizmo" order="1"/>
+        <layer color="0,255,0" id="2" name="Player" order="3"/>
+        <layer color="64,64,64" id="4" name="Triggers" order="4"/>
+        <layer color="0,0,255" id="1" name="Ground" order="5"/>
+    </layers>
+    <color-bg blue="255" green="255" red="255"/>
+    <backgrounds>
+        <ref id="43"/>
+    </backgrounds>
+    <foregrounds/>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="288" y="304" z="2"/>
+        <actor a="0.0" aid="4" c="true" group="2" id="140" name="Door 4" sx="1.0" sy="1.0" x="288" y="304" z="4">
+            <snippets>
+                <s enabled="true" id="92">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="Open"/>
+                    <prop id="3" list="0" val="Closed"/>
+                    <prop id="4" list="0" val="Opening"/>
+                    <prop id="5" list="0" val=""/>
+                    <prop id="6" list="0" val="Farm1_09|Farm1_08|A"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="3"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val=""/>
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="false"/>
+                </s>
+                <s enabled="true" id="133">
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val=""/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="false"/>
+                    <prop id="21" list="0" val=""/>
+                    <prop id="20" list="0" val="false"/>
+                    <prop id="23" list="0" val=""/>
+                    <prop id="25" list="0" val=""/>
+                    <prop id="24" list="0" val="UseDoor"/>
+                    <prop id="27" list="0" val="0"/>
+                    <prop id="26" list="0" val="1"/>
+                    <prop id="29" list="0" val="4"/>
+                    <prop id="28" list="0" val=""/>
+                    <prop id="30" list="0" val="4"/>
+                </s>
+                <s enabled="true" id="89"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="5" c="true" group="2" id="140" name="Door 5" sx="1.0" sy="1.0" x="288" y="48" z="4">
+            <snippets>
+                <s enabled="true" id="92">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="Open"/>
+                    <prop id="3" list="0" val="Closed"/>
+                    <prop id="4" list="0" val="Opening"/>
+                    <prop id="5" list="0" val=""/>
+                    <prop id="6" list="0" val="Farm1_09|Farm1_10|A"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="3"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="KeyCollected"/>
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="false"/>
+                </s>
+                <s enabled="true" id="133">
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val=""/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="false"/>
+                    <prop id="21" list="0" val=""/>
+                    <prop id="20" list="0" val="false"/>
+                    <prop id="23" list="0" val=""/>
+                    <prop id="25" list="0" val=""/>
+                    <prop id="24" list="0" val="UseDoor"/>
+                    <prop id="27" list="0" val="0"/>
+                    <prop id="26" list="0" val="1"/>
+                    <prop id="29" list="0" val="4"/>
+                    <prop id="28" list="0" val=""/>
+                    <prop id="30" list="0" val="4"/>
+                </s>
+                <s enabled="true" id="89"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="8" c="true" group="3" id="142" name="Gold Key 8" sx="1.0" sy="1.0" x="103" y="80" z="4">
+            <snippets>
+                <s enabled="true" id="91">
+                    <prop id="1" list="0" val="KeyCollected"/>
+                    <prop id="2" list="0" val="5"/>
+                    <prop id="3" list="0" val="KeyFarm1_10"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="90"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="9" c="true" group="3" id="178" name="Egg 9" sx="1.0" sy="1.0" x="519" y="320" z="4">
+            <snippets>
+                <s enabled="true" id="64">
+                    <prop id="1" list="0" val="EggCollected"/>
+                    <prop id="2" list="0" val="Egg1_09"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="191">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="2" list="0" val="0.5"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="4" list="0" val="300"/>
+                    <prop id="5" list="0" val="200"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="209">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="121"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="10" c="true" group="8" id="201" name="Fanny Cannon 10" sx="1.0" sy="1.0" x="384" y="256" z="4">
+            <snippets>
+                <s enabled="true" id="136">
+                    <prop id="1" list="0" val="4"/>
+                    <prop id="2" list="0" val="4"/>
+                    <prop id="3" list="0" val="199"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="13"/>
+                    <prop id="6" list="0" val="30"/>
+                    <prop id="7" list="0" val="-1"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val="idle-l"/>
+                    <prop id="11" list="0" val="shoot-l"/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="13" list="0" val="0.4"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="169">
+                    <prop id="1" list="1" val="">
+                        <text order="0" value="Deadly Sides PM"/>
+                        <text order="1" value="Timed Shoot PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="141">
+                    <prop id="1" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="147">
+                    <prop id="2" list="0" val="dead-l"/>
+                    <prop id="3" list="0" val="dead-l"/>
+                    <prop id="4" list="0" val="dead-r"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="20"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="148">
+                    <prop id="1" list="0" val="true"/>
+                    <prop id="2" list="0" val="true"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="5" list="1" val="">
+                        <text order="0" value="Jumper"/>
+                    </prop>
+                    <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="135"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="11" c="true" group="8" id="201" name="Fanny Cannon 11" sx="1.0" sy="1.0" x="416" y="208" z="4">
+            <snippets>
+                <s enabled="true" id="136">
+                    <prop id="1" list="0" val="3"/>
+                    <prop id="2" list="0" val="4"/>
+                    <prop id="3" list="0" val="199"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="13"/>
+                    <prop id="6" list="0" val="30"/>
+                    <prop id="7" list="0" val="-1"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val="idle-l"/>
+                    <prop id="11" list="0" val="shoot-l"/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="13" list="0" val="0.4"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="169">
+                    <prop id="1" list="1" val="">
+                        <text order="0" value="Deadly Sides PM"/>
+                        <text order="1" value="Timed Shoot PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="141">
+                    <prop id="1" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="147">
+                    <prop id="2" list="0" val="dead-l"/>
+                    <prop id="3" list="0" val="dead-l"/>
+                    <prop id="4" list="0" val="dead-r"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="20"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="148">
+                    <prop id="1" list="0" val="true"/>
+                    <prop id="2" list="0" val="true"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="5" list="1" val="">
+                        <text order="0" value="Jumper"/>
+                    </prop>
+                    <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="135"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="12" c="true" group="8" id="201" name="Fanny Cannon 12" sx="1.0" sy="1.0" x="448" y="160" z="4">
+            <snippets>
+                <s enabled="true" id="136">
+                    <prop id="1" list="0" val="2"/>
+                    <prop id="2" list="0" val="4"/>
+                    <prop id="3" list="0" val="199"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="13"/>
+                    <prop id="6" list="0" val="30"/>
+                    <prop id="7" list="0" val="-1"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val="idle-l"/>
+                    <prop id="11" list="0" val="shoot-l"/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="13" list="0" val="0.4"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="169">
+                    <prop id="1" list="1" val="">
+                        <text order="0" value="Deadly Sides PM"/>
+                        <text order="1" value="Timed Shoot PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="141">
+                    <prop id="1" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="147">
+                    <prop id="2" list="0" val="dead-l"/>
+                    <prop id="3" list="0" val="dead-l"/>
+                    <prop id="4" list="0" val="dead-r"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="20"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="148">
+                    <prop id="1" list="0" val="true"/>
+                    <prop id="2" list="0" val="true"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="5" list="1" val="">
+                        <text order="0" value="Jumper"/>
+                    </prop>
+                    <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="135"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="13" c="true" group="8" id="201" name="Fanny Cannon 13" sx="1.0" sy="1.0" x="480" y="112" z="4">
+            <snippets>
+                <s enabled="true" id="136">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="2" list="0" val="4"/>
+                    <prop id="3" list="0" val="199"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="13"/>
+                    <prop id="6" list="0" val="30"/>
+                    <prop id="7" list="0" val="-1"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val="idle-l"/>
+                    <prop id="11" list="0" val="shoot-l"/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="13" list="0" val="0.4"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="169">
+                    <prop id="1" list="1" val="">
+                        <text order="0" value="Deadly Sides PM"/>
+                        <text order="1" value="Timed Shoot PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="141">
+                    <prop id="1" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="147">
+                    <prop id="2" list="0" val="dead-l"/>
+                    <prop id="3" list="0" val="dead-l"/>
+                    <prop id="4" list="0" val="dead-r"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="20"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="148">
+                    <prop id="1" list="0" val="true"/>
+                    <prop id="2" list="0" val="true"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="5" list="1" val="">
+                        <text order="0" value="Jumper"/>
+                    </prop>
+                    <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="135"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="14" c="true" group="2" id="192" name="Crate Spawn 14" sx="1.0" sy="1.0" x="384" y="0" z="4">
+            <snippets>
+                <s enabled="true" id="52">
+                    <prop id="2" list="0" val="none"/>
+                    <prop id="5" list="0" val="1"/>
+                    <prop id="6" list="0" val="5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="11" list="0" val="false"/>
+                    <prop id="13" list="0" val="156"/>
+                    <prop id="14" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="1" val=""/>
+                    <prop id="17" list="0" val="0"/>
+                    <prop id="16" list="1" val=""/>
+                    <prop id="18" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="129"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Runtime"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Spawn PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="15" c="true" group="2" id="192" name="Crate Spawn 15" sx="1.0" sy="1.0" x="416" y="0" z="4">
+            <snippets>
+                <s enabled="true" id="52">
+                    <prop id="2" list="0" val="none"/>
+                    <prop id="5" list="0" val="1"/>
+                    <prop id="6" list="0" val="5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="11" list="0" val="false"/>
+                    <prop id="13" list="0" val="156"/>
+                    <prop id="14" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="1" val=""/>
+                    <prop id="17" list="0" val="0"/>
+                    <prop id="16" list="1" val=""/>
+                    <prop id="18" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="129"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Runtime"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Spawn PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="17" c="true" group="2" id="192" name="Crate Spawn 17" sx="1.0" sy="1.0" x="480" y="0" z="4">
+            <snippets>
+                <s enabled="true" id="52">
+                    <prop id="2" list="0" val="none"/>
+                    <prop id="5" list="0" val="1"/>
+                    <prop id="6" list="0" val="5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="11" list="0" val="false"/>
+                    <prop id="13" list="0" val="156"/>
+                    <prop id="14" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="1" val=""/>
+                    <prop id="17" list="0" val="0"/>
+                    <prop id="16" list="1" val=""/>
+                    <prop id="18" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="129"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Runtime"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Spawn PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="16" c="true" group="2" id="192" name="Crate Spawn 16" sx="1.0" sy="1.0" x="448" y="0" z="4">
+            <snippets>
+                <s enabled="true" id="52">
+                    <prop id="2" list="0" val="none"/>
+                    <prop id="5" list="0" val="1"/>
+                    <prop id="6" list="0" val="5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="11" list="0" val="false"/>
+                    <prop id="13" list="0" val="156"/>
+                    <prop id="14" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="1" val=""/>
+                    <prop id="17" list="0" val="0"/>
+                    <prop id="16" list="1" val=""/>
+                    <prop id="18" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="129"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Runtime"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Spawn PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="19" c="true" group="5" id="236" name="Gate 19" sx="1.0" sy="1.0" x="384" y="304" z="4">
+            <snippets>
+                <s enabled="true" id="166">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="384"/>
+                    <prop id="3" list="0" val="338"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="0"/>
+                    <prop id="6" list="0" val="1"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val=""/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Reposition Whilst Activated PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="164"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="18" c="false" group="0" id="156" name="Crate 18" sx="1.0" sy="1.0" x="194" y="306" z="4"/>
+        <actor a="0.0" aid="21" c="true" group="2" id="265" name="Switch Single Use 21" sx="1.0" sy="1.0" x="236" y="135" z="4">
+            <snippets>
+                <s enabled="true" id="174">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="3" list="0" val="Off"/>
+                    <prop id="4" list="0" val="On"/>
+                    <prop id="10" list="0" val="Off"/>
+                    <prop id="11" list="0" val="4"/>
+                    <prop id="12" list="0" val="9"/>
+                    <prop id="13" list="1" val="">
+                        <text order="0" value="Crate Spawn 14"/>
+                        <text order="1" value="Crate Spawn 15"/>
+                        <text order="2" value="Crate Spawn 16"/>
+                        <text order="3" value="Crate Spawn 17"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="173"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="20" c="true" group="3" id="176" name="Switch Light 20" sx="1.0" sy="1.0" x="524" y="343" z="4">
+            <snippets>
+                <s enabled="true" id="118"/>
+                <s enabled="true" id="66">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="3" list="0" val="Off"/>
+                    <prop id="4" list="0" val="On"/>
+                    <prop id="10" list="0" val="Off"/>
+                    <prop id="11" list="0" val="0"/>
+                    <prop id="12" list="0" val="9"/>
+                    <prop id="13" list="1" val="">
+                        <text order="0" value="Gate 19"/>
+                    </prop>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="23" c="true" group="2" id="265" name="Switch Single Use 23" sx="1.0" sy="1.0" x="236" y="231" z="4">
+            <snippets>
+                <s enabled="true" id="174">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="3" list="0" val="Off"/>
+                    <prop id="4" list="0" val="On"/>
+                    <prop id="10" list="0" val="Off"/>
+                    <prop id="11" list="0" val="2"/>
+                    <prop id="12" list="0" val="9"/>
+                    <prop id="13" list="1" val="">
+                        <text order="0" value="Crate Spawn 15"/>
+                        <text order="1" value="Crate Spawn 14"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="173"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="22" c="true" group="2" id="265" name="Switch Single Use 22" sx="1.0" sy="1.0" x="140" y="183" z="4">
+            <snippets>
+                <s enabled="true" id="174">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="3" list="0" val="Off"/>
+                    <prop id="4" list="0" val="On"/>
+                    <prop id="10" list="0" val="Off"/>
+                    <prop id="11" list="0" val="3"/>
+                    <prop id="12" list="0" val="9"/>
+                    <prop id="13" list="1" val="">
+                        <text order="0" value="Crate Spawn 14"/>
+                        <text order="1" value="Crate Spawn 15"/>
+                        <text order="2" value="Crate Spawn 16"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="173"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="25" c="false" group="2" id="196" name="Teleporter 25" sx="1.0" sy="1.0" x="360" y="320" z="4"/>
+        <actor a="0.0" aid="24" c="true" group="2" id="265" name="Switch Single Use 24" sx="1.0" sy="1.0" x="140" y="279" z="4">
+            <snippets>
+                <s enabled="true" id="174">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="3" list="0" val="Off"/>
+                    <prop id="4" list="0" val="On"/>
+                    <prop id="10" list="0" val="Off"/>
+                    <prop id="11" list="0" val="1"/>
+                    <prop id="12" list="0" val="9"/>
+                    <prop id="13" list="1" val="">
+                        <text order="0" value="Crate Spawn 14"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="173"/>
+            </snippets>
+        </actor>
+    </actors>
+    <snippets>
+        <s enabled="true" id="19">
+            <prop id="1" list="0" val="false"/>
+            <prop id="2" list="0" val="false"/>
+            <prop id="4" list="0" val="3"/>
+            <prop id="7" list="0" val="0"/>
+            <prop id="8" list="0" val="0"/>
+            <prop id="9" list="0" val="false"/>
+            <prop id="10" list="0" val="5"/>
+            <prop id="11" list="0" val="0"/>
+            <prop id="12" list="0" val="false"/>
+        </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
+        </s>
+        <s enabled="true" id="21"/>
+        <s enabled="true" id="202">
+            <prop id="1" list="0" val="false"/>
+            <prop id="2" list="0" val="false"/>
+            <prop id="3" list="0" val="false"/>
+            <prop id="5" list="0" val="0"/>
+            <prop id="6" list="0" val="0"/>
+            <prop id="7" list="0" val="false"/>
+            <prop id="8" list="1" val=""/>
+            <prop id="9" list="1" val=""/>
+            <prop id="10" list="0" val="288.0"/>
+            <prop id="11" list="0" val="30.0"/>
+        </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="11"/>
+        </s>
+    </snippets>
+    <terrain>
+        <p pts="44,464.0,240.0,464.0,208.0,368.0,208.0,368.0,192.0,464.0,192.0,464.0,160.0,400.0,160.0,400.0,144.0,464.0,144.0,464.0,48.0,432.0,48.0,432.0,0.0,448.0,0.0,448.0,32.0,480.0,32.0,480.0,352.0,0.0,352.0,0.0,32.0,144.0,32.0,144.0,0.0,304.0,0.0,304.0,48.0,272.0,48.0,272.0,16.0,160.0,16.0,160.0,48.0,16.0,48.0,16.0,96.0,48.0,96.0,48.0,112.0,16.0,112.0,16.0,176.0,80.0,176.0,80.0,192.0,16.0,192.0,16.0,272.0,80.0,272.0,80.0,288.0,16.0,288.0,16.0,336.0,464.0,336.0,464.0,256.0,336.0,256.0,336.0,240.0" x="80.0" y="0.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="192.0" y="224.0"/>
+        <p pts="4,64.0,0.0,64.0,16.0,0.0,16.0,0.0,0.0" x="192.0" y="128.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="288.0" y="80.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,128.0,0.0,128.0,16.0" x="384.0" y="288.0"/>
+    </terrain>
+</scene>

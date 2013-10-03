@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="-1" id="-1">
+                                <set-val-42-1 comment="false" x="48" y="103">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-42-1>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <is-anim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </is-anim>
+                            </not>
+                        </if>
+                        <else comment="false" x="37" y="140">
+                            <group eventID="-1" id="-1">
+                                <stop comment="false" x="48" y="160"/>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-42-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="204">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="237">
+                            <group eventID="-1" id="-1">
+                                <setanim comment="false" x="48" y="275">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-42-3 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </if>
+                        <else comment="false" x="37" y="319">
+                            <group eventID="-1" id="-1">
+                                <setanim comment="false" x="48" y="339">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-42-4 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                        </else>
+                        <stop comment="false" x="37" y="383"/>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="2"/>
+                        <int id="1" val="1"/>
+                    </value>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-1-88 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <setanim comment="false" x="26" y="45">
+                    <get-byobval-42-12-0 comment="false" id="0" x="0" y="0"/>
+                    <get-byobval-42-12-1 comment="false" id="1" x="0" y="0"/>
+                </setanim>
+                <set-val-42-1 comment="false" x="26" y="77">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-42-1>
+            </group>
+            <get-byobval-42-12-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-42-12-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-1-88>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receiver-2-90 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="70"/>
+                    </group>
+                    <get-val-42-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="102">
+                    <group eventID="-1" id="-1">
+                        <set-val-42-2 comment="false" x="37" y="135">
+                            <get-byobval-42-13-2 comment="false" id="0" x="0" y="0"/>
+                        </set-val-42-2>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="2"/>
+                        <int id="1" val="1"/>
+                    </value>
+                </if>
+                <set-val-42-6 comment="false" x="26" y="172">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-42-6>
+                <set-val-42-7 comment="false" x="26" y="197">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-42-7>
+                <for-each comment="false" x="26" y="222">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="247">
+                            <group eventID="-1" id="-1">
+                                <set-val-42-7 comment="false" x="48" y="277">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-42-7>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <for-each-item comment="false" id="0" x="0" y="0"/>
+                                <get-byobval-42-13-2 comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                        <if comment="false" x="37" y="314">
+                            <group eventID="-1" id="-1">
+                                <set-val-42-6 comment="false" x="48" y="344">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-42-6>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <for-each-item comment="false" id="0" x="0" y="0"/>
+                                <get-val-42-2 comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                        <if comment="false" x="37" y="381">
+                            <group eventID="-1" id="-1">
+                                <stop comment="false" x="48" y="416"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <get-val-42-6 comment="false" id="0" x="0" y="0"/>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-val-42-7 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                            </and>
+                        </if>
+                    </group>
+                    <get-val-42-5 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <setanim comment="false" x="26" y="460">
+                    <get-byobval-42-13-0 comment="false" id="0" x="0" y="0"/>
+                    <get-byobval-42-13-1 comment="false" id="1" x="0" y="0"/>
+                </setanim>
+                <set-val-42-2 comment="false" x="26" y="492">
+                    <get-byobval-42-13-2 comment="false" id="0" x="0" y="0"/>
+                </set-val-42-2>
+            </group>
+            <get-byobval-42-13-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-42-13-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-42-13-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-2-90>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-3-87 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <clear comment="false" x="26" y="45">
+                    <int id="0" val="2"/>
+                </clear>
+            </group>
+            <get-byobval-42-436-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-3-87>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-4-86 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <return comment="false" x="26" y="45">
+                    <get-val-42-2 comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-42-437-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-4-86>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <receiver-5-89 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <return comment="false" x="26" y="45">
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-byobval-42-469-1 comment="false" id="0" x="0" y="0"/>
+                        <get-val-42-2 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </return>
+            </group>
+            <int id="0" val=""/>
+            <get-byobval-42-469-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-5-89>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <receiver-7-91 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <clear comment="false" x="37" y="75">
+                            <int id="0" val="2"/>
+                        </clear>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-byobval-42-471-1 comment="false" id="0" x="0" y="0"/>
+                        <get-val-42-2 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+            </group>
+            <int id="0" val=""/>
+            <get-byobval-42-471-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-7-91>
+    </group>
+    <group eventID="7" id="-1"/>
+</groups>

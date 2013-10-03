@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-265-9 comment="false" x="26" y="40">
+                    <getdir comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                    </getdir>
+                </set-val-265-9>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;actor.spinTo(_RotationTarget, _MoveTime, trans);"/>
+                </code-long>
+            </group>
+            <int id="0" val="Activated"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;actor.spinTo(_RotationStart, _MoveTime, trans);"/>
+                </code-long>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+</groups>

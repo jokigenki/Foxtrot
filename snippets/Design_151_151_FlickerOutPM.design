@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <custom-261 comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </custom-261>
+                <set-val-151-5 comment="false" x="26" y="67">
+                    <div comment="false" id="0" x="0" y="0">
+                        <get-val-151-1 comment="false" id="0" x="0" y="0"/>
+                        <times comment="false" id="1" x="0" y="0">
+                            <get-val-151-3 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </times>
+                    </div>
+                </set-val-151-5>
+                <set-val-151-2 comment="false" x="26" y="102">
+                    <get-val-151-5 comment="false" id="0" x="0" y="0"/>
+                </set-val-151-2>
+                <repeat comment="false" x="26" y="127">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="152">
+                            <group eventID="1" id="-1">
+                                <toggle-image comment="false" x="48" y="184">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </toggle-image>
+                            </group>
+                            <get-val-151-2 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                        <incdec comment="false" x="37" y="223">
+                            <int id="0" val="2"/>
+                            <int id="1" val="0"/>
+                            <get-val-151-5 comment="false" id="2" x="0" y="0"/>
+                        </incdec>
+                        <dolater comment="false" x="37" y="255">
+                            <group eventID="1" id="-1">
+                                <toggle-image comment="false" x="48" y="287">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </toggle-image>
+                            </group>
+                            <get-val-151-2 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                        <incdec comment="false" x="37" y="326">
+                            <int id="0" val="2"/>
+                            <int id="1" val="0"/>
+                            <get-val-151-5 comment="false" id="2" x="0" y="0"/>
+                        </incdec>
+                    </group>
+                    <get-val-151-3 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <dolater comment="false" x="26" y="370">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="402">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <if comment="false" x="37" y="429">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="462">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Reload On Death PM"/>
+                                    <int id="2" val="Reload"/>
+                                </say>
+                            </group>
+                            <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Reload On Death PM"/>
+                            </is-snippet-enableda>
+                        </if>
+                    </group>
+                    <get-val-151-1 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

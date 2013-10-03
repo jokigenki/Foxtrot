@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="4" id="0">
+        <collide comment="false" x="33" y="32">
+            <group eventID="4" id="-1">
+                <if comment="false" x="44" y="62">
+                    <group eventID="4" id="-1">
+                        <stop comment="false" x="55" y="110"/>
+                    </group>
+                    <contains-item comment="false" id="0" x="0" y="0">
+                        <get-val-57-7 comment="false" id="0" x="0" y="0"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <getatype comment="false" id="0" x="0" y="0">
+                                <other-actor comment="false" id="0" x="0" y="0"/>
+                            </getatype>
+                        </tostring>
+                    </contains-item>
+                </if>
+                <if comment="false" x="44" y="142">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="55" y="175">
+                            <group eventID="4" id="-1">
+                                <if comment="false" x="66" y="213">
+                                    <group eventID="1" id="-1">
+                                        <set-val-57-4 comment="false" x="77" y="256">
+                                            <get-val-57-5 comment="false" id="0" x="0" y="0"/>
+                                        </set-val-57-4>
+                                    </group>
+                                    <and comment="false" id="0" x="0" y="0">
+                                        <more comment="false" id="0" x="0" y="0">
+                                            <get-val-57-5 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="0"/>
+                                        </more>
+                                        <custom-93 comment="false" id="1" x="0" y="0">
+                                            <other-actor comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Jump"/>
+                                        </custom-93>
+                                    </and>
+                                </if>
+                            </group>
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <other-actor comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Control Adapter PM"/>
+                            </has-snippet>
+                        </if>
+                        <if comment="false" x="55" y="305">
+                            <group eventID="4" id="-1">
+                                <set-val-57-4 comment="false" x="66" y="335">
+                                    <get-val-57-8 comment="false" id="0" x="0" y="0"/>
+                                </set-val-57-4>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-57-4 comment="false" id="0" x="0" y="0"/>
+                                <get-val-57-8 comment="false" id="1" x="0" y="0"/>
+                            </less>
+                        </if>
+                        <if comment="false" x="55" y="372">
+                            <group eventID="4" id="-1">
+                                <push-shove comment="false" x="66" y="402">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="-1"/>
+                                    <times comment="false" id="4" x="0" y="0">
+                                        <get-val-57-4 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="100"/>
+                                    </times>
+                                </push-shove>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-57-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <set-val-57-4 comment="false" x="55" y="451">
+                            <int id="0" val="0"/>
+                        </set-val-57-4>
+                    </group>
+                    <collision-top comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-top>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="4" id="-1"/>
+</groups>

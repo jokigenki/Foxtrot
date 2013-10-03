@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="1" id="-1">
+                                <comment-short comment="false" x="48" y="97">
+                                    <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;true&amp;gt; for Self, Set &amp;quot;Right&amp;quot; to &amp;lt;false&amp;gt; for Self"/>
+                                </comment-short>
+                                <custom-94 comment="false" x="48" y="117">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Left"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <custom-94 comment="false" x="48" y="149">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Right"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <randint comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </randint>
+                                <int id="1" val="0.5"/>
+                            </less>
+                        </if>
+                        <else comment="false" x="37" y="193">
+                            <group eventID="1" id="-1">
+                                <comment-short comment="false" x="48" y="213">
+                                    <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;true&amp;gt; for Self, Set &amp;quot;Left&amp;quot; to &amp;lt;false&amp;gt; for Self"/>
+                                </comment-short>
+                                <custom-94 comment="false" x="48" y="233">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Right"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <custom-94 comment="false" x="48" y="265">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Left"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                        </else>
+                    </group>
+                    <int id="0" val="0.05"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

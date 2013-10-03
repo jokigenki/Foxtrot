@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="70"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-248-5 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="102">
+                    <group eventID="1" id="-1">
+                        <custom-448 comment="false" x="37" y="140">
+                            <ACTOR eid="32" id="0"/>
+                            <int id="1" val="-16"/>
+                        </custom-448>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <custom-451 comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="32" id="0"/>
+                        </custom-451>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <say comment="false" x="26" y="179">
+                    <ACTOR eid="32" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Deactivate"/>
+                </say>
+                <say comment="false" x="26" y="206">
+                    <ACTOR eid="32" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Activate"/>
+                </say>
+            </group>
+            <int id="0" val="BlockMelted"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="72">
+                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                        </die>
+                        <incdec comment="false" x="37" y="104">
+                            <int id="0" val="2"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                    <get-val-248-4 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="0" id="1"/>
+            <ACTORTYPE eid="440" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-248-4 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-248-4>
+            </group>
+            <int id="0" val="TimedSwitchLight12SwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-248-4 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-248-4>
+            </group>
+            <int id="0" val="TimedSwitchLight12SwitchedOff"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <incdec comment="false" x="37" y="75">
+                            <int id="0" val="2"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-248-4 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-val-248-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="16"/>
+                        </more>
+                    </and>
+                </if>
+                <set-attribute comment="false" x="26" y="114">
+                    <ACTOR eid="33" id="0"/>
+                    <int id="1" val="Filling Liquid PM"/>
+                    <int id="2" val="_LiquidLevel"/>
+                    <get-val-248-2 comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+            </group>
+        </step>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-248-5 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-248-5>
+            </group>
+            <int id="0" val="TimedSwitchLight35SwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <set-val-248-5 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-248-5>
+            </group>
+            <int id="0" val="TimedSwitchLight35SwitchedOff"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <die comment="false" x="26" y="47">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="0" id="1"/>
+            <ACTORTYPE eid="360" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="8" id="-1"/>
+</groups>

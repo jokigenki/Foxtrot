@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="var level = _LiquidLevel &amp;lt; _MaxLevel ? _LiquidLevel : _MaxLevel;&#10;var h = (level / _ClipHeight) * 100;"/>
+                </code-long>
+                <scaleTo comment="false" x="26" y="200">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="100"/>
+                    <code-short comment="false" id="2" x="0" y="0">
+                        <int id="0" val="h"/>
+                    </code-short>
+                    <int id="3" val="0.1"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

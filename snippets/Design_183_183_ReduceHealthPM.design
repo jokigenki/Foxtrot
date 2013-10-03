@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <incdec comment="false" x="26" y="40">
+                    <int id="0" val="4"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="1"/>
+                </incdec>
+                <if comment="false" x="26" y="67">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="97">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="135">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-183-2 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Killed"/>
+                                </say>
+                                <scene-shout comment="false" x="48" y="167">
+                                    <get-val-183-5 comment="false" id="0" x="0" y="0"/>
+                                </scene-shout>
+                            </group>
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <get-val-183-2 comment="false" id="1" x="0" y="0"/>
+                            </has-snippet>
+                        </if>
+                    </group>
+                    <lesseq comment="false" id="0" x="0" y="0">
+                        <get-val-183-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </lesseq>
+                </if>
+                <if comment="false" x="26" y="216">
+                    <group eventID="1" id="-1">
+                        <for-each comment="false" x="37" y="249">
+                            <group eventID="1" id="-1">
+                                <code-long comment="false" x="48" y="274">
+                                    <int id="0" val="var values = item.split(&amp;quot;:&amp;quot;);&#10;var healthValue = Std.parseInt(values[0]);&#10;var state = values[1];&#10;"/>
+                                </code-long>
+                                <if comment="false" x="48" y="434">
+                                    <group eventID="1" id="-1">
+                                        <custom-300 comment="false" x="59" y="464">
+                                            <ACTOR eid="this" id="0"/>
+                                            <code-short comment="false" id="1" x="0" y="0">
+                                                <int id="0" val="state"/>
+                                            </code-short>
+                                        </custom-300>
+                                    </group>
+                                    <eq comment="false" id="0" x="0" y="0">
+                                        <code-short comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="healthValue"/>
+                                        </code-short>
+                                        <get-val-183-4 comment="false" id="1" x="0" y="0"/>
+                                    </eq>
+                                </if>
+                            </group>
+                            <get-val-183-3 comment="false" id="0" x="0" y="0"/>
+                        </for-each>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Super Simple State Machine PM"/>
+                    </has-snippet>
+                </if>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-183-4 comment="false" x="26" y="40">
+                    <get-val-183-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-183-4>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

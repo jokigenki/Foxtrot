@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <while comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="78">
+                            <ACTORTYPE eid="var" id="0" vid="3"/>
+                            <get-val-235-1 comment="false" id="1" x="0" y="0"/>
+                            <get-xy comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <setlayer comment="false" x="37" y="118">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <getlayer comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                        </setlayer>
+                        <backforward comment="false" x="37" y="158">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="0"/>
+                        </backforward>
+                        <incdec comment="false" x="37" y="185">
+                            <int id="0" val="1"/>
+                            <int id="1" val="0"/>
+                            <get-val-235-2 comment="false" id="2" x="0" y="0"/>
+                        </incdec>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-val-235-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </while>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1">
+        <moreeq comment="false" x="73" y="248">
+            <int id="0" val=""/>
+            <plus comment="false" id="1" x="0" y="0">
+                <int id="0" val=""/>
+                <get-val-235-2 comment="false" id="1" x="0" y="0"/>
+            </plus>
+        </moreeq>
+    </group>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-235-1 comment="false" x="26" y="40">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-235-1>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

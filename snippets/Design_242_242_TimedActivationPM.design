@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <set-val-242-7 comment="false" x="37" y="70">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-242-7>
+                        <dolater comment="false" x="37" y="95">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="127">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="ToggleActive"/>
+                                </say>
+                            </group>
+                            <get-val-242-1 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-242-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="178">
+                    <group eventID="1" id="-1">
+                        <say comment="false" x="37" y="198">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Timed Activation PM"/>
+                            <int id="2" val="ToggleActive"/>
+                        </say>
+                    </group>
+                </else>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-242-3 comment="false" x="26" y="40">
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-242-3 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </set-val-242-3>
+                <set-val-242-7 comment="false" x="26" y="70">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-242-7>
+                <if comment="false" x="26" y="95">
+                    <group eventID="2" id="-1">
+                        <say comment="false" x="37" y="120">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Activate On Event PM"/>
+                            <int id="2" val="Activate"/>
+                        </say>
+                        <if comment="false" x="37" y="147">
+                            <group eventID="2" id="-1">
+                                <set-val-242-7 comment="false" x="48" y="177">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-242-7>
+                                <dolater comment="false" x="48" y="202">
+                                    <group eventID="2" id="-1">
+                                        <say comment="false" x="59" y="234">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="ToggleActive"/>
+                                        </say>
+                                    </group>
+                                    <get-val-242-6 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-242-6 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="285">
+                            <group eventID="2" id="-1">
+                                <say comment="false" x="48" y="305">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="ToggleActive"/>
+                                </say>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-242-3 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="356">
+                    <group eventID="2" id="-1">
+                        <say comment="false" x="37" y="376">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Activate On Event PM"/>
+                            <int id="2" val="Deactivate"/>
+                        </say>
+                        <if comment="false" x="37" y="403">
+                            <group eventID="2" id="-1">
+                                <set-val-242-7 comment="false" x="48" y="433">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-242-7>
+                                <dolater comment="false" x="48" y="458">
+                                    <group eventID="2" id="-1">
+                                        <say comment="false" x="59" y="490">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="ToggleActive"/>
+                                        </say>
+                                    </group>
+                                    <get-val-242-5 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-242-5 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="541">
+                            <group eventID="2" id="-1">
+                                <say comment="false" x="48" y="561">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="ToggleActive"/>
+                                </say>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="ToggleActive"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-att-bool comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="77">
+                            <group eventID="1" id="-1">
+                                <dolater comment="false" x="48" y="107">
+                                    <group eventID="1" id="-1">
+                                        <say comment="false" x="59" y="139">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="ToggleActive"/>
+                                        </say>
+                                    </group>
+                                    <get-val-242-1 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-242-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="190">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="210">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="ToggleActive"/>
+                                </say>
+                            </group>
+                        </else>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-242-7 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+            <int id="0" val="3"/>
+            <true comment="false" id="1" x="0" y="0"/>
+        </event-att-bool>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

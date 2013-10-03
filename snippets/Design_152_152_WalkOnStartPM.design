@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <custom-94 comment="false" x="37" y="67">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Left"/>
+                            <eq comment="false" id="2" x="0" y="0">
+                                <get-val-152-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Left"/>
+                            </eq>
+                        </custom-94>
+                        <custom-94 comment="false" x="37" y="104">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Right"/>
+                            <eq comment="false" id="2" x="0" y="0">
+                                <get-val-152-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Right"/>
+                            </eq>
+                        </custom-94>
+                    </group>
+                    <int id="0" val="0.5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

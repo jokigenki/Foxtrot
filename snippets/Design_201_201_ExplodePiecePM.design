@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-201-1 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <random comment="false" id="0" x="0" y="0"/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-val-201-2 comment="false" id="0" x="0" y="0"/>
+                                <get-val-201-3 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                        </times>
+                        <get-val-201-3 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-201-1>
+                <set-val-201-4 comment="false" x="26" y="80">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <random comment="false" id="0" x="0" y="0"/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-val-201-5 comment="false" id="0" x="0" y="0"/>
+                                <get-val-201-6 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                        </times>
+                        <get-val-201-6 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-201-4>
+                <push-shove comment="false" x="26" y="120">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-val-201-1 comment="false" id="2" x="0" y="0"/>
+                    <get-val-201-4 comment="false" id="3" x="0" y="0"/>
+                    <get-val-201-7 comment="false" id="4" x="0" y="0"/>
+                </push-shove>
+                <fadeInOut comment="false" x="26" y="152">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-val-201-8 comment="false" id="2" x="0" y="0"/>
+                    <int id="3" val="9"/>
+                </fadeInOut>
+                <dolater comment="false" x="26" y="184">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="216">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <get-val-201-8 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

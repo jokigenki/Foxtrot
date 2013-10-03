@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="70">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Left"/>
+                        </setanim>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </less>
+                </if>
+                <else comment="false" x="26" y="109">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="129">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Right"/>
+                        </setanim>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="168">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="198"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <set-val-128-2 comment="false" x="26" y="230">
+                    <div comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <get-val-128-1 comment="false" id="1" x="0" y="0"/>
+                    </div>
+                </set-val-128-2>
+                <set-val-128-3 comment="false" x="26" y="260">
+                    <int id="0" val="0"/>
+                </set-val-128-3>
+                <if comment="false" x="26" y="280">
+                    <group eventID="1" id="-1">
+                        <set-val-128-1 comment="false" x="37" y="315">
+                            <int id="0" val="1"/>
+                        </set-val-128-1>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </less>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </more>
+                    </and>
+                </if>
+                <else-if comment="false" x="26" y="347">
+                    <group eventID="1" id="-1">
+                        <set-val-128-1 comment="false" x="37" y="382">
+                            <int id="0" val="-1"/>
+                        </set-val-128-1>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </less>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="-1"/>
+                        </more>
+                    </and>
+                </else-if>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <set-val-128-3 comment="false" x="37" y="80">
+                            <int id="0" val="0"/>
+                        </set-val-128-3>
+                        <if comment="false" x="37" y="100">
+                            <group eventID="2" id="-1">
+                                <set-xy comment="false" x="48" y="133">
+                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                    <plus comment="false" id="2" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <other-actor comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="0"/>
+                                        </get-xy>
+                                        <get-val-128-1 comment="false" id="1" x="0" y="0"/>
+                                    </plus>
+                                </set-xy>
+                            </group>
+                            <collision-top comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                            </collision-top>
+                        </if>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <lesseq comment="false" id="0" x="0" y="0">
+                            <get-val-128-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </lesseq>
+                        <moreeq comment="false" id="1" x="0" y="0">
+                            <get-val-128-3 comment="false" id="0" x="0" y="0"/>
+                            <get-val-128-2 comment="false" id="1" x="0" y="0"/>
+                        </moreeq>
+                    </or>
+                </if>
+                <else comment="false" x="26" y="207">
+                    <group eventID="2" id="-1">
+                        <incdec comment="false" x="37" y="227">
+                            <int id="0" val="3"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                </else>
+            </group>
+        </collide>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

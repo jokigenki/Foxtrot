@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="GA: Destination Scene"/>
+                </comment-short>
+                <if comment="false" x="26" y="60">
+                    <group eventID="2" id="-1">
+                        <dolater comment="false" x="37" y="85">
+                            <group eventID="2" id="-1">
+                                <custom-348 comment="false" x="48" y="112"/>
+                            </group>
+                            <int id="0" val="1"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="156">
+                    <group eventID="2" id="-1">
+                        <custom-348 comment="false" x="37" y="176"/>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="SwitchScene"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <save-game comment="false" x="37" y="75">
+                            <group eventID="4" id="-1"/>
+                        </save-game>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-game-val-16 comment="false" id="0" x="0" y="0"/>
+                        <not comment="false" id="1" x="0" y="0">
+                            <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                    </and>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="3" id="1">
+        <print comment="false" x="834" y="6">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="Saving in "/>
+                <int id="1" val=""/>
+            </str-combine>
+        </print>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-3-348 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="85">
+                            <group eventID="2" id="-1">
+                                <custom-344 comment="false" x="48" y="110"/>
+                            </group>
+                            <scene-has-snippet comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Speed Run Timer PM"/>
+                            </scene-has-snippet>
+                        </if>
+                        <scene-change-new comment="false" x="37" y="142">
+                            <scenebyname comment="false" id="0" x="0" y="0">
+                                <get-item comment="false" id="0" x="0" y="0">
+                                    <str-split comment="false" id="0" x="0" y="0">
+                                        <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="|"/>
+                                    </str-split>
+                                    <int id="1" val="1"/>
+                                </get-item>
+                            </scenebyname>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0.5"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0.5"/>
+                        </scene-change-new>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <str-empty comment="false" id="0" x="0" y="0">
+                                <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                            </str-empty>
+                        </not>
+                        <noteq comment="false" id="1" x="0" y="0">
+                            <get-item comment="false" id="0" x="0" y="0">
+                                <str-split comment="false" id="0" x="0" y="0">
+                                    <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="|"/>
+                                </str-split>
+                                <int id="1" val="1"/>
+                            </get-item>
+                            <scenename comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                    </and>
+                </if>
+            </group>
+        </receiver-3-348>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>
