@@ -42,7 +42,7 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_8 extends SceneScript
+class SceneEvents_7 extends SceneScript
 {          	
 	
  
