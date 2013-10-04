@@ -42,17 +42,23 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_27 extends SceneScript
+class Design_257_257_KillableByLaserPM extends ActorScript
 {          	
 	
-public var _ExitName:String;
+public var _KillBehaviour:String;
+    public function _customEvent_Killed():Void
+{
+        scripts.Design_27_27_ActorExtrasPM._customBlock_TriggerKilledInActor(actor,_KillBehaviour,0,0);
+}
+
 
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
+		super(actor, engine);	
+		nameMap.set("Kill Behaviour", "_KillBehaviour");
+_KillBehaviour = "";
+nameMap.set("Actor", "actor");
 
 	}
 	
