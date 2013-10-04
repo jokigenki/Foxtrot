@@ -36,56 +36,12 @@
                 <comment-short comment="false" x="26" y="125">
                     <int id="0" val="GA: Last Scene Name (Text)"/>
                 </comment-short>
-                <if comment="false" x="26" y="145">
-                    <group eventID="1" id="-1">
-                        <comment-short comment="false" x="37" y="175">
-                            <int id="0" val="GA: Last Scene Name (Text)"/>
-                        </comment-short>
-                        <if comment="false" x="37" y="195">
-                            <group eventID="1" id="-1">
-                                <set-xy comment="false" x="48" y="225">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <get-xy comment="false" id="2" x="0" y="0">
-                                        <ACTOR eid="this" id="0"/>
-                                        <int id="1" val="0"/>
-                                    </get-xy>
-                                </set-xy>
-                                <set-xy comment="false" x="48" y="265">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="1"/>
-                                    <get-game-val-17 comment="false" id="2" x="0" y="0"/>
-                                </set-xy>
-                                <set-val-295-10 comment="false" x="48" y="297">
-                                    <false comment="false" id="0" x="0" y="0"/>
-                                </set-val-295-10>
-                            </group>
-                            <custom-551 comment="false" id="0" x="0" y="0">
-                                <get-val-295-6 comment="false" id="0" x="0" y="0"/>
-                                <get-game-val-20 comment="false" id="1" x="0" y="0"/>
-                            </custom-551>
-                        </if>
-                        <else comment="false" x="37" y="334">
-                            <group eventID="1" id="-1">
-                                <set-val-295-10 comment="false" x="48" y="354">
-                                    <true comment="false" id="0" x="0" y="0"/>
-                                </set-val-295-10>
-                            </group>
-                        </else>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <get-val-295-6 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="none"/>
-                    </noteq>
-                </if>
-                <else comment="false" x="26" y="403">
-                    <group eventID="1" id="-1">
-                        <set-val-295-10 comment="false" x="37" y="423">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-295-10>
-                    </group>
-                </else>
-                <toggle-image comment="false" x="26" y="460">
+                <say comment="false" x="26" y="145">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Activate Door PM"/>
+                    <int id="2" val="ActivateDoor"/>
+                </say>
+                <toggle-image comment="false" x="26" y="172">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
                 </toggle-image>

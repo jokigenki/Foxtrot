@@ -42,96 +42,74 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_296_296_HorizontalSceneExitPM extends ActorScript
+class Design_99_99 extends ActorScript
 {          	
 	
 public var _DoorRegion:Region;
 
-public var _Destination:String;
-
 public var _Canusedoor:Bool;
 
 public var _HasUsedDoor:Bool;
-
-public var _Actortomove:Actor;
-
-public var _DoorIsReady:Bool;
-
-public var _Actorbydoor:Actor;
-
-public var _Exitonlywhenonground:Bool;
-
-public var _SaveExit:Bool;
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
 		nameMap.set("Door Region", "_DoorRegion");
-nameMap.set("Destination", "_Destination");
-_Destination = "";
 nameMap.set("Can use door?", "_Canusedoor");
 _Canusedoor = false;
 nameMap.set("Has Used Door?", "_HasUsedDoor");
 _HasUsedDoor = false;
-nameMap.set("Actor to move", "_Actortomove");
-nameMap.set("Door Is Ready?", "_DoorIsReady");
-_DoorIsReady = false;
-nameMap.set("Actor by door", "_Actorbydoor");
-nameMap.set("Exit only when on ground", "_Exitonlywhenonground");
-_Exitonlywhenonground = false;
-nameMap.set("Save Exit?", "_SaveExit");
-_SaveExit = true;
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            /* "GA: Unlocked Doors (List)" */
-        createBoxRegion(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float), cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float), (cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(actor)), Float) - cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float)), (cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) - cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float)));
+		            actor.disableActorDrawing();
+        /* "GA: Unlocked Doors (List)" */
+        trace("" + (("" + cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float)) + ("" + (("" + "") + ("" + cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float))))));
+        createBoxRegion((actor.getXCenter() - 2), cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float), 4, (cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) - cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float)));
         _DoorRegion = getLastCreatedRegion();
 propertyChanged("_DoorRegion", _DoorRegion);
+        _Canusedoor = false;
+propertyChanged("_Canusedoor", _Canusedoor);
+        _HasUsedDoor = false;
+propertyChanged("_HasUsedDoor", _HasUsedDoor);
         /* "GA: Last Scene Name (Text)" */
-        actor.say("Activate Door PM", "_customEvent_" + "ActivateDoor");
-        actor.disableActorDrawing();
     addActorEntersRegionListener(_DoorRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorType(9),a.getType(),a.getGroup())){
-        if((_Exitonlywhenonground && !(asBoolean(a.getActorValue("On Ground?")))))
+        if(isTransitioning())
 {
             return;
 }
 
-        if(!(_DoorIsReady))
+        trace("" + "hit");
+        _Canusedoor = true;
+propertyChanged("_Canusedoor", _Canusedoor);
+        if(_HasUsedDoor)
 {
-            return;
+            _Canusedoor = false;
+propertyChanged("_Canusedoor", _Canusedoor);
 }
 
-        _Actorbydoor = a;
-propertyChanged("_Actorbydoor", _Actorbydoor);
-        /* "Now move to the linked scene" */
-        if(!(_Destination == "none"))
+        /* "Custom: Is \"UseObject\" on for <Actor by door>" */
+        if(_Canusedoor)
 {
-            setGameAttribute("Last Destination", _Destination);
-            _DoorIsReady = false;
-propertyChanged("_DoorIsReady", _DoorIsReady);
-            _Actortomove.setXVelocity(0);
-            setGameAttribute("Last Scene Y Position", (Math.round((a.getY() / 16)) * 16));
-            _Actortomove.fadeTo(0 / 100, 0.5, Quad.easeOut);
-            sayToScene("Scene Transition PM", "_customEvent_" + "SwitchScene");
-            if(_SaveExit)
-{
-                setGameAttribute("Save Destination", _Destination);
-}
-
+            _HasUsedDoor = true;
+propertyChanged("_HasUsedDoor", _HasUsedDoor);
+            _Canusedoor = false;
+propertyChanged("_Canusedoor", _Canusedoor);
+            /* "Now move to the linked scene" */
+            actor.say("Activate Door PM", "_customEvent_" + "UseDoor");
 }
 
 }
 });
     addActorExitsRegionListener(_DoorRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorType(9),a.getType(),a.getGroup())){
-        _DoorIsReady = true;
-propertyChanged("_DoorIsReady", _DoorIsReady);
+        _Canusedoor = false;
+propertyChanged("_Canusedoor", _Canusedoor);
 }
 });
 

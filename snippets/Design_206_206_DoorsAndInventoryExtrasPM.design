@@ -75,7 +75,7 @@
         <receiver-26-551 comment="false" x="15" y="15">
             <group eventID="23" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="var lastComps = __LastExit.split(&amp;quot;|&amp;quot;);&#10;var thisComps = __ThisExit.split(&amp;quot;|&amp;quot;);&#10;&#10;return lastComps[0] == thisComps[1] &amp;amp;&amp;amp;&#10;&#9;lastComps[1] == thisComps[0] &amp;amp;&amp;amp;&#10;&#9;lastComps[2] == thisComps[2];"/>
+                    <int id="0" val="var lastComps = __LastExit.split(&amp;quot;|&amp;quot;);&#10;var thisComps = __ThisExit.split(&amp;quot;|&amp;quot;);&#10;&#10;var lastDoorIDA = lastComps[2];&#10;var lastDoorIDB = lastComps.length &amp;lt; 4 ? lastComps[2] : lastComps[3];&#10;var thisDoorIDA = thisComps[2];&#10;var thisDoorIDB = thisComps.length &amp;lt; 4 ? thisComps[2] : thisComps[3];&#10;return lastComps[0] == thisComps[1] &amp;amp;&amp;amp;&#10;&#9;lastComps[1] == thisComps[0] &amp;amp;&amp;amp;&#10;&#9;lastDoorIDA == thisDoorIDB &amp;amp;&amp;amp;&#10;&#9;thisDoorIDB == thisDoorIDA;"/>
                 </code-long>
             </group>
             <get-byobval-206-551-0 comment="false" id="0" x="0" y="0"/>
@@ -87,7 +87,7 @@
         <receiver-27-552 comment="false" x="15" y="15">
             <group eventID="24" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="var comps = __Destination.split(&amp;quot;|&amp;quot;);&#10;return comps[1] + &amp;quot;|&amp;quot; + comps[0] + &amp;quot;|&amp;quot; + comps[2];"/>
+                    <int id="0" val="var comps = __Destination.split(&amp;quot;|&amp;quot;);&#10;&#10;if (comps.length &amp;lt; 4)&#10;{&#10;&#9;return comps[1] + &amp;quot;|&amp;quot; + comps[0] + &amp;quot;|&amp;quot; + comps[2];&#10;} else {&#10;&#9;return comps[1] + &amp;quot;|&amp;quot; + comps[0] + &amp;quot;|&amp;quot; + comps[3] + &amp;quot;|&amp;quot; + comps[2];&#10;}&#10;"/>
                 </code-long>
             </group>
             <get-byobval-206-552-0 comment="false" id="0" x="0" y="0"/>
@@ -107,9 +107,9 @@
                         <get-byobval-206-324-0 comment="false" id="0" x="0" y="0"/>
                     </str-empty>
                 </if>
-                <if comment="false" x="26" y="107">
+                <if comment="false" x="26" y="112">
                     <group eventID="12" id="-1">
-                        <return comment="false" x="37" y="137">
+                        <return comment="false" x="37" y="142">
                             <contains-item comment="false" id="0" x="0" y="0">
                                 <custom-331 comment="false" id="0" x="0" y="0">
                                     <code-short comment="false" id="0" x="0" y="0">
@@ -126,9 +126,9 @@
                         </code-short>
                     </custom-331>
                 </if>
-                <else comment="false" x="26" y="184">
+                <else comment="false" x="26" y="189">
                     <group eventID="12" id="-1">
-                        <return comment="false" x="37" y="204">
+                        <return comment="false" x="37" y="209">
                             <contains-item comment="false" id="0" x="0" y="0">
                                 <custom-331 comment="false" id="0" x="0" y="0">
                                     <code-short comment="false" id="0" x="0" y="0">

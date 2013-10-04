@@ -42,44 +42,23 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_3 extends SceneScript
+class SceneEvents_27 extends SceneScript
 {          	
 	
+public var _ExitName:String;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
+
 	}
 	
 	override public function init()
 	{
-		            if(!(getGameAttribute("Game Was Loaded")))
-{
-            loadGame("mySave", function(success:Bool):Void {
-                if(success)
-{
-                    setGameAttribute("Game Was Loaded", true);
-                    if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
-{
-                        runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
-                                    trace("" + (("" + "Last scene: ") + ("" + getGameAttribute("Save Destination"))));
-                                    getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
-                                    getActor(18).say("Collectable Door PM", "_customEvent_" + "HasDestination");
-}, null);
-}
-
-}
-
-                else
-{
-                    setGameAttribute("Game Was Loaded", false);
-}
-
-});
-}
-
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

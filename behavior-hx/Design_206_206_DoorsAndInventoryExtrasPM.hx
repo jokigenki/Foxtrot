@@ -178,9 +178,14 @@ public static function _customBlock_DoExitsMatch(__LastExit:String, __ThisExit:S
         var lastComps = __LastExit.split("|");
 var thisComps = __ThisExit.split("|");
 
+var lastDoorIDA = lastComps[2];
+var lastDoorIDB = lastComps.length < 4 ? lastComps[2] : lastComps[3];
+var thisDoorIDA = thisComps[2];
+var thisDoorIDB = thisComps.length < 4 ? thisComps[2] : thisComps[3];
 return lastComps[0] == thisComps[1] &&
 	lastComps[1] == thisComps[0] &&
-	lastComps[2] == thisComps[2];
+	lastDoorIDA == thisDoorIDB &&
+	thisDoorIDB == thisDoorIDA;
 }
     
 
@@ -188,7 +193,14 @@ return lastComps[0] == thisComps[1] &&
 public static function _customBlock_ReverseDestination(__Destination:String):String
 {
         var comps = __Destination.split("|");
-return comps[1] + "|" + comps[0] + "|" + comps[2];
+
+if (comps.length < 4)
+{
+	return comps[1] + "|" + comps[0] + "|" + comps[2];
+} else {
+	return comps[1] + "|" + comps[0] + "|" + comps[3] + "|" + comps[2];
+}
+
 }
 
  

@@ -28,7 +28,7 @@
                 <s enabled="true" id="90"/>
                 <s enabled="true" id="120">
                     <prop id="1" list="0" val="KeyCollected"/>
-                    <prop id="2" list="0" val="_Home|_Outside|A"/>
+                    <prop id="2" list="0" val="_Home|_Outside|A|A"/>
                     <prop id="3" list="0" val="_Home"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -179,18 +179,22 @@
         </actor>
         <actor a="0.0" aid="20" c="true" group="2" id="223" name="Door Green2 20" sx="1.0" sy="1.0" x="308" y="256" z="4">
             <snippets>
+                <s enabled="true" id="304">
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="3" list="0" val="_Larder|_Home|A|A"/>
+                    <prop id="4" list="0" val="3"/>
+                    <prop id="5" list="0" val="-1"/>
+                    <prop id="6" list="0" val="true"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="159"/>
                 <s enabled="true" id="92">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="Open"/>
                     <prop id="3" list="0" val="Closed"/>
                     <prop id="4" list="0" val="Opening"/>
-                    <prop id="6" list="0" val="_Larder|_Home|A"/>
-                    <prop id="9" list="0" val="3"/>
                     <prop id="13" list="0" val=""/>
-                    <prop id="14" list="0" val="A"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
-                    <prop id="15" list="0" val="true"/>
                 </s>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>

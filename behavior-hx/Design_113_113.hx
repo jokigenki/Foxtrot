@@ -93,31 +93,7 @@ nameMap.set("Actor", "actor");
         _DoorRegion = getLastCreatedRegion();
 propertyChanged("_DoorRegion", _DoorRegion);
         /* "GA: Last Scene Name (Text)" */
-        if(!(_Destination == "none"))
-{
-            /* "GA: Last Scene Name (Text)" */
-            if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_DoExitsMatch(_Destination,getGameAttribute("Last Destination"))), Bool))
-{
-                _Actortomove.setX(getGameAttribute("Last Scene X Position"));
-                _Actortomove.setY(actor.getY());
-                _DoorIsReady = false;
-propertyChanged("_DoorIsReady", _DoorIsReady);
-}
-
-            else
-{
-                _DoorIsReady = true;
-propertyChanged("_DoorIsReady", _DoorIsReady);
-}
-
-}
-
-        else
-{
-            _DoorIsReady = true;
-propertyChanged("_DoorIsReady", _DoorIsReady);
-}
-
+        actor.say("Activate Door PM", "_customEvent_" + "ActivateDoor");
         actor.disableActorDrawing();
     addActorEntersRegionListener(_DoorRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorType(9),a.getType(),a.getGroup())){

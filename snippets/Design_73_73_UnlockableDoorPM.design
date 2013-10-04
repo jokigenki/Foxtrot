@@ -7,17 +7,11 @@
                     <int id="0" val="GA: Unlocked Doors (List)"/>
                 </comment-short>
                 <set-val-73-1 comment="false" x="26" y="60">
-                    <or comment="false" id="0" x="0" y="0">
-                        <custom-324 comment="false" id="0" x="0" y="0">
-                            <get-val-73-6 comment="false" id="0" x="0" y="0"/>
-                        </custom-324>
-                        <eq comment="false" id="1" x="0" y="0">
-                            <scenename comment="false" id="0" x="0" y="0"/>
-                            <get-val-73-6 comment="false" id="1" x="0" y="0"/>
-                        </eq>
-                    </or>
+                    <custom-573 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                    </custom-573>
                 </set-val-73-1>
-                <create-region comment="false" x="26" y="95">
+                <create-region comment="false" x="26" y="93">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -35,79 +29,41 @@
                     <int id="2" val="4"/>
                     <int id="3" val="4"/>
                 </create-region>
-                <set-val-73-5 comment="false" x="26" y="133">
+                <set-val-73-5 comment="false" x="26" y="131">
                     <REGION eid="lastcreated" id="0"/>
                 </set-val-73-5>
-                <if comment="false" x="26" y="160">
+                <if comment="false" x="26" y="158">
                     <group eventID="1" id="-1">
-                        <setanim comment="false" x="37" y="185">
+                        <setanim comment="false" x="37" y="183">
                             <ACTOR eid="this" id="0"/>
                             <get-val-73-2 comment="false" id="1" x="0" y="0"/>
                         </setanim>
                     </group>
                     <get-val-73-1 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="229">
+                <else comment="false" x="26" y="227">
                     <group eventID="1" id="-1">
-                        <setanim comment="false" x="37" y="249">
+                        <setanim comment="false" x="37" y="247">
                             <ACTOR eid="this" id="0"/>
                             <get-val-73-3 comment="false" id="1" x="0" y="0"/>
                         </setanim>
                     </group>
                 </else>
-                <set-val-73-7 comment="false" x="26" y="293">
+                <set-val-73-7 comment="false" x="26" y="291">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-73-7>
-                <set-val-73-8 comment="false" x="26" y="318">
+                <set-val-73-8 comment="false" x="26" y="316">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-73-8>
-                <comment-short comment="false" x="26" y="343">
-                    <int id="0" val="GA: Last Scene Name (Text)"/>
-                </comment-short>
-                <if comment="false" x="26" y="363">
-                    <group eventID="1" id="-1">
-                        <comment-short comment="false" x="37" y="393">
-                            <int id="0" val="GA: Last Scene Name (Text)"/>
-                        </comment-short>
-                        <if comment="false" x="37" y="413">
-                            <group eventID="1" id="-1">
-                                <set-xy comment="false" x="48" y="443">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <get-xy comment="false" id="2" x="0" y="0">
-                                        <ACTOR eid="this" id="0"/>
-                                        <int id="1" val="0"/>
-                                    </get-xy>
-                                </set-xy>
-                                <set-xy comment="false" x="48" y="483">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="1"/>
-                                    <get-xy comment="false" id="2" x="0" y="0">
-                                        <ACTOR eid="this" id="0"/>
-                                        <int id="1" val="1"/>
-                                    </get-xy>
-                                </set-xy>
-                            </group>
-                            <custom-551 comment="false" id="0" x="0" y="0">
-                                <get-val-73-6 comment="false" id="0" x="0" y="0"/>
-                                <get-game-val-20 comment="false" id="1" x="0" y="0"/>
-                            </custom-551>
-                        </if>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <get-val-73-6 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="none"/>
-                    </noteq>
-                </if>
-                <comment-short comment="false" x="26" y="547">
+                <comment-short comment="false" x="26" y="341">
                     <int id="0" val="prevent the player returning through the door until a second has elapsed"/>
                 </comment-short>
-                <set-val-73-10 comment="false" x="26" y="567">
+                <set-val-73-10 comment="false" x="26" y="361">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-73-10>
-                <dolater comment="false" x="26" y="592">
+                <dolater comment="false" x="26" y="386">
                     <group eventID="1" id="-1">
-                        <set-val-73-10 comment="false" x="37" y="619">
+                        <set-val-73-10 comment="false" x="37" y="413">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-73-10>
                     </group>
@@ -124,24 +80,24 @@
                 <set-val-73-7 comment="false" x="26" y="46">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-73-7>
-                <comment-short comment="false" x="26" y="71">
+                <set-val-73-14 comment="false" x="26" y="71">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </set-val-73-14>
+                <comment-short comment="false" x="26" y="103">
                     <int id="0" val="Custom: Key from Inventory"/>
                 </comment-short>
-                <if comment="false" x="26" y="91">
+                <if comment="false" x="26" y="123">
                     <group eventID="2" id="-1">
-                        <comment-short comment="false" x="37" y="116">
+                        <comment-short comment="false" x="37" y="148">
                             <int id="0" val="Custom: Set Prevent Jump to &amp;lt;true&amp;gt; for &amp;lt;the actor&amp;gt;"/>
                         </comment-short>
-                        <custom-98 comment="false" x="37" y="136">
+                        <custom-98 comment="false" x="37" y="168">
                             <actor-entered-exited comment="false" id="0" x="0" y="0"/>
                             <true comment="false" id="1" x="0" y="0"/>
                         </custom-98>
-                        <set-val-73-7 comment="false" x="37" y="168">
+                        <set-val-73-7 comment="false" x="37" y="200">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-73-7>
-                        <set-val-73-12 comment="false" x="37" y="193">
-                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
-                        </set-val-73-12>
                     </group>
                     <get-val-73-1 comment="false" id="0" x="0" y="0"/>
                 </if>
@@ -211,73 +167,29 @@
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-73-4 comment="false" id="1" x="0" y="0"/>
                                 </setanim>
-                                <custom-325 comment="false" x="48" y="354">
-                                    <get-val-73-6 comment="false" id="0" x="0" y="0"/>
-                                </custom-325>
+                                <say comment="false" x="48" y="354">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Activate Door PM"/>
+                                    <int id="2" val="UnlockDestination"/>
+                                </say>
                             </group>
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-73-1 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </if>
-                        <comment-short comment="false" x="37" y="391">
+                        <comment-short comment="false" x="37" y="393">
                             <int id="0" val="Now move to the linked scene"/>
                         </comment-short>
-                        <if comment="false" x="37" y="411">
-                            <group eventID="4" id="-1">
-                                <set-game-val-20 comment="false" x="48" y="441">
-                                    <get-val-73-6 comment="false" id="0" x="0" y="0"/>
-                                </set-game-val-20>
-                                <set-dxy comment="false" x="48" y="466">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="0"/>
-                                </set-dxy>
-                                <fadeTo comment="false" x="48" y="493">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="0.5"/>
-                                    <int id="3" val="9"/>
-                                </fadeTo>
-                                <moveToBy comment="false" x="48" y="520">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <minus comment="false" id="2" x="0" y="0">
-                                        <get-xy comment="false" id="0" x="0" y="0">
-                                            <ACTOR eid="this" id="0"/>
-                                            <int id="1" val="2"/>
-                                        </get-xy>
-                                        <get-xy comment="false" id="1" x="0" y="0">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="2"/>
-                                        </get-xy>
-                                    </minus>
-                                    <int id="3" val="0"/>
-                                    <int id="4" val="0.5"/>
-                                    <int id="5" val="12"/>
-                                </moveToBy>
-                                <scene-say comment="false" x="48" y="565">
-                                    <int id="0" val="Scene Transition PM"/>
-                                    <int id="1" val="SwitchScene"/>
-                                </scene-say>
-                                <if comment="false" x="48" y="585">
-                                    <group eventID="2" id="-1">
-                                        <set-game-val-21 comment="false" x="59" y="610">
-                                            <get-val-73-6 comment="false" id="0" x="0" y="0"/>
-                                        </set-game-val-21>
-                                    </group>
-                                    <get-val-73-15 comment="false" id="0" x="0" y="0"/>
-                                </if>
-                            </group>
-                            <noteq comment="false" id="0" x="0" y="0">
-                                <get-val-73-6 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="none"/>
-                            </noteq>
-                        </if>
+                        <say comment="false" x="37" y="413">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="UseDoor"/>
+                        </say>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <get-val-73-7 comment="false" id="0" x="0" y="0"/>
                         <custom-93 comment="false" id="1" x="0" y="0">
-                            <ACTOR eid="var" id="0" vid="12"/>
+                            <ACTOR eid="var" id="0" vid="14"/>
                             <int id="1" val="UseObject"/>
                         </custom-93>
                     </and>

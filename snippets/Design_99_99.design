@@ -56,143 +56,6 @@
                 <comment-short comment="false" x="26" y="245">
                     <int id="0" val="GA: Last Scene Name (Text)"/>
                 </comment-short>
-                <if comment="false" x="26" y="265">
-                    <group eventID="1" id="-1">
-                        <comment-short comment="false" x="37" y="295">
-                            <int id="0" val="GA: Last Scene Name (Text)"/>
-                        </comment-short>
-                        <if comment="false" x="37" y="315">
-                            <group eventID="1" id="-1">
-                                <fadeTo comment="false" x="48" y="345">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="0"/>
-                                    <int id="3" val="0"/>
-                                </fadeTo>
-                                <fadeInOut comment="false" x="48" y="372">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="0.5"/>
-                                    <int id="3" val="0"/>
-                                </fadeInOut>
-                                <set-xy comment="false" x="48" y="399">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="1"/>
-                                    <get-xy comment="false" id="2" x="0" y="0">
-                                        <ACTOR eid="this" id="0"/>
-                                        <int id="1" val="1"/>
-                                    </get-xy>
-                                </set-xy>
-                                <if comment="false" x="48" y="439">
-                                    <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="469">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="Facing Right?"/>
-                                            <false comment="false" id="2" x="0" y="0"/>
-                                        </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="501">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="0"/>
-                                            <minus comment="false" id="2" x="0" y="0">
-                                                <get-xy comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                    <int id="1" val="2"/>
-                                                </get-xy>
-                                                <div comment="false" id="1" x="0" y="0">
-                                                    <get-wh comment="false" id="0" x="0" y="0">
-                                                        <ACTOR eid="var" id="0" vid="9"/>
-                                                        <int id="1" val="0"/>
-                                                    </get-wh>
-                                                    <int id="1" val="2"/>
-                                                </div>
-                                            </minus>
-                                        </set-xy>
-                                        <moveToBy comment="false" x="59" y="551">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="1"/>
-                                            <minus comment="false" id="2" x="0" y="0">
-                                                <custom-63 comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                </custom-63>
-                                                <plus comment="false" id="1" x="0" y="0">
-                                                    <get-wh comment="false" id="0" x="0" y="0">
-                                                        <ACTOR eid="var" id="0" vid="9"/>
-                                                        <int id="1" val="0"/>
-                                                    </get-wh>
-                                                    <int id="1" val="5"/>
-                                                </plus>
-                                            </minus>
-                                            <get-xy comment="false" id="3" x="0" y="0">
-                                                <ACTOR eid="var" id="0" vid="9"/>
-                                                <int id="1" val="3"/>
-                                            </get-xy>
-                                            <int id="4" val="0.5"/>
-                                            <int id="5" val="12"/>
-                                        </moveToBy>
-                                    </group>
-                                    <less comment="false" id="0" x="0" y="0">
-                                        <get-val-99-13 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="0"/>
-                                    </less>
-                                </if>
-                                <else-if comment="false" x="48" y="613">
-                                    <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="643">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="Facing Right?"/>
-                                            <true comment="false" id="2" x="0" y="0"/>
-                                        </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="675">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="0"/>
-                                            <plus comment="false" id="2" x="0" y="0">
-                                                <get-xy comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                    <int id="1" val="2"/>
-                                                </get-xy>
-                                                <div comment="false" id="1" x="0" y="0">
-                                                    <get-wh comment="false" id="0" x="0" y="0">
-                                                        <ACTOR eid="var" id="0" vid="9"/>
-                                                        <int id="1" val="0"/>
-                                                    </get-wh>
-                                                    <int id="1" val="2"/>
-                                                </div>
-                                            </plus>
-                                        </set-xy>
-                                        <moveToBy comment="false" x="59" y="725">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="1"/>
-                                            <plus comment="false" id="2" x="0" y="0">
-                                                <custom-61 comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                </custom-61>
-                                                <int id="1" val="5"/>
-                                            </plus>
-                                            <get-xy comment="false" id="3" x="0" y="0">
-                                                <ACTOR eid="var" id="0" vid="9"/>
-                                                <int id="1" val="3"/>
-                                            </get-xy>
-                                            <int id="4" val="0.5"/>
-                                            <int id="5" val="12"/>
-                                        </moveToBy>
-                                    </group>
-                                    <more comment="false" id="0" x="0" y="0">
-                                        <get-val-99-13 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="0"/>
-                                    </more>
-                                </else-if>
-                            </group>
-                            <custom-551 comment="false" id="0" x="0" y="0">
-                                <get-val-99-6 comment="false" id="0" x="0" y="0"/>
-                                <get-game-val-20 comment="false" id="1" x="0" y="0"/>
-                            </custom-551>
-                        </if>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <get-game-val-20 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="none"/>
-                    </noteq>
-                </if>
             </group>
         </init>
     </group>
@@ -212,85 +75,33 @@
                 <set-val-99-7 comment="false" x="26" y="124">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-99-7>
-                <set-val-99-12 comment="false" x="26" y="149">
-                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
-                </set-val-99-12>
-                <if comment="false" x="26" y="181">
+                <if comment="false" x="26" y="149">
                     <group eventID="4" id="-1">
-                        <set-val-99-7 comment="false" x="37" y="206">
+                        <set-val-99-7 comment="false" x="37" y="174">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-99-7>
                     </group>
                     <get-val-99-8 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <comment-short comment="false" x="26" y="243">
+                <comment-short comment="false" x="26" y="211">
                     <int id="0" val="Custom: Is &amp;quot;UseObject&amp;quot; on for &amp;lt;Actor by door&amp;gt;"/>
                 </comment-short>
-                <if comment="false" x="26" y="263">
+                <if comment="false" x="26" y="231">
                     <group eventID="1" id="-1">
-                        <set-val-99-8 comment="false" x="37" y="288">
+                        <set-val-99-8 comment="false" x="37" y="256">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-99-8>
-                        <set-val-99-7 comment="false" x="37" y="313">
+                        <set-val-99-7 comment="false" x="37" y="281">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-99-7>
-                        <comment-short comment="false" x="37" y="338">
+                        <comment-short comment="false" x="37" y="306">
                             <int id="0" val="Now move to the linked scene"/>
                         </comment-short>
-                        <if comment="false" x="37" y="358">
-                            <group eventID="4" id="-1">
-                                <set-game-val-20 comment="false" x="48" y="388">
-                                    <get-val-99-6 comment="false" id="0" x="0" y="0"/>
-                                </set-game-val-20>
-                                <comment-short comment="false" x="48" y="413">
-                                    <int id="0" val="GA: Set Destination Scene (Text) to &amp;lt;Exit Name&amp;gt;"/>
-                                </comment-short>
-                                <set-dxy comment="false" x="48" y="433">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="0"/>
-                                </set-dxy>
-                                <fadeTo comment="false" x="48" y="460">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="0.5"/>
-                                    <int id="3" val="9"/>
-                                </fadeTo>
-                                <moveToBy comment="false" x="48" y="487">
-                                    <ACTOR eid="var" id="0" vid="9"/>
-                                    <int id="1" val="0"/>
-                                    <minus comment="false" id="2" x="0" y="0">
-                                        <get-xy comment="false" id="0" x="0" y="0">
-                                            <ACTOR eid="this" id="0"/>
-                                            <int id="1" val="2"/>
-                                        </get-xy>
-                                        <get-xy comment="false" id="1" x="0" y="0">
-                                            <ACTOR eid="var" id="0" vid="9"/>
-                                            <int id="1" val="2"/>
-                                        </get-xy>
-                                    </minus>
-                                    <int id="3" val="0"/>
-                                    <int id="4" val="0.5"/>
-                                    <int id="5" val="12"/>
-                                </moveToBy>
-                                <scene-say comment="false" x="48" y="532">
-                                    <int id="0" val="Scene Transition PM"/>
-                                    <int id="1" val="SwitchScene"/>
-                                </scene-say>
-                                <if comment="false" x="48" y="552">
-                                    <group eventID="2" id="-1">
-                                        <set-game-val-21 comment="false" x="59" y="577">
-                                            <get-val-99-6 comment="false" id="0" x="0" y="0"/>
-                                        </set-game-val-21>
-                                    </group>
-                                    <get-val-99-15 comment="false" id="0" x="0" y="0"/>
-                                </if>
-                            </group>
-                            <noteq comment="false" id="0" x="0" y="0">
-                                <get-val-99-6 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="none"/>
-                            </noteq>
-                        </if>
+                        <say comment="false" x="37" y="326">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="UseDoor"/>
+                        </say>
                     </group>
                     <get-val-99-7 comment="false" id="0" x="0" y="0"/>
                 </if>
