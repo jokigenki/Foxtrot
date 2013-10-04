@@ -1,4 +1,0 @@
-Foxtrot
-=======
-
-Foxtrot game!
