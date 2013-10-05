@@ -47,41 +47,27 @@ class Design_113_113 extends ActorScript
 	
 public var _DoorRegion:Region;
 
-public var _Destination:String;
-
 public var _Canusedoor:Bool;
 
 public var _HasUsedDoor:Bool;
 
-public var _Actortomove:Actor;
-
 public var _DoorIsReady:Bool;
 
-public var _Actorbydoor:Actor;
-
 public var _Exitonlywhenonground:Bool;
-
-public var _SaveExit:Bool;
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
 		nameMap.set("Door Region", "_DoorRegion");
-nameMap.set("Destination", "_Destination");
-_Destination = "";
 nameMap.set("Can use door?", "_Canusedoor");
 _Canusedoor = false;
 nameMap.set("Has Used Door?", "_HasUsedDoor");
 _HasUsedDoor = false;
-nameMap.set("Actor to move", "_Actortomove");
 nameMap.set("Door Is Ready?", "_DoorIsReady");
 _DoorIsReady = false;
-nameMap.set("Actor by door", "_Actorbydoor");
 nameMap.set("Exit only when on ground", "_Exitonlywhenonground");
 _Exitonlywhenonground = false;
-nameMap.set("Save Exit?", "_SaveExit");
-_SaveExit = true;
 nameMap.set("Actor", "actor");
 
 	}
@@ -94,7 +80,12 @@ nameMap.set("Actor", "actor");
 propertyChanged("_DoorRegion", _DoorRegion);
         /* "GA: Last Scene Name (Text)" */
         actor.say("Activate Door PM", "_customEvent_" + "ActivateDoor");
+        actor.say("Activate Door PM", "_customEvent_" + "UnlockDestination");
         actor.disableActorDrawing();
+        runLater(1000 * 1, function(timeTask:TimedTask):Void {
+                    _DoorIsReady = true;
+propertyChanged("_DoorIsReady", _DoorIsReady);
+}, actor);
     addActorEntersRegionListener(_DoorRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorType(9),a.getType(),a.getGroup())){
         if((_Exitonlywhenonground && !(asBoolean(a.getActorValue("On Ground?")))))
@@ -107,27 +98,9 @@ if(wrapper.enabled && sameAsAny(getActorType(9),a.getType(),a.getGroup())){
             return;
 }
 
-        _Actorbydoor = a;
-propertyChanged("_Actorbydoor", _Actorbydoor);
-        /* "Now move to the linked scene" */
-        if(!(_Destination == "none"))
-{
-            setGameAttribute("Last Destination", _Destination);
-            _DoorIsReady = false;
+        actor.say("Activate Door PM", "_customEvent_" + "UseDoor");
+        _DoorIsReady = false;
 propertyChanged("_DoorIsReady", _DoorIsReady);
-            /* "GA: Set Last Scene Name (Text) to <scene name>" */
-            /* "GA: Set Destination Scene (Text) to <Exit Name>" */
-            _Actortomove.setXVelocity(0);
-            setGameAttribute("Last Scene X Position", (Math.round((a.getX() / 16)) * 16));
-            _Actortomove.fadeTo(0 / 100, 0.5, Quad.easeOut);
-            sayToScene("Scene Transition PM", "_customEvent_" + "SwitchScene");
-            if(_SaveExit)
-{
-                setGameAttribute("Save Destination", _Destination);
-}
-
-}
-
 }
 });
     addActorExitsRegionListener(_DoorRegion, function(a:Actor, list:Array<Dynamic>):Void  {

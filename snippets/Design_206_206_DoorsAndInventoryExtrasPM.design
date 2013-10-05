@@ -75,7 +75,7 @@
         <receiver-26-551 comment="false" x="15" y="15">
             <group eventID="23" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="var lastComps = __LastExit.split(&amp;quot;|&amp;quot;);&#10;var thisComps = __ThisExit.split(&amp;quot;|&amp;quot;);&#10;&#10;var lastDoorIDA = lastComps[2];&#10;var lastDoorIDB = lastComps.length &amp;lt; 4 ? lastComps[2] : lastComps[3];&#10;var thisDoorIDA = thisComps[2];&#10;var thisDoorIDB = thisComps.length &amp;lt; 4 ? thisComps[2] : thisComps[3];&#10;return lastComps[0] == thisComps[1] &amp;amp;&amp;amp;&#10;&#9;lastComps[1] == thisComps[0] &amp;amp;&amp;amp;&#10;&#9;lastDoorIDA == thisDoorIDB &amp;amp;&amp;amp;&#10;&#9;thisDoorIDB == thisDoorIDA;"/>
+                    <int id="0" val="if (__LastExit == null || __ThisExit == null) return false;&#10;if (__LastExit.length == 0 || __ThisExit.length == 0) return false;&#10;&#10;var lastComps = __LastExit.split(&amp;quot;|&amp;quot;);&#10;var thisComps = __ThisExit.split(&amp;quot;|&amp;quot;);&#10;&#10;var lastDoorIDA = lastComps[2];&#10;var lastDoorIDB = lastComps.length &amp;lt; 4 ? lastComps[2] : lastComps[3];&#10;var thisDoorIDA = thisComps[2];&#10;var thisDoorIDB = thisComps.length &amp;lt; 4 ? thisComps[2] : thisComps[3];&#10;&#10;var val = lastComps[0] == thisComps[1] &amp;amp;&amp;amp;&#10;&#9;lastComps[1] == thisComps[0] &amp;amp;&amp;amp;&#10;&#9;lastDoorIDA == thisDoorIDB &amp;amp;&amp;amp;&#10;&#9;lastDoorIDB == thisDoorIDA;&#10;return val;"/>
                 </code-long>
             </group>
             <get-byobval-206-551-0 comment="false" id="0" x="0" y="0"/>

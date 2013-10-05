@@ -13,8 +13,8 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="130" id="0" name="Region 0" pts="4,-28.0,-65.0,28.0,-65.0,28.0,65.0,-28.0,65.0" r="64" type="box" w="56" x="483" y="159"/>
-        <region b="64" g="64" h="146" id="1" name="Region 1" pts="4,-14.0,-73.0,14.0,-73.0,14.0,73.0,-14.0,73.0" r="64" type="box" w="28" x="98" y="175"/>
+        <region b="64" g="64" h="130" id="0" name="Region 0" pts="4,-28.0,65.0,28.0,65.0,28.0,-65.0,-28.0,-65.0" r="64" type="box" w="56" x="483" y="159"/>
+        <region b="64" g="64" h="146" id="1" name="Region 1" pts="4,-14.0,73.0,14.0,73.0,14.0,-73.0,-14.0,-73.0" r="64" type="box" w="28" x="98" y="175"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -22,17 +22,23 @@
         <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="128" y="80" z="2"/>
         <actor a="0.0" aid="7" c="true" group="2" id="140" name="Door 7" sx="1.0" sy="1.0" x="128" y="80" z="4">
             <snippets>
+                <s enabled="true" id="304">
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="3" list="0" val="Farm1_06|Farm1_05|A|B"/>
+                    <prop id="4" list="0" val="3"/>
+                    <prop id="5" list="0" val="-1"/>
+                    <prop id="6" list="0" val="true"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="92">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="Open"/>
                     <prop id="3" list="0" val="Closed"/>
                     <prop id="4" list="0" val="Opening"/>
-                    <prop id="6" list="0" val="Farm1_06|Farm1_05|A"/>
-                    <prop id="9" list="0" val="3"/>
                     <prop id="13" list="0" val=""/>
-                    <prop id="15" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -51,7 +57,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="9" c="true" group="3" id="142" name="Gold Key 9" sx="1.0" sy="1.0" x="432" y="269" z="4">
@@ -67,18 +72,22 @@
         </actor>
         <actor a="0.0" aid="10" c="true" group="2" id="140" name="Door 10" sx="1.0" sy="1.0" x="464" y="96" z="4">
             <snippets>
+                <s enabled="true" id="304">
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="3" list="0" val="Farm1_06|Farm1_07|B|A"/>
+                    <prop id="4" list="0" val="3"/>
+                    <prop id="5" list="0" val="-1"/>
+                    <prop id="6" list="0" val="true"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="92">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="Open"/>
                     <prop id="3" list="0" val="Closed"/>
                     <prop id="4" list="0" val="Opening"/>
-                    <prop id="6" list="0" val="Farm1_06|Farm1_07|A"/>
-                    <prop id="9" list="0" val="3"/>
                     <prop id="13" list="0" val="KeyCollected"/>
-                    <prop id="15" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -97,6 +106,7 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
+                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="12" c="true" group="3" id="205" name="Egg Push 12" sx="1.0" sy="1.0" x="241" y="48" z="4">
@@ -147,12 +157,12 @@
         </actor>
         <actor a="0.0" aid="15" c="true" group="5" id="148" name="Lift 15" sx="1.0" sy="1.0" x="480" y="192" z="4">
             <snippets>
-                <s enabled="true" id="96"/>
                 <s enabled="true" id="233">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="96"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Vertical Oscillation PM"/>
@@ -268,10 +278,10 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -290,13 +300,13 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="4,0.0,16.0,0.0,0.0,144.0,0.0,144.0,16.0" x="496.0" y="336.0"/>
+        <p pts="40,224.0,336.0,224.0,288.0,240.0,288.0,240.0,336.0,352.0,336.0,352.0,352.0,96.0,352.0,96.0,336.0,64.0,336.0,64.0,352.0,0.0,352.0,0.0,32.0,64.0,32.0,64.0,0.0,80.0,0.0,80.0,48.0,16.0,48.0,16.0,64.0,368.0,64.0,368.0,176.0,64.0,176.0,64.0,224.0,240.0,224.0,240.0,240.0,48.0,240.0,48.0,160.0,352.0,160.0,352.0,80.0,16.0,80.0,16.0,112.0,320.0,112.0,320.0,128.0,16.0,128.0,16.0,336.0,48.0,336.0,48.0,320.0,96.0,320.0,96.0,288.0,112.0,288.0,112.0,336.0" x="80.0" y="0.0"/>
+        <p pts="12,304.0,320.0,304.0,304.0,352.0,304.0,352.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0,368.0,32.0,368.0,304.0,448.0,304.0,448.0,320.0" x="192.0" y="0.0"/>
         <p pts="6,32.0,0.0,32.0,16.0,16.0,16.0,16.0,48.0,0.0,48.0,0.0,0.0" x="464.0" y="128.0"/>
         <p pts="4,0.0,0.0,16.0,0.0,16.0,32.0,0.0,32.0" x="432.0" y="288.0"/>
-        <p pts="40,224.0,336.0,224.0,288.0,240.0,288.0,240.0,336.0,352.0,336.0,352.0,352.0,96.0,352.0,96.0,336.0,64.0,336.0,64.0,352.0,0.0,352.0,0.0,32.0,64.0,32.0,64.0,0.0,80.0,0.0,80.0,48.0,16.0,48.0,16.0,64.0,368.0,64.0,368.0,176.0,64.0,176.0,64.0,224.0,240.0,224.0,240.0,240.0,48.0,240.0,48.0,160.0,352.0,160.0,352.0,80.0,16.0,80.0,16.0,112.0,320.0,112.0,320.0,128.0,16.0,128.0,16.0,336.0,48.0,336.0,48.0,320.0,96.0,320.0,96.0,288.0,112.0,288.0,112.0,336.0" x="80.0" y="0.0"/>
-        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="464.0" y="64.0"/>
-        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="464.0" y="192.0"/>
         <p pts="4,272.0,0.0,272.0,16.0,0.0,16.0,0.0,0.0" x="176.0" y="192.0"/>
-        <p pts="12,304.0,320.0,304.0,304.0,352.0,304.0,352.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0,368.0,32.0,368.0,304.0,448.0,304.0,448.0,320.0" x="192.0" y="0.0"/>
+        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="464.0" y="64.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,144.0,0.0,144.0,16.0" x="496.0" y="336.0"/>
+        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="464.0" y="192.0"/>
     </terrain>
 </scene>

@@ -30,8 +30,13 @@
                                                         </set-attribute>
                                                         <say comment="false" x="81" y="279">
                                                             <ACTOR eid="18" id="0"/>
+                                                            <int id="1" val="Activate Door PM"/>
+                                                            <int id="2" val="ActivateDoor"/>
+                                                        </say>
+                                                        <say comment="false" x="81" y="306">
+                                                            <ACTOR eid="18" id="0"/>
                                                             <int id="1" val="Collectable Door PM"/>
-                                                            <int id="2" val="HasDestination"/>
+                                                            <int id="2" val="DoorActivated"/>
                                                         </say>
                                                     </group>
                                                     <int id="0" val="0.5"/>
@@ -58,9 +63,9 @@
                                     </group>
                                     <load-success comment="false" id="0" x="0" y="0"/>
                                 </if>
-                                <else comment="false" x="48" y="342">
+                                <else comment="false" x="48" y="369">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-16 comment="false" x="59" y="362">
+                                        <set-game-val-16 comment="false" x="59" y="389">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
                                     </group>

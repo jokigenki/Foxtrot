@@ -77,6 +77,7 @@ propertyChanged("_Canusedoor", _Canusedoor);
         _HasUsedDoor = false;
 propertyChanged("_HasUsedDoor", _HasUsedDoor);
         /* "GA: Last Scene Name (Text)" */
+        actor.say("Activate Door PM", "_customEvent_" + "UnlockDestination");
     addActorEntersRegionListener(_DoorRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorType(9),a.getType(),a.getGroup())){
         if(isTransitioning())

@@ -76,6 +76,24 @@ propertyChanged("_IsOpen", _IsOpen);
         actor.say("Activate Door PM", "_customEvent_" + "UseDoor");
 }
 
+    public function _customEvent_DoorActivated():Void
+{
+        _IsOpen = cast((actor.say("Activate Door PM", "_customBlock_IsDoorOpen")), Bool);
+propertyChanged("_IsOpen", _IsOpen);
+        if(_IsOpen)
+{
+            actor.setAnimation("" + _Openinganimation);
+}
+
+        else
+{
+            actor.setAnimation("" + _Closedanimation);
+}
+
+        /* "GA: Last Scene Name (Text)" */
+        actor.say("Usable Item PM", "_customBlock_SetIsEnabled", [_IsOpen]);
+}
+
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -97,21 +115,7 @@ nameMap.set("Actor", "actor");
 		            /* "this delay is to give the other behaviours time to set up" */
         /* "GA: Unlocked Doors (List)" */
         runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
-                    trace(actor);
-                    _IsOpen = cast((actor.say("Activate Door PM", "_customBlock_IsDoorOpen")), Bool);
-propertyChanged("_IsOpen", _IsOpen);
-                    if(_IsOpen)
-{
-                        actor.setAnimation("" + _Openanimation);
-}
-
-                    else
-{
-                        actor.setAnimation("" + _Closedanimation);
-}
-
-                    /* "GA: Last Scene Name (Text)" */
-                    actor.say("Usable Item PM", "_customBlock_SetIsEnabled", [_IsOpen]);
+                    actor.say("Collectable Door PM", "_customEvent_" + "DoorActivated");
 }, actor);
 
 	}	      	

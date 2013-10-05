@@ -54,37 +54,46 @@ public var _ActorToMove:Actor;
 public var _TargetDoor:Actor;
 
 public var _SaveExit:Bool;
+
+public var _SlideToCentre:Bool;
+
+public var _MoveToLastX:Bool;
     public function _customEvent_ActivateDoor():Void
 {
-        trace("" + (("" + "Door Activated! ") + ("" + _Destination)));
-        if(((_Destination == "None") || ("" + _Destination) == ("")))
-{
-            return;
-}
-
         if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_DoExitsMatch(_Destination,getGameAttribute("Last Destination"))), Bool))
 {
+            trace("" + "MATCH!");
             _ActorToMove.fadeTo(0 / 100, 0, Linear.easeNone);
             _ActorToMove.fadeTo(1, 0.5, Linear.easeNone);
             _ActorToMove.setY(actor.getY());
-            if((_ExitSide < 0))
+            if(_SlideToCentre)
 {
-                _ActorToMove.setActorValue("Facing Right?", false);
-                _ActorToMove.setX((actor.getXCenter() - (_ActorToMove.getWidth() / 2)));
-                _ActorToMove.moveTo((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float) - (_ActorToMove.getWidth() + 5)), _ActorToMove.getYCenter(), 0.5, Expo.easeOut);
+                if((_ExitSide < 0))
+{
+                    _ActorToMove.setActorValue("Facing Right?", false);
+                    _ActorToMove.setX((actor.getXCenter() - (_ActorToMove.getWidth() / 2)));
+                    _ActorToMove.moveTo((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float) - (_ActorToMove.getWidth() + 5)), _ActorToMove.getYCenter(), 0.5, Expo.easeOut);
 }
 
-            else if((_ExitSide > 0))
+                else if((_ExitSide > 0))
 {
-                _ActorToMove.setActorValue("Facing Right?", true);
-                _ActorToMove.setX((actor.getXCenter() + (_ActorToMove.getWidth() / 2)));
-                _ActorToMove.moveTo((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(actor)), Float) + 5), _ActorToMove.getYCenter(), 0.5, Expo.easeOut);
+                    _ActorToMove.setActorValue("Facing Right?", true);
+                    _ActorToMove.setX((actor.getXCenter() + (_ActorToMove.getWidth() / 2)));
+                    _ActorToMove.moveTo((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(actor)), Float) + 5), _ActorToMove.getYCenter(), 0.5, Expo.easeOut);
 }
 
-            else
+                else
 {
-                _ActorToMove.setX(actor.getX());
-                _ActorToMove.setY(actor.getY());
+                    _ActorToMove.setX(actor.getX());
+                    _ActorToMove.setY(actor.getY());
+}
+
+}
+
+            else if(_MoveToLastX)
+{
+                trace("" + "MOVING TO LAST SCENE X");
+                _ActorToMove.setX(getGameAttribute("Last Scene X Position"));
 }
 
 }
@@ -99,7 +108,17 @@ public var _SaveExit:Bool;
             /* "GA: Set Destination Scene (Text) to <Exit Name>" */
             _ActorToMove.setXVelocity(0);
             _ActorToMove.fadeTo(0 / 100, 0.5, Quad.easeOut);
-            _ActorToMove.moveBy((actor.getXCenter() - _ActorToMove.getXCenter()), 0, 0.5, Expo.easeOut);
+            if(_SlideToCentre)
+{
+                _ActorToMove.moveBy((actor.getXCenter() - _ActorToMove.getXCenter()), 0, 0.5, Expo.easeOut);
+}
+
+            else if(_MoveToLastX)
+{
+                trace("" + "SET LAST SCENE X");
+                setGameAttribute("Last Scene X Position", _ActorToMove.getX());
+}
+
             if((hasValue(_TargetDoor) != false))
 {
                 runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
@@ -147,6 +166,10 @@ nameMap.set("Actor To Move", "_ActorToMove");
 nameMap.set("Target Door", "_TargetDoor");
 nameMap.set("Save Exit?", "_SaveExit");
 _SaveExit = true;
+nameMap.set("Slide To Centre?", "_SlideToCentre");
+_SlideToCentre = true;
+nameMap.set("Move To Last X", "_MoveToLastX");
+_MoveToLastX = false;
 nameMap.set("Actor", "actor");
 
 	}

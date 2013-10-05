@@ -1089,6 +1089,7 @@
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="Collection Event" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
             <event displayName="Use Door Event" enabled="true" id="8" name="event-custom" order="8" repeats="true"/>
+            <event displayName="On Door Activated" enabled="true" id="9" name="event-custom" order="9" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_6" classname="scripts.SceneEvents_6" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="95" language="" name="SceneEvents_6" oid="-1" package="scripts." sceneid="6" scenespecific="true" shared="false" type="scene">
@@ -1224,14 +1225,10 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_113_113" classname="scripts.Design_113_113" desc="A door that moves the player to the new scene as soon as the player interacts with it. This kind of door is always open. Will move the player to the x position that they left from." description="A door that moves the player to the new scene as soon as the player interacts with it. This kind of door is always open. Will move the player to the x position that they left from." design="true" drawOrder="0" id="113" language="" name="Vertical Scene Exit PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <region default="" defaultValue="" desc="" dropdown="" fullname="Door Region" hidden="true" id="5" name="_DoorRegion" order="1"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Destination" hidden="false" id="6" name="_Destination" order="2"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Can use door?" hidden="true" id="7" name="_Canusedoor" order="3"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Used Door?" hidden="true" id="8" name="_HasUsedDoor" order="4"/>
-        <actor default="0" defaultValue="0" desc="" dropdown="" fullname="Actor to move" hidden="false" id="9" name="_Actortomove" order="5"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Door Is Ready?" hidden="true" id="10" name="_DoorIsReady" order="6"/>
-        <actor default="0" defaultValue="0" desc="" dropdown="" fullname="Actor by door" hidden="true" id="12" name="_Actorbydoor" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Exit only when on ground" hidden="false" id="13" name="_Exitonlywhenonground" order="8"/>
-        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="15" name="_SaveExit" order="10"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="651" id="1"/>
@@ -2664,6 +2661,8 @@
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Actor To Move" hidden="false" id="4" name="_ActorToMove" order="3"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Target Door" hidden="false" id="5" name="_TargetDoor" order="4"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="6" name="_SaveExit" order="5"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Slide To Centre?" hidden="false" id="7" name="_SlideToCentre" order="6"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Move To Last X" hidden="false" id="8" name="_MoveToLastX" order="7"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="573" id="1"/>

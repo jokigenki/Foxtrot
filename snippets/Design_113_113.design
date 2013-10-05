@@ -41,10 +41,24 @@
                     <int id="1" val="Activate Door PM"/>
                     <int id="2" val="ActivateDoor"/>
                 </say>
-                <toggle-image comment="false" x="26" y="172">
+                <say comment="false" x="26" y="172">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Activate Door PM"/>
+                    <int id="2" val="UnlockDestination"/>
+                </say>
+                <toggle-image comment="false" x="26" y="199">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
                 </toggle-image>
+                <dolater comment="false" x="26" y="226">
+                    <group eventID="1" id="-1">
+                        <set-val-113-10 comment="false" x="37" y="253">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-113-10>
+                    </group>
+                    <int id="0" val="1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
             </group>
         </init>
     </group>
@@ -76,70 +90,14 @@
                         <get-val-113-10 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <set-val-73-12 comment="false" x="26" y="194">
-                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
-                </set-val-73-12>
-                <comment-short comment="false" x="26" y="226">
-                    <int id="0" val="Now move to the linked scene"/>
-                </comment-short>
-                <if comment="false" x="26" y="246">
-                    <group eventID="4" id="-1">
-                        <set-game-val-20 comment="false" x="37" y="276">
-                            <get-val-99-6 comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-20>
-                        <set-val-113-10 comment="false" x="37" y="301">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-val-113-10>
-                        <comment-short comment="false" x="37" y="326">
-                            <int id="0" val="GA: Set Last Scene Name (Text) to &amp;lt;scene name&amp;gt;"/>
-                        </comment-short>
-                        <comment-short comment="false" x="37" y="346">
-                            <int id="0" val="GA: Set Destination Scene (Text) to &amp;lt;Exit Name&amp;gt;"/>
-                        </comment-short>
-                        <set-dxy comment="false" x="37" y="366">
-                            <ACTOR eid="var" id="0" vid="9"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="0"/>
-                        </set-dxy>
-                        <set-game-val-7 comment="false" x="37" y="393">
-                            <times comment="false" id="0" x="0" y="0">
-                                <roundnew comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="0"/>
-                                    <div comment="false" id="1" x="0" y="0">
-                                        <get-xy comment="false" id="0" x="0" y="0">
-                                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
-                                            <int id="1" val="0"/>
-                                        </get-xy>
-                                        <int id="1" val="16"/>
-                                    </div>
-                                </roundnew>
-                                <int id="1" val="16"/>
-                            </times>
-                        </set-game-val-7>
-                        <fadeTo comment="false" x="37" y="454">
-                            <ACTOR eid="var" id="0" vid="9"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="0.5"/>
-                            <int id="3" val="9"/>
-                        </fadeTo>
-                        <scene-say comment="false" x="37" y="481">
-                            <int id="0" val="Scene Transition PM"/>
-                            <int id="1" val="SwitchScene"/>
-                        </scene-say>
-                        <if comment="false" x="37" y="501">
-                            <group eventID="2" id="-1">
-                                <set-game-val-21 comment="false" x="48" y="526">
-                                    <get-val-99-6 comment="false" id="0" x="0" y="0"/>
-                                </set-game-val-21>
-                            </group>
-                            <get-val-113-15 comment="false" id="0" x="0" y="0"/>
-                        </if>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <get-val-99-6 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="none"/>
-                    </noteq>
-                </if>
+                <say comment="false" x="26" y="194">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Activate Door PM"/>
+                    <int id="2" val="UseDoor"/>
+                </say>
+                <set-val-113-10 comment="false" x="26" y="221">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-113-10>
             </group>
             <int id="0" val="0"/>
             <REGION eid="var" id="1" vid="5"/>

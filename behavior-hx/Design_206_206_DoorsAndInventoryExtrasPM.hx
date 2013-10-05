@@ -175,17 +175,22 @@ public static function _customBlock_EmptySpeedRunCollected():Void
 /* Params are:__LastExit __ThisExit */
 public static function _customBlock_DoExitsMatch(__LastExit:String, __ThisExit:String):Bool
 {
-        var lastComps = __LastExit.split("|");
+        if (__LastExit == null || __ThisExit == null) return false;
+if (__LastExit.length == 0 || __ThisExit.length == 0) return false;
+
+var lastComps = __LastExit.split("|");
 var thisComps = __ThisExit.split("|");
 
 var lastDoorIDA = lastComps[2];
 var lastDoorIDB = lastComps.length < 4 ? lastComps[2] : lastComps[3];
 var thisDoorIDA = thisComps[2];
 var thisDoorIDB = thisComps.length < 4 ? thisComps[2] : thisComps[3];
-return lastComps[0] == thisComps[1] &&
+
+var val = lastComps[0] == thisComps[1] &&
 	lastComps[1] == thisComps[0] &&
 	lastDoorIDA == thisDoorIDB &&
-	thisDoorIDB == thisDoorIDA;
+	lastDoorIDB == thisDoorIDA;
+return val;
 }
     
 

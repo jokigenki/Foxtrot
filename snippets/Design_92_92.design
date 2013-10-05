@@ -11,38 +11,11 @@
                 </comment-short>
                 <dolater comment="false" x="26" y="80">
                     <group eventID="1" id="-1">
-                        <custom-code comment="false" x="37" y="107">
-                            <int id="0" val="trace(actor);"/>
-                        </custom-code>
-                        <set-val-73-1 comment="false" x="37" y="127">
-                            <custom-573 comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                            </custom-573>
-                        </set-val-73-1>
-                        <if comment="false" x="37" y="160">
-                            <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="185">
-                                    <ACTOR eid="this" id="0"/>
-                                    <get-val-73-2 comment="false" id="1" x="0" y="0"/>
-                                </setanim>
-                            </group>
-                            <get-val-73-1 comment="false" id="0" x="0" y="0"/>
-                        </if>
-                        <else comment="false" x="37" y="229">
-                            <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="249">
-                                    <ACTOR eid="this" id="0"/>
-                                    <get-val-73-3 comment="false" id="1" x="0" y="0"/>
-                                </setanim>
-                            </group>
-                        </else>
-                        <comment-short comment="false" x="37" y="293">
-                            <int id="0" val="GA: Last Scene Name (Text)"/>
-                        </comment-short>
-                        <custom-198 comment="false" x="37" y="313">
+                        <say comment="false" x="37" y="107">
                             <ACTOR eid="this" id="0"/>
-                            <get-val-73-1 comment="false" id="1" x="0" y="0"/>
-                        </custom-198>
+                            <int id="1" val="Collectable Door PM"/>
+                            <int id="2" val="DoorActivated"/>
+                        </say>
                     </group>
                     <int id="0" val="0.2"/>
                     <ACTOR eid="this" id="2"/>
@@ -101,4 +74,41 @@
         </event-custom>
     </group>
     <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <set-val-92-1 comment="false" x="26" y="40">
+                    <custom-573 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                    </custom-573>
+                </set-val-92-1>
+                <if comment="false" x="26" y="73">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="98">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-92-4 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                    <get-val-92-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="142">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="162">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-92-3 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                </else>
+                <comment-short comment="false" x="26" y="206">
+                    <int id="0" val="GA: Last Scene Name (Text)"/>
+                </comment-short>
+                <custom-198 comment="false" x="26" y="226">
+                    <ACTOR eid="this" id="0"/>
+                    <get-val-92-1 comment="false" id="1" x="0" y="0"/>
+                </custom-198>
+            </group>
+            <int id="0" val="DoorActivated"/>
+        </event-custom>
+    </group>
+    <group eventID="9" id="-1"/>
 </groups>
