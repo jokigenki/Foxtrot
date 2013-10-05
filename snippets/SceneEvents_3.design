@@ -3,37 +3,41 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
+                <play-sound4 comment="false" x="26" y="40">
+                    <int id="0" val="1"/>
+                    <SOUND eid="466" id="1"/>
+                </play-sound4>
+                <if comment="false" x="26" y="67">
                     <group eventID="1" id="-1">
-                        <load-game comment="false" x="37" y="70">
+                        <load-game comment="false" x="37" y="97">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="95">
+                                <if comment="false" x="48" y="122">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-16 comment="false" x="59" y="120">
+                                        <set-game-val-16 comment="false" x="59" y="147">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
-                                        <if comment="false" x="59" y="145">
+                                        <if comment="false" x="59" y="172">
                                             <group eventID="1" id="-1">
-                                                <dolater comment="false" x="70" y="190">
+                                                <dolater comment="false" x="70" y="217">
                                                     <group eventID="1" id="-1">
-                                                        <print comment="false" x="81" y="217">
+                                                        <print comment="false" x="81" y="244">
                                                             <str-combine comment="false" id="0" x="0" y="0">
                                                                 <int id="0" val="Last scene: "/>
                                                                 <get-game-val-21 comment="false" id="1" x="0" y="0"/>
                                                             </str-combine>
                                                         </print>
-                                                        <set-attribute comment="false" x="81" y="247">
+                                                        <set-attribute comment="false" x="81" y="274">
                                                             <ACTOR eid="18" id="0"/>
                                                             <int id="1" val="Activate Door PM"/>
                                                             <int id="2" val="_Destination"/>
                                                             <get-game-val-21 comment="false" id="3" x="0" y="0"/>
                                                         </set-attribute>
-                                                        <say comment="false" x="81" y="279">
+                                                        <say comment="false" x="81" y="306">
                                                             <ACTOR eid="18" id="0"/>
                                                             <int id="1" val="Activate Door PM"/>
                                                             <int id="2" val="ActivateDoor"/>
                                                         </say>
-                                                        <say comment="false" x="81" y="306">
+                                                        <say comment="false" x="81" y="333">
                                                             <ACTOR eid="18" id="0"/>
                                                             <int id="1" val="Collectable Door PM"/>
                                                             <int id="2" val="DoorActivated"/>
@@ -63,9 +67,9 @@
                                     </group>
                                     <load-success comment="false" id="0" x="0" y="0"/>
                                 </if>
-                                <else comment="false" x="48" y="369">
+                                <else comment="false" x="48" y="396">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-16 comment="false" x="59" y="389">
+                                        <set-game-val-16 comment="false" x="59" y="416">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
                                     </group>
@@ -79,12 +83,6 @@
                 </if>
             </group>
         </init>
-    </group>
-    <group eventID="1" id="1">
-        <play-sound4 comment="false" x="369" y="24">
-            <int id="0" val="1"/>
-            <SOUND eid="466" id="1"/>
-        </play-sound4>
     </group>
     <group eventID="1" id="-1"/>
 </groups>
