@@ -3,14 +3,17 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <toggle-image comment="false" x="26" y="40">
+                <set-val-99-9 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-99-9>
+                <toggle-image comment="false" x="26" y="65">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
                 </toggle-image>
-                <comment-short comment="false" x="26" y="67">
+                <comment-short comment="false" x="26" y="92">
                     <int id="0" val="GA: Unlocked Doors (List)"/>
                 </comment-short>
-                <print comment="false" x="26" y="87">
+                <print comment="false" x="26" y="112">
                     <str-combine comment="false" id="0" x="0" y="0">
                         <custom-62 comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -23,7 +26,7 @@
                         </str-combine>
                     </str-combine>
                 </print>
-                <create-region comment="false" x="26" y="130">
+                <create-region comment="false" x="26" y="155">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -44,23 +47,32 @@
                         </custom-62>
                     </minus>
                 </create-region>
-                <set-val-99-5 comment="false" x="26" y="168">
+                <set-val-99-5 comment="false" x="26" y="193">
                     <REGION eid="lastcreated" id="0"/>
                 </set-val-99-5>
-                <set-val-99-7 comment="false" x="26" y="195">
+                <set-val-99-7 comment="false" x="26" y="220">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-99-7>
-                <set-val-99-8 comment="false" x="26" y="220">
+                <set-val-99-8 comment="false" x="26" y="245">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-99-8>
-                <comment-short comment="false" x="26" y="245">
+                <comment-short comment="false" x="26" y="270">
                     <int id="0" val="GA: Last Scene Name (Text)"/>
                 </comment-short>
-                <say comment="false" x="26" y="265">
+                <say comment="false" x="26" y="290">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="Activate Door PM"/>
                     <int id="2" val="UnlockDestination"/>
                 </say>
+                <dolater comment="false" x="26" y="317">
+                    <group eventID="1" id="-1">
+                        <set-val-99-9 comment="false" x="37" y="344">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-99-9>
+                    </group>
+                    <int id="0" val="0.5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
             </group>
         </init>
     </group>
@@ -70,39 +82,41 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="47">
                     <group eventID="2" id="-1">
-                        <stop comment="false" x="37" y="72"/>
+                        <stop comment="false" x="37" y="82"/>
                     </group>
-                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                    <or comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-99-9 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <is-transitioning comment="false" id="1" x="0" y="0"/>
+                    </or>
                 </if>
-                <print comment="false" x="26" y="104">
-                    <int id="0" val="hit"/>
-                </print>
-                <set-val-99-7 comment="false" x="26" y="124">
+                <set-val-99-7 comment="false" x="26" y="114">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-99-7>
-                <if comment="false" x="26" y="149">
+                <if comment="false" x="26" y="139">
                     <group eventID="4" id="-1">
-                        <set-val-99-7 comment="false" x="37" y="174">
+                        <set-val-99-7 comment="false" x="37" y="164">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-99-7>
                     </group>
                     <get-val-99-8 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <comment-short comment="false" x="26" y="211">
+                <comment-short comment="false" x="26" y="201">
                     <int id="0" val="Custom: Is &amp;quot;UseObject&amp;quot; on for &amp;lt;Actor by door&amp;gt;"/>
                 </comment-short>
-                <if comment="false" x="26" y="231">
+                <if comment="false" x="26" y="221">
                     <group eventID="1" id="-1">
-                        <set-val-99-8 comment="false" x="37" y="256">
+                        <set-val-99-8 comment="false" x="37" y="246">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-99-8>
-                        <set-val-99-7 comment="false" x="37" y="281">
+                        <set-val-99-7 comment="false" x="37" y="271">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-99-7>
-                        <comment-short comment="false" x="37" y="306">
+                        <comment-short comment="false" x="37" y="296">
                             <int id="0" val="Now move to the linked scene"/>
                         </comment-short>
-                        <say comment="false" x="37" y="326">
+                        <say comment="false" x="37" y="316">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Activate Door PM"/>
                             <int id="2" val="UseDoor"/>
@@ -123,6 +137,9 @@
                 <set-val-99-7 comment="false" x="26" y="47">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-99-7>
+                <set-val-99-9 comment="false" x="26" y="72">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-99-9>
             </group>
             <int id="0" val="1"/>
             <REGION eid="var" id="1" vid="5"/>

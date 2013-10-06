@@ -14,8 +14,8 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="16" id="0" name="Region 0" pts="4,-25.0,-8.0,25.0,-8.0,25.0,8.0,-25.0,8.0" r="64" type="box" w="50" x="207" y="96"/>
-        <region b="64" g="64" h="16" id="1" name="Region 1" pts="4,-57.0,-8.0,57.0,-8.0,57.0,8.0,-57.0,8.0" r="64" type="box" w="114" x="335" y="96"/>
+        <region b="64" g="64" h="16" id="0" name="Region 0" pts="4,-25.0,8.0,25.0,8.0,25.0,-8.0,-25.0,-8.0" r="64" type="box" w="50" x="207" y="96"/>
+        <region b="64" g="64" h="16" id="1" name="Region 1" pts="4,-57.0,8.0,57.0,8.0,57.0,-8.0,-57.0,-8.0" r="64" type="box" w="114" x="335" y="96"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -28,6 +28,8 @@
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="-1"/>
                     <prop id="6" list="0" val="true"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="92">
@@ -38,7 +40,6 @@
                     <prop id="13" list="0" val=""/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -57,6 +58,7 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
+                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="9" c="true" group="2" id="152" name="Horizontal Scene Exit 9" sx="1.0" sy="1.0" x="80" y="64" z="4">
@@ -66,7 +68,9 @@
                     <prop id="3" list="0" val="Factory2_07|Factory2_06|A|B"/>
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="-1"/>
-                    <prop id="6" list="0" val="true"/>
+                    <prop id="6" list="0" val="false"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="100"/>
@@ -74,6 +78,7 @@
                     <prop id="5" list="0" val=""/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -81,11 +86,13 @@
         <actor a="0.0" aid="12" c="true" group="2" id="152" name="Horizontal Scene Exit 12" sx="1.0" sy="1.0" x="80" y="192" z="1">
             <snippets>
                 <s enabled="true" id="304">
-                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="2" list="0" val="1"/>
                     <prop id="3" list="0" val="Factory2_07|Factory2_06|C|D"/>
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="-1"/>
-                    <prop id="6" list="0" val="true"/>
+                    <prop id="6" list="0" val="false"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="100"/>
@@ -93,6 +100,7 @@
                     <prop id="5" list="0" val=""/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -100,11 +108,13 @@
         <actor a="0.0" aid="13" c="true" group="2" id="152" name="Horizontal Scene Exit 13" sx="1.0" sy="1.0" x="80" y="288" z="1">
             <snippets>
                 <s enabled="true" id="304">
-                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="2" list="0" val="1"/>
                     <prop id="3" list="0" val="Factory2_07|Factory2_06|E|F"/>
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="-1"/>
-                    <prop id="6" list="0" val="true"/>
+                    <prop id="6" list="0" val="false"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="100"/>
@@ -112,6 +122,7 @@
                     <prop id="5" list="0" val=""/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -202,11 +213,13 @@
         <actor a="0.0" aid="19" c="true" group="2" id="152" name="Horizontal Scene Exit 19" sx="1.0" sy="1.0" x="512" y="192" z="1">
             <snippets>
                 <s enabled="true" id="304">
-                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="2" list="0" val="-1"/>
                     <prop id="3" list="0" val="Factory2_07|Factory2_07|D|B"/>
                     <prop id="4" list="0" val="3"/>
-                    <prop id="5" list="0" val="-1"/>
-                    <prop id="6" list="0" val="true"/>
+                    <prop id="5" list="0" val="18"/>
+                    <prop id="6" list="0" val="false"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="100"/>
@@ -214,6 +227,7 @@
                     <prop id="5" list="0" val=""/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -221,11 +235,13 @@
         <actor a="0.0" aid="18" c="true" group="2" id="152" name="Horizontal Scene Exit 18" sx="1.0" sy="1.0" x="512" y="64" z="1">
             <snippets>
                 <s enabled="true" id="304">
-                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="2" list="0" val="-1"/>
                     <prop id="3" list="0" val="Factory2_07|Factory2_07|B|D"/>
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="19"/>
-                    <prop id="6" list="0" val="true"/>
+                    <prop id="6" list="0" val="false"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="100"/>
@@ -233,6 +249,7 @@
                     <prop id="5" list="0" val=""/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -348,11 +365,11 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
         </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val="Factory2_06"/>
+        </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -372,11 +389,11 @@
         </s>
     </snippets>
     <terrain>
+        <p pts="4,0.0,16.0,0.0,0.0,640.0,0.0,640.0,16.0" x="0.0" y="336.0"/>
+        <p pts="12,0.0,96.0,0.0,80.0,64.0,80.0,64.0,16.0,0.0,16.0,0.0,0.0,640.0,0.0,640.0,16.0,560.0,16.0,560.0,80.0,640.0,80.0,640.0,96.0" x="0.0" y="160.0"/>
+        <p pts="18,464.0,64.0,464.0,0.0,32.0,0.0,32.0,16.0,0.0,16.0,0.0,64.0,64.0,64.0,64.0,80.0,144.0,80.0,144.0,64.0,192.0,64.0,192.0,80.0,272.0,80.0,272.0,64.0,320.0,64.0,320.0,80.0,400.0,80.0,400.0,64.0" x="80.0" y="48.0"/>
+        <p pts="16,544.0,48.0,544.0,16.0,80.0,16.0,80.0,48.0,0.0,48.0,0.0,32.0,64.0,32.0,64.0,16.0,0.0,16.0,0.0,0.0,640.0,0.0,640.0,16.0,560.0,16.0,560.0,32.0,640.0,32.0,640.0,48.0" x="0.0" y="272.0"/>
         <p pts="4,464.0,0.0,0.0,0.0,0.0,64.0,464.0,64.0" x="80.0" y="176.0"/>
         <p pts="10,0.0,112.0,0.0,96.0,64.0,96.0,64.0,16.0,96.0,16.0,96.0,0.0,560.0,0.0,560.0,96.0,640.0,96.0,640.0,112.0" x="0.0" y="32.0"/>
-        <p pts="12,0.0,96.0,0.0,80.0,64.0,80.0,64.0,16.0,0.0,16.0,0.0,0.0,640.0,0.0,640.0,16.0,560.0,16.0,560.0,80.0,640.0,80.0,640.0,96.0" x="0.0" y="160.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,640.0,0.0,640.0,16.0" x="0.0" y="336.0"/>
-        <p pts="16,544.0,48.0,544.0,16.0,80.0,16.0,80.0,48.0,0.0,48.0,0.0,32.0,64.0,32.0,64.0,16.0,0.0,16.0,0.0,0.0,640.0,0.0,640.0,16.0,560.0,16.0,560.0,32.0,640.0,32.0,640.0,48.0" x="0.0" y="272.0"/>
-        <p pts="18,464.0,64.0,464.0,0.0,32.0,0.0,32.0,16.0,0.0,16.0,0.0,64.0,64.0,64.0,64.0,80.0,144.0,80.0,144.0,64.0,192.0,64.0,192.0,80.0,272.0,80.0,272.0,64.0,320.0,64.0,320.0,80.0,400.0,80.0,400.0,64.0" x="80.0" y="48.0"/>
     </terrain>
 </scene>
