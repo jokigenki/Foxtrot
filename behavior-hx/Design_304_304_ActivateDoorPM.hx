@@ -58,10 +58,23 @@ public var _SaveExit:Bool;
 public var _SlideToCentre:Bool;
 
 public var _MoveToLastX:Bool;
+
+public var _DoorReady:Bool;
     public function _customEvent_ActivateDoor():Void
 {
         if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_DoExitsMatch(_Destination,getGameAttribute("Last Destination"))), Bool))
 {
+            if(!(_DoorReady))
+{
+                return;
+}
+
+            runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
+                        _DoorReady = true;
+propertyChanged("_DoorReady", _DoorReady);
+}, actor);
+            _DoorReady = false;
+propertyChanged("_DoorReady", _DoorReady);
             trace("" + (("" + "Activate ") + ("" + _Destination)));
             _ActorToMove.fadeTo(0 / 100, 0, Linear.easeNone);
             _ActorToMove.fadeTo(1, 0.5, Linear.easeNone);
@@ -103,6 +116,17 @@ public var _MoveToLastX:Bool;
 {
         if(!(_Destination == "none"))
 {
+            if(!(_DoorReady))
+{
+                return;
+}
+
+            _DoorReady = false;
+propertyChanged("_DoorReady", _DoorReady);
+            runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
+                        _DoorReady = true;
+propertyChanged("_DoorReady", _DoorReady);
+}, actor);
             setGameAttribute("Last Destination", _Destination);
             /* "GA: Set Destination Scene (Text) to <Exit Name>" */
             _ActorToMove.setXVelocity(0);
@@ -168,6 +192,8 @@ nameMap.set("Slide To Centre?", "_SlideToCentre");
 _SlideToCentre = true;
 nameMap.set("Move To Last X", "_MoveToLastX");
 _MoveToLastX = false;
+nameMap.set("Door Ready?", "_DoorReady");
+_DoorReady = false;
 nameMap.set("Actor", "actor");
 
 	}
@@ -175,6 +201,8 @@ nameMap.set("Actor", "actor");
 	override public function init()
 	{
 		            actor.say("Activate Door PM", "_customEvent_" + "ActivateDoor");
+        _DoorReady = true;
+propertyChanged("_DoorReady", _DoorReady);
 
 	}	      	
 	
