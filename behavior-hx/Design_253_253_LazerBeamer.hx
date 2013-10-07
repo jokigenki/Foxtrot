@@ -209,6 +209,7 @@ for (i in 0...results.length)
 {
 	var item:Array<Dynamic> = results[i];
 	var collisionActor:Actor = item[1];
+	if (collisionActor.isRegion) continue;
 	if (collisionActor.hasBehavior("Transparent PM") == true) continue;
 	//TODO: Reflection
 	
