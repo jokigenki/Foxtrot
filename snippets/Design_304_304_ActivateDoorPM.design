@@ -5,51 +5,39 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <print comment="false" x="37" y="70">
-                            <str-combine comment="false" id="0" x="0" y="0">
-                                <int id="0" val="Trying to activate "/>
-                                <get-val-304-3 comment="false" id="1" x="0" y="0"/>
-                            </str-combine>
-                        </print>
-                        <if comment="false" x="37" y="100">
+                        <if comment="false" x="37" y="70">
                             <group eventID="1" id="-1">
-                                <stop comment="false" x="48" y="130"/>
+                                <stop comment="false" x="48" y="100"/>
                             </group>
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-304-9 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </if>
-                        <dolater comment="false" x="37" y="162">
+                        <dolater comment="false" x="37" y="132">
                             <group eventID="1" id="-1">
-                                <set-val-304-9 comment="false" x="48" y="189">
+                                <set-val-304-9 comment="false" x="48" y="159">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-304-9>
                             </group>
                             <int id="0" val="0.5"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <set-val-304-9 comment="false" x="37" y="226">
+                        <set-val-304-9 comment="false" x="37" y="196">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-304-9>
-                        <print comment="false" x="37" y="251">
-                            <str-combine comment="false" id="0" x="0" y="0">
-                                <int id="0" val="Activate "/>
-                                <get-val-304-3 comment="false" id="1" x="0" y="0"/>
-                            </str-combine>
-                        </print>
-                        <fadeTo comment="false" x="37" y="281">
+                        <fadeTo comment="false" x="37" y="221">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                             <int id="3" val="0"/>
                         </fadeTo>
-                        <fadeInOut comment="false" x="37" y="308">
+                        <fadeInOut comment="false" x="37" y="248">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0.5"/>
                             <int id="3" val="0"/>
                         </fadeInOut>
-                        <set-xy comment="false" x="37" y="335">
+                        <set-xy comment="false" x="37" y="275">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="1"/>
                             <get-xy comment="false" id="2" x="0" y="0">
@@ -57,16 +45,16 @@
                                 <int id="1" val="1"/>
                             </get-xy>
                         </set-xy>
-                        <if comment="false" x="37" y="375">
+                        <if comment="false" x="37" y="315">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="400">
+                                <if comment="false" x="48" y="340">
                                     <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="430">
+                                        <actor-set-prop comment="false" x="59" y="370">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Facing Right?"/>
                                             <false comment="false" id="2" x="0" y="0"/>
                                         </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="462">
+                                        <set-xy comment="false" x="59" y="402">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="0"/>
                                             <minus comment="false" id="2" x="0" y="0">
@@ -83,7 +71,7 @@
                                                 </div>
                                             </minus>
                                         </set-xy>
-                                        <moveToBy comment="false" x="59" y="512">
+                                        <moveToBy comment="false" x="59" y="452">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="1"/>
                                             <minus comment="false" id="2" x="0" y="0">
@@ -111,14 +99,14 @@
                                         <int id="1" val="0"/>
                                     </less>
                                 </if>
-                                <else-if comment="false" x="48" y="574">
+                                <else-if comment="false" x="48" y="514">
                                     <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="604">
+                                        <actor-set-prop comment="false" x="59" y="544">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Facing Right?"/>
                                             <true comment="false" id="2" x="0" y="0"/>
                                         </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="636">
+                                        <set-xy comment="false" x="59" y="576">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="0"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -135,7 +123,7 @@
                                                 </div>
                                             </plus>
                                         </set-xy>
-                                        <moveToBy comment="false" x="59" y="686">
+                                        <moveToBy comment="false" x="59" y="626">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="1"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -157,9 +145,9 @@
                                         <int id="1" val="0"/>
                                     </more>
                                 </else-if>
-                                <else comment="false" x="48" y="743">
+                                <else comment="false" x="48" y="683">
                                     <group eventID="1" id="-1">
-                                        <set-xy comment="false" x="59" y="763">
+                                        <set-xy comment="false" x="59" y="703">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="0"/>
                                             <get-xy comment="false" id="2" x="0" y="0">
@@ -167,7 +155,7 @@
                                                 <int id="1" val="0"/>
                                             </get-xy>
                                         </set-xy>
-                                        <set-xy comment="false" x="59" y="803">
+                                        <set-xy comment="false" x="59" y="743">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="1"/>
                                             <get-xy comment="false" id="2" x="0" y="0">
@@ -180,9 +168,9 @@
                             </group>
                             <get-val-304-7 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else-if comment="false" x="37" y="867">
+                        <else-if comment="false" x="37" y="807">
                             <group eventID="2" id="-1">
-                                <set-xy comment="false" x="48" y="892">
+                                <set-xy comment="false" x="48" y="832">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="0"/>
                                     <get-game-val-7 comment="false" id="2" x="0" y="0"/>
@@ -206,52 +194,46 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="4" id="-1">
-                        <print comment="false" x="37" y="70">
-                            <str-combine comment="false" id="0" x="0" y="0">
-                                <int id="0" val="Use Door: "/>
-                                <get-val-304-3 comment="false" id="1" x="0" y="0"/>
-                            </str-combine>
-                        </print>
-                        <if comment="false" x="37" y="100">
+                        <if comment="false" x="37" y="70">
                             <group eventID="1" id="-1">
-                                <stop comment="false" x="48" y="130"/>
+                                <stop comment="false" x="48" y="100"/>
                             </group>
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-304-9 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </if>
-                        <set-val-304-9 comment="false" x="37" y="162">
+                        <set-val-304-9 comment="false" x="37" y="132">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-304-9>
-                        <dolater comment="false" x="37" y="187">
+                        <dolater comment="false" x="37" y="157">
                             <group eventID="2" id="-1">
-                                <set-val-304-9 comment="false" x="48" y="214">
+                                <set-val-304-9 comment="false" x="48" y="184">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-304-9>
                             </group>
                             <int id="0" val="0.5"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <set-game-val-20 comment="false" x="37" y="251">
+                        <set-game-val-20 comment="false" x="37" y="221">
                             <get-val-304-3 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-20>
-                        <comment-short comment="false" x="37" y="276">
+                        <comment-short comment="false" x="37" y="246">
                             <int id="0" val="GA: Set Destination Scene (Text) to &amp;lt;Exit Name&amp;gt;"/>
                         </comment-short>
-                        <set-dxy comment="false" x="37" y="296">
+                        <set-dxy comment="false" x="37" y="266">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                         </set-dxy>
-                        <fadeTo comment="false" x="37" y="323">
+                        <fadeTo comment="false" x="37" y="293">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0.5"/>
                             <int id="3" val="9"/>
                         </fadeTo>
-                        <if comment="false" x="37" y="350">
+                        <if comment="false" x="37" y="320">
                             <group eventID="2" id="-1">
-                                <moveToBy comment="false" x="48" y="375">
+                                <moveToBy comment="false" x="48" y="345">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="0"/>
                                     <minus comment="false" id="2" x="0" y="0">
@@ -271,9 +253,9 @@
                             </group>
                             <get-val-304-7 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else-if comment="false" x="37" y="432">
+                        <else-if comment="false" x="37" y="402">
                             <group eventID="2" id="-1">
-                                <set-game-val-7 comment="false" x="48" y="457">
+                                <set-game-val-7 comment="false" x="48" y="427">
                                     <get-xy comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="var" id="0" vid="4"/>
                                         <int id="1" val="0"/>
@@ -282,17 +264,17 @@
                             </group>
                             <get-val-304-8 comment="false" id="0" x="0" y="0"/>
                         </else-if>
-                        <if comment="false" x="37" y="502">
+                        <if comment="false" x="37" y="472">
                             <group eventID="2" id="-1">
-                                <dolater comment="false" x="48" y="535">
+                                <dolater comment="false" x="48" y="505">
                                     <group eventID="2" id="-1">
-                                        <say comment="false" x="59" y="562">
+                                        <say comment="false" x="59" y="532">
                                             <ACTOR eid="var" id="0" vid="5"/>
                                             <int id="1" val="Activate Door PM"/>
                                             <int id="2" val="ActivateDoor"/>
                                         </say>
                                     </group>
-                                    <int id="0" val="0.5"/>
+                                    <int id="0" val="0.6"/>
                                     <ACTOR eid="this" id="2"/>
                                 </dolater>
                             </group>
@@ -301,17 +283,17 @@
                                 <int id="1" val="0"/>
                             </value>
                         </if>
-                        <else comment="false" x="37" y="613">
+                        <else comment="false" x="37" y="583">
                             <group eventID="2" id="-1">
-                                <scene-say comment="false" x="48" y="633">
+                                <scene-say comment="false" x="48" y="603">
                                     <int id="0" val="Scene Transition PM"/>
                                     <int id="1" val="SwitchScene"/>
                                 </scene-say>
                             </group>
                         </else>
-                        <if comment="false" x="37" y="665">
+                        <if comment="false" x="37" y="635">
                             <group eventID="2" id="-1">
-                                <set-game-val-21 comment="false" x="48" y="690">
+                                <set-game-val-21 comment="false" x="48" y="660">
                                     <get-val-304-3 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-21>
                             </group>

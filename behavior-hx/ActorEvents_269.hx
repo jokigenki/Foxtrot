@@ -42,50 +42,19 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_64_64_CollectablePM extends ActorScript
+class ActorEvents_269 extends ActorScript
 {          	
 	
-public var _Collectioneventname:String;
-
-public var _CollectableId:String;
-
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Collection event name", "_Collectioneventname");
-_Collectioneventname = "";
-nameMap.set("Collectable Id", "_CollectableId");
-_CollectableId = "";
-nameMap.set("Actor", "actor");
-
+		
 	}
 	
 	override public function init()
 	{
-		            /* "GA: Collected Items" */
-        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(_CollectableId)), Bool))
-{
-            actor.disableBehavior("Display On Collected PM");
-            recycleActor(actor);
-}
-
-    addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {
-if(wrapper.enabled && sameAsAny(getActorGroup(0),event.otherActor.getType(),event.otherActor.getGroup())){
-        if(event.otherActor.hasBehavior("Collector PM"))
-{
-            if(!(("" + _CollectableId) == ("")))
-{
-                scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType(_CollectableId,event.thisActor.getType());
-                actor.shout("_customEvent_" + _Collectioneventname);
-}
-
-            recycleActor(actor);
-}
-
-}
-});
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)
