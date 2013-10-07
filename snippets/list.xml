@@ -2668,7 +2668,7 @@
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="6" name="_SaveExit" order="5"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Slide To Centre?" hidden="false" id="7" name="_SlideToCentre" order="6"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Move To Last X" hidden="false" id="8" name="_MoveToLastX" order="7"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Door Ready?" hidden="true" id="9" name="_DoorReady" order="8"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Door Ready?" hidden="true" id="9" name="_DoorReady" order="8"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="573" id="1"/>
@@ -2680,6 +2680,11 @@
             <event displayName="Is Door Open?" enabled="true" id="4" name="event-custom-block" order="5" repeats="true"/>
             <event displayName="Created" enabled="true" id="5" name="init" order="1" repeats="true"/>
         </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_29" classname="scripts.SceneEvents_29" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="306" language="" name="SceneEvents_29" oid="-1" package="scripts." sceneid="29" scenespecific="true" shared="false" type="scene">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <blocks/>
+        <events/>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_540" classname="scripts.ActorEvents_540" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="288" language="" name="ActorEvents_540" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>

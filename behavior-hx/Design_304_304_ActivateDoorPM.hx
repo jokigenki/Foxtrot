@@ -64,6 +64,7 @@ public var _DoorReady:Bool;
 {
         if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_DoExitsMatch(_Destination,getGameAttribute("Last Destination"))), Bool))
 {
+            trace("" + (("" + "Trying to activate ") + ("" + _Destination)));
             if(!(_DoorReady))
 {
                 return;
@@ -116,6 +117,7 @@ propertyChanged("_DoorReady", _DoorReady);
 {
         if(!(_Destination == "none"))
 {
+            trace("" + (("" + "Use Door: ") + ("" + _Destination)));
             if(!(_DoorReady))
 {
                 return;
@@ -193,7 +195,7 @@ _SlideToCentre = true;
 nameMap.set("Move To Last X", "_MoveToLastX");
 _MoveToLastX = false;
 nameMap.set("Door Ready?", "_DoorReady");
-_DoorReady = false;
+_DoorReady = true;
 nameMap.set("Actor", "actor");
 
 	}
@@ -201,8 +203,6 @@ nameMap.set("Actor", "actor");
 	override public function init()
 	{
 		            actor.say("Activate Door PM", "_customEvent_" + "ActivateDoor");
-        _DoorReady = true;
-propertyChanged("_DoorReady", _DoorReady);
 
 	}	      	
 	
