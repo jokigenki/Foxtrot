@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <periodic comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="1" id="-1">
+                                <set-val-310-3 comment="false" x="48" y="105">
+                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <get-val-310-2 comment="false" id="1" x="0" y="0"/>
+                                        <int id="2" val="_Degrees"/>
+                                    </get-attribute>
+                                </set-val-310-3>
+                                <set-val-310-7 comment="false" x="48" y="143">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-310-7>
+                                <cancel comment="false" x="48" y="168"/>
+                            </group>
+                            <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <get-val-310-2 comment="false" id="1" x="0" y="0"/>
+                            </is-snippet-enableda>
+                        </if>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <stop comment="false" x="37" y="70"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-310-7 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="102">
+                    <group eventID="2" id="-1">
+                        <set-val-310-4 comment="false" x="37" y="137">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-310-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-1"/>
+                            </times>
+                        </set-val-310-4>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <lesseq comment="false" id="0" x="0" y="0">
+                            <get-val-310-3 comment="false" id="0" x="0" y="0"/>
+                            <get-val-310-6 comment="false" id="1" x="0" y="0"/>
+                        </lesseq>
+                        <less comment="false" id="1" x="0" y="0">
+                            <get-val-310-4 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </less>
+                    </and>
+                </if>
+                <else-if comment="false" x="26" y="179">
+                    <group eventID="2" id="-1">
+                        <set-val-310-4 comment="false" x="37" y="214">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-310-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-1"/>
+                            </times>
+                        </set-val-310-4>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <moreeq comment="false" id="0" x="0" y="0">
+                            <get-val-310-3 comment="false" id="0" x="0" y="0"/>
+                            <get-val-310-5 comment="false" id="1" x="0" y="0"/>
+                        </moreeq>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-val-310-4 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </more>
+                    </and>
+                </else-if>
+                <set-val-310-3 comment="false" x="26" y="256">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-310-3 comment="false" id="0" x="0" y="0"/>
+                        <get-val-310-4 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-310-3>
+                <set-attribute comment="false" x="26" y="286">
+                    <ACTOR eid="this" id="0"/>
+                    <get-val-310-2 comment="false" id="1" x="0" y="0"/>
+                    <int id="2" val="_Degrees"/>
+                    <get-val-310-3 comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

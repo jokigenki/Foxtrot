@@ -157,14 +157,17 @@
                     </get-xy>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setlayer comment="false" x="26" y="215">
+                <set-val-52-19 comment="false" x="26" y="215">
                     <ACTOR eid="lastcreated" id="0"/>
+                </set-val-52-19>
+                <setlayer comment="false" x="26" y="242">
+                    <ACTOR eid="var" id="0" vid="19"/>
                     <getlayer comment="false" id="1" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
                     </getlayer>
                 </setlayer>
-                <set-xy comment="false" x="26" y="255">
-                    <ACTOR eid="lastcreated" id="0"/>
+                <set-xy comment="false" x="26" y="282">
+                    <ACTOR eid="var" id="0" vid="19"/>
                     <int id="1" val="0"/>
                     <plus comment="false" id="2" x="0" y="0">
                         <plus comment="false" id="0" x="0" y="0">
@@ -179,7 +182,7 @@
                                         <int id="1" val="0"/>
                                     </get-wh>
                                     <get-wh comment="false" id="1" x="0" y="0">
-                                        <ACTOR eid="lastcreated" id="0"/>
+                                        <ACTOR eid="var" id="0" vid="19"/>
                                         <int id="1" val="0"/>
                                     </get-wh>
                                 </minus>
@@ -189,8 +192,8 @@
                         <get-val-52-17 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-xy>
-                <set-xy comment="false" x="26" y="315">
-                    <ACTOR eid="lastcreated" id="0"/>
+                <set-xy comment="false" x="26" y="342">
+                    <ACTOR eid="var" id="0" vid="19"/>
                     <int id="1" val="1"/>
                     <plus comment="false" id="2" x="0" y="0">
                         <plus comment="false" id="0" x="0" y="0">
@@ -205,7 +208,7 @@
                                         <int id="1" val="1"/>
                                     </get-wh>
                                     <get-wh comment="false" id="1" x="0" y="0">
-                                        <ACTOR eid="lastcreated" id="0"/>
+                                        <ACTOR eid="var" id="0" vid="19"/>
                                         <int id="1" val="1"/>
                                     </get-wh>
                                 </minus>
@@ -215,26 +218,26 @@
                         <get-val-52-18 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-xy>
-                <custom-99 comment="false" x="26" y="375">
+                <custom-99 comment="false" x="26" y="402">
                     <ACTOR eid="this" id="0"/>
-                    <ACTOR eid="lastcreated" id="1"/>
+                    <ACTOR eid="var" id="1" vid="19"/>
                 </custom-99>
-                <incdec comment="false" x="26" y="402">
+                <incdec comment="false" x="26" y="429">
                     <int id="0" val="9"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1"/>
                 </incdec>
-                <custom-234 comment="false" x="26" y="429">
+                <custom-234 comment="false" x="26" y="456">
                     <get-val-52-14 comment="false" id="0" x="0" y="0"/>
-                    <ACTOR eid="lastcreated" id="1"/>
+                    <ACTOR eid="var" id="1" vid="19"/>
                 </custom-234>
-                <shout comment="false" x="26" y="461">
+                <shout comment="false" x="26" y="488">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="Spawned"/>
                 </shout>
-                <if comment="false" x="26" y="488">
+                <if comment="false" x="26" y="515">
                     <group eventID="2" id="-1">
-                        <custom-256 comment="false" x="37" y="521">
+                        <custom-256 comment="false" x="37" y="548">
                             <ACTOR eid="this" id="0"/>
                         </custom-256>
                     </group>

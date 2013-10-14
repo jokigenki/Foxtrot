@@ -11,7 +11,10 @@
                 </if>
                 <if comment="false" x="26" y="97">
                     <group eventID="-1" id="-1">
-                        <scene-change-new comment="false" x="37" y="127">
+                        <set-game-val-20 comment="false" x="37" y="127">
+                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-20>
+                        <scene-change-new comment="false" x="37" y="152">
                             <get-val-303-2 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="0"/>
                             <get-val-303-1 comment="false" id="2" x="0" y="0"/>
@@ -23,11 +26,14 @@
                         <is-transitioning comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <else comment="false" x="26" y="171">
+                <else comment="false" x="26" y="196">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="191">
+                        <dolater comment="false" x="37" y="216">
                             <group eventID="1" id="-1">
-                                <scene-change-new comment="false" x="48" y="218">
+                                <set-game-val-20 comment="false" x="48" y="243">
+                                    <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-20>
+                                <scene-change-new comment="false" x="48" y="268">
                                     <get-val-303-2 comment="false" id="0" x="0" y="0"/>
                                     <int id="1" val="0"/>
                                     <get-val-303-1 comment="false" id="2" x="0" y="0"/>

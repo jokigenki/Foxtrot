@@ -47,18 +47,98 @@ class SceneEvents_28 extends SceneScript
 	
 public var _ExitName:String;
 
+public var _RatOffset:Float;
+
+public var _RatLeftTime:Float;
+
+public var _RatHasLeft:Bool;
+    public function _customEvent_RatExit1():Void
+{
+        /* "if rat leaves first, we need to time how long the player takes" */
+        _RatLeftTime = asNumber(flash.Lib.getTimer());
+propertyChanged("_RatLeftTime", _RatLeftTime);
+        _RatHasLeft = true;
+propertyChanged("_RatHasLeft", _RatHasLeft);
+}
+
+    public function _customEvent_PlayerExit1():Void
+{
+        if((!(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorIsNull(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorInScene(getGameAttribute("Last Rat"))), Actor))), Bool)) && !(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorIsNull(getActor(47))), Bool))))
+{
+            if(_RatHasLeft)
+{
+                /* "if the rat has already left, we need to calculate the time since it did so" */
+                setGameAttribute("Rat Timer", (_RatLeftTime - flash.Lib.getTimer()));
+                trace("" + (("" + "rat left: ") + ("" + getGameAttribute("Rat Timer"))));
+}
+
+            else
+{
+                /* "if the player leaves first, we need to find how long the rat would take to cover the remaining distance (~5ms/pixel)" */
+                setGameAttribute("Rat Timer", ((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorInScene(getGameAttribute("Last Rat"))), Actor).getX() - getActor(47).getX()) * 5));
+                trace("" + (("" + "player left: ") + ("" + getGameAttribute("Rat Timer"))));
+}
+
+}
+
+}
+
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
 		nameMap.set("Exit Name", "_ExitName");
 _ExitName = "";
+nameMap.set("Rat Offset", "_RatOffset");
+_RatOffset = 0.0;
+nameMap.set("Rat Left Time", "_RatLeftTime");
+_RatLeftTime = 0.0;
+nameMap.set("Rat Has Left?", "_RatHasLeft");
+_RatHasLeft = false;
 
 	}
 	
 	override public function init()
 	{
-		
+		            if((getGameAttribute("Last Destination") == "Factory2_06|Factory2_07|B|A"))
+{
+            if((getGameAttribute("Rat Timer") < 0))
+{
+                /* "move the rat and egg spawners across to simulate the rat leaving the last scene earlier than the player" */
+                _RatOffset = asNumber(Math.floor((getGameAttribute("Rat Timer") / -4)));
+propertyChanged("_RatOffset", _RatOffset);
+                if((_RatOffset > 400))
+{
+                    _RatOffset = asNumber(400);
+propertyChanged("_RatOffset", _RatOffset);
+}
+
+                getActor(16).setX((getActor(16).getX() + _RatOffset));
+                getActor(17).setX((getActor(17).getX() + _RatOffset));
+}
+
+            else if((getGameAttribute("Rat Timer") > 0))
+{
+                trace("" + (("" + "show rat after ") + ("" + getGameAttribute("Rat Timer"))));
+                /* "remove the trigger, and manually trigger the rat after a certain time" */
+                recycleActor(getActor(45));
+                recycleActor(getActor(14));
+                runLater(1000 * (getGameAttribute("Rat Timer") / 1000), function(timeTask:TimedTask):Void {
+                            getActor(16).shout("_customEvent_" + "MakeSpawn");
+                            getActor(17).shout("_customEvent_" + "MakeSpawn");
+}, null);
+}
+
+}
+
+        else
+{
+            recycleActor(getActor(45));
+            recycleActor(getActor(14));
+}
+
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

@@ -57,7 +57,13 @@ class Design_177_177_KillWhenOffscreenPM extends ActorScript
 	{
 		    addActorPositionListener(actor, function(enteredScreen:Bool, exitedScreen:Bool, enteredScene:Bool, exitedScene:Bool, list:Array<Dynamic>):Void {
 if(wrapper.enabled && exitedScene){
-        recycleActor(actor);
+        runLater(1000 * 1, function(timeTask:TimedTask):Void {
+                    if(!(actor.isOnScreen()))
+{
+                        recycleActor(actor);
+}
+
+}, actor);
 }
 });
 

@@ -150,13 +150,14 @@
             <r id="91"/>
         </group>
         <group desc="" id="12" name="Characters" type="actor">
-            <r id="535"/>
-            <r id="546"/>
             <r id="201"/>
+            <r id="546"/>
             <r id="203"/>
+            <r id="9"/>
+            <r id="588"/>
+            <r id="535"/>
             <r id="354"/>
             <r id="485"/>
-            <r id="9"/>
             <r id="542"/>
             <r id="481"/>
             <r id="271"/>
@@ -209,6 +210,7 @@
             <r id="579"/>
             <r id="544"/>
             <r id="283"/>
+            <r id="586"/>
             <r id="280"/>
             <r id="436"/>
             <r id="259"/>
@@ -239,6 +241,7 @@
             <r id="491"/>
             <r id="350"/>
             <r id="487"/>
+            <r id="590"/>
         </group>
         <group desc="" id="21" name="Switches and Triggers" type="actor">
             <r id="129"/>
@@ -296,6 +299,7 @@
         </group>
         <group desc="" id="28" name="Object Movement" type="snippet">
             <r id="51"/>
+            <r id="310"/>
             <r id="298"/>
             <r id="265"/>
             <r id="193"/>
@@ -327,36 +331,35 @@
         <group desc="" id="11" name="Boss"/>
     </groups>
     <cgroups>
-        <cgroup g1="0" g2="0"/>
-        <cgroup g1="0" g2="10"/>
-        <cgroup g1="0" g2="6"/>
-        <cgroup g1="0" g2="8"/>
-        <cgroup g1="0" g2="11"/>
-        <cgroup g1="0" g2="3"/>
-        <cgroup g1="0" g2="5"/>
-        <cgroup g1="0" g2="4"/>
-        <cgroup g1="0" g2="7"/>
-        <cgroup g1="10" g2="8"/>
-        <cgroup g1="10" g2="1"/>
-        <cgroup g1="10" g2="11"/>
-        <cgroup g1="10" g2="3"/>
-        <cgroup g1="6" g2="8"/>
-        <cgroup g1="6" g2="3"/>
-        <cgroup g1="8" g2="9"/>
-        <cgroup g1="8" g2="1"/>
-        <cgroup g1="8" g2="11"/>
-        <cgroup g1="8" g2="3"/>
-        <cgroup g1="8" g2="5"/>
+        <cgroup g1="9" g2="8"/>
         <cgroup g1="9" g2="11"/>
-        <cgroup g1="1" g2="11"/>
-        <cgroup g1="1" g2="3"/>
-        <cgroup g1="1" g2="7"/>
-        <cgroup g1="11" g2="3"/>
-        <cgroup g1="11" g2="5"/>
+        <cgroup g1="7" g2="0"/>
+        <cgroup g1="7" g2="3"/>
+        <cgroup g1="7" g2="1"/>
+        <cgroup g1="7" g2="5"/>
+        <cgroup g1="0" g2="0"/>
+        <cgroup g1="0" g2="4"/>
+        <cgroup g1="0" g2="8"/>
+        <cgroup g1="0" g2="3"/>
+        <cgroup g1="0" g2="6"/>
+        <cgroup g1="0" g2="11"/>
+        <cgroup g1="0" g2="10"/>
+        <cgroup g1="0" g2="5"/>
+        <cgroup g1="8" g2="3"/>
+        <cgroup g1="8" g2="6"/>
+        <cgroup g1="8" g2="11"/>
+        <cgroup g1="8" g2="1"/>
+        <cgroup g1="8" g2="10"/>
+        <cgroup g1="8" g2="5"/>
         <cgroup g1="3" g2="3"/>
+        <cgroup g1="3" g2="6"/>
+        <cgroup g1="3" g2="11"/>
+        <cgroup g1="3" g2="10"/>
         <cgroup g1="3" g2="5"/>
-        <cgroup g1="3" g2="7"/>
-        <cgroup g1="5" g2="7"/>
+        <cgroup g1="11" g2="1"/>
+        <cgroup g1="11" g2="10"/>
+        <cgroup g1="11" g2="5"/>
+        <cgroup g1="1" g2="10"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -382,6 +385,7 @@
         <list cid="0" id="3" name="Collected Items" save="true" val="list"/>
         <bool cid="2" id="10" name="Speed Run In Progress" save="true" value="false"/>
         <list cid="2" id="13" name="Speed Run Collectables" save="true" val="list"/>
+        <number cid="-1" id="23" name="Rat Start Time" save="true" value="0.0"/>
         <number cid="2" id="8" name="Speed Run Timer" save="true" value="0.0"/>
         <list cid="0" id="1" name="Inventory" save="true" val="list"/>
         <number cid="2" id="9" name="Speed Run Success Time" save="true" value="0.0"/>
@@ -393,6 +397,7 @@
         <list cid="0" id="11" name="Collected Speed Run Items" save="true" val="list"/>
         <number cid="1" id="17" name="Last Scene Y Position" save="true" value="0.0"/>
         <text cid="2" id="15" name="Speed Run Start" save="true" value="0"/>
+        <text cid="1" id="24" name="Last Rat" save="true" value="None"/>
         <list cid="1" id="12" name="Unlocked Speed Run Doors" save="true" val="list"/>
     </attributes>
     <collisions>
@@ -420,9 +425,9 @@
         <poly id="22" name="Gap" pts="0.0,0.0#0.0,1.0#0.5,1.0#0.5,0.0"/>
     </collisions>
     <atlases>
-        <atlas dirty="true" id="0" members="9,39,129,140,142,148,152,158,160,162,169,171,173,176,178,180,182,189,192,194,196,203,205,213,215,217,219,221,223,225,230,232,236,257,259,265,267,280,283,292,310,350,352,356,387,401,403,411,432,457,481,483,485,487,489,491,512,514,516,518,520,522,524,526,553,583,122,165,167,168,229,511,528,43,191,212,415,419,420,455,572,574,575,576,577,578,585,308,312,342,343,466,467,468,469,470," name="Shared" pvr="false" resize="0" start="true" target="0"/>
+        <atlas dirty="true" id="0" members="9,39,129,140,142,148,152,156,158,160,162,169,171,173,176,178,180,182,189,192,194,196,203,205,213,215,217,219,221,223,225,230,232,236,257,259,262,265,267,280,283,292,310,350,352,356,387,401,403,411,432,457,481,483,485,487,489,491,512,514,516,518,520,522,524,526,553,581,583,586,588,590,122,165,167,168,229,511,528,43,191,212,415,419,420,455,572,574,575,576,577,578,585,308,312,342,343,466,467,468,469,470," name="Shared" pvr="false" resize="0" start="true" target="0"/>
         <atlas dirty="true" id="1" members="358,360,413,421,423,427,436,440,444,461,463,529,531,533,535,540,542,544,546,560,562,568,570,579," name="Factory" pvr="false" resize="0" start="false" target="0"/>
-        <atlas dirty="true" id="2" members="156,199,201,262,269,271,298,354,581," name="Farm" pvr="false" resize="0" start="true" target="0"/>
+        <atlas dirty="true" id="2" members="199,201,269,271,298,354," name="Farm" pvr="false" resize="0" start="false" target="0"/>
         <atlas dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" start="true" target="0"/>
     </atlases>
     <libraries/>

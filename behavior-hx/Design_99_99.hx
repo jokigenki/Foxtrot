@@ -74,7 +74,6 @@ nameMap.set("Actor", "actor");
 propertyChanged("_DoorReady", _DoorReady);
         actor.disableActorDrawing();
         /* "GA: Unlocked Doors (List)" */
-        trace("" + (("" + cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float)) + ("" + (("" + "") + ("" + cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float))))));
         createBoxRegion((actor.getXCenter() - 2), cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float), 4, (cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) - cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float)));
         _DoorRegion = getLastCreatedRegion();
 propertyChanged("_DoorRegion", _DoorRegion);
