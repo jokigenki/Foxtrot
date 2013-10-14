@@ -56,7 +56,6 @@ class SceneEvents_3 extends SceneScript
 	{
 		            if(!(getGameAttribute("Game Was Loaded")))
 {
-            loopSound(getSound(466));
             loadGame("mySave", function(success:Bool):Void {
                 if(success)
 {

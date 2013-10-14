@@ -57,12 +57,14 @@ public var _Scene:Scene;
 
         if(!(isTransitioning()))
 {
+            setGameAttribute("Last Destination", getGameAttribute("Save Destination"));
             switchScene(_Scene.getID(), createFadeOut((_FadeTime)),createFadeIn((_FadeTime)));
 }
 
         else
 {
             runLater(1000 * 1, function(timeTask:TimedTask):Void {
+                        setGameAttribute("Last Destination", getGameAttribute("Save Destination"));
                         switchScene(_Scene.getID(), createFadeOut((_FadeTime)),createFadeIn((_FadeTime)));
 }, null);
 }

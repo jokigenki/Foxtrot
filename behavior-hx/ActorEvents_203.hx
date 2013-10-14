@@ -54,7 +54,8 @@ class ActorEvents_203 extends ActorScript
 	
 	override public function init()
 	{
-		
+		            setGameAttribute("Last Rat", "" + (scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(actor)));
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

@@ -79,6 +79,8 @@ public var _cos:Float;
 
 public var _UseKeyLine:Bool;
 
+public var _LastDegrees:Float;
+
 public var _sin:Float;
     public function _customEvent_Activated():Void
 {
@@ -99,6 +101,7 @@ propertyChanged("_IsActive", _IsActive);
 	_sin = Math.sin(rads);
 	_BeamTargetX = _cos * 500;
 	_BeamTargetY = _sin * 500;
+	_LastDegrees = _Degrees;
 }
 
 
@@ -140,6 +143,8 @@ nameMap.set("cos", "_cos");
 _cos = 0.0;
 nameMap.set("Use Key Line?", "_UseKeyLine");
 _UseKeyLine = false;
+nameMap.set("Last Degrees", "_LastDegrees");
+_LastDegrees = 0;
 nameMap.set("sin", "_sin");
 _sin = 0.0;
 
@@ -188,6 +193,11 @@ if(wrapper.enabled){
             _HasCollision = false;
 propertyChanged("_HasCollision", _HasCollision);
             return;
+}
+
+        if(!(_Degrees == _LastDegrees))
+{
+            updateTarget();
 }
 
         if((_FrameCount == _TestAfterNFrames))

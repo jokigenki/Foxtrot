@@ -71,6 +71,8 @@ public var _XOffset:Float;
 
 public var _BehaviourValues:Array<Dynamic>;
 
+public var _LastSpawn:Actor;
+
 public var _YOffset:Float;
     public function _customEvent_MakeSpawn():Void
 {
@@ -83,13 +85,15 @@ propertyChanged("_IsRunning", _IsRunning);
 
         trace("" + (("" + "Make ") + ("" + ("" + _SpawnType))));
         createRecycledActor(_SpawnType, actor.getX(), actor.getY(), Script.FRONT);
-        getLastCreatedActor().moveToLayer(actor.getLayerID());
-        getLastCreatedActor().setX(((actor.getX() + ((actor.getWidth() - getLastCreatedActor().getWidth()) / 2)) + _XOffset));
-        getLastCreatedActor().setY(((actor.getY() + ((actor.getHeight() - getLastCreatedActor().getHeight()) / 2)) + _YOffset));
-        actor.say("Spawn PM", "_customBlock_MakeAppear", [getLastCreatedActor()]);
+        _LastSpawn = getLastCreatedActor();
+propertyChanged("_LastSpawn", _LastSpawn);
+        _LastSpawn.moveToLayer(actor.getLayerID());
+        _LastSpawn.setX(((actor.getX() + ((actor.getWidth() - _LastSpawn.getWidth()) / 2)) + _XOffset));
+        _LastSpawn.setY(((actor.getY() + ((actor.getHeight() - _LastSpawn.getHeight()) / 2)) + _YOffset));
+        actor.say("Spawn PM", "_customBlock_MakeAppear", [_LastSpawn]);
         _CurrentSpawnCount += 1;
 propertyChanged("_CurrentSpawnCount", _CurrentSpawnCount);
-        scripts.Design_27_27_ActorExtrasPM._customBlock_SetActorValues(_CreationAttributes,getLastCreatedActor());
+        scripts.Design_27_27_ActorExtrasPM._customBlock_SetActorValues(_CreationAttributes,_LastSpawn);
         actor.shout("_customEvent_" + "Spawned");
         if(cast((actor.say("Spawn PM", "_customBlock_CanSpawn")), Bool))
 {
@@ -216,6 +220,7 @@ nameMap.set("X Offset", "_XOffset");
 _XOffset = 0.0;
 nameMap.set("Behaviour Values", "_BehaviourValues");
 _BehaviourValues = [];
+nameMap.set("Last Spawn", "_LastSpawn");
 nameMap.set("Y Offset", "_YOffset");
 _YOffset = 0.0;
 
