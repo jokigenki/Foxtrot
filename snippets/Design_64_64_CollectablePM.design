@@ -3,23 +3,11 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <comment-short comment="false" x="26" y="40">
-                    <int id="0" val="GA: Collected Items"/>
-                </comment-short>
-                <if comment="false" x="26" y="60">
-                    <group eventID="2" id="-1">
-                        <actor-enabledisable-snippet comment="false" x="37" y="90">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                            <int id="2" val="Display On Collected PM"/>
-                        </actor-enabledisable-snippet>
-                        <die comment="false" x="37" y="117">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
-                    </group>
-                    <custom-326 comment="false" id="0" x="0" y="0">
-                        <get-val-64-2 comment="false" id="0" x="0" y="0"/>
-                    </custom-326>
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1"/>
+                    <custom-593 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                    </custom-593>
                 </if>
             </group>
         </init>
@@ -64,4 +52,35 @@
         </event-collide-actortogroup>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-2-593 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <actor-enabledisable-snippet comment="false" x="37" y="75">
+                            <get-byobval-64-593-0 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="Display On Collected PM"/>
+                        </actor-enabledisable-snippet>
+                        <die comment="false" x="37" y="107">
+                            <get-byobval-64-593-0 comment="false" id="0" x="0" y="0"/>
+                        </die>
+                        <return comment="false" x="37" y="139">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <get-val-64-2 comment="false" id="0" x="0" y="0"/>
+                    </custom-326>
+                </if>
+                <return comment="false" x="26" y="176">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-64-593-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-2-593>
+    </group>
+    <group eventID="4" id="-1">
+        <get-byobval-64-593-0 comment="false" x="0" y="0"/>
+    </group>
 </groups>

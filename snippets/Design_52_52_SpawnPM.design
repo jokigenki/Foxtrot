@@ -231,20 +231,55 @@
                     <get-val-52-14 comment="false" id="0" x="0" y="0"/>
                     <ACTOR eid="var" id="1" vid="19"/>
                 </custom-234>
-                <shout comment="false" x="26" y="488">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="Spawned"/>
-                </shout>
-                <if comment="false" x="26" y="515">
-                    <group eventID="2" id="-1">
-                        <custom-256 comment="false" x="37" y="548">
-                            <ACTOR eid="this" id="0"/>
-                        </custom-256>
+                <if comment="false" x="26" y="488">
+                    <group eventID="6" id="-1">
+                        <if comment="false" x="37" y="521">
+                            <group eventID="6" id="-1">
+                                <shout comment="false" x="48" y="559">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Spawned"/>
+                                </shout>
+                                <if comment="false" x="48" y="586">
+                                    <group eventID="6" id="-1">
+                                        <custom-256 comment="false" x="59" y="619">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-256>
+                                    </group>
+                                    <custom-235 comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                    </custom-235>
+                                </if>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <custom-593 comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="19"/>
+                                </custom-593>
+                            </not>
+                        </if>
                     </group>
-                    <custom-235 comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                    </custom-235>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="19"/>
+                        <int id="1" val="Inventory Collectable PM"/>
+                    </has-snippet>
                 </if>
+                <else comment="false" x="26" y="682">
+                    <group eventID="6" id="-1">
+                        <shout comment="false" x="37" y="702">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Spawned"/>
+                        </shout>
+                        <if comment="false" x="37" y="729">
+                            <group eventID="2" id="-1">
+                                <custom-256 comment="false" x="48" y="762">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-256>
+                            </group>
+                            <custom-235 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-235>
+                        </if>
+                    </group>
+                </else>
             </group>
             <int id="0" val="MakeSpawn"/>
         </event-custom>

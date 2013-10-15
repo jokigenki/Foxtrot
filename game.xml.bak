@@ -87,6 +87,7 @@
             <r id="70"/>
             <r id="71"/>
             <r id="67"/>
+            <r id="314"/>
             <r id="72"/>
             <r id="85"/>
             <r id="84"/>
@@ -331,35 +332,35 @@
         <group desc="" id="11" name="Boss"/>
     </groups>
     <cgroups>
-        <cgroup g1="9" g2="8"/>
-        <cgroup g1="9" g2="11"/>
-        <cgroup g1="7" g2="0"/>
-        <cgroup g1="7" g2="3"/>
-        <cgroup g1="7" g2="1"/>
-        <cgroup g1="7" g2="5"/>
-        <cgroup g1="0" g2="0"/>
-        <cgroup g1="0" g2="4"/>
-        <cgroup g1="0" g2="8"/>
-        <cgroup g1="0" g2="3"/>
-        <cgroup g1="0" g2="6"/>
-        <cgroup g1="0" g2="11"/>
-        <cgroup g1="0" g2="10"/>
-        <cgroup g1="0" g2="5"/>
-        <cgroup g1="8" g2="3"/>
-        <cgroup g1="8" g2="6"/>
-        <cgroup g1="8" g2="11"/>
-        <cgroup g1="8" g2="1"/>
-        <cgroup g1="8" g2="10"/>
-        <cgroup g1="8" g2="5"/>
         <cgroup g1="3" g2="3"/>
-        <cgroup g1="3" g2="6"/>
         <cgroup g1="3" g2="11"/>
+        <cgroup g1="3" g2="0"/>
         <cgroup g1="3" g2="10"/>
+        <cgroup g1="3" g2="7"/>
         <cgroup g1="3" g2="5"/>
-        <cgroup g1="11" g2="1"/>
+        <cgroup g1="3" g2="6"/>
+        <cgroup g1="3" g2="8"/>
+        <cgroup g1="11" g2="0"/>
         <cgroup g1="11" g2="10"/>
         <cgroup g1="11" g2="5"/>
-        <cgroup g1="1" g2="10"/>
+        <cgroup g1="11" g2="9"/>
+        <cgroup g1="11" g2="1"/>
+        <cgroup g1="11" g2="8"/>
+        <cgroup g1="0" g2="0"/>
+        <cgroup g1="0" g2="10"/>
+        <cgroup g1="0" g2="7"/>
+        <cgroup g1="0" g2="5"/>
+        <cgroup g1="0" g2="6"/>
+        <cgroup g1="0" g2="8"/>
+        <cgroup g1="0" g2="4"/>
+        <cgroup g1="10" g2="1"/>
+        <cgroup g1="10" g2="8"/>
+        <cgroup g1="7" g2="5"/>
+        <cgroup g1="7" g2="1"/>
+        <cgroup g1="5" g2="8"/>
+        <cgroup g1="6" g2="8"/>
+        <cgroup g1="9" g2="8"/>
+        <cgroup g1="1" g2="8"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -378,14 +379,12 @@
     </attcats>
     <props/>
     <attributes>
-        <number cid="1" id="22" name="Rat Timer" save="true" value="0.0"/>
         <bool cid="-1" id="16" name="Game Was Loaded" save="true" value="false"/>
         <text cid="2" id="14" name="Speed Run Egg Name" save="true" value="0"/>
         <list cid="0" id="0" name="Inventory New" save="true" val="list"/>
         <list cid="0" id="3" name="Collected Items" save="true" val="list"/>
         <bool cid="2" id="10" name="Speed Run In Progress" save="true" value="false"/>
         <list cid="2" id="13" name="Speed Run Collectables" save="true" val="list"/>
-        <number cid="-1" id="23" name="Rat Start Time" save="true" value="0.0"/>
         <number cid="2" id="8" name="Speed Run Timer" save="true" value="0.0"/>
         <list cid="0" id="1" name="Inventory" save="true" val="list"/>
         <number cid="2" id="9" name="Speed Run Success Time" save="true" value="0.0"/>

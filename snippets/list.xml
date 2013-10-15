@@ -850,10 +850,14 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="Collection Event Name" hidden="false" id="1" name="_CollectionEventName" order="1"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="Collectable Id" hidden="false" id="2" name="_CollectableId" order="2"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <blocks/>
+        <blocks>
+            <receiver blockID="592" id="1"/>
+            <receiver blockID="593" id="2"/>
+        </blocks>
         <events>
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
             <event displayName=" Actor - Group" enabled="true" id="3" name="event-collide-actortogroup" order="3" repeats="true"/>
+            <event displayName="Kill if collected" enabled="true" id="4" name="event-custom-block" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_65_65_TimedRegionSwitchPM" classname="scripts.Design_65_65_TimedRegionSwitchPM" desc="Actives the target immediately, then once the player has left the switch will time out after n seconds." description="Actives the target immediately, then once the player has left the switch will time out after n seconds." design="true" drawOrder="0" id="65" language="" name="Timed Region Switch PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -1081,7 +1085,8 @@
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Open animation" hidden="false" id="2" name="_Openanimation" order="2"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Closed animation" hidden="false" id="3" name="_Closedanimation" order="3"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Opening animation" hidden="false" id="4" name="_Openinganimation" order="4"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Collection Event" hidden="false" id="13" name="_CollectionEvent" order="8"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Collection Event" hidden="false" id="13" name="_CollectionEvent" order="5"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Unlock On Creation?" hidden="false" id="14" name="_UnlockOnCreation" order="6"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="651" id="1"/>
@@ -1595,6 +1600,7 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_169_169_DisableBehavioursOnKilledPM" classname="scripts.Design_169_169_DisableBehavioursOnKilledPM" desc="" description="" design="true" drawOrder="0" id="169" language="" name="Disable Behaviours On Killed PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Behaviours To Disable" hidden="false" id="1" name="_BehavioursToDisable" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Killed?" hidden="false" id="2" name="_IsKilled" order="2"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="261" id="1"/>
@@ -1921,6 +1927,7 @@
             <receiver blockID="340" id="24"/>
             <receiver blockID="552" id="27"/>
             <receiver blockID="551" id="26"/>
+            <receiver blockID="594" id="28"/>
         </blocks>
         <events>
             <event displayName="Lock doors" enabled="true" id="17" name="event-custom-block-global" order="20" repeats="true"/>
@@ -1929,6 +1936,7 @@
             <event displayName="Empty collected items" enabled="true" id="18" name="event-custom-block-global" order="21" repeats="true"/>
             <event displayName="Empty Speed Run Collected" enabled="true" id="20" name="event-custom-block-global" order="23" repeats="true"/>
             <event displayName="Do exits match" enabled="true" id="23" name="event-custom-block-global" order="24" repeats="true"/>
+            <event displayName="Unlock Actor" enabled="true" id="25" name="event-custom-block-global" order="26" repeats="true"/>
             <event displayName="Reverse destination" enabled="true" id="24" name="event-custom-block-global" order="25" repeats="true"/>
             <event displayName="Is Door Unlocked? G" enabled="true" id="12" name="event-custom-block-global" order="13" repeats="true"/>
             <event displayName="Unlock Door" enabled="true" id="13" name="event-custom-block-global" order="15" repeats="true"/>
@@ -2721,12 +2729,42 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_30" classname="scripts.SceneEvents_30" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="313" language="" name="SceneEvents_30" oid="-1" package="scripts." sceneid="30" scenespecific="true" shared="false" type="scene">
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Sliding?" hidden="false" id="2" name="_IsSliding" order="1"/>
         <blocks/>
         <events/>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_590" classname="scripts.ActorEvents_590" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="312" language="" name="ActorEvents_590" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_314_314_SlidingScreenPM" classname="scripts.Design_314_314_SlidingScreenPM" desc="" description="" design="true" drawOrder="0" id="314" language="" name="Sliding Screen PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
+        <actor default="" defaultValue="" desc="The actor that will make the screen slide." dropdown="" fullname="Target Actor" hidden="false" id="1" name="_TargetActor" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Current X Screen" hidden="true" id="4" name="_CurrentXScreen" order="10"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Current Y Screen" hidden="true" id="5" name="_CurrentYScreen" order="11"/>
+        <number default="130" defaultValue="130" desc="Moves the position where the screen will change to the right." dropdown="" fullname="X Border" hidden="false" id="6" name="_XBorder" order="4"/>
+        <number default="80" defaultValue="80" desc="Moves the position where the screen will change to downwards." dropdown="" fullname="Y Border" hidden="false" id="7" name="_YBorder" order="5"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Sliding?" hidden="true" id="9" name="_IsSliding" order="9"/>
+        <actor default="" defaultValue="" desc="The object the scene camera is focussed on." dropdown="" fullname="Camera Gizmo" hidden="false" id="10" name="_CameraGizmo" order="1"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target X Screen" hidden="true" id="11" name="_TargetXScreen" order="12"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target Y Screen" hidden="true" id="12" name="_TargetYScreen" order="13"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Screen Centre X" hidden="true" id="13" name="_ScreenCentreX" order="14"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Screen Centre Y" hidden="true" id="14" name="_ScreenCentreY" order="15"/>
+        <number default="0.5" defaultValue="0.5" desc="How long the slide should take." dropdown="" fullname="Slide Time" hidden="false" id="15" name="_SlideTime" order="6"/>
+        <number default="640.0" defaultValue="640.0" desc="How wide a single screen is (note that this is not the same as the device screen dimensions)" dropdown="" fullname="Screen Width" hidden="false" id="17" name="_ScreenWidth" order="7"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Screen Gap" hidden="true" id="19" name="_ScreenGap" order="16"/>
+        <number default="384.0" defaultValue="384.0" desc="How high a single screen is (note that this is not the same as the device screen dimensions)" dropdown="" fullname="Screen Height" hidden="false" id="18" name="_ScreenHeight" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Test X" hidden="true" id="21" name="_TestX" order="17"/>
+        <number default="1" defaultValue="1" desc="" dropdown="" fullname="Number Of Horizontal Screens" hidden="false" id="23" name="_NumberOfHorizontalScreens" order="2"/>
+        <number default="6" defaultValue="6" desc="God knows why we need this!" dropdown="" fullname="Magic Offset" hidden="true" id="22" name="_MagicOffset" order="19"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Screen Gap X" hidden="true" id="25" name="_ScreenGapX" order="20"/>
+        <number default="1" defaultValue="1" desc="" dropdown="" fullname="Number Of Vertical Screens" hidden="false" id="24" name="_NumberOfVerticalScreens" order="3"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Test Y" hidden="true" id="27" name="_TestY" order="18"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Screen Gap Y" hidden="true" id="26" name="_ScreenGapY" order="21"/>
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_540" classname="scripts.ActorEvents_540" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="288" language="" name="ActorEvents_540" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
@@ -2741,16 +2779,8 @@
         <events/>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_27" classname="scripts.SceneEvents_27" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="291" language="" name="SceneEvents_27" oid="-1" package="scripts." sceneid="27" scenespecific="true" shared="false" type="scene">
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Rat Has Left?" hidden="false" id="2" name="_RatHasLeft" order="1"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Rat Left Time" hidden="false" id="3" name="_RatLeftTime" order="2"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Rat Offset" hidden="false" id="4" name="_RatOffset" order="3"/>
         <blocks/>
-        <events>
-            <event displayName="Rat Exit 1" enabled="true" id="1" name="event-custom" order="4" repeats="true"/>
-            <event displayName="Player Exit 1" enabled="true" id="4" name="event-custom" order="5" repeats="true"/>
-            <event displayName="Created" enabled="true" id="5" name="init" order="3" repeats="true"/>
-        </events>
+        <events/>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_546" classname="scripts.ActorEvents_546" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="292" language="" name="ActorEvents_546" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
@@ -2805,18 +2835,6 @@
             <event displayName="Exits Region" enabled="true" id="3" name="event-type-region" order="3" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="true" class="scripts.SceneEvents_28" classname="scripts.SceneEvents_28" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="296" language="" name="SceneEvents_28" oid="-1" package="scripts." sceneid="28" scenespecific="true" shared="false" type="scene">
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Rat Offset" hidden="false" id="2" name="_RatOffset" order="1"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Rat Left Time" hidden="false" id="3" name="_RatLeftTime" order="2"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Rat Has Left?" hidden="false" id="4" name="_RatHasLeft" order="3"/>
-        <blocks/>
-        <events>
-            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Rat Exit" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
-            <event displayName="Player Exit" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
-        </events>
-    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_553" classname="scripts.ActorEvents_553" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="297" language="" name="ActorEvents_553" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
@@ -2864,6 +2882,7 @@
     <snippet attachedevent="false" class="scripts.Design_303_303_ReloadSceneOnDeathPM" classname="scripts.Design_303_303_ReloadSceneOnDeathPM" desc="" description="" design="true" drawOrder="0" id="303" language="" name="Reload Scene On Death PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
         <number default="0.5" defaultValue="0.5" desc="Set the amount of time the screen will fade after dying. In and Out will be the same." dropdown="" fullname="Fade Time" hidden="false" id="1" name="_FadeTime" order="0"/>
         <scene default="" defaultValue="" desc="" dropdown="" fullname="Scene" hidden="false" id="2" name="_Scene" order="1"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Camera Gizmo" hidden="false" id="3" name="_CameraGizmo" order="2"/>
         <blocks/>
         <events>
             <event displayName="On Reload" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
