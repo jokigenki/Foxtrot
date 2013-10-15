@@ -15,8 +15,8 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="16" id="0" name="Region 0" pts="4,-41.0,8.0,41.0,8.0,41.0,-8.0,-41.0,-8.0" r="64" type="box" w="82" x="383" y="288"/>
-        <region b="64" g="64" h="16" id="1" name="Region 1" pts="4,-41.0,8.0,41.0,8.0,41.0,-8.0,-41.0,-8.0" r="64" type="box" w="82" x="239" y="272"/>
+        <region b="64" g="64" h="16" id="0" name="Region 0" pts="4,-41.0,-8.0,41.0,-8.0,41.0,8.0,-41.0,8.0" r="64" type="box" w="82" x="383" y="288"/>
+        <region b="64" g="64" h="16" id="1" name="Region 1" pts="4,-41.0,-8.0,41.0,-8.0,41.0,8.0,-41.0,8.0" r="64" type="box" w="82" x="239" y="272"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -45,7 +45,6 @@
                     <prop id="13" list="0" val=""/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -64,6 +63,7 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
+                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="11" c="false" group="10" id="259" name="Spikes Up 11" sx="1.0" sy="1.0" x="416" y="160" z="4"/>
@@ -282,6 +282,7 @@
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -300,7 +301,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="51" c="true" group="5" id="267" name="Horizontal Lift 51" sx="1.0" sy="1.0" x="416" y="288" z="4">
@@ -371,6 +371,14 @@
         <actor a="0.0" aid="70" c="true" group="10" id="586" name="Moving Spikes 70" sx="1.0" sy="1.0" x="592" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -381,14 +389,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -416,6 +416,14 @@
         <actor a="0.0" aid="71" c="true" group="10" id="586" name="Moving Spikes 71" sx="1.0" sy="1.0" x="608" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.9"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -426,14 +434,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.9"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -465,6 +465,14 @@
         <actor a="0.0" aid="76" c="true" group="10" id="586" name="Moving Spikes 76" sx="1.0" sy="1.0" x="688" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.4"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -475,14 +483,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.4"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -510,6 +510,14 @@
         <actor a="0.0" aid="77" c="true" group="10" id="586" name="Moving Spikes 77" sx="1.0" sy="1.0" x="704" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.3"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -520,14 +528,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.3"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -555,6 +555,14 @@
         <actor a="0.0" aid="78" c="true" group="10" id="586" name="Moving Spikes 78" sx="1.0" sy="1.0" x="720" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.2"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -565,14 +573,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -600,6 +600,14 @@
         <actor a="0.0" aid="79" c="true" group="10" id="586" name="Moving Spikes 79" sx="1.0" sy="1.0" x="736" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -610,14 +618,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -645,6 +645,14 @@
         <actor a="0.0" aid="72" c="true" group="10" id="586" name="Moving Spikes 72" sx="1.0" sy="1.0" x="624" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.8"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -655,14 +663,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.8"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -690,6 +690,14 @@
         <actor a="0.0" aid="73" c="true" group="10" id="586" name="Moving Spikes 73" sx="1.0" sy="1.0" x="640" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.7"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -700,14 +708,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.7"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -735,6 +735,14 @@
         <actor a="0.0" aid="74" c="true" group="10" id="586" name="Moving Spikes 74" sx="1.0" sy="1.0" x="656" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.6"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -745,14 +753,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.6"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -780,6 +780,14 @@
         <actor a="0.0" aid="75" c="true" group="10" id="586" name="Moving Spikes 75" sx="1.0" sy="1.0" x="672" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.5"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -790,14 +798,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.5"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -825,6 +825,14 @@
         <actor a="0.0" aid="85" c="true" group="10" id="586" name="Moving Spikes 85" sx="1.0" sy="1.0" x="832" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.5"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -835,14 +843,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.5"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -870,6 +870,14 @@
         <actor a="0.0" aid="84" c="true" group="10" id="586" name="Moving Spikes 84" sx="1.0" sy="1.0" x="816" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.4"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -880,14 +888,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.4"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -915,6 +915,14 @@
         <actor a="0.0" aid="87" c="true" group="10" id="586" name="Moving Spikes 87" sx="1.0" sy="1.0" x="864" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.7"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -925,14 +933,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.7"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -960,6 +960,14 @@
         <actor a="0.0" aid="86" c="true" group="10" id="586" name="Moving Spikes 86" sx="1.0" sy="1.0" x="848" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.6"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -970,14 +978,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.6"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1005,6 +1005,14 @@
         <actor a="0.0" aid="81" c="true" group="10" id="586" name="Moving Spikes 81" sx="1.0" sy="1.0" x="752" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1015,14 +1023,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1050,6 +1050,14 @@
         <actor a="0.0" aid="80" c="true" group="10" id="586" name="Moving Spikes 80" sx="1.0" sy="1.0" x="768" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1060,14 +1068,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1095,6 +1095,14 @@
         <actor a="0.0" aid="83" c="true" group="10" id="586" name="Moving Spikes 83" sx="1.0" sy="1.0" x="800" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.3"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1105,14 +1113,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.3"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1140,6 +1140,14 @@
         <actor a="0.0" aid="82" c="true" group="10" id="586" name="Moving Spikes 82" sx="1.0" sy="1.0" x="784" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.2"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1150,14 +1158,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1205,6 +1205,7 @@
                     <prop id="13" list="0" val=""/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -1223,12 +1224,19 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="89" c="true" group="10" id="586" name="Moving Spikes 89" sx="1.0" sy="1.0" x="896" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.9"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1239,14 +1247,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.9"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1274,6 +1274,14 @@
         <actor a="0.0" aid="88" c="true" group="10" id="586" name="Moving Spikes 88" sx="1.0" sy="1.0" x="880" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.8"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1284,14 +1292,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.8"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1339,6 +1339,7 @@
                     <prop id="13" list="0" val=""/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -1357,12 +1358,19 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="90" c="true" group="10" id="586" name="Moving Spikes 90" sx="1.0" sy="1.0" x="912" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1373,14 +1381,6 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1418,10 +1418,10 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -1439,7 +1439,7 @@
             <prop id="4" list="0" val="0"/>
             <prop id="5" list="0" val="0"/>
             <prop id="6" list="0" val="96"/>
-            <prop id="7" list="0" val="0"/>
+            <prop id="7" list="0" val="80"/>
             <prop id="8" list="0" val="0.0"/>
             <prop id="9" list="0" val="false"/>
             <prop id="10" list="0" val="55"/>
@@ -1468,11 +1468,11 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="112.0" y="208.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="0.0" y="288.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,80.0,0.0,80.0,16.0" x="0.0" y="256.0"/>
         <p pts="4,16.0,128.0,0.0,128.0,0.0,0.0,16.0,0.0" x="960.0" y="64.0"/>
+        <p pts="28,848.0,0.0,0.0,0.0,0.0,80.0,96.0,80.0,96.0,96.0,160.0,96.0,160.0,64.0,224.0,64.0,224.0,96.0,288.0,96.0,288.0,64.0,336.0,64.0,336.0,96.0,400.0,96.0,400.0,48.0,496.0,48.0,496.0,96.0,560.0,96.0,560.0,64.0,608.0,64.0,608.0,96.0,672.0,96.0,672.0,64.0,720.0,64.0,720.0,96.0,784.0,96.0,784.0,80.0,848.0,80.0" x="80.0" y="80.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="0.0" y="288.0"/>
         <p pts="54,912.0,32.0,912.0,320.0,832.0,320.0,832.0,352.0,464.0,352.0,464.0,320.0,416.0,320.0,416.0,352.0,64.0,352.0,64.0,304.0,48.0,304.0,48.0,288.0,80.0,288.0,80.0,336.0,400.0,336.0,400.0,304.0,480.0,304.0,480.0,336.0,816.0,336.0,816.0,304.0,896.0,304.0,896.0,224.0,800.0,224.0,800.0,240.0,784.0,240.0,784.0,256.0,496.0,256.0,496.0,240.0,480.0,240.0,480.0,224.0,352.0,224.0,352.0,240.0,336.0,240.0,336.0,224.0,320.0,224.0,320.0,240.0,304.0,240.0,304.0,224.0,176.0,224.0,176.0,240.0,160.0,240.0,160.0,224.0,144.0,224.0,144.0,240.0,128.0,240.0,128.0,224.0,32.0,224.0,32.0,208.0,896.0,208.0,896.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0" x="112.0" y="0.0"/>
-        <p pts="40,32.0,192.0,32.0,224.0,0.0,224.0,0.0,208.0,16.0,208.0,16.0,160.0,128.0,160.0,128.0,176.0,192.0,176.0,192.0,144.0,256.0,144.0,256.0,176.0,320.0,176.0,320.0,144.0,368.0,144.0,368.0,176.0,432.0,176.0,432.0,128.0,528.0,128.0,528.0,176.0,592.0,176.0,592.0,144.0,640.0,144.0,640.0,176.0,704.0,176.0,704.0,144.0,752.0,144.0,752.0,176.0,816.0,176.0,816.0,160.0,880.0,160.0,880.0,80.0,32.0,80.0,32.0,112.0,16.0,112.0,16.0,0.0,32.0,0.0,32.0,64.0,896.0,64.0,896.0,192.0" x="48.0" y="0.0"/>
+        <p pts="10,80.0,192.0,80.0,272.0,0.0,272.0,0.0,256.0,64.0,256.0,64.0,0.0,80.0,0.0,80.0,64.0,944.0,64.0,944.0,192.0" x="0.0" y="0.0"/>
+        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="112.0" y="208.0"/>
     </terrain>
 </scene>
