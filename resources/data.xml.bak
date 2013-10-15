@@ -217,6 +217,7 @@
         </snippets>
     </actor>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="574" name="BG 1_6" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
+    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="594" name="BG Farm 1_10" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="572" name="BG Farm 1_4" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="575" name="BG Farm 1_5" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="576" name="BG Farm 1_7" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
@@ -1813,10 +1814,6 @@
                 <prop id="5" list="0" val="200"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="54">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="77">
                 <prop id="1" list="0" val="Farm1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -1963,7 +1960,6 @@
                     <text order="0" value="Deadly Sides PM"/>
                     <text order="1" value="Timed Shoot PM"/>
                 </prop>
-                <prop id="2" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="141">
@@ -2836,7 +2832,6 @@
                     <text order="0" value="Player Controls PM"/>
                     <text order="1" value="Walking PM"/>
                 </prop>
-                <prop id="2" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="139">
@@ -3062,9 +3057,6 @@
             </s>
         </snippets>
     </actor>
-    <custom-block blocktag="custom-593" blocktype="NORMAL" code="Boolean((~.say(&quot;Inventory Collectable PM&quot;, &quot;KillIfCollected&quot;)))" desc="" global="false" gui="Kill %0 if collected" id="593" message="KillIfCollected" name="KillIfCollected" oid="-1" return="BOOLEAN" shared="false" snippetID="64">
-        <blank name="Self" order="0" type="ACTOR"/>
-    </custom-block>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="16" id="545" name="Laser Beamer Down" shared="false" width="16">
         <anim across="2" down="1" durations="100,100" height="16" id="0" loop="true" name="Active" numframes="2" originx="8" originy="8" sync="false" width="32">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
@@ -3702,7 +3694,7 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="587" name="Moving Spikes" shared="false" width="16">
         <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="8" originy="8" sync="false" width="16">
-            <poly data="4,1,8,15,8,15,16,1,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+            <poly data="4,0,8,16,8,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="309" fixedrot="true" fric="0.2" gid="10" id="586" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Moving Spikes" oid="-1" pausable="true" rest="0.0" shared="false" sprite="587" static="false">
@@ -4158,7 +4150,7 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="17" list="0" val="0"/>
                 <prop id="16" list="0" val="0"/>
-                <prop id="19" list="0" val="-1"/>
+                <prop id="19" list="0" val="No Sound"/>
                 <prop id="18" list="0" val="0.75"/>
                 <prop id="21" list="0" val="Jumping"/>
                 <prop id="20" list="0" val="35.0"/>
@@ -4352,7 +4344,6 @@
                 <prop id="1" list="1" val="">
                     <text order="0" value="Deadly Sides PM"/>
                 </prop>
-                <prop id="2" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="141">
@@ -5064,9 +5055,6 @@
         <blank name="Target" order="1" type="ACTOR"/>
         <blank name="Direction" order="2" type="TEXT"/>
     </custom-block>
-    <custom-block blocktag="custom-594" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockActor(~);" desc="" global="true" gui="Unlock %0" id="594" message="UnlockActor" name="UnlockActor" oid="-1" return="VOID" shared="false" snippetID="206">
-        <blank name="Door Actor" order="0" type="ACTOR"/>
-    </custom-block>
     <custom-block blocktag="custom-325" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockExit(~);" desc="Unlocks the named exit." global="true" gui="Unlock %0" id="325" message="UnlockExit" name="UnlockExit" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Exit Name" order="0" type="TEXT"/>
     </custom-block>
@@ -5173,14 +5161,11 @@
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="228" fixedrot="false" fric="0.2" gid="3" id="387" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Water" oid="-1" pausable="true" rest="0.0" shared="false" sprite="388" static="true">
         <snippets>
-            <s enabled="true" id="252">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="227">
-                <prop id="1" list="0" val="0.9"/>
+                <prop id="1" list="0" val="1"/>
                 <prop id="2" list="0" val="0"/>
-                <prop id="3" list="0" val="0.99"/>
-                <prop id="4" list="0" val="true"/>
+                <prop id="3" list="0" val="0.97"/>
+                <prop id="4" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
