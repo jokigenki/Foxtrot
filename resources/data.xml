@@ -83,6 +83,12 @@
             </s>
         </snippets>
     </actor>
+    <tileset across="2" atlasID="0" desc="" down="2" id="592" name="Altar" oid="-1" shared="false" th="16" tw="16">
+        <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="2" id="2" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="3" id="3" order="-1"/>
+    </tileset>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="Sitting in the Armchair resets the game" eventsnippetid="115" fixedrot="false" fric="0.2" gid="3" id="169" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Armchair" oid="-1" pausable="true" rest="0.0" shared="false" sprite="170" static="true">
         <snippets>
             <s enabled="true" id="188">
@@ -217,6 +223,7 @@
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="577" name="BG Farm 1_8" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="578" name="BG Farm 1_9" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="585" name="BG Farm Boss" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
+    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="593" name="BG Farm Boss Key" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="415" name="BG Farm1_01" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="419" name="BG Farm1_02" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="420" name="BG Farm1_3" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
