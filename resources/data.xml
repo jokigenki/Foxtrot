@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <custom-block blocktag="custom-595" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.(~,~);" desc="" global="true" gui="[MISSING]" id="595" message="" name="" oid="-1" return="VOID" shared="false" snippetID="206">
+        <blank name="Door ACtor" order="0" type="ACTOR"/>
+        <blank name="Door Actor" order="1" type="ACTOR"/>
+    </custom-block>
     <custom-block blocktag="custom-556" blocktype="ACTION" code="~.say(&quot;Complex Movement PM&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="556" message="" name="" oid="-1" return="VOID" shared="false" snippetID="298">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
@@ -5054,6 +5058,9 @@
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Target" order="1" type="ACTOR"/>
         <blank name="Direction" order="2" type="TEXT"/>
+    </custom-block>
+    <custom-block blocktag="custom-596" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockActor(~);" desc="" global="true" gui="Unlock %0" id="596" message="UnlockActor" name="UnlockActor" oid="-1" return="VOID" shared="false" snippetID="206">
+        <blank name="Door Actor" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-325" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockExit(~);" desc="Unlocks the named exit." global="true" gui="Unlock %0" id="325" message="UnlockExit" name="UnlockExit" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Exit Name" order="0" type="TEXT"/>

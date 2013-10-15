@@ -54,6 +54,8 @@ public var _Closedanimation:String;
 public var _Openinganimation:String;
 
 public var _CollectionEvent:String;
+
+public var _UnlockDoorOnCreate:Bool;
     public function _customEvent_whenThisHears_CollectionEvent():Void
 {
         if(!(_IsOpen))
@@ -106,6 +108,8 @@ nameMap.set("Closed animation", "_Closedanimation");
 nameMap.set("Opening animation", "_Openinganimation");
 nameMap.set("Collection Event", "_CollectionEvent");
 _CollectionEvent = "";
+nameMap.set("Unlock Door On Create?", "_UnlockDoorOnCreate");
+_UnlockDoorOnCreate = false;
 nameMap.set("Actor", "actor");
 
 	}
@@ -115,9 +119,9 @@ nameMap.set("Actor", "actor");
 		            /* "this delay is to give the other behaviours time to set up" */
         /* "GA: Unlocked Doors (List)" */
         runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
-                    if()
+                    if(_UnlockDoorOnCreate)
 {
-
+                        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockActor(actor);
 }
 
                     actor.say("Collectable Door PM", "_customEvent_" + "DoorActivated");
