@@ -10,7 +10,7 @@
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
-        <ref id="43"/>
+        <ref id="593"/>
     </backgrounds>
     <foregrounds/>
     <joints/>
@@ -18,7 +18,7 @@
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="280" y="184" z="3"/>
-        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="528" y="162" z="2"/>
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="495" y="162" z="2"/>
         <actor a="0.0" aid="9" c="true" group="2" id="152" name="Horizontal Scene Exit 9" sx="1.0" sy="1.0" x="528" y="144" z="4">
             <snippets>
                 <s enabled="true" id="304">
@@ -30,6 +30,9 @@
                     <prop id="7" list="0" val="true"/>
                     <prop id="8" list="0" val="false"/>
                     <prop id="9" list="0" val="false"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="11" list="0" val="0.5"/>
+                    <prop id="12" list="0" val="0.5"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="100"/>
@@ -82,6 +85,7 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="213"/>
                 <s enabled="true" id="43">
                     <prop id="51" list="1" val=""/>
                     <prop id="49" list="1" val=""/>
@@ -89,7 +93,6 @@
                     <prop id="47" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="213"/>
                 <s enabled="true" id="147">
                     <prop id="2" list="0" val="dead-l"/>
                     <prop id="3" list="0" val="dead-l"/>
@@ -151,10 +154,10 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -173,6 +176,6 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="32,320.0,80.0,320.0,96.0,224.0,96.0,224.0,16.0,192.0,16.0,192.0,96.0,96.0,96.0,96.0,48.0,16.0,48.0,16.0,128.0,32.0,128.0,32.0,96.0,64.0,96.0,64.0,128.0,336.0,128.0,336.0,112.0,496.0,112.0,496.0,128.0,352.0,128.0,352.0,144.0,0.0,144.0,0.0,32.0,112.0,32.0,112.0,80.0,176.0,80.0,176.0,0.0,240.0,0.0,240.0,80.0,304.0,80.0,304.0,64.0,496.0,64.0,496.0,80.0" x="144.0" y="80.0"/>
+        <p pts="32,304.0,80.0,304.0,96.0,224.0,96.0,224.0,16.0,192.0,16.0,192.0,96.0,96.0,96.0,96.0,48.0,16.0,48.0,16.0,128.0,32.0,128.0,32.0,96.0,64.0,96.0,64.0,128.0,336.0,128.0,336.0,112.0,496.0,112.0,496.0,128.0,352.0,128.0,352.0,144.0,0.0,144.0,0.0,32.0,112.0,32.0,112.0,80.0,176.0,80.0,176.0,0.0,240.0,0.0,240.0,80.0,288.0,80.0,288.0,64.0,496.0,64.0,496.0,80.0" x="144.0" y="80.0"/>
     </terrain>
 </scene>
