@@ -46,8 +46,12 @@ class Design_169_169_DisableBehavioursOnKilledPM extends ActorScript
 {          	
 	
 public var _BehavioursToDisable:Array<Dynamic>;
+
+public var _IsKilled:Bool;
     public function _customEvent_Killed():Void
 {
+        _IsKilled = true;
+propertyChanged("_IsKilled", _IsKilled);
         for(item in cast(_BehavioursToDisable, Array<Dynamic>))
 {
             if(actor.hasBehavior(item))
@@ -82,6 +86,8 @@ var __Self:Actor = actor;
 		super(actor, engine);	
 		nameMap.set("Behaviours To Disable", "_BehavioursToDisable");
 _BehavioursToDisable = [];
+nameMap.set("Is Killed?", "_IsKilled");
+_IsKilled = false;
 nameMap.set("Actor", "actor");
 
 	}

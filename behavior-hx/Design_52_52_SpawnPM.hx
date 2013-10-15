@@ -94,10 +94,28 @@ propertyChanged("_LastSpawn", _LastSpawn);
         _CurrentSpawnCount += 1;
 propertyChanged("_CurrentSpawnCount", _CurrentSpawnCount);
         scripts.Design_27_27_ActorExtrasPM._customBlock_SetActorValues(_CreationAttributes,_LastSpawn);
-        actor.shout("_customEvent_" + "Spawned");
-        if(cast((actor.say("Spawn PM", "_customBlock_CanSpawn")), Bool))
+        if(_LastSpawn.hasBehavior("Inventory Collectable PM"))
 {
-            actor.say("Spawn PM", "_customBlock_ContinueSpawn");
+            if(!(cast((_LastSpawn.say("Inventory Collectable PM", "_customBlock_KillIfCollected")), Bool)))
+{
+                actor.shout("_customEvent_" + "Spawned");
+                if(cast((actor.say("Spawn PM", "_customBlock_CanSpawn")), Bool))
+{
+                    actor.say("Spawn PM", "_customBlock_ContinueSpawn");
+}
+
+}
+
+}
+
+        else
+{
+            actor.shout("_customEvent_" + "Spawned");
+            if(cast((actor.say("Spawn PM", "_customBlock_CanSpawn")), Bool))
+{
+                actor.say("Spawn PM", "_customBlock_ContinueSpawn");
+}
+
 }
 
 }

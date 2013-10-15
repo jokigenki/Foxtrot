@@ -68,15 +68,13 @@ propertyChanged("_RatHasLeft", _RatHasLeft);
             if(_RatHasLeft)
 {
                 /* "if the rat has already left, we need to calculate the time since it did so" */
-                setGameAttribute("Rat Timer", (_RatLeftTime - flash.Lib.getTimer()));
-                trace("" + (("" + "rat left: ") + ("" + getGameAttribute("Rat Timer"))));
+                trace("" + (("" + "rat left: ") + ("" + "")));
 }
 
             else
 {
                 /* "if the player leaves first, we need to find how long the rat would take to cover the remaining distance (~5ms/pixel)" */
-                setGameAttribute("Rat Timer", ((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorInScene(getGameAttribute("Last Rat"))), Actor).getX() - getActor(47).getX()) * 5));
-                trace("" + (("" + "player left: ") + ("" + getGameAttribute("Rat Timer"))));
+                trace("" + (("" + "player left: ") + ("" + "")));
 }
 
 }
@@ -103,10 +101,10 @@ _RatHasLeft = false;
 	{
 		            if((getGameAttribute("Last Destination") == "Factory2_06|Factory2_07|B|A"))
 {
-            if((getGameAttribute("Rat Timer") < 0))
+            if(( < 0))
 {
                 /* "move the rat and egg spawners across to simulate the rat leaving the last scene earlier than the player" */
-                _RatOffset = asNumber(Math.floor((getGameAttribute("Rat Timer") / -4)));
+                _RatOffset = asNumber(Math.floor(( / -4)));
 propertyChanged("_RatOffset", _RatOffset);
                 if((_RatOffset > 400))
 {
@@ -118,13 +116,13 @@ propertyChanged("_RatOffset", _RatOffset);
                 getActor(17).setX((getActor(17).getX() + _RatOffset));
 }
 
-            else if((getGameAttribute("Rat Timer") > 0))
+            else if(( > 0))
 {
-                trace("" + (("" + "show rat after ") + ("" + getGameAttribute("Rat Timer"))));
+                trace("" + (("" + "show rat after ") + ("" + "")));
                 /* "remove the trigger, and manually trigger the rat after a certain time" */
                 recycleActor(getActor(45));
                 recycleActor(getActor(14));
-                runLater(1000 * (getGameAttribute("Rat Timer") / 1000), function(timeTask:TimedTask):Void {
+                runLater(1000 * ( / 1000), function(timeTask:TimedTask):Void {
                             getActor(16).shout("_customEvent_" + "MakeSpawn");
                             getActor(17).shout("_customEvent_" + "MakeSpawn");
 }, null);

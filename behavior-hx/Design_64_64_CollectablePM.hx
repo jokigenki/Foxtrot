@@ -48,6 +48,21 @@ class Design_64_64_CollectablePM extends ActorScript
 public var _CollectionEventName:String;
 
 public var _CollectableId:String;
+    
+
+/* Params are:__Self */
+public function _customBlock_KillIfCollected():Bool
+{
+var __Self:Actor = actor;
+        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(_CollectableId)), Bool))
+{
+            __Self.disableBehavior("Display On Collected PM");
+            recycleActor(__Self);
+            return true;
+}
+
+        return false;
+}
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -63,11 +78,9 @@ nameMap.set("Actor", "actor");
 	
 	override public function init()
 	{
-		            /* "GA: Collected Items" */
-        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(_CollectableId)), Bool))
+		            if(cast((actor.say("Inventory Collectable PM", "_customBlock_KillIfCollected")), Bool))
 {
-            actor.disableBehavior("Display On Collected PM");
-            recycleActor(actor);
+
 }
 
     addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {

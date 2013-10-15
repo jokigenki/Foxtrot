@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="6" id="-1">
+                        <if comment="false" x="37" y="83">
+                            <group eventID="6" id="-1">
+                                <stop comment="false" x="48" y="121"/>
+                            </group>
+                            <get-attribute comment="false" id="0" x="0" y="0">
+                                <get-val-314-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Disable Behaviours On Killed PM"/>
+                                <int id="2" val="_IsKilled"/>
+                            </get-attribute>
+                        </if>
+                        <if comment="false" x="37" y="153">
+                            <group eventID="1" id="-1">
+                                <stop comment="false" x="48" y="183"/>
+                            </group>
+                            <or comment="false" id="0" x="0" y="0">
+                                <get-val-314-9 comment="false" id="0" x="0" y="0"/>
+                                <is-transitioning comment="false" id="1" x="0" y="0"/>
+                            </or>
+                        </if>
+                        <set-val-314-21 comment="false" x="37" y="215">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-314-13 comment="false" id="0" x="0" y="0"/>
+                                <get-val-314-6 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-val-314-21>
+                        <set-val-314-27 comment="false" x="37" y="245">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-314-14 comment="false" id="0" x="0" y="0"/>
+                                <get-val-314-7 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-val-314-27>
+                        <set-val-314-11 comment="false" x="37" y="275">
+                            <int id="0" val="0"/>
+                        </set-val-314-11>
+                        <set-val-314-12 comment="false" x="37" y="295">
+                            <int id="0" val="0"/>
+                        </set-val-314-12>
+                        <while comment="false" x="37" y="315">
+                            <group eventID="6" id="-1">
+                                <if comment="false" x="48" y="353">
+                                    <group eventID="1" id="-1">
+                                        <break comment="false" x="59" y="396"/>
+                                    </group>
+                                    <lesseq comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <get-val-314-1 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="0"/>
+                                        </get-xy>
+                                        <get-val-314-21 comment="false" id="1" x="0" y="0"/>
+                                    </lesseq>
+                                </if>
+                                <incdec comment="false" x="48" y="428">
+                                    <int id="0" val="11"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                                <incdec comment="false" x="48" y="455">
+                                    <int id="0" val="21"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-314-25 comment="false" id="2" x="0" y="0"/>
+                                </incdec>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-314-21 comment="false" id="0" x="0" y="0"/>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </scene-wh>
+                            </less>
+                        </while>
+                        <while comment="false" x="37" y="499">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="537">
+                                    <group eventID="1" id="-1">
+                                        <break comment="false" x="59" y="580"/>
+                                    </group>
+                                    <lesseq comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <get-val-314-1 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-xy>
+                                        <get-val-314-27 comment="false" id="1" x="0" y="0"/>
+                                    </lesseq>
+                                </if>
+                                <incdec comment="false" x="48" y="612">
+                                    <int id="0" val="12"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                                <incdec comment="false" x="48" y="639">
+                                    <int id="0" val="27"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-314-26 comment="false" id="2" x="0" y="0"/>
+                                </incdec>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-314-27 comment="false" id="0" x="0" y="0"/>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </scene-wh>
+                            </less>
+                        </while>
+                        <if comment="false" x="37" y="683">
+                            <group eventID="1" id="-1">
+                                <set-val-314-4 comment="false" x="48" y="718">
+                                    <get-val-314-11 comment="false" id="0" x="0" y="0"/>
+                                </set-val-314-4>
+                                <set-val-314-5 comment="false" x="48" y="743">
+                                    <get-val-314-12 comment="false" id="0" x="0" y="0"/>
+                                </set-val-314-5>
+                                <moveToBy comment="false" x="48" y="768">
+                                    <get-val-314-10 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                    <plus comment="false" id="2" x="0" y="0">
+                                        <get-val-314-13 comment="false" id="0" x="0" y="0"/>
+                                        <times comment="false" id="1" x="0" y="0">
+                                            <get-val-314-25 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-314-11 comment="false" id="1" x="0" y="0"/>
+                                        </times>
+                                    </plus>
+                                    <plus comment="false" id="3" x="0" y="0">
+                                        <get-val-314-14 comment="false" id="0" x="0" y="0"/>
+                                        <times comment="false" id="1" x="0" y="0">
+                                            <get-val-314-26 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-314-12 comment="false" id="1" x="0" y="0"/>
+                                        </times>
+                                    </plus>
+                                    <get-val-314-15 comment="false" id="4" x="0" y="0"/>
+                                    <int id="5" val="9"/>
+                                </moveToBy>
+                                <set-val-314-9 comment="false" x="48" y="810">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-314-9>
+                                <dolater comment="false" x="48" y="835">
+                                    <group eventID="1" id="-1">
+                                        <set-val-314-9 comment="false" x="59" y="867">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-314-9>
+                                    </group>
+                                    <get-val-314-15 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="lastcreated" id="2"/>
+                                </dolater>
+                            </group>
+                            <or comment="false" id="0" x="0" y="0">
+                                <noteq comment="false" id="0" x="0" y="0">
+                                    <get-val-314-11 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-314-4 comment="false" id="1" x="0" y="0"/>
+                                </noteq>
+                                <noteq comment="false" id="1" x="0" y="0">
+                                    <get-val-314-12 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-314-5 comment="false" id="1" x="0" y="0"/>
+                                </noteq>
+                            </or>
+                        </if>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <custom-65 comment="false" id="0" x="0" y="0">
+                            <get-val-314-1 comment="false" id="0" x="0" y="0"/>
+                        </custom-65>
+                    </not>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-314-13 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <minus comment="false" id="0" x="0" y="0">
+                            <div comment="false" id="0" x="0" y="0">
+                                <get-val-314-17 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="2"/>
+                            </div>
+                            <div comment="false" id="1" x="0" y="0">
+                                <get-wh comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="10"/>
+                                    <int id="1" val="0"/>
+                                </get-wh>
+                                <int id="1" val="2"/>
+                            </div>
+                        </minus>
+                        <get-val-314-22 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-314-13>
+                <set-val-314-14 comment="false" x="26" y="88">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <minus comment="false" id="0" x="0" y="0">
+                            <div comment="false" id="0" x="0" y="0">
+                                <get-val-314-18 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="2"/>
+                            </div>
+                            <div comment="false" id="1" x="0" y="0">
+                                <get-wh comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="10"/>
+                                    <int id="1" val="1"/>
+                                </get-wh>
+                                <int id="1" val="2"/>
+                            </div>
+                        </minus>
+                        <get-val-314-22 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-314-14>
+                <if comment="false" x="26" y="136">
+                    <group eventID="2" id="-1">
+                        <set-val-314-25 comment="false" x="37" y="166">
+                            <div comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <scene-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </scene-wh>
+                                    <get-val-314-17 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-val-314-23 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                </minus>
+                            </div>
+                        </set-val-314-25>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-314-23 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="221">
+                    <group eventID="2" id="-1">
+                        <set-val-314-25 comment="false" x="37" y="241">
+                            <scene-wh comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </scene-wh>
+                        </set-val-314-25>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="286">
+                    <group eventID="2" id="-1">
+                        <set-val-314-26 comment="false" x="37" y="316">
+                            <div comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <scene-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="1"/>
+                                    </scene-wh>
+                                    <get-val-314-18 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-val-314-24 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                </minus>
+                            </div>
+                        </set-val-314-26>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-314-24 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="371">
+                    <group eventID="2" id="-1">
+                        <set-val-314-26 comment="false" x="37" y="391">
+                            <scene-wh comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </scene-wh>
+                        </set-val-314-26>
+                    </group>
+                </else>
+                <set-val-314-4 comment="false" x="26" y="436">
+                    <int id="0" val="-1"/>
+                </set-val-314-4>
+                <set-val-314-5 comment="false" x="26" y="456">
+                    <int id="0" val="-1"/>
+                </set-val-314-5>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
