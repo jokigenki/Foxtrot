@@ -3,10 +3,16 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <custom-325 comment="false" x="26" y="45">
+                <print comment="false" x="26" y="45">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="UNLOCK: "/>
+                        <get-val-120-2 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </print>
+                <custom-325 comment="false" x="26" y="75">
                     <get-val-120-2 comment="false" id="0" x="0" y="0"/>
                 </custom-325>
-                <save-game comment="false" x="26" y="70">
+                <save-game comment="false" x="26" y="100">
                     <group eventID="1" id="-1"/>
                 </save-game>
             </group>

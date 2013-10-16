@@ -85,7 +85,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="213"/>
                 <s enabled="true" id="43">
                     <prop id="51" list="1" val=""/>
                     <prop id="49" list="1" val=""/>
@@ -93,6 +92,7 @@
                     <prop id="47" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="213"/>
                 <s enabled="true" id="147">
                     <prop id="2" list="0" val="dead-l"/>
                     <prop id="3" list="0" val="dead-l"/>
@@ -140,7 +140,22 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="11" c="false" group="3" id="221" name="Boss Key 11" sx="1.0" sy="1.0" x="179" y="159" z="4"/>
+        <actor a="0.0" aid="11" c="true" group="3" id="221" name="Boss Key 11" sx="1.0" sy="1.0" x="179" y="159" z="4">
+            <snippets>
+                <s enabled="true" id="158"/>
+                <s enabled="true" id="91">
+                    <prop id="1" list="0" val="KeyCollected"/>
+                    <prop id="2" list="0" val="11"/>
+                    <prop id="3" list="0" val="Farm_Boss_Key"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="120">
+                    <prop id="1" list="0" val="KeyCollected"/>
+                    <prop id="2" list="0" val="Farm1_11|Farm1_Boss|B|A"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -154,10 +169,10 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
