@@ -1,2 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <say comment="false" x="26" y="42">
+                    <ACTOR eid="239" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Activate"/>
+                </say>
+                <dolater comment="false" x="26" y="69">
+                    <group eventID="1" id="-1">
+                        <periodic comment="false" x="37" y="96">
+                            <group eventID="1" id="-1">
+                                <incdec comment="false" x="48" y="123">
+                                    <int id="0" val="2"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                                <if comment="false" x="48" y="150">
+                                    <group eventID="1" id="-1">
+                                        <die comment="false" x="59" y="180">
+                                            <ACTOR eid="242" id="0"/>
+                                        </die>
+                                        <cancel comment="false" x="59" y="207"/>
+                                    </group>
+                                    <lesseq comment="false" id="0" x="0" y="0">
+                                        <get-val-313-2 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="0"/>
+                                    </lesseq>
+                                </if>
+                                <set-attribute comment="false" x="48" y="239">
+                                    <ACTOR eid="242" id="0"/>
+                                    <int id="1" val="Filling Liquid PM"/>
+                                    <int id="2" val="_LiquidLevel"/>
+                                    <get-val-313-2 comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                            </group>
+                            <int id="0" val="0.05"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </periodic>
+                    </group>
+                    <int id="0" val="1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="295">
+                    <group eventID="1" id="-1">
+                        <say comment="false" x="37" y="322">
+                            <ACTOR eid="240" id="0"/>
+                            <int id="1" val="Activate On Event PM"/>
+                            <int id="2" val="Activate"/>
+                        </say>
+                    </group>
+                    <int id="0" val="3"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="0" id="1"/>
+            <ACTOR eid="3" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-313-2 comment="false" x="26" y="40">
+                    <int id="0" val="32"/>
+                </set-val-313-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

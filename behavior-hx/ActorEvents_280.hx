@@ -42,45 +42,19 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_263_263_FillingLiquidPM extends ActorScript
+class ActorEvents_280 extends ActorScript
 {          	
 	
-public var _LiquidLevel:Float;
-
-public var _MaxLevel:Float;
-
-public var _ClipHeight:Float;
-
-public var _ScaleX:Float;
-
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Liquid Level", "_LiquidLevel");
-_LiquidLevel = 0.0;
-nameMap.set("Max Level", "_MaxLevel");
-_MaxLevel = 0.0;
-nameMap.set("Clip Height", "_ClipHeight");
-_ClipHeight = 0.0;
-nameMap.set("Scale X", "_ScaleX");
-_ScaleX = 0;
-nameMap.set("Actor", "actor");
-
+		
 	}
 	
 	override public function init()
 	{
-		            _ScaleX = asNumber(((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(actor)), Float) - cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float)) / actor.getWidth()));
-propertyChanged("_ScaleX", _ScaleX);
-    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
-if(wrapper.enabled){
-        var level = _LiquidLevel < _MaxLevel ? _LiquidLevel : _MaxLevel;
-var h = (level / _ClipHeight) * 100;
-        actor.growTo((100 * _ScaleX)/100, h/100, 0.1, Linear.easeNone);
-}
-});
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

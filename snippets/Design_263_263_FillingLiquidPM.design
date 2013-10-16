@@ -8,7 +8,10 @@
                 </code-long>
                 <scaleTo comment="false" x="26" y="200">
                     <ACTOR eid="this" id="0"/>
-                    <int id="1" val="100"/>
+                    <times comment="false" id="1" x="0" y="0">
+                        <int id="0" val="100"/>
+                        <get-val-263-12 comment="false" id="1" x="0" y="0"/>
+                    </times>
                     <code-short comment="false" id="2" x="0" y="0">
                         <int id="0" val="h"/>
                     </code-short>
@@ -19,4 +22,27 @@
         </step>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-263-12 comment="false" x="26" y="40">
+                    <div comment="false" id="0" x="0" y="0">
+                        <minus comment="false" id="0" x="0" y="0">
+                            <custom-61 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-61>
+                            <custom-63 comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-63>
+                        </minus>
+                        <get-wh comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-wh>
+                    </div>
+                </set-val-263-12>
+            </group>
+        </init>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>
