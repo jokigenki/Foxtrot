@@ -83,7 +83,6 @@ propertyChanged("_IsRunning", _IsRunning);
             return;
 }
 
-        trace("" + (("" + "Make ") + ("" + ("" + _SpawnType))));
         createRecycledActor(_SpawnType, actor.getX(), actor.getY(), Script.FRONT);
         _LastSpawn = getLastCreatedActor();
 propertyChanged("_LastSpawn", _LastSpawn);
@@ -96,7 +95,7 @@ propertyChanged("_CurrentSpawnCount", _CurrentSpawnCount);
         scripts.Design_27_27_ActorExtrasPM._customBlock_SetActorValues(_CreationAttributes,_LastSpawn);
         if(_LastSpawn.hasBehavior("Inventory Collectable PM"))
 {
-            if(!(cast((_LastSpawn.say("Inventory Collectable PM", "_customBlock_KillIfCollected")), Bool)))
+            if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(_LastSpawn.getValue("Inventory Collectable PM", "_CollectableId"))), Bool)))
 {
                 actor.shout("_customEvent_" + "Spawned");
                 if(cast((actor.say("Spawn PM", "_customBlock_CanSpawn")), Bool))
@@ -104,6 +103,11 @@ propertyChanged("_CurrentSpawnCount", _CurrentSpawnCount);
                     actor.say("Spawn PM", "_customBlock_ContinueSpawn");
 }
 
+}
+
+            else
+{
+                recycleActor(_LastSpawn);
 }
 
 }

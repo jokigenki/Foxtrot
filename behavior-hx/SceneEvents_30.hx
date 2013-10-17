@@ -56,7 +56,7 @@ public var _LiquidLevel:Float;
 		nameMap.set("Exit Name", "_ExitName");
 _ExitName = "";
 nameMap.set("Liquid Level", "_LiquidLevel");
-_LiquidLevel = 0;
+_LiquidLevel = 0.0;
 
 	}
 	

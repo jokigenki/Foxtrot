@@ -307,10 +307,10 @@
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Stomper" order="1" type="ACTOR"/>
     </custom-block>
-    <custom-block blocktag="custom-393" blocktype="NORMAL" code="Boolean((~.say(&quot;Jumping PM&quot;, &quot;CanJumpFromSurface&quot;)))" desc="" global="false" gui="Can jump from current surface?" id="393" message="CanJumpFromSurface" name="CanJumpFromSurface" oid="-1" return="BOOLEAN" shared="false" snippetID="50">
+    <custom-block blocktag="custom-235" blocktype="NORMAL" code="Boolean((~.say(&quot;Spawn PM&quot;, &quot;CanSpawn&quot;)))" desc="" global="false" gui="Can Spawn?" id="235" message="CanSpawn" name="CanSpawn" oid="-1" return="BOOLEAN" shared="false" snippetID="52">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
-    <custom-block blocktag="custom-235" blocktype="NORMAL" code="Boolean((~.say(&quot;Spawn PM&quot;, &quot;CanSpawn&quot;)))" desc="" global="false" gui="Can Spawn?" id="235" message="CanSpawn" name="CanSpawn" oid="-1" return="BOOLEAN" shared="false" snippetID="52">
+    <custom-block blocktag="custom-602" blocktype="NORMAL" code="Boolean((~.say(&quot;Swimming PM&quot;, &quot;CanSwim&quot;)))" desc="" global="false" gui="%0 Can Swim?" id="602" message="CanSwim" name="CanSwim" oid="-1" return="BOOLEAN" shared="false" snippetID="317">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-89" blocktype="NORMAL" code="Boolean((~.say(&quot;Animation Manager&quot;, &quot;CategorySameAs&quot;, ~)))" desc="" global="false" gui="Current Category Same As %1" id="89" message="CategorySameAs" name="CategorySameAs" oid="-1" return="BOOLEAN" shared="false" snippetID="42">
@@ -735,6 +735,10 @@
             </s>
             <s enabled="true" id="224">
                 <prop id="1" list="0" val="2.0"/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -1773,6 +1777,10 @@
             </s>
             <s enabled="true" id="224">
                 <prop id="1" list="0" val="2"/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -2822,10 +2830,10 @@
         <anim across="4" down="1" durations="100,100,100,100" height="32" id="3" loop="true" name="walk-r" numframes="4" originx="16" originy="16" sync="false" width="128">
             <poly data="6,8,5,8,31,9,32,31,32,32,31,32,5" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="2" down="1" durations="100,100" height="32" id="8" loop="false" name="jump-l" numframes="2" originx="16" originy="16" sync="false" width="64">
+        <anim across="1" down="1" durations="100" height="32" id="8" loop="false" name="jump-l" numframes="1" originx="16" originy="16" sync="false" width="32">
             <poly data="6,0,5,0,31,1,32,23,32,24,31,24,5" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="2" down="1" durations="100,100" height="32" id="9" loop="false" name="jump-r" numframes="2" originx="16" originy="16" sync="false" width="64">
+        <anim across="1" down="1" durations="100" height="32" id="9" loop="false" name="jump-r" numframes="1" originx="16" originy="16" sync="false" width="32">
             <poly data="6,8,5,8,31,9,32,31,32,32,31,32,5" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="32" id="12" loop="false" name="fall-r" numframes="1" originx="16" originy="16" sync="false" width="32">
@@ -2865,13 +2873,6 @@
                 <prop id="11" list="0" val="up"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="169">
-                <prop id="1" list="1" val="">
-                    <text order="0" value="Player Controls PM"/>
-                    <text order="1" value="Walking PM"/>
-                </prop>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="139">
                 <prop id="1" list="0" val="Bump Out PM"/>
                 <prop id="2" list="0" val="false"/>
@@ -2879,39 +2880,6 @@
             </s>
             <s enabled="true" id="138">
                 <prop id="1" list="0" val="2.0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="38">
-                <prop id="1" list="0" val="0"/>
-                <prop id="2" list="0" val="0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="42">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2" list="0" val=""/>
-                <prop id="3" list="0" val="idle-r"/>
-                <prop id="4" list="0" val="idle-l"/>
-                <prop id="5" list="1" val="">
-                    <text order="0" value="Dead"/>
-                    <text order="1" value="Ground Pounding"/>
-                    <text order="2" value="Ducking"/>
-                    <text order="3" value="Wall Sliding"/>
-                    <text order="4" value="Falling"/>
-                    <text order="5" value="Wall Jumping"/>
-                    <text order="6" value="Air Jumping"/>
-                    <text order="7" value="Jumping"/>
-                    <text order="8" value="Running"/>
-                    <text order="9" value="Walking"/>
-                </prop>
-                <prop id="6" list="0" val="false"/>
-                <prop id="7" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="43">
-                <prop id="51" list="1" val=""/>
-                <prop id="49" list="1" val=""/>
-                <prop id="52" list="1" val=""/>
-                <prop id="47" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="false" id="131">
@@ -2935,33 +2903,6 @@
                 <prop id="14" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="41">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2" list="0" val=""/>
-                <prop id="3" list="0" val="0"/>
-                <prop id="4" list="0" val="0"/>
-                <prop id="5" list="0" val="false"/>
-                <prop id="6" list="0" val="6"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="46">
-                <prop id="1" list="0" val="0"/>
-                <prop id="2" list="0" val="false"/>
-                <prop id="3" list="0" val="fall-r"/>
-                <prop id="4" list="0" val="fall-l"/>
-                <prop id="5" list="0" val="0"/>
-                <prop id="6" list="0" val="Falling"/>
-                <prop id="9" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="47">
-                <prop id="3" list="0" val="0.9"/>
-                <prop id="4" list="0" val="0.999"/>
-                <prop id="5" list="0" val="0.975"/>
-                <prop id="6" list="0" val="0.975"/>
-                <prop id="7" list="0" val="0.9"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="74">
                 <prop id="3" list="0" val="90"/>
                 <prop id="4" list="0" val="25.0"/>
@@ -2977,30 +2918,9 @@
                 <prop id="14" list="1" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="224">
-                <prop id="1" list="0" val="0.8"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="153">
                 <prop id="1" list="0" val="0.5"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="50">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2" list="0" val="false"/>
-                <prop id="8" list="0" val="0.075"/>
-                <prop id="12" list="0" val="jump-r"/>
-                <prop id="13" list="0" val="jump-l"/>
-                <prop id="14" list="0" val="false"/>
-                <prop id="15" list="0" val="0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="17" list="0" val="0"/>
-                <prop id="16" list="0" val="0"/>
-                <prop id="19" list="0" val="-1"/>
-                <prop id="18" list="0" val="0.75"/>
-                <prop id="21" list="0" val="Jumping"/>
-                <prop id="20" list="0" val="29.0"/>
-                <prop id="22" list="0" val="30"/>
             </s>
             <s enabled="true" id="256">
                 <prop id="1" list="0" val="skele-r"/>
@@ -3012,14 +2932,7 @@
                 <prop id="1" list="0" val="Animate Out PM"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="48">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2" list="0" val="false"/>
-                <prop id="3" list="1" val=""/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="54">
-                <prop id="1" list="0" val="false"/>
+            <s enabled="true" id="215">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="147">
@@ -3030,21 +2943,6 @@
                 <prop id="8" list="0" val="0"/>
                 <prop id="9" list="0" val="20"/>
                 <prop id="10" list="0" val=""/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="215">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="148">
-                <prop id="1" list="0" val="true"/>
-                <prop id="2" list="0" val="true"/>
-                <prop id="3" list="0" val="true"/>
-                <prop id="4" list="0" val="true"/>
-                <prop id="5" list="1" val="">
-                    <text order="0" value="Rat"/>
-                </prop>
-                <prop id="6" list="0" val="Bump Out PM"/>
-                <prop id="7" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="29">
@@ -3078,6 +2976,18 @@
                 <prop id="18" list="0" val="16"/>
                 <prop id="20" list="0" val="false"/>
             </s>
+            <s enabled="true" id="148">
+                <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="true"/>
+                <prop id="3" list="0" val="true"/>
+                <prop id="4" list="0" val="true"/>
+                <prop id="5" list="1" val="">
+                    <text order="0" value="Rat"/>
+                </prop>
+                <prop id="6" list="0" val="Bump Out PM"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="151">
                 <prop id="1" list="0" val="0.5"/>
                 <prop id="2" list="0" val="0"/>
@@ -3091,6 +3001,126 @@
                 <prop id="10" list="0" val=""/>
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0.0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="169">
+                <prop id="1" list="1" val="">
+                    <text order="0" value="Player Controls PM"/>
+                    <text order="1" value="Walking PM"/>
+                </prop>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="38">
+                <prop id="1" list="0" val="0"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="42">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val=""/>
+                <prop id="3" list="0" val="idle-r"/>
+                <prop id="4" list="0" val="idle-l"/>
+                <prop id="5" list="1" val="">
+                    <text order="0" value="Dead"/>
+                    <text order="1" value="Ground Pounding"/>
+                    <text order="2" value="Ducking"/>
+                    <text order="3" value="Wall Sliding"/>
+                    <text order="4" value="Falling"/>
+                    <text order="5" value="Wall Jumping"/>
+                    <text order="6" value="Air Jumping"/>
+                    <text order="7" value="Jumping"/>
+                    <text order="8" value="Swimming"/>
+                    <text order="9" value="Running"/>
+                    <text order="10" value="Walking"/>
+                </prop>
+                <prop id="6" list="0" val="false"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="43">
+                <prop id="51" list="1" val=""/>
+                <prop id="49" list="1" val=""/>
+                <prop id="52" list="1" val=""/>
+                <prop id="47" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="41">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val=""/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="false"/>
+                <prop id="6" list="0" val="6"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="46">
+                <prop id="1" list="0" val="0"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val="fall-r"/>
+                <prop id="4" list="0" val="fall-l"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="Falling"/>
+                <prop id="9" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="317">
+                <prop id="2" list="0" val="Jumping"/>
+                <prop id="4" list="0" val="false"/>
+                <prop id="6" list="0" val="0.0"/>
+                <prop id="13" list="0" val="false"/>
+                <prop id="14" list="0" val="false"/>
+                <prop id="15" list="0" val="-1"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="jump-r"/>
+                <prop id="16" list="0" val="jump-l"/>
+                <prop id="19" list="0" val="5"/>
+                <prop id="18" list="0" val="5"/>
+                <prop id="21" list="0" val="0"/>
+                <prop id="20" list="0" val="0.75"/>
+                <prop id="22" list="0" val="0.075"/>
+            </s>
+            <s enabled="true" id="47">
+                <prop id="3" list="0" val="0.9"/>
+                <prop id="4" list="0" val="0.999"/>
+                <prop id="5" list="0" val="0.975"/>
+                <prop id="6" list="0" val="0.975"/>
+                <prop id="7" list="0" val="0.9"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="224">
+                <prop id="1" list="0" val="0.8"/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="50">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="8" list="0" val="0.075"/>
+                <prop id="12" list="0" val="jump-r"/>
+                <prop id="13" list="0" val="jump-l"/>
+                <prop id="14" list="0" val="false"/>
+                <prop id="15" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="0"/>
+                <prop id="16" list="0" val="0"/>
+                <prop id="19" list="0" val="-1"/>
+                <prop id="18" list="0" val="0.75"/>
+                <prop id="21" list="0" val="Jumping"/>
+                <prop id="20" list="0" val="29.0"/>
+                <prop id="22" list="0" val="30"/>
+            </s>
+            <s enabled="true" id="48">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -4515,19 +4545,19 @@
         </snippets>
     </actor>
     <sprite atlasID="2" default="0" defaultAnimation="0" desc="" height="64" id="270" name="Rooster" shared="false" width="48">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="true" name="idle-l" numframes="1" originx="24" originy="32" sync="false" width="48">
+        <anim across="1" down="1" durations="100" height="64" id="0" loop="true" name="idle-l" numframes="1" originx="6" originy="24" sync="false" width="48">
             <poly data="4,8,10,28,10,28,64,8,64" density="0.1" fric="0.2" gid="-1000" id="0" name="idle-l" rest="0.0" sensor="false"/>
             <poly data="4,28,28,42,28,42,48,28,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="64" id="1" loop="true" name="idle-r" numframes="1" originx="24" originy="32" sync="false" width="48">
+        <anim across="1" down="1" durations="100" height="64" id="1" loop="true" name="idle-r" numframes="1" originx="27" originy="36" sync="false" width="48">
             <poly data="4,18,10,38,10,38,64,18,64" density="0.1" fric="0.2" gid="-1000" id="0" name="idle-r" rest="0.0" sensor="false"/>
             <poly data="4,4,28,18,28,18,48,4,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="64" id="2" loop="true" name="walk-l" numframes="1" originx="24" originy="32" sync="false" width="48">
+        <anim across="1" down="1" durations="100" height="64" id="2" loop="true" name="walk-l" numframes="1" originx="27" originy="36" sync="false" width="48">
             <poly data="4,8,10,28,10,28,64,8,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk-l" rest="0.0" sensor="false"/>
             <poly data="4,28,28,42,28,42,48,28,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="64" id="3" loop="true" name="walk-r" numframes="1" originx="24" originy="32" sync="false" width="48">
+        <anim across="1" down="1" durations="100" height="64" id="3" loop="true" name="walk-r" numframes="1" originx="27" originy="36" sync="false" width="48">
             <poly data="4,18,10,38,10,38,64,18,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk-r" rest="0.0" sensor="false"/>
             <poly data="4,4,28,18,28,18,48,4,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
@@ -4655,6 +4685,10 @@
         <blank name="Value" order="1" type="BOOLEAN"/>
     </custom-block>
     <custom-block blocktag="custom-37" blocktype="ACTION" code="" desc="Setting this prevents the actor from jumping." global="false" gui="Set Prevent Jump to %1 for %0" id="37" message="SetPreventJump" name="SetPreventJump" oid="-1" return="VOID" shared="false" snippetID="-1">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Value" order="1" type="BOOLEAN"/>
+    </custom-block>
+    <custom-block blocktag="custom-603" blocktype="ACTION" code="~.say(&quot;Swimming PM&quot;, &quot;SetPreventSwim&quot;, ~);" desc="" global="false" gui="Set Prevent Swim to %1 for %0" id="603" message="SetPreventSwim" name="SetPreventSwim" oid="-1" return="VOID" shared="false" snippetID="317">
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Value" order="1" type="BOOLEAN"/>
     </custom-block>
@@ -5204,12 +5238,12 @@
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="228" fixedrot="false" fric="0.2" gid="3" id="387" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Water" oid="-1" pausable="true" rest="0.0" shared="false" sprite="388" static="true">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="228" fixedrot="true" fric="0.2" gid="3" id="387" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Water" oid="-1" pausable="true" rest="0.0" shared="false" sprite="388" static="false">
         <snippets>
             <s enabled="true" id="227">
-                <prop id="1" list="0" val="1"/>
+                <prop id="1" list="0" val="1.1"/>
                 <prop id="2" list="0" val="0"/>
-                <prop id="3" list="0" val="0.982"/>
+                <prop id="3" list="0" val="0.7"/>
                 <prop id="4" list="0" val="true"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>

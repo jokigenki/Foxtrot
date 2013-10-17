@@ -1,2 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <stop comment="false" x="37" y="88"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <has-snippet comment="false" id="0" x="0" y="0">
+                            <other-actor comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Liquid PM"/>
+                        </has-snippet>
+                    </not>
+                </if>
+                <custom-code comment="false" x="26" y="120">
+                    <int id="0" val="var liquidDivisor = 1.0;"/>
+                </custom-code>
+                <custom-code comment="false" x="26" y="140">
+                    <int id="0" val="var multiplier = 1.0;"/>
+                </custom-code>
+                <set-val-224-5 comment="false" x="26" y="160">
+                    <as-number comment="false" id="0" x="0" y="0">
+                        <get-attribute comment="false" id="0" x="0" y="0">
+                            <other-actor comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Liquid PM"/>
+                            <int id="2" val="_Buoyancy"/>
+                        </get-attribute>
+                    </as-number>
+                </set-val-224-5>
+                <set-val-224-4 comment="false" x="26" y="203">
+                    <as-number comment="false" id="0" x="0" y="0">
+                        <get-attribute comment="false" id="0" x="0" y="0">
+                            <other-actor comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Liquid PM"/>
+                            <int id="2" val="_Liquidity"/>
+                        </get-attribute>
+                    </as-number>
+                </set-val-224-4>
+                <set-val-224-2 comment="false" x="26" y="246">
+                    <times comment="false" id="0" x="0" y="0">
+                        <div comment="false" id="0" x="0" y="0">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-224-5 comment="false" id="0" x="0" y="0"/>
+                                <get-val-224-1 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                            <int id="1" val="2"/>
+                        </div>
+                        <grav-xy comment="false" id="1" x="0" y="0">
+                            <int id="0" val="1"/>
+                        </grav-xy>
+                    </times>
+                </set-val-224-2>
+                <code-long comment="false" x="26" y="286">
+                    <int id="0" val="// adjust for how much of the other actor is in the liquid&#10;var ft = scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop;&#10;var fb = scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom;&#10;var fl = scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft;&#10;var fr = scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight;&#10;&#10;var topExposed = ft(event.otherActor) - ft(event.thisActor);&#10;var botExposed = fb(event.thisActor) - fb(event.otherActor);&#10;var leftExposed = fl(event.otherActor) - fl(event.thisActor);&#10;var rightExposed = fr(event.thisActor) - fr(event.otherActor);&#10;&#10;var a = 0;&#10;var b = 0;&#10;if (topExposed &amp;gt; 0) a += Std.int(topExposed);&#10;if (botExposed &amp;gt; 0) a += Std.int(botExposed);&#10;if (leftExposed &amp;gt; 0) b += Std.int(leftExposed);&#10;if (rightExposed &amp;gt; 0) b += Std.int(rightExposed);&#10;&#10;var h = event.thisActor.getHeight();&#10;var w = event.thisActor.getWidth();&#10;multiplier = ((w * h) - ((a * b) + ((h - a) * b) + ((w - b) * a))) / (w * h);&#10;&#10;_TotalBuoyancy *= multiplier;&#10;liquidDivisor = _Liquidity + ((1 - _Liquidity) * multiplier);"/>
+                </code-long>
+                <if comment="false" x="26" y="446">
+                    <group eventID="1" id="-1">
+                        <push-shove comment="false" x="37" y="476">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="1"/>
+                            <neg comment="false" id="4" x="0" y="0">
+                                <get-val-224-2 comment="false" id="0" x="0" y="0"/>
+                            </neg>
+                        </push-shove>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-224-2 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </less>
+                </if>
+                <else-if comment="false" x="26" y="525">
+                    <group eventID="1" id="-1">
+                        <push-shove comment="false" x="37" y="555">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="-1"/>
+                            <get-val-224-2 comment="false" id="4" x="0" y="0"/>
+                        </push-shove>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-224-2 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </more>
+                </else-if>
+                <set-dxy comment="false" x="26" y="599">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <times comment="false" id="2" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                            <code-short comment="false" id="1" x="0" y="0">
+                                <int id="0" val="liquidDivisor"/>
+                            </code-short>
+                        </times>
+                        <int id="1" val="0.95"/>
+                    </times>
+                </set-dxy>
+                <set-dxy comment="false" x="26" y="649">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <times comment="false" id="2" x="0" y="0">
+                        <get-dxy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-dxy>
+                        <code-short comment="false" id="1" x="0" y="0">
+                            <int id="0" val="liquidDivisor"/>
+                        </code-short>
+                    </times>
+                </set-dxy>
+                <if comment="false" x="26" y="694">
+                    <group eventID="1" id="-1">
+                        <set-val-224-6 comment="false" x="37" y="732">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-224-6>
+                    </group>
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <other-actor comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Liquid PM"/>
+                        <int id="2" val="_AllowSwimming"/>
+                    </get-attribute>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <actor-set-prop comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="In Liquid?"/>
+                    <get-val-224-6 comment="false" id="2" x="0" y="0"/>
+                </actor-set-prop>
+                <set-val-224-6 comment="false" x="26" y="72">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-224-6>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
