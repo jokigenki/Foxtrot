@@ -13,8 +13,8 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="32" id="0" name="Region 0" pts="4,-182.0,-16.0,182.0,-16.0,182.0,16.0,-182.0,16.0" r="64" type="box" w="364" x="178" y="70"/>
-        <region b="64" g="64" h="32" id="1" name="Region 1" pts="4,-182.0,-16.0,182.0,-16.0,182.0,16.0,-182.0,16.0" r="64" type="box" w="364" x="96" y="104"/>
+        <region b="64" g="64" h="32" id="0" name="Region 0" pts="4,-182.0,16.0,182.0,16.0,182.0,-16.0,-182.0,-16.0" r="64" type="box" w="364" x="178" y="70"/>
+        <region b="64" g="64" h="32" id="1" name="Region 1" pts="4,-182.0,16.0,182.0,16.0,182.0,-16.0,-182.0,-16.0" r="64" type="box" w="364" x="96" y="104"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -45,6 +45,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -63,7 +64,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="8" c="false" group="11" id="269" name="Rooster 8" sx="1.0" sy="1.0" x="319" y="272" z="2"/>
@@ -235,10 +235,10 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
