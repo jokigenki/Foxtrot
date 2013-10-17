@@ -88,14 +88,6 @@ public function _customBlock_GetPreventJumping():Bool
 var __Self:Actor = actor;
         return !(__Self.getValue("Jumping PM", "_PreventJumping"));
 }
-    
-
-/* Params are: */
-public function _customBlock_CanJumpFromSurface():Bool
-{
-var __Self:Actor = actor;
-        return (asBoolean(actor.getActorValue("On Ground?")) || asBoolean(actor.getActorValue("In Liquid?")));
-}
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -160,24 +152,20 @@ propertyChanged("_CanJump", _CanJump);
 
         else if(asBoolean(actor.getActorValue("In Liquid?")))
 {
-            if(_KeyReleased)
-{
-                _CanJump = true;
+            _CanJump = false;
 propertyChanged("_CanJump", _CanJump);
-}
-
 }
 
         /* "Check for the jump key press, but also allow a bit of leeway for smoother jumping" */
         /* "Custom: \"Jump\" was switched on for Self" */
         if(cast((actor.say("Control Adapter PM", "_customBlock_ControlSwitchedOn", ["Jump"])), Bool))
 {
-            if(!(cast((actor.say("Jumping PM", "_customBlock_CanJumpFromSurface")), Bool)))
+            if(!(asBoolean(actor.getActorValue("On Ground?"))))
 {
                 runLater(1000 * 0.15, function(timeTask:TimedTask):Void {
                             if(actor.isAlive())
 {
-                                if(!(cast((actor.say("Jumping PM", "_customBlock_CanJumpFromSurface")), Bool)))
+                                if(!(asBoolean(actor.getActorValue("On Ground?"))))
 {
                                     _KeyReleased = false;
 propertyChanged("_KeyReleased", _KeyReleased);
@@ -206,7 +194,7 @@ propertyChanged("_KeyReleased", _KeyReleased);
 
         /* "Detect the jump key press, and initiate the jump" */
         /* "Custom: Is \"Jump\" on for Self" */
-        if((cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool) && (_CanJump && (_KeyReleased && cast((actor.say("Jumping PM", "_customBlock_CanJumpFromSurface")), Bool)))))
+        if((cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool) && (_CanJump && (_KeyReleased && asBoolean(actor.getActorValue("On Ground?"))))))
 {
             playSound(_JumpSound);
             _ElapsedJumpTime = asNumber(0);

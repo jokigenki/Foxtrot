@@ -74,7 +74,6 @@ nameMap.set("Actor", "actor");
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         actor.setActorValue("On Ground?", _HitGround);
-        actor.setActorValue("In Liquid?", false);
         _HitGround = false;
 propertyChanged("_HitGround", _HitGround);
 }
