@@ -2,9 +2,9 @@
 <scene depth="4" desc="" eventsnippetid="94" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="5" name="_Outside" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
     <layers>
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="0"/>
-        <layer color="0,255,0" id="2" name="Player" order="2"/>
+        <layer color="0,255,0" id="2" name="Player" order="1"/>
         <layer color="64,64,64" id="4" name="Triggers" order="3"/>
-        <layer color="0,0,255" id="1" name="Ground" order="4"/>
+        <layer color="255,255,0" id="5" name="Ground2" order="4"/>
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
@@ -39,8 +39,10 @@
                     <prop id="3" list="0" val="Closed"/>
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
+                    <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -59,7 +61,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="9" c="true" group="2" id="213" name="Door BLUE 9" sx="1.0" sy="1.0" x="368" y="256" z="4">
@@ -85,6 +86,7 @@
                     <prop id="3" list="0" val="Closed"/>
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
+                    <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="133">
@@ -141,6 +143,7 @@
                     <prop id="3" list="0" val="Closed"/>
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val=""/>
+                    <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="133">
@@ -185,6 +188,7 @@
                     <prop id="3" list="0" val="Closed"/>
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
+                    <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="160"/>
