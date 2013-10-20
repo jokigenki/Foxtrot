@@ -92,7 +92,7 @@ nameMap.set("Actor", "actor");
 if(wrapper.enabled){
         if(!(_IsDisplaying))
 {
-            createRecycledActor(actor.getType(), (getScreenWidth() / 2), (getScreenHeight() / 2), Script.FRONT);
+            createRecycledActor(actor.getType(), ((getScreenWidth() / 2) + getScreenX()), ((getScreenHeight() / 2) + getScreenY()), Script.FRONT);
             getLastCreatedActor().setValue("Display On Collected PM", "_IsDisplaying", true);
             getLastCreatedActor().setAnimation("" + ("" + (("" + ("" + actor.getAnimation())) + ("" + " Collected"))));
             getLastCreatedActor().growTo(_StartSizePercent/100, _StartSizePercent/100, 0, Linear.easeNone);

@@ -63,6 +63,8 @@ public var _CurrentFudge:Float;
 
 public var _HasJumped:Bool;
 
+public var _LastXTouch:Float;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
@@ -84,6 +86,8 @@ nameMap.set("Current Fudge", "_CurrentFudge");
 _CurrentFudge = 0.0;
 nameMap.set("Has Jumped?", "_HasJumped");
 _HasJumped = false;
+nameMap.set("Last X Touch", "_LastXTouch");
+_LastXTouch = 0.0;
 
 	}
 	
@@ -100,9 +104,13 @@ propertyChanged("_CurrentFudge", _CurrentFudge);
             disableThisBehavior();
 }
 
+        _LastXTouch = asNumber(0);
+propertyChanged("_LastXTouch", _LastXTouch);
     addMultiTouchStartListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if(((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE) < (getSceneWidth() / 2)))
+        _LastXTouch = asNumber((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE));
+propertyChanged("_LastXTouch", _LastXTouch);
+        if(((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE) < (getScreenWidth() / 2)))
 {
             if((_LeftTouchID == -1))
 {

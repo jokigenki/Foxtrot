@@ -6,7 +6,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_39" classname="scripts.ActorEvents_39" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="15" language="" name="ActorEvents_39" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_16_16_CameraFollowPlayer" classname="scripts.Design_16_16_CameraFollowPlayer" desc="Makes the camera follow this Actor." description="Makes the camera follow this Actor." design="true" drawOrder="0" id="16" language="" name="Camera Follow Player" oid="-1" package="" scenespecific="false" shared="false" type="actor">
         <number default="0" defaultValue="0" desc="Horizontal Offset from the Actor" dropdown="" fullname="X Offset" hidden="false" id="1" name="_XOffset" order="1"/>
@@ -27,12 +29,14 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Jump Fudge Coefficient" hidden="false" id="10" name="_JumpFudgeCoefficient" order="6"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Fudge" hidden="true" id="11" name="_CurrentFudge" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Jumped?" hidden="true" id="12" name="_HasJumped" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Last X Touch" hidden="false" id="13" name="_LastXTouch" order="9"/>
         <blocks/>
         <events>
             <event displayName="Multi-Touch" enabled="true" id="1" name="event-device-multitouch" order="2" repeats="true"/>
             <event displayName="Multi-Touch" enabled="true" id="2" name="event-device-multitouch" order="3" repeats="true"/>
             <event displayName="Created" enabled="true" id="3" name="init" order="1" repeats="true"/>
             <event displayName="Updated" enabled="true" id="4" name="step" order="4" repeats="true"/>
+            <event displayName="Drawing" enabled="false" id="5" name="draw" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_21_21_SceneTransitionPM" classname="scripts.Design_21_21_SceneTransitionPM" desc="" description="" design="true" drawOrder="0" id="21" language="" name="Scene Transition PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
@@ -45,6 +49,7 @@
             <event displayName="Switch Scene" enabled="true" id="2" name="event-custom" order="3" repeats="true"/>
             <event displayName="Created" enabled="true" id="3" name="init" order="2" repeats="true"/>
             <event displayName="Switch scene" enabled="true" id="5" name="event-custom-block" order="5" repeats="true"/>
+            <event displayName="Drawing" enabled="false" id="6" name="draw" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_20_20_DisplayPlayerPositionPM" classname="scripts.Design_20_20_DisplayPlayerPositionPM" desc="" description="" design="true" drawOrder="0" id="20" language="" name="Display Player Position PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
@@ -252,8 +257,8 @@
         <number default="250" defaultValue="250" desc="Angle used when jumping towards the left&lt;br&gt;&lt;br&gt;&#10;default = 250" dropdown="" fullname="Jump Left Angle" hidden="false" id="12" name="_JumpLeftAngle" order="11"/>
         <number default="65" defaultValue="65" desc="Amount of force to apply during the jump&lt;br&gt;&lt;br&gt;&#10;default = 65" dropdown="" fullname="Jump Force" hidden="false" id="13" name="_JumpForce" order="12"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Right Animation" hidden="false" id="14" name="_WallJumpRightAnimation" order="13"/>
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Left Animation" hidden="false" id="15" name="_WallJumpLeftAnimation" order="14"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <text default="Wall Jumping" defaultValue="Wall Jumping" desc="Set the category used for the animation - used for the hierarchy." dropdown="" fullname="Animation Category" hidden="false" id="17" name="_AnimationCategory" order="16"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Prevent Wall Jump" hidden="true" id="16" name="_PreventWallJump" order="15"/>
         <blocks>
@@ -621,8 +626,8 @@
         <control default="" defaultValue="" desc="Select the key used to move to the left." dropdown="" fullname="Left Key" hidden="false" id="12" name="_LeftKey" order="12"/>
         <number default="0.4" defaultValue="0.4" desc="How long should it take to get up to max speed?&lt;br&gt;&lt;br&gt;&#10;default = 0.4" dropdown="" fullname="Time To Max Speed" hidden="false" id="13" name="_TimeToMaxSpeed" order="13"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Can Slide?" hidden="false" id="14" name="_CanSlide" order="14"/>
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Right Animation" hidden="false" id="15" name="_RunRightAnimation" order="15"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Slip Right Animation" hidden="false" id="17" name="_SlipRightAnimation" order="17"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Left Animation" hidden="false" id="16" name="_RunLeftAnimation" order="16"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Full Run Right Animation" hidden="false" id="19" name="_FullRunRightAnimation" order="19"/>
@@ -1779,8 +1784,8 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
-            <event displayName="Actor Killed" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Actor Killed" enabled="true" id="1" name="event-actor-create-kill" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_188_188_DisplaysPopupPM" classname="scripts.Design_188_188_DisplaysPopupPM" desc="" description="" design="true" drawOrder="0" id="188" language="" name="Displays Popup PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -2803,6 +2808,22 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_318_318_BehaviourExtras" classname="scripts.Design_318_318_BehaviourExtras" desc="" description="" design="true" drawOrder="0" id="318" language="" name="Behaviour Extras" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks>
+            <receiver blockID="608" id="1"/>
+            <receiver blockID="609" id="2"/>
+            <receiver blockID="610" id="3"/>
+            <receiver blockID="611" id="4"/>
+            <receiver blockID="612" id="5"/>
+            <receiver blockID="613" id="6"/>
+        </blocks>
+        <events>
+            <event displayName="Set Behaviour Value" enabled="true" id="1" name="event-custom-block" order="1" repeats="true"/>
+            <event displayName="Trigger Event When Ready" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
+            <event displayName="Trigger All When Ready" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_540" classname="scripts.ActorEvents_540" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="288" language="" name="ActorEvents_540" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
@@ -2845,12 +2866,15 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Collision X" hidden="true" id="12" name="_CollisionX" order="11"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Collision Y" hidden="true" id="13" name="_CollisionY" order="12"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Use Key Line?" hidden="false" id="14" name="_UseKeyLine" order="13"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Beam Colours" hidden="false" id="15" name="_BeamColours" order="14"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Beam Colours" hidden="false" id="15" name="_BeamColours" order="14"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="First Collision Actor" hidden="true" id="17" name="_FirstCollisionActor" order="16"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Collision?" hidden="true" id="16" name="_HasCollision" order="15"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beam Target Y" hidden="true" id="19" name="_BeamTargetY" order="18"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beam Target X" hidden="true" id="18" name="_BeamTargetX" order="17"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charged?" hidden="true" id="21" name="_IsCharged" order="20"/>
+        <number default="0.5" defaultValue="0.5" desc="" dropdown="" fullname="Charge Time" hidden="false" id="20" name="_ChargeTime" order="19"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charging?" hidden="true" id="22" name="_IsCharging" order="21"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
@@ -2868,8 +2892,8 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Door Is Ready?" hidden="true" id="10" name="_DoorIsReady" order="6"/>
         <actor default="0" defaultValue="0" desc="" dropdown="" fullname="Actor by door" hidden="true" id="12" name="_Actorbydoor" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Exit only when on ground" hidden="false" id="13" name="_Exitonlywhenonground" order="8"/>
-        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="15" name="_SaveExit" order="10"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="15" name="_SaveExit" order="10"/>
         <blocks>
             <receiver blockID="651" id="1"/>
             <receiver blockID="102" id="2"/>

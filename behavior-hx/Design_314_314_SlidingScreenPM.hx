@@ -220,6 +220,30 @@ propertyChanged("_TargetYScreen", _TargetYScreen);
 propertyChanged("_TestY", _TestY);
 }
 
+            if((_TargetXScreen >= _NumberOfHorizontalScreens))
+{
+                _TargetXScreen = asNumber((_NumberOfHorizontalScreens - 1));
+propertyChanged("_TargetXScreen", _TargetXScreen);
+}
+
+            else if((_TargetXScreen < 0))
+{
+                _TargetXScreen = asNumber(0);
+propertyChanged("_TargetXScreen", _TargetXScreen);
+}
+
+            if((_TargetYScreen >= _NumberOfVerticalScreens))
+{
+                _TargetYScreen = asNumber((_NumberOfVerticalScreens - 1));
+propertyChanged("_TargetYScreen", _TargetYScreen);
+}
+
+            else if((_TargetYScreen < 0))
+{
+                _TargetYScreen = asNumber(0);
+propertyChanged("_TargetYScreen", _TargetYScreen);
+}
+
             if((!(_TargetXScreen == _CurrentXScreen) || !(_TargetYScreen == _CurrentYScreen)))
 {
                 _CurrentXScreen = asNumber(_TargetXScreen);
