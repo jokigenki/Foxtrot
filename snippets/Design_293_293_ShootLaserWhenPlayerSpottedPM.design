@@ -5,53 +5,59 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <set-val-293-3 comment="false" x="37" y="83">
+                        <set-val-293-10 comment="false" x="37" y="83">
+                            <int id="0" val="30"/>
+                        </set-val-293-10>
+                        <set-val-293-3 comment="false" x="37" y="103">
                             <int id="0" val="0"/>
                         </set-val-293-3>
-                        <custom-code comment="false" x="37" y="103">
+                        <custom-code comment="false" x="37" y="123">
                             <int id="0" val="updateTarget();"/>
                         </custom-code>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
-                        <eq comment="false" id="0" x="0" y="0">
+                        <as-boolean comment="false" id="0" x="0" y="0">
                             <actor-get-prop comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <int id="1" val="Facing Right?"/>
                             </actor-get-prop>
-                            <true comment="false" id="1" x="0" y="0"/>
-                        </eq>
+                        </as-boolean>
                         <noteq comment="false" id="1" x="0" y="0">
                             <get-val-293-3 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="0"/>
                         </noteq>
                     </and>
                 </if>
-                <else-if comment="false" x="26" y="135">
+                <else-if comment="false" x="26" y="155">
                     <group eventID="1" id="-1">
-                        <set-val-293-3 comment="false" x="37" y="178">
+                        <set-val-293-10 comment="false" x="37" y="203">
+                            <int id="0" val="2"/>
+                        </set-val-293-10>
+                        <set-val-293-3 comment="false" x="37" y="223">
                             <int id="0" val="180"/>
                         </set-val-293-3>
-                        <custom-code comment="false" x="37" y="198">
+                        <custom-code comment="false" x="37" y="243">
                             <int id="0" val="updateTarget();"/>
                         </custom-code>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
-                        <eq comment="false" id="0" x="0" y="0">
-                            <actor-get-prop comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="Facing Right?"/>
-                            </actor-get-prop>
-                            <false comment="false" id="1" x="0" y="0"/>
-                        </eq>
+                        <not comment="false" id="0" x="0" y="0">
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </not>
                         <noteq comment="false" id="1" x="0" y="0">
                             <get-val-293-3 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="180"/>
                         </noteq>
                     </and>
                 </else-if>
-                <if comment="false" x="26" y="230">
+                <if comment="false" x="26" y="275">
                     <group eventID="1" id="-1">
-                        <code-long comment="false" x="37" y="260">
+                        <code-long comment="false" x="37" y="305">
                             <int id="0" val="var currentDistX = 0.0;&#10;var currentDistY = 0.0;&#10;var currentDist = 1000000.0;&#10;&#10;_HasCollision = false;&#10;_FrameCount = 0;&#10;var startX = actor.getX() + _XOffset;&#10;var startY = actor.getY() + _YOffset;&#10;var targetX = startX + _BeamTargetX;&#10;var targetY = startY + _BeamTargetY;&#10;var results:Array&amp;lt;Dynamic&amp;gt; = RaycastAPI.rayCast(startX, startY, targetX, targetY);&#10;&#10;_FirstCollisionActor = null;&#10;for (i in 0...results.length)&#10;{&#10;&#9;var item:Array&amp;lt;Dynamic&amp;gt; = results[i];&#10;&#9;var collisionActor:Actor = item[1];&#10;&#9;if (collisionActor.hasBehavior(&amp;quot;Transparent PM&amp;quot;) == true) continue;&#10;&#9;//TODO: Reflection&#10;&#9;&#10;&#9;_HasCollision = true;&#10;&#9;var distX = actor.getX() - item[2];&#10;&#9;var distY = actor.getY() - item[3];&#10;&#9;var dist = (distX * distX) + (distY * distY);&#10;&#9;if (dist &amp;lt; currentDist)&#10;&#9;{&#10;&#9;&#9;currentDist = dist;&#10;&#9;&#9;_FirstCollisionActor = collisionActor;&#10;&#9;&#9;if (_IsCharged)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_CollisionX = item[2] - actor.getX();&#10;&#9;&#9;&#9;_CollisionY = item[3] - actor.getY();&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;_CollisionX = (_cos * 10) + _XOffset;&#10;&#9;&#9;&#9;_CollisionY = (_sin * 10) + _XOffset;&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;if (_FirstCollisionActor != null)&#10;{&#10;&#9;var actorType = _FirstCollisionActor.getType();&#10;&#9;if (actorType == null || !Utils.contains(_IncludedActors, actorType))&#10;&#9;{&#10;&#9;&#9;_HasCollision = false;&#10;&#9;&#9;_FirstCollisionActor = null;&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;if (_IsCharged)&#10;&#9;{&#10;&#9;&#9;if (_FirstCollisionActor.hasBehavior(&amp;quot;Meltable PM&amp;quot;) == true)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Meltable PM&amp;quot;, &amp;quot;_customEvent_Melt&amp;quot;);&#10;&#9;&#9;}&#10;&#9;&#9;else if (_FirstCollisionActor.hasBehavior(&amp;quot;Killable By Laser PM&amp;quot;) == true)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Killable By Laser PM&amp;quot;,&amp;quot;_customEvent_Killed&amp;quot;);&#10;&#9;&#9;}&#10;&#9;}&#10;}"/>
                         </code-long>
                     </group>
@@ -60,28 +66,51 @@
                         <get-val-293-1 comment="false" id="1" x="0" y="0"/>
                     </more>
                 </if>
-                <else comment="false" x="26" y="432">
+                <else comment="false" x="26" y="477">
                     <group eventID="1" id="-1">
-                        <incdec comment="false" x="37" y="452">
+                        <incdec comment="false" x="37" y="497">
                             <int id="0" val="6"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
                         </incdec>
                     </group>
                 </else>
-                <if comment="false" x="26" y="491">
+                <if comment="false" x="26" y="536">
                     <group eventID="1" id="-1">
-                        <set-val-293-22 comment="false" x="37" y="516">
+                        <set-val-293-22 comment="false" x="37" y="561">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-293-22>
-                        <dolater comment="false" x="37" y="541">
+                        <if comment="false" x="37" y="586">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="573">
+                                <setanim comment="false" x="48" y="629">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-293-23 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                </actor-get-prop>
+                                <false comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="673">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="693">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-293-24 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                        </else>
+                        <dolater comment="false" x="37" y="737">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="769">
                                     <group eventID="1" id="-1">
-                                        <set-val-293-21 comment="false" x="59" y="598">
+                                        <set-val-293-21 comment="false" x="59" y="794">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-293-21>
-                                        <custom-108 comment="false" x="59" y="623">
+                                        <custom-108 comment="false" x="59" y="819">
                                             <ACTOR eid="this" id="0"/>
                                             <true comment="false" id="1" x="0" y="0"/>
                                         </custom-108>
@@ -95,14 +124,37 @@
                     </group>
                     <get-val-293-16 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="691">
+                <else comment="false" x="26" y="887">
                     <group eventID="1" id="-1">
-                        <set-val-293-21 comment="false" x="37" y="711">
+                        <set-val-293-21 comment="false" x="37" y="907">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-21>
-                        <set-val-293-22 comment="false" x="37" y="736">
+                        <set-val-293-22 comment="false" x="37" y="932">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-22>
+                        <if comment="false" x="37" y="957">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="995">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-293-25 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                </actor-get-prop>
+                                <false comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="1039">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="1059">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-293-26 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                        </else>
                     </group>
                 </else>
             </group>
@@ -134,18 +186,18 @@
             <group eventID="4" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="8" id="-1">
-                        <if comment="false" x="37" y="70">
+                        <if comment="false" x="37" y="65">
                             <group eventID="8" id="-1">
-                                <set-stroke-color comment="false" x="48" y="95">
+                                <set-stroke-color comment="false" x="48" y="90">
                                     <get-val-293-8 comment="false" id="0" x="0" y="0"/>
                                 </set-stroke-color>
-                                <set-thickness comment="false" x="48" y="127">
+                                <set-thickness comment="false" x="48" y="122">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <get-val-293-9 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="1"/>
                                     </plus>
                                 </set-thickness>
-                                <draw-line comment="false" x="48" y="157">
+                                <draw-line comment="false" x="48" y="152">
                                     <get-val-293-10 comment="false" id="0" x="0" y="0"/>
                                     <get-val-293-11 comment="false" id="1" x="0" y="0"/>
                                     <get-val-293-12 comment="false" id="2" x="0" y="0"/>
@@ -154,25 +206,25 @@
                             </group>
                             <get-val-293-14 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <set-stroke-color comment="false" x="37" y="194">
+                        <set-stroke-color comment="false" x="37" y="189">
                             <custom-539 comment="false" id="0" x="0" y="0">
                                 <get-val-293-15 comment="false" id="0" x="0" y="0"/>
                             </custom-539>
                         </set-stroke-color>
-                        <set-thickness comment="false" x="37" y="231">
+                        <set-thickness comment="false" x="37" y="226">
                             <get-val-293-9 comment="false" id="0" x="0" y="0"/>
                         </set-thickness>
-                        <draw-line comment="false" x="37" y="256">
+                        <draw-line comment="false" x="37" y="251">
                             <get-val-293-10 comment="false" id="0" x="0" y="0"/>
                             <get-val-293-11 comment="false" id="1" x="0" y="0"/>
                             <get-val-293-12 comment="false" id="2" x="0" y="0"/>
                             <get-val-293-13 comment="false" id="3" x="0" y="0"/>
                         </draw-line>
-                        <repeat comment="false" x="37" y="281">
+                        <repeat comment="false" x="37" y="276">
                             <group eventID="8" id="-1">
-                                <if comment="false" x="48" y="306">
+                                <if comment="false" x="48" y="301">
                                     <group eventID="8" id="-1">
-                                        <set-color comment="false" x="59" y="336">
+                                        <set-color comment="false" x="59" y="331">
                                             <get-val-293-8 comment="false" id="0" x="0" y="0"/>
                                         </set-color>
                                     </group>
@@ -181,16 +233,16 @@
                                         <int id="1" val="0.25"/>
                                     </less>
                                 </if>
-                                <else comment="false" x="48" y="380">
+                                <else comment="false" x="48" y="375">
                                     <group eventID="8" id="-1">
-                                        <set-color comment="false" x="59" y="400">
+                                        <set-color comment="false" x="59" y="395">
                                             <custom-539 comment="false" id="0" x="0" y="0">
                                                 <get-val-293-15 comment="false" id="0" x="0" y="0"/>
                                             </custom-539>
                                         </set-color>
                                     </group>
                                 </else>
-                                <drawfill-rect comment="false" x="48" y="449">
+                                <drawfill-rect comment="false" x="48" y="444">
                                     <int id="0" val="1"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <get-val-293-12 comment="false" id="0" x="0" y="0"/>
@@ -213,10 +265,7 @@
                             <int id="0" val="5"/>
                         </repeat>
                     </group>
-                    <or comment="false" id="0" x="0" y="0">
-                        <get-val-293-21 comment="false" id="0" x="0" y="0"/>
-                        <get-val-293-22 comment="false" id="1" x="0" y="0"/>
-                    </or>
+                    <get-val-293-21 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
         </draw>

@@ -2884,15 +2884,19 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Collision X" hidden="true" id="12" name="_CollisionX" order="11"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Collision Y" hidden="true" id="13" name="_CollisionY" order="12"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Use Key Line?" hidden="false" id="14" name="_UseKeyLine" order="13"/>
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Beam Colours" hidden="false" id="15" name="_BeamColours" order="14"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="First Collision Actor" hidden="true" id="17" name="_FirstCollisionActor" order="16"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Collision?" hidden="true" id="16" name="_HasCollision" order="15"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beam Target Y" hidden="true" id="19" name="_BeamTargetY" order="18"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beam Target X" hidden="true" id="18" name="_BeamTargetX" order="17"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charged?" hidden="true" id="21" name="_IsCharged" order="20"/>
         <number default="0.5" defaultValue="0.5" desc="" dropdown="" fullname="Charge Time" hidden="false" id="20" name="_ChargeTime" order="19"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Fire Animation Left" hidden="false" id="23" name="_FireAnimationLeft" order="22"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charging?" hidden="true" id="22" name="_IsCharging" order="21"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Idle Animation Left" hidden="false" id="25" name="_IdleAnimationLeft" order="24"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Fire Animation Right" hidden="false" id="24" name="_FireAnimationRight" order="23"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Idle Animation Right" hidden="false" id="26" name="_IdleAnimationRight" order="25"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
