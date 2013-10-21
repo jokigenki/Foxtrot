@@ -58,7 +58,7 @@
                 <if comment="false" x="26" y="275">
                     <group eventID="1" id="-1">
                         <code-long comment="false" x="37" y="305">
-                            <int id="0" val="var currentDistX = 0.0;&#10;var currentDistY = 0.0;&#10;var currentDist = 1000000.0;&#10;&#10;_HasCollision = false;&#10;_FrameCount = 0;&#10;var startX = actor.getX() + _XOffset;&#10;var startY = actor.getY() + _YOffset;&#10;var targetX = startX + _BeamTargetX;&#10;var targetY = startY + _BeamTargetY;&#10;var results:Array&amp;lt;Dynamic&amp;gt; = RaycastAPI.rayCast(startX, startY, targetX, targetY);&#10;&#10;_FirstCollisionActor = null;&#10;for (i in 0...results.length)&#10;{&#10;&#9;var item:Array&amp;lt;Dynamic&amp;gt; = results[i];&#10;&#9;var collisionActor:Actor = item[1];&#10;&#9;if (collisionActor.hasBehavior(&amp;quot;Transparent PM&amp;quot;) == true) continue;&#10;&#9;//TODO: Reflection&#10;&#9;&#10;&#9;_HasCollision = true;&#10;&#9;var distX = actor.getX() - item[2];&#10;&#9;var distY = actor.getY() - item[3];&#10;&#9;var dist = (distX * distX) + (distY * distY);&#10;&#9;if (dist &amp;lt; currentDist)&#10;&#9;{&#10;&#9;&#9;currentDist = dist;&#10;&#9;&#9;_FirstCollisionActor = collisionActor;&#10;&#9;&#9;if (_IsCharged)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_CollisionX = item[2] - actor.getX();&#10;&#9;&#9;&#9;_CollisionY = item[3] - actor.getY();&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;_CollisionX = (_cos * 10) + _XOffset;&#10;&#9;&#9;&#9;_CollisionY = (_sin * 10) + _XOffset;&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;if (_FirstCollisionActor != null)&#10;{&#10;&#9;var actorType = _FirstCollisionActor.getType();&#10;&#9;if (actorType == null || !Utils.contains(_IncludedActors, actorType))&#10;&#9;{&#10;&#9;&#9;_HasCollision = false;&#10;&#9;&#9;_FirstCollisionActor = null;&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;if (_IsCharged)&#10;&#9;{&#10;&#9;&#9;if (_FirstCollisionActor.hasBehavior(&amp;quot;Meltable PM&amp;quot;) == true)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Meltable PM&amp;quot;, &amp;quot;_customEvent_Melt&amp;quot;);&#10;&#9;&#9;}&#10;&#9;&#9;else if (_FirstCollisionActor.hasBehavior(&amp;quot;Killable By Laser PM&amp;quot;) == true)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Killable By Laser PM&amp;quot;,&amp;quot;_customEvent_Killed&amp;quot;);&#10;&#9;&#9;}&#10;&#9;}&#10;}"/>
+                            <int id="0" val="var currentDistX = 0.0;&#10;var currentDistY = 0.0;&#10;var currentDist = 1000000.0;&#10;&#10;_HasCollision = false;&#10;_FrameCount = 0;&#10;var startX = actor.getX() + _XOffset;&#10;var startY = actor.getY() + _YOffset;&#10;var targetX = startX + _BeamTargetX;&#10;var targetY = startY + _BeamTargetY;&#10;var results:Array&amp;lt;Dynamic&amp;gt; = RaycastAPI.rayCast(startX, startY, targetX, targetY);&#10;&#10;_FirstCollisionActor = null;&#10;for (i in 0...results.length)&#10;{&#10;&#9;var item:Array&amp;lt;Dynamic&amp;gt; = results[i];&#10;&#9;var collisionActor:Actor = item[1];&#10;&#9;if (collisionActor.hasBehavior(&amp;quot;Transparent PM&amp;quot;) == true) continue;&#10;&#9;//TODO: Reflection&#10;&#9;&#10;&#9;_HasCollision = true;&#10;&#9;var distX = actor.getX() - item[2];&#10;&#9;var distY = actor.getY() - item[3];&#10;&#9;var dist = (distX * distX) + (distY * distY);&#10;&#9;if (dist &amp;lt; currentDist)&#10;&#9;{&#10;&#9;&#9;currentDist = dist;&#10;&#9;&#9;_FirstCollisionActor = collisionActor;&#10;&#9;&#9;_CollisionX = item[2] - actor.getX();&#10;&#9;&#9;_CollisionY = item[3] - actor.getY();&#10;&#9;}&#10;}&#10;&#10;if (_FirstCollisionActor != null)&#10;{&#10;&#9;var actorType = _FirstCollisionActor.getType();&#10;&#9;if (actorType == null || !Utils.contains(_IncludedActors, actorType))&#10;&#9;{&#10;&#9;&#9;_HasCollision = false;&#10;&#9;&#9;_FirstCollisionActor = null;&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;if (_IsCharged)&#10;&#9;{&#10;&#9;&#9;if (_FirstCollisionActor.hasBehavior(&amp;quot;Meltable PM&amp;quot;) == true)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Meltable PM&amp;quot;, &amp;quot;_customEvent_Melt&amp;quot;);&#10;&#9;&#9;}&#10;&#9;&#9;else if (_FirstCollisionActor.hasBehavior(&amp;quot;Killable By Laser PM&amp;quot;) == true)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;_FirstCollisionActor.say(&amp;quot;Killable By Laser PM&amp;quot;,&amp;quot;_customEvent_Killed&amp;quot;);&#10;&#9;&#9;}&#10;&#9;}&#10;}"/>
                         </code-long>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
@@ -80,12 +80,16 @@
                         <set-val-293-22 comment="false" x="37" y="561">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-293-22>
-                        <if comment="false" x="37" y="586">
+                        <custom-87 comment="false" x="37" y="586">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-87>
+                        <if comment="false" x="37" y="613">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="629">
+                                <custom-127 comment="false" x="48" y="651">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-23 comment="false" id="1" x="0" y="0"/>
-                                </setanim>
+                                    <int id="2" val="Firing"/>
+                                </custom-127>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
                                 <actor-get-prop comment="false" id="0" x="0" y="0">
@@ -95,22 +99,23 @@
                                 <false comment="false" id="1" x="0" y="0"/>
                             </eq>
                         </if>
-                        <else comment="false" x="37" y="673">
+                        <else comment="false" x="37" y="695">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="693">
+                                <custom-127 comment="false" x="48" y="715">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-24 comment="false" id="1" x="0" y="0"/>
-                                </setanim>
+                                    <int id="2" val="Firing"/>
+                                </custom-127>
                             </group>
                         </else>
-                        <dolater comment="false" x="37" y="737">
+                        <dolater comment="false" x="37" y="759">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="769">
+                                <if comment="false" x="48" y="791">
                                     <group eventID="1" id="-1">
-                                        <set-val-293-21 comment="false" x="59" y="794">
+                                        <set-val-293-21 comment="false" x="59" y="816">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-293-21>
-                                        <custom-108 comment="false" x="59" y="819">
+                                        <custom-108 comment="false" x="59" y="841">
                                             <ACTOR eid="this" id="0"/>
                                             <true comment="false" id="1" x="0" y="0"/>
                                         </custom-108>
@@ -124,20 +129,24 @@
                     </group>
                     <get-val-293-16 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="887">
+                <else comment="false" x="26" y="909">
                     <group eventID="1" id="-1">
-                        <set-val-293-21 comment="false" x="37" y="907">
+                        <set-val-293-21 comment="false" x="37" y="929">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-21>
-                        <set-val-293-22 comment="false" x="37" y="932">
+                        <set-val-293-22 comment="false" x="37" y="954">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-22>
-                        <if comment="false" x="37" y="957">
+                        <custom-87 comment="false" x="37" y="979">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-87>
+                        <if comment="false" x="37" y="1006">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="995">
+                                <custom-127 comment="false" x="48" y="1044">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-25 comment="false" id="1" x="0" y="0"/>
-                                </setanim>
+                                    <int id="2" val="Walking"/>
+                                </custom-127>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
                                 <actor-get-prop comment="false" id="0" x="0" y="0">
@@ -147,12 +156,13 @@
                                 <false comment="false" id="1" x="0" y="0"/>
                             </eq>
                         </if>
-                        <else comment="false" x="37" y="1039">
+                        <else comment="false" x="37" y="1088">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="1059">
+                                <custom-127 comment="false" x="48" y="1108">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-26 comment="false" id="1" x="0" y="0"/>
-                                </setanim>
+                                    <int id="2" val="Walking"/>
+                                </custom-127>
                             </group>
                         </else>
                     </group>
