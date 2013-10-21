@@ -74,19 +74,27 @@ nameMap.set("Actor", "actor");
 	
 	override public function init()
 	{
-		            /* "Custom: distance between <Pivot> and Self" */
-        _Radius = asNumber(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_CalculateDistance(_Pivot,actor)), Float));
+		            if((hasValue(_Pivot) != false))
+{
+            /* "Custom: distance between <Pivot> and Self" */
+            _Radius = asNumber(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_CalculateDistance(_Pivot,actor)), Float));
 propertyChanged("_Radius", _Radius);
-        _StartAngle = asNumber(Math.atan2((actor.getYCenter() - _Pivot.getYCenter()), (actor.getXCenter() - _Pivot.getXCenter())));
+            _StartAngle = asNumber(Math.atan2((actor.getYCenter() - _Pivot.getYCenter()), (actor.getXCenter() - _Pivot.getXCenter())));
 propertyChanged("_StartAngle", _StartAngle);
+}
+
         _XOffset = asNumber((actor.getX() - actor.getXCenter()));
 propertyChanged("_XOffset", _XOffset);
         _YOffset = asNumber((actor.getY() - actor.getYCenter()));
 propertyChanged("_YOffset", _YOffset);
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        actor.setX((_XOffset + (_Pivot.getXCenter() + (Math.sin((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
-        actor.setY((_YOffset + (_Pivot.getYCenter() + (Math.cos((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
+        if((hasValue(_Pivot) != false))
+{
+            actor.setX((_XOffset + (_Pivot.getXCenter() + (Math.sin((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
+            actor.setY((_YOffset + (_Pivot.getYCenter() + (Math.cos((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
+}
+
 }
 });
 
