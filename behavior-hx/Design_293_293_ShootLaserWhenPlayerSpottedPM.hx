@@ -85,7 +85,15 @@ public var _IsCharged:Bool;
 
 public var _ChargeTime:Float;
 
+public var _FireAnimationLeft:String;
+
 public var _IsCharging:Bool;
+
+public var _IdleAnimationLeft:String;
+
+public var _FireAnimationRight:String;
+
+public var _IdleAnimationRight:String;
             public function updateTarget ()
 {
 	var targetDistance = 500; 
@@ -141,8 +149,12 @@ nameMap.set("Is Charged?", "_IsCharged");
 _IsCharged = false;
 nameMap.set("Charge Time", "_ChargeTime");
 _ChargeTime = 0.5;
+nameMap.set("Fire Animation Left", "_FireAnimationLeft");
 nameMap.set("Is Charging?", "_IsCharging");
 _IsCharging = false;
+nameMap.set("Idle Animation Left", "_IdleAnimationLeft");
+nameMap.set("Fire Animation Right", "_FireAnimationRight");
+nameMap.set("Idle Animation Right", "_IdleAnimationRight");
 
 	}
 	
@@ -151,15 +163,19 @@ _IsCharging = false;
 		            updateTarget();
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if(((actor.getActorValue("Facing Right?") == true) && !(_Degrees == 0)))
+        if((asBoolean(actor.getActorValue("Facing Right?")) && !(_Degrees == 0)))
 {
+            _XOffset = asNumber(30);
+propertyChanged("_XOffset", _XOffset);
             _Degrees = asNumber(0);
 propertyChanged("_Degrees", _Degrees);
             updateTarget();
 }
 
-        else if(((actor.getActorValue("Facing Right?") == false) && !(_Degrees == 180)))
+        else if((!(asBoolean(actor.getActorValue("Facing Right?"))) && !(_Degrees == 180)))
 {
+            _XOffset = asNumber(2);
+propertyChanged("_XOffset", _XOffset);
             _Degrees = asNumber(180);
 propertyChanged("_Degrees", _Degrees);
             updateTarget();
@@ -240,6 +256,16 @@ propertyChanged("_FrameCount", _FrameCount);
 {
             _IsCharging = true;
 propertyChanged("_IsCharging", _IsCharging);
+            if((actor.getActorValue("Facing Right?") == false))
+{
+                actor.setAnimation("" + _FireAnimationLeft);
+}
+
+            else
+{
+                actor.setAnimation("" + _FireAnimationRight);
+}
+
             runLater(1000 * _ChargeTime, function(timeTask:TimedTask):Void {
                         if(_HasCollision)
 {
@@ -257,13 +283,23 @@ propertyChanged("_IsCharged", _IsCharged);
 propertyChanged("_IsCharged", _IsCharged);
             _IsCharging = false;
 propertyChanged("_IsCharging", _IsCharging);
+            if((actor.getActorValue("Facing Right?") == false))
+{
+                actor.setAnimation("" + _IdleAnimationLeft);
+}
+
+            else
+{
+                actor.setAnimation("" + _IdleAnimationRight);
+}
+
 }
 
 }
 });
     addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if((_IsCharged || _IsCharging))
+        if(_IsCharged)
 {
             if(_UseKeyLine)
 {

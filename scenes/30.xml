@@ -6,8 +6,8 @@
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="2"/>
         <layer color="0,255,0" id="2" name="Player" order="3"/>
         <layer color="64,64,64" id="4" name="Interactives" order="5"/>
-        <layer color="255,0,255" id="6" name="Spikes" order="6"/>
-        <layer color="0,0,255" id="1" name="Ground" order="7"/>
+        <layer color="0,0,255" id="1" name="Ground" order="6"/>
+        <layer color="255,0,255" id="6" name="Spikes" order="7"/>
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
@@ -16,12 +16,20 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="32" id="0" name="Region 0" pts="4,-16.0,-16.0,16.0,-16.0,16.0,16.0,-16.0,16.0" r="64" type="box" w="32" x="480" y="576"/>
+        <region b="64" g="64" h="32" id="0" name="Region 0" pts="4,-16.0,16.0,16.0,16.0,16.0,-16.0,-16.0,-16.0" r="64" type="box" w="32" x="480" y="576"/>
     </regions>
     <terrainRegions/>
     <actors>
+        <actor a="0.0" aid="275" c="false" group="10" id="620" name="Flames 275" sx="1.0" sy="1.0" x="400" y="400" z="6"/>
+        <actor a="0.0" aid="274" c="false" group="10" id="620" name="Flames 274" sx="1.0" sy="1.0" x="384" y="400" z="6"/>
+        <actor a="0.0" aid="273" c="false" group="10" id="620" name="Flames 273" sx="1.0" sy="1.0" x="368" y="400" z="6"/>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="568" z="3"/>
+        <actor a="0.0" aid="272" c="false" group="10" id="620" name="Flames 272" sx="1.0" sy="1.0" x="352" y="400" z="6"/>
         <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="96" y="640" z="2"/>
+        <actor a="0.0" aid="279" c="false" group="10" id="620" name="Flames 279" sx="1.0" sy="1.0" x="512" y="400" z="6"/>
+        <actor a="0.0" aid="278" c="false" group="10" id="620" name="Flames 278" sx="1.0" sy="1.0" x="496" y="400" z="6"/>
+        <actor a="0.0" aid="277" c="false" group="10" id="620" name="Flames 277" sx="1.0" sy="1.0" x="480" y="400" z="6"/>
+        <actor a="0.0" aid="276" c="false" group="10" id="620" name="Flames 276" sx="1.0" sy="1.0" x="416" y="400" z="6"/>
         <actor a="0.0" aid="7" c="true" group="2" id="140" name="Door 7" sx="1.0" sy="1.0" x="96" y="640" z="4">
             <snippets>
                 <s enabled="true" id="304">
@@ -46,6 +54,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -64,9 +73,9 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="283" c="false" group="10" id="620" name="Flames 283" sx="1.0" sy="1.0" x="336" y="304" z="6"/>
         <actor a="0.0" aid="8" c="true" group="2" id="140" name="Door 8" sx="1.0" sy="1.0" x="512" y="624" z="4">
             <snippets>
                 <s enabled="true" id="304">
@@ -91,6 +100,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -109,20 +119,12 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="282" c="false" group="10" id="620" name="Flames 282" sx="1.0" sy="1.0" x="304" y="304" z="6"/>
         <actor a="0.0" aid="9" c="true" group="10" id="586" name="Moving Spikes 9" sx="1.0" sy="1.0" x="161" y="640" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -133,6 +135,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -157,17 +167,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="281" c="false" group="10" id="620" name="Flames 281" sx="1.0" sy="1.0" x="288" y="304" z="6"/>
         <actor a="0.0" aid="10" c="true" group="10" id="586" name="Moving Spikes 10" sx="1.0" sy="1.0" x="177" y="640" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -178,6 +181,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -202,17 +213,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="280" c="false" group="10" id="620" name="Flames 280" sx="1.0" sy="1.0" x="528" y="400" z="6"/>
         <actor a="0.0" aid="11" c="true" group="10" id="586" name="Moving Spikes 11" sx="1.0" sy="1.0" x="256" y="608" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -223,6 +227,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -247,17 +259,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="287" c="false" group="10" id="620" name="Flames 287" sx="1.0" sy="1.0" x="320" y="304" z="6"/>
         <actor a="0.0" aid="12" c="true" group="10" id="586" name="Moving Spikes 12" sx="1.0" sy="1.0" x="240" y="608" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -268,6 +273,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -292,17 +305,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="286" c="false" group="10" id="620" name="Flames 286" sx="1.0" sy="1.0" x="384" y="304" z="6"/>
         <actor a="0.0" aid="13" c="true" group="10" id="586" name="Moving Spikes 13" sx="1.0" sy="1.0" x="128" y="576" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -313,6 +319,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -337,17 +351,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="285" c="false" group="10" id="620" name="Flames 285" sx="1.0" sy="1.0" x="368" y="304" z="6"/>
         <actor a="0.0" aid="14" c="true" group="10" id="586" name="Moving Spikes 14" sx="1.0" sy="1.0" x="144" y="576" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -358,6 +365,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -382,17 +397,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="284" c="false" group="10" id="620" name="Flames 284" sx="1.0" sy="1.0" x="352" y="304" z="6"/>
         <actor a="0.0" aid="15" c="true" group="10" id="586" name="Moving Spikes 15" sx="1.0" sy="1.0" x="96" y="528" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -403,6 +411,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -427,18 +443,11 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="17" c="false" group="10" id="259" name="Spikes Up 17" sx="1.0" sy="1.0" x="160" y="704" z="6"/>
+        <actor a="0.0" aid="258" c="false" group="10" id="620" name="Flames 258" sx="1.0" sy="1.0" x="336" y="480" z="6"/>
+        <actor a="0.0" aid="259" c="false" group="10" id="620" name="Flames 259" sx="1.0" sy="1.0" x="352" y="480" z="6"/>
         <actor a="0.0" aid="16" c="true" group="10" id="586" name="Moving Spikes 16" sx="1.0" sy="1.0" x="112" y="528" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -449,6 +458,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -473,21 +490,14 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="19" c="false" group="10" id="259" name="Spikes Up 19" sx="1.0" sy="1.0" x="192" y="704" z="6"/>
-        <actor a="0.0" aid="18" c="false" group="10" id="259" name="Spikes Up 18" sx="1.0" sy="1.0" x="176" y="704" z="6"/>
-        <actor a="0.0" aid="21" c="false" group="10" id="259" name="Spikes Up 21" sx="1.0" sy="1.0" x="224" y="704" z="6"/>
-        <actor a="0.0" aid="20" c="false" group="10" id="259" name="Spikes Up 20" sx="1.0" sy="1.0" x="208" y="704" z="6"/>
+        <actor a="0.0" aid="256" c="false" group="10" id="620" name="Flames 256" sx="1.0" sy="1.0" x="304" y="480" z="6"/>
+        <actor a="0.0" aid="257" c="false" group="10" id="620" name="Flames 257" sx="1.0" sy="1.0" x="320" y="480" z="6"/>
+        <actor a="0.0" aid="262" c="false" group="10" id="620" name="Flames 262" sx="1.0" sy="1.0" x="448" y="480" z="6"/>
+        <actor a="0.0" aid="263" c="false" group="10" id="620" name="Flames 263" sx="1.0" sy="1.0" x="464" y="480" z="6"/>
+        <actor a="0.0" aid="260" c="false" group="10" id="620" name="Flames 260" sx="1.0" sy="1.0" x="416" y="480" z="6"/>
         <actor a="0.0" aid="23" c="true" group="10" id="586" name="Moving Spikes 23" sx="1.0" sy="1.0" x="160" y="480" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -498,6 +508,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -522,18 +540,12 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="22" c="false" group="10" id="259" name="Spikes Up 22" sx="1.0" sy="1.0" x="240" y="704" z="6"/>
+        <actor a="0.0" aid="261" c="false" group="10" id="620" name="Flames 261" sx="1.0" sy="1.0" x="432" y="480" z="6"/>
+        <actor a="0.0" aid="266" c="false" group="10" id="620" name="Flames 266" sx="1.0" sy="1.0" x="512" y="480" z="6"/>
+        <actor a="0.0" aid="267" c="false" group="10" id="620" name="Flames 267" sx="1.0" sy="1.0" x="528" y="480" z="6"/>
         <actor a="0.0" aid="24" c="true" group="10" id="586" name="Moving Spikes 24" sx="1.0" sy="1.0" x="176" y="480" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -544,6 +556,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -568,17 +588,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="264" c="false" group="10" id="620" name="Flames 264" sx="1.0" sy="1.0" x="480" y="480" z="6"/>
         <actor a="0.0" aid="27" c="true" group="10" id="586" name="Moving Spikes 27" sx="1.0" sy="1.0" x="192" y="384" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -589,6 +602,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -613,17 +634,11 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="265" c="false" group="10" id="620" name="Flames 265" sx="1.0" sy="1.0" x="496" y="480" z="6"/>
+        <actor a="0.0" aid="270" c="false" group="10" id="620" name="Flames 270" sx="1.0" sy="1.0" x="320" y="400" z="6"/>
         <actor a="0.0" aid="29" c="true" group="10" id="586" name="Moving Spikes 29" sx="1.0" sy="1.0" x="96" y="432" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -634,6 +649,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -658,17 +681,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="271" c="false" group="10" id="620" name="Flames 271" sx="1.0" sy="1.0" x="336" y="400" z="6"/>
         <actor a="0.0" aid="28" c="true" group="10" id="586" name="Moving Spikes 28" sx="1.0" sy="1.0" x="208" y="384" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -679,6 +695,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -703,17 +727,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="268" c="false" group="10" id="620" name="Flames 268" sx="1.0" sy="1.0" x="288" y="400" z="6"/>
         <actor a="0.0" aid="31" c="true" group="10" id="586" name="Moving Spikes 31" sx="1.0" sy="1.0" x="96" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -724,6 +741,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -748,17 +773,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="269" c="false" group="10" id="620" name="Flames 269" sx="1.0" sy="1.0" x="304" y="400" z="6"/>
         <actor a="0.0" aid="30" c="true" group="10" id="586" name="Moving Spikes 30" sx="1.0" sy="1.0" x="112" y="432" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -769,6 +787,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -793,17 +819,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="305" c="false" group="10" id="620" name="Flames 305" sx="1.0" sy="1.0" x="320" y="208" z="6"/>
         <actor a="0.0" aid="34" c="true" group="10" id="586" name="Moving Spikes 34" sx="1.0" sy="1.0" x="208" y="288" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -814,6 +833,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -838,17 +865,10 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="304" c="false" group="10" id="620" name="Flames 304" sx="1.0" sy="1.0" x="304" y="208" z="6"/>
         <actor a="0.0" aid="32" c="true" group="10" id="586" name="Moving Spikes 32" sx="1.0" sy="1.0" x="112" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -859,6 +879,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -886,14 +914,6 @@
         <actor a="0.0" aid="33" c="true" group="10" id="586" name="Moving Spikes 33" sx="1.0" sy="1.0" x="192" y="288" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -904,6 +924,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -931,14 +959,6 @@
         <actor a="0.0" aid="38" c="true" group="10" id="586" name="Moving Spikes 38" sx="1.0" sy="1.0" x="256" y="176" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -949,6 +969,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -976,14 +1004,6 @@
         <actor a="0.0" aid="39" c="true" group="10" id="586" name="Moving Spikes 39" sx="1.0" sy="1.0" x="128" y="224" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -994,6 +1014,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1021,14 +1049,6 @@
         <actor a="0.0" aid="37" c="true" group="10" id="586" name="Moving Spikes 37" sx="1.0" sy="1.0" x="240" y="176" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1039,6 +1059,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1066,14 +1094,6 @@
         <actor a="0.0" aid="42" c="true" group="10" id="586" name="Moving Spikes 42" sx="1.0" sy="1.0" x="112" y="192" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1084,6 +1104,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1111,14 +1139,6 @@
         <actor a="0.0" aid="43" c="true" group="10" id="586" name="Moving Spikes 43" sx="1.0" sy="1.0" x="176" y="144" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1129,6 +1149,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1156,14 +1184,6 @@
         <actor a="0.0" aid="40" c="true" group="10" id="586" name="Moving Spikes 40" sx="1.0" sy="1.0" x="144" y="224" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1174,6 +1194,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1201,14 +1229,6 @@
         <actor a="0.0" aid="41" c="true" group="10" id="586" name="Moving Spikes 41" sx="1.0" sy="1.0" x="96" y="192" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1219,6 +1239,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1246,14 +1274,6 @@
         <actor a="0.0" aid="47" c="true" group="10" id="586" name="Moving Spikes 47" sx="1.0" sy="1.0" x="96" y="96" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.5"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1264,6 +1284,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1291,14 +1319,6 @@
         <actor a="0.0" aid="44" c="true" group="10" id="586" name="Moving Spikes 44" sx="1.0" sy="1.0" x="192" y="144" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1309,6 +1329,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1333,6 +1361,9 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="288" c="false" group="10" id="620" name="Flames 288" sx="1.0" sy="1.0" x="448" y="304" z="6"/>
+        <actor a="0.0" aid="289" c="false" group="10" id="620" name="Flames 289" sx="1.0" sy="1.0" x="480" y="304" z="6"/>
+        <actor a="0.0" aid="290" c="false" group="10" id="620" name="Flames 290" sx="1.0" sy="1.0" x="496" y="304" z="6"/>
         <actor a="0.0" aid="49" c="true" group="3" id="178" name="Egg 49" sx="1.0" sy="1.0" x="102" y="76" z="1">
             <snippets>
                 <s enabled="true" id="64">
@@ -1359,17 +1390,10 @@
                 <s enabled="true" id="121"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="291" c="false" group="10" id="620" name="Flames 291" sx="1.0" sy="1.0" x="512" y="304" z="6"/>
         <actor a="0.0" aid="48" c="true" group="10" id="586" name="Moving Spikes 48" sx="1.0" sy="1.0" x="112" y="96" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.5"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="1.1"/>
-                    <prop id="6" list="0" val="1.1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1380,6 +1404,14 @@
                         <text order="1" value="Rat"/>
                     </prop>
                     <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="5" list="0" val="1.1"/>
+                    <prop id="6" list="0" val="1.1"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -1404,15 +1436,18 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="171" c="false" group="10" id="259" name="Spikes Up 171" sx="1.0" sy="1.0" x="448" y="208" z="6"/>
-        <actor a="0.0" aid="170" c="false" group="10" id="259" name="Spikes Up 170" sx="1.0" sy="1.0" x="432" y="208" z="6"/>
-        <actor a="0.0" aid="169" c="false" group="10" id="259" name="Spikes Up 169" sx="1.0" sy="1.0" x="416" y="208" z="6"/>
-        <actor a="0.0" aid="168" c="false" group="10" id="259" name="Spikes Up 168" sx="1.0" sy="1.0" x="400" y="208" z="6"/>
-        <actor a="0.0" aid="175" c="false" group="10" id="259" name="Spikes Up 175" sx="1.0" sy="1.0" x="512" y="208" z="6"/>
-        <actor a="0.0" aid="174" c="false" group="10" id="259" name="Spikes Up 174" sx="1.0" sy="1.0" x="496" y="208" z="6"/>
-        <actor a="0.0" aid="173" c="false" group="10" id="259" name="Spikes Up 173" sx="1.0" sy="1.0" x="480" y="208" z="6"/>
-        <actor a="0.0" aid="172" c="false" group="10" id="259" name="Spikes Up 172" sx="1.0" sy="1.0" x="464" y="208" z="6"/>
-        <actor a="0.0" aid="163" c="false" group="10" id="259" name="Spikes Up 163" sx="1.0" sy="1.0" x="288" y="208" z="6"/>
+        <actor a="0.0" aid="292" c="false" group="10" id="620" name="Flames 292" sx="1.0" sy="1.0" x="528" y="304" z="6"/>
+        <actor a="0.0" aid="293" c="false" group="10" id="620" name="Flames 293" sx="1.0" sy="1.0" x="464" y="304" z="6"/>
+        <actor a="0.0" aid="294" c="false" group="10" id="620" name="Flames 294" sx="1.0" sy="1.0" x="400" y="208" z="6"/>
+        <actor a="0.0" aid="295" c="false" group="10" id="620" name="Flames 295" sx="1.0" sy="1.0" x="416" y="208" z="6"/>
+        <actor a="0.0" aid="296" c="false" group="10" id="620" name="Flames 296" sx="1.0" sy="1.0" x="432" y="208" z="6"/>
+        <actor a="0.0" aid="297" c="false" group="10" id="620" name="Flames 297" sx="1.0" sy="1.0" x="448" y="208" z="6"/>
+        <actor a="0.0" aid="298" c="false" group="10" id="620" name="Flames 298" sx="1.0" sy="1.0" x="464" y="208" z="6"/>
+        <actor a="0.0" aid="299" c="false" group="10" id="620" name="Flames 299" sx="1.0" sy="1.0" x="480" y="208" z="6"/>
+        <actor a="0.0" aid="300" c="false" group="10" id="620" name="Flames 300" sx="1.0" sy="1.0" x="496" y="208" z="6"/>
+        <actor a="0.0" aid="301" c="false" group="10" id="620" name="Flames 301" sx="1.0" sy="1.0" x="512" y="208" z="6"/>
+        <actor a="0.0" aid="302" c="false" group="10" id="620" name="Flames 302" sx="1.0" sy="1.0" x="528" y="208" z="6"/>
+        <actor a="0.0" aid="303" c="false" group="10" id="620" name="Flames 303" sx="1.0" sy="1.0" x="288" y="208" z="6"/>
         <actor a="0.0" aid="162" c="true" group="2" id="140" name="Door 162" sx="1.0" sy="1.0" x="352" y="64" z="1">
             <snippets>
                 <s enabled="true" id="304">
@@ -1437,6 +1472,7 @@
                     <prop id="14" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -1455,7 +1491,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="161" c="true" group="2" id="140" name="Door 161" sx="1.0" sy="1.0" x="304" y="64" z="1">
@@ -1482,6 +1517,7 @@
                     <prop id="14" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -1500,52 +1536,8 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="165" c="false" group="10" id="259" name="Spikes Up 165" sx="1.0" sy="1.0" x="320" y="208" z="6"/>
-        <actor a="0.0" aid="164" c="false" group="10" id="259" name="Spikes Up 164" sx="1.0" sy="1.0" x="304" y="208" z="6"/>
-        <actor a="0.0" aid="186" c="false" group="10" id="259" name="Spikes Up 186" sx="1.0" sy="1.0" x="448" y="304" z="6"/>
-        <actor a="0.0" aid="187" c="false" group="10" id="259" name="Spikes Up 187" sx="1.0" sy="1.0" x="480" y="304" z="6"/>
-        <actor a="0.0" aid="184" c="false" group="10" id="259" name="Spikes Up 184" sx="1.0" sy="1.0" x="384" y="304" z="6"/>
-        <actor a="0.0" aid="190" c="false" group="10" id="259" name="Spikes Up 190" sx="1.0" sy="1.0" x="528" y="304" z="6"/>
-        <actor a="0.0" aid="191" c="false" group="10" id="259" name="Spikes Up 191" sx="1.0" sy="1.0" x="464" y="304" z="6"/>
-        <actor a="0.0" aid="188" c="false" group="10" id="259" name="Spikes Up 188" sx="1.0" sy="1.0" x="496" y="304" z="6"/>
-        <actor a="0.0" aid="189" c="false" group="10" id="259" name="Spikes Up 189" sx="1.0" sy="1.0" x="512" y="304" z="6"/>
-        <actor a="0.0" aid="178" c="false" group="10" id="259" name="Spikes Up 178" sx="1.0" sy="1.0" x="288" y="304" z="6"/>
-        <actor a="0.0" aid="179" c="false" group="10" id="259" name="Spikes Up 179" sx="1.0" sy="1.0" x="304" y="304" z="6"/>
-        <actor a="0.0" aid="176" c="false" group="10" id="259" name="Spikes Up 176" sx="1.0" sy="1.0" x="528" y="208" z="6"/>
-        <actor a="0.0" aid="177" c="false" group="10" id="259" name="Spikes Up 177" sx="1.0" sy="1.0" x="256" y="704" z="6"/>
-        <actor a="0.0" aid="182" c="false" group="10" id="259" name="Spikes Up 182" sx="1.0" sy="1.0" x="352" y="304" z="6"/>
-        <actor a="0.0" aid="183" c="false" group="10" id="259" name="Spikes Up 183" sx="1.0" sy="1.0" x="368" y="304" z="6"/>
-        <actor a="0.0" aid="180" c="false" group="10" id="259" name="Spikes Up 180" sx="1.0" sy="1.0" x="320" y="304" z="6"/>
-        <actor a="0.0" aid="181" c="false" group="10" id="259" name="Spikes Up 181" sx="1.0" sy="1.0" x="336" y="304" z="6"/>
-        <actor a="0.0" aid="205" c="false" group="10" id="259" name="Spikes Up 205" sx="1.0" sy="1.0" x="528" y="400" z="6"/>
-        <actor a="0.0" aid="204" c="false" group="10" id="259" name="Spikes Up 204" sx="1.0" sy="1.0" x="512" y="400" z="6"/>
-        <actor a="0.0" aid="207" c="false" group="10" id="259" name="Spikes Up 207" sx="1.0" sy="1.0" x="304" y="480" z="6"/>
-        <actor a="0.0" aid="206" c="false" group="10" id="259" name="Spikes Up 206" sx="1.0" sy="1.0" x="288" y="480" z="6"/>
-        <actor a="0.0" aid="200" c="false" group="10" id="259" name="Spikes Up 200" sx="1.0" sy="1.0" x="416" y="400" z="6"/>
-        <actor a="0.0" aid="203" c="false" group="10" id="259" name="Spikes Up 203" sx="1.0" sy="1.0" x="496" y="400" z="6"/>
-        <actor a="0.0" aid="202" c="false" group="10" id="259" name="Spikes Up 202" sx="1.0" sy="1.0" x="480" y="400" z="6"/>
-        <actor a="0.0" aid="197" c="false" group="10" id="259" name="Spikes Up 197" sx="1.0" sy="1.0" x="368" y="400" z="6"/>
-        <actor a="0.0" aid="196" c="false" group="10" id="259" name="Spikes Up 196" sx="1.0" sy="1.0" x="352" y="400" z="6"/>
-        <actor a="0.0" aid="199" c="false" group="10" id="259" name="Spikes Up 199" sx="1.0" sy="1.0" x="400" y="400" z="6"/>
-        <actor a="0.0" aid="198" c="false" group="10" id="259" name="Spikes Up 198" sx="1.0" sy="1.0" x="384" y="400" z="6"/>
-        <actor a="0.0" aid="193" c="false" group="10" id="259" name="Spikes Up 193" sx="1.0" sy="1.0" x="304" y="400" z="6"/>
-        <actor a="0.0" aid="192" c="false" group="10" id="259" name="Spikes Up 192" sx="1.0" sy="1.0" x="288" y="400" z="6"/>
-        <actor a="0.0" aid="195" c="false" group="10" id="259" name="Spikes Up 195" sx="1.0" sy="1.0" x="336" y="400" z="6"/>
-        <actor a="0.0" aid="194" c="false" group="10" id="259" name="Spikes Up 194" sx="1.0" sy="1.0" x="320" y="400" z="6"/>
-        <actor a="0.0" aid="216" c="false" group="10" id="259" name="Spikes Up 216" sx="1.0" sy="1.0" x="480" y="480" z="6"/>
-        <actor a="0.0" aid="217" c="false" group="10" id="259" name="Spikes Up 217" sx="1.0" sy="1.0" x="496" y="480" z="6"/>
-        <actor a="0.0" aid="218" c="false" group="10" id="259" name="Spikes Up 218" sx="1.0" sy="1.0" x="512" y="480" z="6"/>
-        <actor a="0.0" aid="219" c="false" group="10" id="259" name="Spikes Up 219" sx="1.0" sy="1.0" x="528" y="480" z="6"/>
-        <actor a="0.0" aid="212" c="false" group="10" id="259" name="Spikes Up 212" sx="1.0" sy="1.0" x="416" y="480" z="6"/>
-        <actor a="0.0" aid="213" c="false" group="10" id="259" name="Spikes Up 213" sx="1.0" sy="1.0" x="432" y="480" z="6"/>
-        <actor a="0.0" aid="214" c="false" group="10" id="259" name="Spikes Up 214" sx="1.0" sy="1.0" x="448" y="480" z="6"/>
-        <actor a="0.0" aid="215" c="false" group="10" id="259" name="Spikes Up 215" sx="1.0" sy="1.0" x="464" y="480" z="6"/>
-        <actor a="0.0" aid="208" c="false" group="10" id="259" name="Spikes Up 208" sx="1.0" sy="1.0" x="320" y="480" z="6"/>
-        <actor a="0.0" aid="209" c="false" group="10" id="259" name="Spikes Up 209" sx="1.0" sy="1.0" x="336" y="480" z="6"/>
-        <actor a="0.0" aid="210" c="false" group="10" id="259" name="Spikes Up 210" sx="1.0" sy="1.0" x="352" y="480" z="6"/>
         <actor a="0.0" aid="239" c="true" group="5" id="356" name="Trapdoor 239" sx="1.0" sy="1.0" x="544" y="560" z="5">
             <snippets>
                 <s enabled="true" id="216"/>
@@ -1586,7 +1578,15 @@
                 <s enabled="true" id="90"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="233" c="false" group="3" id="387" name="Water 233" sx="8.0" sy="14.0" x="400" y="320" z="7"/>
+        <actor a="0.0" aid="233" c="false" group="3" id="387" name="Water 233" sx="8.0" sy="14.0" x="400" y="336" z="7"/>
+        <actor a="0.0" aid="254" c="false" group="10" id="620" name="Flames 254" sx="1.0" sy="1.0" x="256" y="704" z="6"/>
+        <actor a="0.0" aid="255" c="false" group="10" id="620" name="Flames 255" sx="1.0" sy="1.0" x="288" y="480" z="6"/>
+        <actor a="0.0" aid="252" c="false" group="10" id="620" name="Flames 252" sx="1.0" sy="1.0" x="224" y="704" z="6"/>
+        <actor a="0.0" aid="253" c="false" group="10" id="620" name="Flames 253" sx="1.0" sy="1.0" x="240" y="704" z="6"/>
+        <actor a="0.0" aid="250" c="false" group="10" id="620" name="Flames 250" sx="1.0" sy="1.0" x="192" y="704" z="6"/>
+        <actor a="0.0" aid="251" c="false" group="10" id="620" name="Flames 251" sx="1.0" sy="1.0" x="208" y="704" z="6"/>
+        <actor a="0.0" aid="248" c="false" group="10" id="620" name="Flames 248" sx="1.0" sy="1.0" x="160" y="704" z="6"/>
+        <actor a="0.0" aid="249" c="false" group="10" id="620" name="Flames 249" sx="1.0" sy="1.0" x="176" y="704" z="6"/>
         <actor a="0.0" aid="246" c="true" group="5" id="526" name="Trapdoor Reverse 246" sx="1.0" sy="1.0" x="176" y="720" z="4">
             <snippets>
                 <s enabled="true" id="233">
@@ -1754,7 +1754,6 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="241" c="false" group="3" id="387" name="Water 241" sx="1.0" sy="0.5" x="512" y="552" z="7"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -1769,10 +1768,10 @@
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -1817,10 +1816,10 @@
     </snippets>
     <terrain>
         <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="128.0" y="224.0"/>
-        <p pts="126,448.0,448.0,448.0,384.0,384.0,384.0,384.0,368.0,448.0,368.0,448.0,288.0,352.0,288.0,352.0,272.0,448.0,272.0,448.0,192.0,304.0,192.0,304.0,176.0,448.0,176.0,448.0,96.0,352.0,96.0,352.0,80.0,448.0,80.0,448.0,0.0,256.0,0.0,256.0,48.0,288.0,48.0,288.0,80.0,320.0,80.0,320.0,96.0,192.0,96.0,192.0,176.0,240.0,176.0,240.0,192.0,192.0,192.0,192.0,272.0,304.0,272.0,304.0,288.0,192.0,288.0,192.0,368.0,336.0,368.0,336.0,384.0,192.0,384.0,192.0,448.0,272.0,448.0,272.0,464.0,192.0,464.0,192.0,512.0,416.0,512.0,416.0,528.0,192.0,528.0,192.0,576.0,144.0,576.0,144.0,560.0,176.0,560.0,176.0,432.0,128.0,432.0,128.0,416.0,176.0,416.0,176.0,256.0,96.0,256.0,96.0,240.0,128.0,240.0,128.0,208.0,176.0,208.0,176.0,144.0,144.0,144.0,144.0,128.0,176.0,128.0,176.0,64.0,208.0,64.0,208.0,48.0,240.0,48.0,240.0,0.0,0.0,0.0,0.0,48.0,32.0,48.0,32.0,64.0,0.0,64.0,0.0,144.0,32.0,144.0,32.0,160.0,0.0,160.0,0.0,288.0,32.0,288.0,32.0,304.0,0.0,304.0,0.0,384.0,32.0,384.0,32.0,400.0,0.0,400.0,0.0,480.0,32.0,480.0,32.0,528.0,64.0,528.0,64.0,544.0,0.0,544.0,0.0,624.0,64.0,624.0,64.0,592.0,96.0,592.0,96.0,608.0,80.0,608.0,80.0,640.0,64.0,640.0,64.0,672.0,176.0,672.0,176.0,608.0,224.0,608.0,224.0,624.0,240.0,624.0,240.0,640.0,256.0,640.0,256.0,656.0,272.0,656.0,272.0,672.0,368.0,672.0,368.0,656.0,384.0,656.0,384.0,640.0,400.0,640.0,400.0,624.0,416.0,624.0,416.0,608.0,448.0,608.0,448.0,576.0,224.0,576.0,224.0,560.0,448.0,560.0,448.0,464.0,320.0,464.0,320.0,448.0" x="96.0" y="48.0"/>
         <p pts="4,480.0,704.0,0.0,704.0,0.0,0.0,480.0,0.0" x="80.0" y="32.0"/>
-        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="160.0" y="480.0"/>
-        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="192.0" y="384.0"/>
         <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="176.0" y="144.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="160.0" y="480.0"/>
+        <p pts="126,448.0,448.0,448.0,384.0,384.0,384.0,384.0,368.0,448.0,368.0,448.0,288.0,352.0,288.0,352.0,272.0,448.0,272.0,448.0,192.0,304.0,192.0,304.0,176.0,448.0,176.0,448.0,96.0,352.0,96.0,352.0,80.0,448.0,80.0,448.0,0.0,256.0,0.0,256.0,48.0,288.0,48.0,288.0,80.0,320.0,80.0,320.0,96.0,192.0,96.0,192.0,176.0,240.0,176.0,240.0,192.0,192.0,192.0,192.0,272.0,304.0,272.0,304.0,288.0,192.0,288.0,192.0,368.0,336.0,368.0,336.0,384.0,192.0,384.0,192.0,448.0,272.0,448.0,272.0,464.0,192.0,464.0,192.0,512.0,416.0,512.0,416.0,528.0,192.0,528.0,192.0,576.0,144.0,576.0,144.0,560.0,176.0,560.0,176.0,432.0,128.0,432.0,128.0,416.0,176.0,416.0,176.0,256.0,96.0,256.0,96.0,240.0,128.0,240.0,128.0,208.0,176.0,208.0,176.0,144.0,144.0,144.0,144.0,128.0,176.0,128.0,176.0,64.0,208.0,64.0,208.0,48.0,240.0,48.0,240.0,0.0,0.0,0.0,0.0,48.0,32.0,48.0,32.0,64.0,0.0,64.0,0.0,144.0,32.0,144.0,32.0,160.0,0.0,160.0,0.0,288.0,32.0,288.0,32.0,304.0,0.0,304.0,0.0,384.0,32.0,384.0,32.0,400.0,0.0,400.0,0.0,480.0,32.0,480.0,32.0,528.0,64.0,528.0,64.0,544.0,0.0,544.0,0.0,624.0,64.0,624.0,64.0,592.0,96.0,592.0,96.0,608.0,80.0,608.0,80.0,640.0,64.0,640.0,64.0,672.0,176.0,672.0,176.0,608.0,224.0,608.0,224.0,624.0,240.0,624.0,240.0,640.0,256.0,640.0,256.0,656.0,272.0,656.0,272.0,672.0,368.0,672.0,368.0,656.0,384.0,656.0,384.0,640.0,400.0,640.0,400.0,624.0,416.0,624.0,416.0,608.0,448.0,608.0,448.0,576.0,224.0,576.0,224.0,560.0,448.0,560.0,448.0,464.0,320.0,464.0,320.0,448.0" x="96.0" y="48.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="192.0" y="384.0"/>
     </terrain>
 </scene>

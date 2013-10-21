@@ -49,6 +49,26 @@ public var _IsActive:Bool;
 
 public var _EngineForce:Float;
 
+public var _LiftType:ActorType;
+
+public var _Lifts:Array<Dynamic>;
+
+public var _NumberOfLifts:Float;
+
+public var _LiftAngleGap:Float;
+
+public var _Radius:Float;
+
+public var _AngleOffset:Float;
+
+public var _Lift:Actor;
+
+public var _XPos:Float;
+
+public var _YPos:Float;
+
+public var _Count:Float;
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
@@ -57,13 +77,61 @@ public var _EngineForce:Float;
 _IsActive = false;
 nameMap.set("Engine Force", "_EngineForce");
 _EngineForce = 0.0;
+nameMap.set("Lift Type", "_LiftType");
+_LiftType = getActorType(616);
+nameMap.set("Lifts", "_Lifts");
+nameMap.set("Number Of Lifts", "_NumberOfLifts");
+_NumberOfLifts = 4;
+nameMap.set("Lift Angle Gap", "_LiftAngleGap");
+_LiftAngleGap = 0;
+nameMap.set("Radius", "_Radius");
+_Radius = 0;
+nameMap.set("Angle Offset", "_AngleOffset");
+_AngleOffset = 0;
+nameMap.set("Lift", "_Lift");
+nameMap.set("X Pos", "_XPos");
+_XPos = 0;
+nameMap.set("Y Pos", "_YPos");
+_YPos = 0;
+nameMap.set("Count", "_Count");
+_Count = 0;
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+		            _Lifts = new Array<Dynamic>();
+propertyChanged("_Lifts", _Lifts);
+        _LiftAngleGap = asNumber(((Math.PI * 2) / _NumberOfLifts));
+propertyChanged("_LiftAngleGap", _LiftAngleGap);
+        for(index0 in 0...Std.int(_NumberOfLifts))
+{
+            _XPos = asNumber((Math.sin(((_LiftAngleGap * index0) + Utils.RAD * (_AngleOffset))) * _Radius));
+propertyChanged("_XPos", _XPos);
+            _YPos = asNumber(Math.cos((((_LiftAngleGap * index0) + Utils.RAD * (_AngleOffset)) * _Radius)));
+propertyChanged("_YPos", _YPos);
+            createRecycledActor(_LiftType, _XPos, _YPos, Script.FRONT);
+            _Lift = getLastCreatedActor();
+propertyChanged("_Lift", _Lift);
+            _Lift.moveToLayer(actor.getLayerID());
+            _Lifts.push(_Lift);
+}
+
+        _Count = asNumber(0);
+propertyChanged("_Count", _Count);
+        runLater(1000 * 0.05, function(timeTask:TimedTask):Void {
+                    for(item in cast(_Lifts, Array<Dynamic>))
+{
+                        item.setValue("Windmill Arm PM", "_Radius", _Radius);
+                        item.setValue("Windmill Arm PM", "_StartAngle", ((_LiftAngleGap * _Count) + Utils.RAD * (_AngleOffset)));
+                        item.setValue("Windmill Arm PM", "_Pivot", actor);
+                        _Count += 1;
+propertyChanged("_Count", _Count);
+}
+
+}, actor);
+    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         if(_IsActive)
 {

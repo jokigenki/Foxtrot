@@ -758,10 +758,21 @@
     <snippet attachedevent="false" class="scripts.Design_56_56_PivotPM" classname="scripts.Design_56_56_PivotPM" desc="A pivot that turns when active." description="A pivot that turns when active." design="true" drawOrder="0" id="56" language="" name="Pivot PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="false" id="1" name="_IsActive" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Engine Force" hidden="false" id="2" name="_EngineForce" order="2"/>
+        <actortype default="616" defaultValue="616" desc="" dropdown="" fullname="Lift Type" hidden="false" id="3" name="_LiftType" order="3"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lifts" hidden="true" id="4" name="_Lifts" order="4"/>
+        <number default="4" defaultValue="4" desc="" dropdown="" fullname="Number Of Lifts" hidden="false" id="5" name="_NumberOfLifts" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Angle Gap" hidden="true" id="6" name="_LiftAngleGap" order="6"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Radius" hidden="false" id="7" name="_Radius" order="7"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle Offset" hidden="false" id="8" name="_AngleOffset" order="8"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Lift" hidden="true" id="9" name="_Lift" order="9"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Pos" hidden="true" id="10" name="_XPos" order="10"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Pos" hidden="true" id="11" name="_YPos" order="11"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Count" hidden="true" id="12" name="_Count" order="12"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_63_63_RandomiseAnimationFramePM" classname="scripts.Design_63_63_RandomiseAnimationFramePM" desc="When the actor is created, it will be sent to a random frame inside the default animation." description="When the actor is created, it will be sent to a random frame inside the default animation." design="true" drawOrder="0" id="63" language="" name="Randomise Animation Frame PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -2881,7 +2892,11 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beam Target X" hidden="true" id="18" name="_BeamTargetX" order="17"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charged?" hidden="true" id="21" name="_IsCharged" order="20"/>
         <number default="0.5" defaultValue="0.5" desc="" dropdown="" fullname="Charge Time" hidden="false" id="20" name="_ChargeTime" order="19"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Fire Animation Left" hidden="false" id="23" name="_FireAnimationLeft" order="22"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charging?" hidden="true" id="22" name="_IsCharging" order="21"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Idle Animation Left" hidden="false" id="25" name="_IdleAnimationLeft" order="24"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Fire Animation Right" hidden="false" id="24" name="_FireAnimationRight" order="23"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Idle Animation Right" hidden="false" id="26" name="_IdleAnimationRight" order="25"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
@@ -2963,7 +2978,23 @@
             <event displayName="On Reload" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_32" classname="scripts.SceneEvents_32" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="324" language="" name="SceneEvents_32" oid="-1" package="scripts." sceneid="32" scenespecific="true" shared="false" type="scene">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Lift 1" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
+            <event displayName="Cruncher 1" enabled="true" id="2" name="event-type-region" order="2" repeats="true"/>
+            <event displayName="Lift 2" enabled="true" id="3" name="event-type-region" order="3" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="4" name="event-type-region" order="4" repeats="true"/>
+            <event displayName="Jumper Lift 1" enabled="true" id="5" name="event-type-region" order="5" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="6" name="event-type-region" order="6" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_618" classname="scripts.ActorEvents_618" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="322" language="" name="ActorEvents_618" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_620" classname="scripts.ActorEvents_620" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="323" language="" name="ActorEvents_620" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
