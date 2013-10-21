@@ -150,21 +150,9 @@ propertyChanged("_ScreenCentreY", _ScreenCentreY);
 propertyChanged("_ScreenGapX", _ScreenGapX);
 }
 
-        else
-{
-            _ScreenGapX = asNumber(getSceneWidth());
-propertyChanged("_ScreenGapX", _ScreenGapX);
-}
-
         if((_NumberOfVerticalScreens > 1))
 {
             _ScreenGapY = asNumber(((getSceneHeight() - _ScreenHeight) / (_NumberOfVerticalScreens - 1)));
-propertyChanged("_ScreenGapY", _ScreenGapY);
-}
-
-        else
-{
-            _ScreenGapY = asNumber(getSceneHeight());
 propertyChanged("_ScreenGapY", _ScreenGapY);
 }
 
@@ -194,54 +182,62 @@ propertyChanged("_TestY", _TestY);
 propertyChanged("_TargetXScreen", _TargetXScreen);
             _TargetYScreen = asNumber(0);
 propertyChanged("_TargetYScreen", _TargetYScreen);
-            while((_TestX < getSceneWidth()))
+            if((_NumberOfHorizontalScreens > 1))
 {
-                if((_TargetActor.getX() <= _TestX))
+                while((_TestX < getSceneWidth()))
 {
-                    break;
+                    if((_TargetActor.getX() <= _TestX))
+{
+                        break;
 }
 
-                _TargetXScreen += 1;
+                    _TargetXScreen += 1;
 propertyChanged("_TargetXScreen", _TargetXScreen);
-                _TestX += _ScreenGapX;
+                    _TestX += _ScreenGapX;
 propertyChanged("_TestX", _TestX);
 }
 
-            while((_TestY < getSceneHeight()))
+                if((_TargetXScreen >= _NumberOfHorizontalScreens))
 {
-                if((_TargetActor.getY() <= _TestY))
-{
-                    break;
+                    _TargetXScreen = asNumber((_NumberOfHorizontalScreens - 1));
+propertyChanged("_TargetXScreen", _TargetXScreen);
 }
 
-                _TargetYScreen += 1;
+                else if((_TargetXScreen < 0))
+{
+                    _TargetXScreen = asNumber(0);
+propertyChanged("_TargetXScreen", _TargetXScreen);
+}
+
+}
+
+            if((_NumberOfVerticalScreens > 1))
+{
+                while((_TestY < getSceneHeight()))
+{
+                    if((_TargetActor.getY() <= _TestY))
+{
+                        break;
+}
+
+                    _TargetYScreen += 1;
 propertyChanged("_TargetYScreen", _TargetYScreen);
-                _TestY += _ScreenGapY;
+                    _TestY += _ScreenGapY;
 propertyChanged("_TestY", _TestY);
 }
 
-            if((_TargetXScreen >= _NumberOfHorizontalScreens))
+                if((_TargetYScreen >= _NumberOfVerticalScreens))
 {
-                _TargetXScreen = asNumber((_NumberOfHorizontalScreens - 1));
-propertyChanged("_TargetXScreen", _TargetXScreen);
-}
-
-            else if((_TargetXScreen < 0))
-{
-                _TargetXScreen = asNumber(0);
-propertyChanged("_TargetXScreen", _TargetXScreen);
-}
-
-            if((_TargetYScreen >= _NumberOfVerticalScreens))
-{
-                _TargetYScreen = asNumber((_NumberOfVerticalScreens - 1));
+                    _TargetYScreen = asNumber((_NumberOfVerticalScreens - 1));
 propertyChanged("_TargetYScreen", _TargetYScreen);
 }
 
-            else if((_TargetYScreen < 0))
+                else if((_TargetYScreen < 0))
 {
-                _TargetYScreen = asNumber(0);
+                    _TargetYScreen = asNumber(0);
 propertyChanged("_TargetYScreen", _TargetYScreen);
+}
+
 }
 
             if((!(_TargetXScreen == _CurrentXScreen) || !(_TargetYScreen == _CurrentYScreen)))

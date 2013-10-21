@@ -56,6 +56,8 @@ public var _YPositionOnPlatform:Float;
 public var _WasOnPlatform:Bool;
 
 public var _PlatformGroup:Group;
+
+public var _HitTerrain:Bool;
     
 
 /* Params are: __PreventValue */
@@ -108,6 +110,8 @@ _YPositionOnPlatform = 0.0;
 nameMap.set("Was On Platform?", "_WasOnPlatform");
 _WasOnPlatform = false;
 nameMap.set("Platform Group", "_PlatformGroup");
+nameMap.set("Hit Terrain?", "_HitTerrain");
+_HitTerrain = false;
 nameMap.set("Actor", "actor");
 
 	}
@@ -115,21 +119,41 @@ nameMap.set("Actor", "actor");
 	override public function init()
 	{
 		    addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {
-if(wrapper.enabled && sameAsAny(_PlatformGroup,event.otherActor.getType(),event.otherActor.getGroup())){
-        if(event.otherFromTop)
+if(wrapper.enabled){
+        if((event.thisCollidedWithTerrain || event.thisCollidedWithTile))
 {
-            _IsOnPlatform = true;
+            _HitTerrain = true;
+propertyChanged("_HitTerrain", _HitTerrain);
+            _IsOnPlatform = false;
 propertyChanged("_IsOnPlatform", _IsOnPlatform);
-            _Platform = event.otherActor;
-propertyChanged("_Platform", _Platform);
-            if(!(_WasOnPlatform))
-{
-                /* "Custom: update position on platform" */
-                actor.say("Ride Platforms PM", "_customBlock_UpdatePositionOnPlatform");
+            _WasOnPlatform = false;
+propertyChanged("_WasOnPlatform", _WasOnPlatform);
 }
 
-            _WasOnPlatform = true;
+        else if((event.otherActor.getGroup() == _PlatformGroup))
+{
+            if(event.otherFromTop)
+{
+                if(((actor.getXCenter() > cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(event.otherActor)), Float)) || (actor.getXCenter() < cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(event.otherActor)), Float))))
+{
+                    return;
+}
+
+                _IsOnPlatform = true;
+propertyChanged("_IsOnPlatform", _IsOnPlatform);
+                _Platform = event.otherActor;
+propertyChanged("_Platform", _Platform);
+                if(!(_WasOnPlatform))
+{
+                    /* "Custom: update position on platform" */
+                    actor.say("Ride Platforms PM", "_customBlock_UpdatePositionOnPlatform");
+}
+
+                _WasOnPlatform = true;
 propertyChanged("_WasOnPlatform", _WasOnPlatform);
+                actor.setActorValue("On Platform?", true);
+}
+
 }
 
 }
@@ -137,50 +161,53 @@ propertyChanged("_WasOnPlatform", _WasOnPlatform);
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         /* "Custom: Is \"Jump\" on for Self" */
-        if(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool))
+        if(!(_HitTerrain))
 {
-            _IsOnPlatform = false;
+            if(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool))
+{
+                _IsOnPlatform = false;
 propertyChanged("_IsOnPlatform", _IsOnPlatform);
-            _WasOnPlatform = false;
+                _WasOnPlatform = false;
 propertyChanged("_WasOnPlatform", _WasOnPlatform);
-            /* "set prevent animations to <false>" */
-            actor.say("Ride Platforms PM", "_customBlock_SetAnimationPrevention", [false]);
-            return;
+                /* "set prevent animations to <false>" */
+                actor.say("Ride Platforms PM", "_customBlock_SetAnimationPrevention", [false]);
+                return;
 }
 
-        if(_IsOnPlatform)
+            if(_IsOnPlatform)
 {
-            actor.setActorValue("On Ground?", true);
-            /* "Custom: Is \"Left\" on for Self, Is \"Right\" on for Self" */
-            if((!(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Left"])), Bool)) && !(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Right"])), Bool))))
+                actor.setActorValue("On Ground?", true);
+                /* "Custom: Is \"Left\" on for Self, Is \"Right\" on for Self" */
+                if((!(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Left"])), Bool)) && !(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Right"])), Bool))))
 {
-                /* "Custom: update player position, set prevent animations to <true>" */
-                actor.say("Ride Platforms PM", "_customBlock_UpdatePlayerPosition");
-                actor.say("Ride Platforms PM", "_customBlock_SetAnimationPrevention", [true]);
+                    /* "Custom: update player position, set prevent animations to <true>" */
+                    actor.say("Ride Platforms PM", "_customBlock_UpdatePlayerPosition");
+                    actor.say("Ride Platforms PM", "_customBlock_SetAnimationPrevention", [true]);
 }
 
-            else if(_WasOnPlatform)
+                else if(_WasOnPlatform)
 {
-                /* "Custom: update position on platform" */
-                actor.say("Ride Platforms PM", "_customBlock_UpdatePositionOnPlatform");
+                    /* "Custom: update position on platform" */
+                    actor.say("Ride Platforms PM", "_customBlock_UpdatePositionOnPlatform");
 }
 
 }
 
-        else
+            else
 {
-            if(_WasOnPlatform)
+                if(_WasOnPlatform)
 {
-                /* "Custom: update player position" */
-                actor.setActorValue("On Ground?", false);
-                actor.say("Ride Platforms PM", "_customBlock_UpdatePlayerPosition");
-                runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                            if(!(_IsOnPlatform))
+                    /* "Custom: update player position" */
+                    actor.setActorValue("On Ground?", false);
+                    actor.say("Ride Platforms PM", "_customBlock_UpdatePlayerPosition");
+                    runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                                if(!(_IsOnPlatform))
 {
-                                _WasOnPlatform = false;
+                                    _WasOnPlatform = false;
 propertyChanged("_WasOnPlatform", _WasOnPlatform);
-                                /* "Custom: set prevent animations to <false>" */
-                                actor.say("Ride Platforms PM", "_customBlock_SetAnimationPrevention", [false]);
+                                    /* "Custom: set prevent animations to <false>" */
+                                    actor.say("Ride Platforms PM", "_customBlock_SetAnimationPrevention", [false]);
+                                    actor.setActorValue("On Platform?", false);
 }
 
 }, actor);
@@ -188,6 +215,10 @@ propertyChanged("_WasOnPlatform", _WasOnPlatform);
 
 }
 
+}
+
+        _HitTerrain = false;
+propertyChanged("_HitTerrain", _HitTerrain);
         _IsOnPlatform = false;
 propertyChanged("_IsOnPlatform", _IsOnPlatform);
 }
