@@ -136,6 +136,13 @@
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Target" order="1" type="ACTOR"/>
     </custom-block>
+    <custom-block blocktag="custom-610" blocktype="ACTION" code="~.say(&quot;Behaviour Extras&quot;, &quot;AsyncSetBehaviour&quot;, ~,~,~,~);" desc="" global="false" gui="Set %2 from %1 to %4 from %3 for %0" id="610" message="AsyncSetBehaviour" name="AsyncSetBehaviour" oid="-1" return="VOID" shared="false" snippetID="318">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Destination Behaviour" order="1" type="TEXT"/>
+        <blank name="Destination Variable" order="2" type="TEXT"/>
+        <blank name="Origin Behaviour" order="3" type="TEXT"/>
+        <blank name="Origin Variable" order="4" type="TEXT"/>
+    </custom-block>
     <custom-block blocktag="custom-111" blocktype="NORMAL" code="Boolean((~.say(&quot;Walking PM&quot;, &quot;AtMaxWalkingSpeed&quot;)))" desc="" global="false" gui="%0 At Max Walking Speed" id="111" message="AtMaxWalkingSpeed" name="AtMaxWalkingSpeed" oid="-1" return="BOOLEAN" shared="false" snippetID="74">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
@@ -296,10 +303,6 @@
             <s enabled="true" id="16">
                 <prop id="1" list="0" val="0"/>
                 <prop id="2" list="0" val="0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="77">
-                <prop id="1" list="0" val="runtime"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -1706,6 +1709,10 @@
                 <prop id="3" list="0" val="false"/>
                 <prop id="4" list="0" val="300"/>
                 <prop id="5" list="0" val="200"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="77">
@@ -3212,6 +3219,7 @@
                 <prop id="4" list="0" val="0"/>
                 <prop id="5" list="0" val="false"/>
                 <prop id="6" list="0" val="6"/>
+                <prop id="7" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="46">
@@ -3447,6 +3455,9 @@
                 <prop id="16" list="0" val="false"/>
                 <prop id="19" list="0" val="0"/>
                 <prop id="18" list="0" val="0"/>
+                <prop id="21" list="0" val="false"/>
+                <prop id="20" list="0" val="0.5"/>
+                <prop id="22" list="0" val="false"/>
             </s>
             <s enabled="true" id="37">
                 <prop id="1" list="1" val=""/>
@@ -4142,6 +4153,22 @@
         <tile collision="-1" data="" durations="100" frames="22" id="22" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="23" id="23" order="-1"/>
     </tileset>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="615" name="Pivot" shared="false" width="16">
+        <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="8" originy="8" sync="false" width="16"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="320" fixedrot="false" fric="0.2" gid="3" id="614" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Pivot" oid="-1" pausable="true" rest="0.0" shared="false" sprite="615" static="false">
+        <snippets>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="56">
+                <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="100"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="80" fixedrot="true" fric="0.2" gid="4" id="129" ignoreg="true" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Player Trigger" oid="-1" pausable="true" rest="0.0" shared="false" sprite="130" static="false">
         <snippets>
             <s enabled="true" id="53">
@@ -4540,6 +4567,32 @@
     <custom-block blocktag="custom-552" blocktype="NORMAL" code="String((scripts.Design_206_206_DoorsAndInventoryExtrasPM.ReverseDestination(~)))" desc="" global="true" gui="Reverse %0" id="552" message="ReverseDestination" name="ReverseDestination" oid="-1" return="TEXT" shared="false" snippetID="206">
         <blank name="Destination" order="0" type="TEXT"/>
     </custom-block>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="617" name="Rideable Platform" shared="false" width="64">
+        <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="8" sync="false" width="64">
+            <poly data="4,0,0,64,0,64,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="321" fixedrot="false" fric="0.2" gid="6" id="616" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Rideable Platform" oid="-1" pausable="true" rest="0.0" shared="false" sprite="617" static="false">
+        <snippets>
+            <s enabled="true" id="51">
+                <prop id="1" list="0" val="0"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="233">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="true"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="32" id="536" name="RoboBunny" shared="false" width="32">
         <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Left" numframes="1" originx="16" originy="16" sync="false" width="32">
             <poly data="4,8,0,24,0,24,32,8,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
@@ -4889,6 +4942,32 @@
                 <prop id="3" list="0" val="0"/>
                 <prop id="4" list="0" val="false"/>
                 <prop id="5" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="619" name="Small Rideable Platform" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="8" sync="false" width="32">
+            <poly data="4,0,0,32,0,32,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="322" fixedrot="false" fric="0.2" gid="6" id="618" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Small Rideable Platform" oid="-1" pausable="true" rest="0.0" shared="false" sprite="619" static="false">
+        <snippets>
+            <s enabled="true" id="51">
+                <prop id="1" list="0" val="0"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="233">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="true"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -5280,6 +5359,17 @@
     </actor>
     <custom-block blocktag="custom-336" blocktype="ACTION" code="scripts.Design_207_207_StencylExtrasPM.TriggerEventInAllForCurrentScene(~);" desc="" global="true" gui="trigger event %0 in all behaviours for current scene" id="336" message="TriggerEventInAllForCurrentScene" name="TriggerEventInAllForCurrentScene" oid="-1" return="VOID" shared="false" snippetID="207">
         <blank name="Event Name" order="0" type="TEXT"/>
+    </custom-block>
+    <custom-block blocktag="custom-613" blocktype="ACTION" code="~.say(&quot;Behaviour Extras&quot;, &quot;TriggerEventInAllWhenBehaviourReady&quot;, ~,~);" desc="" global="false" gui="Trigger %1 in all behaviors when %2 is ready for %0" id="613" message="TriggerEventInAllWhenBehaviourReady" name="TriggerEventInAllWhenBehaviourReady" oid="-1" return="VOID" shared="false" snippetID="318">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Event Name" order="1" type="TEXT"/>
+        <blank name="Watched Behaviour" order="2" type="TEXT"/>
+    </custom-block>
+    <custom-block blocktag="custom-612" blocktype="ACTION" code="~.say(&quot;Behaviour Extras&quot;, &quot;TriggerEventWhenBehaviourReady&quot;, ~,~,~);" desc="" global="false" gui="Trigger %1 in %2 when %3 is ready for %0" id="612" message="TriggerEventWhenBehaviourReady" name="TriggerEventWhenBehaviourReady" oid="-1" return="VOID" shared="false" snippetID="318">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Event Name" order="1" type="TEXT"/>
+        <blank name="Trigger Behaviour" order="2" type="TEXT"/>
+        <blank name="Watched Behaviour" order="3" type="TEXT"/>
     </custom-block>
     <custom-block blocktag="custom-287" blocktype="ACTION" code="scripts.Design_27_27_ActorExtrasPM.TriggerKilledInActor(~,~,~,~);" desc="Triggers the killed behaviour for the given Actor, and sets Kill X and Kill Y" global="true" gui="Trigger kill behaviour %1 in %0 with X: %2 Y: %3" id="287" message="TriggerKilledInActor" name="TriggerKilledInActor" oid="-1" return="VOID" shared="false" snippetID="27">
         <blank name="Actor" order="0" type="ACTOR"/>

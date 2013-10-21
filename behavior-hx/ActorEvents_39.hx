@@ -54,7 +54,8 @@ class ActorEvents_39 extends ActorScript
 	
 	override public function init()
 	{
-		
+		            actor.disableActorDrawing();
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

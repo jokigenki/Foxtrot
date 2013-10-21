@@ -77,7 +77,7 @@ nameMap.set("Actor", "actor");
 		            /* "Custom: distance between <Pivot> and Self" */
         _Radius = asNumber(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_CalculateDistance(_Pivot,actor)), Float));
 propertyChanged("_Radius", _Radius);
-        _StartAngle = asNumber(Math.atan2((actor.getXCenter() - _Pivot.getXCenter()), (_Pivot.getYCenter() - _Pivot.getYCenter())));
+        _StartAngle = asNumber(Math.atan2((actor.getYCenter() - _Pivot.getYCenter()), (actor.getXCenter() - _Pivot.getXCenter())));
 propertyChanged("_StartAngle", _StartAngle);
         _XOffset = asNumber((actor.getX() - actor.getXCenter()));
 propertyChanged("_XOffset", _XOffset);

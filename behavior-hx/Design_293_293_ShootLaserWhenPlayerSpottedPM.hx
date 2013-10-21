@@ -80,13 +80,20 @@ public var _HasCollision:Bool;
 public var _BeamTargetY:Float;
 
 public var _BeamTargetX:Float;
+
+public var _IsCharged:Bool;
+
+public var _ChargeTime:Float;
+
+public var _IsCharging:Bool;
             public function updateTarget ()
 {
+	var targetDistance = 500; 
 	var rads = _Degrees * Math.PI / 180;
 	_cos = Math.cos(rads);
 	_sin = Math.sin(rads);
-	_BeamTargetX = _cos * 500;
-	_BeamTargetY = _sin * 500;
+	_BeamTargetX = _cos * targetDistance;
+	_BeamTargetY = _sin * targetDistance;
 }
 
 
@@ -95,20 +102,21 @@ public var _BeamTargetX:Float;
 	{
 		super(actor, engine);	
 		nameMap.set("Test After N Frames", "_TestAfterNFrames");
-_TestAfterNFrames = 5;
+_TestAfterNFrames = 5.0;
 nameMap.set("Degrees", "_Degrees");
-_Degrees = 0;
+_Degrees = 0.0;
 nameMap.set("cos", "_cos");
-_cos = 0;
+_cos = 0.0;
 nameMap.set("sin", "_sin");
-_sin = 0;
+_sin = 0.0;
 nameMap.set("Frame Count", "_FrameCount");
-_FrameCount = 0;
+_FrameCount = 0.0;
 nameMap.set("Included Actors", "_IncludedActors");
+_IncludedActors = [];
 nameMap.set("Key Line Colour", "_KeyLineColour");
 _KeyLineColour = Utils.getColorRGB(0,0,0);
 nameMap.set("Beam Thickness", "_BeamThickness");
-_BeamThickness = 2;
+_BeamThickness = 2.0;
 nameMap.set("X Offset", "_XOffset");
 _XOffset = 0.0;
 nameMap.set("Y Offset", "_YOffset");
@@ -126,9 +134,15 @@ nameMap.set("First Collision Actor", "_FirstCollisionActor");
 nameMap.set("Has Collision?", "_HasCollision");
 _HasCollision = false;
 nameMap.set("Beam Target Y", "_BeamTargetY");
-_BeamTargetY = 0;
+_BeamTargetY = 0.0;
 nameMap.set("Beam Target X", "_BeamTargetX");
-_BeamTargetX = 0;
+_BeamTargetX = 0.0;
+nameMap.set("Is Charged?", "_IsCharged");
+_IsCharged = false;
+nameMap.set("Charge Time", "_ChargeTime");
+_ChargeTime = 0.5;
+nameMap.set("Is Charging?", "_IsCharging");
+_IsCharging = false;
 
 	}
 	
@@ -164,7 +178,6 @@ var startY = actor.getY() + _YOffset;
 var targetX = startX + _BeamTargetX;
 var targetY = startY + _BeamTargetY;
 var results:Array<Dynamic> = RaycastAPI.rayCast(startX, startY, targetX, targetY);
-var preventWalking = false;
 
 _FirstCollisionActor = null;
 for (i in 0...results.length)
@@ -182,8 +195,14 @@ for (i in 0...results.length)
 	{
 		currentDist = dist;
 		_FirstCollisionActor = collisionActor;
-		_CollisionX = item[2] - actor.getX();
-		_CollisionY = item[3] - actor.getY();
+		if (_IsCharged)
+		{
+			_CollisionX = item[2] - actor.getX();
+			_CollisionY = item[3] - actor.getY();
+		} else {
+			_CollisionX = (_cos * 10) + _XOffset;
+			_CollisionY = (_sin * 10) + _XOffset;
+		}
 	}
 }
 
@@ -197,17 +216,18 @@ if (_FirstCollisionActor != null)
 		return;
 	}
 
-	preventWalking = true;
-	if (_FirstCollisionActor.hasBehavior("Meltable PM") == true)
+	if (_IsCharged)
 	{
-		_FirstCollisionActor.say("Meltable PM", "_customEvent_Melt");
-	}
-	else if (_FirstCollisionActor.hasBehavior("Killable By Laser PM") == true)
-	{
-		_FirstCollisionActor.say("Killable By Laser PM","_customEvent_Killed");
+		if (_FirstCollisionActor.hasBehavior("Meltable PM") == true)
+		{
+			_FirstCollisionActor.say("Meltable PM", "_customEvent_Melt");
+		}
+		else if (_FirstCollisionActor.hasBehavior("Killable By Laser PM") == true)
+		{
+			_FirstCollisionActor.say("Killable By Laser PM","_customEvent_Killed");
+		}
 	}
 }
-            actor.say("Walking PM", "_customBlock_PreventWalk", [preventWalking]);
 }
 
         else
@@ -216,11 +236,34 @@ if (_FirstCollisionActor != null)
 propertyChanged("_FrameCount", _FrameCount);
 }
 
+        if(_HasCollision)
+{
+            _IsCharging = true;
+propertyChanged("_IsCharging", _IsCharging);
+            runLater(1000 * _ChargeTime, function(timeTask:TimedTask):Void {
+                        if(_HasCollision)
+{
+                            _IsCharged = true;
+propertyChanged("_IsCharged", _IsCharged);
+                            actor.say("Walking PM", "_customBlock_PreventWalk", [true]);
+}
+
+}, actor);
+}
+
+        else
+{
+            _IsCharged = false;
+propertyChanged("_IsCharged", _IsCharged);
+            _IsCharging = false;
+propertyChanged("_IsCharging", _IsCharging);
+}
+
 }
 });
     addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if(_HasCollision)
+        if((_IsCharged || _IsCharging))
 {
             if(_UseKeyLine)
 {

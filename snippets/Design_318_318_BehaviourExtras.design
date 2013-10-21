@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <receiver-3-610 comment="false" x="0" y="16">
+            <group eventID="1" id="-1">
+                <periodic comment="false" x="11" y="46">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="22" y="73">
+                            <group eventID="1" id="-1">
+                                <set-attribute comment="false" x="33" y="116">
+                                    <get-byobval-318-610-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-318-610-1 comment="false" id="1" x="0" y="0"/>
+                                    <get-byobval-318-610-2 comment="false" id="2" x="0" y="0"/>
+                                    <get-attribute comment="false" id="3" x="0" y="0">
+                                        <get-byobval-318-610-0 comment="false" id="0" x="0" y="0"/>
+                                        <get-byobval-318-610-3 comment="false" id="1" x="0" y="0"/>
+                                        <get-byobval-318-610-4 comment="false" id="2" x="0" y="0"/>
+                                    </get-attribute>
+                                </set-attribute>
+                                <cancel comment="false" x="33" y="161"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <has-snippet comment="false" id="0" x="0" y="0">
+                                    <get-byobval-318-610-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-318-610-3 comment="false" id="1" x="0" y="0"/>
+                                </has-snippet>
+                                <has-snippet comment="false" id="1" x="0" y="0">
+                                    <get-byobval-318-610-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-318-610-1 comment="false" id="1" x="0" y="0"/>
+                                </has-snippet>
+                            </and>
+                        </if>
+                    </group>
+                    <int id="0" val="0.01"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+            </group>
+            <get-byobval-318-610-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-318-610-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-318-610-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-318-610-3 comment="false" id="3" x="0" y="0"/>
+            <get-byobval-318-610-4 comment="false" id="4" x="0" y="0"/>
+        </receiver-3-610>
+    </group>
+    <group eventID="1" id="-1">
+        <get-byobval-318-610-0 comment="false" x="0" y="0"/>
+        <get-byobval-318-610-1 comment="false" x="0" y="0"/>
+        <get-byobval-318-610-2 comment="false" x="0" y="0"/>
+        <get-byobval-318-610-3 comment="false" x="0" y="0"/>
+        <get-byobval-318-610-4 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="2" id="0">
+        <receiver-5-612 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <periodic comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="72">
+                            <group eventID="2" id="-1">
+                                <say comment="false" x="48" y="115">
+                                    <get-byobval-318-612-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-318-612-2 comment="false" id="1" x="0" y="0"/>
+                                    <get-byobval-318-612-1 comment="false" id="2" x="0" y="0"/>
+                                </say>
+                                <cancel comment="false" x="48" y="147"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <has-snippet comment="false" id="0" x="0" y="0">
+                                    <get-byobval-318-612-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-318-612-2 comment="false" id="1" x="0" y="0"/>
+                                </has-snippet>
+                                <has-snippet comment="false" id="1" x="0" y="0">
+                                    <get-byobval-318-612-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-318-612-3 comment="false" id="1" x="0" y="0"/>
+                                </has-snippet>
+                            </and>
+                        </if>
+                    </group>
+                    <int id="0" val="0.01"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+            </group>
+            <get-byobval-318-612-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-318-612-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-318-612-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-318-612-3 comment="false" id="3" x="0" y="0"/>
+        </receiver-5-612>
+    </group>
+    <group eventID="2" id="-1">
+        <get-byobval-318-612-0 comment="false" x="0" y="0"/>
+        <get-byobval-318-612-1 comment="false" x="0" y="0"/>
+        <get-byobval-318-612-2 comment="false" x="0" y="0"/>
+        <get-byobval-318-612-3 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="3" id="0">
+        <receiver-6-613 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <periodic comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="72">
+                            <group eventID="2" id="-1">
+                                <shout comment="false" x="48" y="110">
+                                    <get-byobval-318-613-0 comment="false" id="0" x="0" y="0"/>
+                                    <get-byobval-318-613-1 comment="false" id="1" x="0" y="0"/>
+                                </shout>
+                                <cancel comment="false" x="48" y="142"/>
+                            </group>
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <get-byobval-318-613-0 comment="false" id="0" x="0" y="0"/>
+                                <get-byobval-318-613-2 comment="false" id="1" x="0" y="0"/>
+                            </has-snippet>
+                        </if>
+                    </group>
+                    <int id="0" val="0.01"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+            </group>
+            <get-byobval-318-613-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-318-613-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-318-613-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-6-613>
+    </group>
+    <group eventID="3" id="-1">
+        <get-byobval-318-613-0 comment="false" x="0" y="0"/>
+        <get-byobval-318-613-1 comment="false" x="0" y="0"/>
+        <get-byobval-318-613-2 comment="false" x="0" y="0"/>
+    </group>
+</groups>

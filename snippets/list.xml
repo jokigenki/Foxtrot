@@ -6,7 +6,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_39" classname="scripts.ActorEvents_39" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="15" language="" name="ActorEvents_39" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_16_16_CameraFollowPlayer" classname="scripts.Design_16_16_CameraFollowPlayer" desc="Makes the camera follow this Actor." description="Makes the camera follow this Actor." design="true" drawOrder="0" id="16" language="" name="Camera Follow Player" oid="-1" package="" scenespecific="false" shared="false" type="actor">
         <number default="0" defaultValue="0" desc="Horizontal Offset from the Actor" dropdown="" fullname="X Offset" hidden="false" id="1" name="_XOffset" order="1"/>
@@ -27,12 +29,14 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Jump Fudge Coefficient" hidden="false" id="10" name="_JumpFudgeCoefficient" order="6"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Fudge" hidden="true" id="11" name="_CurrentFudge" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Jumped?" hidden="true" id="12" name="_HasJumped" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Last X Touch" hidden="false" id="13" name="_LastXTouch" order="9"/>
         <blocks/>
         <events>
             <event displayName="Multi-Touch" enabled="true" id="1" name="event-device-multitouch" order="2" repeats="true"/>
             <event displayName="Multi-Touch" enabled="true" id="2" name="event-device-multitouch" order="3" repeats="true"/>
             <event displayName="Created" enabled="true" id="3" name="init" order="1" repeats="true"/>
             <event displayName="Updated" enabled="true" id="4" name="step" order="4" repeats="true"/>
+            <event displayName="Drawing" enabled="false" id="5" name="draw" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_21_21_SceneTransitionPM" classname="scripts.Design_21_21_SceneTransitionPM" desc="" description="" design="true" drawOrder="0" id="21" language="" name="Scene Transition PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
@@ -45,6 +49,7 @@
             <event displayName="Switch Scene" enabled="true" id="2" name="event-custom" order="3" repeats="true"/>
             <event displayName="Created" enabled="true" id="3" name="init" order="2" repeats="true"/>
             <event displayName="Switch scene" enabled="true" id="5" name="event-custom-block" order="5" repeats="true"/>
+            <event displayName="Drawing" enabled="false" id="6" name="draw" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_20_20_DisplayPlayerPositionPM" classname="scripts.Design_20_20_DisplayPlayerPositionPM" desc="" description="" design="true" drawOrder="0" id="20" language="" name="Display Player Position PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
@@ -487,6 +492,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Position On Platform" hidden="true" id="4" name="_YPositionOnPlatform" order="4"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Was On Platform?" hidden="true" id="5" name="_WasOnPlatform" order="5"/>
         <actorgroup default="" defaultValue="" desc="" dropdown="" fullname="Platform Group" hidden="false" id="6" name="_PlatformGroup" order="6"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Hit Terrain?" hidden="true" id="7" name="_HitTerrain" order="7"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="631" id="1"/>
@@ -495,11 +501,12 @@
             <receiver blockID="85" id="4"/>
         </blocks>
         <events>
-            <event displayName=" Actor - Group" enabled="true" id="1" name="event-collide-actortogroup" order="1" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
-            <event displayName="Prevent Animations" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
-            <event displayName="Update Position On Platform" enabled="true" id="4" name="event-custom-block" order="4" repeats="true"/>
-            <event displayName="Update Player Position" enabled="true" id="5" name="event-custom-block" order="5" repeats="true"/>
+            <event displayName=" Actor - Group" enabled="false" id="1" name="event-collide-actortogroup" order="1" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="2" name="step" order="3" repeats="true"/>
+            <event displayName="Prevent Animations" enabled="true" id="3" name="event-custom-block" order="4" repeats="true"/>
+            <event displayName="Update Position On Platform" enabled="true" id="4" name="event-custom-block" order="5" repeats="true"/>
+            <event displayName="Update Player Position" enabled="true" id="5" name="event-custom-block" order="6" repeats="true"/>
+            <event displayName="Actor - Any" enabled="true" id="6" name="collide" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_46_46_FallingPM" classname="scripts.Design_46_46_FallingPM" desc="This Behavior is responsible for detecting when the player is falling, and playing the proper animation." description="This Behavior is responsible for detecting when the player is falling, and playing the proper animation." design="true" drawOrder="0" id="46" language="" name="Falling PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -1779,8 +1786,8 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
-            <event displayName="Actor Killed" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Actor Killed" enabled="true" id="1" name="event-actor-create-kill" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_188_188_DisplaysPopupPM" classname="scripts.Design_188_188_DisplaysPopupPM" desc="" description="" design="true" drawOrder="0" id="188" language="" name="Displays Popup PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -2803,6 +2810,27 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_31" classname="scripts.SceneEvents_31" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="319" language="" name="SceneEvents_31" oid="-1" package="scripts." sceneid="31" scenespecific="true" shared="false" type="scene">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_318_318_BehaviourExtras" classname="scripts.Design_318_318_BehaviourExtras" desc="" description="" design="true" drawOrder="0" id="318" language="" name="Behaviour Extras" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks>
+            <receiver blockID="608" id="1"/>
+            <receiver blockID="609" id="2"/>
+            <receiver blockID="610" id="3"/>
+            <receiver blockID="611" id="4"/>
+            <receiver blockID="612" id="5"/>
+            <receiver blockID="613" id="6"/>
+        </blocks>
+        <events>
+            <event displayName="Set Behaviour Value" enabled="true" id="1" name="event-custom-block" order="1" repeats="true"/>
+            <event displayName="Trigger Event When Ready" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
+            <event displayName="Trigger All When Ready" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_540" classname="scripts.ActorEvents_540" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="288" language="" name="ActorEvents_540" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
@@ -2851,6 +2879,9 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Collision?" hidden="true" id="16" name="_HasCollision" order="15"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beam Target Y" hidden="true" id="19" name="_BeamTargetY" order="18"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beam Target X" hidden="true" id="18" name="_BeamTargetX" order="17"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charged?" hidden="true" id="21" name="_IsCharged" order="20"/>
+        <number default="0.5" defaultValue="0.5" desc="" dropdown="" fullname="Charge Time" hidden="false" id="20" name="_ChargeTime" order="19"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charging?" hidden="true" id="22" name="_IsCharging" order="21"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
@@ -2931,5 +2962,17 @@
         <events>
             <event displayName="On Reload" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
         </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_618" classname="scripts.ActorEvents_618" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="322" language="" name="ActorEvents_618" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_614" classname="scripts.ActorEvents_614" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="320" language="" name="ActorEvents_614" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_616" classname="scripts.ActorEvents_616" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="321" language="" name="ActorEvents_616" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
     </snippet>
 </pack>

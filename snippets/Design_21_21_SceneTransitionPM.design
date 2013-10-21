@@ -174,4 +174,56 @@
         </receiver-3-348>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <draw-text comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <scene-wh comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </scene-wh>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <int id="0" val=":"/>
+                            <scene-wh comment="false" id="1" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </scene-wh>
+                        </str-combine>
+                    </str-combine>
+                    <int id="1" val="100"/>
+                    <int id="2" val="50"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="83">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <screen-wh comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </screen-wh>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <int id="0" val=":"/>
+                            <screen-wh comment="false" id="1" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </screen-wh>
+                        </str-combine>
+                    </str-combine>
+                    <int id="1" val="100"/>
+                    <int id="2" val="75"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="126">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <code-short comment="false" id="0" x="0" y="0">
+                            <int id="0" val="Engine.engine.root.scaleX"/>
+                        </code-short>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <int id="0" val=":"/>
+                            <code-short comment="false" id="1" x="0" y="0">
+                                <int id="0" val="Engine.engine.root.scaleY"/>
+                            </code-short>
+                        </str-combine>
+                    </str-combine>
+                    <int id="1" val="100"/>
+                    <int id="2" val="100"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>
