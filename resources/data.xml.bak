@@ -1141,9 +1141,9 @@
                 <prop id="3" list="0" val="0"/>
                 <prop id="4" list="0" val="0"/>
                 <prop id="5" list="0" val="0"/>
-                <prop id="6" list="0" val="0.25"/>
+                <prop id="6" list="0" val="1.0"/>
                 <prop id="7" list="0" val="false"/>
-                <prop id="8" list="0" val="Strong In"/>
+                <prop id="8" list="0" val="None"/>
                 <prop id="9" list="0" val="0"/>
                 <prop id="10" list="0" val="0"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -1161,6 +1161,51 @@
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="276" fixedrot="false" fric="0.2" gid="2" id="514" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Crusher Sign" oid="-1" pausable="true" rest="0.0" shared="false" sprite="515" static="true">
         <snippets/>
+    </actor>
+    <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="32" id="623" name="Crusher With Gap" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32">
+            <poly data="4,3,0,29,0,29,32,3,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="1" continuous="true" desc="" eventsnippetid="325" fixedrot="true" fric="0.2" gid="8" id="622" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Crusher With Gap" oid="-1" pausable="true" rest="0.0" shared="false" sprite="623" static="false">
+        <snippets>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="233">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="true"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="242">
+                <prop id="1" list="0" val="0"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="5" list="0" val="1"/>
+                <prop id="6" list="0" val="1"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="166">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="1.0"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="None"/>
+                <prop id="9" list="0" val="0"/>
+                <prop id="10" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="165">
+                <prop id="4" list="1" val="">
+                    <text order="0" value="Reposition Whilst Activated PM"/>
+                </prop>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
     <custom-block blocktag="custom-333" blocktype="NORMAL" code="String((scripts.Design_207_207_StencylExtrasPM.CurrentSceneName()))" desc="Global method for getting the current scene name." global="true" gui="current scene name" id="333" message="CurrentSceneName" name="CurrentSceneName" oid="-1" return="TEXT" shared="false" snippetID="207"/>
     <custom-block blocktag="custom-372" blocktype="ACTION" code="scripts.Design_222_222_JointsExtras.DestroyJoint(~);" desc="" global="true" gui="Destroy joint %0" id="372" message="DestroyJoint" name="DestroyJoint" oid="-1" return="VOID" shared="false" snippetID="222">
