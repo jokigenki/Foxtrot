@@ -42,29 +42,19 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_22 extends SceneScript
+class ActorEvents_624 extends ActorScript
 {          	
 	
-public var _ExitName:String;
-
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-
+		super(actor, engine);	
+		
 	}
 	
 	override public function init()
 	{
-		    addActorEntersRegionListener(getRegion(1), function(a:Actor, list:Array<Dynamic>):Void  {
-if(wrapper.enabled && sameAs(getActor(3), a)){
-        getActor(162).say("Activate On Event PM", "_customEvent_" + "Activate");
-        getActor(179).say("Activate On Event PM", "_customEvent_" + "Activate");
-}
-});
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)
