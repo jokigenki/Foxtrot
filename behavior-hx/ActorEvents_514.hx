@@ -42,45 +42,14 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_171_171_ExplodeWithSetPiecesPM extends ActorScript
+class ActorEvents_514 extends ActorScript
 {          	
 	
-public var _ExplodeActorType:ActorType;
-
-public var _NumberOfPieces:Float;
-
-public var _PieceNumber:Float;
-    public function _customEvent_Killed():Void
-{
-        for(index0 in 0...Std.int(_NumberOfPieces))
-{
-            createRecycledActor(_ExplodeActorType, actor.getX(), actor.getY(), Script.FRONT);
-            _PieceNumber = asNumber(index0);
-propertyChanged("_PieceNumber", _PieceNumber);
-            if((_PieceNumber > getLastCreatedActor().getNumFrames()))
-{
-                _PieceNumber -= getLastCreatedActor().getNumFrames();
-propertyChanged("_PieceNumber", _PieceNumber);
-}
-
-            getLastCreatedActor().setAnimation("" + ("" + (("" + "p") + ("" + _PieceNumber))));
-}
-
-        recycleActor(actor);
-}
-
-
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Explode Actor Type", "_ExplodeActorType");
-nameMap.set("Number Of Pieces", "_NumberOfPieces");
-_NumberOfPieces = 0.0;
-nameMap.set("Piece Number", "_PieceNumber");
-_PieceNumber = 0.0;
-nameMap.set("Actor", "actor");
-
+		
 	}
 	
 	override public function init()

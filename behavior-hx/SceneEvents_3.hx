@@ -42,50 +42,45 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_171_171_ExplodeWithSetPiecesPM extends ActorScript
+class SceneEvents_3 extends SceneScript
 {          	
 	
-public var _ExplodeActorType:ActorType;
-
-public var _NumberOfPieces:Float;
-
-public var _PieceNumber:Float;
-    public function _customEvent_Killed():Void
-{
-        for(index0 in 0...Std.int(_NumberOfPieces))
-{
-            createRecycledActor(_ExplodeActorType, actor.getX(), actor.getY(), Script.FRONT);
-            _PieceNumber = asNumber(index0);
-propertyChanged("_PieceNumber", _PieceNumber);
-            if((_PieceNumber > getLastCreatedActor().getNumFrames()))
-{
-                _PieceNumber -= getLastCreatedActor().getNumFrames();
-propertyChanged("_PieceNumber", _PieceNumber);
-}
-
-            getLastCreatedActor().setAnimation("" + ("" + (("" + "p") + ("" + _PieceNumber))));
-}
-
-        recycleActor(actor);
-}
-
-
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
-		nameMap.set("Explode Actor Type", "_ExplodeActorType");
-nameMap.set("Number Of Pieces", "_NumberOfPieces");
-_NumberOfPieces = 0.0;
-nameMap.set("Piece Number", "_PieceNumber");
-_PieceNumber = 0.0;
-nameMap.set("Actor", "actor");
-
+		super(engine);
+		
 	}
 	
 	override public function init()
 	{
-		
+		            if(!(getGameAttribute("Game Was Loaded")))
+{
+            loadGame("mySave", function(success:Bool):Void {
+                if(success)
+{
+                    setGameAttribute("Game Was Loaded", true);
+                    if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
+{
+                        runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
+                                    trace("" + (("" + "Last scene: ") + ("" + getGameAttribute("Save Destination"))));
+                                    getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
+                                    getActor(18).say("Activate Door PM", "_customEvent_" + "ActivateDoor");
+                                    getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
+}, null);
+}
+
+}
+
+                else
+{
+                    setGameAttribute("Game Was Loaded", false);
+}
+
+});
+}
+
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

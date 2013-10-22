@@ -42,50 +42,67 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_171_171_ExplodeWithSetPiecesPM extends ActorScript
+class Design_329_329_SoundManagerPM extends SceneScript
 {          	
 	
-public var _ExplodeActorType:ActorType;
+public var _Music:Sound;
+    
 
-public var _NumberOfPieces:Float;
-
-public var _PieceNumber:Float;
-    public function _customEvent_Killed():Void
+/* Params are:__Music */
+public function _customBlock_LoopMusic(__Music:Sound):Void
 {
-        for(index0 in 0...Std.int(_NumberOfPieces))
+        trace("" + (("" + "CURRENT: ") + ("" + getGameAttribute("Current Music"))));
+        trace("" + (("" + "NEW: ") + ("" + ("" + __Music))));
+        if(!(getGameAttribute("Current Music") == ("" + __Music)))
 {
-            createRecycledActor(_ExplodeActorType, actor.getX(), actor.getY(), Script.FRONT);
-            _PieceNumber = asNumber(index0);
-propertyChanged("_PieceNumber", _PieceNumber);
-            if((_PieceNumber > getLastCreatedActor().getNumFrames()))
-{
-                _PieceNumber -= getLastCreatedActor().getNumFrames();
-propertyChanged("_PieceNumber", _PieceNumber);
+            stopAllSounds();
+            loopSound(__Music);
+            setGameAttribute("Current Music", ("" + __Music));
 }
 
-            getLastCreatedActor().setAnimation("" + ("" + (("" + "p") + ("" + _PieceNumber))));
 }
+    
 
-        recycleActor(actor);
+/* Params are:__FadeOutTime __Music __FadeInTime */
+public function _customBlock_FadeOutCurrent(__FadeOutTime:Float, __Music:Sound, __FadeInTime:Float):Void
+{
+        fadeOutForAllSounds(__FadeOutTime);
+        runLater(1000 * __FadeOutTime, function(timeTask:TimedTask):Void {
+                    stopAllSounds();
+                    loopSound(__Music);
+                    fadeInForAllSounds(__FadeInTime);
+}, null);
 }
+    
 
+/* Params are:*/
+public function _customBlock_StopCurrentMusic():Void
+{
+        stopAllSounds();
+        setGameAttribute("Current Music", "None");
+}
 
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
-		nameMap.set("Explode Actor Type", "_ExplodeActorType");
-nameMap.set("Number Of Pieces", "_NumberOfPieces");
-_NumberOfPieces = 0.0;
-nameMap.set("Piece Number", "_PieceNumber");
-_PieceNumber = 0.0;
-nameMap.set("Actor", "actor");
+		super(engine);
+		nameMap.set("Music", "_Music");
 
 	}
 	
 	override public function init()
 	{
-		
+		            if((hasValue(_Music) != false))
+{
+            sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [_Music]);
+}
+
+        else
+{
+            sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
+}
+
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

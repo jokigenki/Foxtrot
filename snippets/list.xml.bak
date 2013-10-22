@@ -1634,6 +1634,7 @@
         <blocks/>
         <events>
             <event displayName="Rooster Killed" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+            <event displayName="Reduced Health" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_174_174" classname="scripts.Design_174_174" desc="A switch that switches once from start state to on or off when the player jumps on it. Effect is immediate." description="A switch that switches once from start state to on or off when the player jumps on it. Effect is immediate." design="true" drawOrder="0" id="174" language="" name="Single Use Region Switch PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -1848,6 +1849,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Health" hidden="true" id="4" name="_CurrentHealth" order="4"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="Killed Scene Event" hidden="false" id="5" name="_KilledSceneEvent" order="5"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Health States" hidden="false" id="6" name="_HealthStates" order="6"/>
+        <text default="ReducedHealth" defaultValue="ReducedHealth" desc="" dropdown="" fullname="Reduced Health Event" hidden="false" id="7" name="_ReducedHealthEvent" order="7"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>

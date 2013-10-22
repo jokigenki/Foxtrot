@@ -56,10 +56,13 @@ public var _CurrentHealth:Float;
 public var _KilledSceneEvent:String;
 
 public var _HealthStates:Array<Dynamic>;
+
+public var _ReducedHealthEvent:String;
     public function _customEvent_Killed():Void
 {
         _CurrentHealth -= 1;
 propertyChanged("_CurrentHealth", _CurrentHealth);
+        shoutToScene("_customEvent_" + _ReducedHealthEvent);
         if((_CurrentHealth <= 0))
 {
             if(actor.hasBehavior(_KillBehaviour))
@@ -105,6 +108,9 @@ _CurrentHealth = 0.0;
 nameMap.set("Killed Scene Event", "_KilledSceneEvent");
 _KilledSceneEvent = "";
 nameMap.set("Health States", "_HealthStates");
+_HealthStates = [];
+nameMap.set("Reduced Health Event", "_ReducedHealthEvent");
+_ReducedHealthEvent = "ReducedHealth";
 nameMap.set("Actor", "actor");
 
 	}
