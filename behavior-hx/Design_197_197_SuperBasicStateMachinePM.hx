@@ -110,6 +110,7 @@ _DefaultState = "";
 nameMap.set("State", "_State");
 _State = "";
 nameMap.set("Behaviours", "_Behaviours");
+_Behaviours = [];
 nameMap.set("Actor", "actor");
 
 	}

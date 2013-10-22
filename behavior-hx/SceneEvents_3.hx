@@ -59,6 +59,7 @@ class SceneEvents_3 extends SceneScript
             loadGame("mySave", function(success:Bool):Void {
                 if(success)
 {
+                    setGameAttribute("Current Music", "None");
                     setGameAttribute("Game Was Loaded", true);
                     if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
 {
