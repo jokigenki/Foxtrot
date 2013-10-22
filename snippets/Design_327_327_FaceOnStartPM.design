@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="1" id="-1">
+                                <actor-set-prop comment="false" x="48" y="97">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-327-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Left"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="141">
+                            <group eventID="1" id="-1">
+                                <actor-set-prop comment="false" x="48" y="161">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                            </group>
+                        </else>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

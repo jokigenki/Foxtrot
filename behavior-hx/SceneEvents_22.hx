@@ -61,7 +61,7 @@ _ExitName = "";
 		    addActorEntersRegionListener(getRegion(1), function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAs(getActor(3), a)){
         getActor(162).say("Activate On Event PM", "_customEvent_" + "Activate");
-        getActor(164).say("Activate On Event PM", "_customEvent_" + "Activate");
+        getActor(179).say("Activate On Event PM", "_customEvent_" + "Activate");
 }
 });
 

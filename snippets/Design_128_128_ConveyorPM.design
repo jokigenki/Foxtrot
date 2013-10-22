@@ -89,7 +89,32 @@
                         </set-val-128-3>
                         <if comment="false" x="37" y="100">
                             <group eventID="2" id="-1">
-                                <set-xy comment="false" x="48" y="133">
+                                <if comment="false" x="48" y="133">
+                                    <group eventID="2" id="-1">
+                                        <stop comment="false" x="59" y="176"/>
+                                    </group>
+                                    <or comment="false" id="0" x="0" y="0">
+                                        <more comment="false" id="0" x="0" y="0">
+                                            <get-xy comment="false" id="0" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                                <int id="1" val="2"/>
+                                            </get-xy>
+                                            <custom-61 comment="false" id="1" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                            </custom-61>
+                                        </more>
+                                        <less comment="false" id="1" x="0" y="0">
+                                            <get-xy comment="false" id="0" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                                <int id="1" val="2"/>
+                                            </get-xy>
+                                            <custom-63 comment="false" id="1" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                            </custom-63>
+                                        </less>
+                                    </or>
+                                </if>
+                                <set-xy comment="false" x="48" y="208">
                                     <other-actor comment="false" id="0" x="0" y="0"/>
                                     <int id="1" val="0"/>
                                     <plus comment="false" id="2" x="0" y="0">
@@ -118,9 +143,9 @@
                         </moreeq>
                     </or>
                 </if>
-                <else comment="false" x="26" y="207">
+                <else comment="false" x="26" y="282">
                     <group eventID="2" id="-1">
-                        <incdec comment="false" x="37" y="227">
+                        <incdec comment="false" x="37" y="302">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>

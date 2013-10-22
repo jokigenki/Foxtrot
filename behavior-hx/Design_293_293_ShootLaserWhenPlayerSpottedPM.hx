@@ -211,14 +211,8 @@ for (i in 0...results.length)
 	{
 		currentDist = dist;
 		_FirstCollisionActor = collisionActor;
-		if (_IsCharged)
-		{
-			_CollisionX = item[2] - actor.getX();
-			_CollisionY = item[3] - actor.getY();
-		} else {
-			_CollisionX = (_cos * 10) + _XOffset;
-			_CollisionY = (_sin * 10) + _XOffset;
-		}
+		_CollisionX = item[2] - actor.getX();
+		_CollisionY = item[3] - actor.getY();
 	}
 }
 
@@ -256,14 +250,15 @@ propertyChanged("_FrameCount", _FrameCount);
 {
             _IsCharging = true;
 propertyChanged("_IsCharging", _IsCharging);
+            actor.say("Animation Manager", "_customBlock_ClearCat");
             if((actor.getActorValue("Facing Right?") == false))
 {
-                actor.setAnimation("" + _FireAnimationLeft);
+                scripts.Design_27_27_ActorExtrasPM._customBlock_SafeLoopAnimation(actor,_FireAnimationLeft,"Firing");
 }
 
             else
 {
-                actor.setAnimation("" + _FireAnimationRight);
+                scripts.Design_27_27_ActorExtrasPM._customBlock_SafeLoopAnimation(actor,_FireAnimationRight,"Firing");
 }
 
             runLater(1000 * _ChargeTime, function(timeTask:TimedTask):Void {
@@ -283,14 +278,15 @@ propertyChanged("_IsCharged", _IsCharged);
 propertyChanged("_IsCharged", _IsCharged);
             _IsCharging = false;
 propertyChanged("_IsCharging", _IsCharging);
+            actor.say("Animation Manager", "_customBlock_ClearCat");
             if((actor.getActorValue("Facing Right?") == false))
 {
-                actor.setAnimation("" + _IdleAnimationLeft);
+                scripts.Design_27_27_ActorExtrasPM._customBlock_SafeLoopAnimation(actor,_IdleAnimationLeft,"Walking");
 }
 
             else
 {
-                actor.setAnimation("" + _IdleAnimationRight);
+                scripts.Design_27_27_ActorExtrasPM._customBlock_SafeLoopAnimation(actor,_IdleAnimationRight,"Walking");
 }
 
 }
