@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="4" id="0">
+        <receiver-5-632 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <print comment="false" x="26" y="45">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="CURRENT: "/>
+                        <get-game-val-22 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </print>
+                <print comment="false" x="26" y="75">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="NEW: "/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
+                        </tostring>
+                    </str-combine>
+                </print>
+                <if comment="false" x="26" y="110">
+                    <group eventID="1" id="-1">
+                        <stop-sounds comment="false" x="37" y="145"/>
+                        <play-sound4 comment="false" x="37" y="165">
+                            <int id="0" val="1"/>
+                            <get-byobval-329-632-0 comment="false" id="1" x="0" y="0"/>
+                        </play-sound4>
+                        <set-game-val-22 comment="false" x="37" y="197">
+                            <tostring comment="false" id="0" x="0" y="0">
+                                <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
+                            </tostring>
+                        </set-game-val-22>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-game-val-22 comment="false" id="0" x="0" y="0"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
+                        </tostring>
+                    </noteq>
+                </if>
+            </group>
+            <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-5-632>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-6-633 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <fade-sounds comment="false" x="26" y="45">
+                    <int id="0" val="1"/>
+                    <get-byobval-329-633-0 comment="false" id="1" x="0" y="0"/>
+                </fade-sounds>
+                <dolater comment="false" x="26" y="77">
+                    <group eventID="2" id="-1">
+                        <stop-sounds comment="false" x="37" y="109"/>
+                        <play-sound4 comment="false" x="37" y="129">
+                            <int id="0" val="1"/>
+                            <get-byobval-329-633-1 comment="false" id="1" x="0" y="0"/>
+                        </play-sound4>
+                        <fade-sounds comment="false" x="37" y="161">
+                            <int id="0" val="0"/>
+                            <get-byobval-329-633-2 comment="false" id="1" x="0" y="0"/>
+                        </fade-sounds>
+                    </group>
+                    <get-byobval-329-633-0 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <get-byobval-329-633-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-329-633-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-329-633-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-6-633>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <receiver-8-635 comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <stop-sounds comment="false" x="26" y="40"/>
+                <set-game-val-22 comment="false" x="26" y="60">
+                    <int id="0" val="None"/>
+                </set-game-val-22>
+            </group>
+        </receiver-8-635>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="7" id="-1">
+                        <custom-632 comment="false" x="37" y="73">
+                            <get-val-329-1 comment="false" id="0" x="0" y="0"/>
+                        </custom-632>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+                <else comment="false" x="26" y="117">
+                    <group eventID="7" id="-1">
+                        <custom-635 comment="false" x="37" y="137"/>
+                    </group>
+                </else>
+            </group>
+        </init>
+    </group>
+    <group eventID="7" id="-1"/>
+</groups>

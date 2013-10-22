@@ -84,6 +84,15 @@ propertyChanged("_RunComplete", _RunComplete);
 
 }
 
+    public function _customEvent_ReducedHealth():Void
+{
+        if((asNumber(getActor(8).getValue("Reduce Health PM", "_CurrentHealth")) == 1))
+{
+            sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(627)]);
+}
+
+}
+
 
  
  	public function new(dummy:Int, engine:Engine)

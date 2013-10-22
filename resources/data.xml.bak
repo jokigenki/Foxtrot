@@ -268,6 +268,8 @@
             <poly data="4,0,0,32,0,32,48,0,48" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="627" loop="true" name="Boss Theme Fast" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="626" loop="true" name="Boss Theme Normal" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <custom-block blocktag="custom-64" blocktype="NORMAL" code="Number((scripts.Design_27_27_ActorExtrasPM.CalculateDistance(~,~)))" desc="Calculates distance between the centre points of 2 actors." global="true" gui="distance between %0 and %1" id="64" message="CalculateDistance" name="CalculateDistance" oid="-1" return="NUMBER" shared="false" snippetID="27">
         <blank name="First Actor" order="0" type="ACTOR"/>
         <blank name="Second Actor" order="1" type="ACTOR"/>
@@ -2016,6 +2018,11 @@
         <tile collision="1" data="" durations="100" frames="14" id="14" order="-1"/>
         <tile collision="1" data="" durations="100" frames="15" id="15" order="-1"/>
     </tileset>
+    <custom-block blocktag="custom-633" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;FadeOutCurrent&quot;, ~,~,~);" desc="" global="false" gui="Fade out current music over %0 fade in %1 over %2" id="633" message="FadeOutCurrent" name="FadeOutCurrent" oid="-1" return="VOID" shared="false" snippetID="329">
+        <blank name="Fade Out Time" order="0" type="NUMBER"/>
+        <blank name="Music" order="1" type="SOUND"/>
+        <blank name="Fade In Time" order="2" type="NUMBER"/>
+    </custom-block>
     <sprite atlasID="2" default="0" defaultAnimation="0" desc="" height="32" id="202" name="Fanny Cannon" shared="false" width="32">
         <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="true" name="idle-l" numframes="4" originx="16" originy="16" sync="false" width="128">
             <poly data="4,8,4,24,4,24,32,8,32" density="0.1" fric="0.2" gid="-1000" id="0" name="idle" rest="0.0" sensor="false"/>
@@ -3927,6 +3934,9 @@
         <blank name="Animation" order="1" type="ANIMATION"/>
         <blank name="Category" order="2" type="TEXT"/>
     </custom-block>
+    <custom-block blocktag="custom-632" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopMusic&quot;, ~);" desc="" global="false" gui="Loop music %0" id="632" message="LoopMusic" name="LoopMusic" oid="-1" return="VOID" shared="false" snippetID="329">
+        <blank name="Music" order="0" type="SOUND"/>
+    </custom-block>
     <music atlasID="0" desc="" id="466" loop="true" name="Main Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <custom-block blocktag="custom-99" blocktype="ACTION" code="~.say(&quot;Spawn PM&quot;, &quot;MakeAppear&quot;, ~);" desc="Determines how the spawned actor should appear." global="false" gui="Display %1" id="99" message="MakeAppear" name="MakeAppear" oid="-1" return="VOID" shared="false" snippetID="52">
         <blank name="Self" order="0" type="ACTOR"/>
@@ -4851,7 +4861,7 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="17" list="0" val="0"/>
                 <prop id="16" list="0" val="0"/>
-                <prop id="19" list="0" val="-1"/>
+                <prop id="19" list="0" val="No Sound"/>
                 <prop id="18" list="0" val="0.75"/>
                 <prop id="21" list="0" val="Jumping"/>
                 <prop id="20" list="0" val="38.0"/>
@@ -4891,6 +4901,7 @@
                 <prop id="4" list="0" val="0"/>
                 <prop id="5" list="0" val="RoosterKilled"/>
                 <prop id="6" list="1" val=""/>
+                <prop id="7" list="0" val="ReducedHealth"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -5265,6 +5276,7 @@
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Stomped" order="1" type="ACTOR"/>
     </custom-block>
+    <custom-block blocktag="custom-635" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;StopCurrentMusic&quot;);" desc="" global="false" gui="Stop current music" id="635" message="StopCurrentMusic" name="StopCurrentMusic" oid="-1" return="VOID" shared="false" snippetID="329"/>
     <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="8" id="181" name="Switch Light" shared="false" width="8">
         <anim across="1" down="1" durations="100" height="8" id="0" loop="true" name="On" numframes="1" originx="4" originy="4" sync="false" width="8">
             <poly data="4,0,0,8,0,8,8,0,8" density="0.1" fric="0.2" gid="-1000" id="0" name="On" rest="0.0" sensor="false"/>

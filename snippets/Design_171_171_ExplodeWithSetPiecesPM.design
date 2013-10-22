@@ -3,12 +3,9 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <print comment="false" x="26" y="40">
-                    <int id="0" val="KILLED"/>
-                </print>
-                <repeat comment="false" x="26" y="60">
+                <repeat comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="85">
+                        <create-actor3 comment="false" x="37" y="65">
                             <ACTORTYPE eid="var" id="0" vid="4"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
@@ -20,12 +17,12 @@
                             </get-xy>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-171-14 comment="false" x="37" y="125">
+                        <set-val-171-14 comment="false" x="37" y="105">
                             <loopindex comment="false" id="0" x="0" y="0"/>
                         </set-val-171-14>
-                        <if comment="false" x="37" y="150">
+                        <if comment="false" x="37" y="130">
                             <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="188">
+                                <incdec comment="false" x="48" y="168">
                                     <int id="0" val="14"/>
                                     <int id="1" val="1"/>
                                     <get-num-frames comment="false" id="2" x="0" y="0">
@@ -40,7 +37,7 @@
                                 </get-num-frames>
                             </more>
                         </if>
-                        <setanim comment="false" x="37" y="240">
+                        <setanim comment="false" x="37" y="220">
                             <ACTOR eid="lastcreated" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <str-combine comment="false" id="0" x="0" y="0">
@@ -52,7 +49,7 @@
                     </group>
                     <get-val-171-10 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <die comment="false" x="26" y="294">
+                <die comment="false" x="26" y="274">
                     <ACTOR eid="this" id="0"/>
                 </die>
             </group>
