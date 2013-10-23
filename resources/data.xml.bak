@@ -685,7 +685,7 @@
             <poly data="4,0,0,128,0,128,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Right" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <tileset across="6" atlasID="0" desc="" down="3" id="638" name="Cow Tiles" oid="-1" shared="false" th="16" tw="16">
+    <tileset across="6" atlasID="1" desc="" down="3" id="638" name="Cow Tiles" oid="-1" shared="false" th="16" tw="16">
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="1" id="1" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="2" id="2" order="-1"/>
@@ -785,9 +785,9 @@
         <snippets>
             <s enabled="true" id="197">
                 <prop id="1" list="1" val="">
-                    <text order="0" value="Inactive:Horizontal Movement Right PM=0,Horizontal Movement Left PM=0,Change Animation When Active PM=0"/>
-                    <text order="1" value="Right:Horizontal Movement Right PM=1,Horizontal Movement Left PM=0,Change Animation When Active PM=1"/>
-                    <text order="2" value="Left:Horizontal Movement Right PM=0,Horizontal Movement Left PM=1,Change Animation When Active PM=1"/>
+                    <text order="0" value="Inactive:Horizontal Movement Right PM=0,Horizontal Movement Left PM=0,Switch Animation When Active PM=0"/>
+                    <text order="1" value="Right:Horizontal Movement Right PM=1,Horizontal Movement Left PM=0,Switch Animation When Active PM=1"/>
+                    <text order="2" value="Left:Horizontal Movement Right PM=0,Horizontal Movement Left PM=1,Switch Animation When Active PM=1"/>
                 </prop>
                 <prop id="2" list="0" val="Inactive"/>
                 <prop id="3" list="0" val=""/>
@@ -4029,10 +4029,10 @@
                 <prop id="18" list="0" val="-32"/>
             </s>
             <s enabled="true" id="241">
-                <prop id="1" list="0" val="0.6"/>
+                <prop id="1" list="0" val="0.9"/>
                 <prop id="2" list="0" val="0.5"/>
                 <prop id="3" list="0" val="0"/>
-                <prop id="4" list="0" val="0.05"/>
+                <prop id="4" list="0" val="0.2"/>
                 <prop id="5" list="0" val="0"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -4421,6 +4421,12 @@
                 <prop id="4" list="0" val="542"/>
                 <prop id="10" list="0" val="7"/>
                 <prop id="14" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="141">
+                <prop id="1" list="1" val="">
+                    <text order="0" value="Jumper"/>
+                </prop>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="200">
