@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <scene depth="5" desc="" eventsnippetid="328" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="33" name="Factory2_10" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
     <layers>
-        <layer color="255,255,0" id="5" name="Secret Areas" order="0"/>
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="1"/>
-        <layer color="0,255,0" id="2" name="Player" order="3"/>
+        <layer color="0,255,0" id="2" name="Player" order="2"/>
         <layer color="64,64,64" id="4" name="Interactives" order="4"/>
-        <layer color="0,0,255" id="1" name="Ground" order="5"/>
+        <layer color="255,0,255" id="6" name="Crate" order="5"/>
+        <layer color="0,0,255" id="1" name="Ground" order="6"/>
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
@@ -13,13 +13,60 @@
     </backgrounds>
     <foregrounds/>
     <joints/>
-    <regions/>
+    <regions>
+        <region b="64" g="64" h="32" id="0" name="Region 0" pts="4,-104.0,16.0,104.0,16.0,104.0,-16.0,-104.0,-16.0" r="64" type="box" w="208" x="192" y="128"/>
+        <region b="64" g="64" h="32" id="1" name="Region 1" pts="4,-104.0,16.0,104.0,16.0,104.0,-16.0,-104.0,-16.0" r="64" type="box" w="208" x="240" y="160"/>
+    </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
-        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="96" y="80" z="2"/>
-        <actor a="0.0" aid="8" c="false" group="2" id="140" name="Door 8" sx="1.0" sy="1.0" x="512" y="80" z="4"/>
-        <actor a="0.0" aid="9" c="true" group="2" id="152" name="Horizontal Scene Exit 9" sx="1.0" sy="1.0" x="96" y="64" z="4">
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="96" y="64" z="2"/>
+        <actor a="0.0" aid="8" c="true" group="2" id="140" name="Door 8" sx="1.0" sy="1.0" x="512" y="64" z="4">
+            <snippets>
+                <s enabled="true" id="304">
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="3" list="0" val="Factory2_10|Factory2_11|B|A"/>
+                    <prop id="4" list="0" val="3"/>
+                    <prop id="6" list="0" val="true"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="11" list="0" val="0.5"/>
+                    <prop id="12" list="0" val="0.5"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="92">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="Open"/>
+                    <prop id="3" list="0" val="Closed"/>
+                    <prop id="4" list="0" val="Opening"/>
+                    <prop id="13" list="0" val="KeyCollected"/>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="89"/>
+                <s enabled="true" id="133">
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val=""/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="false"/>
+                    <prop id="21" list="0" val=""/>
+                    <prop id="20" list="0" val="false"/>
+                    <prop id="23" list="0" val=""/>
+                    <prop id="25" list="0" val=""/>
+                    <prop id="24" list="0" val="UseDoor"/>
+                    <prop id="27" list="0" val="0"/>
+                    <prop id="26" list="0" val="1"/>
+                    <prop id="29" list="0" val="4"/>
+                    <prop id="28" list="0" val=""/>
+                    <prop id="30" list="0" val="4"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="9" c="true" group="2" id="152" name="Horizontal Scene Exit 9" sx="1.0" sy="1.0" x="80" y="48" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="1"/>
@@ -44,6 +91,200 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="13" c="false" group="8" id="546" name="Laser Duck 13" sx="1.0" sy="1.0" x="368" y="304" z="4"/>
+        <actor a="0.0" aid="14" c="false" group="8" id="546" name="Laser Duck 14" sx="1.0" sy="1.0" x="240" y="304" z="4"/>
+        <actor a="0.0" aid="15" c="true" group="3" id="298" name="Crate Cradle 15" sx="1.0" sy="1.0" x="297" y="131" z="6">
+            <snippets>
+                <s enabled="true" id="197">
+                    <prop id="1" list="1" val="">
+                        <text order="0" value="Inactive:Horizontal Movement Right PM=0,Horizontal Movement Left PM=0,Switch Animation When Active PM=0"/>
+                        <text order="1" value="Right:Horizontal Movement Right PM=1,Horizontal Movement Left PM=0,Switch Animation When Active PM=1"/>
+                        <text order="2" value="Left:Horizontal Movement Right PM=0,Horizontal Movement Left PM=1,Switch Animation When Active PM=1"/>
+                    </prop>
+                    <prop id="2" list="0" val="Inactive"/>
+                    <prop id="3" list="0" val=""/>
+                    <prop id="4" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="196">
+                    <prop id="1" list="0" val="Closed"/>
+                    <prop id="2" list="0" val="Open"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="199">
+                    <prop id="1" list="0" val="31"/>
+                    <prop id="2" list="0" val="0"/>
+                    <prop id="3" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="193">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="10.0"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.75"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="195"/>
+                <s enabled="true" id="194">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="10.0"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="5" list="0" val="0.75"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="17" c="true" group="3" id="180" name="Timed Switch Light 17" sx="1.0" sy="1.0" x="460" y="181" z="4">
+            <snippets>
+                <s enabled="true" id="65">
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="4" list="0" val="0.5"/>
+                    <prop id="5" list="0" val="false"/>
+                    <prop id="6" list="0" val="Off"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="13" list="0" val="0"/>
+                    <prop id="15" list="1" val="">
+                        <text order="0" value="Chocolate Spawner 31"/>
+                        <text order="1" value="Timed Switch Light 17"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="Off to On"/>
+                    <prop id="16" list="0" val="false"/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="On to Off"/>
+                    <prop id="20" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="198">
+                    <prop id="1" list="0" val="Left"/>
+                    <prop id="2" list="0" val="Inactive"/>
+                    <prop id="3" list="0" val="15"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="122"/>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Change State When Activated PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="19" c="true" group="3" id="142" name="Gold Key 19" sx="1.0" sy="1.0" x="521" y="255" z="4">
+            <snippets>
+                <s enabled="true" id="91">
+                    <prop id="1" list="0" val="KeyCollected"/>
+                    <prop id="2" list="0" val="8"/>
+                    <prop id="3" list="0" val="FactoryKey2_10"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="90"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="18" c="true" group="3" id="180" name="Timed Switch Light 18" sx="1.0" sy="1.0" x="172" y="181" z="4">
+            <snippets>
+                <s enabled="true" id="65">
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="4" list="0" val="0.5"/>
+                    <prop id="5" list="0" val="false"/>
+                    <prop id="6" list="0" val="Off"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="13" list="0" val="0"/>
+                    <prop id="15" list="1" val="">
+                        <text order="0" value="Chocolate Spawner 31"/>
+                        <text order="1" value="Timed Switch Light 18"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="Off to On"/>
+                    <prop id="16" list="0" val="false"/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="On to Off"/>
+                    <prop id="20" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="198">
+                    <prop id="1" list="0" val="Right"/>
+                    <prop id="2" list="0" val="Inactive"/>
+                    <prop id="3" list="0" val="15"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="122"/>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Change State When Activated PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="21" c="false" group="3" id="158" name="Trampoline 21" sx="1.0" sy="1.0" x="352" y="336" z="1"/>
+        <actor a="0.0" aid="20" c="true" group="3" id="178" name="Egg 20" sx="1.0" sy="1.0" x="101" y="253" z="4">
+            <snippets>
+                <s enabled="true" id="64">
+                    <prop id="1" list="0" val="EggCollected"/>
+                    <prop id="2" list="0" val="Egg2_10"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="191">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="2" list="0" val="0.5"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="4" list="0" val="300"/>
+                    <prop id="5" list="0" val="200"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Farm1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="209">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="121"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="22" c="false" group="3" id="158" name="Trampoline 22" sx="1.0" sy="1.0" x="288" y="336" z="1"/>
+        <actor a="0.0" aid="25" c="false" group="8" id="546" name="Laser Duck 25" sx="1.0" sy="1.0" x="128" y="304" z="4"/>
+        <actor a="0.0" aid="24" c="false" group="8" id="546" name="Laser Duck 24" sx="1.0" sy="1.0" x="480" y="304" z="4"/>
+        <actor a="0.0" aid="27" c="false" group="3" id="158" name="Trampoline 27" sx="1.0" sy="1.0" x="480" y="336" z="1"/>
+        <actor a="0.0" aid="26" c="false" group="3" id="158" name="Trampoline 26" sx="1.0" sy="1.0" x="416" y="336" z="1"/>
+        <actor a="0.0" aid="29" c="false" group="3" id="158" name="Trampoline 29" sx="1.0" sy="1.0" x="160" y="336" z="1"/>
+        <actor a="0.0" aid="28" c="false" group="3" id="158" name="Trampoline 28" sx="1.0" sy="1.0" x="96" y="336" z="1"/>
+        <actor a="0.0" aid="31" c="true" group="2" id="432" name="Chocolate Spawner 31" sx="1.0" sy="1.0" x="304" y="144" z="4">
+            <snippets>
+                <s enabled="true" id="249"/>
+                <s enabled="true" id="52">
+                    <prop id="2" list="0" val="none"/>
+                    <prop id="5" list="0" val="5"/>
+                    <prop id="6" list="0" val="-1"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="0.0"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="11" list="0" val="false"/>
+                    <prop id="13" list="0" val="360"/>
+                    <prop id="14" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="1" val=""/>
+                    <prop id="17" list="0" val="0"/>
+                    <prop id="16" list="1" val=""/>
+                    <prop id="19" list="0" val=""/>
+                    <prop id="18" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Spawn PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="30" c="false" group="3" id="158" name="Trampoline 30" sx="1.0" sy="1.0" x="224" y="336" z="1"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -58,10 +299,10 @@
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -74,16 +315,18 @@
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="30.0"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="33"/>
+        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="466"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="-1"/>
-        </s>
     </snippets>
     <terrain>
-        <p pts="4,480.0,320.0,0.0,320.0,0.0,0.0,480.0,0.0" x="80.0" y="32.0"/>
-        <p pts="12,448.0,288.0,448.0,80.0,384.0,80.0,384.0,64.0,448.0,64.0,448.0,0.0,0.0,0.0,0.0,64.0,64.0,64.0,64.0,80.0,0.0,80.0,0.0,288.0" x="96.0" y="48.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="400.0" y="112.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="304.0" y="112.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="208.0" y="112.0"/>
+        <p pts="38,496.0,320.0,480.0,320.0,480.0,256.0,448.0,256.0,448.0,240.0,480.0,240.0,480.0,160.0,384.0,160.0,384.0,144.0,416.0,144.0,416.0,112.0,432.0,112.0,432.0,64.0,480.0,64.0,480.0,48.0,464.0,48.0,464.0,32.0,480.0,32.0,480.0,16.0,16.0,16.0,16.0,64.0,80.0,64.0,80.0,112.0,96.0,112.0,96.0,144.0,128.0,144.0,128.0,160.0,32.0,160.0,32.0,240.0,64.0,240.0,64.0,256.0,32.0,256.0,32.0,320.0,16.0,320.0,16.0,80.0,0.0,80.0,0.0,0.0,496.0,0.0" x="64.0" y="32.0"/>
     </terrain>
 </scene>

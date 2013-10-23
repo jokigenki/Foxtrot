@@ -3024,6 +3024,17 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_330_330_ChangeDirectionWhenActivatedPM" classname="scripts.Design_330_330_ChangeDirectionWhenActivatedPM" desc="" description="" design="true" drawOrder="0" id="330" language="" name="Change Direction When Activated PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Direction Behaviour" hidden="false" id="1" name="_DirectionBehaviour" order="1"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Active Value" hidden="false" id="2" name="_ActiveValue" order="2"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Inactive Value" hidden="false" id="3" name="_InactiveValue" order="3"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Activated" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_33" classname="scripts.SceneEvents_33" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="328" language="" name="SceneEvents_33" oid="-1" package="scripts." sceneid="33" scenespecific="true" shared="false" type="scene">
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
         <blocks/>
