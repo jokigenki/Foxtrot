@@ -42,36 +42,36 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_210_210_ResetGamePM extends ActorScript
+class Design_330_330_ChangeDirectionWhenActivatedPM extends ActorScript
 {          	
-	    
+	
+public var _DirectionBehaviour:String;
 
-/* Params are: */
-public function _customBlock_ResetGame():Void
+public var _ActiveValue:Float;
+
+public var _InactiveValue:Float;
+    public function _customEvent_Activated():Void
 {
-var __Self:Actor = actor;
-        setGameAttribute("Game Was Loaded", true);
-        setGameAttribute("Collected Items", new Array<Dynamic>());
-        setGameAttribute("Collected Speed Run Items", new Array<Dynamic>());
-        setGameAttribute("Inventory New", new Array<Dynamic>());
-        setGameAttribute("Inventory", new Array<Dynamic>());
-        setGameAttribute("Speed Run Collectables", new Array<Dynamic>());
-        setGameAttribute("Unlocked Doors", new Array<Dynamic>());
-        setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
-        setGameAttribute("Gold Keys", 0);
-        setGameAttribute("Speed Run Timer", 0);
-        setGameAttribute("Destination Scene", "none");
-        setGameAttribute("Last Scene Name", "none");
-        saveGame("mySave", function(success:Bool):Void {
-            reloadCurrentScene(createFadeOut((0.5)),createFadeIn((0.5)));
-});
+        actor.setValue(_DirectionBehaviour, "_Direction", _ActiveValue);
 }
+
+    public function _customEvent_Deactivated():Void
+{
+        actor.setValue(_DirectionBehaviour, "_Direction", _InactiveValue);
+}
+
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Actor", "actor");
+		nameMap.set("Direction Behaviour", "_DirectionBehaviour");
+_DirectionBehaviour = "";
+nameMap.set("Active Value", "_ActiveValue");
+_ActiveValue = 0.0;
+nameMap.set("Inactive Value", "_InactiveValue");
+_InactiveValue = 0.0;
+nameMap.set("Actor", "actor");
 
 	}
 	

@@ -42,23 +42,22 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_192_192_TeleportToScenePM extends ActorScript
+class Design_198_198_ChangeStateWhenActivatedPM extends ActorScript
 {          	
 	
-public var _DestinationScene:Scene;
-    public function _customEvent_Teleport():Void
+public var _ActiveState:String;
+
+public var _InactiveState:String;
+
+public var _Target:Actor;
+    public function _customEvent_Activated():Void
 {
-        if(getGameAttribute("Speed Run In Progress"))
-{
-            switchScene(GameModel.get().scenes.get(getIDForScene(getGameAttribute("Speed Run Start"))).getID(), createFadeOut((0.5)),createFadeIn((0.5)));
+        _Target.say("Super Simple State Machine PM", "_customBlock_ChangeState", [_ActiveState]);
 }
 
-        else
+    public function _customEvent_Deactivated():Void
 {
-            switchScene(_DestinationScene.getID(), createFadeOut((0.5)),createFadeIn((0.5)));
-}
-
-        sayToScene("Speed Run Timer PM", "_customEvent_" + "TimerReset");
+        _Target.say("Super Simple State Machine PM", "_customBlock_ChangeState", [_InactiveState]);
 }
 
 
@@ -66,7 +65,11 @@ public var _DestinationScene:Scene;
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Destination Scene", "_DestinationScene");
+		nameMap.set("Active State", "_ActiveState");
+_ActiveState = "";
+nameMap.set("Inactive State", "_InactiveState");
+_InactiveState = "";
+nameMap.set("Target", "_Target");
 nameMap.set("Actor", "actor");
 
 	}

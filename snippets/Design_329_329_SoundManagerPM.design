@@ -29,6 +29,9 @@
                                 <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
                             </tostring>
                         </set-game-val-22>
+                        <set-game-val-23 comment="false" x="37" y="227">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-23>
                     </group>
                     <noteq comment="false" id="0" x="0" y="0">
                         <get-game-val-22 comment="false" id="0" x="0" y="0"/>
@@ -60,6 +63,11 @@
                             <int id="0" val="0"/>
                             <get-byobval-329-633-2 comment="false" id="1" x="0" y="0"/>
                         </fade-sounds>
+                        <set-game-val-22 comment="false" x="37" y="193">
+                            <tostring comment="false" id="0" x="0" y="0">
+                                <get-byobval-329-633-1 comment="false" id="0" x="0" y="0"/>
+                            </tostring>
+                        </set-game-val-22>
                     </group>
                     <get-byobval-329-633-0 comment="false" id="0" x="0" y="0"/>
                     <ACTOR eid="lastcreated" id="2"/>
@@ -78,6 +86,9 @@
                 <set-game-val-22 comment="false" x="26" y="60">
                     <int id="0" val="None"/>
                 </set-game-val-22>
+                <set-game-val-23 comment="false" x="26" y="80">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-23>
             </group>
         </receiver-8-635>
     </group>
@@ -85,24 +96,49 @@
     <group eventID="7" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <if comment="false" x="26" y="40">
+                <periodic comment="false" x="26" y="40">
                     <group eventID="7" id="-1">
-                        <custom-632 comment="false" x="37" y="73">
-                            <get-val-329-1 comment="false" id="0" x="0" y="0"/>
-                        </custom-632>
+                        <if comment="false" x="37" y="67">
+                            <group eventID="7" id="-1">
+                                <if comment="false" x="48" y="92">
+                                    <group eventID="7" id="-1">
+                                        <custom-632 comment="false" x="59" y="130">
+                                            <get-val-329-1 comment="false" id="0" x="0" y="0"/>
+                                        </custom-632>
+                                    </group>
+                                    <and comment="false" id="0" x="0" y="0">
+                                        <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                                        <value comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="1"/>
+                                            <int id="1" val="0"/>
+                                        </value>
+                                    </and>
+                                </if>
+                                <else comment="false" x="48" y="174">
+                                    <group eventID="7" id="-1">
+                                        <custom-635 comment="false" x="59" y="194"/>
+                                    </group>
+                                </else>
+                                <cancel comment="false" x="48" y="226"/>
+                            </group>
+                            <get-game-val-16 comment="false" id="0" x="0" y="0"/>
+                        </if>
                     </group>
-                    <value comment="false" id="0" x="0" y="0">
-                        <int id="0" val="1"/>
-                        <int id="1" val="0"/>
-                    </value>
-                </if>
-                <else comment="false" x="26" y="117">
-                    <group eventID="7" id="-1">
-                        <custom-635 comment="false" x="37" y="137"/>
-                    </group>
-                </else>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
             </group>
         </init>
     </group>
     <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <receiver-9-641 comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <custom-632 comment="false" x="26" y="40">
+                    <get-val-329-1 comment="false" id="0" x="0" y="0"/>
+                </custom-632>
+            </group>
+        </receiver-9-641>
+    </group>
+    <group eventID="8" id="-1"/>
 </groups>

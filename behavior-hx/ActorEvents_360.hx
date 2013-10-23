@@ -42,35 +42,27 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_327_327_FaceOnStartPM extends ActorScript
+class ActorEvents_360 extends ActorScript
 {          	
 	
-public var _FaceDirection:String;
-
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Face Direction", "_FaceDirection");
-_FaceDirection = "";
-nameMap.set("Actor", "actor");
-
+		
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    if((_FaceDirection == "Left"))
+		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if(((actor.getAnimation() == ("" + "Melt")) && !(actor.isAnimationPlaying())))
 {
-                        actor.setActorValue("Facing Right?", false);
+            actor.setAnimation("" + ("" + "Melted"));
 }
 
-                    else
-{
-                        actor.setActorValue("Facing Right?", true);
 }
-
-}, actor);
+});
 
 	}	      	
 	

@@ -42,46 +42,36 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_3 extends SceneScript
+class Design_196_196_ChangeAnimationWhenActivePM extends ActorScript
 {          	
 	
+public var _ActiveAnimation:String;
+
+public var _InactiveAnimation:String;
+    public function _customEvent_Activated():Void
+{
+        actor.setAnimation("" + _ActiveAnimation);
+}
+
+    public function _customEvent_Deactivated():Void
+{
+        actor.setAnimation("" + _InactiveAnimation);
+}
+
+
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		
+		super(actor, engine);	
+		nameMap.set("Active Animation", "_ActiveAnimation");
+nameMap.set("Inactive Animation", "_InactiveAnimation");
+nameMap.set("Actor", "actor");
+
 	}
 	
 	override public function init()
 	{
-		            if(!(getGameAttribute("Game Was Loaded")))
-{
-            loadGame("mySave", function(success:Bool):Void {
-                if(success)
-{
-                    setGameAttribute("Current Music", "None");
-                    setGameAttribute("Game Was Loaded", true);
-                    if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
-{
-                        runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
-                                    trace("" + (("" + "Last scene: ") + ("" + getGameAttribute("Save Destination"))));
-                                    getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
-                                    getActor(18).say("Activate Door PM", "_customEvent_" + "ActivateDoor");
-                                    getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
-}, null);
-}
-
-}
-
-                else
-{
-                    setGameAttribute("Game Was Loaded", false);
-}
-
-});
-}
-
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

@@ -257,8 +257,8 @@
         <number default="250" defaultValue="250" desc="Angle used when jumping towards the left&lt;br&gt;&lt;br&gt;&#10;default = 250" dropdown="" fullname="Jump Left Angle" hidden="false" id="12" name="_JumpLeftAngle" order="11"/>
         <number default="65" defaultValue="65" desc="Amount of force to apply during the jump&lt;br&gt;&lt;br&gt;&#10;default = 65" dropdown="" fullname="Jump Force" hidden="false" id="13" name="_JumpForce" order="12"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Right Animation" hidden="false" id="14" name="_WallJumpRightAnimation" order="13"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Left Animation" hidden="false" id="15" name="_WallJumpLeftAnimation" order="14"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Left Animation" hidden="false" id="15" name="_WallJumpLeftAnimation" order="14"/>
         <text default="Wall Jumping" defaultValue="Wall Jumping" desc="Set the category used for the animation - used for the hierarchy." dropdown="" fullname="Animation Category" hidden="false" id="17" name="_AnimationCategory" order="16"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Prevent Wall Jump" hidden="true" id="16" name="_PreventWallJump" order="15"/>
         <blocks>
@@ -628,8 +628,8 @@
         <control default="" defaultValue="" desc="Select the key used to move to the left." dropdown="" fullname="Left Key" hidden="false" id="12" name="_LeftKey" order="12"/>
         <number default="0.4" defaultValue="0.4" desc="How long should it take to get up to max speed?&lt;br&gt;&lt;br&gt;&#10;default = 0.4" dropdown="" fullname="Time To Max Speed" hidden="false" id="13" name="_TimeToMaxSpeed" order="13"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Can Slide?" hidden="false" id="14" name="_CanSlide" order="14"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Right Animation" hidden="false" id="15" name="_RunRightAnimation" order="15"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Right Animation" hidden="false" id="15" name="_RunRightAnimation" order="15"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Slip Right Animation" hidden="false" id="17" name="_SlipRightAnimation" order="17"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Left Animation" hidden="false" id="16" name="_RunLeftAnimation" order="16"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Full Run Right Animation" hidden="false" id="19" name="_FullRunRightAnimation" order="19"/>
@@ -2912,8 +2912,8 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Door Is Ready?" hidden="true" id="10" name="_DoorIsReady" order="6"/>
         <actor default="0" defaultValue="0" desc="" dropdown="" fullname="Actor by door" hidden="true" id="12" name="_Actorbydoor" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Exit only when on ground" hidden="false" id="13" name="_Exitonlywhenonground" order="8"/>
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="15" name="_SaveExit" order="10"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="651" id="1"/>
             <receiver blockID="102" id="2"/>
@@ -3024,6 +3024,18 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_332_332_MusicPM" classname="scripts.Design_332_332_MusicPM" desc="" description="" design="true" drawOrder="0" id="332" language="" name="Music PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events>
+            <event displayName="Music" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_34" classname="scripts.SceneEvents_34" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="333" language="" name="SceneEvents_34" oid="-1" package="scripts." sceneid="34" scenespecific="true" shared="false" type="scene">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <blocks/>
+        <events/>
+    </snippet>
     <snippet attachedevent="false" class="scripts.Design_330_330_ChangeDirectionWhenActivatedPM" classname="scripts.Design_330_330_ChangeDirectionWhenActivatedPM" desc="" description="" design="true" drawOrder="0" id="330" language="" name="Change Direction When Activated PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <text default="" defaultValue="" desc="" dropdown="" fullname="Direction Behaviour" hidden="false" id="1" name="_DirectionBehaviour" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Active Value" hidden="false" id="2" name="_ActiveValue" order="2"/>
@@ -3033,6 +3045,12 @@
         <events>
             <event displayName="Activated" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
             <event displayName="Custom Event" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_639" classname="scripts.ActorEvents_639" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="331" language="" name="ActorEvents_639" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_33" classname="scripts.SceneEvents_33" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="328" language="" name="SceneEvents_33" oid="-1" package="scripts." sceneid="33" scenespecific="true" shared="false" type="scene">
@@ -3051,12 +3069,14 @@
             <receiver blockID="633" id="6"/>
             <receiver blockID="634" id="7"/>
             <receiver blockID="635" id="8"/>
+            <receiver blockID="641" id="9"/>
         </blocks>
         <events>
-            <event displayName="Loop Music" enabled="true" id="4" name="event-custom-block" order="4" repeats="true"/>
-            <event displayName="Fade Out/In" enabled="true" id="5" name="event-custom-block" order="5" repeats="true"/>
-            <event displayName="Stop music" enabled="true" id="6" name="event-custom-block" order="6" repeats="true"/>
-            <event displayName="Created" enabled="true" id="7" name="init" order="7" repeats="true"/>
+            <event displayName="Loop Music" enabled="true" id="4" name="event-custom-block" order="5" repeats="true"/>
+            <event displayName="Fade Out/In" enabled="true" id="5" name="event-custom-block" order="6" repeats="true"/>
+            <event displayName="Stop music" enabled="true" id="6" name="event-custom-block" order="7" repeats="true"/>
+            <event displayName="Created" enabled="true" id="7" name="init" order="4" repeats="true"/>
+            <event displayName="Loop current" enabled="true" id="8" name="event-custom-block" order="8" repeats="true"/>
         </events>
     </snippet>
 </pack>
