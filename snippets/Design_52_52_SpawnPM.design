@@ -220,7 +220,12 @@
                         </if>
                         <else comment="false" x="37" y="640">
                             <group eventID="6" id="-1">
-                                <die comment="false" x="48" y="660">
+                                <actor-enabledisable-snippet comment="false" x="48" y="660">
+                                    <ACTOR eid="var" id="0" vid="19"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="Display On Collected PM"/>
+                                </actor-enabledisable-snippet>
+                                <die comment="false" x="48" y="687">
                                     <ACTOR eid="var" id="0" vid="19"/>
                                 </die>
                             </group>
@@ -231,15 +236,15 @@
                         <int id="1" val="Inventory Collectable PM"/>
                     </has-snippet>
                 </if>
-                <else comment="false" x="26" y="711">
+                <else comment="false" x="26" y="738">
                     <group eventID="6" id="-1">
-                        <shout comment="false" x="37" y="731">
+                        <shout comment="false" x="37" y="758">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Spawned"/>
                         </shout>
-                        <if comment="false" x="37" y="758">
+                        <if comment="false" x="37" y="785">
                             <group eventID="2" id="-1">
-                                <custom-256 comment="false" x="48" y="791">
+                                <custom-256 comment="false" x="48" y="818">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-256>
                             </group>
@@ -259,7 +264,28 @@
             <group eventID="7" id="-1">
                 <if comment="false" x="26" y="45">
                     <group eventID="7" id="-1">
-                        <fadeInOut comment="false" x="37" y="75">
+                        <setanim comment="false" x="37" y="85">
+                            <get-byobval-52-671-1 comment="false" id="0" x="0" y="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <get-val-52-20 comment="false" id="0" x="0" y="0"/>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="20"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <not comment="false" id="1" x="0" y="0">
+                            <str-empty comment="false" id="0" x="0" y="0">
+                                <get-val-52-20 comment="false" id="0" x="0" y="0"/>
+                            </str-empty>
+                        </not>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="134">
+                    <group eventID="7" id="-1">
+                        <fadeInOut comment="false" x="37" y="164">
                             <get-byobval-52-671-1 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -271,9 +297,9 @@
                         <int id="1" val="fade"/>
                     </eq>
                 </if>
-                <else-if comment="false" x="26" y="119">
+                <else-if comment="false" x="26" y="208">
                     <group eventID="7" id="-1">
-                        <scaleTo comment="false" x="37" y="149">
+                        <scaleTo comment="false" x="37" y="238">
                             <get-byobval-52-671-1 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="100"/>
                             <int id="2" val="100"/>

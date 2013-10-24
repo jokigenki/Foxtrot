@@ -59,6 +59,8 @@ public var _CollectableId:String;
 
 public var _CollectionEventName:String;
 
+public var _SwitchtoAnimationNamed:String;
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
@@ -76,6 +78,8 @@ nameMap.set("Collectable Id", "_CollectableId");
 _CollectableId = "";
 nameMap.set("Collection Event Name", "_CollectionEventName");
 _CollectionEventName = "";
+nameMap.set("Switch to Animation Named", "_SwitchtoAnimationNamed");
+_SwitchtoAnimationNamed = "";
 nameMap.set("Actor", "actor");
 
 	}
@@ -103,6 +107,11 @@ if(wrapper.enabled){
 {
             getLastCreatedActor().setValue("Inventory Collectable PM", "_CollectableId", _CollectableId);
             getLastCreatedActor().setValue("Inventory Collectable PM", "_Collectioneventname", _CollectionEventName);
+}
+
+        if(((hasValue(_SwitchtoAnimationNamed) != false) && !(("" + _SwitchtoAnimationNamed) == (""))))
+{
+            getLastCreatedActor().setAnimation("" + ("" + _SwitchtoAnimationNamed));
 }
 
 }

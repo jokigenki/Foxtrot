@@ -94,6 +94,7 @@ if(wrapper.enabled){
 {
             createRecycledActor(actor.getType(), ((getScreenWidth() / 2) + getScreenX()), ((getScreenHeight() / 2) + getScreenY()), Script.FRONT);
             getLastCreatedActor().setValue("Display On Collected PM", "_IsDisplaying", true);
+            trace("" + actor.getAnimation());
             getLastCreatedActor().setAnimation("" + ("" + (("" + ("" + actor.getAnimation())) + ("" + " Collected"))));
             getLastCreatedActor().growTo(_StartSizePercent/100, _StartSizePercent/100, 0, Linear.easeNone);
 }
