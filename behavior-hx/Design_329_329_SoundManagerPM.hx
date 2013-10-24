@@ -46,6 +46,8 @@ class Design_329_329_SoundManagerPM extends SceneScript
 {          	
 	
 public var _Music:Sound;
+
+public var _SoundUIActor:Actor;
     
 
 /* Params are:__Music */
@@ -58,8 +60,21 @@ public function _customBlock_LoopMusic(__Music:Sound):Void
             stopAllSounds();
             loopSound(__Music);
             setGameAttribute("Current Music", ("" + __Music));
+            setGameAttribute("Is Music On?", true);
+            if((hasValue(_SoundUIActor) != false))
+{
+                _SoundUIActor.say("Music Toggle PM", "_customEvent_" + "MusicOn");
 }
 
+}
+
+}
+    
+
+/* Params are:*/
+public function _customBlock_LoopCurrentMusic():Void
+{
+        sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [_Music]);
 }
     
 
@@ -71,6 +86,7 @@ public function _customBlock_FadeOutCurrent(__FadeOutTime:Float, __Music:Sound, 
                     stopAllSounds();
                     loopSound(__Music);
                     fadeInForAllSounds(__FadeInTime);
+                    setGameAttribute("Current Music", ("" + __Music));
 }, null);
 }
     
@@ -80,6 +96,12 @@ public function _customBlock_StopCurrentMusic():Void
 {
         stopAllSounds();
         setGameAttribute("Current Music", "None");
+        setGameAttribute("Is Music On?", false);
+        if((hasValue(_SoundUIActor) != false))
+{
+            _SoundUIActor.say("Music Toggle PM", "_customEvent_" + "MusicOff");
+}
+
 }
 
  
@@ -87,21 +109,30 @@ public function _customBlock_StopCurrentMusic():Void
 	{
 		super(engine);
 		nameMap.set("Music", "_Music");
+nameMap.set("Sound UI Actor", "_SoundUIActor");
 
 	}
 	
 	override public function init()
 	{
-		            if((hasValue(_Music) != false))
+		            runPeriodically(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    if(getGameAttribute("Game Was Loaded"))
 {
-            sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [_Music]);
+                        if(((hasValue(_Music) != false) && getGameAttribute("Is Music On?")))
+{
+                            sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [_Music]);
 }
 
-        else
+                        else
 {
-            sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
+                            sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
 }
 
+                        timeTask.repeats = false;
+return;
+}
+
+}, null);
 
 	}	      	
 	

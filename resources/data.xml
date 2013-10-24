@@ -3542,6 +3542,7 @@
                 <prop id="6" list="0" val="0"/>
                 <prop id="7" list="1" val="">
                     <text order="0" value="Jumper"/>
+                    <text order="1" value="Chocolate Block"/>
                 </prop>
                 <prop id="8" list="0" val="0,0,0,255"/>
                 <prop id="9" list="0" val="2"/>
@@ -3955,6 +3956,7 @@
         <blank name="Animation" order="1" type="ANIMATION"/>
         <blank name="Category" order="2" type="TEXT"/>
     </custom-block>
+    <custom-block blocktag="custom-642" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopCurrentMusic&quot;);" desc="" global="false" gui="Loop current music" id="642" message="LoopCurrentMusic" name="LoopCurrentMusic" oid="-1" return="VOID" shared="false" snippetID="329"/>
     <custom-block blocktag="custom-632" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopMusic&quot;, ~);" desc="" global="false" gui="Loop music %0" id="632" message="LoopMusic" name="LoopMusic" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Music" order="0" type="SOUND"/>
     </custom-block>
@@ -4582,6 +4584,39 @@
         <anim across="1" down="1" durations="100" height="32" id="4" loop="true" name="p5" numframes="1" originx="16" originy="16" sync="false" width="32"/>
         <anim across="1" down="1" durations="100" height="32" id="5" loop="true" name="p6" numframes="1" originx="16" originy="16" sync="false" width="32"/>
         <anim across="1" down="1" durations="100" height="32" id="6" loop="true" name="p7" numframes="1" originx="16" originy="16" sync="false" width="32"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="331" fixedrot="false" fric="0.2" gid="3" id="640" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Radio" oid="-1" pausable="true" rest="0.0" shared="false" sprite="641" static="true">
+        <snippets>
+            <s enabled="true" id="332">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="133">
+                <prop id="14" list="0" val="9"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="false"/>
+                <prop id="16" list="0" val=""/>
+                <prop id="19" list="0" val="true"/>
+                <prop id="18" list="0" val="false"/>
+                <prop id="21" list="0" val=""/>
+                <prop id="20" list="0" val="true"/>
+                <prop id="23" list="0" val=""/>
+                <prop id="25" list="0" val=""/>
+                <prop id="24" list="0" val="MusicToggle"/>
+                <prop id="27" list="0" val="0"/>
+                <prop id="26" list="0" val="1"/>
+                <prop id="29" list="0" val="10"/>
+                <prop id="28" list="0" val=""/>
+                <prop id="30" list="0" val="10"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="641" name="Radio" shared="false" width="16">
+        <anim across="4" down="1" durations="200,200,200,250" height="32" id="0" loop="true" name="Active" numframes="4" originx="8" originy="16" sync="false" width="64">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="32" id="1" loop="true" name="Inactive" numframes="1" originx="8" originy="16" sync="false" width="16">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Inactive" rest="0.0" sensor="true"/>
+        </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="143" fixedrot="true" fric="0.2" gid="8" id="203" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Rat" oid="-1" pausable="true" rest="0.0" shared="false" sprite="204" static="false">
         <snippets>
