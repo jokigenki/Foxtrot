@@ -60,9 +60,8 @@ var __Self:Actor = actor;
         setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
         setGameAttribute("Gold Keys", 0);
         setGameAttribute("Speed Run Timer", 0);
-        setGameAttribute("Current Music", "None");
-        setGameAttribute("Last Destination", "None");
-        setGameAttribute("Save Destination", "None");
+        setGameAttribute("Destination Scene", "none");
+        setGameAttribute("Last Scene Name", "none");
         saveGame("mySave", function(success:Bool):Void {
             reloadCurrentScene(createFadeOut((0.5)),createFadeIn((0.5)));
 });

@@ -88,11 +88,7 @@ propertyChanged("_RunComplete", _RunComplete);
 {
         if((asNumber(getActor(8).getValue("Reduce Health PM", "_CurrentHealth")) == 1))
 {
-            if(getGameAttribute("Music On"))
-{
-                sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(627)]);
-}
-
+            sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(627)]);
 }
 
 }

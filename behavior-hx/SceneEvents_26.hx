@@ -42,67 +42,23 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_329_329_SoundManagerPM extends SceneScript
+class SceneEvents_26 extends SceneScript
 {          	
 	
-public var _Music:Sound;
-    
-
-/* Params are:__Music */
-public function _customBlock_LoopMusic(__Music:Sound):Void
-{
-        trace("" + (("" + "CURRENT: ") + ("" + getGameAttribute("Current Music"))));
-        trace("" + (("" + "NEW: ") + ("" + ("" + __Music))));
-        if(!(getGameAttribute("Current Music") == ("" + __Music)))
-{
-            stopAllSounds();
-            loopSound(__Music);
-            setGameAttribute("Current Music", ("" + __Music));
-}
-
-}
-    
-
-/* Params are:__FadeOutTime __Music __FadeInTime */
-public function _customBlock_FadeOutCurrent(__FadeOutTime:Float, __Music:Sound, __FadeInTime:Float):Void
-{
-        fadeOutForAllSounds(__FadeOutTime);
-        runLater(1000 * __FadeOutTime, function(timeTask:TimedTask):Void {
-                    stopAllSounds();
-                    loopSound(__Music);
-                    fadeInForAllSounds(__FadeInTime);
-}, null);
-}
-    
-
-/* Params are:*/
-public function _customBlock_StopCurrentMusic():Void
-{
-        stopAllSounds();
-        setGameAttribute("Current Music", "None");
-}
+public var _ExitName:String;
 
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		nameMap.set("Music", "_Music");
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
 
 	}
 	
 	override public function init()
 	{
-		            if((hasValue(_Music) != false))
-{
-            sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [_Music]);
-}
-
-        else
-{
-            sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
-}
-
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)
