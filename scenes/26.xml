@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="5" desc="" eventsnippetid="273" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="26" name="Factory2_05" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
+<scene depth="6" desc="" eventsnippetid="273" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="26" name="Factory2_05" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
     <layers>
         <layer color="255,255,0" id="5" name="Secret Areas" order="0"/>
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="1"/>
-        <layer color="0,255,0" id="2" name="Player" order="3"/>
+        <layer color="0,255,0" id="2" name="Player" order="2"/>
         <layer color="64,64,64" id="4" name="Interactives" order="4"/>
         <layer color="0,0,255" id="1" name="Ground" order="5"/>
+        <layer color="255,0,255" id="6" name="Below Ground" order="6"/>
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
@@ -14,7 +15,7 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="82" id="0" name="Region 0" pts="4,-30.0,-41.0,30.0,-41.0,30.0,41.0,-30.0,41.0" r="64" type="box" w="60" x="290" y="239"/>
+        <region b="64" g="64" h="82" id="0" name="Region 0" pts="4,-30.0,41.0,30.0,41.0,30.0,-41.0,-30.0,-41.0" r="64" type="box" w="60" x="290" y="239"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -45,7 +46,6 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -64,6 +64,7 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
+                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="8" c="true" group="2" id="140" name="Door 8" sx="1.0" sy="1.0" x="464" y="208" z="4">
@@ -91,7 +92,6 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -110,6 +110,7 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
+                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="11" c="true" group="11" id="535" name="Rabbot 11" sx="1.0" sy="1.0" x="304" y="300" z="4">
@@ -853,7 +854,7 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="28" c="true" group="5" id="236" name="Gate 28" sx="1.0" sy="1.0" x="160" y="256" z="4">
+        <actor a="0.0" aid="28" c="true" group="5" id="236" name="Gate 28" sx="1.0" sy="1.0" x="160" y="256" z="6">
             <snippets>
                 <s enabled="true" id="233">
                     <prop id="1" list="0" val="true"/>
@@ -884,12 +885,12 @@
         </actor>
         <actor a="0.0" aid="31" c="true" group="5" id="148" name="Lift 31" sx="1.0" sy="1.0" x="288" y="224" z="1">
             <snippets>
-                <s enabled="true" id="96"/>
                 <s enabled="true" id="233">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="96"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Vertical Oscillation PM"/>
@@ -1039,12 +1040,9 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="33" c="false" group="3" id="544" name="Laser Beamer Down 33" sx="1.0" sy="1.0" x="144" y="32" z="1"/>
-        <actor a="0.0" aid="38" c="false" group="3" id="403" name="Grapple Rope 38" sx="1.0" sy="1.0" x="272" y="154" z="1"/>
-        <actor a="0.0" aid="39" c="false" group="3" id="403" name="Grapple Rope 39" sx="1.0" sy="1.0" x="400" y="154" z="1"/>
-        <actor a="0.0" aid="37" c="false" group="3" id="403" name="Grapple Rope 37" sx="1.0" sy="1.0" x="144" y="154" z="1"/>
         <actor a="0.0" aid="42" c="false" group="3" id="583" name="Small Trampoline 42" sx="1.0" sy="1.0" x="512" y="288" z="1"/>
         <actor a="0.0" aid="43" c="false" group="3" id="583" name="Small Trampoline 43" sx="1.0" sy="1.0" x="96" y="288" z="1"/>
-        <actor a="0.0" aid="40" c="true" group="5" id="236" name="Gate 40" sx="1.0" sy="1.0" x="448" y="320" z="1">
+        <actor a="0.0" aid="40" c="true" group="5" id="236" name="Gate 40" sx="1.0" sy="1.0" x="448" y="304" z="6">
             <snippets>
                 <s enabled="true" id="233">
                     <prop id="1" list="0" val="true"/>
@@ -1088,10 +1086,10 @@
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -1104,20 +1102,19 @@
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="30.0"/>
         </s>
-        <s enabled="true" id="329">
-            <prop id="1" list="0" val="466"/>
-        </s>
         <s enabled="true" id="303">
             <prop id="1" list="0" val="0.5"/>
             <prop id="2" list="0" val="26"/>
         </s>
+        <s enabled="true" id="329">
+            <prop id="1" list="0" val="466"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="16,16.0,272.0,48.0,272.0,48.0,240.0,96.0,240.0,96.0,256.0,112.0,256.0,112.0,288.0,64.0,288.0,64.0,304.0,368.0,304.0,368.0,320.0,0.0,320.0,0.0,0.0,64.0,0.0,64.0,16.0,16.0,16.0" x="80.0" y="32.0"/>
-        <p pts="20,96.0,208.0,96.0,272.0,128.0,272.0,128.0,16.0,0.0,16.0,0.0,0.0,144.0,0.0,144.0,320.0,48.0,320.0,48.0,304.0,80.0,304.0,80.0,288.0,32.0,288.0,32.0,256.0,48.0,256.0,48.0,240.0,80.0,240.0,80.0,224.0,48.0,224.0,48.0,208.0" x="416.0" y="32.0"/>
-        <p pts="4,48.0,0.0,48.0,16.0,0.0,16.0,0.0,0.0" x="128.0" y="240.0"/>
         <p pts="4,0.0,16.0,0.0,0.0,112.0,0.0,112.0,16.0" x="288.0" y="32.0"/>
+        <p pts="4,112.0,0.0,112.0,16.0,0.0,16.0,0.0,0.0" x="160.0" y="32.0"/>
+        <p pts="42,432.0,208.0,432.0,272.0,464.0,272.0,464.0,16.0,336.0,16.0,336.0,0.0,480.0,0.0,480.0,288.0,432.0,288.0,432.0,320.0,384.0,320.0,384.0,352.0,368.0,352.0,368.0,320.0,48.0,320.0,48.0,288.0,0.0,288.0,0.0,0.0,64.0,0.0,64.0,16.0,16.0,16.0,16.0,272.0,48.0,272.0,48.0,240.0,80.0,240.0,80.0,256.0,112.0,256.0,112.0,288.0,64.0,288.0,64.0,304.0,416.0,304.0,416.0,288.0,384.0,288.0,384.0,272.0,368.0,272.0,368.0,256.0,384.0,256.0,384.0,240.0,416.0,240.0,416.0,224.0,384.0,224.0,384.0,208.0" x="80.0" y="32.0"/>
+        <p pts="4,48.0,0.0,48.0,16.0,0.0,16.0,0.0,0.0" x="128.0" y="240.0"/>
         <p pts="48,224.0,80.0,160.0,80.0,160.0,128.0,144.0,128.0,144.0,112.0,128.0,112.0,128.0,96.0,96.0,96.0,96.0,80.0,32.0,80.0,32.0,64.0,0.0,64.0,0.0,0.0,16.0,0.0,16.0,48.0,48.0,48.0,48.0,64.0,80.0,64.0,80.0,48.0,112.0,48.0,112.0,0.0,144.0,0.0,144.0,48.0,176.0,48.0,176.0,64.0,208.0,64.0,208.0,48.0,240.0,48.0,240.0,0.0,272.0,0.0,272.0,48.0,304.0,48.0,304.0,64.0,336.0,64.0,336.0,48.0,368.0,48.0,368.0,0.0,384.0,0.0,384.0,64.0,352.0,64.0,352.0,80.0,288.0,80.0,288.0,96.0,256.0,96.0,256.0,112.0,240.0,112.0,240.0,128.0,224.0,128.0" x="128.0" y="112.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,112.0,0.0,112.0,16.0" x="160.0" y="32.0"/>
     </terrain>
 </scene>

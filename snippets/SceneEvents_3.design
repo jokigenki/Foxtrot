@@ -15,28 +15,31 @@
                                         <set-game-val-16 comment="false" x="59" y="140">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
-                                        <if comment="false" x="59" y="165">
+                                        <set-game-val-10 comment="false" x="59" y="165">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-10>
+                                        <if comment="false" x="59" y="190">
                                             <group eventID="1" id="-1">
-                                                <dolater comment="false" x="70" y="210">
+                                                <dolater comment="false" x="70" y="235">
                                                     <group eventID="1" id="-1">
-                                                        <print comment="false" x="81" y="237">
+                                                        <print comment="false" x="81" y="262">
                                                             <str-combine comment="false" id="0" x="0" y="0">
                                                                 <int id="0" val="Last scene: "/>
                                                                 <get-game-val-21 comment="false" id="1" x="0" y="0"/>
                                                             </str-combine>
                                                         </print>
-                                                        <set-attribute comment="false" x="81" y="267">
+                                                        <set-attribute comment="false" x="81" y="292">
                                                             <ACTOR eid="18" id="0"/>
                                                             <int id="1" val="Activate Door PM"/>
                                                             <int id="2" val="_Destination"/>
                                                             <get-game-val-21 comment="false" id="3" x="0" y="0"/>
                                                         </set-attribute>
-                                                        <say comment="false" x="81" y="299">
+                                                        <say comment="false" x="81" y="324">
                                                             <ACTOR eid="18" id="0"/>
                                                             <int id="1" val="Activate Door PM"/>
                                                             <int id="2" val="ActivateDoor"/>
                                                         </say>
-                                                        <say comment="false" x="81" y="326">
+                                                        <say comment="false" x="81" y="351">
                                                             <ACTOR eid="18" id="0"/>
                                                             <int id="1" val="Collectable Door PM"/>
                                                             <int id="2" val="DoorActivated"/>
@@ -66,9 +69,9 @@
                                     </group>
                                     <load-success comment="false" id="0" x="0" y="0"/>
                                 </if>
-                                <else comment="false" x="48" y="389">
+                                <else comment="false" x="48" y="409">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-16 comment="false" x="59" y="409">
+                                        <set-game-val-16 comment="false" x="59" y="429">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
                                     </group>

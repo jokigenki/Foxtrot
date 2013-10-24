@@ -42,23 +42,37 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_33 extends SceneScript
+class ActorEvents_639 extends ActorScript
 {          	
 	
-public var _ExitName:String;
-
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-
+		super(actor, engine);	
+		
 	}
 	
 	override public function init()
 	{
-		
+		            runPeriodically(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    if(getGameAttribute("Game Was Loaded"))
+{
+                        if(getGameAttribute("Music On"))
+{
+                            actor.setAnimation("" + "Active");
+}
+
+                        else
+{
+                            actor.setAnimation("" + "Inactive");
+}
+
+                        timeTask.repeats = false;
+return;
+}
+
+}, actor);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

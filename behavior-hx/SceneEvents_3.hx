@@ -42,35 +42,47 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_27 extends SceneScript
+class SceneEvents_3 extends SceneScript
 {          	
 	
-public var _ExitName:String;
-
-public var _RatHasLeft:Bool;
-
-public var _RatLeftTime:Float;
-
-public var _RatOffset:Float;
-
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-nameMap.set("Rat Has Left?", "_RatHasLeft");
-_RatHasLeft = false;
-nameMap.set("Rat Left Time", "_RatLeftTime");
-_RatLeftTime = 0.0;
-nameMap.set("Rat Offset", "_RatOffset");
-_RatOffset = 0.0;
-
+		
 	}
 	
 	override public function init()
 	{
-		
+		            if(!(getGameAttribute("Game Was Loaded")))
+{
+            loadGame("mySave", function(success:Bool):Void {
+                if(success)
+{
+                    setGameAttribute("Current Music", "None");
+                    setGameAttribute("Game Was Loaded", true);
+                    setGameAttribute("Speed Run In Progress", false);
+                    if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
+{
+                        runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
+                                    trace("" + (("" + "Last scene: ") + ("" + getGameAttribute("Save Destination"))));
+                                    getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
+                                    getActor(18).say("Activate Door PM", "_customEvent_" + "ActivateDoor");
+                                    getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
+}, null);
+}
+
+}
+
+                else
+{
+                    setGameAttribute("Game Was Loaded", false);
+}
+
+});
+}
+
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

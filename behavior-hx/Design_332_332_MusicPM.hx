@@ -42,29 +42,39 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_22 extends SceneScript
+class Design_332_332_MusicPM extends ActorScript
 {          	
-	
-public var _ExitName:String;
+	    public function _customEvent_Radio():Void
+{
+        if(getGameAttribute("Music On"))
+{
+            sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
+            actor.setAnimation("" + "Inactive");
+}
+
+        else
+{
+            sayToScene("Sound Manager PM", "_customBlock_LoopCurrentMusic");
+            actor.setAnimation("" + "Active");
+}
+
+        saveGame("mySave", function(success:Bool):Void {
+
+});
+}
+
 
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
+		super(actor, engine);	
+		nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		    addActorEntersRegionListener(getRegion(1), function(a:Actor, list:Array<Dynamic>):Void  {
-if(wrapper.enabled && sameAs(getActor(3), a)){
-        getActor(162).say("Activate On Event PM", "_customEvent_" + "Activate");
-        getActor(179).say("Activate On Event PM", "_customEvent_" + "Activate");
-}
-});
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

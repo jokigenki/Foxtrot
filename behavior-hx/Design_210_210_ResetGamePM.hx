@@ -42,51 +42,43 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_30 extends SceneScript
+class Design_210_210_ResetGamePM extends ActorScript
 {          	
-	
-public var _ExitName:String;
+	    
 
-public var _LiquidLevel:Float;
+/* Params are: */
+public function _customBlock_ResetGame():Void
+{
+var __Self:Actor = actor;
+        setGameAttribute("Game Was Loaded", true);
+        setGameAttribute("Collected Items", new Array<Dynamic>());
+        setGameAttribute("Collected Speed Run Items", new Array<Dynamic>());
+        setGameAttribute("Inventory New", new Array<Dynamic>());
+        setGameAttribute("Inventory", new Array<Dynamic>());
+        setGameAttribute("Speed Run Collectables", new Array<Dynamic>());
+        setGameAttribute("Unlocked Doors", new Array<Dynamic>());
+        setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
+        setGameAttribute("Gold Keys", 0);
+        setGameAttribute("Speed Run Timer", 0);
+        setGameAttribute("Current Music", "None");
+        setGameAttribute("Last Destination", "None");
+        setGameAttribute("Save Destination", "None");
+        saveGame("mySave", function(success:Bool):Void {
+            reloadCurrentScene(createFadeOut((0.5)),createFadeIn((0.5)));
+});
+}
 
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-nameMap.set("Liquid Level", "_LiquidLevel");
-_LiquidLevel = 0.0;
+		super(actor, engine);	
+		nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            _LiquidLevel = asNumber(32);
-propertyChanged("_LiquidLevel", _LiquidLevel);
-    addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void  {
-if(wrapper.enabled && sameAs(getActor(3), a)){
-        getActor(239).say("Activate On Event PM", "_customEvent_" + "Activate");
-        runLater(1000 * 1, function(timeTask:TimedTask):Void {
-                    runPeriodically(1000 * 0.05, function(timeTask:TimedTask):Void {
-                                _LiquidLevel -= 1;
-propertyChanged("_LiquidLevel", _LiquidLevel);
-                                if((_LiquidLevel <= 0))
-{
-                                    recycleActor(getActor(242));
-                                    timeTask.repeats = false;
-return;
-}
-
-                                getActor(242).setValue("Filling Liquid PM", "_LiquidLevel", _LiquidLevel);
-}, null);
-}, null);
-        runLater(1000 * 3, function(timeTask:TimedTask):Void {
-                    getActor(240).say("Activate On Event PM", "_customEvent_" + "Activate");
-}, null);
-}
-});
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)
