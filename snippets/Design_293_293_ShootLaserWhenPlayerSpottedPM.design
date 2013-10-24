@@ -131,18 +131,22 @@
                 </if>
                 <else comment="false" x="26" y="909">
                     <group eventID="1" id="-1">
-                        <set-val-293-21 comment="false" x="37" y="929">
+                        <custom-108 comment="false" x="37" y="929">
+                            <ACTOR eid="this" id="0"/>
+                            <false comment="false" id="1" x="0" y="0"/>
+                        </custom-108>
+                        <set-val-293-21 comment="false" x="37" y="961">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-21>
-                        <set-val-293-22 comment="false" x="37" y="954">
+                        <set-val-293-22 comment="false" x="37" y="986">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-22>
-                        <custom-87 comment="false" x="37" y="979">
+                        <custom-87 comment="false" x="37" y="1011">
                             <ACTOR eid="this" id="0"/>
                         </custom-87>
-                        <if comment="false" x="37" y="1006">
+                        <if comment="false" x="37" y="1038">
                             <group eventID="1" id="-1">
-                                <custom-127 comment="false" x="48" y="1044">
+                                <custom-127 comment="false" x="48" y="1076">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-25 comment="false" id="1" x="0" y="0"/>
                                     <int id="2" val="Walking"/>
@@ -156,9 +160,9 @@
                                 <false comment="false" id="1" x="0" y="0"/>
                             </eq>
                         </if>
-                        <else comment="false" x="37" y="1088">
+                        <else comment="false" x="37" y="1120">
                             <group eventID="1" id="-1">
-                                <custom-127 comment="false" x="48" y="1108">
+                                <custom-127 comment="false" x="48" y="1140">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-26 comment="false" id="1" x="0" y="0"/>
                                     <int id="2" val="Walking"/>

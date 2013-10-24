@@ -42,30 +42,14 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_27 extends SceneScript
+class SceneEvents_8 extends SceneScript
 {          	
 	
-public var _ExitName:String;
-
-public var _RatHasLeft:Bool;
-
-public var _RatLeftTime:Float;
-
-public var _RatOffset:Float;
-
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-nameMap.set("Rat Has Left?", "_RatHasLeft");
-_RatHasLeft = false;
-nameMap.set("Rat Left Time", "_RatLeftTime");
-_RatLeftTime = 0.0;
-nameMap.set("Rat Offset", "_RatOffset");
-_RatOffset = 0.0;
-
+		
 	}
 	
 	override public function init()
