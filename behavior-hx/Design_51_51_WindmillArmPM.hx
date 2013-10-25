@@ -55,6 +55,10 @@ public var _StartAngle:Float;
 
 public var _Pivot:Actor;
 
+public var _TargetX:Float;
+
+public var _TargetY:Float;
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
@@ -68,6 +72,10 @@ _Radius = 0.0;
 nameMap.set("Start Angle", "_StartAngle");
 _StartAngle = 0.0;
 nameMap.set("Pivot", "_Pivot");
+nameMap.set("Target X", "_TargetX");
+_TargetX = 0;
+nameMap.set("Target Y", "_TargetY");
+_TargetY = 0;
 nameMap.set("Actor", "actor");
 
 	}
@@ -91,8 +99,11 @@ propertyChanged("_YOffset", _YOffset);
 if(wrapper.enabled){
         if((hasValue(_Pivot) != false))
 {
-            actor.setX((_XOffset + (_Pivot.getXCenter() + (Math.sin((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
-            actor.setY((_YOffset + (_Pivot.getYCenter() + (Math.cos((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
+            _TargetX = asNumber((_XOffset + (_Pivot.getXCenter() + (Math.sin((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
+propertyChanged("_TargetX", _TargetX);
+            _TargetY = asNumber((_YOffset + (_Pivot.getYCenter() + (Math.cos((Utils.RAD * (Utils.DEG * (_Pivot.getAngle())) + _StartAngle)) * _Radius))));
+propertyChanged("_TargetY", _TargetY);
+            actor.say("Rideable Platform PM", "_customBlock_MovePlatform", [_TargetX,_TargetY]);
 }
 
 }

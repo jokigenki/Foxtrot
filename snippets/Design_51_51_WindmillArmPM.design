@@ -77,10 +77,8 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <set-xy comment="false" x="37" y="73">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <plus comment="false" id="2" x="0" y="0">
+                        <set-val-51-6 comment="false" x="37" y="73">
+                            <plus comment="false" id="0" x="0" y="0">
                                 <get-val-51-1 comment="false" id="0" x="0" y="0"/>
                                 <plus comment="false" id="1" x="0" y="0">
                                     <get-xy comment="false" id="0" x="0" y="0">
@@ -104,11 +102,9 @@
                                     </times>
                                 </plus>
                             </plus>
-                        </set-xy>
-                        <set-xy comment="false" x="37" y="159">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                            <plus comment="false" id="2" x="0" y="0">
+                        </set-val-51-6>
+                        <set-val-51-7 comment="false" x="37" y="152">
+                            <plus comment="false" id="0" x="0" y="0">
                                 <get-val-51-2 comment="false" id="0" x="0" y="0"/>
                                 <plus comment="false" id="1" x="0" y="0">
                                     <get-xy comment="false" id="0" x="0" y="0">
@@ -132,7 +128,12 @@
                                     </times>
                                 </plus>
                             </plus>
-                        </set-xy>
+                        </set-val-51-7>
+                        <custom-645 comment="false" x="37" y="231">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-51-6 comment="false" id="1" x="0" y="0"/>
+                            <get-val-51-7 comment="false" id="2" x="0" y="0"/>
+                        </custom-645>
                     </group>
                     <value comment="false" id="0" x="0" y="0">
                         <int id="0" val="5"/>

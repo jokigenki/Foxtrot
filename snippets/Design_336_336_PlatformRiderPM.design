@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="65">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Can Ride Platform?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                    </group>
+                    <get-val-336-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="109">
+                    <group eventID="1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="129">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Can Ride Platform?"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                    </group>
+                </else>
+                <set-val-336-1 comment="false" x="26" y="173">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-336-1>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <set-val-336-1 comment="false" x="37" y="83">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-336-1>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <collision-type2 comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="2"/>
+                        </collision-type2>
+                        <collision-type2 comment="false" id="1" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </collision-type2>
+                    </or>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

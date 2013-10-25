@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="83">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="121">
+                                    <group eventID="1" id="-1">
+                                        <add-list comment="false" x="59" y="156">
+                                            <get-val-335-1 comment="false" id="0" x="0" y="0"/>
+                                            <other-actor comment="false" id="1" x="0" y="0"/>
+                                        </add-list>
+                                        <add-list comment="false" x="59" y="181">
+                                            <get-val-335-8 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="0"/>
+                                        </add-list>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <contains-item comment="false" id="0" x="0" y="0">
+                                            <get-val-335-1 comment="false" id="0" x="0" y="0"/>
+                                            <other-actor comment="false" id="1" x="0" y="0"/>
+                                        </contains-item>
+                                    </not>
+                                </if>
+                                <else comment="false" x="48" y="218">
+                                    <group eventID="1" id="-1">
+                                        <set-val-335-9 comment="false" x="59" y="238">
+                                            <int id="0" val="0"/>
+                                        </set-val-335-9>
+                                        <for-each comment="false" x="59" y="258">
+                                            <group eventID="1" id="-1">
+                                                <if comment="false" x="70" y="283">
+                                                    <group eventID="1" id="-1">
+                                                        <break comment="false" x="81" y="313"/>
+                                                    </group>
+                                                    <eq comment="false" id="0" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                        <for-each-item comment="false" id="1" x="0" y="0"/>
+                                                    </eq>
+                                                </if>
+                                                <incdec comment="false" x="70" y="345">
+                                                    <int id="0" val="9"/>
+                                                    <int id="1" val="0"/>
+                                                    <int id="2" val="1"/>
+                                                </incdec>
+                                            </group>
+                                            <get-val-335-1 comment="false" id="0" x="0" y="0"/>
+                                        </for-each>
+                                        <replace-list comment="false" x="59" y="384">
+                                            <get-val-335-8 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-335-9 comment="false" id="1" x="0" y="0"/>
+                                            <int id="2" val="0"/>
+                                        </replace-list>
+                                    </group>
+                                </else>
+                            </group>
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <other-actor comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Can Ride Platform?"/>
+                            </actor-get-prop>
+                        </if>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <other-actor comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Platform Rider PM"/>
+                    </has-snippet>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-335-8 comment="false" x="26" y="40">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-335-8>
+                <set-val-335-1 comment="false" x="26" y="65">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-335-1>
+                <set-val-335-11 comment="false" x="26" y="90">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-335-11>
+                <set-val-335-10 comment="false" x="26" y="115">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-335-10>
+                <set-val-335-4 comment="false" x="26" y="140">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-335-4>
+                <set-val-335-5 comment="false" x="26" y="173">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-335-5>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-335-6 comment="false" x="26" y="40">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-335-2 comment="false" id="0" x="0" y="0"/>
+                        <get-val-335-4 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-335-6>
+                <set-val-335-7 comment="false" x="26" y="70">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-335-3 comment="false" id="0" x="0" y="0"/>
+                        <get-val-335-5 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-335-7>
+                <set-xy comment="false" x="26" y="100">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <get-val-335-2 comment="false" id="2" x="0" y="0"/>
+                </set-xy>
+                <set-xy comment="false" x="26" y="132">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-val-335-3 comment="false" id="2" x="0" y="0"/>
+                </set-xy>
+                <for-each comment="false" x="26" y="164">
+                    <group eventID="3" id="-1">
+                        <set-xy comment="false" x="37" y="189">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-val-335-6 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="239">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-val-335-7 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-xy>
+                    </group>
+                    <get-val-335-1 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <set-val-335-4 comment="false" x="26" y="301">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-335-4>
+                <set-val-335-5 comment="false" x="26" y="334">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-335-5>
+                <if comment="false" x="26" y="367">
+                    <group eventID="3" id="-1">
+                        <set-val-335-9 comment="false" x="37" y="402">
+                            <int id="0" val="0"/>
+                        </set-val-335-9>
+                        <set-val-335-11 comment="false" x="37" y="422">
+                            <create-list comment="false" id="0" x="0" y="0"/>
+                        </set-val-335-11>
+                        <set-val-335-10 comment="false" x="37" y="447">
+                            <create-list comment="false" id="0" x="0" y="0"/>
+                        </set-val-335-10>
+                        <for-each comment="false" x="37" y="472">
+                            <group eventID="3" id="-1">
+                                <replace-list comment="false" x="48" y="497">
+                                    <get-val-335-8 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-335-9 comment="false" id="1" x="0" y="0"/>
+                                    <plus comment="false" id="2" x="0" y="0">
+                                        <for-each-item comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </plus>
+                                </replace-list>
+                                <if comment="false" x="48" y="527">
+                                    <group eventID="3" id="-1">
+                                        <add-list comment="false" x="59" y="562">
+                                            <get-val-335-11 comment="false" id="0" x="0" y="0"/>
+                                            <plus comment="false" id="1" x="0" y="0">
+                                                <for-each-item comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="1"/>
+                                            </plus>
+                                        </add-list>
+                                        <add-list comment="false" x="59" y="592">
+                                            <get-val-335-10 comment="false" id="0" x="0" y="0"/>
+                                            <get-item comment="false" id="1" x="0" y="0">
+                                                <get-val-335-1 comment="false" id="0" x="0" y="0"/>
+                                                <get-val-335-9 comment="false" id="1" x="0" y="0"/>
+                                            </get-item>
+                                        </add-list>
+                                    </group>
+                                    <less comment="false" id="0" x="0" y="0">
+                                        <plus comment="false" id="0" x="0" y="0">
+                                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="1"/>
+                                        </plus>
+                                        <int id="1" val="5"/>
+                                    </less>
+                                </if>
+                                <incdec comment="false" x="48" y="634">
+                                    <int id="0" val="9"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                            </group>
+                            <get-val-335-8 comment="false" id="0" x="0" y="0"/>
+                        </for-each>
+                        <set-val-335-8 comment="false" x="37" y="673">
+                            <get-val-335-11 comment="false" id="0" x="0" y="0"/>
+                        </set-val-335-8>
+                        <set-val-335-1 comment="false" x="37" y="698">
+                            <get-val-335-10 comment="false" id="0" x="0" y="0"/>
+                        </set-val-335-1>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <is-empty comment="false" id="0" x="0" y="0">
+                            <get-val-335-8 comment="false" id="0" x="0" y="0"/>
+                        </is-empty>
+                    </not>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-1-644 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-335-2 comment="false" x="26" y="45">
+                    <get-byobval-335-644-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-335-2>
+                <set-val-335-3 comment="false" x="26" y="70">
+                    <get-byobval-335-644-2 comment="false" id="0" x="0" y="0"/>
+                </set-val-335-3>
+            </group>
+            <get-byobval-335-644-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-335-644-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-335-644-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-1-644>
+    </group>
+    <group eventID="4" id="-1">
+        <get-byobval-335-644-0 comment="false" x="0" y="0"/>
+        <get-byobval-335-644-1 comment="false" x="0" y="0"/>
+        <get-byobval-335-644-2 comment="false" x="0" y="0"/>
+    </group>
+</groups>
