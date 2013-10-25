@@ -74,12 +74,14 @@
                 <custom-254 comment="false" x="26" y="40">
                     <ACTOR eid="this" id="0"/>
                 </custom-254>
-                <toggle-image comment="false" x="26" y="67">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                </toggle-image>
             </group>
         </init>
+    </group>
+    <group eventID="5" id="1">
+        <toggle-image comment="false" x="226" y="127">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+        </toggle-image>
     </group>
     <group eventID="5" id="-1"/>
     <group eventID="6" id="0">
@@ -124,7 +126,16 @@
                         <ACTOR eid="this" id="0"/>
                     </getlayer>
                 </setlayer>
-                <set-xy comment="false" x="26" y="247">
+                <if comment="false" x="26" y="247">
+                    <group eventID="6" id="-1">
+                        <backforward comment="false" x="37" y="272">
+                            <ACTOR eid="var" id="0" vid="19"/>
+                            <int id="1" val="0"/>
+                        </backforward>
+                    </group>
+                    <get-val-52-21 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <set-xy comment="false" x="26" y="311">
                     <ACTOR eid="var" id="0" vid="19"/>
                     <int id="1" val="0"/>
                     <plus comment="false" id="2" x="0" y="0">
@@ -150,7 +161,7 @@
                         <get-val-52-17 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-xy>
-                <set-xy comment="false" x="26" y="307">
+                <set-xy comment="false" x="26" y="371">
                     <ACTOR eid="var" id="0" vid="19"/>
                     <int id="1" val="1"/>
                     <plus comment="false" id="2" x="0" y="0">
@@ -176,30 +187,30 @@
                         <get-val-52-18 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-xy>
-                <custom-99 comment="false" x="26" y="367">
+                <custom-99 comment="false" x="26" y="431">
                     <ACTOR eid="this" id="0"/>
                     <ACTOR eid="var" id="1" vid="19"/>
                 </custom-99>
-                <incdec comment="false" x="26" y="394">
+                <incdec comment="false" x="26" y="458">
                     <int id="0" val="9"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1"/>
                 </incdec>
-                <custom-234 comment="false" x="26" y="421">
+                <custom-234 comment="false" x="26" y="485">
                     <get-val-52-14 comment="false" id="0" x="0" y="0"/>
                     <ACTOR eid="var" id="1" vid="19"/>
                 </custom-234>
-                <if comment="false" x="26" y="453">
+                <if comment="false" x="26" y="517">
                     <group eventID="6" id="-1">
-                        <if comment="false" x="37" y="486">
+                        <if comment="false" x="37" y="550">
                             <group eventID="6" id="-1">
-                                <shout comment="false" x="48" y="529">
+                                <shout comment="false" x="48" y="593">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Spawned"/>
                                 </shout>
-                                <if comment="false" x="48" y="556">
+                                <if comment="false" x="48" y="620">
                                     <group eventID="6" id="-1">
-                                        <custom-256 comment="false" x="59" y="589">
+                                        <custom-256 comment="false" x="59" y="653">
                                             <ACTOR eid="this" id="0"/>
                                         </custom-256>
                                     </group>
@@ -218,14 +229,14 @@
                                 </custom-326>
                             </not>
                         </if>
-                        <else comment="false" x="37" y="640">
+                        <else comment="false" x="37" y="704">
                             <group eventID="6" id="-1">
-                                <actor-enabledisable-snippet comment="false" x="48" y="660">
+                                <actor-enabledisable-snippet comment="false" x="48" y="724">
                                     <ACTOR eid="var" id="0" vid="19"/>
                                     <int id="1" val="1"/>
                                     <int id="2" val="Display On Collected PM"/>
                                 </actor-enabledisable-snippet>
-                                <die comment="false" x="48" y="687">
+                                <die comment="false" x="48" y="751">
                                     <ACTOR eid="var" id="0" vid="19"/>
                                 </die>
                             </group>
@@ -236,15 +247,15 @@
                         <int id="1" val="Inventory Collectable PM"/>
                     </has-snippet>
                 </if>
-                <else comment="false" x="26" y="738">
+                <else comment="false" x="26" y="802">
                     <group eventID="6" id="-1">
-                        <shout comment="false" x="37" y="758">
+                        <shout comment="false" x="37" y="822">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Spawned"/>
                         </shout>
-                        <if comment="false" x="37" y="785">
+                        <if comment="false" x="37" y="849">
                             <group eventID="2" id="-1">
-                                <custom-256 comment="false" x="48" y="818">
+                                <custom-256 comment="false" x="48" y="882">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-256>
                             </group>

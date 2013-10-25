@@ -679,20 +679,21 @@
         <text default="" defaultValue="" desc="" dropdown="None=none&#10;Fade=fade&#10;Grow=grow&#10;" fullname="Appear Animation Type" hidden="false" id="2" name="_AppearAnimationType" order="2"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Total Spawn Count" hidden="false" id="5" name="_TotalSpawnCount" order="3"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Spawn Repeat Delay" hidden="false" id="6" name="_SpawnRepeatDelay" order="5"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Reduce Count When Actor Killed" hidden="false" id="7" name="_ReduceCountWhenActorKilled" order="8"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Reduce Count When Actor Killed" hidden="false" id="7" name="_ReduceCountWhenActorKilled" order="9"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Initial Spawn Delay" hidden="false" id="8" name="_InitialSpawnDelay" order="4"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Spawn Count" hidden="true" id="9" name="_CurrentSpawnCount" order="9"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="false" id="10" name="_IsActive" order="10"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Running?" hidden="true" id="11" name="_IsRunning" order="11"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Spawn Count" hidden="true" id="9" name="_CurrentSpawnCount" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="false" id="10" name="_IsActive" order="11"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Running?" hidden="true" id="11" name="_IsRunning" order="12"/>
         <actortype default="" defaultValue="" desc="Name of the type of actor to spawn." dropdown="" fullname="Spawn Type" hidden="false" id="13" name="_SpawnType" order="1"/>
-        <list default="list" defaultValue="list" desc="A List of attributes to set, in the form Behaviour:Key1=Value1." dropdown="" fullname="Creation Attributes" hidden="false" id="14" name="_CreationAttributes" order="12"/>
+        <list default="list" defaultValue="list" desc="A List of attributes to set, in the form Behaviour:Key1=Value1." dropdown="" fullname="Creation Attributes" hidden="false" id="14" name="_CreationAttributes" order="13"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Creation Values" hidden="true" id="15" name="_CreationValues" order="13"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Creation Values" hidden="true" id="15" name="_CreationValues" order="14"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Offset" hidden="false" id="17" name="_XOffset" order="6"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Behaviour Values" hidden="true" id="16" name="_BehaviourValues" order="14"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Last Spawn" hidden="true" id="19" name="_LastSpawn" order="15"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Behaviour Values" hidden="true" id="16" name="_BehaviourValues" order="15"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Last Spawn" hidden="true" id="19" name="_LastSpawn" order="16"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="false" id="18" name="_YOffset" order="7"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Switch To Animation Named" hidden="false" id="20" name="_SwitchToAnimationNamed" order="16"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Place Spawned Actor Behind?" hidden="false" id="21" name="_PlaceSpawnedActorBehind" order="8"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Switch To Animation Named" hidden="false" id="20" name="_SwitchToAnimationNamed" order="17"/>
         <blocks>
             <receiver blockID="99" id="1"/>
             <receiver blockID="235" id="2"/>
@@ -1659,7 +1660,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_232" classname="scripts.ActorEvents_232" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="163" language="" name="ActorEvents_232" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_230" classname="scripts.ActorEvents_230" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="162" language="" name="ActorEvents_230" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
@@ -2189,7 +2192,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_411" classname="scripts.ActorEvents_411" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="239" language="" name="ActorEvents_411" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_22" classname="scripts.SceneEvents_22" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="238" language="" name="SceneEvents_22" oid="-1" package="scripts." sceneid="22" scenespecific="true" shared="false" type="scene">
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
@@ -2903,7 +2908,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_553" classname="scripts.ActorEvents_553" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="297" language="" name="ActorEvents_553" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_299_299_ComplexMovementPM" classname="scripts.Design_299_299_ComplexMovementPM" desc="Creates a series of movements to be performed in a loop. Movements can be Slide (moves x/y), Spin (moves x/y), Fade or Pause. Movements can be sequential or concurrent. Note that in a concurrent movement, the first actions duration will be used for triggering the next action in the list. When using concurrent actions, a sequential action or a pause (even if 0 length) must be used to prevent infinite loops." description="Creates a series of movements to be performed in a loop. Movements can be Slide (moves x/y), Spin (moves x/y), Fade or Pause. Movements can be sequential or concurrent. Note that in a concurrent movement, the first actions duration will be used for triggering the next action in the list. When using concurrent actions, a sequential action or a pause (even if 0 length) must be used to prevent infinite loops." design="true" drawOrder="0" id="298" language="" name="Complex Movement PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <list default="list" defaultValue="list" desc="A list of the movements, using the format Type:Movement:Duration:Ease:Param1:Param2.&#10;Type is S for sequential or C for concurrent.&#10;Movement is Slide To, Slide By, Spin To, Spin By, Fade, Grow or Pause.&#10;Duration is the time of the movement in seconds.&#10;Ease is any of the available eases(None/Back/Elastic(Bounce)/Quad(Normal)/Expo(Strong).easeIn/easeInOut/easeOut).&#10;Param1 and 2 depend on the movement. For Slide they will be X:Y. For Grow, width and height. For Spin and Fade, only Param1 is used, for the angle in degrees and target alpha respectivelly. For Pause, no params are used." dropdown="" fullname="Movements" hidden="false" id="1" name="_Movements" order="1"/>
