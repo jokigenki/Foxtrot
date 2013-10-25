@@ -3225,6 +3225,7 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="336">
+                <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="false" id="131">
@@ -4133,7 +4134,7 @@
             </s>
         </snippets>
     </actor>
-    <custom-block blocktag="custom-644" blocktype="ACTION" code="~.say(&quot;Rideable Platform PM&quot;, &quot;MovePlatform&quot;, ~,~);" desc="" global="false" gui="Move platform %0 to x: %1 y: %2" id="644" message="MovePlatform" name="MovePlatform" oid="-1" return="VOID" shared="false" snippetID="335">
+    <custom-block blocktag="custom-644" blocktype="ACTION" code="" desc="" global="false" gui="Move platform %0 to x: %1 y: %2" id="644" message="MovePlatform" name="MovePlatform" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="X" order="1" type="NUMBER"/>
         <blank name="Y" order="2" type="NUMBER"/>
@@ -5190,7 +5191,7 @@
         <blank name="Values" order="0" type="LIST"/>
         <blank name="Actor" order="1" type="ACTOR"/>
     </custom-block>
-    <custom-block blocktag="custom-83" blocktype="ACTION" code="~.say(&quot;Ride Platforms PM&quot;, &quot;SetAnimationPrevention&quot;, ~);" desc="" global="false" gui="set prevent animations to %1" id="83" message="SetAnimationPrevention" name="SetAnimationPrevention" oid="-1" return="VOID" shared="false" snippetID="41">
+    <custom-block blocktag="custom-83" blocktype="ACTION" code="" desc="" global="false" gui="set prevent animations to %1" id="83" message="SetAnimationPrevention" name="SetAnimationPrevention" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Prevent Value" order="1" type="BOOLEAN"/>
     </custom-block>
@@ -5754,13 +5755,13 @@
         <blank name="Control" order="2" type="CONTROL"/>
     </custom-block>
     <custom-block blocktag="custom-50" blocktype="ACTION" code="sayToScene(&quot;Inventory PM&quot;, &quot;UpdateInventory&quot;);" desc="Updates the scene inventory from the game inventory." global="false" gui="Update Inventory" id="50" message="UpdateInventory" name="UpdateInventory" oid="-1" return="VOID" shared="false" snippetID="22"/>
-    <custom-block blocktag="custom-85" blocktype="ACTION" code="~.say(&quot;Ride Platforms PM&quot;, &quot;UpdatePlayerPosition&quot;);" desc="" global="false" gui="update player position" id="85" message="UpdatePlayerPosition" name="UpdatePlayerPosition" oid="-1" return="VOID" shared="false" snippetID="41">
+    <custom-block blocktag="custom-85" blocktype="ACTION" code="" desc="" global="false" gui="update player position" id="85" message="UpdatePlayerPosition" name="UpdatePlayerPosition" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-24" blocktype="ACTION" code="" desc="" global="false" gui="update player position" id="24" message="UpdatePlayerPosition" name="UpdatePlayerPosition" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
-    <custom-block blocktag="custom-84" blocktype="ACTION" code="~.say(&quot;Ride Platforms PM&quot;, &quot;UpdatePositionOnPlatform&quot;);" desc="" global="false" gui="update position on platform" id="84" message="UpdatePositionOnPlatform" name="UpdatePositionOnPlatform" oid="-1" return="VOID" shared="false" snippetID="41">
+    <custom-block blocktag="custom-84" blocktype="ACTION" code="" desc="" global="false" gui="update position on platform" id="84" message="UpdatePositionOnPlatform" name="UpdatePositionOnPlatform" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-23" blocktype="ACTION" code="" desc="" global="false" gui="update position on platform" id="23" message="UpdatePositionOnPlatform" name="UpdatePositionOnPlatform" oid="-1" return="VOID" shared="false" snippetID="-1">
