@@ -322,14 +322,11 @@
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_33_33_TurnAroundOnTriggerPM" classname="scripts.Design_33_33_TurnAroundOnTriggerPM" desc="When this actor hits an AI Trigger actor with the id &quot;Turn Around&quot;, it will switch direction." description="When this actor hits an AI Trigger actor with the id &quot;Turn Around&quot;, it will switch direction." design="true" drawOrder="0" id="33" language="" name="Turn Around On Trigger PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Last Collided Trigger" hidden="true" id="1" name="_LastCollidedTrigger" order="1"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Colliding?" hidden="true" id="2" name="_IsColliding" order="2"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="New Collider?" hidden="true" id="3" name="_NewCollider" order="3"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Direction" hidden="true" id="1" name="_Direction" order="1"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
             <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_38_38_DieinPit" classname="scripts.Design_38_38_DieinPit" desc="If the Actor falls off the bottom of the screen, the scene will be reloaded." description="If the Actor falls off the bottom of the screen, the scene will be reloaded." design="true" drawOrder="0" id="38" language="" name="Die in Pit" oid="-1" package="" scenespecific="false" shared="false" type="actor">
@@ -2954,6 +2951,22 @@
         <blocks/>
         <events>
             <event displayName="On Reload" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_648" classname="scripts.ActorEvents_648" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="340" language="" name="ActorEvents_648" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_339_339_TurnTriggerPM" classname="scripts.Design_339_339_TurnTriggerPM" desc="" description="" design="true" drawOrder="0" id="339" language="" name="Turn Trigger PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <text default="" defaultValue="" desc="" dropdown="Left=Left&#10;Right=Right" fullname="Turn Direction" hidden="false" id="1" name="_TurnDirection" order="1"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_646" classname="scripts.ActorEvents_646" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="338" language="" name="ActorEvents_646" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_337_337_RideablePlatformPM" classname="scripts.Design_337_337_RideablePlatformPM" desc="" description="" design="true" drawOrder="0" id="337" language="" name="Rideable Platform PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">

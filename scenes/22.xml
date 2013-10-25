@@ -16,10 +16,10 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="192" id="0" name="Region 0" pts="4,-14.0,-96.0,14.0,-96.0,14.0,96.0,-14.0,96.0" r="64" type="box" w="28" x="98" y="95"/>
-        <region b="64" g="64" h="17" id="1" name="Region 1" pts="4,0.0,0.0,0.0,17.0,21.0,17.0,21.0,0.0" r="64" type="box" w="21" x="261" y="260"/>
-        <region b="64" g="64" h="16" id="2" name="Region 2" pts="4,-73.0,-8.0,73.0,-8.0,73.0,8.0,-73.0,8.0" r="64" type="box" w="146" x="159" y="176"/>
-        <region b="64" g="64" h="16" id="3" name="Region 3" pts="4,-73.0,-8.0,73.0,-8.0,73.0,8.0,-73.0,8.0" r="64" type="box" w="146" x="335" y="176"/>
+        <region b="64" g="64" h="192" id="0" name="Region 0" pts="4,-14.0,96.0,14.0,96.0,14.0,-96.0,-14.0,-96.0" r="64" type="box" w="28" x="98" y="95"/>
+        <region b="64" g="64" h="17" id="1" name="Region 1" pts="4,21.0,0.0,21.0,17.0,0.0,17.0,0.0,0.0" r="64" type="box" w="21" x="261" y="260"/>
+        <region b="64" g="64" h="16" id="2" name="Region 2" pts="4,-73.0,8.0,73.0,8.0,73.0,-8.0,-73.0,-8.0" r="64" type="box" w="146" x="159" y="176"/>
+        <region b="64" g="64" h="16" id="3" name="Region 3" pts="4,-73.0,8.0,73.0,8.0,73.0,-8.0,-73.0,-8.0" r="64" type="box" w="146" x="335" y="176"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -52,6 +52,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -70,7 +71,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="129" c="false" group="2" id="423" name="Expander Pipes 129" sx="1.0" sy="1.0" x="256" y="96" z="1"/>
@@ -99,6 +99,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -117,7 +118,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="131" c="false" group="2" id="423" name="Expander Pipes 131" sx="1.0" sy="1.0" x="128" y="96" z="1"/>
@@ -133,46 +133,6 @@
                 <s enabled="true" id="90"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="14" c="true" group="8" id="421" name="Crusher 14" sx="1.0" sy="1.0" x="160" y="16" z="6">
-            <snippets>
-                <s enabled="true" id="233">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="160"/>
-                    <prop id="3" list="0" val="48"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="243"/>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="15" c="false" group="2" id="423" name="Expanded Pipes 15" sx="1.0" sy="1.0" x="160" y="16" z="1"/>
-        <actor a="0.0" aid="17" c="false" group="2" id="423" name="Expander Pipes 17" sx="1.0" sy="1.0" x="288" y="16" z="1"/>
         <actor a="0.0" aid="152" c="true" group="3" id="427" name="Expander Link 152" sx="1.0" sy="1.0" x="256" y="256" z="7">
             <snippets>
                 <s enabled="true" id="246"/>
@@ -304,7 +264,6 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="21" c="false" group="2" id="423" name="Expander Pipes 21" sx="1.0" sy="1.0" x="448" y="16" z="1"/>
         <actor a="0.0" aid="156" c="true" group="3" id="427" name="Expander Link 156" sx="1.0" sy="1.0" x="384" y="256" z="7">
             <snippets>
                 <s enabled="true" id="246"/>
@@ -337,7 +296,6 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="20" c="false" group="2" id="423" name="Expander Pipes 20" sx="1.0" sy="1.0" x="416" y="16" z="1"/>
         <actor a="0.0" aid="157" c="true" group="3" id="427" name="Expander Link 157" sx="1.0" sy="1.0" x="416" y="256" z="7">
             <snippets>
                 <s enabled="true" id="246"/>
@@ -418,6 +376,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="224"/>
@@ -431,7 +390,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -490,6 +448,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="320"/>
@@ -503,7 +462,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -513,83 +471,7 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="145" c="false" group="2" id="423" name="Expander Pipes 145" sx="1.0" sy="1.0" x="320" y="256" z="1"/>
-        <actor a="0.0" aid="24" c="true" group="8" id="421" name="Crusher 24" sx="1.0" sy="1.0" x="288" y="16" z="6">
-            <snippets>
-                <s enabled="true" id="233">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="288"/>
-                    <prop id="3" list="0" val="48"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="243"/>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="146" c="false" group="2" id="423" name="Expander Pipes 146" sx="1.0" sy="1.0" x="352" y="256" z="1"/>
-        <actor a="0.0" aid="27" c="true" group="8" id="421" name="Crusher 27" sx="1.0" sy="1.0" x="416" y="16" z="6">
-            <snippets>
-                <s enabled="true" id="233">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="416"/>
-                    <prop id="3" list="0" val="48"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="243"/>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="147" c="false" group="2" id="423" name="Expander Pipes 147" sx="1.0" sy="1.0" x="384" y="256" z="1"/>
         <actor a="0.0" aid="26" c="true" group="8" id="421" name="Crusher 26" sx="1.0" sy="1.0" x="384" y="16" z="6">
             <snippets>
@@ -607,6 +489,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="384"/>
@@ -620,7 +503,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -646,6 +528,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="480"/>
@@ -659,7 +542,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -669,44 +551,6 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="149" c="false" group="2" id="423" name="Expander Pipes 149" sx="1.0" sy="1.0" x="448" y="256" z="1"/>
-        <actor a="0.0" aid="28" c="true" group="8" id="421" name="Crusher 28" sx="1.0" sy="1.0" x="448" y="16" z="6">
-            <snippets>
-                <s enabled="true" id="233">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.4"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="448"/>
-                    <prop id="3" list="0" val="48"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="243"/>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="150" c="false" group="2" id="423" name="Expander Pipes 150" sx="1.0" sy="1.0" x="480" y="256" z="1"/>
         <actor a="0.0" aid="151" c="true" group="3" id="427" name="Expander Link 151" sx="1.0" sy="1.0" x="224" y="256" z="7">
             <snippets>
@@ -796,38 +640,6 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="175" c="false" group="2" id="520" name="Gate Sign 175" sx="1.0" sy="1.0" x="128" y="272" z="1"/>
-        <actor a="0.0" aid="38" c="true" group="3" id="427" name="Expander Link 38" sx="1.0" sy="1.0" x="160" y="16" z="7">
-            <snippets>
-                <s enabled="true" id="246"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="160"/>
-                    <prop id="3" list="0" val="32"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="174" c="true" group="2" id="265" name="Switch Single Use 174" sx="1.0" sy="1.0" x="140" y="311" z="4">
             <snippets>
                 <s enabled="true" id="174">
@@ -940,38 +752,6 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="43" c="true" group="3" id="427" name="Expander Link 43" sx="1.0" sy="1.0" x="416" y="16" z="7">
-            <snippets>
-                <s enabled="true" id="246"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="416"/>
-                    <prop id="3" list="0" val="32"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="162" c="true" group="3" id="427" name="Expander Link 162" sx="1.0" sy="1.0" x="192" y="256" z="7">
             <snippets>
                 <s enabled="true" id="246"/>
@@ -979,38 +759,6 @@
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="192"/>
                     <prop id="3" list="0" val="288"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="40" c="true" group="3" id="427" name="Expander Link 40" sx="1.0" sy="1.0" x="288" y="16" z="7">
-            <snippets>
-                <s enabled="true" id="246"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="288"/>
-                    <prop id="3" list="0" val="32"/>
                     <prop id="4" list="0" val="0"/>
                     <prop id="5" list="0" val="0"/>
                     <prop id="6" list="0" val="0.25"/>
@@ -1125,38 +873,6 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="44" c="true" group="3" id="427" name="Expander Link 44" sx="1.0" sy="1.0" x="448" y="16" z="7">
-            <snippets>
-                <s enabled="true" id="246"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.4"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2"/>
-                    <prop id="6" list="0" val="2"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="448"/>
-                    <prop id="3" list="0" val="32"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="45" c="true" group="3" id="427" name="Expander Link 45" sx="1.0" sy="1.0" x="480" y="16" z="7">
             <snippets>
                 <s enabled="true" id="246"/>
@@ -1219,18 +935,18 @@
                     <prop id="23" list="0" val="0"/>
                     <prop id="22" list="0" val="0"/>
                 </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Laser Beamer PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="61">
                     <prop id="1" list="0" val="3"/>
                     <prop id="2" list="0" val="0"/>
                     <prop id="3" list="0" val="15"/>
                     <prop id="4" list="0" val="true"/>
                     <prop id="5" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Laser Beamer PM"/>
-                    </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -1327,6 +1043,12 @@
                     <prop id="23" list="0" val="0"/>
                     <prop id="22" list="0" val="0"/>
                 </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Laser Beamer PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="61">
                     <prop id="1" list="0" val="2"/>
                     <prop id="2" list="0" val="0"/>
@@ -1335,19 +1057,11 @@
                     <prop id="5" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Laser Beamer PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
             </snippets>
         </actor>
         <actor a="0.0" aid="78" c="false" group="2" id="423" name="Expander Pipes 78" sx="1.0" sy="1.0" x="320" y="96" z="1"/>
-        <actor a="0.0" aid="81" c="false" group="2" id="423" name="Expander Pipes 81" sx="1.0" sy="1.0" x="416" y="96" z="1"/>
         <actor a="0.0" aid="80" c="false" group="2" id="423" name="Expander Pipes 80" sx="1.0" sy="1.0" x="384" y="96" z="1"/>
         <actor a="0.0" aid="83" c="false" group="2" id="423" name="Expander Pipes 83" sx="1.0" sy="1.0" x="480" y="96" z="1"/>
-        <actor a="0.0" aid="82" c="false" group="2" id="423" name="Expander Pipes 82" sx="1.0" sy="1.0" x="448" y="96" z="1"/>
         <actor a="0.0" aid="92" c="true" group="3" id="427" name="Expander Link 92" sx="1.0" sy="1.0" x="320" y="96" z="7">
             <snippets>
                 <s enabled="true" id="246"/>
@@ -1380,43 +1094,11 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="95" c="true" group="3" id="427" name="Expander Link 95" sx="1.0" sy="1.0" x="416" y="96" z="7">
-            <snippets>
-                <s enabled="true" id="246"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1.2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2.5"/>
-                    <prop id="6" list="0" val="1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="416"/>
-                    <prop id="3" list="0" val="112"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="94" c="true" group="3" id="427" name="Expander Link 94" sx="1.0" sy="1.0" x="384" y="96" z="7">
             <snippets>
                 <s enabled="true" id="246"/>
                 <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.4"/>
+                    <prop id="1" list="0" val="1.4"/>
                     <prop id="3" list="0" val="false"/>
                     <prop id="5" list="0" val="2.5"/>
                     <prop id="6" list="0" val="1"/>
@@ -1460,7 +1142,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="320"/>
@@ -1474,38 +1155,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="96" c="true" group="3" id="427" name="Expander Link 96" sx="1.0" sy="1.0" x="448" y="96" z="7">
-            <snippets>
-                <s enabled="true" id="246"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.4"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2.5"/>
-                    <prop id="6" list="0" val="1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="448"/>
-                    <prop id="3" list="0" val="112"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1562,7 +1212,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="192"/>
@@ -1576,6 +1225,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1600,7 +1250,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="128"/>
@@ -1614,6 +1263,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1637,7 +1287,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="480"/>
@@ -1651,6 +1300,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1675,7 +1325,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="256"/>
@@ -1689,80 +1338,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="106" c="true" group="8" id="421" name="Crusher 106" sx="1.0" sy="1.0" x="416" y="96" z="6">
-            <snippets>
-                <s enabled="true" id="233">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1.2"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2.5"/>
-                    <prop id="6" list="0" val="1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="243"/>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="416"/>
-                    <prop id="3" list="0" val="128"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Reposition Whilst Activated PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="107" c="true" group="8" id="421" name="Crusher 107" sx="1.0" sy="1.0" x="448" y="96" z="6">
-            <snippets>
-                <s enabled="true" id="233">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.4"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="5" list="0" val="2.5"/>
-                    <prop id="6" list="0" val="1"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="243"/>
-                <s enabled="true" id="166">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="448"/>
-                    <prop id="3" list="0" val="128"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.25"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="Strong In"/>
-                    <prop id="9" list="0" val="0"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1779,7 +1355,7 @@
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="242">
-                    <prop id="1" list="0" val="2.4"/>
+                    <prop id="1" list="0" val="1.4"/>
                     <prop id="3" list="0" val="false"/>
                     <prop id="5" list="0" val="2.5"/>
                     <prop id="6" list="0" val="1"/>
@@ -1787,7 +1363,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="384"/>
@@ -1801,6 +1376,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1824,7 +1400,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="320"/>
@@ -1838,6 +1413,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1861,7 +1437,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="352"/>
@@ -1875,6 +1450,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1898,7 +1474,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="384"/>
@@ -1912,6 +1487,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1935,7 +1511,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="416"/>
@@ -1949,6 +1524,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1972,7 +1548,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="448"/>
@@ -1986,6 +1561,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -2009,7 +1585,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="480"/>
@@ -2023,6 +1598,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -2068,7 +1644,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="224"/>
@@ -2082,6 +1657,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -2105,7 +1681,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="256"/>
@@ -2119,6 +1694,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -2142,7 +1718,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="288"/>
@@ -2156,6 +1731,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -2178,10 +1754,10 @@
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -2194,22 +1770,22 @@
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="30.0"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="22"/>
-        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="466"/>
             <prop id="2" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="22"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="256.0" y="32.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="192.0" y="32.0"/>
-        <p pts="20,384.0,0.0,384.0,16.0,256.0,16.0,256.0,48.0,224.0,48.0,224.0,16.0,192.0,16.0,192.0,48.0,160.0,48.0,160.0,16.0,128.0,16.0,128.0,48.0,96.0,48.0,96.0,16.0,64.0,16.0,64.0,48.0,32.0,48.0,32.0,16.0,0.0,16.0,0.0,0.0" x="128.0" y="80.0"/>
-        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="320.0" y="192.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="256.0" y="32.0"/>
         <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="352.0" y="32.0"/>
         <p pts="4,352.0,0.0,352.0,16.0,0.0,16.0,0.0,0.0" x="160.0" y="240.0"/>
-        <p pts="28,480.0,320.0,0.0,320.0,0.0,0.0,80.0,0.0,80.0,16.0,16.0,16.0,16.0,272.0,80.0,272.0,80.0,304.0,464.0,304.0,464.0,144.0,432.0,144.0,432.0,176.0,384.0,176.0,384.0,160.0,416.0,160.0,416.0,144.0,64.0,144.0,64.0,160.0,96.0,160.0,96.0,176.0,48.0,176.0,48.0,128.0,464.0,128.0,464.0,16.0,432.0,16.0,432.0,0.0,480.0,0.0" x="80.0" y="32.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="320.0" y="192.0"/>
+        <p pts="28,480.0,320.0,0.0,320.0,0.0,0.0,144.0,0.0,144.0,16.0,16.0,16.0,16.0,272.0,80.0,272.0,80.0,304.0,464.0,304.0,464.0,144.0,432.0,144.0,432.0,176.0,384.0,176.0,384.0,160.0,416.0,160.0,416.0,144.0,64.0,144.0,64.0,160.0,96.0,160.0,96.0,176.0,48.0,176.0,48.0,128.0,464.0,128.0,464.0,16.0,432.0,16.0,432.0,0.0,480.0,0.0" x="80.0" y="32.0"/>
+        <p pts="24,224.0,48.0,224.0,16.0,192.0,16.0,192.0,48.0,160.0,48.0,160.0,16.0,128.0,16.0,128.0,48.0,96.0,48.0,96.0,16.0,64.0,16.0,64.0,48.0,32.0,48.0,32.0,16.0,0.0,16.0,0.0,0.0,384.0,0.0,384.0,16.0,352.0,16.0,352.0,48.0,288.0,48.0,288.0,16.0,256.0,16.0,256.0,48.0" x="128.0" y="80.0"/>
+        <p pts="4,64.0,0.0,64.0,16.0,0.0,16.0,0.0,0.0" x="416.0" y="32.0"/>
     </terrain>
 </scene>

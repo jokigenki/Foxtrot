@@ -87,6 +87,22 @@
             </s>
         </snippets>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="338" fixedrot="false" fric="0.2" gid="9" id="646" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="AI Turn Trigger" oid="-1" pausable="true" rest="0.0" shared="false" sprite="647" static="true">
+        <snippets>
+            <s enabled="true" id="252">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="339">
+                <prop id="1" list="0" val="Left"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="647" name="AI Turn Trigger" shared="false" width="16">
+        <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="8" originy="8" sync="false" width="16">
+            <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
     <tileset across="2" atlasID="0" desc="" down="2" id="592" name="Altar" oid="-1" shared="false" th="16" tw="16">
         <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -773,8 +789,8 @@
     </actor>
     <sprite atlasID="2" default="0" defaultAnimation="0" desc="" height="71" id="299" name="Crate Cradle" shared="false" width="48">
         <anim across="1" down="1" durations="100" height="71" id="0" loop="true" name="Open" numframes="1" originx="24" originy="24" sync="false" width="48">
-            <poly data="4,0,0,6,0,6,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="Open" rest="0.0" sensor="false"/>
-            <poly data="4,42,0,48,0,48,70,42,70" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
+            <poly data="4,0,22,6,22,6,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="Open" rest="0.0" sensor="false"/>
+            <poly data="4,42,22,48,22,48,70,42,70" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="71" id="1" loop="true" name="Closed" numframes="1" originx="24" originy="24" sync="false" width="48">
             <poly data="4,0,23,6,23,6,53,0,53" density="0.1" fric="0.2" gid="-1000" id="0" name="Closed" rest="0.0" sensor="false"/>
@@ -3594,6 +3610,12 @@
                 <prop id="1" list="0" val="Left"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
+            <s enabled="true" id="33">
+                <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="48">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
@@ -4668,6 +4690,32 @@
         <anim across="1" down="1" durations="100" height="32" id="4" loop="true" name="p5" numframes="1" originx="16" originy="16" sync="false" width="32"/>
         <anim across="1" down="1" durations="100" height="32" id="5" loop="true" name="p6" numframes="1" originx="16" originy="16" sync="false" width="32"/>
         <anim across="1" down="1" durations="100" height="32" id="6" loop="true" name="p7" numframes="1" originx="16" originy="16" sync="false" width="32"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="340" fixedrot="false" fric="0.2" gid="2" id="648" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Rabbot Spawner" oid="-1" pausable="true" rest="0.0" shared="false" sprite="649" static="true">
+        <snippets>
+            <s enabled="true" id="52">
+                <prop id="2" list="0" val="none"/>
+                <prop id="5" list="0" val="0.0"/>
+                <prop id="6" list="0" val="0"/>
+                <prop id="7" list="0" val="true"/>
+                <prop id="8" list="0" val="0.0"/>
+                <prop id="9" list="0" val="0"/>
+                <prop id="10" list="0" val="true"/>
+                <prop id="11" list="0" val="false"/>
+                <prop id="13" list="0" val="535"/>
+                <prop id="14" list="1" val=""/>
+                <prop id="15" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="0"/>
+                <prop id="16" list="1" val=""/>
+                <prop id="19" list="0" val=""/>
+                <prop id="18" list="0" val="0"/>
+                <prop id="20" list="0" val=""/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="649" name="Rabbot Spawner" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="331" fixedrot="false" fric="0.2" gid="3" id="640" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Radio" oid="-1" pausable="true" rest="0.0" shared="false" sprite="641" static="true">
         <snippets>
