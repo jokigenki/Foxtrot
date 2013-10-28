@@ -254,7 +254,7 @@
         <receiver-46-252 comment="false" x="15" y="15">
             <group eventID="19" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="var allActors = Engine.engine.allActors;&#10;for (actorOnScreen in allActors)&#10;{&#10;&#9;if (actorOnScreen != null &amp;amp;&amp;amp; !actorOnScreen.dead &amp;amp;&amp;amp; !actorOnScreen.recycled &amp;amp;&amp;amp; actorOnScreen.isOnScreenCache)&#10;&#9;{&#10;&#9;&#9;if (actorOnScreen.name + &amp;quot; &amp;quot; + actorOnScreen.ID == __Name)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;return actorOnScreen;&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;return null;"/>
+                    <int id="0" val="var allActors = Engine.engine.allActors;&#10;for (actorOnScreen in allActors)&#10;{&#10;&#9;if (actorOnScreen != null &amp;amp;&amp;amp; !actorOnScreen.dead &amp;amp;&amp;amp; !actorOnScreen.recycled)&#10;&#9;{&#10;&#9;&#9;if (actorOnScreen.name + &amp;quot; &amp;quot; + actorOnScreen.ID == __Name)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;return actorOnScreen;&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;return null;"/>
                 </code-long>
             </group>
             <get-byobval-27-252-0 comment="false" id="0" x="0" y="0"/>

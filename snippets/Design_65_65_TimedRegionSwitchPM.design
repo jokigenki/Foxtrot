@@ -84,17 +84,20 @@
                 <set-val-65-19 comment="false" x="26" y="95">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-65-19>
-                <custom-253 comment="false" x="26" y="120">
+                <custom-code comment="false" x="26" y="120">
+                    <int id="0" val="dispatchPreEvent();"/>
+                </custom-code>
+                <custom-253 comment="false" x="26" y="140">
                     <get-val-65-15 comment="false" id="0" x="0" y="0"/>
                     <get-val-65-5 comment="false" id="1" x="0" y="0"/>
                 </custom-253>
-                <set-val-65-13 comment="false" x="26" y="145">
+                <set-val-65-13 comment="false" x="26" y="165">
                     <int id="0" val="0"/>
                 </set-val-65-13>
-                <custom-code comment="false" x="26" y="165">
+                <custom-code comment="false" x="26" y="185">
                     <int id="0" val="dispatchEvent();"/>
                 </custom-code>
-                <custom-453 comment="false" x="26" y="185">
+                <custom-453 comment="false" x="26" y="205">
                     <ACTOR eid="this" id="0"/>
                 </custom-453>
             </group>
@@ -292,4 +295,14 @@
         </step>
     </group>
     <group eventID="13" id="-1"/>
+    <group eventID="14" id="0">
+        <event-custom-code comment="false" x="15" y="15">
+            <group eventID="14" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="public function dispatchPreEvent () &#10;{&#10;&#9;var actorname = scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(actor);&#10;&#9;actorname = actorname.split(&amp;quot; &amp;quot;).join(&amp;quot;&amp;quot;);&#10;&#9;shoutToScene(&amp;quot;_customEvent_&amp;quot; + actorname + &amp;quot;PreSwitched&amp;quot; + (_IsActive ? &amp;quot;On&amp;quot; : &amp;quot;Off&amp;quot;));&#10;}"/>
+                </code-long>
+            </group>
+        </event-custom-code>
+    </group>
+    <group eventID="14" id="-1"/>
 </groups>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-type-create-kill comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <shake-start comment="false" x="26" y="47">
+                    <int id="0" val="1"/>
+                    <int id="1" val="0.25"/>
+                </shake-start>
+            </group>
+            <int id="0" val="1"/>
+            <ACTORTYPE eid="653" id="1"/>
+        </event-type-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <custom-652 comment="false" x="26" y="40">
+                    <ACTOR eid="32" id="0"/>
+                </custom-652>
+                <set-attribute comment="false" x="26" y="67">
+                    <ACTOR eid="26" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="94">
+                    <ACTOR eid="27" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="121">
+                    <ACTOR eid="30" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="148">
+                    <ACTOR eid="43" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1.5"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="175">
+                    <ACTOR eid="55" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1.5"/>
+                </set-attribute>
+            </group>
+            <int id="0" val="SwitchSingleUse31SwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <custom-652 comment="false" x="26" y="40">
+                    <ACTOR eid="31" id="0"/>
+                </custom-652>
+                <set-attribute comment="false" x="26" y="67">
+                    <ACTOR eid="26" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="94">
+                    <ACTOR eid="27" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="121">
+                    <ACTOR eid="30" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="148">
+                    <ACTOR eid="43" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1.5"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="175">
+                    <ACTOR eid="55" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1.5"/>
+                </set-attribute>
+            </group>
+            <int id="0" val="SwitchSingleUse32SwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <set-attribute comment="false" x="37" y="78">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                            <int id="1" val="Explode After Time PM"/>
+                            <int id="2" val="_ExplodeAfterSeconds"/>
+                            <int id="3" val="0.5"/>
+                        </set-attribute>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="2"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <isalive comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </isalive>
+                    </and>
+                </if>
+            </group>
+            <int id="0" val="TimedSwitchLight62PreSwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-341-2 comment="false" x="26" y="40">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="13" id="0"/>
+                        <int id="1" val="Spawn PM"/>
+                        <int id="2" val="_LastSpawn"/>
+                    </get-attribute>
+                </set-val-341-2>
+            </group>
+            <int id="0" val="TimedSwitchLight62SwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <custom-652 comment="false" x="26" y="40">
+                    <ACTOR eid="69" id="0"/>
+                </custom-652>
+                <set-attribute comment="false" x="26" y="67">
+                    <ACTOR eid="56" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="94">
+                    <ACTOR eid="64" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="121">
+                    <ACTOR eid="65" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="148">
+                    <ACTOR eid="66" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="175">
+                    <ACTOR eid="67" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="1"/>
+                </set-attribute>
+            </group>
+            <int id="0" val="SwitchSingleUse68SwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <custom-652 comment="false" x="26" y="40">
+                    <ACTOR eid="68" id="0"/>
+                </custom-652>
+                <set-attribute comment="false" x="26" y="67">
+                    <ACTOR eid="56" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="94">
+                    <ACTOR eid="64" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="121">
+                    <ACTOR eid="65" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="148">
+                    <ACTOR eid="66" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="175">
+                    <ACTOR eid="67" id="0"/>
+                    <int id="1" val="Conveyor PM"/>
+                    <int id="2" val="_Direction"/>
+                    <int id="3" val="-1"/>
+                </set-attribute>
+            </group>
+            <int id="0" val="SwitchSingleUse69SwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="8" id="-1"/>
+</groups>

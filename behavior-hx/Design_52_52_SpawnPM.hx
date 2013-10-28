@@ -87,6 +87,7 @@ propertyChanged("_IsRunning", _IsRunning);
             return;
 }
 
+        trace("" + "SPAWN!");
         createRecycledActor(_SpawnType, actor.getX(), actor.getY(), Script.FRONT);
         _LastSpawn = getLastCreatedActor();
 propertyChanged("_LastSpawn", _LastSpawn);
@@ -223,6 +224,20 @@ propertyChanged("_IsRunning", _IsRunning);
             runLater(1000 * _SpawnRepeatDelay, function(timeTask:TimedTask):Void {
                         actor.say("Spawn PM", "_customEvent_" + "MakeSpawn");
 }, actor);
+}
+
+}
+    
+
+/* Params are:__Self */
+public function _customBlock_KillLastSpawn():Void
+{
+var __Self:Actor = actor;
+        if((hasValue(_LastSpawn) != false))
+{
+            trace("" + "KILLING LAST SPAWN");
+            _LastSpawn.say("Default Kill Behaviour PM", "_customEvent_" + "Killed");
+            if(!isPrimitive(_LastSpawn)) {_LastSpawn = getDefaultValue(_LastSpawn);}
 }
 
 }

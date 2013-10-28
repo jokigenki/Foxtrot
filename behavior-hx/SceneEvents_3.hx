@@ -61,6 +61,7 @@ class SceneEvents_3 extends SceneScript
 {
                     setGameAttribute("Current Music", "None");
                     setGameAttribute("Game Was Loaded", true);
+                    setGameAttribute("Speed Run In Progress", false);
                     if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
 {
                         runLater(1000 * 0.5, function(timeTask:TimedTask):Void {

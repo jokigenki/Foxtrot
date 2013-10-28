@@ -67,37 +67,7 @@ nameMap.set("Actor", "actor");
 	
 	override public function init()
 	{
-		            if((_Direction < 0))
-{
-            actor.setAnimation("" + "Left");
-}
-
-        else
-{
-            actor.setAnimation("" + "Right");
-}
-
-        if((_Direction == 0))
-{
-            return;
-}
-
-        _FramesPerPixel = asNumber((1 / _Direction));
-propertyChanged("_FramesPerPixel", _FramesPerPixel);
-        _FrameCount = asNumber(0);
-propertyChanged("_FrameCount", _FrameCount);
-        if(((_Direction < 1) && (_Direction > 0)))
-{
-            _Direction = asNumber(1);
-propertyChanged("_Direction", _Direction);
-}
-
-        else if(((_Direction < 0) && (_Direction > -1)))
-{
-            _Direction = asNumber(-1);
-propertyChanged("_Direction", _Direction);
-}
-
+		    
     addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         if(((_FramesPerPixel <= 1) || (_FrameCount >= _FramesPerPixel)))
@@ -120,6 +90,41 @@ propertyChanged("_FrameCount", _FrameCount);
 {
             _FrameCount += 1;
 propertyChanged("_FrameCount", _FrameCount);
+}
+
+}
+});
+    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if((_Direction < 0))
+{
+            actor.setAnimation("" + "Left");
+}
+
+        else
+{
+            actor.setAnimation("" + "Right");
+}
+
+        if((_Direction == 0))
+{
+            _FramesPerPixel = asNumber(0);
+propertyChanged("_FramesPerPixel", _FramesPerPixel);
+            return;
+}
+
+        _FramesPerPixel = asNumber((1 / _Direction));
+propertyChanged("_FramesPerPixel", _FramesPerPixel);
+        if(((_Direction < 1) && (_Direction > 0)))
+{
+            _Direction = asNumber(1);
+propertyChanged("_Direction", _Direction);
+}
+
+        else if(((_Direction < 0) && (_Direction > -1)))
+{
+            _Direction = asNumber(-1);
+propertyChanged("_Direction", _Direction);
 }
 
 }

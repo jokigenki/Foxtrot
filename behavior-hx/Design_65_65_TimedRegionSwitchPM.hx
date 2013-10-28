@@ -82,6 +82,7 @@ propertyChanged("_IsActive", _IsActive);
 propertyChanged("_IsPressed", _IsPressed);
         _IsRunning = false;
 propertyChanged("_IsRunning", _IsRunning);
+        dispatchPreEvent();
         scripts.Design_165_165_MoveOnActivatedPM._customBlock_ActivateList(_SwitchTargetIDs,_IsActive);
         _TimeElapsed = asNumber(0);
 propertyChanged("_TimeElapsed", _TimeElapsed);
@@ -165,6 +166,12 @@ propertyChanged("_Beatsperframe", _Beatsperframe);
 	var actorname = scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(actor);
 	actorname = actorname.split(" ").join("");
 	shoutToScene("_customEvent_" + actorname + "Switched" + (_IsActive ? "On" : "Off"));
+}
+            public function dispatchPreEvent () 
+{
+	var actorname = scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(actor);
+	actorname = actorname.split(" ").join("");
+	shoutToScene("_customEvent_" + actorname + "PreSwitched" + (_IsActive ? "On" : "Off"));
 }
 
  

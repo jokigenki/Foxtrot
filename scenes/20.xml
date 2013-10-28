@@ -20,7 +20,7 @@
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
-        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="96" y="272" z="2"/>
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="128" y="272" z="2"/>
         <actor a="0.0" aid="7" c="true" group="2" id="140" name="Door 7" sx="1.0" sy="1.0" x="96" y="272" z="4">
             <snippets>
                 <s enabled="true" id="304">
@@ -370,7 +370,7 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="23" c="false" group="2" id="522" name="Lift Sign 23" sx="1.0" sy="1.0" x="208" y="304" z="4"/>
-        <actor a="0.0" aid="22" c="true" group="3" id="178" name="Egg 22" sx="1.0" sy="1.0" x="103" y="184" z="4">
+        <actor a="0.0" aid="22" c="true" group="3" id="178" name="Egg 22" sx="1.0" sy="1.0" x="135" y="88" z="4">
             <snippets>
                 <s enabled="true" id="64">
                     <prop id="1" list="0" val="EggCollected"/>
@@ -412,6 +412,31 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="26" c="false" group="8" id="546" name="Laspin 26" sx="1.0" sy="1.0" x="432" y="304" z="4"/>
+        <actor a="0.0" aid="29" c="true" group="3" id="310" name="Speed Run Icon 29" sx="1.0" sy="1.0" x="96" y="128" z="5">
+            <snippets>
+                <s enabled="true" id="205">
+                    <prop id="1" list="0" val="300"/>
+                    <prop id="2" list="1" val="">
+                        <text order="0" value="Egg2_01"/>
+                        <text order="1" value="Egg2_02"/>
+                        <text order="2" value="Egg2_03"/>
+                        <text order="3" value="Egg2_04"/>
+                        <text order="4" value="Egg2_05"/>
+                        <text order="5" value="Egg2_06"/>
+                        <text order="6" value="Egg2_07"/>
+                        <text order="7" value="Egg2_08"/>
+                        <text order="8" value="Egg2_09"/>
+                        <text order="9" value="Egg2_10"/>
+                        <text order="10" value="Egg2_Boss"/>
+                    </prop>
+                    <prop id="3" list="0" val="Egg2_Boss"/>
+                    <prop id="4" list="0" val="Factory2_01|_Outside|A|C"/>
+                    <prop id="5" list="0" val="Factory2_01"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="204"/>
+            </snippets>
+        </actor>
         <actor a="0.0" aid="28" c="true" group="2" id="265" name="Switch Single Use 28" sx="1.0" sy="1.0" x="492" y="343" z="4">
             <snippets>
                 <s enabled="true" id="174">
@@ -429,6 +454,7 @@
                 <s enabled="true" id="173"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="30" c="false" group="2" id="196" name="Teleporter 30" sx="1.0" sy="1.0" x="167" y="320" z="1"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -470,10 +496,10 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="4,16.0,0.0,16.0,32.0,0.0,32.0,0.0,0.0" x="80.0" y="176.0"/>
         <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="128.0" y="112.0"/>
-        <p pts="4,48.0,32.0,0.0,32.0,0.0,0.0,48.0,0.0" x="80.0" y="224.0"/>
         <p pts="18,464.0,256.0,464.0,16.0,16.0,16.0,16.0,128.0,0.0,128.0,0.0,0.0,480.0,0.0,480.0,320.0,0.0,320.0,0.0,240.0,16.0,240.0,16.0,272.0,80.0,272.0,80.0,304.0,464.0,304.0,464.0,272.0,384.0,272.0,384.0,256.0" x="80.0" y="32.0"/>
+        <p pts="4,16.0,0.0,16.0,32.0,0.0,32.0,0.0,0.0" x="80.0" y="176.0"/>
+        <p pts="6,32.0,0.0,32.0,16.0,48.0,16.0,48.0,32.0,0.0,32.0,0.0,0.0" x="80.0" y="224.0"/>
         <p pts="12,64.0,64.0,48.0,64.0,48.0,48.0,32.0,48.0,32.0,32.0,16.0,32.0,16.0,16.0,0.0,16.0,0.0,0.0,80.0,0.0,80.0,144.0,64.0,144.0" x="432.0" y="112.0"/>
     </terrain>
 </scene>

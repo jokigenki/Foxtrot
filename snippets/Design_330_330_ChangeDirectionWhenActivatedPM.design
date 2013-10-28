@@ -3,7 +3,15 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-attribute comment="false" x="26" y="40">
+                <print comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <code-short comment="false" id="0" x="0" y="0">
+                            <int id="0" val="actor.name"/>
+                        </code-short>
+                        <int id="1" val=" activated"/>
+                    </str-combine>
+                </print>
+                <set-attribute comment="false" x="26" y="70">
                     <ACTOR eid="this" id="0"/>
                     <get-val-330-1 comment="false" id="1" x="0" y="0"/>
                     <int id="2" val="_Direction"/>
@@ -17,7 +25,15 @@
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-attribute comment="false" x="26" y="40">
+                <print comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <code-short comment="false" id="0" x="0" y="0">
+                            <int id="0" val="actor.name"/>
+                        </code-short>
+                        <int id="1" val=" deactivated"/>
+                    </str-combine>
+                </print>
+                <set-attribute comment="false" x="26" y="70">
                     <ACTOR eid="this" id="0"/>
                     <get-val-330-1 comment="false" id="1" x="0" y="0"/>
                     <int id="2" val="_Direction"/>

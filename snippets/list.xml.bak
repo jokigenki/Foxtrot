@@ -700,6 +700,7 @@
             <receiver blockID="254" id="3"/>
             <receiver blockID="255" id="4"/>
             <receiver blockID="256" id="5"/>
+            <receiver blockID="659" id="6"/>
         </blocks>
         <events>
             <event displayName="Actor Killed" enabled="true" id="3" name="event-type-create-kill" order="4" repeats="true"/>
@@ -712,6 +713,7 @@
             <event displayName="Deactivated" enabled="true" id="10" name="event-custom" order="10" repeats="true"/>
             <event displayName="Start Spawn" enabled="true" id="11" name="event-custom-block" order="11" repeats="true"/>
             <event displayName="Continue Spawn" enabled="true" id="12" name="event-custom-block" order="12" repeats="true"/>
+            <event displayName="Kill last spawn" enabled="true" id="13" name="event-custom-block" order="13" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_58_58_AnchorPM" classname="scripts.Design_58_58_AnchorPM" desc="A simple behaviour to tell an actor to anchor to the screen when it is created." description="A simple behaviour to tell an actor to anchor to the screen when it is created." design="true" drawOrder="0" id="58" language="" name="Anchor PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -853,7 +855,7 @@
     <snippet attachedevent="false" class="scripts.Design_65_65_TimedRegionSwitchPM" classname="scripts.Design_65_65_TimedRegionSwitchPM" desc="Actives the target immediately, then once the player has left the switch will time out after n seconds." description="Actives the target immediately, then once the player has left the switch will time out after n seconds." design="true" drawOrder="0" id="65" language="" name="Timed Region Switch PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <animation default="" defaultValue="" desc="" dropdown="" fullname="On Animation" hidden="false" id="2" name="_OnAnimation" order="2"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Switch After Seconds" hidden="false" id="4" name="_SwitchAfterSeconds" order="6"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="true" id="5" name="_IsActive" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="false" id="5" name="_IsActive" order="1"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Off Animation" hidden="false" id="6" name="_OffAnimation" order="3"/>
         <region default="" defaultValue="" desc="" dropdown="" fullname="Switch Region" hidden="true" id="10" name="_SwitchRegion" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Pressed?" hidden="true" id="12" name="_IsPressed" order="8"/>
@@ -862,7 +864,7 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Off to On Animation" hidden="false" id="17" name="_OfftoOnAnimation" order="5"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Start State" hidden="true" id="16" name="_StartState" order="11"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Running?" hidden="false" id="19" name="_IsRunning" order="12"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Running?" hidden="true" id="19" name="_IsRunning" order="12"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="On to Off Animation" hidden="false" id="18" name="_OntoOffAnimation" order="4"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Beats per frame" hidden="true" id="20" name="_Beatsperframe" order="13"/>
         <blocks>
@@ -881,7 +883,8 @@
             <event displayName="Enemy Exits Region" enabled="true" id="9" name="event-group-region" order="7" repeats="true"/>
             <event displayName="Update anim" enabled="true" id="10" name="event-custom-block" order="10" repeats="true"/>
             <event displayName="dispatch event" enabled="true" id="12" name="event-custom-code" order="12" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="13" name="step" order="13" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="13" name="step" order="14" repeats="true"/>
+            <event displayName="dispatch pre event" enabled="true" id="14" name="event-custom-code" order="13" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_66_66_ToggleRegionSwitchPM" classname="scripts.Design_66_66_ToggleRegionSwitchPM" desc="A switch that switches between on and off states each time the player jumps on it. Effect is immediate." description="A switch that switches between on and off states each time the player jumps on it. Effect is immediate." design="true" drawOrder="0" id="66" language="" name="Toggle Region Switch PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -1387,8 +1390,9 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
-            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="Actor - Any" enabled="true" id="2" name="collide" order="2" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="3" name="step" order="3" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_131_131_AntiSnag" classname="scripts.Design_131_131_AntiSnag" desc="" description="" design="true" drawOrder="0" id="131" language="" name="AntiSnag" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -1616,18 +1620,20 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_174_174" classname="scripts.Design_174_174" desc="A switch that switches once from start state to on or off when the player jumps on it. Effect is immediate." description="A switch that switches once from start state to on or off when the player jumps on it. Effect is immediate." design="true" drawOrder="0" id="174" language="" name="Single Use Region Switch PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="false" id="1" name="_IsActive" order="1"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Active Animation" hidden="false" id="2" name="_ActiveAnimation" order="2"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Inactive Animation" hidden="false" id="3" name="_InactiveAnimation" order="3"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Pressed Animation" hidden="false" id="4" name="_PressedAnimation" order="4"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Pressed Inactive Animation" hidden="false" id="10" name="_PressedInactiveAnimation" order="5"/>
-        <region default="" defaultValue="" desc="" dropdown="" fullname="Switch Region" hidden="true" id="11" name="_SwitchRegion" order="6"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Active Animation" hidden="false" id="2" name="_ActiveAnimation" order="3"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Inactive Animation" hidden="false" id="3" name="_InactiveAnimation" order="4"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Pressed Animation" hidden="false" id="4" name="_PressedAnimation" order="5"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Pressed Inactive Animation" hidden="false" id="10" name="_PressedInactiveAnimation" order="6"/>
+        <region default="" defaultValue="" desc="" dropdown="" fullname="Switch Region" hidden="true" id="11" name="_SwitchRegion" order="7"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Switch Target IDs" hidden="false" id="13" name="_SwitchTargetIDs" order="8"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Been Switched?" hidden="false" id="14" name="_HasBeenSwitched" order="2"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="244" id="1"/>
             <receiver blockID="247" id="2"/>
             <receiver blockID="406" id="3"/>
             <receiver blockID="456" id="4"/>
+            <receiver blockID="652" id="5"/>
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="3" name="init" order="1" repeats="true"/>
@@ -1636,6 +1642,7 @@
             <event displayName="Player Enters Region" enabled="true" id="6" name="event-group-region" order="3" repeats="true"/>
             <event displayName="Update animation" enabled="true" id="7" name="event-custom-block" order="6" repeats="true"/>
             <event displayName="dispatch event" enabled="true" id="8" name="event-custom-code" order="7" repeats="true"/>
+            <event displayName="Reset Switch" enabled="true" id="10" name="event-custom-block" order="9" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_265" classname="scripts.ActorEvents_265" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="173" language="" name="ActorEvents_265" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -2960,6 +2967,29 @@
             <event displayName="On Reload" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_457" classname="scripts.ActorEvents_457" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="343" language="" name="ActorEvents_457" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_36" classname="scripts.SceneEvents_36" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="342" language="" name="SceneEvents_36" oid="-1" package="scripts." sceneid="36" scenespecific="true" shared="false" type="scene">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_35" classname="scripts.SceneEvents_35" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="341" language="" name="SceneEvents_35" oid="-1" package="scripts." sceneid="35" scenespecific="true" shared="false" type="scene">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Crate" hidden="false" id="2" name="_Crate" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Bomb explodes" enabled="true" id="1" name="event-type-create-kill" order="2" repeats="true"/>
+            <event displayName="Conv Right On" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Conv Left On" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Crate Pre Switch" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Crate Switch" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
+            <event displayName="Conv Right 2 On" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
+            <event displayName="Conv Left 2 On" enabled="true" id="8" name="event-custom" order="8" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_648" classname="scripts.ActorEvents_648" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="340" language="" name="ActorEvents_648" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
@@ -3007,6 +3037,30 @@
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
             <event displayName="Actor - Any" enabled="true" id="2" name="collide" order="1" repeats="true"/>
         </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_657" classname="scripts.ActorEvents_657" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="347" language="" name="ActorEvents_657" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_655" classname="scripts.ActorEvents_655" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="346" language="" name="ActorEvents_655" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_345_345_ExplodeAfterTimePM" classname="scripts.Design_345_345_ExplodeAfterTimePM" desc="" description="" design="true" drawOrder="0" id="345" language="" name="Explode After Time PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Time Elapsed" hidden="true" id="1" name="_TimeElapsed" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Beats per frame" hidden="true" id="2" name="_Beatsperframe" order="2"/>
+        <number default="3" defaultValue="3" desc="" dropdown="" fullname="Explode After Seconds" hidden="false" id="5" name="_ExplodeAfterSeconds" order="3"/>
+        <text default="Explode With Set Pieces PM" defaultValue="Explode With Set Pieces PM" desc="" dropdown="" fullname="Explode Behaviour" hidden="false" id="6" name="_ExplodeBehaviour" order="4"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_653" classname="scripts.ActorEvents_653" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="344" language="" name="ActorEvents_653" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_624" classname="scripts.ActorEvents_624" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="326" language="" name="ActorEvents_624" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
@@ -3078,7 +3132,7 @@
         <blocks/>
         <events>
             <event displayName="Activated" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+            <event displayName="Deactivated" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_640" classname="scripts.ActorEvents_640" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="331" language="" name="ActorEvents_640" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">

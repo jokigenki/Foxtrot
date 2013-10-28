@@ -52,11 +52,13 @@ public var _ActiveValue:Float;
 public var _InactiveValue:Float;
     public function _customEvent_Activated():Void
 {
+        trace("" + (("" + actor.name) + ("" + " activated")));
         actor.setValue(_DirectionBehaviour, "_Direction", _ActiveValue);
 }
 
     public function _customEvent_Deactivated():Void
 {
+        trace("" + (("" + actor.name) + ("" + " deactivated")));
         actor.setValue(_DirectionBehaviour, "_Direction", _InactiveValue);
 }
 

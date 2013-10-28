@@ -289,7 +289,7 @@ public static function _customBlock_GetActorInScene(__Name:String):Actor
         var allActors = Engine.engine.allActors;
 for (actorOnScreen in allActors)
 {
-	if (actorOnScreen != null && !actorOnScreen.dead && !actorOnScreen.recycled && actorOnScreen.isOnScreenCache)
+	if (actorOnScreen != null && !actorOnScreen.dead && !actorOnScreen.recycled)
 	{
 		if (actorOnScreen.name + " " + actorOnScreen.ID == __Name)
 		{

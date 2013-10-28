@@ -58,18 +58,26 @@ public var _PressedInactiveAnimation:String;
 public var _SwitchRegion:Region;
 
 public var _SwitchTargetIDs:Array<Dynamic>;
+
+public var _HasBeenSwitched:Bool;
     
 
 /* Params are: */
 public function _customBlock_EnterSwitch():Void
 {
 var __Self:Actor = actor;
+        if(_HasBeenSwitched)
+{
+            return;
+}
+
+        _HasBeenSwitched = true;
+propertyChanged("_HasBeenSwitched", _HasBeenSwitched);
         _IsActive = !(_IsActive);
 propertyChanged("_IsActive", _IsActive);
         scripts.Design_165_165_MoveOnActivatedPM._customBlock_ActivateList(_SwitchTargetIDs,_IsActive);
         actor.say("Single Use Region Switch PM", "_customBlock_UpdateSwitchAnimation");
         dispatchEvent();
-        actor.disableBehavior("Single Use Region Switch PM");
 }
     
 
@@ -94,6 +102,24 @@ var __Self:Actor = actor;
 	actorname = actorname.split(" ").join("");
 	shoutToScene("_customEvent_" + actorname + "Switched" + (_IsActive ? "On" : "Off"));
 }
+    
+
+/* Params are:__Self */
+public function _customBlock_ResetSwitch():Void
+{
+var __Self:Actor = actor;
+        if(!(_HasBeenSwitched))
+{
+            return;
+}
+
+        _HasBeenSwitched = false;
+propertyChanged("_HasBeenSwitched", _HasBeenSwitched);
+        _IsActive = !(_IsActive);
+propertyChanged("_IsActive", _IsActive);
+        scripts.Design_165_165_MoveOnActivatedPM._customBlock_ActivateList(_SwitchTargetIDs,_IsActive);
+        actor.say("Single Use Region Switch PM", "_customBlock_UpdateSwitchAnimation");
+}
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -108,6 +134,8 @@ nameMap.set("Pressed Inactive Animation", "_PressedInactiveAnimation");
 nameMap.set("Switch Region", "_SwitchRegion");
 nameMap.set("Switch Target IDs", "_SwitchTargetIDs");
 _SwitchTargetIDs = [];
+nameMap.set("Has Been Switched?", "_HasBeenSwitched");
+_HasBeenSwitched = false;
 nameMap.set("Actor", "actor");
 
 	}

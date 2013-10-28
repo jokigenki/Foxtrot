@@ -104,6 +104,7 @@ if(wrapper.enabled && sameAsAny(_PopupActivationActorType,a.getType(),a.getGroup
     addActorExitsRegionListener(_ActivationRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(_PopupActivationActorType,a.getType(),a.getGroup())){
         sayToScene("Popup Manager PM", "_customBlock_RemovePopup");
+        actor.setValue("Usable Item PM", "_CurrentNumberOfUses", 0);
 }
 });
 

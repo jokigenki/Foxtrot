@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <custom-block blocktag="custom-651" blocktype="ACTION" code="~.say(&quot;Single Use Region Switch PM&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="651" message="" name="" oid="-1" return="VOID" shared="false" snippetID="174">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
     <custom-block blocktag="custom-595" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.(~,~);" desc="" global="true" gui="[MISSING]" id="595" message="" name="" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Door ACtor" order="0" type="ACTOR"/>
         <blank name="Door Actor" order="1" type="ACTOR"/>
@@ -262,9 +265,41 @@
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="191" name="BG Larder" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="43" name="bg Oak Tree" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="384" id="212" name="BG Outside" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
+    <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="30" id="654" name="Bomb Crate" shared="false" width="30">
+        <anim across="10" down="1" durations="100,100,100,100,100,100,100,100,100,100" height="30" id="0" loop="true" name="Anim" numframes="10" originx="15" originy="15" sync="false" width="300">
+            <poly data="8,0,2,0,28,2,30,28,30,30,28,30,2,28,0,2,0" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="2" continuous="true" desc="" eventsnippetid="344" fixedrot="true" fric="0.09" gid="3" id="653" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Bomb Crate" oid="-1" pausable="true" rest="0.17" shared="false" sprite="654" static="false">
+        <snippets>
+            <s enabled="true" id="171">
+                <prop id="4" list="0" val="262"/>
+                <prop id="10" list="0" val="18"/>
+                <prop id="14" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="185">
+                <prop id="1" list="0" val="Explode With Set Pieces PM"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="true"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="345">
+                <prop id="1" list="0" val="0.0"/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="5" list="0" val="45"/>
+                <prop id="6" list="0" val="Explode With Set Pieces PM"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="19" id="222" name="Boss Key" shared="false" width="25">
         <anim across="5" down="1" durations="100,100,100,100,100" height="19" id="0" loop="true" name="Animation 0" numframes="5" originx="12" originy="9" sync="true" width="125">
-            <poly data="4,0,0,25,0,25,19,0,19" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+            <poly data="4,0,0,25,0,25,19,0,19" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="158" fixedrot="false" fric="0.2" gid="3" id="221" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Boss Key" oid="-1" pausable="true" rest="0.0" shared="false" sprite="222" static="false">
@@ -685,6 +720,18 @@
             </s>
         </snippets>
     </actor>
+    <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="32" id="656" name="Conveyor Left Sign" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="0" continuous="true" desc="" eventsnippetid="346" fixedrot="false" fric="0.2" gid="2" id="655" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Conveyor Left Sign" oid="-1" pausable="true" rest="0.0" shared="false" sprite="656" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="32" id="658" name="Conveyor Right Sign" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="0" continuous="true" desc="" eventsnippetid="347" fixedrot="false" fric="0.2" gid="2" id="657" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Conveyor Right Sign" oid="-1" pausable="true" rest="0.0" shared="false" sprite="658" static="true">
+        <snippets/>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="130" fixedrot="false" fric="0.2" gid="3" id="194" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Conveyor2x" oid="-1" pausable="true" rest="0.0" shared="false" sprite="195" static="true">
         <snippets>
             <s enabled="true" id="128">
@@ -870,6 +917,33 @@
         <anim across="1" down="1" durations="100" height="30" id="8" loop="true" name="p9" numframes="1" originx="0" originy="0" sync="false" width="30">
             <poly data="4,0,0,30,0,30,30,0,30" density="0.1" fric="0.2" gid="-1000" id="-1" name="default" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="16" id="12" loop="true" name="p13" numframes="6" originx="4" originy="8" sync="false" width="48">
+            <poly data="4,0,0,8,0,8,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 9" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="16" id="13" loop="true" name="p14" numframes="6" originx="4" originy="8" sync="false" width="48">
+            <poly data="4,0,0,8,0,8,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 9" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="32" id="14" loop="true" name="p15" numframes="6" originx="8" originy="16" sync="false" width="96">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="p15" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="32" id="15" loop="true" name="p10" numframes="6" originx="8" originy="16" sync="false" width="96">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="p15" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="32" id="17" loop="true" name="p12" numframes="6" originx="8" originy="16" sync="false" width="96">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="p15" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="32" id="16" loop="true" name="p11" numframes="6" originx="8" originy="16" sync="false" width="96">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="p15" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="32" id="19" loop="true" name="p17" numframes="6" originx="8" originy="16" sync="false" width="96">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="p15" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="32" id="18" loop="true" name="p16" numframes="6" originx="8" originy="16" sync="false" width="96">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="p15" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="32" id="20" loop="true" name="p18" numframes="6" originx="8" originy="16" sync="false" width="96">
+            <poly data="4,0,0,16,0,16,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="p15" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="170" fixedrot="false" fric="0.2" gid="2" id="262" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Crate Explode" oid="-1" pausable="true" rest="0.0" shared="false" sprite="263" static="false">
         <snippets>
@@ -923,9 +997,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="38" id="193" name="Crate Spawn" shared="false" width="38">
-        <anim across="1" down="1" durations="100" height="38" id="0" loop="true" name="Layout" numframes="1" originx="23" originy="23" sync="false" width="38">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Layout" rest="0.0" sensor="false"/>
-        </anim>
+        <anim across="1" down="1" durations="100" height="38" id="0" loop="true" name="Layout" numframes="1" originx="23" originy="23" sync="false" width="38"/>
     </sprite>
     <custom-block blocktag="custom-48" blocktype="NORMAL" code="((sayToScene(&quot;Inventory PM&quot;, &quot;CreateActorFromType&quot;, ~,~,~)) as Actor)" desc="Creates an Actor from the given type." global="false" gui="Create Actor for %0 at x: %1, y: %2" id="48" message="CreateActorFromType" name="CreateActorFromType" oid="-1" return="ACTOR" shared="false" snippetID="22">
         <blank name="TypeName" order="0" type="TEXT"/>
@@ -3481,6 +3553,9 @@
             </s>
         </snippets>
     </actor>
+    <custom-block blocktag="custom-659" blocktype="ACTION" code="~.say(&quot;Spawn PM&quot;, &quot;KillLastSpawn&quot;);" desc="" global="false" gui="Kill last spawn for %0" id="659" message="KillLastSpawn" name="KillLastSpawn" oid="-1" return="VOID" shared="false" snippetID="52">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="16" id="545" name="Laser Beamer Down" shared="false" width="16">
         <anim across="2" down="1" durations="100,100" height="16" id="0" loop="true" name="Active" numframes="2" originx="8" originy="8" sync="false" width="32">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
@@ -3751,7 +3826,7 @@
                 <prop id="11" list="0" val="false"/>
                 <prop id="13" list="0" val="546"/>
                 <prop id="14" list="1" val="">
-                    <text order="0" value="Walk On Start PM:_WalkDirection=None"/>
+                    <text order="0" value="Walk On Start PM:_WalkDirection=Left"/>
                 </prop>
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="15" list="1" val=""/>
@@ -4103,7 +4178,7 @@
     </actor>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="72" id="414" name="Milk" shared="false" width="32">
         <anim across="1" down="1" durations="100" height="72" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="36" sync="false" width="32">
-            <poly data="4,0,0,32,0,32,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+            <poly data="4,0,0,32,0,32,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <tileset across="6" atlasID="0" desc="" down="3" id="639" name="Milk Pipes" oid="-1" shared="false" th="16" tw="16">
@@ -4937,6 +5012,9 @@
     <custom-block blocktag="custom-450" blocktype="ACTION" code="~.say(&quot;Particle Emitter PM&quot;, &quot;ResetParticleCount&quot;);" desc="" global="false" gui="Reset particle count for %0" id="450" message="ResetParticleCount" name="ResetParticleCount" oid="-1" return="VOID" shared="false" snippetID="259">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
+    <custom-block blocktag="custom-652" blocktype="ACTION" code="~.say(&quot;Single Use Region Switch PM&quot;, &quot;ResetSwitch&quot;);" desc="" global="false" gui="Reset Switch %0" id="652" message="ResetSwitch" name="ResetSwitch" oid="-1" return="VOID" shared="false" snippetID="174">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
     <custom-block blocktag="custom-264" blocktype="ACTION" code="~.say(&quot;Kill On Hit With Velocity PM&quot;, &quot;ResolveHit&quot;, ~,~);" desc="" global="false" gui="Resolve hit with speed %1 against %2" id="264" message="ResolveHit" name="ResolveHit" oid="-1" return="VOID" shared="false" snippetID="172">
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Hit Speed" order="1" type="NUMBER"/>
@@ -5318,7 +5396,7 @@
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Rate" order="1" type="NUMBER"/>
     </custom-block>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="261" fixedrot="true" fric="0.2" gid="5" id="457" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Small Lift" oid="-1" pausable="true" rest="0.0" shared="false" sprite="458" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="343" fixedrot="true" fric="0.2" gid="5" id="457" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Small Lift" oid="-1" pausable="true" rest="0.0" shared="false" sprite="458" static="false">
         <snippets>
             <s enabled="true" id="233">
                 <prop id="1" list="0" val="false"/>
@@ -5327,7 +5405,7 @@
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
-                    <text order="0" value="Reposition Whilst Activated PM"/>
+                    <text order="0" value="Vertical Oscillation PM"/>
                 </prop>
                 <prop id="5" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -5466,6 +5544,7 @@
                     <text order="1" value="Rat"/>
                     <text order="2" value="Fanny Cannon"/>
                     <text order="3" value="Crate"/>
+                    <text order="4" value="Bomb Crate"/>
                 </prop>
                 <prop id="6" list="0" val="Bump Out PM"/>
                 <prop id="7" list="0" val="false"/>
@@ -5486,6 +5565,7 @@
                     <text order="2" value="Fanny Cannon"/>
                     <text order="3" value="Crate"/>
                     <text order="4" value="Egg Crate"/>
+                    <text order="5" value="Bomb Crate"/>
                 </prop>
                 <prop id="6" list="0" val="Bump Out PM"/>
                 <prop id="7" list="0" val="false"/>
@@ -5516,6 +5596,7 @@
                     <text order="2" value="Fanny Cannon"/>
                     <text order="3" value="Crate"/>
                     <text order="4" value="Laser Duck"/>
+                    <text order="5" value="Bomb Crate"/>
                 </prop>
                 <prop id="6" list="0" val="Bump Out PM"/>
                 <prop id="7" list="0" val="false"/>
@@ -5598,6 +5679,7 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="9"/>
                 <prop id="13" list="1" val=""/>
+                <prop id="14" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -5627,10 +5709,10 @@
             <s enabled="true" id="188">
                 <prop id="1" list="0" val=""/>
                 <prop id="2" list="0" val="9"/>
-                <prop id="3" list="0" val="292"/>
+                <prop id="3" list="0" val="352"/>
                 <prop id="4" list="0" val="8"/>
-                <prop id="5" list="0" val="-32"/>
-                <prop id="6" list="0" val="-1"/>
+                <prop id="5" list="0" val="-40"/>
+                <prop id="6" list="0" val="292"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="133">
@@ -5638,7 +5720,7 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="17" list="0" val="false"/>
                 <prop id="16" list="0" val=""/>
-                <prop id="19" list="0" val="true"/>
+                <prop id="19" list="0" val="false"/>
                 <prop id="18" list="0" val="false"/>
                 <prop id="21" list="0" val=""/>
                 <prop id="20" list="0" val="true"/>
@@ -5646,9 +5728,9 @@
                 <prop id="25" list="0" val=""/>
                 <prop id="24" list="0" val="Teleport"/>
                 <prop id="27" list="0" val="0"/>
-                <prop id="26" list="0" val="1"/>
+                <prop id="26" list="0" val="2"/>
                 <prop id="29" list="0" val="4"/>
-                <prop id="28" list="0" val=""/>
+                <prop id="28" list="0" val="RefreshPopup"/>
                 <prop id="30" list="0" val="4"/>
             </s>
             <s enabled="true" id="192">
