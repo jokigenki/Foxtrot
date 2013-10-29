@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <game accelFramerate="0" adsPosition="0" aheight="384" airCert="" airPass="" androidAlias="New Foxtrot" androidCert="/Users/owenbennett/stencylworks/android-sdk//android-sdk-macosx/stencyl.keystore" androidPassword="54u54g35" androidPublicKey="" antialias="false" appName="Foxtrot" appType="0" author="" authorURL="" autoRotate="false" awidth="640" backgroundColor="-15592942" barBackgroundColor="-12303292" barColor="-7829368" barHeight="8" barLocation="0" barOffsetX="0" barOffsetXPhone="0" barOffsetXTablet="0" barOffsetY="0" barOffsetYPhone="0" barOffsetYTablet="0" barScalePhone="1.0" barScaleTablet="2.0" barWidth="120" borderColor="-12303292" borderThickness="2" bundleID="com.bullandgate.foxtrot" bundleVersion="1.0" checksum="none" cpmID="" cws-desc="Description" cws-icon128="" cws-icon16="" cws-name="Name" cws-version="1.0" default="3" defaultFramerate="30" defaultSceneID="3" desc="Eggs and Liberty!" desktopScale="1.0" desktopScaleMode="0" deviceOS="4.3" disableBackButton="false" enablePurchases="false" engine="0" format="2.0" gameid="-1" height="384" internalVersion="1" kit="false" lockURL="" macBundleID="com.yourcompany.gamename" maxScaleAndroid="1.0" maxScaleDesktop="1.0" maxScaleIOS="1.0" maxScaleWeb="1.0" metroColor="-12566464" mochi="" multitouch="true" name="Foxtrot" ngID="" ngKey="" orientation="1" p12="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/FoxtrotCert.p12" p12pwd="54u54g35" physicsMode="0" preloaderstyle="0" products="" prov-adhoc="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/Ad_Hoc_Dist_Foxtrot.mobileprovision" prov-store="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/App_Store_Dist_Foxtrot.mobileprovision" scale="1.0" scaleModeAndroid="1" scaleModeDesktop="4" scaleModeIOS="1" scaleModeWeb="4" showAds="false" simulatorOS="4.3" splashStyle="0" swfHeight="0" swfWidth="0" swfX="0" swfY="0" swfloc="" useGlossyIcon="false" webScale="1.0" whirlKey="" width="640" windowsAppName="" windowsAuthor="" windowsBundleID="com.yourcompany.gamename">
     <exts>
-        <e enabled="false" id="test-native"/>
         <e enabled="true" id="raycastapi"/>
+        <e enabled="false" id="test-native"/>
         <e enabled="false" id="test"/>
-        <e enabled="false" id="test-flash"/>
         <e enabled="false" id="label"/>
+        <e enabled="false" id="test-flash"/>
         <e enabled="false" id="tileapi"/>
     </exts>
     <scales>
@@ -24,7 +24,6 @@
             <r id="200"/>
             <r id="36"/>
             <r id="37"/>
-            <r id="349"/>
             <r id="78"/>
             <r id="161"/>
             <r id="287"/>
@@ -38,11 +37,11 @@
             <r id="69"/>
             <r id="142"/>
             <r id="197"/>
-            <r id="199"/>
             <r id="131"/>
+            <r id="199"/>
             <r id="74"/>
-            <r id="153"/>
             <r id="16"/>
+            <r id="153"/>
             <r id="25"/>
             <r id="26"/>
             <r id="28"/>
@@ -104,29 +103,29 @@
             <r id="58"/>
             <r id="332"/>
             <r id="31"/>
-            <r id="329"/>
             <r id="303"/>
+            <r id="329"/>
         </group>
         <group desc="Behaviours that affect animations" id="6" name="Animation" type="snippet">
             <r id="255"/>
-            <r id="196"/>
             <r id="77"/>
+            <r id="196"/>
             <r id="79"/>
             <r id="63"/>
         </group>
         <group desc="" id="7" name="Triggers" type="snippet">
             <r id="205"/>
             <r id="339"/>
-            <r id="174"/>
             <r id="65"/>
-            <r id="53"/>
+            <r id="174"/>
             <r id="66"/>
+            <r id="53"/>
             <r id="198"/>
-            <r id="330"/>
             <r id="242"/>
+            <r id="330"/>
             <r id="209"/>
-            <r id="345"/>
             <r id="165"/>
+            <r id="345"/>
         </group>
         <group desc="" id="8" name="Kill Behaviours" type="snippet">
             <r id="137"/>
@@ -141,8 +140,8 @@
             <r id="185"/>
             <r id="83"/>
             <r id="147"/>
-            <r id="148"/>
             <r id="29"/>
+            <r id="148"/>
             <r id="183"/>
             <r id="151"/>
         </group>
@@ -168,11 +167,8 @@
             <r id="588"/>
             <r id="640"/>
             <r id="535"/>
-            <r id="664"/>
             <r id="354"/>
-            <r id="660"/>
             <r id="485"/>
-            <r id="662"/>
             <r id="542"/>
             <r id="481"/>
             <r id="271"/>
@@ -212,9 +208,9 @@
         <group desc="" id="15" name="Collectable" type="actor">
             <r id="205"/>
             <r id="221"/>
-            <r id="310"/>
-            <r id="142"/>
             <r id="189"/>
+            <r id="142"/>
+            <r id="310"/>
             <r id="178"/>
         </group>
         <group desc="" id="16" name="Spawners" type="actor">
@@ -253,14 +249,14 @@
             <r id="169"/>
             <r id="39"/>
             <r id="173"/>
-            <r id="600"/>
             <r id="196"/>
+            <r id="600"/>
             <r id="298"/>
         </group>
         <group desc="" id="20" name="Popups" type="actor">
-            <r id="489"/>
-            <r id="292"/>
             <r id="352"/>
+            <r id="292"/>
+            <r id="489"/>
             <r id="491"/>
             <r id="350"/>
             <r id="487"/>
@@ -270,8 +266,8 @@
             <r id="129"/>
             <r id="230"/>
             <r id="176"/>
-            <r id="265"/>
             <r id="646"/>
+            <r id="265"/>
             <r id="180"/>
         </group>
         <group desc="" id="22" name="Interfaces" type="snippet">
@@ -290,25 +286,25 @@
             <r id="387"/>
         </group>
         <group desc="" id="24" name="Blocks" type="actor">
-            <r id="653"/>
             <r id="440"/>
+            <r id="653"/>
             <r id="358"/>
-            <r id="444"/>
-            <r id="262"/>
             <r id="156"/>
+            <r id="262"/>
+            <r id="444"/>
             <r id="581"/>
             <r id="360"/>
         </group>
         <group desc="" id="25" name="Pipes" type="actor">
-            <r id="463"/>
             <r id="533"/>
+            <r id="463"/>
             <r id="529"/>
             <r id="531"/>
         </group>
         <group desc="" id="26" name="Signs" type="actor">
             <r id="516"/>
-            <r id="655"/>
             <r id="518"/>
+            <r id="655"/>
             <r id="512"/>
             <r id="514"/>
             <r id="520"/>
@@ -321,8 +317,8 @@
             <r id="113"/>
             <r id="295"/>
             <r id="92"/>
-            <r id="73"/>
             <r id="192"/>
+            <r id="73"/>
             <r id="120"/>
         </group>
         <group desc="" id="28" name="Object Movement" type="snippet">
@@ -333,12 +329,12 @@
             <r id="193"/>
             <r id="166"/>
             <r id="61"/>
-            <r id="60"/>
             <r id="194"/>
+            <r id="60"/>
         </group>
         <group desc="" id="29" name="Emitters" type="snippet">
-            <r id="259"/>
             <r id="187"/>
+            <r id="259"/>
             <r id="235"/>
             <r id="52"/>
             <r id="241"/>
@@ -425,8 +421,8 @@
         <text cid="1" id="21" name="Save Destination" save="true" value="0"/>
         <number cid="0" id="6" name="Gold Keys" save="true" value="0.0"/>
         <text cid="1" id="20" name="Last Destination" save="true" value="0"/>
-        <number cid="1" id="7" name="Last Scene X Position" save="true" value="0.0"/>
         <list cid="0" id="11" name="Collected Speed Run Items" save="true" val="list"/>
+        <number cid="1" id="7" name="Last Scene X Position" save="true" value="0.0"/>
         <number cid="1" id="17" name="Last Scene Y Position" save="true" value="0.0"/>
         <text cid="2" id="15" name="Speed Run Start" save="true" value="0"/>
         <list cid="1" id="12" name="Unlocked Speed Run Doors" save="true" val="list"/>
@@ -456,8 +452,8 @@
         <poly id="22" name="Gap" pts="0.0,0.0#0.0,1.0#0.5,1.0#0.5,0.0"/>
     </collisions>
     <atlases>
-        <atlas dirty="true" id="0" members="9,39,129,140,142,148,152,156,158,160,162,169,171,173,176,178,180,182,189,192,194,196,203,205,213,215,217,219,221,223,225,230,232,236,257,259,262,265,267,280,283,292,310,350,352,356,387,401,403,411,432,457,481,483,485,487,489,491,512,514,516,518,520,522,524,526,553,581,583,586,588,590,597,600,614,616,618,620,624,640,646,648,664,122,165,167,168,229,511,528,592,604,605,606,639,643,650,43,191,212,415,419,420,455,572,574,575,576,577,578,585,593,594,599,607,636,308,312,342,343,466,626,627," name="Shared" pvr="false" resize="0" start="true" target="0"/>
-        <atlas dirty="true" id="1" members="358,360,413,421,423,427,436,440,444,461,463,529,531,533,535,540,542,544,546,560,562,568,570,579,622,653,655,657,660,662,638," name="Factory" pvr="false" resize="0" start="false" target="0"/>
+        <atlas dirty="true" id="0" members="9,39,129,140,142,148,152,156,158,160,162,169,171,173,176,178,180,182,189,192,194,196,203,205,213,215,217,219,221,223,225,230,232,236,257,259,262,265,267,280,283,292,310,350,352,356,387,401,403,411,432,457,481,483,485,487,489,491,512,514,516,518,520,522,524,526,553,581,583,586,588,590,597,600,614,616,618,620,624,640,646,648,122,165,167,168,229,511,528,592,604,605,606,639,643,650,43,191,212,415,419,420,455,572,574,575,576,577,578,585,593,594,599,607,636,660,308,312,342,343,466,626,627," name="Shared" pvr="false" resize="0" start="true" target="0"/>
+        <atlas dirty="true" id="1" members="358,360,413,421,423,427,436,440,444,461,463,529,531,533,535,540,542,544,546,560,562,568,570,579,622,653,655,657,638," name="Factory" pvr="false" resize="0" start="false" target="0"/>
         <atlas dirty="true" id="2" members="199,201,269,271,298,354," name="Farm" pvr="false" resize="0" start="false" target="0"/>
         <atlas dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" start="true" target="0"/>
     </atlases>
