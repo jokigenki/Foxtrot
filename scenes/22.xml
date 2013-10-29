@@ -11,15 +11,15 @@
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
-        <ref id="660"/>
+        <ref id="669"/>
     </backgrounds>
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="192" id="0" name="Region 0" pts="4,-14.0,-96.0,14.0,-96.0,14.0,96.0,-14.0,96.0" r="64" type="box" w="28" x="98" y="95"/>
-        <region b="64" g="64" h="17" id="1" name="Region 1" pts="4,0.0,0.0,0.0,17.0,21.0,17.0,21.0,0.0" r="64" type="box" w="21" x="261" y="260"/>
-        <region b="64" g="64" h="16" id="2" name="Region 2" pts="4,-73.0,-8.0,73.0,-8.0,73.0,8.0,-73.0,8.0" r="64" type="box" w="146" x="159" y="176"/>
-        <region b="64" g="64" h="16" id="3" name="Region 3" pts="4,-73.0,-8.0,73.0,-8.0,73.0,8.0,-73.0,8.0" r="64" type="box" w="146" x="335" y="176"/>
+        <region b="64" g="64" h="192" id="0" name="Region 0" pts="4,-14.0,96.0,14.0,96.0,14.0,-96.0,-14.0,-96.0" r="64" type="box" w="28" x="98" y="95"/>
+        <region b="64" g="64" h="17" id="1" name="Region 1" pts="4,21.0,0.0,21.0,17.0,0.0,17.0,0.0,0.0" r="64" type="box" w="21" x="261" y="260"/>
+        <region b="64" g="64" h="16" id="2" name="Region 2" pts="4,-73.0,8.0,73.0,8.0,73.0,-8.0,-73.0,-8.0" r="64" type="box" w="146" x="159" y="176"/>
+        <region b="64" g="64" h="16" id="3" name="Region 3" pts="4,-73.0,8.0,73.0,8.0,73.0,-8.0,-73.0,-8.0" r="64" type="box" w="146" x="335" y="176"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -52,6 +52,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -70,7 +71,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="129" c="false" group="2" id="423" name="Expander Pipes 129" sx="1.0" sy="1.0" x="256" y="96" z="1"/>
@@ -99,6 +99,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -117,7 +118,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="131" c="false" group="2" id="423" name="Expander Pipes 131" sx="1.0" sy="1.0" x="128" y="96" z="1"/>
@@ -376,6 +376,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="224"/>
@@ -389,7 +390,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -448,6 +448,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="320"/>
@@ -461,7 +462,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -489,6 +489,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="384"/>
@@ -502,7 +503,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -528,6 +528,7 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="480"/>
@@ -541,7 +542,6 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -936,18 +936,18 @@
                     <prop id="23" list="0" val="0"/>
                     <prop id="22" list="0" val="0"/>
                 </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Laser Beamer PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="61">
                     <prop id="1" list="0" val="3"/>
                     <prop id="2" list="0" val="0"/>
                     <prop id="3" list="0" val="15"/>
                     <prop id="4" list="0" val="true"/>
                     <prop id="5" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Laser Beamer PM"/>
-                    </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -1044,18 +1044,18 @@
                     <prop id="23" list="0" val="0"/>
                     <prop id="22" list="0" val="0"/>
                 </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Laser Beamer PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="61">
                     <prop id="1" list="0" val="2"/>
                     <prop id="2" list="0" val="0"/>
                     <prop id="3" list="0" val="15"/>
                     <prop id="4" list="0" val="true"/>
                     <prop id="5" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Laser Beamer PM"/>
-                    </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -1169,7 +1169,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="320"/>
@@ -1183,6 +1182,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1239,7 +1239,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="192"/>
@@ -1253,6 +1252,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1277,7 +1277,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="128"/>
@@ -1291,6 +1290,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1314,7 +1314,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="480"/>
@@ -1328,6 +1327,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1352,7 +1352,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="256"/>
@@ -1366,6 +1365,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1390,7 +1390,6 @@
                     <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="384"/>
@@ -1404,6 +1403,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1427,7 +1427,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="320"/>
@@ -1441,6 +1440,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1464,7 +1464,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="352"/>
@@ -1478,6 +1477,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1501,7 +1501,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="384"/>
@@ -1515,6 +1514,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1538,7 +1538,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="416"/>
@@ -1552,6 +1551,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1575,7 +1575,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="448"/>
@@ -1589,6 +1588,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1612,7 +1612,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="480"/>
@@ -1626,6 +1625,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1647,6 +1647,7 @@
                     <prop id="3" list="0" val="false"/>
                     <prop id="4" list="0" val="300"/>
                     <prop id="5" list="0" val="200"/>
+                    <prop id="6" list="0" val=""/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="77">
@@ -1671,7 +1672,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="224"/>
@@ -1685,6 +1685,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1708,7 +1709,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="256"/>
@@ -1722,6 +1722,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1745,7 +1746,6 @@
                     <prop id="7" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="288"/>
@@ -1759,6 +1759,7 @@
                     <prop id="10" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -1781,10 +1782,10 @@
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -1797,23 +1798,23 @@
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="30.0"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="22"/>
-        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="466"/>
             <prop id="2" list="0" val="-1"/>
+        </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="22"/>
         </s>
     </snippets>
     <terrain>
         <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="256.0" y="32.0"/>
         <p pts="4,64.0,0.0,64.0,16.0,0.0,16.0,0.0,0.0" x="416.0" y="32.0"/>
-        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="320.0" y="192.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="352.0" y="32.0"/>
+        <p pts="26,480.0,320.0,0.0,320.0,0.0,0.0,144.0,0.0,144.0,16.0,16.0,16.0,16.0,272.0,80.0,272.0,80.0,304.0,464.0,304.0,464.0,144.0,432.0,144.0,432.0,176.0,384.0,176.0,384.0,160.0,416.0,160.0,416.0,144.0,64.0,144.0,64.0,160.0,96.0,160.0,96.0,176.0,48.0,176.0,48.0,128.0,560.0,128.0,560.0,144.0,480.0,144.0" x="80.0" y="32.0"/>
         <p pts="8,48.0,80.0,128.0,80.0,128.0,96.0,32.0,96.0,32.0,16.0,0.0,16.0,0.0,0.0,48.0,0.0" x="512.0" y="32.0"/>
         <p pts="24,32.0,16.0,0.0,16.0,0.0,0.0,384.0,0.0,384.0,16.0,352.0,16.0,352.0,48.0,288.0,48.0,288.0,16.0,256.0,16.0,256.0,48.0,224.0,48.0,224.0,16.0,192.0,16.0,192.0,48.0,160.0,48.0,160.0,16.0,128.0,16.0,128.0,48.0,96.0,48.0,96.0,16.0,64.0,16.0,64.0,48.0,32.0,48.0" x="128.0" y="80.0"/>
-        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="352.0" y="32.0"/>
         <p pts="4,0.0,16.0,0.0,0.0,352.0,0.0,352.0,16.0" x="160.0" y="240.0"/>
-        <p pts="26,480.0,320.0,0.0,320.0,0.0,0.0,144.0,0.0,144.0,16.0,16.0,16.0,16.0,272.0,80.0,272.0,80.0,304.0,464.0,304.0,464.0,144.0,432.0,144.0,432.0,176.0,384.0,176.0,384.0,160.0,416.0,160.0,416.0,144.0,64.0,144.0,64.0,160.0,96.0,160.0,96.0,176.0,48.0,176.0,48.0,128.0,560.0,128.0,560.0,144.0,480.0,144.0" x="80.0" y="32.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="320.0" y="192.0"/>
     </terrain>
 </scene>
