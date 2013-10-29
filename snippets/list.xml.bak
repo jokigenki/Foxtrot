@@ -1782,11 +1782,15 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Displaying?" hidden="true" id="3" name="_IsDisplaying" order="3"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Grow Percent" hidden="false" id="4" name="_GrowPercent" order="4"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Size Percent" hidden="false" id="5" name="_StartSizePercent" order="5"/>
+        <actortype default="" defaultValue="" desc="" dropdown="" fullname="Collection Display Type" hidden="false" id="6" name="_CollectionDisplayType" order="6"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <blocks/>
+        <blocks>
+            <receiver blockID="668" id="1"/>
+        </blocks>
         <events>
             <event displayName="Actor Killed" enabled="true" id="1" name="event-actor-create-kill" order="2" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
+            <event displayName="Display collected" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_188_188_DisplaysPopupPM" classname="scripts.Design_188_188_DisplaysPopupPM" desc="" description="" design="true" drawOrder="0" id="188" language="" name="Displays Popup PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -3037,6 +3041,42 @@
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
             <event displayName="Actor - Any" enabled="true" id="2" name="collide" order="1" repeats="true"/>
         </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_664" classname="scripts.ActorEvents_664" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="351" language="" name="ActorEvents_664" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_662" classname="scripts.ActorEvents_662" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="350" language="" name="ActorEvents_662" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_349_349_GooseHeadMakerPM" classname="scripts.Design_349_349_GooseHeadMakerPM" desc="" description="" design="true" drawOrder="0" id="349" language="" name="Goose Head Maker PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Angle" hidden="false" id="1" name="_StartAngle" order="1"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Generate Time" hidden="false" id="2" name="_GenerateTime" order="2"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Number Of Segments" hidden="true" id="3" name="_NumberOfSegments" order="3"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Max Number Of Segments" hidden="false" id="4" name="_MaxNumberOfSegments" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Number Of Segments" hidden="true" id="5" name="_CurrentNumberOfSegments" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="End Angle" hidden="false" id="6" name="_EndAngle" order="6"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle Index" hidden="true" id="7" name="_AngleIndex" order="7"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Offset" hidden="true" id="8" name="_XOffset" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="true" id="9" name="_YOffset" order="9"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Pipe" hidden="true" id="10" name="_Pipe" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Generating?" hidden="true" id="11" name="_IsGenerating" order="11"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Head" hidden="false" id="12" name="_Head" order="12"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Pipes" hidden="true" id="13" name="_Pipes" order="13"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks>
+            <receiver blockID="666" id="1"/>
+            <receiver blockID="667" id="2"/>
+        </blocks>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Update positions" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_660" classname="scripts.ActorEvents_660" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="348" language="" name="ActorEvents_660" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_657" classname="scripts.ActorEvents_657" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="347" language="" name="ActorEvents_657" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>

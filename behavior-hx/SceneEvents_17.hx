@@ -52,12 +52,7 @@ public var _RunComplete:Bool;
 {
         createRecycledActor(getActorType(196), 520, 256, Script.BACK);
         getLastCreatedActor().fadeTo(1, 2, Quad.easeOut);
-        createRecycledActor(getActorType(178), 488, 289, Script.BACK);
-        getLastCreatedActor().fadeTo(1, 2, Quad.easeOut);
-        getLastCreatedActor().setValue("Inventory Collectable PM", "_Collectioneventname", "EggCollected");
-        getLastCreatedActor().setValue("Inventory Collectable PM", "_CollectableId", "Egg1_Boss");
-        getLastCreatedActor().setAnimation("" + "Egg1_Boss");
-        trace("" + getGameAttribute("Speed Run In Progress"));
+        getActor(13).say("Activate On Event PM", "_customEvent_" + "Activate");
         if(getGameAttribute("Speed Run In Progress"))
 {
             _RunComplete = true;

@@ -15,56 +15,30 @@
                     <int id="2" val="2"/>
                     <int id="3" val="9"/>
                 </fadeInOut>
-                <create-actor3 comment="false" x="26" y="94">
-                    <ACTORTYPE eid="178" id="0"/>
-                    <int id="1" val="488"/>
-                    <int id="2" val="289"/>
-                    <int id="3" val="2"/>
-                </create-actor3>
-                <fadeInOut comment="false" x="26" y="121">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="2"/>
-                    <int id="3" val="9"/>
-                </fadeInOut>
-                <set-attribute comment="false" x="26" y="148">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="Inventory Collectable PM"/>
-                    <int id="2" val="_Collectioneventname"/>
-                    <int id="3" val="EggCollected"/>
-                </set-attribute>
-                <set-attribute comment="false" x="26" y="175">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="Inventory Collectable PM"/>
-                    <int id="2" val="_CollectableId"/>
-                    <int id="3" val="Egg1_Boss"/>
-                </set-attribute>
-                <setanim comment="false" x="26" y="202">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="Egg1_Boss"/>
-                </setanim>
-                <print comment="false" x="26" y="229">
-                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
-                </print>
-                <if comment="false" x="26" y="254">
+                <say comment="false" x="26" y="94">
+                    <ACTOR eid="13" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Activate"/>
+                </say>
+                <if comment="false" x="26" y="121">
                     <group eventID="2" id="-1">
-                        <set-val-175-2 comment="false" x="37" y="279">
+                        <set-val-175-2 comment="false" x="37" y="146">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-175-2>
-                        <for-each comment="false" x="37" y="304">
+                        <for-each comment="false" x="37" y="171">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="329">
+                                <if comment="false" x="48" y="196">
                                     <group eventID="1" id="-1">
-                                        <print comment="false" x="59" y="364">
+                                        <print comment="false" x="59" y="231">
                                             <str-combine comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="Missing: "/>
                                                 <for-each-item comment="false" id="1" x="0" y="0"/>
                                             </str-combine>
                                         </print>
-                                        <set-val-175-2 comment="false" x="59" y="394">
+                                        <set-val-175-2 comment="false" x="59" y="261">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-175-2>
-                                        <break comment="false" x="59" y="419"/>
+                                        <break comment="false" x="59" y="286"/>
                                     </group>
                                     <not comment="false" id="0" x="0" y="0">
                                         <contains-item comment="false" id="0" x="0" y="0">
@@ -76,12 +50,12 @@
                             </group>
                             <get-game-val-13 comment="false" id="0" x="0" y="0"/>
                         </for-each>
-                        <if comment="false" x="37" y="463">
+                        <if comment="false" x="37" y="330">
                             <group eventID="1" id="-1">
-                                <print comment="false" x="48" y="488">
+                                <print comment="false" x="48" y="355">
                                     <int id="0" val="SPEED RUN COMPLETE!"/>
                                 </print>
-                                <scene-say comment="false" x="48" y="508">
+                                <scene-say comment="false" x="48" y="375">
                                     <int id="0" val="Speed Run Timer PM"/>
                                     <int id="1" val="CompleteSpeedRun"/>
                                 </scene-say>

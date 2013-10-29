@@ -55,6 +55,33 @@ public var _GrowPercent:Float;
 
 public var _StartSizePercent:Float;
 
+public var _CollectionDisplayType:ActorType;
+    
+
+/* Params are:__Self */
+public function _customBlock_DisplayOnCollect():Void
+{
+var __Self:Actor = actor;
+        if(!(_IsDisplaying))
+{
+            createRecycledActor(_CollectionDisplayType, ((getScreenWidth() / 2) + getScreenX()), ((getScreenHeight() / 2) + getScreenY()), Script.FRONT);
+            getLastCreatedActor().setValue("Display On Collected PM", "_IsDisplaying", true);
+            getLastCreatedActor().setAnimation("" + ("" + (("" + ("" + actor.getAnimation())) + ("" + " Collected"))));
+}
+
+        else
+{
+            actor.growTo(_GrowPercent/100, _GrowPercent/100, _GrowTime, Quad.easeInOut);
+            runLater(1000 * _GrowTime, function(timeTask:TimedTask):Void {
+                        actor.fadeTo(0, _FadeTime, Quad.easeOut);
+                        runLater(1000 * _FadeTime, function(timeTask:TimedTask):Void {
+                                    recycleActor(actor);
+}, actor);
+}, actor);
+}
+
+}
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
@@ -69,22 +96,23 @@ nameMap.set("Grow Percent", "_GrowPercent");
 _GrowPercent = 0.0;
 nameMap.set("Start Size Percent", "_StartSizePercent");
 _StartSizePercent = 0.0;
+nameMap.set("Collection Display Type", "_CollectionDisplayType");
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+		            if(!((hasValue(_CollectionDisplayType) != false)))
+{
+            _CollectionDisplayType = actor.getType();
+            propertyChanged("_CollectionDisplayType", _CollectionDisplayType);
+}
+
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
                     if(_IsDisplaying)
 {
-                        actor.growTo(_GrowPercent/100, _GrowPercent/100, _GrowTime, Quad.easeInOut);
-                        runLater(1000 * _GrowTime, function(timeTask:TimedTask):Void {
-                                    actor.fadeTo(0, _FadeTime, Quad.easeOut);
-                                    runLater(1000 * _FadeTime, function(timeTask:TimedTask):Void {
-                                                recycleActor(actor);
-}, actor);
-}, actor);
+                        actor.say("Display On Collected PM", "_customBlock_DisplayOnCollect");
 }
 
 }, actor);
@@ -92,11 +120,7 @@ nameMap.set("Actor", "actor");
 if(wrapper.enabled){
         if(!(_IsDisplaying))
 {
-            createRecycledActor(actor.getType(), ((getScreenWidth() / 2) + getScreenX()), ((getScreenHeight() / 2) + getScreenY()), Script.FRONT);
-            getLastCreatedActor().setValue("Display On Collected PM", "_IsDisplaying", true);
-            trace("" + actor.getAnimation());
-            getLastCreatedActor().setAnimation("" + ("" + (("" + ("" + actor.getAnimation())) + ("" + " Collected"))));
-            getLastCreatedActor().growTo(_StartSizePercent/100, _StartSizePercent/100, 0, Linear.easeNone);
+            actor.say("Display On Collected PM", "_customBlock_DisplayOnCollect");
 }
 
 }

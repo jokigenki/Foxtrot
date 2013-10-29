@@ -1331,6 +1331,9 @@
         <blank name="Target" order="1" type="ACTOR"/>
         <blank name="Direction" order="2" type="TEXT"/>
     </custom-block>
+    <custom-block blocktag="custom-668" blocktype="ACTION" code="~.say(&quot;Display On Collected PM&quot;, &quot;DisplayOnCollect&quot;);" desc="" global="false" gui="Display %0" id="668" message="DisplayOnCollect" name="DisplayOnCollect" oid="-1" return="VOID" shared="false" snippetID="191">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
     <custom-block blocktag="custom-294" blocktype="ACTION" code="sayToScene(&quot;Popup Manager PM&quot;, &quot;DisplayPopup&quot;, ~);" desc="" global="false" gui="Display Popup of Type %0" id="294" message="DisplayPopup" name="DisplayPopup" oid="-1" return="VOID" shared="false" snippetID="190">
         <blank name="Popup Type" order="0" type="ACTORTYPE"/>
     </custom-block>
@@ -2007,6 +2010,7 @@
                 <prop id="3" list="0" val="false"/>
                 <prop id="4" list="0" val="300"/>
                 <prop id="5" list="0" val="200"/>
+                <prop id="6" list="0" val="178"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="54">
@@ -2361,7 +2365,7 @@
         <tile collision="1" data="" durations="100" frames="55" id="55" order="-1"/>
         <tile collision="1" data="" durations="100" frames="56" id="56" order="-1"/>
         <tile collision="1" data="" durations="100" frames="57" id="57" order="-1"/>
-        <tile collision="1" data="" durations="100" frames="58" id="58" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="58" id="58" order="-1"/>
         <tile collision="1" data="" durations="100" frames="59" id="59" order="-1"/>
         <tile collision="1" data="" durations="100" frames="60" id="60" order="-1"/>
         <tile collision="1" data="" durations="100" frames="61" id="61" order="-1"/>
@@ -2784,6 +2788,30 @@
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="665" name="Goose Curve" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32">
+            <poly data="4,10,10,32,10,32,32,10,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="351" fixedrot="false" fric="0.2" gid="3" id="664" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Goose Curve" oid="-1" pausable="true" rest="0.0" shared="false" sprite="665" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="40" id="661" name="Goose Head" shared="false" width="64">
+        <anim across="4" down="1" durations="100,100,100,100" height="40" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="20" sync="false" width="256">
+            <poly data="4,4,10,54,10,54,40,4,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="0" continuous="true" desc="" eventsnippetid="348" fixedrot="false" fric="0.2" gid="8" id="660" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Goose Head" oid="-1" pausable="true" rest="0.0" shared="false" sprite="661" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="32" id="663" name="Goose Straight" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32">
+            <poly data="4,0,10,32,10,32,22,0,22" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="0" continuous="true" desc="" eventsnippetid="350" fixedrot="false" fric="0.2" gid="8" id="662" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Goose Straight" oid="-1" pausable="true" rest="0.0" shared="false" sprite="663" static="true">
+        <snippets/>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="234" fixedrot="true" fric="0.2" gid="3" id="401" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Grapple" oid="-1" pausable="true" rest="0.0" shared="false" sprite="402" static="false">
         <snippets>
             <s enabled="true" id="235">
@@ -5911,6 +5939,9 @@
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-23" blocktype="ACTION" code="" desc="" global="false" gui="update position on platform" id="23" message="UpdatePositionOnPlatform" name="UpdatePositionOnPlatform" oid="-1" return="VOID" shared="false" snippetID="-1">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-667" blocktype="ACTION" code="~.say(&quot;Goose Head Maker PM&quot;, &quot;UpdatePositions&quot;);" desc="" global="false" gui="Update positions for %0" id="667" message="UpdatePositions" name="UpdatePositions" oid="-1" return="VOID" shared="false" snippetID="349">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-453" blocktype="ACTION" code="~.say(&quot;Timed Region Switch PM&quot;, &quot;UpdateSwitchAnimation&quot;);" desc="" global="false" gui="Update switch animation" id="453" message="UpdateSwitchAnimation" name="UpdateSwitchAnimation" oid="-1" return="VOID" shared="false" snippetID="65">

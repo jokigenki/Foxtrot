@@ -221,6 +221,56 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="13" c="true" group="5" id="457" name="Small Lift 13" sx="1.0" sy="1.0" x="304" y="32" z="1">
+            <snippets>
+                <s enabled="true" id="343"/>
+                <s enabled="true" id="166">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="304"/>
+                    <prop id="3" list="0" val="288"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="0"/>
+                    <prop id="6" list="0" val="2.0"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="None"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Reposition Whilst Activated PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="14" c="true" group="3" id="205" name="Egg Push 14" sx="1.0" sy="1.0" x="312" y="17" z="1">
+            <snippets>
+                <s enabled="true" id="64">
+                    <prop id="1" list="0" val="EggCollected"/>
+                    <prop id="2" list="0" val="Egg1_Boss"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="191">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="2" list="0" val="0.5"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="4" list="0" val="300"/>
+                    <prop id="5" list="0" val="200"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="144"/>
+                <s enabled="true" id="77">
+                    <prop id="1" list="0" val="Egg1_Boss"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -261,7 +311,6 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="4,0.0,320.0,0.0,0.0,480.0,0.0,480.0,320.0" x="80.0" y="32.0"/>
-        <p pts="12,416.0,256.0,416.0,224.0,448.0,224.0,448.0,0.0,0.0,0.0,0.0,224.0,32.0,224.0,32.0,256.0,64.0,256.0,64.0,288.0,384.0,288.0,384.0,256.0" x="96.0" y="48.0"/>
+        <p pts="22,480.0,336.0,0.0,336.0,0.0,16.0,208.0,16.0,208.0,0.0,224.0,0.0,224.0,32.0,16.0,32.0,16.0,256.0,48.0,256.0,48.0,288.0,80.0,288.0,80.0,320.0,400.0,320.0,400.0,288.0,432.0,288.0,432.0,256.0,464.0,256.0,464.0,32.0,256.0,32.0,256.0,16.0,480.0,16.0" x="80.0" y="16.0"/>
     </terrain>
 </scene>
