@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-group-create-kill comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="85"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                        <actor comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </actor>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="117">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="165"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="8"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <contains-item comment="false" id="1" x="0" y="0">
+                            <get-val-353-8 comment="false" id="0" x="0" y="0"/>
+                            <getatype comment="false" id="1" x="0" y="0">
+                                <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                            </getatype>
+                        </contains-item>
+                    </and>
+                </if>
+                <set-val-353-3 comment="false" x="26" y="197">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                    </minus>
+                </set-val-353-3>
+                <set-val-353-4 comment="false" x="26" y="240">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                    </minus>
+                </set-val-353-4>
+                <set-val-353-2 comment="false" x="26" y="283">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <get-val-353-3 comment="false" id="0" x="0" y="0"/>
+                            <get-val-353-3 comment="false" id="1" x="0" y="0"/>
+                        </times>
+                        <times comment="false" id="1" x="0" y="0">
+                            <get-val-353-4 comment="false" id="0" x="0" y="0"/>
+                            <get-val-353-4 comment="false" id="1" x="0" y="0"/>
+                        </times>
+                    </plus>
+                </set-val-353-2>
+                <set-val-353-6 comment="false" x="26" y="318">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Explodable Block PM"/>
+                        <int id="2" val="_ExplodeRadius"/>
+                    </get-attribute>
+                </set-val-353-6>
+                <if comment="false" x="26" y="356">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="396">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="428">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Default Kill Behaviour PM"/>
+                                    <int id="2" val="Killed"/>
+                                </say>
+                            </group>
+                            <get-val-353-7 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-353-2 comment="false" id="0" x="0" y="0"/>
+                        <plus comment="false" id="1" x="0" y="0">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-353-6 comment="false" id="0" x="0" y="0"/>
+                                <get-val-353-6 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-val-353-5 comment="false" id="0" x="0" y="0"/>
+                                <get-val-353-5 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </plus>
+                    </less>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <GROUP eid="12" id="1"/>
+        </event-group-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

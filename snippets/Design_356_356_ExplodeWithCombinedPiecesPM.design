@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <repeat comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="65">
+                            <ACTORTYPE eid="var" id="0" vid="8"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-xy comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <if comment="false" x="37" y="105">
+                            <group eventID="1" id="-1">
+                                <set-val-356-1 comment="false" x="48" y="140">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <plus comment="false" id="0" x="0" y="0">
+                                            <loopindex comment="false" id="0" x="0" y="0"/>
+                                            <get-val-356-3 comment="false" id="1" x="0" y="0"/>
+                                        </plus>
+                                        <int id="1" val="1"/>
+                                    </minus>
+                                </set-val-356-1>
+                            </group>
+                            <lesseq comment="false" id="0" x="0" y="0">
+                                <loopindex comment="false" id="0" x="0" y="0"/>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-val-356-4 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-356-3 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </lesseq>
+                        </if>
+                        <else comment="false" x="37" y="187">
+                            <group eventID="1" id="-1">
+                                <set-val-356-1 comment="false" x="48" y="207">
+                                    <randint comment="false" id="0" x="0" y="0">
+                                        <get-val-356-5 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-356-6 comment="false" id="1" x="0" y="0"/>
+                                    </randint>
+                                </set-val-356-1>
+                            </group>
+                        </else>
+                        <setanim comment="false" x="37" y="249">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <str-combine comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="p"/>
+                                    <get-val-356-1 comment="false" id="1" x="0" y="0"/>
+                                </str-combine>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <get-val-356-7 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <die comment="false" x="26" y="303">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+                <shake-start comment="false" x="26" y="330">
+                    <int id="0" val="1"/>
+                    <int id="1" val="1"/>
+                </shake-start>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
