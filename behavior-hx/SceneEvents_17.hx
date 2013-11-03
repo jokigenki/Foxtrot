@@ -42,10 +42,56 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_33 extends SceneScript
+class SceneEvents_17 extends SceneScript
 {          	
 	
 public var _ExitName:String;
+
+public var _RunComplete:Bool;
+    public function _customEvent_RoosterKilled():Void
+{
+        createRecycledActor(getActorType(196), 520, 256, Script.BACK);
+        getLastCreatedActor().fadeTo(1, 2, Quad.easeOut);
+        getActor(13).say("Activate On Event PM", "_customEvent_" + "Activate");
+        if(getGameAttribute("Speed Run In Progress"))
+{
+            _RunComplete = true;
+propertyChanged("_RunComplete", _RunComplete);
+            for(item in cast(getGameAttribute("Speed Run Collectables"), Array<Dynamic>))
+{
+                if(!(Utils.contains(getGameAttribute("Collected Speed Run Items"), item)))
+{
+                    trace("" + (("" + "Missing: ") + ("" + item)));
+                    _RunComplete = false;
+propertyChanged("_RunComplete", _RunComplete);
+                    break;
+}
+
+}
+
+            if(_RunComplete)
+{
+                trace("" + "SPEED RUN COMPLETE!");
+                sayToScene("Speed Run Timer PM", "_customEvent_" + "CompleteSpeedRun");
+}
+
+}
+
+}
+
+    public function _customEvent_ReducedHealth():Void
+{
+        if((asNumber(getActor(8).getValue("Reduce Health PM", "_CurrentHealth")) == 1))
+{
+            if(getGameAttribute("Is Music On?"))
+{
+                sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(627)]);
+}
+
+}
+
+}
+
 
  
  	public function new(dummy:Int, engine:Engine)
@@ -53,6 +99,8 @@ public var _ExitName:String;
 		super(engine);
 		nameMap.set("Exit Name", "_ExitName");
 _ExitName = "";
+nameMap.set("Run Complete?", "_RunComplete");
+_RunComplete = false;
 
 	}
 	

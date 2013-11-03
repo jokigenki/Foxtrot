@@ -360,7 +360,7 @@
                             <int id="0" val="CreateGooseHead"/>
                         </scene-shout>
                     </group>
-                    <int id="0" val="2"/>
+                    <int id="0" val="1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
             </group>
@@ -375,17 +375,32 @@
                     <int id="0" val="TODO: fire grenades (in GHM?)"/>
                 </comment-short>
                 <comment-short comment="false" x="26" y="60">
-                    <int id="0" val="TODO: explode generators"/>
-                </comment-short>
-                <comment-short comment="false" x="26" y="80">
                     <int id="0" val="TODO: generator warning light"/>
                 </comment-short>
-                <comment-short comment="false" x="26" y="100">
-                    <int id="0" val="TODO: offset GHM start pos depending on rotation"/>
-                </comment-short>
-                <dolater comment="false" x="26" y="120">
+                <set-val-341-4 comment="false" x="26" y="80">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-341-4>
+                <add-list comment="false" x="26" y="105">
+                    <get-val-341-4 comment="false" id="0" x="0" y="0"/>
+                    <actor comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="196" id="0"/>
+                    </actor>
+                </add-list>
+                <add-list comment="false" x="26" y="138">
+                    <get-val-341-4 comment="false" id="0" x="0" y="0"/>
+                    <actor comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="210" id="0"/>
+                    </actor>
+                </add-list>
+                <add-list comment="false" x="26" y="171">
+                    <get-val-341-4 comment="false" id="0" x="0" y="0"/>
+                    <actor comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="211" id="0"/>
+                    </actor>
+                </add-list>
+                <dolater comment="false" x="26" y="204">
                     <group eventID="9" id="-1">
-                        <scene-shout comment="false" x="37" y="147">
+                        <scene-shout comment="false" x="37" y="231">
                             <int id="0" val="CreateGooseHead"/>
                         </scene-shout>
                     </group>
@@ -399,76 +414,83 @@
     <group eventID="11" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="11" id="-1">
-                <if comment="false" x="26" y="40">
+                <set-val-341-5 comment="false" x="26" y="40">
+                    <custom-538 comment="false" id="0" x="0" y="0">
+                        <get-val-341-4 comment="false" id="0" x="0" y="0"/>
+                    </custom-538>
+                </set-val-341-5>
+                <if comment="false" x="26" y="77">
                     <group eventID="9" id="-1">
-                        <set-val-341-3 comment="false" x="37" y="73">
-                            <random comment="false" id="0" x="0" y="0"/>
-                        </set-val-341-3>
-                        <if comment="false" x="37" y="98">
-                            <group eventID="9" id="-1">
-                                <set-attribute comment="false" x="48" y="128">
-                                    <ACTOR eid="196" id="0"/>
-                                    <int id="1" val="Goose Head Maker PM"/>
-                                    <int id="2" val="_StartAngle"/>
-                                    <int id="3" val="0"/>
-                                </set-attribute>
-                            </group>
-                            <less comment="false" id="0" x="0" y="0">
-                                <get-val-341-3 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="0.25"/>
-                            </less>
-                        </if>
-                        <else-if comment="false" x="37" y="167">
-                            <group eventID="9" id="-1">
-                                <set-attribute comment="false" x="48" y="197">
-                                    <ACTOR eid="196" id="0"/>
-                                    <int id="1" val="Goose Head Maker PM"/>
-                                    <int id="2" val="_StartAngle"/>
-                                    <int id="3" val="90"/>
-                                </set-attribute>
-                            </group>
-                            <less comment="false" id="0" x="0" y="0">
-                                <get-val-341-3 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="0.5"/>
-                            </less>
-                        </else-if>
-                        <else-if comment="false" x="37" y="236">
-                            <group eventID="9" id="-1">
-                                <set-attribute comment="false" x="48" y="266">
-                                    <ACTOR eid="196" id="0"/>
-                                    <int id="1" val="Goose Head Maker PM"/>
-                                    <int id="2" val="_StartAngle"/>
-                                    <int id="3" val="180"/>
-                                </set-attribute>
-                            </group>
-                            <less comment="false" id="0" x="0" y="0">
-                                <get-val-341-3 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="0.75"/>
-                            </less>
-                        </else-if>
-                        <else comment="false" x="37" y="305">
-                            <group eventID="9" id="-1">
-                                <set-attribute comment="false" x="48" y="325">
-                                    <ACTOR eid="196" id="0"/>
-                                    <int id="1" val="Goose Head Maker PM"/>
-                                    <int id="2" val="_StartAngle"/>
-                                    <int id="3" val="270"/>
-                                </set-attribute>
-                            </group>
-                        </else>
-                        <say comment="false" x="37" y="364">
-                            <ACTOR eid="196" id="0"/>
+                        <say comment="false" x="37" y="110">
+                            <ACTOR eid="var" id="0" vid="5"/>
                             <int id="1" val="Goose Head Maker PM"/>
                             <int id="2" val="Activate"/>
                         </say>
                     </group>
                     <isalive comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="196" id="0"/>
+                        <ACTOR eid="var" id="0" vid="5"/>
                     </isalive>
                 </if>
             </group>
             <int id="0" val="CreateGooseHead"/>
         </event-custom>
+    </group>
+    <group eventID="11" id="1">
+        <set-val-341-3 comment="false" x="117" y="221">
+            <random comment="false" id="0" x="0" y="0"/>
+        </set-val-341-3>
+        <if comment="false" x="117" y="246">
+            <group eventID="9" id="-1">
+                <set-attribute comment="false" x="128" y="276">
+                    <ACTOR eid="var" id="0" vid="5"/>
+                    <int id="1" val="Goose Head Maker PM"/>
+                    <int id="2" val="_StartAngle"/>
+                    <int id="3" val="0"/>
+                </set-attribute>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <get-val-341-3 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="0.25"/>
+            </less>
+        </if>
+        <else-if comment="false" x="117" y="315">
+            <group eventID="9" id="-1">
+                <set-attribute comment="false" x="128" y="345">
+                    <ACTOR eid="var" id="0" vid="5"/>
+                    <int id="1" val="Goose Head Maker PM"/>
+                    <int id="2" val="_StartAngle"/>
+                    <int id="3" val="90"/>
+                </set-attribute>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <get-val-341-3 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="0.5"/>
+            </less>
+        </else-if>
+        <else-if comment="false" x="117" y="384">
+            <group eventID="9" id="-1">
+                <set-attribute comment="false" x="128" y="414">
+                    <ACTOR eid="var" id="0" vid="5"/>
+                    <int id="1" val="Goose Head Maker PM"/>
+                    <int id="2" val="_StartAngle"/>
+                    <int id="3" val="180"/>
+                </set-attribute>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <get-val-341-3 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="0.75"/>
+            </less>
+        </else-if>
+        <else comment="false" x="117" y="453">
+            <group eventID="9" id="-1">
+                <set-attribute comment="false" x="128" y="473">
+                    <ACTOR eid="var" id="0" vid="5"/>
+                    <int id="1" val="Goose Head Maker PM"/>
+                    <int id="2" val="_StartAngle"/>
+                    <int id="3" val="270"/>
+                </set-attribute>
+            </group>
+        </else>
     </group>
     <group eventID="11" id="-1"/>
     <group eventID="12" id="0">
@@ -480,7 +502,13 @@
                     <int id="2" val="576"/>
                     <int id="3" val="2"/>
                 </create-actor3>
-                <fadeInOut comment="false" x="26" y="69">
+                <fadeTo comment="false" x="26" y="69">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0"/>
+                </fadeTo>
+                <fadeInOut comment="false" x="26" y="96">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="2"/>
