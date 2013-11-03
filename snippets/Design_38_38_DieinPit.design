@@ -35,9 +35,9 @@
                             <int id="1" val="5"/>
                         </get-xy>
                         <plus comment="false" id="1" x="0" y="0">
-                            <screen-wh comment="false" id="0" x="0" y="0">
+                            <scene-wh comment="false" id="0" x="0" y="0">
                                 <int id="0" val="1"/>
-                            </screen-wh>
+                            </scene-wh>
                             <int id="1" val="32"/>
                         </plus>
                     </more>
@@ -45,5 +45,9 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="1" id="-1">
+        <screen-wh comment="false" x="493" y="109">
+            <int id="0" val="1"/>
+        </screen-wh>
+    </group>
 </groups>

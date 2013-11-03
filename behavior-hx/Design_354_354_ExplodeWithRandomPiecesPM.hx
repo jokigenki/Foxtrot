@@ -42,38 +42,49 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_38_38_DieinPit extends ActorScript
+class Design_354_354_ExplodeWithRandomPiecesPM extends ActorScript
 {          	
 	
+public var _PieceNumber:Float;
+
+public var _NumberOfPieces:Float;
+
+public var _ExplodeActorType:ActorType;
+
+public var _HighestAnimationNumber:Float;
+    public function _customEvent_Killed():Void
+{
+        for(index0 in 0...Std.int(_NumberOfPieces))
+{
+            createRecycledActor(_ExplodeActorType, actor.getX(), actor.getY(), Script.FRONT);
+            _PieceNumber = asNumber(randomInt(Math.floor(1), Math.floor(_HighestAnimationNumber)));
+propertyChanged("_PieceNumber", _PieceNumber);
+            getLastCreatedActor().setAnimation("" + ("" + (("" + "p") + ("" + _PieceNumber))));
+}
+
+        recycleActor(actor);
+        startShakingScreen(1 / 100, 1);
+}
+
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Actor", "actor");
+		nameMap.set("Piece Number", "_PieceNumber");
+_PieceNumber = 0.0;
+nameMap.set("Number Of Pieces", "_NumberOfPieces");
+_NumberOfPieces = 0.0;
+nameMap.set("Explode Actor Type", "_ExplodeActorType");
+nameMap.set("Highest Animation Number", "_HighestAnimationNumber");
+_HighestAnimationNumber = 0.0;
+nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
-if(wrapper.enabled){
-        if((actor.getScreenY() > (getSceneHeight() + 32)))
-{
-            if(!(isTransitioning()))
-{
-                recycleActor(actor);
-                if(actor.isBehaviorEnabled("Reload On Death PM"))
-{
-                    actor.say("Reload On Death PM", "_customEvent_" + "Reload");
-}
-
-}
-
-}
-
-}
-});
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

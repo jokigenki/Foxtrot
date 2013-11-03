@@ -42,66 +42,27 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_147_147_BumpOut extends ActorScript
+class Design_185_185_DefaultKillBehaviourPM extends ActorScript
 {          	
 	
-public var _DeadAnimationLeft:String;
-
-public var _DeadAnimationNeutral:String;
-
-public var _DeadAnimationRight:String;
+public var _KillBehaviour:String;
 
 public var _KillX:Float;
 
 public var _KillY:Float;
-
-public var _KillForce:Float;
-
-public var _ChosenAnimation:String;
     public function _customEvent_Killed():Void
 {
-        actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
-        if((_KillX < 0))
+        if(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorBehaviourHasAttribute(actor,"_KillX",_KillBehaviour)), Bool))
 {
-            _ChosenAnimation = _DeadAnimationLeft;
-propertyChanged("_ChosenAnimation", _ChosenAnimation);
+            actor.setValue(_KillBehaviour, "_KillX", _KillX);
 }
 
-        else if((_KillX > 0))
+        if(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorBehaviourHasAttribute(actor,"_KillX",_KillBehaviour)), Bool))
 {
-            _ChosenAnimation = _DeadAnimationRight;
-propertyChanged("_ChosenAnimation", _ChosenAnimation);
+            actor.setValue(_KillBehaviour, "_KillY", _KillY);
 }
 
-        else
-{
-            _ChosenAnimation = _DeadAnimationNeutral;
-propertyChanged("_ChosenAnimation", _ChosenAnimation);
-}
-
-        trace("" + _ChosenAnimation);
-        actor.setXVelocity(0);
-        actor.setYVelocity(0);
-        actor.applyImpulse(_KillX, _KillY, _KillForce);
-        if(actor.hasBehavior("Animation Manager"))
-{
-            actor.say("Animation Manager", "_customBlock_PlayOnce", [_ChosenAnimation]);
-}
-
-        else
-{
-            actor.setAnimation("" + _ChosenAnimation);
-}
-
-        actor.fadeTo(0 / 100, 2, Expo.easeOut);
-        runLater(1000 * 2, function(timeTask:TimedTask):Void {
-                    recycleActor(actor);
-                    if(actor.isBehaviorEnabled("Reload On Death PM"))
-{
-                        actor.say("Reload On Death PM", "_customEvent_" + "Reload");
-}
-
-}, actor);
+        actor.say(_KillBehaviour, "_customEvent_" + "Killed");
 }
 
 
@@ -109,16 +70,12 @@ propertyChanged("_ChosenAnimation", _ChosenAnimation);
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Dead Animation Left", "_DeadAnimationLeft");
-nameMap.set("Dead Animation Neutral", "_DeadAnimationNeutral");
-nameMap.set("Dead Animation Right", "_DeadAnimationRight");
+		nameMap.set("Kill Behaviour", "_KillBehaviour");
+_KillBehaviour = "";
 nameMap.set("Kill X", "_KillX");
 _KillX = 0.0;
 nameMap.set("Kill Y", "_KillY");
 _KillY = 0.0;
-nameMap.set("Kill Force", "_KillForce");
-_KillForce = 0.0;
-nameMap.set("Chosen Animation", "_ChosenAnimation");
 nameMap.set("Actor", "actor");
 
 	}

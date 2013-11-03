@@ -42,7 +42,7 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_38_38_DieinPit extends ActorScript
+class Design_177_177_KillWhenOffscreenPM extends ActorScript
 {          	
 	
  
@@ -55,22 +55,15 @@ class Design_38_38_DieinPit extends ActorScript
 	
 	override public function init()
 	{
-		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
-if(wrapper.enabled){
-        if((actor.getScreenY() > (getSceneHeight() + 32)))
+		    addActorPositionListener(actor, function(enteredScreen:Bool, exitedScreen:Bool, enteredScene:Bool, exitedScene:Bool, list:Array<Dynamic>):Void {
+if(wrapper.enabled && exitedScene){
+        runLater(1000 * 1, function(timeTask:TimedTask):Void {
+                    if(!(actor.isOnScreen()))
 {
-            if(!(isTransitioning()))
-{
-                recycleActor(actor);
-                if(actor.isBehaviorEnabled("Reload On Death PM"))
-{
-                    actor.say("Reload On Death PM", "_customEvent_" + "Reload");
+                        recycleActor(actor);
 }
 
-}
-
-}
-
+}, actor);
 }
 });
 

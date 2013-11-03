@@ -42,38 +42,19 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class Design_38_38_DieinPit extends ActorScript
+class ActorEvents_653 extends ActorScript
 {          	
 	
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Actor", "actor");
-
+		
 	}
 	
 	override public function init()
 	{
-		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
-if(wrapper.enabled){
-        if((actor.getScreenY() > (getSceneHeight() + 32)))
-{
-            if(!(isTransitioning()))
-{
-                recycleActor(actor);
-                if(actor.isBehaviorEnabled("Reload On Death PM"))
-{
-                    actor.say("Reload On Death PM", "_customEvent_" + "Reload");
-}
-
-}
-
-}
-
-}
-});
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

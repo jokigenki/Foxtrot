@@ -257,8 +257,8 @@
         <number default="250" defaultValue="250" desc="Angle used when jumping towards the left&lt;br&gt;&lt;br&gt;&#10;default = 250" dropdown="" fullname="Jump Left Angle" hidden="false" id="12" name="_JumpLeftAngle" order="11"/>
         <number default="65" defaultValue="65" desc="Amount of force to apply during the jump&lt;br&gt;&lt;br&gt;&#10;default = 65" dropdown="" fullname="Jump Force" hidden="false" id="13" name="_JumpForce" order="12"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Right Animation" hidden="false" id="14" name="_WallJumpRightAnimation" order="13"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Left Animation" hidden="false" id="15" name="_WallJumpLeftAnimation" order="14"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Left Animation" hidden="false" id="15" name="_WallJumpLeftAnimation" order="14"/>
         <text default="Wall Jumping" defaultValue="Wall Jumping" desc="Set the category used for the animation - used for the hierarchy." dropdown="" fullname="Animation Category" hidden="false" id="17" name="_AnimationCategory" order="16"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Prevent Wall Jump" hidden="true" id="16" name="_PreventWallJump" order="15"/>
         <blocks>
@@ -603,8 +603,8 @@
         <control default="" defaultValue="" desc="Select the key used to move to the left." dropdown="" fullname="Left Key" hidden="false" id="12" name="_LeftKey" order="12"/>
         <number default="0.4" defaultValue="0.4" desc="How long should it take to get up to max speed?&lt;br&gt;&lt;br&gt;&#10;default = 0.4" dropdown="" fullname="Time To Max Speed" hidden="false" id="13" name="_TimeToMaxSpeed" order="13"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Can Slide?" hidden="false" id="14" name="_CanSlide" order="14"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Right Animation" hidden="false" id="15" name="_RunRightAnimation" order="15"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Right Animation" hidden="false" id="15" name="_RunRightAnimation" order="15"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Slip Right Animation" hidden="false" id="17" name="_SlipRightAnimation" order="17"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Left Animation" hidden="false" id="16" name="_RunLeftAnimation" order="16"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Full Run Right Animation" hidden="false" id="19" name="_FullRunRightAnimation" order="19"/>
@@ -2905,8 +2905,8 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Door Is Ready?" hidden="true" id="10" name="_DoorIsReady" order="6"/>
         <actor default="0" defaultValue="0" desc="" dropdown="" fullname="Actor by door" hidden="true" id="12" name="_Actorbydoor" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Exit only when on ground" hidden="false" id="13" name="_Exitonlywhenonground" order="8"/>
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="15" name="_SaveExit" order="10"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="651" id="1"/>
             <receiver blockID="102" id="2"/>
@@ -2983,15 +2983,22 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_35" classname="scripts.SceneEvents_35" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="341" language="" name="SceneEvents_35" oid="-1" package="scripts." sceneid="35" scenespecific="true" shared="false" type="scene">
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Crate" hidden="false" id="2" name="_Crate" order="1"/>
-        <blocks/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Randomiser" hidden="false" id="3" name="_StartRandomiser" order="2"/>
+        <blocks>
+            <receiver blockID="690" id="1"/>
+        </blocks>
         <events>
-            <event displayName="Bomb explodes" enabled="true" id="1" name="event-type-create-kill" order="2" repeats="true"/>
-            <event displayName="Conv Right On" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
-            <event displayName="Conv Left On" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
-            <event displayName="Crate Pre Switch" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
-            <event displayName="Crate Switch" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
-            <event displayName="Conv Right 2 On" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
-            <event displayName="Conv Left 2 On" enabled="true" id="8" name="event-custom" order="8" repeats="true"/>
+            <event displayName="Bomb explodes" enabled="true" id="1" name="event-type-create-kill" order="3" repeats="true"/>
+            <event displayName="Conv Right On" enabled="true" id="3" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Conv Left On" enabled="true" id="4" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Crate Pre Switch" enabled="true" id="5" name="event-custom" order="6" repeats="true"/>
+            <event displayName="Crate Switch" enabled="true" id="6" name="event-custom" order="7" repeats="true"/>
+            <event displayName="Conv Right 2 On" enabled="true" id="7" name="event-custom" order="8" repeats="true"/>
+            <event displayName="Conv Left 2 On" enabled="true" id="8" name="event-custom" order="9" repeats="true"/>
+            <event displayName="Goose Removed" enabled="true" id="9" name="event-custom" order="10" repeats="true"/>
+            <event displayName="Created" enabled="true" id="10" name="init" order="2" repeats="true"/>
+            <event displayName="Create Goose Head" enabled="true" id="11" name="event-custom" order="11" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="12" name="event-actor-create-kill" order="12" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_648" classname="scripts.ActorEvents_648" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="340" language="" name="ActorEvents_648" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -3054,26 +3061,53 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Angle" hidden="false" id="1" name="_StartAngle" order="1"/>
         <number default="0.5" defaultValue="0.5" desc="" dropdown="" fullname="Generate Time" hidden="false" id="2" name="_GenerateTime" order="2"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Number Of Segments" hidden="true" id="3" name="_NumberOfSegments" order="3"/>
-        <number default="3" defaultValue="3" desc="" dropdown="" fullname="Max Number Of Segments" hidden="false" id="4" name="_MaxNumberOfSegments" order="4"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Number Of Segments" hidden="true" id="5" name="_CurrentNumberOfSegments" order="5"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="End Angle" hidden="true" id="6" name="_EndAngle" order="6"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle Index" hidden="true" id="7" name="_AngleIndex" order="7"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Offset" hidden="true" id="8" name="_XOffset" order="8"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="true" id="9" name="_YOffset" order="9"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Pipe" hidden="true" id="10" name="_Pipe" order="10"/>
-        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Is Generating?" hidden="false" id="11" name="_IsGenerating" order="11"/>
+        <number default="5" defaultValue="5" desc="" dropdown="" fullname="Max Number Of Segments" hidden="false" id="4" name="_MaxNumberOfSegments" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Number Of Segments" hidden="true" id="5" name="_CurrentNumberOfSegments" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="End Angle" hidden="true" id="6" name="_EndAngle" order="7"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle Index" hidden="true" id="7" name="_AngleIndex" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Offset" hidden="true" id="8" name="_XOffset" order="9"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="true" id="9" name="_YOffset" order="10"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Pipe" hidden="true" id="10" name="_Pipe" order="11"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Head" hidden="true" id="12" name="_Head" order="12"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Pipes" hidden="true" id="13" name="_Pipes" order="13"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Total" hidden="true" id="14" name="_XTotal" order="14"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Total" hidden="true" id="15" name="_YTotal" order="15"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Head Offset X" hidden="true" id="17" name="_HeadOffsetX" order="16"/>
+        <number default="3" defaultValue="3" desc="" dropdown="" fullname="Min Number Of Segments" hidden="false" id="16" name="_MinNumberOfSegments" order="5"/>
+        <text default="" defaultValue="" desc="" dropdown="Making=Making&#10;Removing=Removing&#10;Waiting=Waiting&#10;Inactive=Inactive" fullname="State" hidden="true" id="19" name="_State" order="18"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Head Offset Y" hidden="true" id="18" name="_HeadOffsetY" order="17"/>
+        <number default="2" defaultValue="2" desc="" dropdown="" fullname="Time Before Removing" hidden="false" id="21" name="_TimeBeforeRemoving" order="19"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="false" id="20" name="_IsActive" order="20"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Offsets Y" hidden="true" id="23" name="_OffsetsY" order="22"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Offsets X" hidden="true" id="22" name="_OffsetsX" order="21"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Head Rotations" hidden="true" id="25" name="_HeadRotations" order="24"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Number Of Pipes" hidden="true" id="24" name="_NumberOfPipes" order="23"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Offset X" hidden="true" id="27" name="_StartOffsetX" order="26"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Angle" hidden="true" id="26" name="_CurrentAngle" order="25"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Y Offset" hidden="true" id="28" name="_StartYOffset" order="27"/>
         <blocks>
             <receiver blockID="666" id="1"/>
             <receiver blockID="667" id="2"/>
             <receiver blockID="678" id="3"/>
+            <receiver blockID="679" id="4"/>
+            <receiver blockID="686" id="5"/>
+            <receiver blockID="687" id="6"/>
+            <receiver blockID="688" id="7"/>
+            <receiver blockID="689" id="8"/>
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Update positions" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
-            <event displayName="Change Angle" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
+            <event displayName="Update positions" enabled="true" id="2" name="event-custom-block" order="6" repeats="true"/>
+            <event displayName="Change Angle" enabled="true" id="3" name="event-custom-block" order="4" repeats="true"/>
+            <event displayName="Update Offsets" enabled="true" id="4" name="event-custom-block" order="7" repeats="true"/>
+            <event displayName="Create curve" enabled="true" id="5" name="event-custom-block" order="5" repeats="true"/>
+            <event displayName="Generate" enabled="true" id="6" name="event-custom-block" order="8" repeats="true"/>
+            <event displayName="Remove" enabled="true" id="7" name="event-custom-block" order="9" repeats="true"/>
+            <event displayName="Activate" enabled="true" id="8" name="event-custom" order="10" repeats="true"/>
+            <event displayName="Start" enabled="true" id="9" name="event-custom-block" order="3" repeats="true"/>
+            <event displayName="Deactivate" enabled="true" id="10" name="event-custom" order="11" repeats="true"/>
+            <event displayName="Killed" enabled="true" id="11" name="event-actor-create-kill" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_660" classname="scripts.ActorEvents_660" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="348" language="" name="ActorEvents_660" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -3226,6 +3260,14 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_680" classname="scripts.ActorEvents_680" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="358" language="" name="ActorEvents_680" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_682" classname="scripts.ActorEvents_682" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="359" language="" name="ActorEvents_682" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_672" classname="scripts.ActorEvents_672" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="352" language="" name="ActorEvents_672" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
@@ -3256,6 +3298,10 @@
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_674" classname="scripts.ActorEvents_674" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="355" language="" name="ActorEvents_674" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_684" classname="scripts.ActorEvents_684" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="360" language="" name="ActorEvents_684" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>

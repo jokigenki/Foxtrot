@@ -62,16 +62,6 @@ class SceneEvents_3 extends SceneScript
                     setGameAttribute("Current Music", "None");
                     setGameAttribute("Game Was Loaded", true);
                     setGameAttribute("Speed Run In Progress", false);
-                    if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
-{
-                        runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
-                                    trace("" + (("" + "Last scene: ") + ("" + getGameAttribute("Save Destination"))));
-                                    getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
-                                    getActor(18).say("Activate Door PM", "_customEvent_" + "ActivateDoor");
-                                    getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
-}, null);
-}
-
 }
 
                 else
@@ -80,6 +70,16 @@ class SceneEvents_3 extends SceneScript
 }
 
 });
+}
+
+        if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
+{
+            runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
+                        trace("" + (("" + "Last scene: ") + ("" + getGameAttribute("Save Destination"))));
+                        getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
+                        getActor(18).say("Activate Door PM", "_customEvent_" + "ActivateDoor");
+                        getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
+}, null);
 }
 
 
