@@ -6,14 +6,10 @@
                 <set-val-99-9 comment="false" x="26" y="40">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-99-9>
-                <toggle-image comment="false" x="26" y="65">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                </toggle-image>
-                <comment-short comment="false" x="26" y="92">
+                <comment-short comment="false" x="26" y="65">
                     <int id="0" val="GA: Unlocked Doors (List)"/>
                 </comment-short>
-                <create-region comment="false" x="26" y="112">
+                <create-region comment="false" x="26" y="85">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -34,26 +30,26 @@
                         </custom-62>
                     </minus>
                 </create-region>
-                <set-val-99-5 comment="false" x="26" y="150">
+                <set-val-99-5 comment="false" x="26" y="123">
                     <REGION eid="lastcreated" id="0"/>
                 </set-val-99-5>
-                <set-val-99-7 comment="false" x="26" y="177">
+                <set-val-99-7 comment="false" x="26" y="150">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-99-7>
-                <set-val-99-8 comment="false" x="26" y="202">
+                <set-val-99-8 comment="false" x="26" y="175">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-99-8>
-                <comment-short comment="false" x="26" y="227">
+                <comment-short comment="false" x="26" y="200">
                     <int id="0" val="GA: Last Scene Name (Text)"/>
                 </comment-short>
-                <say comment="false" x="26" y="247">
+                <say comment="false" x="26" y="220">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="Activate Door PM"/>
                     <int id="2" val="UnlockDestination"/>
                 </say>
-                <dolater comment="false" x="26" y="274">
+                <dolater comment="false" x="26" y="247">
                     <group eventID="1" id="-1">
-                        <set-val-99-9 comment="false" x="37" y="301">
+                        <set-val-99-9 comment="false" x="37" y="274">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-99-9>
                     </group>
@@ -62,6 +58,12 @@
                 </dolater>
             </group>
         </init>
+    </group>
+    <group eventID="1" id="1">
+        <toggle-image comment="false" x="349" y="47">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+        </toggle-image>
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">

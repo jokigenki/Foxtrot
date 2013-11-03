@@ -19,15 +19,12 @@
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="328" y="184" z="3"/>
-        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="128" y="272" z="2"/>
-        <actor a="0.0" aid="7" c="true" group="2" id="140" name="Door 7" sx="1.0" sy="1.0" x="96" y="272" z="4">
+        <actor a="0.0" aid="32" c="true" group="2" id="213" name="Door BLUE 32" sx="1.0" sy="1.0" x="96" y="272" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="0.0"/>
                     <prop id="3" list="0" val="Factory2_01|_Outside|A|C"/>
                     <prop id="4" list="0" val="3"/>
-                    <prop id="5" list="0" val="-1"/>
                     <prop id="6" list="0" val="true"/>
                     <prop id="7" list="0" val="true"/>
                     <prop id="8" list="0" val="false"/>
@@ -37,6 +34,7 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="154"/>
                 <s enabled="true" id="92">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="Open"/>
@@ -46,7 +44,6 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -67,52 +64,8 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="8" c="true" group="2" id="140" name="Door 8" sx="1.0" sy="1.0" x="512" y="304" z="4">
-            <snippets>
-                <s enabled="true" id="304">
-                    <prop id="2" list="0" val="0.0"/>
-                    <prop id="3" list="0" val="Factory2_01|Factory2_02|B|A"/>
-                    <prop id="4" list="0" val="3"/>
-                    <prop id="5" list="0" val="-1"/>
-                    <prop id="6" list="0" val="true"/>
-                    <prop id="7" list="0" val="true"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val=""/>
-                    <prop id="11" list="0" val="0.5"/>
-                    <prop id="12" list="0" val="0.5"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="92">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2" list="0" val="Open"/>
-                    <prop id="3" list="0" val="Closed"/>
-                    <prop id="4" list="0" val="Opening"/>
-                    <prop id="13" list="0" val="KeyCollected"/>
-                    <prop id="14" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="89"/>
-                <s enabled="true" id="133">
-                    <prop id="14" list="0" val="9"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                    <prop id="17" list="0" val="false"/>
-                    <prop id="16" list="0" val=""/>
-                    <prop id="19" list="0" val="false"/>
-                    <prop id="18" list="0" val="false"/>
-                    <prop id="21" list="0" val=""/>
-                    <prop id="20" list="0" val="false"/>
-                    <prop id="23" list="0" val=""/>
-                    <prop id="25" list="0" val=""/>
-                    <prop id="24" list="0" val="UseDoor"/>
-                    <prop id="27" list="0" val="0"/>
-                    <prop id="26" list="0" val="1"/>
-                    <prop id="29" list="0" val="4"/>
-                    <prop id="28" list="0" val=""/>
-                    <prop id="30" list="0" val="4"/>
-                </s>
-            </snippets>
-        </actor>
+        <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="328" y="184" z="3"/>
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="128" y="272" z="2"/>
         <actor a="0.0" aid="9" c="true" group="5" id="267" name="Horizontal Lift 9" sx="1.0" sy="1.0" x="432" y="128" z="4">
             <snippets>
                 <s enabled="true" id="54">
@@ -340,7 +293,7 @@
             <snippets>
                 <s enabled="true" id="91">
                     <prop id="1" list="0" val="KeyCollected"/>
-                    <prop id="2" list="0" val="8"/>
+                    <prop id="2" list="0" val="31"/>
                     <prop id="3" list="0" val="FactoryKey2_01"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
@@ -458,6 +411,51 @@
                 <s enabled="true" id="173"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="31" c="true" group="2" id="213" name="Door BLUE 31" sx="1.0" sy="1.0" x="512" y="304" z="4">
+            <snippets>
+                <s enabled="true" id="304">
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="3" list="0" val="Factory2_01|Factory2_02|B|A"/>
+                    <prop id="4" list="0" val="3"/>
+                    <prop id="6" list="0" val="true"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="11" list="0" val="0.5"/>
+                    <prop id="12" list="0" val="0.5"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="154"/>
+                <s enabled="true" id="92">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="Open"/>
+                    <prop id="3" list="0" val="Closed"/>
+                    <prop id="4" list="0" val="Opening"/>
+                    <prop id="13" list="0" val="KeyCollected"/>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="133">
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val=""/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="false"/>
+                    <prop id="21" list="0" val=""/>
+                    <prop id="20" list="0" val="false"/>
+                    <prop id="23" list="0" val=""/>
+                    <prop id="25" list="0" val=""/>
+                    <prop id="24" list="0" val="UseDoor"/>
+                    <prop id="27" list="0" val="0"/>
+                    <prop id="26" list="0" val="1"/>
+                    <prop id="29" list="0" val="4"/>
+                    <prop id="28" list="0" val=""/>
+                    <prop id="30" list="0" val="4"/>
+                </s>
+            </snippets>
+        </actor>
         <actor a="0.0" aid="30" c="false" group="2" id="196" name="Teleporter 30" sx="1.0" sy="1.0" x="183" y="192" z="1"/>
     </actors>
     <snippets>
@@ -500,8 +498,8 @@
         </s>
     </snippets>
     <terrain>
+        <p pts="30,448.0,288.0,448.0,256.0,368.0,256.0,368.0,240.0,448.0,240.0,448.0,0.0,0.0,0.0,0.0,48.0,112.0,48.0,112.0,112.0,128.0,112.0,128.0,176.0,48.0,176.0,48.0,160.0,112.0,160.0,112.0,128.0,96.0,128.0,96.0,64.0,0.0,64.0,0.0,112.0,32.0,112.0,32.0,128.0,0.0,128.0,0.0,208.0,32.0,208.0,32.0,224.0,0.0,224.0,0.0,256.0,64.0,256.0,64.0,288.0" x="96.0" y="48.0"/>
         <p pts="6,64.0,32.0,0.0,32.0,0.0,0.0,80.0,0.0,80.0,160.0,64.0,160.0" x="432.0" y="96.0"/>
         <p pts="4,480.0,320.0,0.0,320.0,0.0,0.0,480.0,0.0" x="80.0" y="32.0"/>
-        <p pts="30,448.0,288.0,448.0,256.0,368.0,256.0,368.0,240.0,448.0,240.0,448.0,0.0,0.0,0.0,0.0,48.0,112.0,48.0,112.0,112.0,128.0,112.0,128.0,176.0,48.0,176.0,48.0,160.0,112.0,160.0,112.0,128.0,96.0,128.0,96.0,64.0,0.0,64.0,0.0,112.0,32.0,112.0,32.0,128.0,0.0,128.0,0.0,208.0,32.0,208.0,32.0,224.0,0.0,224.0,0.0,256.0,64.0,256.0,64.0,288.0" x="96.0" y="48.0"/>
     </terrain>
 </scene>
