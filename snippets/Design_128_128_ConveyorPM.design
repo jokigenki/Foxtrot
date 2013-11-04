@@ -43,7 +43,7 @@
                                             <other-actor comment="false" id="0" x="0" y="0"/>
                                             <int id="1" val="0"/>
                                         </get-xy>
-                                        <get-val-128-1 comment="false" id="1" x="0" y="0"/>
+                                        <get-val-128-4 comment="false" id="1" x="0" y="0"/>
                                     </plus>
                                 </set-xy>
                             </group>
@@ -120,9 +120,9 @@
                 </set-val-128-2>
                 <if comment="false" x="26" y="280">
                     <group eventID="1" id="-1">
-                        <set-val-128-1 comment="false" x="37" y="315">
+                        <set-val-128-4 comment="false" x="37" y="315">
                             <int id="0" val="1"/>
-                        </set-val-128-1>
+                        </set-val-128-4>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <less comment="false" id="0" x="0" y="0">
@@ -137,9 +137,9 @@
                 </if>
                 <else-if comment="false" x="26" y="347">
                     <group eventID="1" id="-1">
-                        <set-val-128-1 comment="false" x="37" y="382">
+                        <set-val-128-4 comment="false" x="37" y="382">
                             <int id="0" val="-1"/>
-                        </set-val-128-1>
+                        </set-val-128-4>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <less comment="false" id="0" x="0" y="0">
@@ -152,14 +152,15 @@
                         </more>
                     </and>
                 </else-if>
+                <else comment="false" x="26" y="414">
+                    <group eventID="3" id="-1">
+                        <set-val-128-4 comment="false" x="37" y="434">
+                            <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                        </set-val-128-4>
+                    </group>
+                </else>
             </group>
         </step>
     </group>
     <group eventID="3" id="-1"/>
-    <group eventID="4" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="4" id="-1"/>
-        </init>
-    </group>
-    <group eventID="4" id="-1"/>
 </groups>

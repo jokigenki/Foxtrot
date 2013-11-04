@@ -42,7 +42,7 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class ActorEvents_194 extends ActorScript
+class ActorEvents_664 extends ActorScript
 {          	
 	
  
