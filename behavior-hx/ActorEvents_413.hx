@@ -54,7 +54,8 @@ class ActorEvents_413 extends ActorScript
 	
 	override public function init()
 	{
-		
+		            actor.fadeTo(95 / 100, 0, Linear.easeNone);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

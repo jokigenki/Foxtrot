@@ -57,7 +57,7 @@ class Design_38_38_DieinPit extends ActorScript
 	{
 		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if((actor.getScreenY() > (getScreenHeight() + 32)))
+        if((actor.getScreenY() > (getSceneHeight() + 32)))
 {
             if(!(isTransitioning()))
 {

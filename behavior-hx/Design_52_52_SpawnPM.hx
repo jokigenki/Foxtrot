@@ -87,7 +87,6 @@ propertyChanged("_IsRunning", _IsRunning);
             return;
 }
 
-        trace("" + "SPAWN!");
         createRecycledActor(_SpawnType, actor.getX(), actor.getY(), Script.FRONT);
         _LastSpawn = getLastCreatedActor();
 propertyChanged("_LastSpawn", _LastSpawn);

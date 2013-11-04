@@ -76,17 +76,34 @@
                 </set-val-353-6>
                 <if comment="false" x="26" y="356">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="396">
+                        <if comment="false" x="37" y="396">
                             <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="428">
+                                <dolater comment="false" x="48" y="426">
+                                    <group eventID="1" id="-1">
+                                        <say comment="false" x="59" y="458">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Default Kill Behaviour PM"/>
+                                            <int id="2" val="Killed"/>
+                                        </say>
+                                    </group>
+                                    <get-val-353-7 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-353-7 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="509">
+                            <group eventID="1" id="-1">
+                                <say comment="false" x="48" y="529">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Default Kill Behaviour PM"/>
                                     <int id="2" val="Killed"/>
                                 </say>
                             </group>
-                            <get-val-353-7 comment="false" id="0" x="0" y="0"/>
-                            <ACTOR eid="this" id="2"/>
-                        </dolater>
+                        </else>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
                         <get-val-353-2 comment="false" id="0" x="0" y="0"/>

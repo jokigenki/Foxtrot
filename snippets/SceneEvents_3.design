@@ -18,60 +18,12 @@
                                         <set-game-val-10 comment="false" x="59" y="165">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-10>
-                                        <if comment="false" x="59" y="190">
-                                            <group eventID="1" id="-1">
-                                                <dolater comment="false" x="70" y="235">
-                                                    <group eventID="1" id="-1">
-                                                        <print comment="false" x="81" y="262">
-                                                            <str-combine comment="false" id="0" x="0" y="0">
-                                                                <int id="0" val="Last scene: "/>
-                                                                <get-game-val-21 comment="false" id="1" x="0" y="0"/>
-                                                            </str-combine>
-                                                        </print>
-                                                        <set-attribute comment="false" x="81" y="292">
-                                                            <ACTOR eid="18" id="0"/>
-                                                            <int id="1" val="Activate Door PM"/>
-                                                            <int id="2" val="_Destination"/>
-                                                            <get-game-val-21 comment="false" id="3" x="0" y="0"/>
-                                                        </set-attribute>
-                                                        <say comment="false" x="81" y="324">
-                                                            <ACTOR eid="18" id="0"/>
-                                                            <int id="1" val="Activate Door PM"/>
-                                                            <int id="2" val="ActivateDoor"/>
-                                                        </say>
-                                                        <say comment="false" x="81" y="351">
-                                                            <ACTOR eid="18" id="0"/>
-                                                            <int id="1" val="Collectable Door PM"/>
-                                                            <int id="2" val="DoorActivated"/>
-                                                        </say>
-                                                    </group>
-                                                    <int id="0" val="0.5"/>
-                                                    <ACTOR eid="lastcreated" id="2"/>
-                                                </dolater>
-                                            </group>
-                                            <and comment="false" id="0" x="0" y="0">
-                                                <noteq comment="false" id="0" x="0" y="0">
-                                                    <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                                                    <int id="1" val="none"/>
-                                                </noteq>
-                                                <noteq comment="false" id="1" x="0" y="0">
-                                                    <get-item comment="false" id="0" x="0" y="0">
-                                                        <str-split comment="false" id="0" x="0" y="0">
-                                                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                                                            <int id="1" val="|"/>
-                                                        </str-split>
-                                                        <int id="1" val="1"/>
-                                                    </get-item>
-                                                    <int id="1" val="_Home"/>
-                                                </noteq>
-                                            </and>
-                                        </if>
                                     </group>
                                     <load-success comment="false" id="0" x="0" y="0"/>
                                 </if>
-                                <else comment="false" x="48" y="414">
+                                <else comment="false" x="48" y="202">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-16 comment="false" x="59" y="434">
+                                        <set-game-val-16 comment="false" x="59" y="222">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
                                     </group>
@@ -82,6 +34,54 @@
                     <not comment="false" id="0" x="0" y="0">
                         <get-game-val-16 comment="false" id="0" x="0" y="0"/>
                     </not>
+                </if>
+                <if comment="false" x="26" y="283">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="328">
+                            <group eventID="1" id="-1">
+                                <print comment="false" x="48" y="355">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="Last scene: "/>
+                                        <get-game-val-21 comment="false" id="1" x="0" y="0"/>
+                                    </str-combine>
+                                </print>
+                                <set-attribute comment="false" x="48" y="385">
+                                    <ACTOR eid="18" id="0"/>
+                                    <int id="1" val="Activate Door PM"/>
+                                    <int id="2" val="_Destination"/>
+                                    <get-game-val-21 comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                                <say comment="false" x="48" y="417">
+                                    <ACTOR eid="18" id="0"/>
+                                    <int id="1" val="Activate Door PM"/>
+                                    <int id="2" val="ActivateDoor"/>
+                                </say>
+                                <say comment="false" x="48" y="444">
+                                    <ACTOR eid="18" id="0"/>
+                                    <int id="1" val="Collectable Door PM"/>
+                                    <int id="2" val="DoorActivated"/>
+                                </say>
+                            </group>
+                            <int id="0" val="0.5"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="none"/>
+                        </noteq>
+                        <noteq comment="false" id="1" x="0" y="0">
+                            <get-item comment="false" id="0" x="0" y="0">
+                                <str-split comment="false" id="0" x="0" y="0">
+                                    <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="|"/>
+                                </str-split>
+                                <int id="1" val="1"/>
+                            </get-item>
+                            <int id="1" val="_Home"/>
+                        </noteq>
+                    </and>
                 </if>
             </group>
         </init>

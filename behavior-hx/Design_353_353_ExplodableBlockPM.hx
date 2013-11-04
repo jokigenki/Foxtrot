@@ -105,9 +105,18 @@ propertyChanged("_DistanceFromExplosion", _DistanceFromExplosion);
 propertyChanged("_OtherExplodeRadius", _OtherExplodeRadius);
         if((_DistanceFromExplosion < ((_OtherExplodeRadius * _OtherExplodeRadius) + (_ExplodeRadius * _ExplodeRadius))))
 {
-            runLater(1000 * _ExplodeDelay, function(timeTask:TimedTask):Void {
-                        actor.say("Default Kill Behaviour PM", "_customEvent_" + "Killed");
+            if((_ExplodeDelay > 0))
+{
+                runLater(1000 * _ExplodeDelay, function(timeTask:TimedTask):Void {
+                            actor.say("Default Kill Behaviour PM", "_customEvent_" + "Killed");
 }, actor);
+}
+
+            else
+{
+                actor.say("Default Kill Behaviour PM", "_customEvent_" + "Killed");
+}
+
 }
 
 }
