@@ -3,24 +3,28 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-val-349-19 comment="false" x="26" y="40">
+                <toggle-image comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
+                <set-val-349-19 comment="false" x="26" y="67">
                     <int id="0" val="Inactive"/>
                 </set-val-349-19>
-                <set-val-349-29 comment="false" x="26" y="60">
+                <set-val-349-29 comment="false" x="26" y="87">
                     <get-xy comment="false" id="0" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
                         <int id="1" val="0"/>
                     </get-xy>
                 </set-val-349-29>
-                <set-val-349-30 comment="false" x="26" y="93">
+                <set-val-349-30 comment="false" x="26" y="120">
                     <get-xy comment="false" id="0" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
                         <int id="1" val="1"/>
                     </get-xy>
                 </set-val-349-30>
-                <if comment="false" x="26" y="126">
+                <if comment="false" x="26" y="153">
                     <group eventID="1" id="-1">
-                        <custom-689 comment="false" x="37" y="151">
+                        <custom-689 comment="false" x="37" y="178">
                             <ACTOR eid="this" id="0"/>
                         </custom-689>
                     </group>
@@ -139,7 +143,7 @@
         <receiver-3-678 comment="false" x="15" y="15">
             <group eventID="3" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="var prevAngle = __CurrentAngle;&#10;__CurrentAngle += __ChangeAngle;&#10;while (__CurrentAngle &amp;gt;= 360)&#10;{&#10;&#9;__CurrentAngle -= 360;&#10;}&#10;&#10;while (__CurrentAngle &amp;lt; 0)&#10;{&#10;&#9;__CurrentAngle += 360;&#10;}&#10;&#10;trace(__CurrentAngle);&#10;if (__CurrentAngle == 90 &amp;amp;&amp;amp; _YTotal &amp;gt;= -16)&#10;{&#10;&#9;if (prevAngle == 0 || prevAngle == 180)&#10;&#9;{&#10;&#9;&#9;if (Math.random() &amp;lt; 0.5) __CurrentAngle = prevAngle;&#10;&#9;&#9;else __CurrentAngle = 270;&#10;&#9;}&#10;&#9;else {&#10;&#9;&#9;if (Math.random() &amp;lt; 0.5) __CurrentAngle = 0;&#10;&#9;&#9;else __CurrentAngle = 180;&#10;&#9;}&#10;}&#10;return __CurrentAngle;&#10;"/>
+                    <int id="0" val="var prevAngle = __CurrentAngle;&#10;__CurrentAngle += __ChangeAngle;&#10;while (__CurrentAngle &amp;gt;= 360)&#10;{&#10;&#9;__CurrentAngle -= 360;&#10;}&#10;&#10;while (__CurrentAngle &amp;lt; 0)&#10;{&#10;&#9;__CurrentAngle += 360;&#10;}&#10;&#10;if (__CurrentAngle == 90 &amp;amp;&amp;amp; _YTotal &amp;gt;= -16)&#10;{&#10;&#9;if (prevAngle == 0 || prevAngle == 180)&#10;&#9;{&#10;&#9;&#9;if (Math.random() &amp;lt; 0.5) __CurrentAngle = prevAngle;&#10;&#9;&#9;else __CurrentAngle = 270;&#10;&#9;}&#10;&#9;else {&#10;&#9;&#9;if (Math.random() &amp;lt; 0.5) __CurrentAngle = 0;&#10;&#9;&#9;else __CurrentAngle = 180;&#10;&#9;}&#10;}&#10;return __CurrentAngle;&#10;"/>
                 </code-long>
             </group>
             <get-byobval-349-678-0 comment="false" id="0" x="0" y="0"/>
@@ -716,12 +720,13 @@
                         <set-val-349-19 comment="false" x="37" y="880">
                             <int id="0" val="Waiting"/>
                         </set-val-349-19>
-                        <scene-shout comment="false" x="37" y="900">
-                            <int id="0" val="GooseHeadComplete"/>
-                        </scene-shout>
-                        <dolater comment="false" x="37" y="920">
+                        <custom-694 comment="false" x="37" y="900">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="GooseHeadComplete"/>
+                        </custom-694>
+                        <dolater comment="false" x="37" y="927">
                             <group eventID="6" id="-1">
-                                <set-val-349-19 comment="false" x="48" y="952">
+                                <set-val-349-19 comment="false" x="48" y="959">
                                     <int id="0" val="Removing"/>
                                 </set-val-349-19>
                             </group>
@@ -987,17 +992,18 @@
                         </else-if>
                         <else comment="false" x="37" y="831">
                             <group eventID="1" id="-1">
-                                <scene-shout comment="false" x="48" y="851">
-                                    <int id="0" val="GooseHeadRemoved"/>
-                                </scene-shout>
-                                <if comment="false" x="48" y="871">
+                                <custom-694 comment="false" x="48" y="851">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="GooseHeadRemoved"/>
+                                </custom-694>
+                                <if comment="false" x="48" y="878">
                                     <group eventID="7" id="-1">
-                                        <if comment="false" x="59" y="901">
+                                        <if comment="false" x="59" y="908">
                                             <group eventID="7" id="-1">
-                                                <set-val-349-20 comment="false" x="70" y="931">
+                                                <set-val-349-20 comment="false" x="70" y="938">
                                                     <true comment="false" id="0" x="0" y="0"/>
                                                 </set-val-349-20>
-                                                <custom-689 comment="false" x="70" y="956">
+                                                <custom-689 comment="false" x="70" y="963">
                                                     <ACTOR eid="this" id="0"/>
                                                 </custom-689>
                                             </group>
@@ -1006,14 +1012,14 @@
                                                 <int id="1" val="0"/>
                                             </eq>
                                         </if>
-                                        <else comment="false" x="59" y="995">
+                                        <else comment="false" x="59" y="1002">
                                             <group eventID="7" id="-1">
-                                                <dolater comment="false" x="70" y="1015">
+                                                <dolater comment="false" x="70" y="1022">
                                                     <group eventID="7" id="-1">
-                                                        <set-val-349-20 comment="false" x="81" y="1047">
+                                                        <set-val-349-20 comment="false" x="81" y="1054">
                                                             <true comment="false" id="0" x="0" y="0"/>
                                                         </set-val-349-20>
-                                                        <custom-689 comment="false" x="81" y="1072">
+                                                        <custom-689 comment="false" x="81" y="1079">
                                                             <ACTOR eid="this" id="0"/>
                                                         </custom-689>
                                                     </group>
@@ -1028,7 +1034,7 @@
                                         <int id="1" val="-1"/>
                                     </more>
                                 </if>
-                                <cancel comment="false" x="48" y="1135"/>
+                                <cancel comment="false" x="48" y="1142"/>
                             </group>
                         </else>
                     </group>
@@ -1156,4 +1162,34 @@
         </step>
     </group>
     <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <receiver-9-694 comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <comment-short comment="false" x="26" y="45">
+                    <int id="0" val="replace &amp;quot; &amp;quot; with &amp;quot;&amp;quot;"/>
+                </comment-short>
+                <scene-shout comment="false" x="26" y="65">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <str-combine comment="false" id="0" x="0" y="0">
+                            <str-replace comment="false" id="0" x="0" y="0">
+                                <custom-241 comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-241>
+                                <int id="1" val=" "/>
+                                <int id="2" val=""/>
+                            </str-replace>
+                            <int id="1" val="_"/>
+                        </str-combine>
+                        <get-byobval-349-694-1 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </scene-shout>
+            </group>
+            <get-byobval-349-694-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-349-694-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-9-694>
+    </group>
+    <group eventID="13" id="-1">
+        <get-byobval-349-694-0 comment="false" x="0" y="0"/>
+        <get-byobval-349-694-1 comment="false" x="0" y="0"/>
+    </group>
 </groups>

@@ -309,10 +309,6 @@
                 <prop id="3" list="0" val="0"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="54">
-                <prop id="1" list="0" val="true"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="353">
                 <prop id="2" list="0" val="0"/>
                 <prop id="3" list="0" val="0"/>
@@ -321,6 +317,10 @@
                 <prop id="6" list="0" val="0"/>
                 <prop id="7" list="0" val="0.25"/>
                 <prop id="8" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="true"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="345">
@@ -831,8 +831,8 @@
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="30"/>
                 <prop id="14" list="0" val="0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="15" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="139">
                 <prop id="1" list="0" val="Bump Out PM"/>
@@ -1890,6 +1890,10 @@
                 <prop id="2" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="191">
                 <prop id="1" list="0" val="1"/>
                 <prop id="2" list="0" val="0.5"/>
@@ -1897,10 +1901,6 @@
                 <prop id="4" list="0" val="300"/>
                 <prop id="5" list="0" val="200"/>
                 <prop id="6" list="0" val=""/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="54">
-                <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="77">
@@ -1935,8 +1935,8 @@
                 <prop id="4" list="0" val="262"/>
                 <prop id="10" list="0" val="9"/>
                 <prop id="14" list="0" val="0"/>
-                <prop id="15" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="15" list="0" val="false"/>
             </s>
             <s enabled="true" id="139">
                 <prop id="1" list="0" val="Bump Out PM"/>
@@ -1982,6 +1982,61 @@
             </s>
         </snippets>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="365" fixedrot="false" fric="0.2" gid="3" id="697" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Explode" oid="-1" pausable="true" rest="0.0" shared="false" sprite="698" static="false">
+        <snippets>
+            <s enabled="true" id="201">
+                <prop id="1" list="0" val="0.0"/>
+                <prop id="2" list="0" val="5"/>
+                <prop id="3" list="0" val="-5"/>
+                <prop id="4" list="0" val="0.0"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="-10"/>
+                <prop id="7" list="0" val="20"/>
+                <prop id="8" list="0" val="1"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="698" name="Egg Explode" shared="false" width="8">
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="16" id="0" loop="true" name="p1" numframes="6" originx="4" originy="8" sync="false" width="48">
+            <poly data="4,0,0,8,0,8,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="364" fixedrot="true" fric="0.2" gid="3" id="695" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Grenade" oid="-1" pausable="true" rest="0.5" shared="false" sprite="696" static="false">
+        <snippets>
+            <s enabled="true" id="185">
+                <prop id="1" list="0" val="Explode With Random Pieces PM"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="354">
+                <prop id="1" list="0" val="0.0"/>
+                <prop id="2" list="0" val="4"/>
+                <prop id="3" list="0" val="697"/>
+                <prop id="4" list="0" val="1"/>
+                <prop id="5" list="0" val="0.0"/>
+                <prop id="6" list="0" val="0.0"/>
+                <prop id="7" list="0" val="0.0"/>
+                <prop id="8" list="0" val="0.0"/>
+                <prop id="9" list="0" val="4"/>
+                <prop id="10" list="0" val="true"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="345">
+                <prop id="1" list="0" val="0.0"/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="5" list="0" val="2"/>
+                <prop id="6" list="0" val="Explode With Random Pieces PM"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="696" name="Egg Grenade" shared="false" width="10">
+        <anim across="10" down="1" durations="100,100,100,100,100,100,100,100,100,100" height="16" id="0" loop="true" name="Animation 0" numframes="10" originx="5" originy="8" sync="false" width="100">
+            <poly data="4,0,0,10,0,10,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="126" fixedrot="true" fric="0.2" gid="3" id="189" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg In Larder" oid="-1" pausable="true" rest="0.0" shared="false" sprite="190" static="true">
         <snippets>
             <s enabled="true" id="127">
@@ -2029,10 +2084,6 @@
                 <prop id="2" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="54">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="191">
                 <prop id="1" list="0" val="1"/>
                 <prop id="2" list="0" val="0.5"/>
@@ -2040,6 +2091,10 @@
                 <prop id="4" list="0" val="300"/>
                 <prop id="5" list="0" val="200"/>
                 <prop id="6" list="0" val="178"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="77">
@@ -2599,6 +2654,9 @@
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="323" fixedrot="false" fric="0.2" gid="10" id="620" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Flames" oid="-1" pausable="true" rest="0.0" shared="false" sprite="621" static="true">
         <snippets>
+            <s enabled="true" id="63">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="148">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
@@ -2612,9 +2670,6 @@
                 </prop>
                 <prop id="6" list="0" val="Bump Out PM"/>
                 <prop id="7" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="63">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -2997,6 +3052,10 @@
             <s enabled="true" id="67">
                 <prop id="1" list="0" val="0"/>
                 <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="349">
@@ -3028,7 +3087,14 @@
                 <prop id="24" list="0" val="0"/>
                 <prop id="27" list="0" val="0"/>
                 <prop id="26" list="0" val="0"/>
+                <prop id="29" list="0" val="0"/>
                 <prop id="28" list="0" val="0"/>
+                <prop id="31" list="0" val="0"/>
+                <prop id="30" list="0" val="0"/>
+                <prop id="34" list="0" val="false"/>
+                <prop id="35" list="0" val="false"/>
+                <prop id="32" list="0" val="0"/>
+                <prop id="33" list="0" val="0"/>
             </s>
         </snippets>
     </actor>
@@ -3121,7 +3187,7 @@
             </s>
             <s enabled="true" id="74">
                 <prop id="3" list="0" val="85"/>
-                <prop id="4" list="0" val="20.0"/>
+                <prop id="4" list="0" val="10.0"/>
                 <prop id="5" list="0" val="false"/>
                 <prop id="6" list="0" val="Right Idle"/>
                 <prop id="7" list="0" val="Left Idle"/>
@@ -3728,9 +3794,6 @@
                 <prop id="1" list="0" val="Animate Out PM"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="215">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="147">
                 <prop id="2" list="0" val="dead-l"/>
                 <prop id="3" list="0" val="dead-r"/>
@@ -3739,6 +3802,21 @@
                 <prop id="8" list="0" val="0"/>
                 <prop id="9" list="0" val="20"/>
                 <prop id="10" list="0" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="215">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="148">
+                <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="true"/>
+                <prop id="3" list="0" val="true"/>
+                <prop id="4" list="0" val="true"/>
+                <prop id="5" list="1" val="">
+                    <text order="0" value="Rat"/>
+                </prop>
+                <prop id="6" list="0" val="Bump Out PM"/>
+                <prop id="7" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="29">
@@ -3771,18 +3849,6 @@
                 <prop id="19" list="0" val="0"/>
                 <prop id="18" list="0" val="16"/>
                 <prop id="20" list="0" val="false"/>
-            </s>
-            <s enabled="true" id="148">
-                <prop id="1" list="0" val="true"/>
-                <prop id="2" list="0" val="true"/>
-                <prop id="3" list="0" val="true"/>
-                <prop id="4" list="0" val="true"/>
-                <prop id="5" list="1" val="">
-                    <text order="0" value="Rat"/>
-                </prop>
-                <prop id="6" list="0" val="Bump Out PM"/>
-                <prop id="7" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="151">
                 <prop id="1" list="0" val="0.5"/>
@@ -3912,10 +3978,6 @@
                 <prop id="3" list="1" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="54">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="353">
                 <prop id="2" list="0" val="0"/>
                 <prop id="3" list="0" val="0"/>
@@ -3924,6 +3986,10 @@
                 <prop id="6" list="0" val="0"/>
                 <prop id="7" list="0" val="0"/>
                 <prop id="8" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -4063,16 +4129,16 @@
                 <prop id="1" list="0" val="Left"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="33">
-                <prop id="1" list="0" val=""/>
-                <prop id="2" list="0" val="false"/>
-                <prop id="3" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="48">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
                 <prop id="3" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="33">
+                <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="141">
@@ -4539,14 +4605,14 @@
             <s enabled="true" id="177">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
+            <s enabled="true" id="63">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="227">
                 <prop id="1" list="0" val="-10"/>
                 <prop id="2" list="0" val="0"/>
                 <prop id="3" list="0" val="0.9"/>
                 <prop id="4" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="63">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -4623,17 +4689,6 @@
     </custom-block>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="309" fixedrot="true" fric="0.2" gid="10" id="586" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Moving Flames" oid="-1" pausable="true" rest="0.0" shared="false" sprite="587" static="false">
         <snippets>
-            <s enabled="true" id="63">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="242">
-                <prop id="1" list="0" val="0"/>
-                <prop id="3" list="0" val="false"/>
-                <prop id="5" list="0" val="0.5"/>
-                <prop id="6" list="0" val="1"/>
-                <prop id="7" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="148">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
@@ -4645,6 +4700,17 @@
                 </prop>
                 <prop id="6" list="0" val="Bump Out PM"/>
                 <prop id="7" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="242">
+                <prop id="1" list="0" val="0"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="5" list="0" val="0.5"/>
+                <prop id="6" list="0" val="1"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="63">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="166">
@@ -4705,18 +4771,18 @@
                 <prop id="23" list="0" val="0"/>
                 <prop id="22" list="0" val="0"/>
             </s>
-            <s enabled="true" id="165">
-                <prop id="4" list="1" val="">
-                    <text order="0" value="Laser Beamer PM"/>
-                </prop>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="61">
                 <prop id="1" list="0" val=""/>
                 <prop id="2" list="0" val="0"/>
                 <prop id="3" list="0" val="0"/>
                 <prop id="4" list="0" val="false"/>
                 <prop id="5" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="165">
+                <prop id="4" list="1" val="">
+                    <text order="0" value="Laser Beamer PM"/>
+                </prop>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -5013,8 +5079,8 @@
                 <prop id="4" list="0" val="542"/>
                 <prop id="10" list="0" val="7"/>
                 <prop id="14" list="0" val="0"/>
-                <prop id="15" list="0" val="true"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="15" list="0" val="true"/>
             </s>
             <s enabled="true" id="141">
                 <prop id="1" list="1" val="">
@@ -5423,11 +5489,6 @@
                 <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="233">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2" list="0" val="true"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="337">
                 <prop id="1" list="0" val="0"/>
                 <prop id="2" list="0" val="0"/>
@@ -5440,6 +5501,11 @@
                 <prop id="9" list="1" val=""/>
                 <prop id="10" list="1" val=""/>
                 <prop id="11" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="233">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="true"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -5468,8 +5534,8 @@
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="40"/>
                 <prop id="14" list="0" val="0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="15" list="0" val="true"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="35">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -5572,16 +5638,16 @@
                 <prop id="20" list="0" val="38.0"/>
                 <prop id="22" list="0" val="38.0"/>
             </s>
-            <s enabled="true" id="185">
-                <prop id="1" list="0" val="Reduce Health PM"/>
-                <prop id="2" list="0" val="0"/>
-                <prop id="3" list="0" val="0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="48">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
                 <prop id="3" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="185">
+                <prop id="1" list="0" val="Reduce Health PM"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="148">
@@ -5821,11 +5887,6 @@
                 <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="true" id="233">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2" list="0" val="true"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="337">
                 <prop id="1" list="0" val="0"/>
                 <prop id="2" list="0" val="0"/>
@@ -5838,6 +5899,11 @@
                 <prop id="9" list="1" val=""/>
                 <prop id="10" list="1" val=""/>
                 <prop id="11" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="233">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="true"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -6236,6 +6302,10 @@
             </s>
         </snippets>
     </actor>
+    <custom-block blocktag="custom-694" blocktype="ACTION" code="~.say(&quot;Goose Head Maker PM&quot;, &quot;TriggerEvent&quot;, ~);" desc="" global="false" gui="Trigger event %1 for %0" id="694" message="TriggerEvent" name="TriggerEvent" oid="-1" return="VOID" shared="false" snippetID="349">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Event Name" order="1" type="TEXT"/>
+    </custom-block>
     <custom-block blocktag="custom-336" blocktype="ACTION" code="scripts.Design_207_207_StencylExtrasPM.TriggerEventInAllForCurrentScene(~);" desc="" global="true" gui="trigger event %0 in all behaviours for current scene" id="336" message="TriggerEventInAllForCurrentScene" name="TriggerEventInAllForCurrentScene" oid="-1" return="VOID" shared="false" snippetID="207">
         <blank name="Event Name" order="0" type="TEXT"/>
     </custom-block>
