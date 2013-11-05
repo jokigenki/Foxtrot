@@ -1840,12 +1840,12 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_183_183_ReduceHealthPM" classname="scripts.Design_183_183_ReduceHealthPM" desc="" description="" design="true" drawOrder="0" id="183" language="" name="Reduce Health PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Starting Health" hidden="false" id="1" name="_StartingHealth" order="1"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Kill Behaviour" hidden="false" id="2" name="_KillBehaviour" order="2"/>
-        <list default="list" defaultValue="list" desc="In the format value:state e.g. 3:Normal" dropdown="" fullname="States For Health Values" hidden="false" id="3" name="_StatesForHealthValues" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Health" hidden="true" id="4" name="_CurrentHealth" order="4"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Killed Scene Event" hidden="false" id="5" name="_KilledSceneEvent" order="5"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Health States" hidden="false" id="6" name="_HealthStates" order="6"/>
-        <text default="ReducedHealth" defaultValue="ReducedHealth" desc="" dropdown="" fullname="Reduced Health Event" hidden="false" id="7" name="_ReducedHealthEvent" order="7"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Kill Behaviour" hidden="false" id="2" name="_KillBehaviour" order="3"/>
+        <list default="list" defaultValue="list" desc="In the format value:state e.g. 3:Normal" dropdown="" fullname="States For Health Values" hidden="false" id="3" name="_StatesForHealthValues" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Current Health" hidden="true" id="4" name="_CurrentHealth" order="2"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Killed Scene Event" hidden="false" id="5" name="_KilledSceneEvent" order="4"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Health States" hidden="false" id="6" name="_HealthStates" order="7"/>
+        <text default="ReducedHealth" defaultValue="ReducedHealth" desc="" dropdown="" fullname="Reduced Health Event" hidden="false" id="7" name="_ReducedHealthEvent" order="5"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
@@ -3343,9 +3343,16 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Goose Head" hidden="false" id="2" name="_GooseHead" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Off Direction" hidden="false" id="3" name="_OffDirection" order="2"/>
-        <blocks/>
+        <blocks>
+            <receiver blockID="700" id="1"/>
+            <receiver blockID="701" id="2"/>
+            <receiver blockID="702" id="3"/>
+        </blocks>
         <events>
             <event displayName="Grenade Head Created" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+            <event displayName="Reduced Health" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+            <event displayName="Shoot Grenade" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
+            <event displayName="Shoot A Grenade" enabled="true" id="4" name="event-custom-block-global" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_692" classname="scripts.ActorEvents_692" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="363" language="" name="ActorEvents_692" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">

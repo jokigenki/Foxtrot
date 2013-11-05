@@ -1983,7 +1983,7 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="365" fixedrot="false" fric="0.2" gid="3" id="697" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Explode" oid="-1" pausable="true" rest="0.0" shared="false" sprite="698" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="365" fixedrot="true" fric="0.2" gid="3" id="697" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Explode" oid="-1" pausable="true" rest="0.0" shared="false" sprite="698" static="false">
         <snippets>
             <s enabled="true" id="201">
                 <prop id="1" list="0" val="0.0"/>
@@ -1999,11 +1999,9 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="698" name="Egg Explode" shared="false" width="8">
-        <anim across="6" down="1" durations="100,100,100,100,100,100" height="16" id="0" loop="true" name="p1" numframes="6" originx="4" originy="8" sync="false" width="48">
-            <poly data="4,0,0,8,0,8,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-        </anim>
+        <anim across="6" down="1" durations="100,100,100,100,100,100" height="16" id="0" loop="true" name="p1" numframes="6" originx="4" originy="8" sync="false" width="48"/>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="364" fixedrot="true" fric="0.2" gid="3" id="695" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Grenade" oid="-1" pausable="true" rest="0.5" shared="false" sprite="696" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="364" fixedrot="true" fric="0.2" gid="12" id="695" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Grenade" oid="-1" pausable="true" rest="0.5" shared="false" sprite="696" static="false">
         <snippets>
             <s enabled="true" id="185">
                 <prop id="1" list="0" val="Explode With Random Pieces PM"/>
@@ -2027,7 +2025,7 @@
             <s enabled="true" id="345">
                 <prop id="1" list="0" val="0.0"/>
                 <prop id="2" list="0" val="0.0"/>
-                <prop id="5" list="0" val="2"/>
+                <prop id="5" list="0" val="1.5"/>
                 <prop id="6" list="0" val="Explode With Random Pieces PM"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -3100,9 +3098,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="677" name="Goose Head Maker" shared="false" width="32">
-        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Box" rest="0.0" sensor="false"/>
-        </anim>
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32"/>
     </sprite>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="32" id="663" name="Goose Straight" shared="false" width="32">
         <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="32">
@@ -3137,10 +3133,28 @@
                 <prop id="1" list="0" val="Left"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
+            <s enabled="true" id="185">
+                <prop id="1" list="0" val="Reduce Health PM"/>
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="48">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
                 <prop id="3" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="353">
+                <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="0"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="30"/>
+                <prop id="6" list="0" val="0"/>
+                <prop id="7" list="0" val="0.25"/>
+                <prop id="8" list="1" val="">
+                    <text order="0" value="Egg Grenade"/>
+                </prop>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="37">
@@ -3184,6 +3198,16 @@
                 </prop>
                 <prop id="6" list="0" val="Bump Out PM"/>
                 <prop id="7" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="183">
+                <prop id="1" list="0" val="3"/>
+                <prop id="2" list="0" val="Flicker Out PM"/>
+                <prop id="3" list="1" val=""/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="5" list="0" val="GooseKilled"/>
+                <prop id="6" list="1" val=""/>
+                <prop id="7" list="0" val="ReducedHealth"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="74">
@@ -5826,6 +5850,12 @@
     <custom-block blocktag="custom-603" blocktype="ACTION" code="~.say(&quot;Swimming PM&quot;, &quot;SetPreventSwim&quot;, ~);" desc="" global="false" gui="Set Prevent Swim to %1 for %0" id="603" message="SetPreventSwim" name="SetPreventSwim" oid="-1" return="VOID" shared="false" snippetID="317">
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Value" order="1" type="BOOLEAN"/>
+    </custom-block>
+    <custom-block blocktag="custom-702" blocktype="ACTION" code="scripts.SceneEvents_37.ShootAGrenade(~);" desc="" global="true" gui="Shoot grenade from %0" id="702" message="ShootAGrenade" name="ShootAGrenade" oid="-1" return="VOID" shared="false" snippetID="362">
+        <blank name="Head Maker" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-700" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_37&quot;, &quot;ShootGrenade&quot;, ~);" desc="" global="false" gui="Shoot Grenade from %0" id="700" message="ShootGrenade" name="ShootGrenade" oid="-1" return="VOID" shared="false" snippetID="362">
+        <blank name="Head Maker" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-112" blocktype="ACTION" code="~.say(&quot;Walking PM&quot;, &quot;SlowToMax&quot;, ~);" desc="" global="false" gui="Slow Down %0 To Max Speed Using Rate %1" id="112" message="SlowToMax" name="SlowToMax" oid="-1" return="VOID" shared="false" snippetID="74">
         <blank name="Self" order="0" type="ACTOR"/>

@@ -190,7 +190,7 @@ propertyChanged("_ReadyToRemove", _ReadyToRemove);
 
                     else
 {
-                        shoutToScene("_customEvent_" + "GooseHeadRemoved");
+                        actor.say("Goose Head Maker PM", "_customBlock_TriggerEvent", ["GooseHeadRemoved"]);
                         if((_ReactivateAfterTime > -1))
 {
                             if((_ReactivateAfterTime == 0))
@@ -235,7 +235,6 @@ while (__CurrentAngle < 0)
 	__CurrentAngle += 360;
 }
 
-trace(__CurrentAngle);
 if (__CurrentAngle == 90 && _YTotal >= -16)
 {
 	if (prevAngle == 0 || prevAngle == 180)
@@ -465,7 +464,7 @@ propertyChanged("_CurrentNumberOfSegments", _CurrentNumberOfSegments);
             if(!isPrimitive(_Pipe)) {_Pipe = getDefaultValue(_Pipe);}
             _State = "Waiting";
 propertyChanged("_State", _State);
-            shoutToScene("_customEvent_" + "GooseHeadComplete");
+            actor.say("Goose Head Maker PM", "_customBlock_TriggerEvent", ["GooseHeadComplete"]);
             runLater(1000 * _TimeBeforeRemoving, function(timeTask:TimedTask):Void {
                         _State = "Removing";
 propertyChanged("_State", _State);
@@ -528,6 +527,15 @@ propertyChanged("_IsActive", _IsActive);
 propertyChanged("_IsActive", _IsActive);
 }
 
+    
+
+/* Params are:__Self __EventName */
+public function _customBlock_TriggerEvent(__EventName:String):Void
+{
+var __Self:Actor = actor;
+        /* "replace \" \" with \"\"" */
+        shoutToScene("_customEvent_" + (("" + (("" + StringTools.replace(("" + "" + (scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(actor))), ("" + " "), ("" + ""))) + ("" + "_"))) + ("" + __EventName)));
+}
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -605,7 +613,8 @@ _ReactivateAfterTime = 0.0;
 	
 	override public function init()
 	{
-		            _State = "Inactive";
+		            actor.disableActorDrawing();
+        _State = "Inactive";
 propertyChanged("_State", _State);
         _StartXPosition = asNumber(actor.getX());
 propertyChanged("_StartXPosition", _StartXPosition);
