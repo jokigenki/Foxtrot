@@ -920,6 +920,9 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Offset" hidden="true" id="1" name="_XOffset" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="true" id="2" name="_YOffset" order="2"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Target Actor" hidden="false" id="3" name="_TargetActor" order="3"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Offset When Facing Left" hidden="false" id="4" name="_OffsetWhenFacingLeft" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Offset When Facing Right" hidden="false" id="5" name="_OffsetWhenFacingRight" order="5"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Was Facing Right?" hidden="true" id="6" name="_WasFacingRight" order="6"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
@@ -2972,7 +2975,8 @@
         <scene default="" defaultValue="" desc="" dropdown="" fullname="Scene" hidden="false" id="2" name="_Scene" order="1"/>
         <blocks/>
         <events>
-            <event displayName="On Reload" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+            <event displayName="On Reload" enabled="true" id="1" name="event-custom" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_457" classname="scripts.ActorEvents_457" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="343" language="" name="ActorEvents_457" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -3091,7 +3095,14 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Number Of Pipes" hidden="true" id="24" name="_NumberOfPipes" order="23"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Offset X" hidden="true" id="27" name="_StartOffsetX" order="26"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Current Angle" hidden="true" id="26" name="_CurrentAngle" order="25"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start X Position" hidden="true" id="29" name="_StartXPosition" order="28"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Y Offset" hidden="true" id="28" name="_StartYOffset" order="27"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Movement X" hidden="true" id="31" name="_MovementX" order="30"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Y Position" hidden="true" id="30" name="_StartYPosition" order="29"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Ready To Generate?" hidden="true" id="34" name="_ReadyToGenerate" order="33"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Ready To Remove?" hidden="true" id="35" name="_ReadyToRemove" order="34"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Movement Y" hidden="true" id="32" name="_MovementY" order="31"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Reactivate After Time" hidden="false" id="33" name="_ReactivateAfterTime" order="32"/>
         <blocks>
             <receiver blockID="666" id="1"/>
             <receiver blockID="667" id="2"/>
@@ -3114,6 +3125,7 @@
             <event displayName="Start" enabled="true" id="9" name="event-custom-block" order="3" repeats="true"/>
             <event displayName="Deactivate" enabled="true" id="10" name="event-custom" order="11" repeats="true"/>
             <event displayName="Killed" enabled="true" id="11" name="event-actor-create-kill" order="2" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="12" name="step" order="12" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_660" classname="scripts.ActorEvents_660" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="348" language="" name="ActorEvents_660" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -3324,6 +3336,10 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_37" classname="scripts.SceneEvents_37" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="362" language="" name="SceneEvents_37" oid="-1" package="scripts." sceneid="37" scenespecific="true" shared="false" type="scene">
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_692" classname="scripts.ActorEvents_692" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="363" language="" name="ActorEvents_692" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>

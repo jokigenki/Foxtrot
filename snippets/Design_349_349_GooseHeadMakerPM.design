@@ -6,9 +6,21 @@
                 <set-val-349-19 comment="false" x="26" y="40">
                     <int id="0" val="Inactive"/>
                 </set-val-349-19>
-                <if comment="false" x="26" y="60">
+                <set-val-349-29 comment="false" x="26" y="60">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-349-29>
+                <set-val-349-30 comment="false" x="26" y="93">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-349-30>
+                <if comment="false" x="26" y="126">
                     <group eventID="1" id="-1">
-                        <custom-689 comment="false" x="37" y="85">
+                        <custom-689 comment="false" x="37" y="151">
                             <ACTOR eid="this" id="0"/>
                         </custom-689>
                     </group>
@@ -127,7 +139,7 @@
         <receiver-3-678 comment="false" x="15" y="15">
             <group eventID="3" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="__CurrentAngle += __ChangeAngle;&#10;while (__CurrentAngle &amp;gt;= 360)&#10;{&#10;&#9;__CurrentAngle -= 360;&#10;}&#10;&#10;while (__CurrentAngle &amp;lt; 0)&#10;{&#10;&#9;__CurrentAngle += 360;&#10;}&#10;&#10;return __CurrentAngle;&#10;"/>
+                    <int id="0" val="var prevAngle = __CurrentAngle;&#10;__CurrentAngle += __ChangeAngle;&#10;while (__CurrentAngle &amp;gt;= 360)&#10;{&#10;&#9;__CurrentAngle -= 360;&#10;}&#10;&#10;while (__CurrentAngle &amp;lt; 0)&#10;{&#10;&#9;__CurrentAngle += 360;&#10;}&#10;&#10;trace(__CurrentAngle);&#10;if (__CurrentAngle == 90 &amp;amp;&amp;amp; _YTotal &amp;gt;= -16)&#10;{&#10;&#9;if (prevAngle == 0 || prevAngle == 180)&#10;&#9;{&#10;&#9;&#9;if (Math.random() &amp;lt; 0.5) __CurrentAngle = prevAngle;&#10;&#9;&#9;else __CurrentAngle = 270;&#10;&#9;}&#10;&#9;else {&#10;&#9;&#9;if (Math.random() &amp;lt; 0.5) __CurrentAngle = 0;&#10;&#9;&#9;else __CurrentAngle = 180;&#10;&#9;}&#10;}&#10;return __CurrentAngle;&#10;"/>
                 </code-long>
             </group>
             <get-byobval-349-678-0 comment="false" id="0" x="0" y="0"/>
@@ -538,7 +550,7 @@
                                     </get-xy>
                                     <get-val-349-14 comment="false" id="1" x="0" y="0"/>
                                 </plus>
-                                <int id="1" val="19"/>
+                                <int id="1" val="32"/>
                             </minus>
                             <minus comment="false" id="2" x="0" y="0">
                                 <plus comment="false" id="0" x="0" y="0">
@@ -565,19 +577,31 @@
                         </add-list>
                         <add-list comment="false" x="37" y="207">
                             <get-val-349-22 comment="false" id="0" x="0" y="0"/>
-                            <get-xy comment="false" id="1" x="0" y="0">
-                                <ACTOR eid="var" id="0" vid="12"/>
-                                <int id="1" val="0"/>
-                            </get-xy>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="12"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                            </minus>
                         </add-list>
-                        <add-list comment="false" x="37" y="240">
+                        <add-list comment="false" x="37" y="245">
                             <get-val-349-23 comment="false" id="0" x="0" y="0"/>
-                            <get-xy comment="false" id="1" x="0" y="0">
-                                <ACTOR eid="var" id="0" vid="12"/>
-                                <int id="1" val="1"/>
-                            </get-xy>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="12"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                            </minus>
                         </add-list>
-                        <add-list comment="false" x="37" y="273">
+                        <add-list comment="false" x="37" y="283">
                             <get-val-349-25 comment="false" id="0" x="0" y="0"/>
                             <getdir comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="var" id="0" vid="12"/>
@@ -589,15 +613,15 @@
                         <int id="1" val="1"/>
                     </value>
                 </if>
-                <set-val-349-7 comment="false" x="26" y="318">
+                <set-val-349-7 comment="false" x="26" y="328">
                     <randint comment="false" id="0" x="0" y="0">
                         <int id="0" val="0"/>
                         <int id="1" val="2"/>
                     </randint>
                 </set-val-349-7>
-                <if comment="false" x="26" y="343">
+                <if comment="false" x="26" y="353">
                     <group eventID="1" id="-1">
-                        <set-val-349-6 comment="false" x="37" y="373">
+                        <set-val-349-6 comment="false" x="37" y="383">
                             <custom-678 comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <get-val-349-26 comment="false" id="1" x="0" y="0"/>
@@ -610,9 +634,9 @@
                         <int id="1" val="0"/>
                     </eq>
                 </if>
-                <else-if comment="false" x="26" y="423">
+                <else-if comment="false" x="26" y="433">
                     <group eventID="1" id="-1">
-                        <set-val-349-6 comment="false" x="37" y="453">
+                        <set-val-349-6 comment="false" x="37" y="463">
                             <custom-678 comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <get-val-349-26 comment="false" id="1" x="0" y="0"/>
@@ -625,67 +649,79 @@
                         <int id="1" val="1"/>
                     </eq>
                 </else-if>
-                <else comment="false" x="26" y="503">
+                <else comment="false" x="26" y="513">
                     <group eventID="1" id="-1">
-                        <set-val-349-6 comment="false" x="37" y="523">
+                        <set-val-349-6 comment="false" x="37" y="533">
                             <get-val-349-26 comment="false" id="0" x="0" y="0"/>
                         </set-val-349-6>
                     </group>
                 </else>
-                <set-val-349-10 comment="false" x="26" y="560">
+                <set-val-349-10 comment="false" x="26" y="570">
                     <custom-686 comment="false" id="0" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
                     </custom-686>
                 </set-val-349-10>
-                <custom-667 comment="false" x="26" y="600">
+                <custom-667 comment="false" x="26" y="610">
                     <ACTOR eid="this" id="0"/>
                 </custom-667>
-                <set-val-349-26 comment="false" x="26" y="627">
+                <set-val-349-26 comment="false" x="26" y="637">
                     <get-val-349-6 comment="false" id="0" x="0" y="0"/>
                 </set-val-349-26>
-                <incdec comment="false" x="26" y="652">
+                <incdec comment="false" x="26" y="662">
                     <int id="0" val="5"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1"/>
                 </incdec>
-                <add-list comment="false" x="26" y="679">
+                <add-list comment="false" x="26" y="689">
                     <get-val-349-13 comment="false" id="0" x="0" y="0"/>
                     <get-val-349-10 comment="false" id="1" x="0" y="0"/>
                 </add-list>
-                <add-list comment="false" x="26" y="704">
+                <add-list comment="false" x="26" y="714">
                     <get-val-349-22 comment="false" id="0" x="0" y="0"/>
-                    <get-xy comment="false" id="1" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="12"/>
-                        <int id="1" val="0"/>
-                    </get-xy>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="12"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                    </minus>
                 </add-list>
-                <add-list comment="false" x="26" y="737">
+                <add-list comment="false" x="26" y="752">
                     <get-val-349-23 comment="false" id="0" x="0" y="0"/>
-                    <get-xy comment="false" id="1" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="12"/>
-                        <int id="1" val="1"/>
-                    </get-xy>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="12"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                    </minus>
                 </add-list>
-                <add-list comment="false" x="26" y="770">
+                <add-list comment="false" x="26" y="790">
                     <get-val-349-25 comment="false" id="0" x="0" y="0"/>
                     <getdir comment="false" id="1" x="0" y="0">
                         <ACTOR eid="var" id="0" vid="12"/>
                     </getdir>
                 </add-list>
-                <if comment="false" x="26" y="803">
+                <if comment="false" x="26" y="823">
                     <group eventID="1" id="-1">
-                        <clear comment="false" x="37" y="833">
+                        <clear comment="false" x="37" y="853">
                             <int id="0" val="10"/>
                         </clear>
-                        <set-val-349-19 comment="false" x="37" y="860">
+                        <set-val-349-19 comment="false" x="37" y="880">
                             <int id="0" val="Waiting"/>
                         </set-val-349-19>
-                        <scene-shout comment="false" x="37" y="880">
+                        <scene-shout comment="false" x="37" y="900">
                             <int id="0" val="GooseHeadComplete"/>
                         </scene-shout>
-                        <dolater comment="false" x="37" y="900">
+                        <dolater comment="false" x="37" y="920">
                             <group eventID="6" id="-1">
-                                <set-val-349-19 comment="false" x="48" y="932">
+                                <set-val-349-19 comment="false" x="48" y="952">
                                     <int id="0" val="Removing"/>
                                 </set-val-349-19>
                             </group>
@@ -738,37 +774,49 @@
                 <set-xy comment="false" x="26" y="209">
                     <ACTOR eid="var" id="0" vid="12"/>
                     <int id="1" val="0"/>
-                    <get-val-349-8 comment="false" id="2" x="0" y="0"/>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-val-349-8 comment="false" id="1" x="0" y="0"/>
+                    </plus>
                 </set-xy>
-                <set-xy comment="false" x="26" y="241">
+                <set-xy comment="false" x="26" y="254">
                     <ACTOR eid="var" id="0" vid="12"/>
                     <int id="1" val="1"/>
-                    <get-val-349-9 comment="false" id="2" x="0" y="0"/>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <get-val-349-9 comment="false" id="1" x="0" y="0"/>
+                    </plus>
                 </set-xy>
-                <setangle comment="false" x="26" y="273">
+                <setangle comment="false" x="26" y="299">
                     <ACTOR eid="var" id="0" vid="12"/>
                     <get-item comment="false" id="1" x="0" y="0">
                         <get-val-349-25 comment="false" id="0" x="0" y="0"/>
                         <get-val-349-5 comment="false" id="1" x="0" y="0"/>
                     </get-item>
                 </setangle>
-                <incdec comment="false" x="26" y="310">
+                <incdec comment="false" x="26" y="336">
                     <int id="0" val="5"/>
                     <int id="1" val="1"/>
                     <int id="2" val="1"/>
                 </incdec>
-                <if comment="false" x="26" y="337">
+                <if comment="false" x="26" y="363">
                     <group eventID="7" id="-1">
-                        <die comment="false" x="37" y="367">
+                        <die comment="false" x="37" y="393">
                             <ACTOR eid="var" id="0" vid="12"/>
                         </die>
-                        <clear comment="false" x="37" y="394">
+                        <clear comment="false" x="37" y="420">
                             <int id="0" val="12"/>
                         </clear>
-                        <set-val-349-19 comment="false" x="37" y="421">
+                        <set-val-349-19 comment="false" x="37" y="447">
                             <int id="0" val="Inactive"/>
                         </set-val-349-19>
-                        <set-val-349-20 comment="false" x="37" y="441">
+                        <set-val-349-20 comment="false" x="37" y="467">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-349-20>
                     </group>
@@ -796,10 +844,7 @@
                 </set-val-349-20>
                 <if comment="false" x="26" y="122">
                     <group eventID="8" id="-1">
-                        <set-val-349-19 comment="false" x="37" y="152">
-                            <int id="0" val="Making"/>
-                        </set-val-349-19>
-                        <custom-689 comment="false" x="37" y="172">
+                        <custom-689 comment="false" x="37" y="152">
                             <ACTOR eid="this" id="0"/>
                         </custom-689>
                     </group>
@@ -909,29 +954,29 @@
                     <group eventID="1" id="-1">
                         <if comment="false" x="37" y="635">
                             <group eventID="1" id="-1">
-                                <custom-687 comment="false" x="48" y="665">
-                                    <ACTOR eid="this" id="0"/>
-                                </custom-687>
+                                <set-val-349-34 comment="false" x="48" y="665">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-349-34>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
                                 <get-val-349-19 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="Making"/>
                             </eq>
                         </if>
-                        <else-if comment="false" x="37" y="704">
+                        <else-if comment="false" x="37" y="702">
                             <group eventID="1" id="-1">
-                                <custom-688 comment="false" x="48" y="734">
-                                    <ACTOR eid="this" id="0"/>
-                                </custom-688>
+                                <set-val-349-35 comment="false" x="48" y="732">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-349-35>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
                                 <get-val-349-19 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="Removing"/>
                             </eq>
                         </else-if>
-                        <else-if comment="false" x="37" y="773">
+                        <else-if comment="false" x="37" y="769">
                             <group eventID="9" id="-1">
-                                <comment-short comment="false" x="48" y="803">
+                                <comment-short comment="false" x="48" y="799">
                                     <int id="0" val="Do nothing"/>
                                 </comment-short>
                             </group>
@@ -940,12 +985,50 @@
                                 <int id="1" val="Waiting"/>
                             </eq>
                         </else-if>
-                        <else comment="false" x="37" y="835">
+                        <else comment="false" x="37" y="831">
                             <group eventID="1" id="-1">
-                                <scene-shout comment="false" x="48" y="855">
+                                <scene-shout comment="false" x="48" y="851">
                                     <int id="0" val="GooseHeadRemoved"/>
                                 </scene-shout>
-                                <cancel comment="false" x="48" y="875"/>
+                                <if comment="false" x="48" y="871">
+                                    <group eventID="7" id="-1">
+                                        <if comment="false" x="59" y="901">
+                                            <group eventID="7" id="-1">
+                                                <set-val-349-20 comment="false" x="70" y="931">
+                                                    <true comment="false" id="0" x="0" y="0"/>
+                                                </set-val-349-20>
+                                                <custom-689 comment="false" x="70" y="956">
+                                                    <ACTOR eid="this" id="0"/>
+                                                </custom-689>
+                                            </group>
+                                            <eq comment="false" id="0" x="0" y="0">
+                                                <get-val-349-33 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="0"/>
+                                            </eq>
+                                        </if>
+                                        <else comment="false" x="59" y="995">
+                                            <group eventID="7" id="-1">
+                                                <dolater comment="false" x="70" y="1015">
+                                                    <group eventID="7" id="-1">
+                                                        <set-val-349-20 comment="false" x="81" y="1047">
+                                                            <true comment="false" id="0" x="0" y="0"/>
+                                                        </set-val-349-20>
+                                                        <custom-689 comment="false" x="81" y="1072">
+                                                            <ACTOR eid="this" id="0"/>
+                                                        </custom-689>
+                                                    </group>
+                                                    <get-val-349-33 comment="false" id="0" x="0" y="0"/>
+                                                    <ACTOR eid="this" id="2"/>
+                                                </dolater>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <more comment="false" id="0" x="0" y="0">
+                                        <get-val-349-33 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="-1"/>
+                                    </more>
+                                </if>
+                                <cancel comment="false" x="48" y="1135"/>
                             </group>
                         </else>
                     </group>
@@ -987,4 +1070,90 @@
         </event-actor-create-kill>
     </group>
     <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <set-val-349-31 comment="false" x="26" y="40">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-val-349-29 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-349-31>
+                <set-val-349-32 comment="false" x="26" y="78">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <get-val-349-30 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-349-32>
+                <for-each comment="false" x="26" y="116">
+                    <group eventID="12" id="-1">
+                        <set-xy comment="false" x="37" y="141">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-val-349-31 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="191">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-val-349-32 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-xy>
+                    </group>
+                    <get-val-349-13 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <set-val-349-29 comment="false" x="26" y="253">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-349-29>
+                <set-val-349-30 comment="false" x="26" y="286">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-349-30>
+                <if comment="false" x="26" y="319">
+                    <group eventID="12" id="-1">
+                        <custom-687 comment="false" x="37" y="344">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-687>
+                    </group>
+                    <get-val-349-34 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else-if comment="false" x="26" y="383">
+                    <group eventID="12" id="-1">
+                        <custom-688 comment="false" x="37" y="408">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-688>
+                    </group>
+                    <get-val-349-35 comment="false" id="0" x="0" y="0"/>
+                </else-if>
+                <set-val-349-34 comment="false" x="26" y="447">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-349-34>
+                <set-val-349-35 comment="false" x="26" y="472">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-349-35>
+            </group>
+        </step>
+    </group>
+    <group eventID="12" id="-1"/>
 </groups>

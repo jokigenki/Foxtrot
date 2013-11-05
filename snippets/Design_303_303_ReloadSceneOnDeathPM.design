@@ -91,4 +91,25 @@
         </event-custom>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <custom-code comment="false" x="37" y="73">
+                            <int id="0" val="_Scene = GameModel.get().scenes.get(getIDForScene(getCurrentSceneName())); "/>
+                        </custom-code>
+                        <custom-code comment="false" x="37" y="93">
+                            <int id="0" val="propertyChanged(&amp;quot;_Scene&amp;quot;, _Scene);"/>
+                        </custom-code>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="2"/>
+                        <int id="1" val="1"/>
+                    </value>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>
