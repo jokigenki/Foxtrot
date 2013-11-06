@@ -102,6 +102,66 @@ propertyChanged("_CrateMaker", _CrateMaker);
 /* Params are:__GrenadeMaker */
 public function _customBlock_ShootGrenade(__GrenadeMaker:Actor):Void
 {
+        _GooseHead = __GrenadeMaker.getValue("Goose Head Maker PM", "_Head");
+propertyChanged("_GooseHead", _GooseHead);
+        createRecycledActor(getActorType(695), _GooseHead.getX(), _GooseHead.getY(), Script.FRONT);
+        if((Utils.DEG * (_GooseHead.getAngle()) == 0))
+{
+            _OffDirection = asNumber((randomFloat() - 0.5));
+propertyChanged("_OffDirection", _OffDirection);
+            if((_GooseHead.realScaleY == 1))
+{
+                getLastCreatedActor().applyImpulse(_OffDirection, -1, 30);
+}
+
+            else
+{
+                getLastCreatedActor().applyImpulse(_OffDirection, 1, 30);
+}
+
+}
+
+        else if((Utils.DEG * (_GooseHead.getAngle()) == 90))
+{
+            if((_GooseHead.realScaleY == 1))
+{
+                getLastCreatedActor().applyImpulse(1, _OffDirection, 60);
+}
+
+            else
+{
+                getLastCreatedActor().applyImpulse(-1, _OffDirection, 60);
+}
+
+}
+
+        else if((Utils.DEG * (_GooseHead.getAngle()) == 180))
+{
+            if((_GooseHead.realScaleY == 1))
+{
+                getLastCreatedActor().applyImpulse(_OffDirection, -1, 60);
+}
+
+            else
+{
+                getLastCreatedActor().applyImpulse(_OffDirection, 1, 60);
+}
+
+}
+
+        else
+{
+            if((_GooseHead.realScaleY == 1))
+{
+                getLastCreatedActor().applyImpulse(-1, _OffDirection, 60);
+}
+
+            else
+{
+                getLastCreatedActor().applyImpulse(1, _OffDirection, 60);
+}
+
+}
 
 }
 
