@@ -35,29 +35,26 @@
                         </set-val-147-10>
                     </group>
                 </else>
-                <print comment="false" x="26" y="258">
-                    <get-val-147-10 comment="false" id="0" x="0" y="0"/>
-                </print>
-                <set-dxy comment="false" x="26" y="283">
+                <set-dxy comment="false" x="26" y="258">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="0"/>
                 </set-dxy>
-                <set-dxy comment="false" x="26" y="310">
+                <set-dxy comment="false" x="26" y="285">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
                     <int id="2" val="0"/>
                 </set-dxy>
-                <push-shove comment="false" x="26" y="337">
+                <push-shove comment="false" x="26" y="312">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
                     <get-val-147-7 comment="false" id="2" x="0" y="0"/>
                     <get-val-147-8 comment="false" id="3" x="0" y="0"/>
                     <get-val-147-9 comment="false" id="4" x="0" y="0"/>
                 </push-shove>
-                <if comment="false" x="26" y="369">
+                <if comment="false" x="26" y="344">
                     <group eventID="1" id="-1">
-                        <custom-88 comment="false" x="37" y="402">
+                        <custom-88 comment="false" x="37" y="377">
                             <ACTOR eid="this" id="0"/>
                             <get-val-147-10 comment="false" id="1" x="0" y="0"/>
                         </custom-88>
@@ -67,28 +64,28 @@
                         <int id="1" val="Animation Manager"/>
                     </has-snippet>
                 </if>
-                <else comment="false" x="26" y="446">
+                <else comment="false" x="26" y="421">
                     <group eventID="1" id="-1">
-                        <setanim comment="false" x="37" y="466">
+                        <setanim comment="false" x="37" y="441">
                             <ACTOR eid="this" id="0"/>
                             <get-val-147-10 comment="false" id="1" x="0" y="0"/>
                         </setanim>
                     </group>
                 </else>
-                <fadeTo comment="false" x="26" y="510">
+                <fadeTo comment="false" x="26" y="485">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="2"/>
                     <int id="3" val="12"/>
                 </fadeTo>
-                <dolater comment="false" x="26" y="537">
+                <dolater comment="false" x="26" y="512">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="564">
+                        <die comment="false" x="37" y="539">
                             <ACTOR eid="this" id="0"/>
                         </die>
-                        <if comment="false" x="37" y="591">
+                        <if comment="false" x="37" y="566">
                             <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="624">
+                                <say comment="false" x="48" y="599">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Reload On Death PM"/>
                                     <int id="2" val="Reload"/>

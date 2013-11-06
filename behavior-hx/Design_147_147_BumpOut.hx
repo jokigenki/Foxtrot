@@ -79,7 +79,6 @@ propertyChanged("_ChosenAnimation", _ChosenAnimation);
 propertyChanged("_ChosenAnimation", _ChosenAnimation);
 }
 
-        trace("" + _ChosenAnimation);
         actor.setXVelocity(0);
         actor.setYVelocity(0);
         actor.applyImpulse(_KillX, _KillY, _KillForce);

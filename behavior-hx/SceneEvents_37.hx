@@ -1,0 +1,148 @@
+package scripts;
+
+import com.stencyl.graphics.G;
+
+import com.stencyl.behavior.Script;
+import com.stencyl.behavior.ActorScript;
+import com.stencyl.behavior.SceneScript;
+import com.stencyl.behavior.TimedTask;
+
+import com.stencyl.models.Actor;
+import com.stencyl.models.GameModel;
+import com.stencyl.models.actor.Animation;
+import com.stencyl.models.actor.ActorType;
+import com.stencyl.models.actor.Collision;
+import com.stencyl.models.actor.Group;
+import com.stencyl.models.Scene;
+import com.stencyl.models.Sound;
+import com.stencyl.models.Region;
+import com.stencyl.models.Font;
+
+import com.stencyl.Engine;
+import com.stencyl.Input;
+import com.stencyl.utils.Utils;
+
+import nme.ui.Mouse;
+import nme.display.Graphics;
+import nme.display.BlendMode;
+import nme.events.Event;
+import nme.events.TouchEvent;
+import nme.net.URLLoader;
+
+import com.eclecticdesignstudio.motion.Actuate;
+import com.eclecticdesignstudio.motion.easing.Back;
+import com.eclecticdesignstudio.motion.easing.Cubic;
+import com.eclecticdesignstudio.motion.easing.Elastic;
+import com.eclecticdesignstudio.motion.easing.Expo;
+import com.eclecticdesignstudio.motion.easing.Linear;
+import com.eclecticdesignstudio.motion.easing.Quad;
+import com.eclecticdesignstudio.motion.easing.Quart;
+import com.eclecticdesignstudio.motion.easing.Quint;
+import com.eclecticdesignstudio.motion.easing.Sine;
+
+
+
+class SceneEvents_37 extends SceneScript
+{          	
+	
+public var _ExitName:String;
+
+public var _GooseHead:Actor;
+
+public var _OffDirection:Float;
+
+public var _CrateMakers:Array<Dynamic>;
+
+public var _CrateMaker:Actor;
+    public function _customEvent_GooseHeadMaker6_GooseHeadComplete():Void
+{
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("SceneEvents_37", "_customBlock_ShootGrenade", [getActor(6)]);
+}, null);
+}
+
+    public function _customEvent_GooseHeadMaker7_GooseHeadComplete():Void
+{
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("SceneEvents_37", "_customBlock_ShootGrenade", [getActor(7)]);
+}, null);
+}
+
+    public function _customEvent_GooseHeadMaker8_GooseHeadComplete():Void
+{
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("SceneEvents_37", "_customBlock_ShootGrenade", [getActor(8)]);
+}, null);
+}
+
+    public function _customEvent_ReducedHealth():Void
+{
+        trace("" + getActor(7));
+        if((getActor(5).getValue("Reduce Health PM", "_CurrentHealth") == 2))
+{
+            getActor(7).say("Goose Head Maker PM", "_customEvent_" + "Activate");
+}
+
+        if((getActor(5).getValue("Reduce Health PM", "_CurrentHealth") == 1))
+{
+            getActor(8).say("Goose Head Maker PM", "_customEvent_" + "Activate");
+}
+
+}
+
+    public function _customEvent_SwitchSingleUse13SwitchedOn():Void
+{
+        _CrateMaker = (scripts.Design_207_207_StencylExtrasPM._customBlock_GetRandomItemFromList(_CrateMakers));
+propertyChanged("_CrateMaker", _CrateMaker);
+        _CrateMaker.say("Spawn PM", "_customEvent_" + "Activated");
+}
+
+    
+
+/* Params are:__GrenadeMaker */
+public function _customBlock_ShootGrenade(__GrenadeMaker:Actor):Void
+{
+
+}
+
+ 
+ 	public function new(dummy:Int, engine:Engine)
+	{
+		super(engine);
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
+nameMap.set("Goose Head", "_GooseHead");
+nameMap.set("Off Direction", "_OffDirection");
+_OffDirection = 0.0;
+nameMap.set("Crate Makers", "_CrateMakers");
+_CrateMakers = [];
+nameMap.set("Crate Maker", "_CrateMaker");
+
+	}
+	
+	override public function init()
+	{
+		            _CrateMakers = new Array<Dynamic>();
+propertyChanged("_CrateMakers", _CrateMakers);
+        _CrateMakers.push(getActor(12));
+        _CrateMakers.push(getActor(9));
+        _CrateMakers.push(getActor(10));
+        _CrateMakers.push(getActor(11));
+    addWhenTypeGroupKilledListener(getActorType(653), function(eventActor:Actor, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        getActor(13).say("Single Use Region Switch PM", "_customBlock_ResetSwitch");
+        for(item in cast(_CrateMakers, Array<Dynamic>))
+{
+            item.setValue("Spawn PM", "_IsActive", false);
+}
+
+}
+});
+
+	}	      	
+	
+	override public function forwardMessage(msg:String)
+	{
+		
+	}
+}

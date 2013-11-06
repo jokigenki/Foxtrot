@@ -94,10 +94,10 @@
                             </less>
                         </if>
                     </group>
-                    <custom-711 comment="false" id="0" x="0" y="0">
+                    <custom-708 comment="false" id="0" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
                         <actor-created-killed comment="false" id="1" x="0" y="0"/>
-                    </custom-711>
+                    </custom-708>
                 </if>
             </group>
             <int id="0" val="1"/>
@@ -106,11 +106,24 @@
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
-        <receiver-1-711 comment="false" x="15" y="15">
+        <receiver-2-708 comment="false" x="34" y="20">
             <group eventID="2" id="-1">
-                <if comment="false" x="26" y="45">
+                <if comment="false" x="45" y="50">
                     <group eventID="2" id="-1">
-                        <return comment="false" x="37" y="75">
+                        <return comment="false" x="56" y="88">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-byobval-353-708-1 comment="false" id="0" x="0" y="0"/>
+                        <actor comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </actor>
+                    </eq>
+                </if>
+                <if comment="false" x="45" y="125">
+                    <group eventID="2" id="-1">
+                        <return comment="false" x="56" y="155">
                             <false comment="false" id="0" x="0" y="0"/>
                         </return>
                     </group>
@@ -118,22 +131,36 @@
                         <get-val-353-10 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <if comment="false" x="26" y="112">
+                <if comment="false" x="45" y="192">
                     <group eventID="2" id="-1">
-                        <return comment="false" x="37" y="150">
+                        <return comment="false" x="56" y="235">
                             <false comment="false" id="0" x="0" y="0"/>
                         </return>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
-                        <actor comment="false" id="1" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                        </actor>
-                    </eq>
+                    <not comment="false" id="0" x="0" y="0">
+                        <has-snippet comment="false" id="0" x="0" y="0">
+                            <get-byobval-353-708-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Exploder PM"/>
+                        </has-snippet>
+                    </not>
                 </if>
-                <if comment="false" x="26" y="187">
-                    <group eventID="1" id="-1">
-                        <return comment="false" x="37" y="235">
+                <if comment="false" x="45" y="272">
+                    <group eventID="2" id="-1">
+                        <return comment="false" x="56" y="315">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-attribute comment="false" id="0" x="0" y="0">
+                            <get-byobval-353-708-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Exploder PM"/>
+                            <int id="2" val="_ExplodesOthers"/>
+                        </get-attribute>
+                    </not>
+                </if>
+                <if comment="false" x="45" y="352">
+                    <group eventID="2" id="-1">
+                        <return comment="false" x="56" y="400">
                             <false comment="false" id="0" x="0" y="0"/>
                         </return>
                     </group>
@@ -145,45 +172,18 @@
                         <contains-item comment="false" id="1" x="0" y="0">
                             <get-val-353-8 comment="false" id="0" x="0" y="0"/>
                             <getatype comment="false" id="1" x="0" y="0">
-                                <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
+                                <get-byobval-353-708-1 comment="false" id="0" x="0" y="0"/>
                             </getatype>
                         </contains-item>
                     </and>
                 </if>
-                <if comment="false" x="26" y="272">
-                    <group eventID="2" id="-1">
-                        <return comment="false" x="37" y="315">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </return>
-                    </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <has-snippet comment="false" id="0" x="0" y="0">
-                            <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="Exploder PM"/>
-                        </has-snippet>
-                    </not>
-                </if>
-                <if comment="false" x="26" y="352">
-                    <group eventID="2" id="-1">
-                        <return comment="false" x="37" y="395">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </return>
-                    </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-attribute comment="false" id="0" x="0" y="0">
-                            <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="Exploder PM"/>
-                            <int id="2" val="_ExplodesOthers"/>
-                        </get-attribute>
-                    </not>
-                </if>
-                <return comment="false" x="26" y="432">
+                <return comment="false" x="45" y="437">
                     <true comment="false" id="0" x="0" y="0"/>
                 </return>
             </group>
-            <get-byobval-353-711-0 comment="false" id="0" x="0" y="0"/>
-            <get-byobval-353-711-1 comment="false" id="1" x="0" y="0"/>
-        </receiver-1-711>
+            <get-byobval-353-708-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-353-708-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-2-708>
     </group>
     <group eventID="2" id="-1"/>
 </groups>

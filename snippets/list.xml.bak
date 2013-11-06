@@ -3312,10 +3312,11 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="711" id="1"/>
+            <receiver blockID="708" id="2"/>
         </blocks>
         <events>
             <event displayName="Actor Created" enabled="true" id="1" name="event-group-create-kill" order="1" repeats="true"/>
-            <event displayName="Can Explode" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
+            <event displayName="Can explode" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_354_354_ExplodeWithRandomPiecesPM" classname="scripts.Design_354_354_ExplodeWithRandomPiecesPM" desc="" description="" design="true" drawOrder="0" id="354" language="" name="Explode With Random Pieces PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -3372,16 +3373,17 @@
             <receiver blockID="701" id="4"/>
             <receiver blockID="702" id="5"/>
             <receiver blockID="709" id="6"/>
+            <receiver blockID="709" id="7"/>
         </blocks>
         <events>
             <event displayName="Head 6" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
             <event displayName="Reduced Health" enabled="true" id="2" name="event-custom" order="4" repeats="true"/>
-            <event displayName="Shoot Grenade" enabled="true" id="3" name="event-custom-block" order="8" repeats="true"/>
             <event displayName="Head 7" enabled="true" id="4" name="event-custom" order="2" repeats="true"/>
             <event displayName="Head 8" enabled="true" id="5" name="event-custom" order="3" repeats="true"/>
             <event displayName="Crate Switch" enabled="true" id="6" name="event-custom" order="5" repeats="true"/>
             <event displayName="Actor Created" enabled="true" id="7" name="event-type-create-kill" order="6" repeats="true"/>
             <event displayName="Created" enabled="true" id="8" name="init" order="7" repeats="true"/>
+            <event displayName="Shoot Grenade" enabled="true" id="9" name="event-custom-block" order="8" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_692" classname="scripts.ActorEvents_692" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="363" language="" name="ActorEvents_692" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
