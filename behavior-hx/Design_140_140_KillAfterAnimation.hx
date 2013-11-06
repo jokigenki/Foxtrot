@@ -50,6 +50,8 @@ public var _DyingAnimation:String;
 public var _IsDying:Bool;
 
 public var _WasKilled:Bool;
+
+public var _AutoKill:Bool;
     public function _customEvent_Killed():Void
 {
         actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
@@ -67,6 +69,8 @@ nameMap.set("Is Dying?", "_IsDying");
 _IsDying = false;
 nameMap.set("Was Killed?", "_WasKilled");
 _WasKilled = false;
+nameMap.set("Auto Kill", "_AutoKill");
+_AutoKill = false;
 nameMap.set("Actor", "actor");
 
 	}
@@ -79,19 +83,27 @@ propertyChanged("_WasKilled", _WasKilled);
 propertyChanged("_IsDying", _IsDying);
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if((_WasKilled && !(actor.getAnimation() == _DyingAnimation)))
+        if(_WasKilled)
 {
-            actor.setAnimation("" + _DyingAnimation);
+            if(!(actor.getAnimation() == _DyingAnimation))
+{
+                actor.setAnimation("" + _DyingAnimation);
+}
+
             _IsDying = true;
 propertyChanged("_IsDying", _IsDying);
 }
 
-        if((_IsDying && (actor.getCurrentFrame() == actor.getNumFrames())))
+        if((_IsDying || _AutoKill))
 {
-            recycleActor(actor);
-            if(actor.isBehaviorEnabled("Reload On Death PM"))
+            if((actor.getCurrentFrame() == (actor.getNumFrames() - 1)))
 {
-                actor.say("Reload On Death PM", "_customEvent_" + "Reload");
+                recycleActor(actor);
+                if(actor.isBehaviorEnabled("Reload On Death PM"))
+{
+                    actor.say("Reload On Death PM", "_customEvent_" + "Reload");
+}
+
 }
 
 }

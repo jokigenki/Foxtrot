@@ -19,54 +19,64 @@
             <group eventID="5" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="5" id="-1">
-                        <setanim comment="false" x="37" y="83">
-                            <ACTOR eid="this" id="0"/>
-                            <get-val-140-1 comment="false" id="1" x="0" y="0"/>
-                        </setanim>
-                        <set-val-140-2 comment="false" x="37" y="115">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="5" id="-1">
+                                <setanim comment="false" x="48" y="103">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-140-1 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <get-val-140-1 comment="false" id="1" x="0" y="0"/>
+                            </noteq>
+                        </if>
+                        <set-val-140-2 comment="false" x="37" y="147">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-140-2>
                     </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <get-val-140-3 comment="false" id="0" x="0" y="0"/>
-                        <noteq comment="false" id="1" x="0" y="0">
-                            <getanim comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                            </getanim>
-                            <get-val-140-1 comment="false" id="1" x="0" y="0"/>
-                        </noteq>
-                    </and>
+                    <get-val-140-3 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <if comment="false" x="26" y="152">
+                <if comment="false" x="26" y="184">
                     <group eventID="5" id="-1">
-                        <die comment="false" x="37" y="195">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
-                        <if comment="false" x="37" y="222">
-                            <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="255">
+                        <if comment="false" x="37" y="214">
+                            <group eventID="5" id="-1">
+                                <die comment="false" x="48" y="257">
                                     <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="Reload On Death PM"/>
-                                    <int id="2" val="Reload"/>
-                                </say>
+                                </die>
+                                <if comment="false" x="48" y="284">
+                                    <group eventID="1" id="-1">
+                                        <say comment="false" x="59" y="317">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Reload On Death PM"/>
+                                            <int id="2" val="Reload"/>
+                                        </say>
+                                    </group>
+                                    <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Reload On Death PM"/>
+                                    </is-snippet-enableda>
+                                </if>
                             </group>
-                            <is-snippet-enableda comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="Reload On Death PM"/>
-                            </is-snippet-enableda>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-frame comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </get-frame>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-num-frames comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                    </get-num-frames>
+                                    <int id="1" val="1"/>
+                                </minus>
+                            </eq>
                         </if>
                     </group>
-                    <and comment="false" id="0" x="0" y="0">
+                    <or comment="false" id="0" x="0" y="0">
                         <get-val-140-2 comment="false" id="0" x="0" y="0"/>
-                        <eq comment="false" id="1" x="0" y="0">
-                            <get-frame comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                            </get-frame>
-                            <get-num-frames comment="false" id="1" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                            </get-num-frames>
-                        </eq>
-                    </and>
+                        <get-val-140-4 comment="false" id="1" x="0" y="0"/>
+                    </or>
                 </if>
             </group>
         </step>
