@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-group-create-kill comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="1" id="-1">
+                        <set-val-353-3 comment="false" x="37" y="85">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="2"/>
+                                </get-xy>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="2"/>
+                                </get-xy>
+                            </minus>
+                        </set-val-353-3>
+                        <set-val-353-4 comment="false" x="37" y="128">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="3"/>
+                                </get-xy>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="3"/>
+                                </get-xy>
+                            </minus>
+                        </set-val-353-4>
+                        <set-val-353-2 comment="false" x="37" y="171">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-val-353-3 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-353-3 comment="false" id="1" x="0" y="0"/>
+                                </times>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <get-val-353-4 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-353-4 comment="false" id="1" x="0" y="0"/>
+                                </times>
+                            </plus>
+                        </set-val-353-2>
+                        <set-val-353-6 comment="false" x="37" y="206">
+                            <get-attribute comment="false" id="0" x="0" y="0">
+                                <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Exploder PM"/>
+                                <int id="2" val="_ExplodeRadius"/>
+                            </get-attribute>
+                        </set-val-353-6>
+                        <if comment="false" x="37" y="244">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="284">
+                                    <group eventID="1" id="-1">
+                                        <dolater comment="false" x="59" y="314">
+                                            <group eventID="1" id="-1">
+                                                <say comment="false" x="70" y="346">
+                                                    <ACTOR eid="this" id="0"/>
+                                                    <int id="1" val="Default Kill Behaviour PM"/>
+                                                    <int id="2" val="Killed"/>
+                                                </say>
+                                            </group>
+                                            <get-val-353-7 comment="false" id="0" x="0" y="0"/>
+                                            <ACTOR eid="this" id="2"/>
+                                        </dolater>
+                                    </group>
+                                    <more comment="false" id="0" x="0" y="0">
+                                        <get-val-353-7 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="0"/>
+                                    </more>
+                                </if>
+                                <else comment="false" x="48" y="397">
+                                    <group eventID="1" id="-1">
+                                        <say comment="false" x="59" y="417">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Default Kill Behaviour PM"/>
+                                            <int id="2" val="Killed"/>
+                                        </say>
+                                    </group>
+                                </else>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-353-2 comment="false" id="0" x="0" y="0"/>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-353-6 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-353-5 comment="false" id="1" x="0" y="0"/>
+                                    </plus>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <get-val-353-6 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-353-5 comment="false" id="1" x="0" y="0"/>
+                                    </plus>
+                                </times>
+                            </less>
+                        </if>
+                    </group>
+                    <custom-711 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <actor-created-killed comment="false" id="1" x="0" y="0"/>
+                    </custom-711>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <GROUP eid="12" id="1"/>
+        </event-group-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-1-711 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <return comment="false" x="37" y="75">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-353-10 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="112">
+                    <group eventID="2" id="-1">
+                        <return comment="false" x="37" y="150">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
+                        <actor comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </actor>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="187">
+                    <group eventID="1" id="-1">
+                        <return comment="false" x="37" y="235">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="8"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <contains-item comment="false" id="1" x="0" y="0">
+                            <get-val-353-8 comment="false" id="0" x="0" y="0"/>
+                            <getatype comment="false" id="1" x="0" y="0">
+                                <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
+                            </getatype>
+                        </contains-item>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="272">
+                    <group eventID="2" id="-1">
+                        <return comment="false" x="37" y="315">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <has-snippet comment="false" id="0" x="0" y="0">
+                            <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Exploder PM"/>
+                        </has-snippet>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="352">
+                    <group eventID="2" id="-1">
+                        <return comment="false" x="37" y="395">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </return>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-attribute comment="false" id="0" x="0" y="0">
+                            <get-byobval-353-711-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Exploder PM"/>
+                            <int id="2" val="_ExplodesOthers"/>
+                        </get-attribute>
+                    </not>
+                </if>
+                <return comment="false" x="26" y="432">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-353-711-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-353-711-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-1-711>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

@@ -85,7 +85,7 @@ nameMap.set("Actor", "actor");
 	{
 		    addWhenTypeGroupKilledListener(getActorGroup(12), function(eventActor:Actor, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if((eventActor == actor))
+        if(((eventActor == actor) || !(eventActor.hasBehavior("Explodable Block PM"))))
 {
             return;
 }

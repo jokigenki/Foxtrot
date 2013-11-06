@@ -49,16 +49,23 @@ public var _PieceNumber:Float;
 
 public var _NumberOfPieces:Float;
 
-public var _ExplodeActorType:ActorType;
-
 public var _HighestAnimationNumber:Float;
 
 public var _ShakeScreen:Bool;
+
+public var _ExplosionActorType:ActorType;
+
+public var _ShrapnelActorType:ActorType;
     public function _customEvent_Killed():Void
 {
+        if((hasValue(_ExplosionActorType) != false))
+{
+            createRecycledActor(_ExplosionActorType, actor.getX(), actor.getY(), Script.FRONT);
+}
+
         for(index0 in 0...Std.int(_NumberOfPieces))
 {
-            createRecycledActor(_ExplodeActorType, actor.getX(), actor.getY(), Script.FRONT);
+            createRecycledActor(_ShrapnelActorType, actor.getX(), actor.getY(), Script.FRONT);
             _PieceNumber = asNumber(randomInt(Math.floor(1), Math.floor(_HighestAnimationNumber)));
 propertyChanged("_PieceNumber", _PieceNumber);
             getLastCreatedActor().setAnimation("" + ("" + (("" + "p") + ("" + _PieceNumber))));
@@ -81,11 +88,12 @@ propertyChanged("_PieceNumber", _PieceNumber);
 _PieceNumber = 0.0;
 nameMap.set("Number Of Pieces", "_NumberOfPieces");
 _NumberOfPieces = 0.0;
-nameMap.set("Explode Actor Type", "_ExplodeActorType");
 nameMap.set("Highest Animation Number", "_HighestAnimationNumber");
 _HighestAnimationNumber = 0.0;
 nameMap.set("Shake Screen", "_ShakeScreen");
 _ShakeScreen = false;
+nameMap.set("Explosion Actor Type", "_ExplosionActorType");
+nameMap.set("Shrapnel Actor Type", "_ShrapnelActorType");
 nameMap.set("Actor", "actor");
 
 	}

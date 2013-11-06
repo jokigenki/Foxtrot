@@ -3,10 +3,10 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <repeat comment="false" x="26" y="40">
+                <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="65">
-                            <ACTORTYPE eid="var" id="0" vid="3"/>
+                        <create-actor3 comment="false" x="37" y="73">
+                            <ACTORTYPE eid="var" id="0" vid="11"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <int id="1" val="0"/>
@@ -17,13 +17,33 @@
                             </get-xy>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-354-1 comment="false" x="37" y="105">
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="11"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+                <repeat comment="false" x="26" y="125">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="150">
+                            <ACTORTYPE eid="var" id="0" vid="12"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-xy comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <set-val-354-1 comment="false" x="37" y="190">
                             <randint comment="false" id="0" x="0" y="0">
                                 <int id="0" val="1"/>
                                 <get-val-354-4 comment="false" id="1" x="0" y="0"/>
                             </randint>
                         </set-val-354-1>
-                        <setanim comment="false" x="37" y="135">
+                        <setanim comment="false" x="37" y="220">
                             <ACTOR eid="lastcreated" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <str-combine comment="false" id="0" x="0" y="0">
@@ -35,12 +55,12 @@
                     </group>
                     <get-val-354-2 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <die comment="false" x="26" y="189">
+                <die comment="false" x="26" y="274">
                     <ACTOR eid="this" id="0"/>
                 </die>
-                <if comment="false" x="26" y="216">
+                <if comment="false" x="26" y="301">
                     <group eventID="1" id="-1">
-                        <shake-start comment="false" x="37" y="241">
+                        <shake-start comment="false" x="37" y="326">
                             <int id="0" val="1"/>
                             <int id="1" val="1"/>
                         </shake-start>

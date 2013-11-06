@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="1" id="-1"/>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="GooseHeadMaker6_GooseHeadComplete"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-1-708 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-369-1 comment="false" x="26" y="45">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <get-byobval-369-708-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Goose Head Maker PM"/>
+                        <int id="2" val="_Head"/>
+                    </get-attribute>
+                </set-val-369-1>
+                <create-actor3 comment="false" x="26" y="90">
+                    <ACTORTYPE eid="695" id="0"/>
+                    <get-xy comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="2"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                    <get-xy comment="false" id="2" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="2"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <if comment="false" x="26" y="130">
+                    <group eventID="1" id="-1">
+                        <set-val-369-2 comment="false" x="37" y="168">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <random comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0.5"/>
+                            </minus>
+                        </set-val-369-2>
+                        <if comment="false" x="37" y="198">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="228">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="-1"/>
+                                    <int id="4" val="30"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GooseHead.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="272">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="292">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="30"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getdir comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </getdir>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="348">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="386">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="416">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GooseHead.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="460">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="480">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="-1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getdir comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </getdir>
+                        <int id="1" val="90"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="536">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="574">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="604">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="-1"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GooseHead.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="648">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="668">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getdir comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </getdir>
+                        <int id="1" val="180"/>
+                    </eq>
+                </else-if>
+                <else comment="false" x="26" y="724">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="744">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="774">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="-1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GooseHead.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="818">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="838">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-369-708-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-708>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1"/>
+            <int id="0" val="ReducedHealth"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-2-710 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <create-actor3 comment="false" x="26" y="45">
+                    <ACTORTYPE eid="695" id="0"/>
+                    <get-xy comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="2"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                    <get-xy comment="false" id="2" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="2"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <if comment="false" x="26" y="85">
+                    <group eventID="1" id="-1">
+                        <set-val-369-2 comment="false" x="37" y="123">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <random comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0.5"/>
+                            </minus>
+                        </set-val-369-2>
+                        <if comment="false" x="37" y="153">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="183">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="-1"/>
+                                    <int id="4" val="30"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GrenadeMaker.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="227">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="247">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="30"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getdir comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </getdir>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="303">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="341">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="371">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GrenadeMaker.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="415">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="435">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="-1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getdir comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </getdir>
+                        <int id="1" val="90"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="491">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="529">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="559">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="-1"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GrenadeMaker.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="603">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="623">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-369-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getdir comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </getdir>
+                        <int id="1" val="180"/>
+                    </eq>
+                </else-if>
+                <else comment="false" x="26" y="679">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="699">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="729">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="-1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="_GrenadeMaker.realScaleY"/>
+                                </code-short>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else comment="false" x="37" y="773">
+                            <group eventID="1" id="-1">
+                                <push-shove comment="false" x="48" y="793">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="1"/>
+                                    <get-val-369-2 comment="false" id="3" x="0" y="0"/>
+                                    <int id="4" val="60"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-369-710-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-2-710>
+    </group>
+    <group eventID="4" id="1">
+        <set-val-369-1 comment="false" x="508" y="115">
+            <get-attribute comment="false" id="0" x="0" y="0">
+                <ACTOR eid="lastcreated" id="0"/>
+                <int id="1" val="Goose Head Maker PM"/>
+                <int id="2" val="_Head"/>
+            </get-attribute>
+        </set-val-369-1>
+    </group>
+    <group eventID="4" id="-1">
+        <get-byobval-369-710-0 comment="false" x="0" y="0"/>
+    </group>
+</groups>

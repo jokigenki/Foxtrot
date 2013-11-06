@@ -5,18 +5,26 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="47">
                     <group eventID="1" id="-1">
-                        <stop comment="false" x="37" y="85"/>
+                        <stop comment="false" x="37" y="95"/>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <actor-created-killed comment="false" id="0" x="0" y="0"/>
-                        <actor comment="false" id="1" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                        </actor>
-                    </eq>
+                    <or comment="false" id="0" x="0" y="0">
+                        <eq comment="false" id="0" x="0" y="0">
+                            <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                            <actor comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </actor>
+                        </eq>
+                        <not comment="false" id="1" x="0" y="0">
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Explodable Block PM"/>
+                            </has-snippet>
+                        </not>
+                    </or>
                 </if>
-                <if comment="false" x="26" y="117">
+                <if comment="false" x="26" y="127">
                     <group eventID="1" id="-1">
-                        <stop comment="false" x="37" y="165"/>
+                        <stop comment="false" x="37" y="175"/>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <value comment="false" id="0" x="0" y="0">
@@ -31,7 +39,7 @@
                         </contains-item>
                     </and>
                 </if>
-                <set-val-353-3 comment="false" x="26" y="197">
+                <set-val-353-3 comment="false" x="26" y="207">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -43,7 +51,7 @@
                         </get-xy>
                     </minus>
                 </set-val-353-3>
-                <set-val-353-4 comment="false" x="26" y="240">
+                <set-val-353-4 comment="false" x="26" y="250">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -55,7 +63,7 @@
                         </get-xy>
                     </minus>
                 </set-val-353-4>
-                <set-val-353-2 comment="false" x="26" y="283">
+                <set-val-353-2 comment="false" x="26" y="293">
                     <plus comment="false" id="0" x="0" y="0">
                         <times comment="false" id="0" x="0" y="0">
                             <get-val-353-3 comment="false" id="0" x="0" y="0"/>
@@ -67,20 +75,20 @@
                         </times>
                     </plus>
                 </set-val-353-2>
-                <set-val-353-6 comment="false" x="26" y="318">
+                <set-val-353-6 comment="false" x="26" y="328">
                     <get-attribute comment="false" id="0" x="0" y="0">
                         <actor-created-killed comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="Explodable Block PM"/>
                         <int id="2" val="_ExplodeRadius"/>
                     </get-attribute>
                 </set-val-353-6>
-                <if comment="false" x="26" y="356">
+                <if comment="false" x="26" y="366">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="396">
+                        <if comment="false" x="37" y="406">
                             <group eventID="1" id="-1">
-                                <dolater comment="false" x="48" y="426">
+                                <dolater comment="false" x="48" y="436">
                                     <group eventID="1" id="-1">
-                                        <say comment="false" x="59" y="458">
+                                        <say comment="false" x="59" y="468">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="Default Kill Behaviour PM"/>
                                             <int id="2" val="Killed"/>
@@ -95,9 +103,9 @@
                                 <int id="1" val="0"/>
                             </more>
                         </if>
-                        <else comment="false" x="37" y="509">
+                        <else comment="false" x="37" y="519">
                             <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="529">
+                                <say comment="false" x="48" y="539">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Default Kill Behaviour PM"/>
                                     <int id="2" val="Killed"/>

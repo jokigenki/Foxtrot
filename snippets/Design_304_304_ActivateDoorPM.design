@@ -45,22 +45,16 @@
                                 <int id="1" val="1"/>
                             </get-xy>
                         </set-xy>
-                        <print comment="false" x="37" y="325">
-                            <get-xy comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="1"/>
-                            </get-xy>
-                        </print>
-                        <if comment="false" x="37" y="358">
+                        <if comment="false" x="37" y="325">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="383">
+                                <if comment="false" x="48" y="350">
                                     <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="413">
+                                        <actor-set-prop comment="false" x="59" y="380">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Facing Right?"/>
                                             <false comment="false" id="2" x="0" y="0"/>
                                         </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="445">
+                                        <set-xy comment="false" x="59" y="412">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="0"/>
                                             <minus comment="false" id="2" x="0" y="0">
@@ -77,7 +71,7 @@
                                                 </div>
                                             </minus>
                                         </set-xy>
-                                        <moveToBy comment="false" x="59" y="495">
+                                        <moveToBy comment="false" x="59" y="462">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="1"/>
                                             <minus comment="false" id="2" x="0" y="0">
@@ -105,14 +99,14 @@
                                         <int id="1" val="0"/>
                                     </less>
                                 </if>
-                                <else-if comment="false" x="48" y="557">
+                                <else-if comment="false" x="48" y="524">
                                     <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="587">
+                                        <actor-set-prop comment="false" x="59" y="554">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Facing Right?"/>
                                             <true comment="false" id="2" x="0" y="0"/>
                                         </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="619">
+                                        <set-xy comment="false" x="59" y="586">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="0"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -129,7 +123,7 @@
                                                 </div>
                                             </plus>
                                         </set-xy>
-                                        <moveToBy comment="false" x="59" y="669">
+                                        <moveToBy comment="false" x="59" y="636">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="1"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -151,9 +145,9 @@
                                         <int id="1" val="0"/>
                                     </more>
                                 </else-if>
-                                <else comment="false" x="48" y="726">
+                                <else comment="false" x="48" y="693">
                                     <group eventID="1" id="-1">
-                                        <set-xy comment="false" x="59" y="746">
+                                        <set-xy comment="false" x="59" y="713">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="0"/>
                                             <get-xy comment="false" id="2" x="0" y="0">
@@ -161,7 +155,7 @@
                                                 <int id="1" val="0"/>
                                             </get-xy>
                                         </set-xy>
-                                        <set-xy comment="false" x="59" y="786">
+                                        <set-xy comment="false" x="59" y="753">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="1"/>
                                             <get-xy comment="false" id="2" x="0" y="0">
@@ -174,9 +168,9 @@
                             </group>
                             <get-val-304-7 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else-if comment="false" x="37" y="850">
+                        <else-if comment="false" x="37" y="817">
                             <group eventID="2" id="-1">
-                                <set-xy comment="false" x="48" y="875">
+                                <set-xy comment="false" x="48" y="842">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="0"/>
                                     <get-game-val-7 comment="false" id="2" x="0" y="0"/>

@@ -57,14 +57,21 @@ public var _RandomPiecesEnd:Float;
 
 public var _TotalNumberOfPieces:Float;
 
-public var _ExplodeActorType:ActorType;
-
 public var _ShakeScreen:Bool;
+
+public var _ExplosionActorType:ActorType;
+
+public var _ShrapnelActorType:ActorType;
     public function _customEvent_Killed():Void
 {
+        if((hasValue(_ExplosionActorType) != false))
+{
+            createRecycledActor(_ExplosionActorType, actor.getX(), actor.getY(), Script.FRONT);
+}
+
         for(index0 in 0...Std.int(_TotalNumberOfPieces))
 {
-            createRecycledActor(_ExplodeActorType, actor.getX(), actor.getY(), Script.FRONT);
+            createRecycledActor(_ShrapnelActorType, actor.getX(), actor.getY(), Script.FRONT);
             if((index0 <= (_SetPiecesEnd - _SetPiecesStart)))
 {
                 _PieceNumber = asNumber(((index0 + _SetPiecesStart) - 1));
@@ -105,9 +112,10 @@ nameMap.set("Random Pieces End", "_RandomPiecesEnd");
 _RandomPiecesEnd = 0.0;
 nameMap.set("Total Number Of Pieces", "_TotalNumberOfPieces");
 _TotalNumberOfPieces = 0.0;
-nameMap.set("Explode Actor Type", "_ExplodeActorType");
 nameMap.set("Shake Screen", "_ShakeScreen");
 _ShakeScreen = false;
+nameMap.set("Explosion Actor Type", "_ExplosionActorType");
+nameMap.set("Shrapnel Actor Type", "_ShrapnelActorType");
 nameMap.set("Actor", "actor");
 
 	}

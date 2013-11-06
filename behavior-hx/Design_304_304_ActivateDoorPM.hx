@@ -82,7 +82,6 @@ propertyChanged("_DoorReady", _DoorReady);
             _ActorToMove.fadeTo(0 / 100, 0, Linear.easeNone);
             _ActorToMove.fadeTo(1, _EntranceTime, Linear.easeNone);
             _ActorToMove.setY(actor.getY());
-            trace("" + actor.getY());
             if(_SlideToCentre)
 {
                 if((_ExitSide < 0))

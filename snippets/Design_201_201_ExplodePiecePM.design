@@ -42,7 +42,13 @@
                 </fadeInOut>
                 <dolater comment="false" x="26" y="184">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="216">
+                        <fadeTo comment="false" x="37" y="216">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="100"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="0"/>
+                        </fadeTo>
+                        <die comment="false" x="37" y="243">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>

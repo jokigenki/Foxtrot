@@ -94,6 +94,7 @@ propertyChanged("_YDirection", _YDirection);
         actor.applyImpulse(_XDirection, _YDirection, _ExplodeForce);
         actor.fadeTo(0, _FadeTime, Quad.easeOut);
         runLater(1000 * _FadeTime, function(timeTask:TimedTask):Void {
+                    actor.fadeTo(100 / 100, 0, Linear.easeNone);
                     recycleActor(actor);
 }, actor);
 
