@@ -73,9 +73,9 @@ nameMap.set("Start Angle", "_StartAngle");
 _StartAngle = 0.0;
 nameMap.set("Pivot", "_Pivot");
 nameMap.set("Target X", "_TargetX");
-_TargetX = 0;
+_TargetX = 0.0;
 nameMap.set("Target Y", "_TargetY");
-_TargetY = 0;
+_TargetY = 0.0;
 nameMap.set("Actor", "actor");
 
 	}

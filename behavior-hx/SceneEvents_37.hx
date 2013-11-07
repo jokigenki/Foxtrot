@@ -54,6 +54,8 @@ public var _OffDirection:Float;
 public var _CrateMakers:Array<Dynamic>;
 
 public var _CrateMaker:Actor;
+
+public var _Crate:Actor;
     public function _customEvent_GooseHeadMaker6_GooseHeadComplete():Void
 {
         runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
@@ -90,11 +92,13 @@ public var _CrateMaker:Actor;
 
 }
 
-    public function _customEvent_SwitchSingleUse13SwitchedOn():Void
+    public function _customEvent_TimedSwitchLight13SwitchedOn():Void
 {
         _CrateMaker = (scripts.Design_207_207_StencylExtrasPM._customBlock_GetRandomItemFromList(_CrateMakers));
 propertyChanged("_CrateMaker", _CrateMaker);
         _CrateMaker.say("Spawn PM", "_customEvent_" + "Activated");
+        _Crate = _CrateMaker.getValue("Spawn PM", "_LastSpawn");
+propertyChanged("_Crate", _Crate);
 }
 
     
@@ -125,12 +129,12 @@ propertyChanged("_OffDirection", _OffDirection);
 {
             if((_GooseHead.realScaleY == 1))
 {
-                getLastCreatedActor().applyImpulse(1, _OffDirection, 60);
+                getLastCreatedActor().applyImpulse(1, _OffDirection, 30);
 }
 
             else
 {
-                getLastCreatedActor().applyImpulse(-1, _OffDirection, 60);
+                getLastCreatedActor().applyImpulse(-1, _OffDirection, 30);
 }
 
 }
@@ -139,12 +143,12 @@ propertyChanged("_OffDirection", _OffDirection);
 {
             if((_GooseHead.realScaleY == 1))
 {
-                getLastCreatedActor().applyImpulse(_OffDirection, -1, 60);
+                getLastCreatedActor().applyImpulse(_OffDirection, -1, 30);
 }
 
             else
 {
-                getLastCreatedActor().applyImpulse(_OffDirection, 1, 60);
+                getLastCreatedActor().applyImpulse(_OffDirection, 1, 30);
 }
 
 }
@@ -153,17 +157,31 @@ propertyChanged("_OffDirection", _OffDirection);
 {
             if((_GooseHead.realScaleY == 1))
 {
-                getLastCreatedActor().applyImpulse(-1, _OffDirection, 60);
+                getLastCreatedActor().applyImpulse(-1, _OffDirection, 30);
 }
 
             else
 {
-                getLastCreatedActor().applyImpulse(1, _OffDirection, 60);
+                getLastCreatedActor().applyImpulse(1, _OffDirection, 30);
 }
 
 }
 
 }
+    public function _customEvent_GooseTankKilled():Void
+{
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockActor(getActor(4));
+}
+
+    public function _customEvent_TimedSwitchLight13PreSwitchedOn():Void
+{
+        if(((hasValue(_Crate) != false) && _Crate.isAlive()))
+{
+            _Crate.setValue("Explode After Time PM", "_ExplodeAfterSeconds", 0.5);
+}
+
+}
+
 
  
  	public function new(dummy:Int, engine:Engine)
@@ -177,12 +195,16 @@ _OffDirection = 0.0;
 nameMap.set("Crate Makers", "_CrateMakers");
 _CrateMakers = [];
 nameMap.set("Crate Maker", "_CrateMaker");
+nameMap.set("Crate", "_Crate");
 
 	}
 	
 	override public function init()
 	{
-		            _CrateMakers = new Array<Dynamic>();
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_LockDoorActor(getActor(4));
+}, null);
+        _CrateMakers = new Array<Dynamic>();
 propertyChanged("_CrateMakers", _CrateMakers);
         _CrateMakers.push(getActor(12));
         _CrateMakers.push(getActor(9));

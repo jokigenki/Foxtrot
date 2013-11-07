@@ -111,8 +111,15 @@
                     <int id="1" val="Spawn PM"/>
                     <int id="2" val="Activated"/>
                 </say>
+                <set-val-362-6 comment="false" x="26" y="109">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <get-val-362-5 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Spawn PM"/>
+                        <int id="2" val="_LastSpawn"/>
+                    </get-attribute>
+                </set-val-362-6>
             </group>
-            <int id="0" val="SwitchSingleUse13SwitchedOn"/>
+            <int id="0" val="TimedSwitchLight13SwitchedOn"/>
         </event-custom>
     </group>
     <group eventID="6" id="-1"/>
@@ -142,28 +149,37 @@
     <group eventID="8" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="8" id="-1">
-                <set-val-362-4 comment="false" x="26" y="40">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="8" id="-1">
+                        <custom-713 comment="false" x="37" y="67">
+                            <ACTOR eid="4" id="0"/>
+                        </custom-713>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <set-val-362-4 comment="false" x="26" y="106">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-362-4>
-                <add-list comment="false" x="26" y="65">
+                <add-list comment="false" x="26" y="131">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="12" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="98">
+                <add-list comment="false" x="26" y="164">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="9" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="131">
+                <add-list comment="false" x="26" y="197">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="10" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="164">
+                <add-list comment="false" x="26" y="230">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="11" id="0"/>
@@ -248,7 +264,7 @@
                                     <int id="1" val="1"/>
                                     <int id="2" val="1"/>
                                     <get-val-362-3 comment="false" id="3" x="0" y="0"/>
-                                    <int id="4" val="60"/>
+                                    <int id="4" val="30"/>
                                 </push-shove>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
@@ -265,7 +281,7 @@
                                     <int id="1" val="1"/>
                                     <int id="2" val="-1"/>
                                     <get-val-362-3 comment="false" id="3" x="0" y="0"/>
-                                    <int id="4" val="60"/>
+                                    <int id="4" val="30"/>
                                 </push-shove>
                             </group>
                         </else>
@@ -286,7 +302,7 @@
                                     <int id="1" val="1"/>
                                     <get-val-362-3 comment="false" id="2" x="0" y="0"/>
                                     <int id="3" val="-1"/>
-                                    <int id="4" val="60"/>
+                                    <int id="4" val="30"/>
                                 </push-shove>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
@@ -303,7 +319,7 @@
                                     <int id="1" val="1"/>
                                     <get-val-362-3 comment="false" id="2" x="0" y="0"/>
                                     <int id="3" val="1"/>
-                                    <int id="4" val="60"/>
+                                    <int id="4" val="30"/>
                                 </push-shove>
                             </group>
                         </else>
@@ -324,7 +340,7 @@
                                     <int id="1" val="1"/>
                                     <int id="2" val="-1"/>
                                     <get-val-362-3 comment="false" id="3" x="0" y="0"/>
-                                    <int id="4" val="60"/>
+                                    <int id="4" val="30"/>
                                 </push-shove>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
@@ -341,7 +357,7 @@
                                     <int id="1" val="1"/>
                                     <int id="2" val="1"/>
                                     <get-val-362-3 comment="false" id="3" x="0" y="0"/>
-                                    <int id="4" val="60"/>
+                                    <int id="4" val="30"/>
                                 </push-shove>
                             </group>
                         </else>
@@ -352,4 +368,69 @@
         </receiver-7-709>
     </group>
     <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <custom-596 comment="false" x="26" y="40">
+                    <ACTOR eid="4" id="0"/>
+                </custom-596>
+            </group>
+            <int id="0" val="GooseTankKilled"/>
+        </event-custom>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-actor-create-kill comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <create-actor3 comment="false" x="26" y="42">
+                    <ACTORTYPE eid="196" id="0"/>
+                    <int id="1" val="512"/>
+                    <int id="2" val="320"/>
+                    <int id="3" val="2"/>
+                </create-actor3>
+                <fadeTo comment="false" x="26" y="69">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0"/>
+                </fadeTo>
+                <fadeInOut comment="false" x="26" y="96">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="2"/>
+                    <int id="3" val="9"/>
+                </fadeInOut>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="lastcreated" id="1"/>
+        </event-actor-create-kill>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <set-attribute comment="false" x="37" y="78">
+                            <ACTOR eid="var" id="0" vid="6"/>
+                            <int id="1" val="Explode After Time PM"/>
+                            <int id="2" val="_ExplodeAfterSeconds"/>
+                            <int id="3" val="0.5"/>
+                        </set-attribute>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="6"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <isalive comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="6"/>
+                        </isalive>
+                    </and>
+                </if>
+            </group>
+            <int id="0" val="TimedSwitchLight13PreSwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="12" id="-1"/>
 </groups>

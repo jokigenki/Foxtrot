@@ -321,9 +321,7 @@
             <get-byobval-206-596-0 comment="false" id="0" x="0" y="0"/>
         </receiver-28-596>
     </group>
-    <group eventID="25" id="-1">
-        <get-byobval-206-596-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="25" id="-1"/>
     <group eventID="24" id="0">
         <receiver-27-552 comment="false" x="15" y="15">
             <group eventID="24" id="-1">
@@ -335,4 +333,90 @@
         </receiver-27-552>
     </group>
     <group eventID="24" id="-1"/>
+    <group eventID="27" id="0">
+        <receiver-32-713 comment="false" x="15" y="15">
+            <group eventID="27" id="-1">
+                <custom-712 comment="false" x="26" y="45">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <get-byobval-206-713-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Activate Door PM"/>
+                        <int id="2" val="_Destination"/>
+                    </get-attribute>
+                </custom-712>
+            </group>
+            <get-byobval-206-713-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-32-713>
+    </group>
+    <group eventID="27" id="-1">
+        <get-byobval-206-713-0 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="26" id="0">
+        <receiver-31-712 comment="false" x="15" y="15">
+            <group eventID="26" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="21" id="-1">
+                        <stop comment="false" x="37" y="80"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <custom-324 comment="false" id="0" x="0" y="0">
+                            <get-byobval-206-712-0 comment="false" id="0" x="0" y="0"/>
+                        </custom-324>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="112">
+                    <group eventID="13" id="-1">
+                        <remove-item comment="false" x="37" y="142">
+                            <custom-331 comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="FoxtrotConstants.UNLOCKED_SPEED_RUN_DOORS"/>
+                                </code-short>
+                            </custom-331>
+                            <get-byobval-206-712-0 comment="false" id="1" x="0" y="0"/>
+                        </remove-item>
+                        <remove-item comment="false" x="37" y="172">
+                            <custom-331 comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="FoxtrotConstants.UNLOCKED_SPEED_RUN_DOORS"/>
+                                </code-short>
+                            </custom-331>
+                            <custom-552 comment="false" id="1" x="0" y="0">
+                                <get-byobval-206-712-0 comment="false" id="0" x="0" y="0"/>
+                            </custom-552>
+                        </remove-item>
+                    </group>
+                    <custom-331 comment="false" id="0" x="0" y="0">
+                        <code-short comment="false" id="0" x="0" y="0">
+                            <int id="0" val="FoxtrotConstants.SPEED_RUN_IN_PROGRESS"/>
+                        </code-short>
+                    </custom-331>
+                </if>
+                <else comment="false" x="26" y="214">
+                    <group eventID="13" id="-1">
+                        <remove-item comment="false" x="37" y="234">
+                            <custom-331 comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="FoxtrotConstants.UNLOCKED_DOORS"/>
+                                </code-short>
+                            </custom-331>
+                            <get-byobval-206-712-0 comment="false" id="1" x="0" y="0"/>
+                        </remove-item>
+                        <remove-item comment="false" x="37" y="264">
+                            <custom-331 comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="FoxtrotConstants.UNLOCKED_DOORS"/>
+                                </code-short>
+                            </custom-331>
+                            <custom-552 comment="false" id="1" x="0" y="0">
+                                <get-byobval-206-712-0 comment="false" id="0" x="0" y="0"/>
+                            </custom-552>
+                        </remove-item>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-206-712-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-31-712>
+    </group>
+    <group eventID="26" id="-1">
+        <get-byobval-206-712-0 comment="false" x="0" y="0"/>
+    </group>
 </groups>

@@ -13,14 +13,17 @@
                 </scene-shout>
                 <if comment="false" x="26" y="92">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="122">
+                        <print comment="false" x="37" y="122">
+                            <int id="0" val="KILLED?"/>
+                        </print>
+                        <if comment="false" x="37" y="142">
                             <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="160">
+                                <say comment="false" x="48" y="180">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-183-2 comment="false" id="1" x="0" y="0"/>
                                     <int id="2" val="Killed"/>
                                 </say>
-                                <scene-shout comment="false" x="48" y="192">
+                                <scene-shout comment="false" x="48" y="212">
                                     <get-val-183-5 comment="false" id="0" x="0" y="0"/>
                                 </scene-shout>
                             </group>
@@ -35,16 +38,16 @@
                         <int id="1" val="0"/>
                     </lesseq>
                 </if>
-                <if comment="false" x="26" y="241">
+                <if comment="false" x="26" y="261">
                     <group eventID="1" id="-1">
-                        <for-each comment="false" x="37" y="274">
+                        <for-each comment="false" x="37" y="294">
                             <group eventID="1" id="-1">
-                                <code-long comment="false" x="48" y="299">
+                                <code-long comment="false" x="48" y="319">
                                     <int id="0" val="var values = item.split(&amp;quot;:&amp;quot;);&#10;var healthValue = Std.parseInt(values[0]);&#10;var state = values[1];&#10;"/>
                                 </code-long>
-                                <if comment="false" x="48" y="459">
+                                <if comment="false" x="48" y="479">
                                     <group eventID="1" id="-1">
-                                        <custom-300 comment="false" x="59" y="489">
+                                        <custom-300 comment="false" x="59" y="509">
                                             <ACTOR eid="this" id="0"/>
                                             <code-short comment="false" id="1" x="0" y="0">
                                                 <int id="0" val="state"/>

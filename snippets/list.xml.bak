@@ -584,7 +584,7 @@
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="false"/>
+            <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
             <event displayName="Set Prevent Jump" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
             <event displayName="Can Jump?" enabled="true" id="4" name="event-custom-block" order="4" repeats="true"/>
         </events>
@@ -750,8 +750,8 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
-            <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_63_63_RandomiseAnimationFramePM" classname="scripts.Design_63_63_RandomiseAnimationFramePM" desc="When the actor is created, it will be sent to a random frame inside the default animation." description="When the actor is created, it will be sent to a random frame inside the default animation." design="true" drawOrder="0" id="63" language="" name="Randomise Animation Frame PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -1941,21 +1941,27 @@
             <receiver blockID="340" id="24"/>
             <receiver blockID="552" id="27"/>
             <receiver blockID="551" id="26"/>
+            <receiver blockID="710" id="29"/>
             <receiver blockID="596" id="28"/>
+            <receiver blockID="712" id="31"/>
+            <receiver blockID="711" id="30"/>
+            <receiver blockID="713" id="32"/>
         </blocks>
         <events>
-            <event displayName="Lock doors" enabled="true" id="17" name="event-custom-block-global" order="21" repeats="true"/>
-            <event displayName="Lock Speed Run Doors" enabled="true" id="16" name="event-custom-block-global" order="20" repeats="true"/>
-            <event displayName="Empty Inventory" enabled="true" id="19" name="event-custom-block-global" order="23" repeats="true"/>
-            <event displayName="Empty collected items" enabled="true" id="18" name="event-custom-block-global" order="22" repeats="true"/>
-            <event displayName="Empty Speed Run Collected" enabled="true" id="20" name="event-custom-block-global" order="24" repeats="true"/>
-            <event displayName="Do exits match" enabled="true" id="23" name="event-custom-block-global" order="25" repeats="true"/>
-            <event displayName="Unlock Door Actor" enabled="true" id="25" name="event-custom-block-global" order="17" repeats="true"/>
-            <event displayName="Reverse destination" enabled="true" id="24" name="event-custom-block-global" order="26" repeats="true"/>
             <event displayName="Is Door Unlocked? G" enabled="true" id="12" name="event-custom-block-global" order="13" repeats="true"/>
             <event displayName="Unlock Door" enabled="true" id="13" name="event-custom-block-global" order="15" repeats="true"/>
-            <event displayName="Item has been collected" enabled="true" id="14" name="event-custom-block-global" order="18" repeats="true"/>
-            <event displayName="Collect with type" enabled="true" id="15" name="event-custom-block-global" order="19" repeats="true"/>
+            <event displayName="Item has been collected" enabled="true" id="14" name="event-custom-block-global" order="20" repeats="true"/>
+            <event displayName="Collect with type" enabled="true" id="15" name="event-custom-block-global" order="21" repeats="true"/>
+            <event displayName="Lock doors" enabled="true" id="17" name="event-custom-block-global" order="23" repeats="true"/>
+            <event displayName="Lock Speed Run Doors" enabled="true" id="16" name="event-custom-block-global" order="22" repeats="true"/>
+            <event displayName="Empty Inventory" enabled="true" id="19" name="event-custom-block-global" order="25" repeats="true"/>
+            <event displayName="Empty collected items" enabled="true" id="18" name="event-custom-block-global" order="24" repeats="true"/>
+            <event displayName="Empty Speed Run Collected" enabled="true" id="20" name="event-custom-block-global" order="26" repeats="true"/>
+            <event displayName="Do exits match" enabled="true" id="23" name="event-custom-block-global" order="27" repeats="true"/>
+            <event displayName="Unlock Door Actor" enabled="true" id="25" name="event-custom-block-global" order="17" repeats="true"/>
+            <event displayName="Reverse destination" enabled="true" id="24" name="event-custom-block-global" order="28" repeats="true"/>
+            <event displayName="Lock Door Actor" enabled="true" id="27" name="event-custom-block-global" order="19" repeats="true"/>
+            <event displayName="Lock Door" enabled="true" id="26" name="event-custom-block-global" order="18" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_201_201_ExplodePiecePM" classname="scripts.Design_201_201_ExplodePiecePM" desc="" description="" design="true" drawOrder="0" id="201" language="" name="Explode Piece PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -2994,8 +3000,6 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Crate" hidden="false" id="2" name="_Crate" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Randomiser" hidden="false" id="3" name="_StartRandomiser" order="2"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Goose Head Makers" hidden="false" id="4" name="_GooseHeadMakers" order="3"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Active Goose Head Maker" hidden="false" id="5" name="_ActiveGooseHeadMaker" order="4"/>
         <blocks>
             <receiver blockID="690" id="1"/>
         </blocks>
@@ -3007,10 +3011,7 @@
             <event displayName="Crate Switch" enabled="true" id="6" name="event-custom" order="7" repeats="true"/>
             <event displayName="Conv Right 2 On" enabled="true" id="7" name="event-custom" order="8" repeats="true"/>
             <event displayName="Conv Left 2 On" enabled="true" id="8" name="event-custom" order="9" repeats="true"/>
-            <event displayName="Goose Removed" enabled="true" id="9" name="event-custom" order="10" repeats="true"/>
-            <event displayName="Created" enabled="true" id="10" name="init" order="2" repeats="true"/>
-            <event displayName="Create Goose Head" enabled="true" id="11" name="event-custom" order="11" repeats="true"/>
-            <event displayName="Actor Created" enabled="true" id="12" name="event-actor-create-kill" order="12" repeats="true"/>
+            <event displayName="Egg Killed" enabled="true" id="12" name="event-actor-create-kill" order="12" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_648" classname="scripts.ActorEvents_648" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="340" language="" name="ActorEvents_648" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -3149,6 +3150,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Beats per frame" hidden="true" id="2" name="_Beatsperframe" order="2"/>
         <number default="3" defaultValue="3" desc="" dropdown="" fullname="Explode After Seconds" hidden="false" id="5" name="_ExplodeAfterSeconds" order="3"/>
         <text default="Explode With Set Pieces PM" defaultValue="Explode With Set Pieces PM" desc="" dropdown="" fullname="Explode Behaviour" hidden="false" id="6" name="_ExplodeBehaviour" order="4"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Ready?" hidden="true" id="7" name="_IsReady" order="5"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
@@ -3367,6 +3369,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Off Direction" hidden="false" id="3" name="_OffDirection" order="2"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Crate Makers" hidden="false" id="4" name="_CrateMakers" order="3"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Crate Maker" hidden="false" id="5" name="_CrateMaker" order="4"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Crate" hidden="false" id="6" name="_Crate" order="5"/>
         <blocks>
             <receiver blockID="700" id="1"/>
             <receiver blockID="701" id="2"/>
@@ -3377,14 +3380,17 @@
             <receiver blockID="709" id="7"/>
         </blocks>
         <events>
-            <event displayName="Head 6" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
-            <event displayName="Reduced Health" enabled="true" id="2" name="event-custom" order="4" repeats="true"/>
-            <event displayName="Head 7" enabled="true" id="4" name="event-custom" order="2" repeats="true"/>
-            <event displayName="Head 8" enabled="true" id="5" name="event-custom" order="3" repeats="true"/>
-            <event displayName="Crate Switch" enabled="true" id="6" name="event-custom" order="5" repeats="true"/>
-            <event displayName="Actor Created" enabled="true" id="7" name="event-type-create-kill" order="6" repeats="true"/>
-            <event displayName="Created" enabled="true" id="8" name="init" order="7" repeats="true"/>
+            <event displayName="Head 6" enabled="true" id="1" name="event-custom" order="2" repeats="true"/>
+            <event displayName="Reduced Health" enabled="true" id="2" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Head 7" enabled="true" id="4" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Head 8" enabled="true" id="5" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Crate Switch" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="7" name="event-type-create-kill" order="7" repeats="true"/>
+            <event displayName="Created" enabled="true" id="8" name="init" order="1" repeats="true"/>
             <event displayName="Shoot Grenade" enabled="true" id="9" name="event-custom-block" order="8" repeats="true"/>
+            <event displayName="Goose Cooked" enabled="true" id="10" name="event-custom" order="9" repeats="true"/>
+            <event displayName="Egg Killed" enabled="false" id="11" name="event-actor-create-kill" order="10" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="12" name="event-custom" order="11" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_692" classname="scripts.ActorEvents_692" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="363" language="" name="ActorEvents_692" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">

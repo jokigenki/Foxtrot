@@ -3,16 +3,21 @@
     <group eventID="1" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-frame comment="false" x="26" y="40">
-                    <ACTOR eid="this" id="0"/>
-                    <roundnew comment="false" id="1" x="0" y="0">
-                        <int id="0" val="1"/>
-                        <div comment="false" id="1" x="0" y="0">
-                            <get-val-345-1 comment="false" id="0" x="0" y="0"/>
-                            <get-val-345-2 comment="false" id="1" x="0" y="0"/>
-                        </div>
-                    </roundnew>
-                </set-frame>
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <set-frame comment="false" x="37" y="65">
+                            <ACTOR eid="this" id="0"/>
+                            <roundnew comment="false" id="1" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <get-val-345-1 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-345-2 comment="false" id="1" x="0" y="0"/>
+                                </div>
+                            </roundnew>
+                        </set-frame>
+                    </group>
+                    <get-val-345-7 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
         </step>
     </group>
@@ -20,47 +25,56 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-val-345-2 comment="false" x="26" y="40">
-                    <times comment="false" id="0" x="0" y="0">
-                        <div comment="false" id="0" x="0" y="0">
-                            <get-val-345-5 comment="false" id="0" x="0" y="0"/>
-                            <get-num-frames comment="false" id="1" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                            </get-num-frames>
-                        </div>
-                        <int id="1" val="10"/>
-                    </times>
-                </set-val-345-2>
-                <set-val-345-1 comment="false" x="26" y="83">
-                    <int id="0" val="0"/>
-                </set-val-345-1>
-                <periodic comment="false" x="26" y="103">
+                <dolater comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <incdec comment="false" x="37" y="130">
-                            <int id="0" val="1"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="1"/>
-                        </incdec>
-                        <if comment="false" x="37" y="157">
-                            <group eventID="2" id="-1">
-                                <say comment="false" x="48" y="192">
-                                    <ACTOR eid="this" id="0"/>
-                                    <get-val-345-6 comment="false" id="1" x="0" y="0"/>
-                                    <int id="2" val="Killed"/>
-                                </say>
-                            </group>
-                            <moreeq comment="false" id="0" x="0" y="0">
+                        <set-val-345-7 comment="false" x="37" y="67">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-345-7>
+                        <set-val-345-2 comment="false" x="37" y="92">
+                            <times comment="false" id="0" x="0" y="0">
                                 <div comment="false" id="0" x="0" y="0">
-                                    <get-val-345-1 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="10"/>
+                                    <get-val-345-5 comment="false" id="0" x="0" y="0"/>
+                                    <get-num-frames comment="false" id="1" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                    </get-num-frames>
                                 </div>
-                                <get-val-345-5 comment="false" id="1" x="0" y="0"/>
-                            </moreeq>
-                        </if>
+                                <int id="1" val="10"/>
+                            </times>
+                        </set-val-345-2>
+                        <set-val-345-1 comment="false" x="37" y="135">
+                            <int id="0" val="0"/>
+                        </set-val-345-1>
+                        <periodic comment="false" x="37" y="155">
+                            <group eventID="2" id="-1">
+                                <incdec comment="false" x="48" y="182">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                                <if comment="false" x="48" y="209">
+                                    <group eventID="2" id="-1">
+                                        <say comment="false" x="59" y="244">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-345-6 comment="false" id="1" x="0" y="0"/>
+                                            <int id="2" val="Killed"/>
+                                        </say>
+                                    </group>
+                                    <moreeq comment="false" id="0" x="0" y="0">
+                                        <div comment="false" id="0" x="0" y="0">
+                                            <get-val-345-1 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="10"/>
+                                        </div>
+                                        <get-val-345-5 comment="false" id="1" x="0" y="0"/>
+                                    </moreeq>
+                                </if>
+                            </group>
+                            <int id="0" val="0.1"/>
+                            <ACTOR eid="this" id="2"/>
+                        </periodic>
                     </group>
-                    <int id="0" val="0.1"/>
+                    <int id="0" val="0.15"/>
                     <ACTOR eid="this" id="2"/>
-                </periodic>
+                </dolater>
             </group>
         </init>
     </group>

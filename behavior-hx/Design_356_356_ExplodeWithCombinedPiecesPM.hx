@@ -90,7 +90,7 @@ propertyChanged("_PieceNumber", _PieceNumber);
         recycleActor(actor);
         if(_ShakeScreen)
 {
-            startShakingScreen(1 / 100, 1);
+            startShakingScreen(0.5 / 100, 0.5);
 }
 
 }

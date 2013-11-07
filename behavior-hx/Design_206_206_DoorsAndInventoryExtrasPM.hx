@@ -99,6 +99,36 @@ public static function _customBlock_UnlockActor(__DoorActor:Actor):Void
 }
     
 
+/* Params are:__ExitName */
+public static function _customBlock_LockDoor(__ExitName:String):Void
+{
+        if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_IsDoorUnlocked(__ExitName)), Bool)))
+{
+            return;
+}
+
+        if((scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.SPEED_RUN_IN_PROGRESS)))
+{
+            (scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.UNLOCKED_SPEED_RUN_DOORS)).remove(__ExitName);
+            (scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.UNLOCKED_SPEED_RUN_DOORS)).remove("" + (scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ReverseDestination(__ExitName)));
+}
+
+        else
+{
+            (scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.UNLOCKED_DOORS)).remove(__ExitName);
+            (scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.UNLOCKED_DOORS)).remove("" + (scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ReverseDestination(__ExitName)));
+}
+
+}
+    
+
+/* Params are:__DoorActor */
+public static function _customBlock_LockDoorActor(__DoorActor:Actor):Void
+{
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_LockDoor(__DoorActor.getValue("Activate Door PM", "_Destination"));
+}
+    
+
 /* Params are:__ItemId */
 public static function _customBlock_ItemHasBeenCollected(__ItemId:String):Bool
 {

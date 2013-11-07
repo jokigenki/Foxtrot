@@ -105,13 +105,35 @@
                                 <ACTOR eid="this" id="0"/>
                             </custom-111>
                         </if>
-                        <push-shove comment="false" x="37" y="523">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="1"/>
-                            <int id="3" val="0"/>
-                            <get-val-74-3 comment="false" id="4" x="0" y="0"/>
-                        </push-shove>
+                        <if comment="false" x="37" y="523">
+                            <group eventID="2" id="-1">
+                                <push-shove comment="false" x="48" y="556">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                    <int id="3" val="0"/>
+                                    <times comment="false" id="4" x="0" y="0">
+                                        <get-val-74-3 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1.5"/>
+                                    </times>
+                                </push-shove>
+                            </group>
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Vertical Jump"/>
+                            </actor-get-prop>
+                        </if>
+                        <else comment="false" x="37" y="605">
+                            <group eventID="2" id="-1">
+                                <push-shove comment="false" x="48" y="625">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                    <int id="3" val="0"/>
+                                    <get-val-74-3 comment="false" id="4" x="0" y="0"/>
+                                </push-shove>
+                            </group>
+                        </else>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <custom-93 comment="false" id="0" x="0" y="0">
@@ -126,27 +148,27 @@
                         </not>
                     </and>
                 </if>
-                <comment-short comment="false" x="26" y="567">
+                <comment-short comment="false" x="26" y="681">
                     <int id="0" val="Custom: Is &amp;quot;Left&amp;quot; on for Self, Is &amp;quot;Right&amp;quot; on for Self"/>
                 </comment-short>
-                <if comment="false" x="26" y="587">
+                <if comment="false" x="26" y="701">
                     <group eventID="-1" id="-1">
-                        <actor-set-prop comment="false" x="37" y="630">
+                        <actor-set-prop comment="false" x="37" y="744">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Facing Right?"/>
                             <false comment="false" id="2" x="0" y="0"/>
                         </actor-set-prop>
-                        <if comment="false" x="37" y="662">
+                        <if comment="false" x="37" y="776">
                             <group eventID="-1" id="-1">
-                                <comment-short comment="false" x="48" y="700">
+                                <comment-short comment="false" x="48" y="814">
                                     <int id="0" val="Custom: Loop &amp;lt;Walk Left Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
                                 </comment-short>
-                                <custom-127 comment="false" x="48" y="720">
+                                <custom-127 comment="false" x="48" y="834">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-74-7 comment="false" id="1" x="0" y="0"/>
                                     <get-val-74-12 comment="false" id="2" x="0" y="0"/>
                                 </custom-127>
-                                <custom-471 comment="false" x="48" y="752">
+                                <custom-471 comment="false" x="48" y="866">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-471>
                             </group>
@@ -157,24 +179,46 @@
                                 </actor-get-prop>
                             </as-boolean>
                         </if>
-                        <comment-short comment="false" x="37" y="791">
+                        <comment-short comment="false" x="37" y="905">
                             <int id="0" val="Custom: Self At Max Walking Speed"/>
                         </comment-short>
-                        <if comment="false" x="37" y="811">
+                        <if comment="false" x="37" y="925">
                             <group eventID="-1" id="-1">
-                                <stop comment="false" x="48" y="844"/>
+                                <stop comment="false" x="48" y="958"/>
                             </group>
                             <custom-111 comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </custom-111>
                         </if>
-                        <push-shove comment="false" x="37" y="876">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="-1"/>
-                            <int id="3" val="0"/>
-                            <get-val-74-3 comment="false" id="4" x="0" y="0"/>
-                        </push-shove>
+                        <if comment="false" x="37" y="990">
+                            <group eventID="2" id="-1">
+                                <push-shove comment="false" x="48" y="1023">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="-1"/>
+                                    <int id="3" val="0"/>
+                                    <times comment="false" id="4" x="0" y="0">
+                                        <get-val-74-3 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1.5"/>
+                                    </times>
+                                </push-shove>
+                            </group>
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Vertical Jump"/>
+                            </actor-get-prop>
+                        </if>
+                        <else comment="false" x="37" y="1072">
+                            <group eventID="2" id="-1">
+                                <push-shove comment="false" x="48" y="1092">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="-1"/>
+                                    <int id="3" val="0"/>
+                                    <get-val-74-3 comment="false" id="4" x="0" y="0"/>
+                                </push-shove>
+                            </group>
+                        </else>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <custom-93 comment="false" id="0" x="0" y="0">
@@ -189,22 +233,22 @@
                         </not>
                     </and>
                 </if>
-                <comment-short comment="false" x="26" y="920">
+                <comment-short comment="false" x="26" y="1148">
                     <int id="0" val="Custom: Is &amp;quot;Right&amp;quot; on for Self, Is &amp;quot;Left&amp;quot; on for Self"/>
                 </comment-short>
-                <if comment="false" x="26" y="940">
+                <if comment="false" x="26" y="1168">
                     <group eventID="-1" id="-1">
-                        <set-val-74-13 comment="false" x="37" y="983">
+                        <set-val-74-13 comment="false" x="37" y="1211">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-74-13>
-                        <if comment="false" x="37" y="1008">
+                        <if comment="false" x="37" y="1236">
                             <group eventID="-1" id="-1">
-                                <if comment="false" x="48" y="1046">
+                                <if comment="false" x="48" y="1274">
                                     <group eventID="-1" id="-1">
-                                        <comment-short comment="false" x="59" y="1084">
+                                        <comment-short comment="false" x="59" y="1312">
                                             <int id="0" val="Loop &amp;lt;Idle Right Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
                                         </comment-short>
-                                        <custom-127 comment="false" x="59" y="1104">
+                                        <custom-127 comment="false" x="59" y="1332">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-74-8 comment="false" id="1" x="0" y="0"/>
                                             <get-val-74-12 comment="false" id="2" x="0" y="0"/>
@@ -217,12 +261,12 @@
                                         </actor-get-prop>
                                     </as-boolean>
                                 </if>
-                                <else comment="false" x="48" y="1148">
+                                <else comment="false" x="48" y="1376">
                                     <group eventID="-1" id="-1">
-                                        <comment-short comment="false" x="59" y="1168">
+                                        <comment-short comment="false" x="59" y="1396">
                                             <int id="0" val="Loop &amp;lt;Idle Left Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
                                         </comment-short>
-                                        <custom-127 comment="false" x="59" y="1188">
+                                        <custom-127 comment="false" x="59" y="1416">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-74-9 comment="false" id="1" x="0" y="0"/>
                                             <get-val-74-12 comment="false" id="2" x="0" y="0"/>

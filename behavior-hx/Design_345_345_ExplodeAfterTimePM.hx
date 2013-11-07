@@ -53,6 +53,8 @@ public var _ExplodeAfterSeconds:Float;
 
 public var _ExplodeBehaviour:String;
 
+public var _IsReady:Bool;
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
@@ -65,28 +67,38 @@ nameMap.set("Explode After Seconds", "_ExplodeAfterSeconds");
 _ExplodeAfterSeconds = 3.0;
 nameMap.set("Explode Behaviour", "_ExplodeBehaviour");
 _ExplodeBehaviour = "Explode With Set Pieces PM";
+nameMap.set("Is Ready?", "_IsReady");
+_IsReady = false;
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            _Beatsperframe = asNumber(((_ExplodeAfterSeconds / actor.getNumFrames()) * 10));
+		            runLater(1000 * 0.15, function(timeTask:TimedTask):Void {
+                    _IsReady = true;
+propertyChanged("_IsReady", _IsReady);
+                    _Beatsperframe = asNumber(((_ExplodeAfterSeconds / actor.getNumFrames()) * 10));
 propertyChanged("_Beatsperframe", _Beatsperframe);
-        _TimeElapsed = asNumber(0);
+                    _TimeElapsed = asNumber(0);
 propertyChanged("_TimeElapsed", _TimeElapsed);
-        runPeriodically(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    _TimeElapsed += 1;
+                    runPeriodically(1000 * 0.1, function(timeTask:TimedTask):Void {
+                                _TimeElapsed += 1;
 propertyChanged("_TimeElapsed", _TimeElapsed);
-                    if(((_TimeElapsed / 10) >= _ExplodeAfterSeconds))
+                                if(((_TimeElapsed / 10) >= _ExplodeAfterSeconds))
 {
-                        actor.say(_ExplodeBehaviour, "_customEvent_" + "Killed");
+                                    actor.say(_ExplodeBehaviour, "_customEvent_" + "Killed");
 }
 
 }, actor);
+}, actor);
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        actor.setCurrentFrame(Std.int(Math.floor((_TimeElapsed / _Beatsperframe))));
+        if(_IsReady)
+{
+            actor.setCurrentFrame(Std.int(Math.floor((_TimeElapsed / _Beatsperframe))));
+}
+
 }
 });
 
