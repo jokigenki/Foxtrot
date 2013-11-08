@@ -1138,7 +1138,7 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Can use door?" hidden="true" id="7" name="_Canusedoor" order="2"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Used Door?" hidden="true" id="8" name="_HasUsedDoor" order="3"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Door Ready?" hidden="true" id="9" name="_DoorReady" order="4"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Hide Sprite" hidden="false" id="10" name="_HideSprite" order="5"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Hide Sprite" hidden="false" id="10" name="_HideSprite" order="5"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="651" id="1"/>
@@ -3272,6 +3272,10 @@
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_706" classname="scripts.ActorEvents_706" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="368" language="" name="ActorEvents_706" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_716" classname="scripts.ActorEvents_716" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="370" language="" name="ActorEvents_716" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
