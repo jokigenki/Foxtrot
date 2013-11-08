@@ -53,10 +53,6 @@ public var _OldX:Float;
 
 public var _OldY:Float;
 
-public var _TargetX:Float;
-
-public var _TargetY:Float;
-
 public var _ActorFrames:Array<Dynamic>;
 
 public var _ActorsOnPlatform:Array<Dynamic>;
@@ -66,40 +62,32 @@ public var _NewActorFrames:Array<Dynamic>;
 public var _NewActorsOnPlatform:Array<Dynamic>;
 
 public var _ItemIndex:Float;
-    
 
-/* Params are:__Self __X __Y */
-public function _customBlock_MovePlatform(__X:Float, __Y:Float):Void
-{
-var __Self:Actor = actor;
-        _TargetX = asNumber(__X);
-propertyChanged("_TargetX", _TargetX);
-        _TargetY = asNumber(__Y);
-propertyChanged("_TargetY", _TargetY);
-}
+public var _Target:Actor;
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
 		nameMap.set("X Offset", "_XOffset");
-_XOffset = 0;
+_XOffset = 0.0;
 nameMap.set("Y Offset", "_YOffset");
-_YOffset = 0;
+_YOffset = 0.0;
 nameMap.set("Old X", "_OldX");
-_OldX = 0;
+_OldX = 0.0;
 nameMap.set("Old Y", "_OldY");
-_OldY = 0;
-nameMap.set("Target X", "_TargetX");
-_TargetX = 0;
-nameMap.set("Target Y", "_TargetY");
-_TargetY = 0;
+_OldY = 0.0;
 nameMap.set("Actor Frames", "_ActorFrames");
+_ActorFrames = [];
 nameMap.set("Actors On Platform", "_ActorsOnPlatform");
+_ActorsOnPlatform = [];
 nameMap.set("New Actor Frames", "_NewActorFrames");
+_NewActorFrames = [];
 nameMap.set("New Actors On Platform", "_NewActorsOnPlatform");
+_NewActorsOnPlatform = [];
 nameMap.set("Item Index", "_ItemIndex");
-_ItemIndex = 0;
+_ItemIndex = 0.0;
+nameMap.set("Target", "_Target");
 nameMap.set("Actor", "actor");
 
 	}
@@ -110,18 +98,25 @@ nameMap.set("Actor", "actor");
 propertyChanged("_OldX", _OldX);
         _OldY = asNumber(actor.getY());
 propertyChanged("_OldY", _OldY);
-        _ActorFrames = new Array<Dynamic>();
-propertyChanged("_ActorFrames", _ActorFrames);
         _ActorsOnPlatform = new Array<Dynamic>();
 propertyChanged("_ActorsOnPlatform", _ActorsOnPlatform);
+        _ActorFrames = new Array<Dynamic>();
+propertyChanged("_ActorFrames", _ActorFrames);
+        createRecycledActor(getActorType(714), actor.getX(), actor.getY(), Script.FRONT);
+        _Target = getLastCreatedActor();
+propertyChanged("_Target", _Target);
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        _XOffset = asNumber((_TargetX - _OldX));
+        _XOffset = asNumber((_Target.getX() - _OldX));
 propertyChanged("_XOffset", _XOffset);
-        _YOffset = asNumber((_TargetY - _OldY));
+        _YOffset = asNumber((_Target.getY() - _OldY));
 propertyChanged("_YOffset", _YOffset);
-        actor.setX(_TargetX);
-        actor.setY(_TargetY);
+        if(!(actor == _Target))
+{
+            actor.setX(_Target.getX());
+            actor.setY(_Target.getY());
+}
+
         if(!((_ActorsOnPlatform.length == 0)))
 {
             _NewActorFrames = new Array<Dynamic>();

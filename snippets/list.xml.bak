@@ -1712,6 +1712,7 @@
         <text default="" defaultValue="" desc="" dropdown="None=None&#10;Normal In=Normal In&#10;Strong In=Strong In&#10;Normal Out=Normal Out&#10;Strong Out=Strong Out&#10;" fullname="Ease Type" hidden="false" id="8" name="_EaseType" order="9"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Move Delay" hidden="false" id="9" name="_MoveDelay" order="10"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Return Time" hidden="false" id="10" name="_ReturnTime" order="7"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Move Target" hidden="false" id="11" name="_MoveTarget" order="11"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
@@ -3035,13 +3036,12 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="true" id="2" name="_YOffset" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Old X" hidden="true" id="3" name="_OldX" order="3"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Old Y" hidden="true" id="4" name="_OldY" order="4"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target X" hidden="true" id="5" name="_TargetX" order="5"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target Y" hidden="true" id="6" name="_TargetY" order="6"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Actor Frames" hidden="true" id="7" name="_ActorFrames" order="7"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Actors On Platform" hidden="true" id="8" name="_ActorsOnPlatform" order="8"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="New Actor Frames" hidden="true" id="9" name="_NewActorFrames" order="9"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="New Actors On Platform" hidden="true" id="10" name="_NewActorsOnPlatform" order="10"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Item Index" hidden="true" id="11" name="_ItemIndex" order="11"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Target" hidden="true" id="12" name="_Target" order="12"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="645" id="1"/>
@@ -3050,7 +3050,6 @@
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
             <event displayName="Actor - Any" enabled="true" id="3" name="collide" order="3" repeats="true"/>
-            <event displayName="Move Platform" enabled="true" id="4" name="event-custom-block" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_336_336_PlatformRiderPM" classname="scripts.Design_336_336_PlatformRiderPM" desc="" description="" design="true" drawOrder="0" id="336" language="" name="Platform Rider PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -3264,6 +3263,12 @@
             <event displayName="Stop music" enabled="true" id="6" name="event-custom-block" order="8" repeats="true"/>
             <event displayName="Created" enabled="true" id="7" name="init" order="4" repeats="true"/>
             <event displayName="Loop current music" enabled="true" id="8" name="event-custom-block" order="6" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_714" classname="scripts.ActorEvents_714" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="369" language="" name="ActorEvents_714" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_706" classname="scripts.ActorEvents_706" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="368" language="" name="ActorEvents_706" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">

@@ -64,11 +64,15 @@ public var _EaseType:String;
 public var _MoveDelay:Float;
 
 public var _ReturnTime:Float;
+
+public var _MoveTarget:Actor;
     public function _customEvent_Activated():Void
 {
         _IsActive = true;
 propertyChanged("_IsActive", _IsActive);
-        var trans =
+        if (_MoveTarget == null) return;
+
+var trans =
 switch(_EaseType)
 {
 	case "None":
@@ -89,10 +93,10 @@ if (_MoveDelay > 0)
 {
 	runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void
 	{
-		if (_IsActive) actor.moveTo(_XTarget, _YTarget, _MoveTime, trans);
+		if (_IsActive) _MoveTarget.moveTo(_XTarget, _YTarget, _MoveTime, trans);
 	});
 } else {
-	actor.moveTo(_XTarget, _YTarget, _MoveTime, trans);
+	_MoveTarget.moveTo(_XTarget, _YTarget, _MoveTime, trans);
 }
 
 }
@@ -101,7 +105,9 @@ if (_MoveDelay > 0)
 {
         _IsActive = false;
 propertyChanged("_IsActive", _IsActive);
-        var trans =
+        if (_MoveTarget == null) return;
+
+var trans =
 switch(_EaseType)
 {
 	case "None":
@@ -118,7 +124,7 @@ switch(_EaseType)
 		Quad.easeOut;
 }
 
-actor.moveTo(_XStart, _YStart, _ReturnTime, trans);
+_MoveTarget.moveTo(_XStart, _YStart, _ReturnTime, trans);
 }
 
 
@@ -146,22 +152,37 @@ nameMap.set("Move Delay", "_MoveDelay");
 _MoveDelay = 0.0;
 nameMap.set("Return Time", "_ReturnTime");
 _ReturnTime = 0.0;
+nameMap.set("Move Target", "_MoveTarget");
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            _XStart = asNumber(actor.getX());
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    _XStart = asNumber(actor.getX());
 propertyChanged("_XStart", _XStart);
-        _YStart = asNumber(actor.getY());
+                    _YStart = asNumber(actor.getY());
 propertyChanged("_YStart", _YStart);
-        if((_ReturnTime == 0))
+                    if((_ReturnTime == 0))
 {
-            _ReturnTime = asNumber(_MoveTime);
+                        _ReturnTime = asNumber(_MoveTime);
 propertyChanged("_ReturnTime", _ReturnTime);
 }
 
+                    if(((actor.getGroup() == getActorGroup(6)) && actor.hasBehavior("Rideable Platform PM")))
+{
+                        _MoveTarget = actor.getValue("Rideable Platform PM", "_Target");
+propertyChanged("_MoveTarget", _MoveTarget);
+}
+
+                    else if((hasValue(_MoveTarget) == false))
+{
+                        _MoveTarget = actor;
+propertyChanged("_MoveTarget", _MoveTarget);
+}
+
+}, actor);
 
 	}	      	
 	
