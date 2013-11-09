@@ -54,12 +54,20 @@
         <event-type-region comment="false" x="15" y="15">
             <group eventID="3" id="-1">
                 <custom-297 comment="false" x="26" y="47"/>
-                <set-attribute comment="false" x="26" y="67">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="Usable Item PM"/>
-                    <int id="2" val="_CurrentNumberOfUses"/>
-                    <int id="3" val="0"/>
-                </set-attribute>
+                <if comment="false" x="26" y="67">
+                    <group eventID="3" id="-1">
+                        <set-attribute comment="false" x="37" y="100">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Usable Item PM"/>
+                            <int id="2" val="_CurrentNumberOfUses"/>
+                            <int id="3" val="0"/>
+                        </set-attribute>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Usable Item PM"/>
+                    </has-snippet>
+                </if>
             </group>
             <int id="0" val="1"/>
             <get-val-188-1 comment="false" id="1" x="0" y="0"/>

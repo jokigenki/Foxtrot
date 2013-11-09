@@ -71,7 +71,11 @@ public var _AnimationCategory:String;
 
 public var _JumpForce:Float;
 
+public var _AllowSwipeJumping:Bool;
+
 public var _MobileJumpForce:Float;
+
+public var _SwipeJumpForce:Float;
     
 
 /* Params are:__Self __Value */
@@ -88,74 +92,12 @@ public function _customBlock_GetPreventJumping():Bool
 var __Self:Actor = actor;
         return !(__Self.getValue("Jumping PM", "_PreventJumping"));
 }
+    
 
- 
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
-	{
-		super(actor, engine);	
-		nameMap.set("Key Released?", "_KeyReleased");
-_KeyReleased = false;
-nameMap.set("Can Jump?", "_CanJump");
-_CanJump = false;
-nameMap.set("Max Jump Time", "_MaxJumpTime");
-_MaxJumpTime = 0.075;
-nameMap.set("Jump Right Animation", "_JumpRightAnimation");
-nameMap.set("Jump Left Animation", "_JumpLeftAnimation");
-nameMap.set("Prevent Jumping?", "_PreventJumping");
-_PreventJumping = false;
-nameMap.set("Elapsed Jump Time", "_ElapsedJumpTime");
-_ElapsedJumpTime = 0.0;
-nameMap.set("Actor", "actor");
-nameMap.set("oldY", "_oldY");
-_oldY = 0.0;
-nameMap.set("Current Jump Time", "_CurrentJumpTime");
-_CurrentJumpTime = 0.0;
-nameMap.set("Jump Sound", "_JumpSound");
-nameMap.set("Jumping Slowdown", "_JumpingSlowdown");
-_JumpingSlowdown = 0.75;
-nameMap.set("Animation Category", "_AnimationCategory");
-_AnimationCategory = "Jumping";
-nameMap.set("Jump Force", "_JumpForce");
-_JumpForce = 35.0;
-nameMap.set("Mobile Jump Force", "_MobileJumpForce");
-_MobileJumpForce = 35.0;
-
-	}
-	
-	override public function init()
-	{
-		            /* "Inputs: ----------------------" */
-        /* "\"On Ground?\" -- <Boolean> Actor Level Attribute, from \"On Ground\" Behavior (required)" */
-        /* "\"Facing Right?\" -- <Boolean> Actor Level Attribute, from \"Walking\" Behavior (required)" */
-        /* "Outputs: ---------------------" */
-        /* "\"Is Jumping?\" -- <Boolean> Actor Level Attribute" */
-    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
-if(wrapper.enabled){
-        if(_PreventJumping)
+/* Params are: */
+public function _customBlock_CheckForKeyJump():Void
 {
-            return;
-}
-
-        /* "If we're on the ground, we're not jumping" */
-        if(asBoolean(actor.getActorValue("On Ground?")))
-{
-            actor.setActorValue("Is Jumping?", false);
-            /* "Custom: Clear Current Anim Category If Same As <Animation Category>" */
-            actor.say("Animation Manager", "_customBlock_ClearAnimCat", [_AnimationCategory]);
-            if(_KeyReleased)
-{
-                _CanJump = true;
-propertyChanged("_CanJump", _CanJump);
-}
-
-}
-
-        else if(asBoolean(actor.getActorValue("In Liquid?")))
-{
-            _CanJump = false;
-propertyChanged("_CanJump", _CanJump);
-}
-
+var __Self:Actor = actor;
         /* "Check for the jump key press, but also allow a bit of leeway for smoother jumping" */
         /* "Custom: \"Jump\" was switched on for Self" */
         if(cast((actor.say("Control Adapter PM", "_customBlock_ControlSwitchedOn", ["Jump"])), Bool))
@@ -194,7 +136,7 @@ propertyChanged("_KeyReleased", _KeyReleased);
 
         /* "Detect the jump key press, and initiate the jump" */
         /* "Custom: Is \"Jump\" on for Self" */
-        if((cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool) && (_CanJump && (_KeyReleased && asBoolean(actor.getActorValue("On Ground?"))))))
+        if((cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool) && (_CanJump && _KeyReleased)))
 {
             playSound(_JumpSound);
             _ElapsedJumpTime = asNumber(0);
@@ -275,6 +217,105 @@ propertyChanged("_ElapsedJumpTime", _ElapsedJumpTime);
 
         _oldY = asNumber(actor.getY());
 propertyChanged("_oldY", _oldY);
+}
+    
+
+/* Params are: */
+public function _customBlock_CheckForSwipeJump():Bool
+{
+var __Self:Actor = actor;
+        if((!(_CanJump) || !(asBoolean(actor.getActorValue("Swipe Jump")))))
+{
+            actor.setActorValue("Swipe Jump", false);
+            return false;
+}
+
+        actor.setActorValue("Swipe Jump", false);
+        actor.applyImpulseInDirection(Utils.DEG * (actor.getActorValue("Swipe Jump Direction")), _SwipeJumpForce);
+        return true;
+}
+
+ 
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
+	{
+		super(actor, engine);	
+		nameMap.set("Key Released?", "_KeyReleased");
+_KeyReleased = true;
+nameMap.set("Can Jump?", "_CanJump");
+_CanJump = false;
+nameMap.set("Max Jump Time", "_MaxJumpTime");
+_MaxJumpTime = 0.075;
+nameMap.set("Jump Right Animation", "_JumpRightAnimation");
+nameMap.set("Jump Left Animation", "_JumpLeftAnimation");
+nameMap.set("Prevent Jumping?", "_PreventJumping");
+_PreventJumping = false;
+nameMap.set("Elapsed Jump Time", "_ElapsedJumpTime");
+_ElapsedJumpTime = 0.0;
+nameMap.set("Actor", "actor");
+nameMap.set("oldY", "_oldY");
+_oldY = 0.0;
+nameMap.set("Current Jump Time", "_CurrentJumpTime");
+_CurrentJumpTime = 0.0;
+nameMap.set("Jump Sound", "_JumpSound");
+nameMap.set("Jumping Slowdown", "_JumpingSlowdown");
+_JumpingSlowdown = 0.75;
+nameMap.set("Animation Category", "_AnimationCategory");
+_AnimationCategory = "Jumping";
+nameMap.set("Jump Force", "_JumpForce");
+_JumpForce = 35.0;
+nameMap.set("Allow Swipe Jumping?", "_AllowSwipeJumping");
+_AllowSwipeJumping = true;
+nameMap.set("Mobile Jump Force", "_MobileJumpForce");
+_MobileJumpForce = 35.0;
+nameMap.set("Swipe Jump Force", "_SwipeJumpForce");
+_SwipeJumpForce = 50;
+
+	}
+	
+	override public function init()
+	{
+		            /* "Inputs: ----------------------" */
+        /* "\"On Ground?\" -- <Boolean> Actor Level Attribute, from \"On Ground\" Behavior (required)" */
+        /* "\"Facing Right?\" -- <Boolean> Actor Level Attribute, from \"Walking\" Behavior (required)" */
+        /* "Outputs: ---------------------" */
+        /* "\"Is Jumping?\" -- <Boolean> Actor Level Attribute" */
+    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if(_PreventJumping)
+{
+            return;
+}
+
+        /* "If we're on the ground, we're not jumping" */
+        _CanJump = false;
+propertyChanged("_CanJump", _CanJump);
+        if(asBoolean(actor.getActorValue("On Ground?")))
+{
+            actor.setActorValue("Is Jumping?", false);
+            /* "Custom: Clear Current Anim Category If Same As <Animation Category>" */
+            actor.say("Animation Manager", "_customBlock_ClearAnimCat", [_AnimationCategory]);
+            if(_KeyReleased)
+{
+                _CanJump = true;
+propertyChanged("_CanJump", _CanJump);
+}
+
+}
+
+        if(_AllowSwipeJumping)
+{
+            if(!(cast((actor.say("Jumping PM", "_customBlock_CheckForSwipeJump")), Bool)))
+{
+                actor.say("Jumping PM", "_customBlock_CheckForKeyJump");
+}
+
+}
+
+        else
+{
+            actor.say("Jumping PM", "_customBlock_CheckForKeyJump");
+}
+
 }
 });
 

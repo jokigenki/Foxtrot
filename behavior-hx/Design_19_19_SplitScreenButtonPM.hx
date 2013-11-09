@@ -65,6 +65,26 @@ public var _HasJumped:Bool;
 
 public var _LastXTouch:Float;
 
+public var _LeftTouchStartX:Float;
+
+public var _RightTouchStartX:Float;
+
+public var _RightTouchStartY:Float;
+
+public var _LeftTouchStartY:Float;
+
+public var _SwipeThreshold:Float;
+
+public var _Swiped:Bool;
+
+public var _SwipeXSpeedThreshold:Float;
+
+public var _SwipeDirection:Float;
+
+public var _SwipeLengthY:Float;
+
+public var _SwipeLengthX:Float;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
@@ -88,6 +108,26 @@ nameMap.set("Has Jumped?", "_HasJumped");
 _HasJumped = false;
 nameMap.set("Last X Touch", "_LastXTouch");
 _LastXTouch = 0.0;
+nameMap.set("Left Touch Start X", "_LeftTouchStartX");
+_LeftTouchStartX = 0;
+nameMap.set("Right Touch Start X", "_RightTouchStartX");
+_RightTouchStartX = 0;
+nameMap.set("Right Touch Start Y", "_RightTouchStartY");
+_RightTouchStartY = 0;
+nameMap.set("Left Touch Start Y", "_LeftTouchStartY");
+_LeftTouchStartY = 0;
+nameMap.set("Swipe Threshold", "_SwipeThreshold");
+_SwipeThreshold = 10;
+nameMap.set("Swiped", "_Swiped");
+_Swiped = false;
+nameMap.set("Swipe X Speed Threshold", "_SwipeXSpeedThreshold");
+_SwipeXSpeedThreshold = 5;
+nameMap.set("Swipe Direction", "_SwipeDirection");
+_SwipeDirection = 0;
+nameMap.set("Swipe Length Y", "_SwipeLengthY");
+_SwipeLengthY = 0;
+nameMap.set("Swipe Length X", "_SwipeLengthX");
+_SwipeLengthX = 0;
 
 	}
 	
@@ -112,6 +152,10 @@ if(wrapper.enabled){
 propertyChanged("_LastXTouch", _LastXTouch);
         if(((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE) < (getScreenWidth() / 2)))
 {
+            _LeftTouchStartX = asNumber((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE));
+propertyChanged("_LeftTouchStartX", _LeftTouchStartX);
+            _LeftTouchStartY = asNumber((event.stageY - Engine.screenOffsetY) / (Engine.screenScaleY * Engine.SCALE));
+propertyChanged("_LeftTouchStartY", _LeftTouchStartY);
             if((_LeftTouchID == -1))
 {
                 _LeftTouchID = asNumber((event.touchPointID));
@@ -130,6 +174,10 @@ propertyChanged("_LeftWasFirstPressed", _LeftWasFirstPressed);
 
         else
 {
+            _RightTouchStartX = asNumber((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE));
+propertyChanged("_RightTouchStartX", _RightTouchStartX);
+            _RightTouchStartY = asNumber((event.stageY - Engine.screenOffsetY) / (Engine.screenScaleY * Engine.SCALE));
+propertyChanged("_RightTouchStartY", _RightTouchStartY);
             if((_RightTouchID == -1))
 {
                 _RightTouchID = asNumber((event.touchPointID));
@@ -150,8 +198,46 @@ propertyChanged("_LeftWasFirstPressed", _LeftWasFirstPressed);
 });
     addMultiTouchEndListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
+        if(((event.touchPointID) == _LeftTouchID))
+{
+            _SwipeLengthX = asNumber(((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE) - _LeftTouchStartX));
+propertyChanged("_SwipeLengthX", _SwipeLengthX);
+            _SwipeLengthY = asNumber(((event.stageY - Engine.screenOffsetY) / (Engine.screenScaleY * Engine.SCALE) - _LeftTouchStartY));
+propertyChanged("_SwipeLengthY", _SwipeLengthY);
+            if(((-(_SwipeLengthY) > _SwipeThreshold) && (Math.abs(_SwipeLengthY) > Math.abs(_SwipeLengthX))))
+{
+                _Swiped = true;
+propertyChanged("_Swiped", _Swiped);
+                _SwipeDirection = asNumber(Math.atan2(_SwipeLengthY, _SwipeLengthX));
+propertyChanged("_SwipeDirection", _SwipeDirection);
+}
+
+            _LeftTouchID = asNumber(-1);
+propertyChanged("_LeftTouchID", _LeftTouchID);
+            _LeftPressed = false;
+propertyChanged("_LeftPressed", _LeftPressed);
+            if(_RightPressed)
+{
+                _LeftWasFirstPressed = false;
+propertyChanged("_LeftWasFirstPressed", _LeftWasFirstPressed);
+}
+
+}
+
         if(((event.touchPointID) == _RightTouchID))
 {
+            _SwipeLengthX = asNumber(((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE) - _RightTouchStartX));
+propertyChanged("_SwipeLengthX", _SwipeLengthX);
+            _SwipeLengthY = asNumber(((event.stageY - Engine.screenOffsetY) / (Engine.screenScaleY * Engine.SCALE) - _RightTouchStartY));
+propertyChanged("_SwipeLengthY", _SwipeLengthY);
+            if(((-(_SwipeLengthY) > _SwipeThreshold) && (Math.abs(_SwipeLengthY) > Math.abs(_SwipeLengthX))))
+{
+                _Swiped = true;
+propertyChanged("_Swiped", _Swiped);
+                _SwipeDirection = asNumber(Math.atan2(_SwipeLengthY, _SwipeLengthX));
+propertyChanged("_SwipeDirection", _SwipeDirection);
+}
+
             _RightTouchID = asNumber(-1);
 propertyChanged("_RightTouchID", _RightTouchID);
             _RightPressed = false;
@@ -164,18 +250,12 @@ propertyChanged("_LeftWasFirstPressed", _LeftWasFirstPressed);
 
 }
 
-        if(((event.touchPointID) == _LeftTouchID))
+        if(_Swiped)
 {
-            _LeftTouchID = asNumber(-1);
-propertyChanged("_LeftTouchID", _LeftTouchID);
-            _LeftPressed = false;
-propertyChanged("_LeftPressed", _LeftPressed);
-            if(_RightPressed)
-{
-                _LeftWasFirstPressed = false;
-propertyChanged("_LeftWasFirstPressed", _LeftWasFirstPressed);
-}
-
+            _ActorToControl.setActorValue("Swipe Jump", true);
+            _ActorToControl.setActorValue("Swipe Jump Direction", _SwipeDirection);
+            _Swiped = false;
+propertyChanged("_Swiped", _Swiped);
 }
 
 }

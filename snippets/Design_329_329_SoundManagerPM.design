@@ -3,38 +3,24 @@
     <group eventID="4" id="0">
         <receiver-5-632 comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <print comment="false" x="26" y="45">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="CURRENT: "/>
-                        <get-game-val-22 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                </print>
-                <print comment="false" x="26" y="75">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="NEW: "/>
-                        <tostring comment="false" id="1" x="0" y="0">
-                            <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
-                        </tostring>
-                    </str-combine>
-                </print>
-                <if comment="false" x="26" y="110">
+                <if comment="false" x="26" y="45">
                     <group eventID="1" id="-1">
-                        <stop-sounds comment="false" x="37" y="145"/>
-                        <play-sound4 comment="false" x="37" y="165">
+                        <stop-sounds comment="false" x="37" y="80"/>
+                        <play-sound4 comment="false" x="37" y="100">
                             <int id="0" val="1"/>
                             <get-byobval-329-632-0 comment="false" id="1" x="0" y="0"/>
                         </play-sound4>
-                        <set-game-val-22 comment="false" x="37" y="197">
+                        <set-game-val-22 comment="false" x="37" y="132">
                             <tostring comment="false" id="0" x="0" y="0">
                                 <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
                             </tostring>
                         </set-game-val-22>
-                        <set-game-val-23 comment="false" x="37" y="227">
+                        <set-game-val-23 comment="false" x="37" y="162">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-23>
-                        <if comment="false" x="37" y="252">
+                        <if comment="false" x="37" y="187">
                             <group eventID="4" id="-1">
-                                <say comment="false" x="48" y="285">
+                                <say comment="false" x="48" y="220">
                                     <ACTOR eid="var" id="0" vid="2"/>
                                     <int id="1" val="Music Toggle PM"/>
                                     <int id="2" val="MusicOn"/>

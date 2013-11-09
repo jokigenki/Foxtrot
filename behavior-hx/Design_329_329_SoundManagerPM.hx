@@ -53,8 +53,6 @@ public var _SoundUIActor:Actor;
 /* Params are:__Music */
 public function _customBlock_LoopMusic(__Music:Sound):Void
 {
-        trace("" + (("" + "CURRENT: ") + ("" + getGameAttribute("Current Music"))));
-        trace("" + (("" + "NEW: ") + ("" + ("" + __Music))));
         if(!(getGameAttribute("Current Music") == ("" + __Music)))
 {
             stopAllSounds();
