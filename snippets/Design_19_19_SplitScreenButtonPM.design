@@ -245,27 +245,29 @@
                         <get-val-19-8 comment="false" id="1" x="0" y="0"/>
                     </eq>
                 </if>
-                <if comment="false" x="26" y="735">
-                    <group eventID="2" id="-1">
-                        <actor-set-prop comment="false" x="37" y="760">
-                            <ACTOR eid="var" id="0" vid="4"/>
-                            <int id="1" val="Swipe Jump"/>
-                            <true comment="false" id="2" x="0" y="0"/>
-                        </actor-set-prop>
-                        <actor-set-prop comment="false" x="37" y="792">
-                            <ACTOR eid="var" id="0" vid="4"/>
-                            <int id="1" val="Swipe Jump Direction"/>
-                            <get-val-19-20 comment="false" id="2" x="0" y="0"/>
-                        </actor-set-prop>
-                        <set-val-19-18 comment="false" x="37" y="824">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-val-19-18>
-                    </group>
-                    <get-val-19-18 comment="false" id="0" x="0" y="0"/>
-                </if>
             </group>
             <int id="0" val="2"/>
         </event-device-multitouch>
+    </group>
+    <group eventID="2" id="1">
+        <if comment="false" x="375" y="652">
+            <group eventID="2" id="-1">
+                <actor-set-prop comment="false" x="386" y="677">
+                    <ACTOR eid="var" id="0" vid="4"/>
+                    <int id="1" val="Swipe Jump"/>
+                    <true comment="false" id="2" x="0" y="0"/>
+                </actor-set-prop>
+                <actor-set-prop comment="false" x="386" y="709">
+                    <ACTOR eid="var" id="0" vid="4"/>
+                    <int id="1" val="Swipe Jump Direction"/>
+                    <get-val-19-20 comment="false" id="2" x="0" y="0"/>
+                </actor-set-prop>
+                <set-val-19-18 comment="false" x="386" y="741">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-19-18>
+            </group>
+            <get-val-19-18 comment="false" id="0" x="0" y="0"/>
+        </if>
     </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
@@ -540,64 +542,6 @@
                 </if>
             </group>
         </step>
-    </group>
-    <group eventID="4" id="1">
-        <else comment="false" x="493" y="224">
-            <group eventID="4" id="-1">
-                <actor-set-prop comment="false" x="504" y="244">
-                    <ACTOR eid="var" id="0" vid="4"/>
-                    <int id="1" val="Swipe Jump"/>
-                    <false comment="false" id="2" x="0" y="0"/>
-                </actor-set-prop>
-                <actor-set-prop comment="false" x="504" y="276">
-                    <ACTOR eid="var" id="0" vid="4"/>
-                    <int id="1" val="Swipe Jump Direction"/>
-                    <int id="2" val="0"/>
-                </actor-set-prop>
-            </group>
-        </else>
-    </group>
-    <group eventID="4" id="2">
-        <set-val-19-18 comment="false" x="682" y="299">
-            <false comment="false" id="0" x="0" y="0"/>
-        </set-val-19-18>
-    </group>
-    <group eventID="4" id="3">
-        <if comment="false" x="631" y="362">
-            <group eventID="4" id="-1">
-                <actor-set-prop comment="false" x="642" y="410">
-                    <ACTOR eid="var" id="0" vid="4"/>
-                    <int id="1" val="Swipe Jump"/>
-                    <true comment="false" id="2" x="0" y="0"/>
-                </actor-set-prop>
-                <actor-set-prop comment="false" x="642" y="442">
-                    <ACTOR eid="var" id="0" vid="4"/>
-                    <int id="1" val="Swipe Jump Direction"/>
-                    <get-val-19-20 comment="false" id="2" x="0" y="0"/>
-                </actor-set-prop>
-            </group>
-            <and comment="false" id="0" x="0" y="0">
-                <get-val-19-18 comment="false" id="0" x="0" y="0"/>
-                <and comment="false" id="1" x="0" y="0">
-                    <less comment="false" id="0" x="0" y="0">
-                        <get-dxy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="var" id="0" vid="4"/>
-                            <int id="1" val="0"/>
-                        </get-dxy>
-                        <get-val-19-21 comment="false" id="1" x="0" y="0"/>
-                    </less>
-                    <more comment="false" id="1" x="0" y="0">
-                        <get-dxy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="var" id="0" vid="4"/>
-                            <int id="1" val="0"/>
-                        </get-dxy>
-                        <neg comment="false" id="1" x="0" y="0">
-                            <get-val-19-21 comment="false" id="0" x="0" y="0"/>
-                        </neg>
-                    </more>
-                </and>
-            </and>
-        </if>
     </group>
     <group eventID="4" id="-1"/>
     <group eventID="5" id="0">

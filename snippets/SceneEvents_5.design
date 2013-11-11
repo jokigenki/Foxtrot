@@ -3,26 +3,16 @@
     <group eventID="1" id="0">
         <init comment="false" x="30" y="24">
             <group eventID="1" id="-1">
-                <add-list comment="false" x="41" y="49">
-                    <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                    <str-combine comment="false" id="1" x="0" y="0">
-                        <int id="0" val="Farm1_01"/>
-                        <str-combine comment="false" id="1" x="0" y="0">
-                            <int id="0" val="-"/>
-                            <scenename comment="false" id="1" x="0" y="0"/>
-                        </str-combine>
-                    </str-combine>
-                </add-list>
-                <add-list comment="false" x="41" y="84">
-                    <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                    <str-combine comment="false" id="1" x="0" y="0">
-                        <scenename comment="false" id="0" x="0" y="0"/>
-                        <str-combine comment="false" id="1" x="0" y="0">
-                            <int id="0" val="-"/>
-                            <int id="1" val="Farm1_01"/>
-                        </str-combine>
-                    </str-combine>
-                </add-list>
+                <if comment="false" x="41" y="49">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="52" y="74">
+                            <ACTOR eid="15" id="0"/>
+                        </die>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Egg1_Boss"/>
+                    </custom-326>
+                </if>
             </group>
         </init>
     </group>

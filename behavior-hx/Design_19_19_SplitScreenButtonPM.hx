@@ -109,25 +109,25 @@ _HasJumped = false;
 nameMap.set("Last X Touch", "_LastXTouch");
 _LastXTouch = 0.0;
 nameMap.set("Left Touch Start X", "_LeftTouchStartX");
-_LeftTouchStartX = 0;
+_LeftTouchStartX = 0.0;
 nameMap.set("Right Touch Start X", "_RightTouchStartX");
-_RightTouchStartX = 0;
+_RightTouchStartX = 0.0;
 nameMap.set("Right Touch Start Y", "_RightTouchStartY");
-_RightTouchStartY = 0;
+_RightTouchStartY = 0.0;
 nameMap.set("Left Touch Start Y", "_LeftTouchStartY");
-_LeftTouchStartY = 0;
+_LeftTouchStartY = 0.0;
 nameMap.set("Swipe Threshold", "_SwipeThreshold");
-_SwipeThreshold = 10;
+_SwipeThreshold = 10.0;
 nameMap.set("Swiped", "_Swiped");
 _Swiped = false;
 nameMap.set("Swipe X Speed Threshold", "_SwipeXSpeedThreshold");
-_SwipeXSpeedThreshold = 5;
+_SwipeXSpeedThreshold = 5.0;
 nameMap.set("Swipe Direction", "_SwipeDirection");
-_SwipeDirection = 0;
+_SwipeDirection = 0.0;
 nameMap.set("Swipe Length Y", "_SwipeLengthY");
-_SwipeLengthY = 0;
+_SwipeLengthY = 0.0;
 nameMap.set("Swipe Length X", "_SwipeLengthX");
-_SwipeLengthX = 0;
+_SwipeLengthX = 0.0;
 
 	}
 	
@@ -248,14 +248,6 @@ propertyChanged("_RightPressed", _RightPressed);
 propertyChanged("_LeftWasFirstPressed", _LeftWasFirstPressed);
 }
 
-}
-
-        if(_Swiped)
-{
-            _ActorToControl.setActorValue("Swipe Jump", true);
-            _ActorToControl.setActorValue("Swipe Jump Direction", _SwipeDirection);
-            _Swiped = false;
-propertyChanged("_Swiped", _Swiped);
 }
 
 }

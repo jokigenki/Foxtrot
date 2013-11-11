@@ -60,8 +60,14 @@ var __Self:Actor = actor;
         setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
         setGameAttribute("Gold Keys", 0);
         setGameAttribute("Speed Run Timer", 0);
-        setGameAttribute("Destination Scene", "none");
-        setGameAttribute("Last Scene Name", "none");
+        setGameAttribute("Save Destination", "_Home|_Home");
+        setGameAttribute("Last Destination", "_Home|_Home");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Home|_Larder|A|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("Tutorial_03|Tutorial_04|B|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("Tutorial_04|_Larder|B|B");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType("LarderHomeKey",getActorType(142));
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType("Tutorial_03Key",getActorType(142));
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType("Tutorial_04Key",getActorType(142));
         saveGame("mySave", function(success:Bool):Void {
             reloadCurrentScene(createFadeOut((0.5)),createFadeIn((0.5)));
 });

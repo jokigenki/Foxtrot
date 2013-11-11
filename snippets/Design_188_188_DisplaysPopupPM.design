@@ -21,7 +21,25 @@
                                 <int id="1" val="1"/>
                             </get-wh>
                         </create-region>
-                        <set-val-188-1 comment="false" x="37" y="108">
+                        <set-val-188-9 comment="false" x="37" y="108">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-val-188-4 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-val-188-9>
+                        <set-val-188-10 comment="false" x="37" y="146">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-val-188-5 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-val-188-10>
+                        <set-val-188-1 comment="false" x="37" y="184">
                             <REGION eid="lastcreated" id="0"/>
                         </set-val-188-1>
                     </group>
@@ -43,6 +61,9 @@
                     <int id="1" val="Displays Popup PM"/>
                     <int id="2" val="RefreshPopup"/>
                 </say>
+                <set-val-188-7 comment="false" x="26" y="74">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-188-7>
             </group>
             <int id="0" val="0"/>
             <get-val-188-1 comment="false" id="1" x="0" y="0"/>
@@ -53,10 +74,39 @@
     <group eventID="3" id="0">
         <event-type-region comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <custom-297 comment="false" x="26" y="47"/>
-                <if comment="false" x="26" y="67">
+                <set-val-188-7 comment="false" x="26" y="47">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-188-7>
+                <if comment="false" x="26" y="72">
                     <group eventID="3" id="-1">
-                        <set-attribute comment="false" x="37" y="100">
+                        <dolater comment="false" x="37" y="102">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="134">
+                                    <group eventID="3" id="-1">
+                                        <custom-297 comment="false" x="59" y="164"/>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <get-val-188-7 comment="false" id="0" x="0" y="0"/>
+                                    </not>
+                                </if>
+                            </group>
+                            <get-val-188-8 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-188-8 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="220">
+                    <group eventID="3" id="-1">
+                        <custom-297 comment="false" x="37" y="240"/>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="272">
+                    <group eventID="3" id="-1">
+                        <set-attribute comment="false" x="37" y="305">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Usable Item PM"/>
                             <int id="2" val="_CurrentNumberOfUses"/>
@@ -82,20 +132,8 @@
                     <group eventID="2" id="-1">
                         <custom-296 comment="false" x="37" y="88">
                             <get-val-188-6 comment="false" id="0" x="0" y="0"/>
-                            <plus comment="false" id="1" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="0"/>
-                                </get-xy>
-                                <get-val-188-4 comment="false" id="1" x="0" y="0"/>
-                            </plus>
-                            <plus comment="false" id="2" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="1"/>
-                                </get-xy>
-                                <get-val-188-5 comment="false" id="1" x="0" y="0"/>
-                            </plus>
+                            <get-val-188-9 comment="false" id="1" x="0" y="0"/>
+                            <get-val-188-10 comment="false" id="2" x="0" y="0"/>
                         </custom-296>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
@@ -120,24 +158,12 @@
                         </less>
                     </and>
                 </if>
-                <else comment="false" x="26" y="145">
+                <else comment="false" x="26" y="132">
                     <group eventID="2" id="-1">
-                        <custom-296 comment="false" x="37" y="165">
+                        <custom-296 comment="false" x="37" y="152">
                             <get-val-188-3 comment="false" id="0" x="0" y="0"/>
-                            <plus comment="false" id="1" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="0"/>
-                                </get-xy>
-                                <get-val-188-4 comment="false" id="1" x="0" y="0"/>
-                            </plus>
-                            <plus comment="false" id="2" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="1"/>
-                                </get-xy>
-                                <get-val-188-5 comment="false" id="1" x="0" y="0"/>
-                            </plus>
+                            <get-val-188-9 comment="false" id="1" x="0" y="0"/>
+                            <get-val-188-10 comment="false" id="2" x="0" y="0"/>
                         </custom-296>
                     </group>
                 </else>

@@ -109,9 +109,8 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="7" c="false" group="3" id="158" name="Trampoline 7" sx="1.0" sy="1.0" x="432" y="192" z="4"/>
-        <actor a="0.0" aid="8" c="false" group="3" id="158" name="Trampoline 8" sx="1.0" sy="1.0" x="368" y="320" z="4"/>
-        <actor a="0.0" aid="9" c="true" group="3" id="142" name="Gold Key 9" sx="1.0" sy="1.0" x="103" y="91" z="4">
+        <actor a="0.0" aid="8" c="false" group="5" id="158" name="Trampoline 8" sx="1.0" sy="1.0" x="368" y="320" z="4"/>
+        <actor a="0.0" aid="9" c="true" group="3" id="142" name="Gold Key 9" sx="1.0" sy="1.0" x="103" y="107" z="4">
             <snippets>
                 <s enabled="true" id="91">
                     <prop id="1" list="0" val="KeyCollected"/>
@@ -122,7 +121,7 @@
                 <s enabled="true" id="90"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="19" c="true" group="3" id="194" name="Conveyor2x 19" sx="1.0" sy="1.0" x="192" y="80" z="1">
+        <actor a="0.0" aid="19" c="true" group="3" id="194" name="Conveyor2x 19" sx="1.0" sy="1.0" x="192" y="96" z="1">
             <snippets>
                 <s enabled="true" id="128">
                     <prop id="1" list="0" val="-0.5"/>
@@ -169,7 +168,7 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="21" c="true" group="3" id="194" name="Conveyor2x 21" sx="1.0" sy="1.0" x="176" y="208" z="1">
+        <actor a="0.0" aid="21" c="true" group="3" id="194" name="Conveyor2x 21" sx="1.0" sy="1.0" x="176" y="224" z="1">
             <snippets>
                 <s enabled="true" id="128">
                     <prop id="1" list="0" val="-0.5"/>
@@ -181,7 +180,7 @@
                 <s enabled="true" id="130"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="20" c="true" group="3" id="194" name="Conveyor2x 20" sx="1.0" sy="1.0" x="112" y="144" z="1">
+        <actor a="0.0" aid="20" c="true" group="3" id="194" name="Conveyor2x 20" sx="1.0" sy="1.0" x="96" y="160" z="1">
             <snippets>
                 <s enabled="true" id="128">
                     <prop id="1" list="0" val="0.5"/>
@@ -220,10 +219,10 @@
                 <s enabled="true" id="121"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="22" c="true" group="3" id="194" name="Conveyor2x 22" sx="1.0" sy="1.0" x="96" y="272" z="1">
+        <actor a="0.0" aid="22" c="true" group="3" id="194" name="Conveyor2x 22" sx="1.0" sy="1.0" x="48" y="288" z="1">
             <snippets>
                 <s enabled="true" id="128">
-                    <prop id="1" list="0" val="0.5"/>
+                    <prop id="1" list="0" val="-0.5"/>
                     <prop id="2" list="0" val="0"/>
                     <prop id="3" list="0" val="0"/>
                     <prop id="4" list="0" val="0"/>
@@ -235,22 +234,6 @@
         <actor a="0.0" aid="25" c="false" group="2" id="196" name="Teleporter 25" sx="1.0" sy="1.0" x="135" y="320" z="4"/>
         <actor a="0.0" aid="24" c="true" group="8" id="201" name="Fanny Cannon 24" sx="1.0" sy="1.0" x="320" y="304" z="4">
             <snippets>
-                <s enabled="true" id="136">
-                    <prop id="1" list="0" val="3"/>
-                    <prop id="2" list="0" val="3"/>
-                    <prop id="3" list="0" val="199"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="13"/>
-                    <prop id="6" list="0" val="30"/>
-                    <prop id="7" list="0" val="-1"/>
-                    <prop id="8" list="0" val="0"/>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="idle-l"/>
-                    <prop id="11" list="0" val="shoot-l"/>
-                    <prop id="12" list="0" val="false"/>
-                    <prop id="13" list="0" val="0.4"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="141">
                     <prop id="1" list="1" val=""/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -280,6 +263,7 @@
                 <s enabled="true" id="135"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="26" c="false" group="3" id="583" name="Small Trampoline 26" sx="1.0" sy="1.0" x="464" y="208" z="1"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -293,6 +277,16 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
+            <prop id="14" list="0" val="0"/>
+            <prop id="15" list="0" val="0"/>
+            <prop id="17" list="0" val="0"/>
+            <prop id="16" list="0" val="0"/>
+            <prop id="19" list="0" val="10"/>
+            <prop id="18" list="0" val="false"/>
+            <prop id="21" list="0" val="5"/>
+            <prop id="20" list="0" val="0"/>
+            <prop id="23" list="0" val="0"/>
+            <prop id="22" list="0" val="0"/>
         </s>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
@@ -320,9 +314,11 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="10,16.0,80.0,32.0,80.0,32.0,0.0,48.0,0.0,48.0,208.0,0.0,208.0,0.0,192.0,32.0,192.0,32.0,112.0,16.0,112.0" x="272.0" y="96.0"/>
-        <p pts="30,48.0,272.0,16.0,272.0,16.0,288.0,48.0,288.0,48.0,336.0,144.0,336.0,144.0,384.0,128.0,384.0,128.0,352.0,32.0,352.0,32.0,304.0,0.0,304.0,0.0,144.0,16.0,144.0,16.0,128.0,0.0,128.0,0.0,32.0,160.0,32.0,160.0,0.0,176.0,0.0,176.0,48.0,16.0,48.0,16.0,112.0,48.0,112.0,48.0,144.0,32.0,144.0,32.0,160.0,16.0,160.0,16.0,240.0,48.0,240.0" x="80.0" y="0.0"/>
-        <p pts="24,176.0,336.0,176.0,208.0,240.0,208.0,240.0,128.0,288.0,128.0,288.0,48.0,112.0,48.0,112.0,224.0,96.0,224.0,96.0,48.0,32.0,48.0,32.0,0.0,48.0,0.0,48.0,32.0,304.0,32.0,304.0,144.0,256.0,144.0,256.0,224.0,192.0,224.0,192.0,352.0,16.0,352.0,16.0,384.0,0.0,384.0,0.0,336.0" x="256.0" y="0.0"/>
-        <p pts="4,16.0,0.0,16.0,48.0,0.0,48.0,0.0,0.0" x="352.0" y="256.0"/>
+        <p pts="18,224.0,144.0,224.0,240.0,176.0,240.0,176.0,224.0,208.0,224.0,208.0,128.0,256.0,128.0,256.0,48.0,80.0,48.0,80.0,240.0,64.0,240.0,64.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0,272.0,32.0,272.0,144.0" x="288.0" y="0.0"/>
+        <p pts="4,0.0,0.0,16.0,0.0,16.0,192.0,0.0,192.0" x="304.0" y="112.0"/>
+        <p pts="12,208.0,48.0,64.0,48.0,64.0,16.0,16.0,16.0,16.0,80.0,0.0,80.0,0.0,0.0,80.0,0.0,80.0,32.0,224.0,32.0,224.0,80.0,208.0,80.0" x="48.0" y="304.0"/>
+        <p pts="16,16.0,256.0,16.0,384.0,0.0,384.0,0.0,240.0,80.0,240.0,80.0,32.0,240.0,32.0,240.0,0.0,256.0,0.0,256.0,48.0,96.0,48.0,96.0,128.0,128.0,128.0,128.0,160.0,96.0,160.0,96.0,256.0" x="0.0" y="0.0"/>
+        <p pts="14,160.0,0.0,160.0,16.0,144.0,16.0,144.0,144.0,16.0,144.0,16.0,176.0,0.0,176.0,0.0,128.0,48.0,128.0,48.0,80.0,64.0,80.0,64.0,128.0,128.0,128.0,128.0,0.0" x="304.0" y="208.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="176.0" y="288.0"/>
     </terrain>
 </scene>

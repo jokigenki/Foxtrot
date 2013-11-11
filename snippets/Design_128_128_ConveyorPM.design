@@ -115,12 +115,14 @@
                 <set-val-128-2 comment="false" x="26" y="250">
                     <div comment="false" id="0" x="0" y="0">
                         <int id="0" val="1"/>
-                        <get-val-128-1 comment="false" id="1" x="0" y="0"/>
+                        <abs comment="false" id="1" x="0" y="0">
+                            <get-val-128-1 comment="false" id="0" x="0" y="0"/>
+                        </abs>
                     </div>
                 </set-val-128-2>
-                <if comment="false" x="26" y="280">
+                <if comment="false" x="26" y="285">
                     <group eventID="1" id="-1">
-                        <set-val-128-4 comment="false" x="37" y="315">
+                        <set-val-128-4 comment="false" x="37" y="320">
                             <int id="0" val="1"/>
                         </set-val-128-4>
                     </group>
@@ -135,9 +137,9 @@
                         </more>
                     </and>
                 </if>
-                <else-if comment="false" x="26" y="347">
+                <else-if comment="false" x="26" y="352">
                     <group eventID="1" id="-1">
-                        <set-val-128-4 comment="false" x="37" y="382">
+                        <set-val-128-4 comment="false" x="37" y="387">
                             <int id="0" val="-1"/>
                         </set-val-128-4>
                     </group>
@@ -152,9 +154,9 @@
                         </more>
                     </and>
                 </else-if>
-                <else comment="false" x="26" y="414">
+                <else comment="false" x="26" y="419">
                     <group eventID="3" id="-1">
-                        <set-val-128-4 comment="false" x="37" y="434">
+                        <set-val-128-4 comment="false" x="37" y="439">
                             <get-val-128-1 comment="false" id="0" x="0" y="0"/>
                         </set-val-128-4>
                     </group>

@@ -42,14 +42,18 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_4 extends SceneScript
+class SceneEvents_39 extends SceneScript
 {          	
 	
+public var _ExitName:String;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
+
 	}
 	
 	override public function init()

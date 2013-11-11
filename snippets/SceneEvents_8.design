@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="65">
+                            <ACTOR eid="17" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="92">
+                            <ACTOR eid="18" id="0"/>
+                        </die>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Farm_Boss_Key"/>
+                    </custom-326>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

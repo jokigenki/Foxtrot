@@ -17,21 +17,15 @@
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
         <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="256" y="256" z="2"/>
-        <actor a="0.0" aid="5" c="true" group="3" id="142" name="Gold Key 5" sx="1.0" sy="1.0" x="157" y="253" z="3">
+        <actor a="0.0" aid="5" c="true" group="3" id="142" name="Gold Key 5" sx="1.0" sy="1.0" x="313" y="253" z="3">
             <snippets>
                 <s enabled="true" id="91">
                     <prop id="1" list="0" val="KeyCollected"/>
-                    <prop id="2" list="0" val="5"/>
-                    <prop id="3" list="0" val="OutsideKey"/>
+                    <prop id="2" list="0" val="35"/>
+                    <prop id="3" list="0" val="LarderHomeKey"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="90"/>
-                <s enabled="true" id="120">
-                    <prop id="1" list="0" val="KeyCollected"/>
-                    <prop id="2" list="0" val="_Home|_Outside|A|A"/>
-                    <prop id="3" list="0" val="_Home"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
             </snippets>
         </actor>
         <actor a="0.0" aid="7" c="true" group="3" id="189" name="Egg In Larder 7" sx="1.0" sy="1.0" x="406" y="100" z="3">
@@ -177,11 +171,11 @@
                 <s enabled="true" id="126"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="20" c="true" group="2" id="223" name="Door Green2 20" sx="1.0" sy="1.0" x="308" y="257" z="4">
+        <actor a="0.0" aid="20" c="true" group="2" id="223" name="Door Green2 20" sx="1.0" sy="1.0" x="512" y="256" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="0.0"/>
-                    <prop id="3" list="0" val="_Larder|_Home|A|A"/>
+                    <prop id="3" list="0" val="_Larder|Tutorial_04|B|B"/>
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="-1"/>
                     <prop id="6" list="0" val="false"/>
@@ -366,6 +360,51 @@
                 </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="35" c="true" group="2" id="223" name="Door Green2 35" sx="1.0" sy="1.0" x="96" y="256" z="4">
+            <snippets>
+                <s enabled="true" id="304">
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="3" list="0" val="_Larder|_Home|A|A"/>
+                    <prop id="4" list="0" val="3"/>
+                    <prop id="6" list="0" val="true"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="11" list="0" val="0.5"/>
+                    <prop id="12" list="0" val="0.5"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="159"/>
+                <s enabled="true" id="92">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="Open"/>
+                    <prop id="3" list="0" val="Closed"/>
+                    <prop id="4" list="0" val="Opening"/>
+                    <prop id="13" list="0" val="KeyCollected"/>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="133">
+                    <prop id="14" list="0" val="9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val=""/>
+                    <prop id="19" list="0" val="false"/>
+                    <prop id="18" list="0" val="false"/>
+                    <prop id="21" list="0" val=""/>
+                    <prop id="20" list="0" val="false"/>
+                    <prop id="23" list="0" val=""/>
+                    <prop id="25" list="0" val=""/>
+                    <prop id="24" list="0" val="UseDoor"/>
+                    <prop id="27" list="0" val="0"/>
+                    <prop id="26" list="0" val="1"/>
+                    <prop id="29" list="0" val="4"/>
+                    <prop id="28" list="0" val=""/>
+                    <prop id="30" list="0" val="4"/>
+                </s>
+            </snippets>
+        </actor>
         <actor a="0.0" aid="32" c="true" group="3" id="189" name="Egg In Larder 32" sx="1.0" sy="1.0" x="456" y="172" z="3">
             <snippets>
                 <s enabled="true" id="127">
@@ -405,6 +444,16 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
+            <prop id="14" list="0" val="0"/>
+            <prop id="15" list="0" val="0"/>
+            <prop id="17" list="0" val="0"/>
+            <prop id="16" list="0" val="0"/>
+            <prop id="19" list="0" val="10"/>
+            <prop id="18" list="0" val="false"/>
+            <prop id="21" list="0" val="5"/>
+            <prop id="20" list="0" val="0"/>
+            <prop id="23" list="0" val="0"/>
+            <prop id="22" list="0" val="0"/>
         </s>
         <s enabled="true" id="21"/>
         <s enabled="true" id="303">
