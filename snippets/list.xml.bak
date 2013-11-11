@@ -1173,8 +1173,8 @@
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="2" name="event-type-region" order="2" repeats="true"/>
-            <event displayName="Exits Region" enabled="true" id="3" name="event-type-region" order="3" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="4" name="event-group-region" order="4" repeats="true"/>
+            <event displayName="Exits Region" enabled="true" id="5" name="event-group-region" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_148" classname="scripts.ActorEvents_148" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="96" language="" name="ActorEvents_148" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -1270,8 +1270,8 @@
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="2" name="event-type-region" order="2" repeats="true"/>
-            <event displayName="Exits Region" enabled="true" id="3" name="event-type-region" order="3" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="4" name="event-group-region" order="4" repeats="true"/>
+            <event displayName="Exits Region" enabled="true" id="5" name="event-group-region" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_14" classname="scripts.SceneEvents_14" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="112" language="" name="SceneEvents_14" oid="-1" package="scripts." sceneid="14" scenespecific="true" shared="false" type="scene">
@@ -1455,7 +1455,6 @@
         <events/>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_133_133" classname="scripts.Design_133_133" desc="An item that can be used by standing in front of it and pressing use." description="An item that can be used by standing in front of it and pressing use." design="true" drawOrder="0" id="133" language="" name="Usable Item PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
-        <actortype default="" defaultValue="" desc="" dropdown="" fullname="Actor Type" hidden="false" id="14" name="_ActorType" order="1"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Can Use Item?" hidden="true" id="17" name="_CanUseItem" order="3"/>
         <region default="" defaultValue="" desc="" dropdown="" fullname="Use Region" hidden="true" id="16" name="_UseRegion" order="2"/>
@@ -1478,10 +1477,10 @@
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="2" name="event-type-region" order="2" repeats="true"/>
-            <event displayName="Exits Region" enabled="true" id="3" name="event-type-region" order="3" repeats="true"/>
             <event displayName="Updated" enabled="true" id="4" name="step" order="4" repeats="true"/>
             <event displayName=" Set Is Enabled" enabled="true" id="5" name="event-custom-block" order="5" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="6" name="event-group-region" order="6" repeats="true"/>
+            <event displayName="Exits Region" enabled="true" id="7" name="event-group-region" order="7" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_196" classname="scripts.ActorEvents_196" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="132" language="" name="ActorEvents_196" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -1830,7 +1829,6 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_188_188_DisplaysPopupPM" classname="scripts.Design_188_188_DisplaysPopupPM" desc="" description="" design="true" drawOrder="0" id="188" language="" name="Displays Popup PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <region default="" defaultValue="" desc="" dropdown="" fullname="Activation Region" hidden="true" id="1" name="_ActivationRegion" order="1"/>
-        <actortype default="" defaultValue="" desc="" dropdown="" fullname="Popup Activation Actor Type" hidden="false" id="2" name="_PopupActivationActorType" order="2"/>
         <actortype default="" defaultValue="" desc="" dropdown="" fullname="Popup Type" hidden="false" id="3" name="_PopupType" order="4"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Offset" hidden="false" id="4" name="_XOffset" order="5"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="false" id="5" name="_YOffset" order="6"/>
@@ -1843,9 +1841,9 @@
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="2" name="event-type-region" order="2" repeats="true"/>
-            <event displayName="Exits Region" enabled="true" id="3" name="event-type-region" order="3" repeats="true"/>
             <event displayName="Refresh Popup" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="5" name="event-group-region" order="5" repeats="true"/>
+            <event displayName="Exits Region" enabled="true" id="6" name="event-group-region" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_292" classname="scripts.ActorEvents_292" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="189" language="" name="ActorEvents_292" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -2961,8 +2959,8 @@
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="2" name="event-type-region" order="2" repeats="false"/>
-            <event displayName="Exits Region" enabled="true" id="3" name="event-type-region" order="3" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="4" name="event-group-region" order="4" repeats="true"/>
+            <event displayName="Exits Region" enabled="true" id="5" name="event-group-region" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_553" classname="scripts.ActorEvents_553" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="297" language="" name="ActorEvents_553" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
