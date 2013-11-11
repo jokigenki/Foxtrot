@@ -5,13 +5,15 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="65">
-                            <ACTOR eid="12" id="0"/>
+                        <die comment="false" x="37" y="70">
+                            <ACTOR eid="11" id="0"/>
                         </die>
                     </group>
-                    <custom-326 comment="false" id="0" x="0" y="0">
-                        <int id="0" val="Egg1_Boss"/>
-                    </custom-326>
+                    <not comment="false" id="0" x="0" y="0">
+                        <custom-326 comment="false" id="0" x="0" y="0">
+                            <int id="0" val="Egg1_Boss"/>
+                        </custom-326>
+                    </not>
                 </if>
             </group>
         </init>
