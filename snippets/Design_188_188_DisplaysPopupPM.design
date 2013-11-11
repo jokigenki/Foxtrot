@@ -53,78 +53,6 @@
         </init>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <event-type-region comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <say comment="false" x="26" y="47">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="Displays Popup PM"/>
-                    <int id="2" val="RefreshPopup"/>
-                </say>
-                <set-val-188-7 comment="false" x="26" y="74">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-188-7>
-            </group>
-            <int id="0" val="0"/>
-            <get-val-188-1 comment="false" id="1" x="0" y="0"/>
-            <get-val-188-2 comment="false" id="2" x="0" y="0"/>
-        </event-type-region>
-    </group>
-    <group eventID="2" id="-1"/>
-    <group eventID="3" id="0">
-        <event-type-region comment="false" x="15" y="15">
-            <group eventID="3" id="-1">
-                <set-val-188-7 comment="false" x="26" y="47">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-188-7>
-                <if comment="false" x="26" y="72">
-                    <group eventID="3" id="-1">
-                        <dolater comment="false" x="37" y="102">
-                            <group eventID="3" id="-1">
-                                <if comment="false" x="48" y="134">
-                                    <group eventID="3" id="-1">
-                                        <custom-297 comment="false" x="59" y="164"/>
-                                    </group>
-                                    <not comment="false" id="0" x="0" y="0">
-                                        <get-val-188-7 comment="false" id="0" x="0" y="0"/>
-                                    </not>
-                                </if>
-                            </group>
-                            <get-val-188-8 comment="false" id="0" x="0" y="0"/>
-                            <ACTOR eid="this" id="2"/>
-                        </dolater>
-                    </group>
-                    <more comment="false" id="0" x="0" y="0">
-                        <get-val-188-8 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </more>
-                </if>
-                <else comment="false" x="26" y="220">
-                    <group eventID="3" id="-1">
-                        <custom-297 comment="false" x="37" y="240"/>
-                    </group>
-                </else>
-                <if comment="false" x="26" y="272">
-                    <group eventID="3" id="-1">
-                        <set-attribute comment="false" x="37" y="305">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="Usable Item PM"/>
-                            <int id="2" val="_CurrentNumberOfUses"/>
-                            <int id="3" val="0"/>
-                        </set-attribute>
-                    </group>
-                    <has-snippet comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="Usable Item PM"/>
-                    </has-snippet>
-                </if>
-            </group>
-            <int id="0" val="1"/>
-            <get-val-188-1 comment="false" id="1" x="0" y="0"/>
-            <get-val-188-2 comment="false" id="2" x="0" y="0"/>
-        </event-type-region>
-    </group>
-    <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
@@ -172,4 +100,76 @@
         </event-custom>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <say comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Displays Popup PM"/>
+                    <int id="2" val="RefreshPopup"/>
+                </say>
+                <set-val-188-7 comment="false" x="26" y="74">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-188-7>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="var" id="1" vid="1"/>
+            <GROUP eid="0" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-188-7 comment="false" x="26" y="47">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-188-7>
+                <if comment="false" x="26" y="72">
+                    <group eventID="3" id="-1">
+                        <dolater comment="false" x="37" y="102">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="134">
+                                    <group eventID="3" id="-1">
+                                        <custom-297 comment="false" x="59" y="164"/>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <get-val-188-7 comment="false" id="0" x="0" y="0"/>
+                                    </not>
+                                </if>
+                            </group>
+                            <get-val-188-8 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-188-8 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="220">
+                    <group eventID="3" id="-1">
+                        <custom-297 comment="false" x="37" y="240"/>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="272">
+                    <group eventID="3" id="-1">
+                        <set-attribute comment="false" x="37" y="305">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Usable Item PM"/>
+                            <int id="2" val="_CurrentNumberOfUses"/>
+                            <int id="3" val="0"/>
+                        </set-attribute>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Usable Item PM"/>
+                    </has-snippet>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <REGION eid="var" id="1" vid="1"/>
+            <GROUP eid="0" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

@@ -52,63 +52,6 @@
         </init>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <event-type-region comment="false" x="15" y="14">
-            <group eventID="2" id="-1">
-                <set-val-133-17 comment="false" x="26" y="46">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-133-17>
-                <set-val-133-27 comment="false" x="26" y="71">
-                    <int id="0" val="0"/>
-                </set-val-133-27>
-                <if comment="false" x="26" y="91">
-                    <group eventID="2" id="-1">
-                        <comment-short comment="false" x="37" y="116">
-                            <int id="0" val="Custom: Set Prevent Jump to &amp;lt;true&amp;gt; for &amp;lt;the actor&amp;gt;"/>
-                        </comment-short>
-                        <custom-98 comment="false" x="37" y="136">
-                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
-                            <true comment="false" id="1" x="0" y="0"/>
-                        </custom-98>
-                        <set-val-133-18 comment="false" x="37" y="168">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-val-133-18>
-                        <set-val-133-17 comment="false" x="37" y="193">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-133-17>
-                        <set-val-133-21 comment="false" x="37" y="218">
-                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
-                        </set-val-133-21>
-                    </group>
-                    <get-val-133-20 comment="false" id="0" x="0" y="0"/>
-                </if>
-            </group>
-            <int id="0" val="0"/>
-            <REGION eid="var" id="1" vid="16"/>
-            <get-val-133-14 comment="false" id="2" x="0" y="0"/>
-        </event-type-region>
-    </group>
-    <group eventID="2" id="-1"/>
-    <group eventID="3" id="0">
-        <event-type-region comment="false" x="15" y="15">
-            <group eventID="3" id="-1">
-                <comment-short comment="false" x="26" y="47">
-                    <int id="0" val="Custom: Set Prevent Jump to &amp;lt;false&amp;gt; for &amp;lt;the actor&amp;gt;"/>
-                </comment-short>
-                <custom-98 comment="false" x="26" y="67">
-                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
-                    <false comment="false" id="1" x="0" y="0"/>
-                </custom-98>
-                <set-val-133-17 comment="false" x="26" y="99">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-133-17>
-            </group>
-            <int id="0" val="1"/>
-            <REGION eid="var" id="1" vid="16"/>
-            <get-val-133-14 comment="false" id="2" x="0" y="0"/>
-        </event-type-region>
-    </group>
-    <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="4" id="-1">
@@ -209,4 +152,61 @@
         </receiver-3-198>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-133-17 comment="false" x="26" y="47">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-133-17>
+                <set-val-133-27 comment="false" x="26" y="72">
+                    <int id="0" val="0"/>
+                </set-val-133-27>
+                <if comment="false" x="26" y="92">
+                    <group eventID="2" id="-1">
+                        <comment-short comment="false" x="37" y="117">
+                            <int id="0" val="Custom: Set Prevent Jump to &amp;lt;true&amp;gt; for &amp;lt;the actor&amp;gt;"/>
+                        </comment-short>
+                        <custom-98 comment="false" x="37" y="137">
+                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                            <true comment="false" id="1" x="0" y="0"/>
+                        </custom-98>
+                        <set-val-133-18 comment="false" x="37" y="169">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-18>
+                        <set-val-133-17 comment="false" x="37" y="194">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-17>
+                        <set-val-133-21 comment="false" x="37" y="219">
+                            <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                        </set-val-133-21>
+                    </group>
+                    <get-val-133-20 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="var" id="1" vid="16"/>
+            <GROUP eid="0" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <comment-short comment="false" x="26" y="47">
+                    <int id="0" val="Custom: Set Prevent Jump to &amp;lt;false&amp;gt; for &amp;lt;the actor&amp;gt;"/>
+                </comment-short>
+                <custom-98 comment="false" x="26" y="67">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                    <false comment="false" id="1" x="0" y="0"/>
+                </custom-98>
+                <set-val-133-17 comment="false" x="26" y="99">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-133-17>
+            </group>
+            <int id="0" val="1"/>
+            <REGION eid="var" id="1" vid="16"/>
+            <GROUP eid="0" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="7" id="-1"/>
 </groups>

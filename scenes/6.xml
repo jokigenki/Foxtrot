@@ -14,8 +14,8 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="50" id="0" name="Lift1 Region" pts="4,-32.0,25.0,32.0,25.0,32.0,-25.0,-32.0,-25.0" r="64" type="box" w="64" x="288" y="223"/>
-        <region b="64" g="64" h="146" id="1" name="Lift2 Region" pts="4,-32.0,73.0,32.0,73.0,32.0,-73.0,-32.0,-73.0" r="64" type="box" w="64" x="416" y="175"/>
+        <region b="64" g="64" h="50" id="0" name="Lift1 Region" pts="4,-32.0,-25.0,32.0,-25.0,32.0,25.0,-32.0,25.0" r="64" type="box" w="64" x="288" y="223"/>
+        <region b="64" g="64" h="146" id="1" name="Lift2 Region" pts="4,-32.0,-73.0,32.0,-73.0,32.0,73.0,-32.0,73.0" r="64" type="box" w="64" x="416" y="175"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -46,6 +46,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -64,7 +65,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="5" c="true" group="2" id="140" name="Door 5" sx="1.0" sy="1.0" x="496" y="128" z="4">
@@ -92,6 +92,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -110,17 +111,16 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="6" c="true" group="5" id="148" name="Lift 6" sx="1.0" sy="1.0" x="288" y="256" z="4">
             <snippets>
+                <s enabled="true" id="96"/>
                 <s enabled="true" id="233">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="96"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Vertical Oscillation PM"/>
@@ -139,12 +139,12 @@
         </actor>
         <actor a="0.0" aid="7" c="true" group="5" id="148" name="Lift 7" sx="1.0" sy="1.0" x="416" y="160" z="4">
             <snippets>
+                <s enabled="true" id="96"/>
                 <s enabled="true" id="233">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="96"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Vertical Oscillation PM"/>
@@ -250,10 +250,10 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -266,17 +266,17 @@
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="31.0"/>
         </s>
-        <s enabled="true" id="329">
-            <prop id="1" list="0" val="466"/>
-            <prop id="2" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="303">
             <prop id="1" list="0" val="0.5"/>
             <prop id="2" list="0" val="6"/>
         </s>
+        <s enabled="true" id="329">
+            <prop id="1" list="0" val="466"/>
+            <prop id="2" list="0" val="-1"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="18,384.0,112.0,448.0,112.0,448.0,0.0,320.0,0.0,320.0,64.0,256.0,64.0,256.0,0.0,192.0,0.0,192.0,96.0,0.0,96.0,0.0,208.0,192.0,208.0,192.0,240.0,256.0,240.0,256.0,160.0,320.0,160.0,320.0,288.0,384.0,288.0" x="96.0" y="48.0"/>
         <p pts="18,320.0,192.0,288.0,192.0,288.0,272.0,192.0,272.0,192.0,240.0,0.0,240.0,0.0,96.0,192.0,96.0,192.0,0.0,288.0,0.0,288.0,64.0,320.0,64.0,320.0,0.0,480.0,0.0,480.0,144.0,416.0,144.0,416.0,320.0,320.0,320.0" x="80.0" y="32.0"/>
+        <p pts="18,384.0,112.0,448.0,112.0,448.0,0.0,320.0,0.0,320.0,64.0,256.0,64.0,256.0,0.0,192.0,0.0,192.0,96.0,0.0,96.0,0.0,208.0,192.0,208.0,192.0,240.0,256.0,240.0,256.0,160.0,320.0,160.0,320.0,288.0,384.0,288.0" x="96.0" y="48.0"/>
     </terrain>
 </scene>
