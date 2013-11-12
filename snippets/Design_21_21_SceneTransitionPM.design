@@ -28,9 +28,15 @@
     <group eventID="3" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <if comment="false" x="26" y="40">
+                <print comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Switched to scene "/>
+                        <scenename comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </print>
+                <if comment="false" x="26" y="70">
                     <group eventID="5" id="-1">
-                        <save-game comment="false" x="37" y="75">
+                        <save-game comment="false" x="37" y="105">
                             <group eventID="4" id="-1"/>
                         </save-game>
                     </group>
@@ -91,29 +97,40 @@
                 </if>
                 <if comment="false" x="26" y="321">
                     <group eventID="5" id="-1">
-                        <print comment="false" x="37" y="351">
-                            <int id="0" val="loading farm, levels, unloading factory, home"/>
-                        </print>
-                        <load-unload-atlas comment="false" x="37" y="371">
-                            <int id="0" val="0"/>
-                            <int id="1" val="0"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="398">
-                            <int id="0" val="0"/>
-                            <int id="1" val="2"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="425">
-                            <int id="0" val="0"/>
-                            <int id="1" val="4"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="452">
-                            <int id="0" val="1"/>
-                            <int id="1" val="1"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="479">
-                            <int id="0" val="1"/>
-                            <int id="1" val="3"/>
-                        </load-unload-atlas>
+                        <if comment="false" x="37" y="351">
+                            <group eventID="5" id="-1">
+                                <set-game-val-24 comment="false" x="48" y="381">
+                                    <int id="0" val="Farm"/>
+                                </set-game-val-24>
+                                <print comment="false" x="48" y="401">
+                                    <int id="0" val="loading farm, levels, unloading factory, home"/>
+                                </print>
+                                <load-unload-atlas comment="false" x="48" y="421">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="448">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="2"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="475">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="4"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="502">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="1"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="529">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="3"/>
+                                </load-unload-atlas>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <get-game-val-24 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Farm"/>
+                            </noteq>
+                        </if>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
                         <code-short comment="false" id="0" x="0" y="0">
@@ -122,31 +139,42 @@
                         <int id="1" val="-1"/>
                     </more>
                 </if>
-                <else-if comment="false" x="26" y="518">
+                <else-if comment="false" x="26" y="580">
                     <group eventID="5" id="-1">
-                        <print comment="false" x="37" y="548">
-                            <int id="0" val="unloading farm atlas, loading factory"/>
-                        </print>
-                        <load-unload-atlas comment="false" x="37" y="568">
-                            <int id="0" val="0"/>
-                            <int id="1" val="0"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="595">
-                            <int id="0" val="0"/>
-                            <int id="1" val="1"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="622">
-                            <int id="0" val="0"/>
-                            <int id="1" val="4"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="649">
-                            <int id="0" val="1"/>
-                            <int id="1" val="2"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="676">
-                            <int id="0" val="1"/>
-                            <int id="1" val="3"/>
-                        </load-unload-atlas>
+                        <if comment="false" x="37" y="610">
+                            <group eventID="5" id="-1">
+                                <set-game-val-24 comment="false" x="48" y="640">
+                                    <int id="0" val="Factory"/>
+                                </set-game-val-24>
+                                <print comment="false" x="48" y="660">
+                                    <int id="0" val="unloading farm atlas, loading factory"/>
+                                </print>
+                                <load-unload-atlas comment="false" x="48" y="680">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="707">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="734">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="4"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="761">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="2"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="788">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="3"/>
+                                </load-unload-atlas>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <get-game-val-24 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Factory"/>
+                            </noteq>
+                        </if>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
                         <code-short comment="false" id="0" x="0" y="0">
@@ -155,34 +183,45 @@
                         <int id="1" val="-1"/>
                     </more>
                 </else-if>
-                <else comment="false" x="26" y="715">
+                <else comment="false" x="26" y="839">
                     <group eventID="5" id="-1">
-                        <print comment="false" x="37" y="735">
-                            <int id="0" val="unloading farm atlas, unloading factory"/>
-                        </print>
-                        <load-unload-atlas comment="false" x="37" y="755">
-                            <int id="0" val="0"/>
-                            <int id="1" val="0"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="782">
-                            <int id="0" val="0"/>
-                            <int id="1" val="3"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="809">
-                            <int id="0" val="1"/>
-                            <int id="1" val="1"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="836">
-                            <int id="0" val="1"/>
-                            <int id="1" val="2"/>
-                        </load-unload-atlas>
-                        <load-unload-atlas comment="false" x="37" y="863">
-                            <int id="0" val="1"/>
-                            <int id="1" val="4"/>
-                        </load-unload-atlas>
+                        <if comment="false" x="37" y="859">
+                            <group eventID="5" id="-1">
+                                <set-game-val-24 comment="false" x="48" y="889">
+                                    <int id="0" val="Home"/>
+                                </set-game-val-24>
+                                <print comment="false" x="48" y="909">
+                                    <int id="0" val="unloading farm atlas, unloading factory, loading home"/>
+                                </print>
+                                <load-unload-atlas comment="false" x="48" y="929">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="956">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="3"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="983">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="1"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="1010">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="2"/>
+                                </load-unload-atlas>
+                                <load-unload-atlas comment="false" x="48" y="1037">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="4"/>
+                                </load-unload-atlas>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <get-game-val-24 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Home"/>
+                            </noteq>
+                        </if>
                     </group>
                 </else>
-                <scene-change-new comment="false" x="26" y="902">
+                <scene-change-new comment="false" x="26" y="1088">
                     <scenebyname comment="false" id="0" x="0" y="0">
                         <get-item comment="false" id="0" x="0" y="0">
                             <str-split comment="false" id="0" x="0" y="0">

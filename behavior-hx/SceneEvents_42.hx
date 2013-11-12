@@ -45,11 +45,15 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 class SceneEvents_42 extends SceneScript
 {          	
 	
+public var _WasInitialised:Bool;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		
+		nameMap.set("Was Initialised?", "_WasInitialised");
+_WasInitialised = false;
+
 	}
 	
 	override public function init()
@@ -60,6 +64,7 @@ class SceneEvents_42 extends SceneScript
                 if(success)
 {
                     setGameAttribute("Current Music", "None");
+                    setGameAttribute("Current Atlases", "None");
                     setGameAttribute("Game Was Loaded", true);
                     setGameAttribute("Speed Run In Progress", false);
 }
@@ -74,10 +79,15 @@ class SceneEvents_42 extends SceneScript
 
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if(getGameAttribute("Game Was Loaded"))
+        if((getGameAttribute("Game Was Loaded") && !(_WasInitialised)))
 {
+            _WasInitialised = true;
+propertyChanged("_WasInitialised", _WasInitialised);
+            /* "load shared and home atlases" */
+            trace("" + getGameAttribute("Save Destination"));
             if((!(getGameAttribute("Save Destination") == "none") && (("" + getGameAttribute("Save Destination")).indexOf("Tutorial") == -1)))
 {
+                trace("" + "GOING HOME");
                 runLater(1000 * 2, function(timeTask:TimedTask):Void {
                             switchScene(3, createFadeOut((1)),createFadeIn((1)));
 }, null);
@@ -95,9 +105,10 @@ if(wrapper.enabled){
                 setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
                 setGameAttribute("Gold Keys", 0);
                 setGameAttribute("Speed Run Timer", 0);
-                setGameAttribute("Save Destination", "Tutorial_01|Tutorial_01");
-                setGameAttribute("Last Destination", "Tutorial_01|Tutorial_01");
+                setGameAttribute("Save Destination", "none");
+                setGameAttribute("Last Destination", "none");
                 saveGame("mySave", function(success:Bool):Void {
+                    trace("" + "READY FOR TUTS");
                     switchScene(38, createFadeOut((1)),createFadeIn((1)));
 });
 }

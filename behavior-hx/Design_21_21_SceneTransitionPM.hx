@@ -84,32 +84,47 @@ public function _customBlock_DoSwitchScene():Void
 
         if((nextScene.indexOf("Farm") > -1))
 {
-            trace("" + "loading farm, levels, unloading factory, home");
-            loadAtlas(Std.int(0));
-            loadAtlas(Std.int(2));
-            loadAtlas(Std.int(4));
-            unloadAtlas(Std.int(1));
-            unloadAtlas(Std.int(3));
+            if(!(getGameAttribute("Current Atlases") == "Farm"))
+{
+                setGameAttribute("Current Atlases", "Farm");
+                trace("" + "loading farm, levels, unloading factory, home");
+                loadAtlas(Std.int(0));
+                loadAtlas(Std.int(2));
+                loadAtlas(Std.int(4));
+                unloadAtlas(Std.int(1));
+                unloadAtlas(Std.int(3));
+}
+
 }
 
         else if((nextScene.indexOf("Factory") > -1))
 {
-            trace("" + "unloading farm atlas, loading factory");
-            loadAtlas(Std.int(0));
-            loadAtlas(Std.int(1));
-            loadAtlas(Std.int(4));
-            unloadAtlas(Std.int(2));
-            unloadAtlas(Std.int(3));
+            if(!(getGameAttribute("Current Atlases") == "Factory"))
+{
+                setGameAttribute("Current Atlases", "Factory");
+                trace("" + "unloading farm atlas, loading factory");
+                loadAtlas(Std.int(0));
+                loadAtlas(Std.int(1));
+                loadAtlas(Std.int(4));
+                unloadAtlas(Std.int(2));
+                unloadAtlas(Std.int(3));
+}
+
 }
 
         else
 {
-            trace("" + "unloading farm atlas, unloading factory");
-            loadAtlas(Std.int(0));
-            loadAtlas(Std.int(3));
-            unloadAtlas(Std.int(1));
-            unloadAtlas(Std.int(2));
-            unloadAtlas(Std.int(4));
+            if(!(getGameAttribute("Current Atlases") == "Home"))
+{
+                setGameAttribute("Current Atlases", "Home");
+                trace("" + "unloading farm atlas, unloading factory, loading home");
+                loadAtlas(Std.int(0));
+                loadAtlas(Std.int(3));
+                unloadAtlas(Std.int(1));
+                unloadAtlas(Std.int(2));
+                unloadAtlas(Std.int(4));
+}
+
 }
 
         switchScene(GameModel.get().scenes.get(getIDForScene(("" + getGameAttribute("Last Destination")).split("|")[Std.int(1)])).getID(), createFadeOut((0.5)),createFadeIn((0.5)));
@@ -124,7 +139,8 @@ public function _customBlock_DoSwitchScene():Void
 	
 	override public function init()
 	{
-		            if((getGameAttribute("Game Was Loaded") && !(getGameAttribute("Speed Run In Progress"))))
+		            trace("" + (("" + "Switched to scene ") + ("" + getCurrentSceneName())));
+        if((getGameAttribute("Game Was Loaded") && !(getGameAttribute("Speed Run In Progress"))))
 {
             saveGame("mySave", function(success:Bool):Void {
 
