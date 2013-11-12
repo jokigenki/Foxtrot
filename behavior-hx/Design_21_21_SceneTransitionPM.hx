@@ -65,6 +65,7 @@ class Design_21_21_SceneTransitionPM extends SceneScript
 /* Params are:*/
 public function _customBlock_DoSwitchScene():Void
 {
+        /* 0 = Shared, 1 = Factory, 2 = Farm, 3 = Home, 4 = Levels */
         if(("" + getGameAttribute("Last Destination")) == (""))
 {
             return;
@@ -83,10 +84,12 @@ public function _customBlock_DoSwitchScene():Void
 
         if((nextScene.indexOf("Farm") > -1))
 {
-            trace("" + "loading farm atlas, unloading factory");
-            loadAtlas(Std.int(2));
+            trace("" + "loading farm, levels, unloading factory, home");
             loadAtlas(Std.int(0));
+            loadAtlas(Std.int(2));
+            loadAtlas(Std.int(4));
             unloadAtlas(Std.int(1));
+            unloadAtlas(Std.int(3));
 }
 
         else if((nextScene.indexOf("Factory") > -1))
@@ -94,15 +97,19 @@ public function _customBlock_DoSwitchScene():Void
             trace("" + "unloading farm atlas, loading factory");
             loadAtlas(Std.int(0));
             loadAtlas(Std.int(1));
+            loadAtlas(Std.int(4));
             unloadAtlas(Std.int(2));
+            unloadAtlas(Std.int(3));
 }
 
         else
 {
             trace("" + "unloading farm atlas, unloading factory");
             loadAtlas(Std.int(0));
+            loadAtlas(Std.int(3));
             unloadAtlas(Std.int(1));
             unloadAtlas(Std.int(2));
+            unloadAtlas(Std.int(4));
 }
 
         switchScene(GameModel.get().scenes.get(getIDForScene(("" + getGameAttribute("Last Destination")).split("|")[Std.int(1)])).getID(), createFadeOut((0.5)),createFadeIn((0.5)));

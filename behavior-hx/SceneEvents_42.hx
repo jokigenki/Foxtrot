@@ -74,30 +74,34 @@ class SceneEvents_42 extends SceneScript
 
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if((!(getGameAttribute("Save Destination") == "none") && (("" + getGameAttribute("Save Destination")).indexOf("Tutorial") == -1)))
+        if(getGameAttribute("Game Was Loaded"))
 {
-            runLater(1000 * 2, function(timeTask:TimedTask):Void {
-                        switchScene(3, createFadeOut((1)),createFadeIn((1)));
+            if((!(getGameAttribute("Save Destination") == "none") && (("" + getGameAttribute("Save Destination")).indexOf("Tutorial") == -1)))
+{
+                runLater(1000 * 2, function(timeTask:TimedTask):Void {
+                            switchScene(3, createFadeOut((1)),createFadeIn((1)));
 }, null);
 }
 
-        else
+            else
 {
-            setGameAttribute("Game Was Loaded", true);
-            setGameAttribute("Collected Items", new Array<Dynamic>());
-            setGameAttribute("Collected Speed Run Items", new Array<Dynamic>());
-            setGameAttribute("Inventory New", new Array<Dynamic>());
-            setGameAttribute("Inventory", new Array<Dynamic>());
-            setGameAttribute("Speed Run Collectables", new Array<Dynamic>());
-            setGameAttribute("Unlocked Doors", new Array<Dynamic>());
-            setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
-            setGameAttribute("Gold Keys", 0);
-            setGameAttribute("Speed Run Timer", 0);
-            setGameAttribute("Save Destination", "Tutorial_01|Tutorial_01");
-            setGameAttribute("Last Destination", "Tutorial_01|Tutorial_01");
-            saveGame("mySave", function(success:Bool):Void {
-                switchScene(38, createFadeOut((1)),createFadeIn((1)));
+                setGameAttribute("Game Was Loaded", true);
+                setGameAttribute("Collected Items", new Array<Dynamic>());
+                setGameAttribute("Collected Speed Run Items", new Array<Dynamic>());
+                setGameAttribute("Inventory New", new Array<Dynamic>());
+                setGameAttribute("Inventory", new Array<Dynamic>());
+                setGameAttribute("Speed Run Collectables", new Array<Dynamic>());
+                setGameAttribute("Unlocked Doors", new Array<Dynamic>());
+                setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
+                setGameAttribute("Gold Keys", 0);
+                setGameAttribute("Speed Run Timer", 0);
+                setGameAttribute("Save Destination", "Tutorial_01|Tutorial_01");
+                setGameAttribute("Last Destination", "Tutorial_01|Tutorial_01");
+                saveGame("mySave", function(success:Bool):Void {
+                    switchScene(38, createFadeOut((1)),createFadeIn((1)));
 });
+}
+
 }
 
 }
