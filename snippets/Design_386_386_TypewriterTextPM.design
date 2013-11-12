@@ -14,11 +14,32 @@
                         <int id="1" val="0"/>
                     </value>
                 </if>
-                <draw-text comment="false" x="26" y="112">
-                    <get-val-386-5 comment="false" id="0" x="0" y="0"/>
-                    <get-val-386-3 comment="false" id="1" x="0" y="0"/>
-                    <get-val-386-4 comment="false" id="2" x="0" y="0"/>
-                </draw-text>
+                <set-val-386-10 comment="false" x="26" y="112">
+                    <get-val-386-4 comment="false" id="0" x="0" y="0"/>
+                </set-val-386-10>
+                <repeat comment="false" x="26" y="137">
+                    <group eventID="1" id="-1">
+                        <draw-text comment="false" x="37" y="167">
+                            <get-item comment="false" id="0" x="0" y="0">
+                                <get-val-386-9 comment="false" id="0" x="0" y="0"/>
+                                <loopindex comment="false" id="1" x="0" y="0"/>
+                            </get-item>
+                            <get-val-386-3 comment="false" id="1" x="0" y="0"/>
+                            <get-val-386-10 comment="false" id="2" x="0" y="0"/>
+                        </draw-text>
+                        <incdec comment="false" x="37" y="197">
+                            <int id="0" val="10"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-font-height comment="false" id="0" x="0" y="0"/>
+                                <get-val-386-11 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </incdec>
+                    </group>
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-val-386-9 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </repeat>
             </group>
         </draw>
     </group>
@@ -26,43 +47,55 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <periodic comment="false" x="26" y="40">
+                <set-val-386-9 comment="false" x="26" y="40">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-386-9>
+                <periodic comment="false" x="26" y="65">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="72">
+                        <if comment="false" x="37" y="97">
                             <group eventID="2" id="-1">
-                                <cancel comment="false" x="48" y="97"/>
+                                <cancel comment="false" x="48" y="122"/>
                             </group>
                             <get-val-386-1 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="129">
+                        <else comment="false" x="37" y="154">
                             <group eventID="2" id="-1">
-                                <incdec comment="false" x="48" y="149">
-                                    <int id="0" val="8"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="1"/>
-                                </incdec>
-                                <if comment="false" x="48" y="176">
+                                <if comment="false" x="48" y="174">
                                     <group eventID="2" id="-1">
-                                        <cancel comment="false" x="59" y="211"/>
+                                        <cancel comment="false" x="59" y="209"/>
                                     </group>
-                                    <more comment="false" id="0" x="0" y="0">
+                                    <moreeq comment="false" id="0" x="0" y="0">
                                         <get-val-386-8 comment="false" id="0" x="0" y="0"/>
                                         <str-length comment="false" id="1" x="0" y="0">
                                             <get-val-386-7 comment="false" id="0" x="0" y="0"/>
                                         </str-length>
-                                    </more>
+                                    </moreeq>
                                 </if>
-                                <else comment="false" x="48" y="243">
+                                <else comment="false" x="48" y="241">
                                     <group eventID="2" id="-1">
-                                        <set-val-386-5 comment="false" x="59" y="263">
+                                        <set-val-386-5 comment="false" x="59" y="261">
                                             <str-substring comment="false" id="0" x="0" y="0">
                                                 <get-val-386-7 comment="false" id="0" x="0" y="0"/>
                                                 <int id="1" val="0"/>
-                                                <get-val-386-8 comment="false" id="2" x="0" y="0"/>
+                                                <plus comment="false" id="2" x="0" y="0">
+                                                    <get-val-386-8 comment="false" id="0" x="0" y="0"/>
+                                                    <int id="1" val="1"/>
+                                                </plus>
                                             </str-substring>
                                         </set-val-386-5>
+                                        <set-val-386-9 comment="false" x="59" y="296">
+                                            <str-split comment="false" id="0" x="0" y="0">
+                                                <get-val-386-5 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="|"/>
+                                            </str-split>
+                                        </set-val-386-9>
                                     </group>
                                 </else>
+                                <incdec comment="false" x="48" y="338">
+                                    <int id="0" val="8"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
                             </group>
                         </else>
                     </group>

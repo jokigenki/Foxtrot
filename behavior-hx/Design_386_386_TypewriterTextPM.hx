@@ -61,6 +61,12 @@ public var _TextToDraw:String;
 
 public var _CurrentIndex:Float;
 
+public var _Lines:Array<Dynamic>;
+
+public var _CurrentY:Float;
+
+public var _Leading:Float;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
@@ -69,9 +75,9 @@ public var _CurrentIndex:Float;
 _CancelDrawing = false;
 nameMap.set("Use Font", "_UseFont");
 nameMap.set("X Pos", "_XPos");
-_XPos = 0;
+_XPos = 0.0;
 nameMap.set("Y Pos", "_YPos");
-_YPos = 0;
+_YPos = 0.0;
 nameMap.set("Current Text", "_CurrentText");
 _CurrentText = "";
 nameMap.set("Draw Character Every N Seconds", "_DrawCharacterEveryNSeconds");
@@ -79,13 +85,20 @@ _DrawCharacterEveryNSeconds = 0.1;
 nameMap.set("Text To Draw", "_TextToDraw");
 _TextToDraw = "";
 nameMap.set("Current Index", "_CurrentIndex");
-_CurrentIndex = 0;
+_CurrentIndex = 0.0;
+nameMap.set("Lines", "_Lines");
+nameMap.set("Current Y", "_CurrentY");
+_CurrentY = 0;
+nameMap.set("Leading", "_Leading");
+_Leading = 0;
 
 	}
 	
 	override public function init()
 	{
-		            runPeriodically(1000 * _DrawCharacterEveryNSeconds, function(timeTask:TimedTask):Void {
+		            _Lines = new Array<Dynamic>();
+propertyChanged("_Lines", _Lines);
+        runPeriodically(1000 * _DrawCharacterEveryNSeconds, function(timeTask:TimedTask):Void {
                     if(_CancelDrawing)
 {
                         timeTask.repeats = false;
@@ -94,9 +107,7 @@ return;
 
                     else
 {
-                        _CurrentIndex += 1;
-propertyChanged("_CurrentIndex", _CurrentIndex);
-                        if((_CurrentIndex > ("" + _TextToDraw).length))
+                        if((_CurrentIndex >= ("" + _TextToDraw).length))
 {
                             timeTask.repeats = false;
 return;
@@ -104,10 +115,14 @@ return;
 
                         else
 {
-                            _CurrentText = ("" + _TextToDraw).substring(Std.int(0), Std.int(_CurrentIndex));
+                            _CurrentText = ("" + _TextToDraw).substring(Std.int(0), Std.int((_CurrentIndex + 1)));
 propertyChanged("_CurrentText", _CurrentText);
+                            _Lines = ("" + _CurrentText).split("|");
+propertyChanged("_Lines", _Lines);
 }
 
+                        _CurrentIndex += 1;
+propertyChanged("_CurrentIndex", _CurrentIndex);
 }
 
 }, null);
@@ -118,7 +133,15 @@ if(wrapper.enabled){
             g.setFont(_UseFont);
 }
 
-        g.drawString("" + _CurrentText, _XPos, _YPos);
+        _CurrentY = asNumber(_YPos);
+propertyChanged("_CurrentY", _CurrentY);
+        for(index0 in 0...Std.int(_Lines.length))
+{
+            g.drawString("" + _Lines[Std.int(index0)], _XPos, _CurrentY);
+            _CurrentY += (g.font.getHeight()/Engine.SCALE + _Leading);
+propertyChanged("_CurrentY", _CurrentY);
+}
+
 }
 });
 
