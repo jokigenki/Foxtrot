@@ -16,7 +16,7 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="17" c="true" group="2" id="223" name="Door Green2 17" sx="1.0" sy="1.0" x="480" y="208" z="4">
+        <actor a="0.0" aid="17" c="true" group="2" id="223" name="Door Green2 17" sx="1.0" sy="1.0" x="480" y="240" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="0.0"/>
@@ -62,7 +62,7 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="16" c="true" group="2" id="223" name="Door Green2 16" sx="1.0" sy="1.0" x="464" y="80" z="4">
+        <actor a="0.0" aid="16" c="true" group="2" id="223" name="Door Green2 16" sx="1.0" sy="1.0" x="400" y="96" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="0.0"/>
@@ -108,10 +108,10 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="19" c="false" group="4" id="588" name="Baby Foxes 19" sx="1.0" sy="1.0" x="403" y="219" z="4"/>
+        <actor a="0.0" aid="19" c="false" group="4" id="588" name="Baby Foxes 19" sx="1.0" sy="1.0" x="190" y="251" z="4"/>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
-        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="190" y="208" z="2"/>
-        <actor a="0.0" aid="18" c="true" group="2" id="223" name="Door Green2 18" sx="1.0" sy="1.0" x="128" y="128" z="1">
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="254" y="240" z="2"/>
+        <actor a="0.0" aid="18" c="true" group="2" id="223" name="Door Green2 18" sx="1.0" sy="1.0" x="112" y="160" z="1">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="0.0"/>
@@ -157,8 +157,32 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="20" c="false" group="3" id="640" name="Radio 20" sx="1.0" sy="1.0" x="368" y="80" z="3"/>
-        <actor a="0.0" aid="7" c="true" group="3" id="142" name="Gold Key 7" sx="1.0" sy="1.0" x="435" y="93" z="4">
+        <actor a="0.0" aid="20" c="true" group="3" id="640" name="Radio 20" sx="1.0" sy="1.0" x="312" y="229" z="4">
+            <snippets>
+                <s enabled="true" id="332">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="133">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val=""/>
+                    <prop id="19" list="0" val="true"/>
+                    <prop id="18" list="0" val="false"/>
+                    <prop id="21" list="0" val=""/>
+                    <prop id="20" list="0" val="true"/>
+                    <prop id="23" list="0" val=""/>
+                    <prop id="25" list="0" val=""/>
+                    <prop id="24" list="0" val="MusicToggle"/>
+                    <prop id="27" list="0" val="0"/>
+                    <prop id="26" list="0" val="1"/>
+                    <prop id="29" list="0" val="10"/>
+                    <prop id="28" list="0" val=""/>
+                    <prop id="30" list="0" val="10"/>
+                </s>
+                <s enabled="true" id="331"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="7" c="true" group="3" id="142" name="Gold Key 7" sx="1.0" sy="1.0" x="336" y="96" z="4">
             <snippets>
                 <s enabled="true" id="91">
                     <prop id="1" list="0" val="KeyCollected"/>
@@ -169,8 +193,8 @@
                 <s enabled="true" id="90"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="8" c="false" group="3" id="169" name="Armchair 8" sx="1.0" sy="1.0" x="113" y="194" z="1"/>
-        <actor a="0.0" aid="11" c="false" group="3" id="173" name="Tea Mug 11" sx="1.0" sy="1.0" x="136" y="218" z="1"/>
+        <actor a="0.0" aid="8" c="false" group="3" id="169" name="Armchair 8" sx="1.0" sy="1.0" x="113" y="226" z="1"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="173" name="Tea Mug 11" sx="1.0" sy="1.0" x="136" y="250" z="1"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -195,22 +219,22 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
-        </s>
-        <s enabled="true" id="21"/>
-        <s enabled="true" id="329">
-            <prop id="1" list="0" val="466"/>
-            <prop id="2" list="0" val="20"/>
         </s>
         <s enabled="true" id="303">
             <prop id="1" list="0" val="0.5"/>
             <prop id="2" list="0" val="3"/>
             <prop id="3" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="329">
+            <prop id="1" list="0" val="466"/>
+            <prop id="2" list="0" val="20"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="16,448.0,192.0,448.0,80.0,224.0,80.0,224.0,64.0,448.0,64.0,448.0,0.0,0.0,0.0,0.0,112.0,160.0,112.0,160.0,144.0,256.0,144.0,256.0,160.0,144.0,160.0,144.0,128.0,0.0,128.0,0.0,192.0" x="96.0" y="48.0"/>
-        <p pts="4,0.0,224.0,0.0,0.0,480.0,0.0,480.0,224.0" x="80.0" y="32.0"/>
+        <p pts="4,0.0,256.0,0.0,0.0,480.0,0.0,480.0,256.0" x="80.0" y="32.0"/>
+        <p pts="16,448.0,96.0,128.0,96.0,128.0,80.0,448.0,80.0,448.0,0.0,0.0,0.0,0.0,144.0,272.0,144.0,272.0,176.0,304.0,176.0,304.0,192.0,256.0,192.0,256.0,160.0,0.0,160.0,0.0,224.0,448.0,224.0" x="96.0" y="48.0"/>
     </terrain>
 </scene>
