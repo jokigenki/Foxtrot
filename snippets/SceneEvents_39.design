@@ -1,2 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="1" id="-1">
+                                <create-actor3 comment="false" x="48" y="92">
+                                    <ACTORTYPE eid="9" id="0"/>
+                                    <get-xy comment="false" id="1" x="0" y="0">
+                                        <ACTOR eid="8" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                    <get-xy comment="false" id="2" x="0" y="0">
+                                        <ACTOR eid="8" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <actor-set-prop comment="false" x="48" y="132">
+                                    <actor comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                    </actor>
+                                    <int id="1" val="Facing Right?"/>
+                                    <actor-get-prop comment="false" id="2" x="0" y="0">
+                                        <ACTOR eid="8" id="0"/>
+                                        <int id="1" val="Facing Right?"/>
+                                    </actor-get-prop>
+                                </actor-set-prop>
+                                <die comment="false" x="48" y="172">
+                                    <ACTOR eid="8" id="0"/>
+                                </die>
+                                <scene-set-attribute comment="false" x="48" y="199">
+                                    <int id="0" val="Split Screen Button PM"/>
+                                    <int id="1" val="_ActorToControl"/>
+                                    <actor comment="false" id="2" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                    </actor>
+                                </scene-set-attribute>
+                                <set-attribute comment="false" x="48" y="232">
+                                    <ACTOR eid="6" id="0"/>
+                                    <int id="1" val="Activate Door PM"/>
+                                    <int id="2" val="_ActorToMove"/>
+                                    <actor comment="false" id="3" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                    </actor>
+                                </set-attribute>
+                                <set-attribute comment="false" x="48" y="272">
+                                    <ACTOR eid="7" id="0"/>
+                                    <int id="1" val="Activate Door PM"/>
+                                    <int id="2" val="_ActorToMove"/>
+                                    <actor comment="false" id="3" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                    </actor>
+                                </set-attribute>
+                            </group>
+                            <get-game-val-25 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

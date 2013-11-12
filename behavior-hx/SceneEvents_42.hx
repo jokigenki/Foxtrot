@@ -105,6 +105,7 @@ propertyChanged("_WasInitialised", _WasInitialised);
                             setGameAttribute("Speed Run Timer", 0);
                             setGameAttribute("Save Destination", "none");
                             setGameAttribute("Last Destination", "none");
+                            setGameAttribute("In Pants?", false);
                             saveGame("mySave", function(success:Bool):Void {
                                 switchScene(38, createFadeOut((1)),createFadeIn((1)));
 });

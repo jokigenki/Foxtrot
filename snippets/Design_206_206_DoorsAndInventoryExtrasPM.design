@@ -343,13 +343,16 @@
                         <int id="2" val="_Destination"/>
                     </get-attribute>
                 </custom-712>
+                <say comment="false" x="26" y="83">
+                    <get-byobval-206-713-0 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="Collectable Door PM"/>
+                    <int id="2" val="DoorActivated"/>
+                </say>
             </group>
             <get-byobval-206-713-0 comment="false" id="0" x="0" y="0"/>
         </receiver-32-713>
     </group>
-    <group eventID="27" id="-1">
-        <get-byobval-206-713-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="27" id="-1"/>
     <group eventID="26" id="0">
         <receiver-31-712 comment="false" x="15" y="15">
             <group eventID="26" id="-1">
@@ -416,7 +419,67 @@
             <get-byobval-206-712-0 comment="false" id="0" x="0" y="0"/>
         </receiver-31-712>
     </group>
-    <group eventID="26" id="-1">
-        <get-byobval-206-712-0 comment="false" x="0" y="0"/>
+    <group eventID="26" id="-1"/>
+    <group eventID="28" id="0">
+        <receiver-33-749 comment="false" x="15" y="15">
+            <group eventID="28" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="15" id="-1">
+                        <stop comment="false" x="37" y="80"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <custom-326 comment="false" id="0" x="0" y="0">
+                            <get-byobval-206-749-0 comment="false" id="0" x="0" y="0"/>
+                        </custom-326>
+                    </not>
+                </if>
+                <if comment="false" x="26" y="112">
+                    <group eventID="15" id="-1">
+                        <remove-item comment="false" x="37" y="142">
+                            <custom-331 comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="FoxtrotConstants.COLLECTED_SPEED_RUN_ITEMS"/>
+                                </code-short>
+                            </custom-331>
+                            <get-byobval-206-749-0 comment="false" id="1" x="0" y="0"/>
+                        </remove-item>
+                    </group>
+                    <custom-331 comment="false" id="0" x="0" y="0">
+                        <code-short comment="false" id="0" x="0" y="0">
+                            <int id="0" val="FoxtrotConstants.SPEED_RUN_IN_PROGRESS"/>
+                        </code-short>
+                    </custom-331>
+                </if>
+                <else comment="false" x="26" y="184">
+                    <group eventID="15" id="-1">
+                        <remove-item comment="false" x="37" y="204">
+                            <custom-331 comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="FoxtrotConstants.COLLECTED_ITEMS"/>
+                                </code-short>
+                            </custom-331>
+                            <get-byobval-206-749-0 comment="false" id="1" x="0" y="0"/>
+                        </remove-item>
+                        <remove-item comment="false" x="37" y="234">
+                            <custom-331 comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="FoxtrotConstants.INVENTORY"/>
+                                </code-short>
+                            </custom-331>
+                            <get-byobval-206-749-0 comment="false" id="1" x="0" y="0"/>
+                        </remove-item>
+                    </group>
+                </else>
+                <custom-336 comment="false" x="26" y="276">
+                    <int id="0" val="ItemRemovedFromInventory"/>
+                </custom-336>
+            </group>
+            <get-byobval-206-749-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-206-749-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-33-749>
+    </group>
+    <group eventID="28" id="-1">
+        <get-byobval-206-749-0 comment="false" x="0" y="0"/>
+        <get-byobval-206-749-1 comment="false" x="0" y="0"/>
     </group>
 </groups>

@@ -87,10 +87,11 @@ _TextToDraw = "";
 nameMap.set("Current Index", "_CurrentIndex");
 _CurrentIndex = 0.0;
 nameMap.set("Lines", "_Lines");
+_Lines = [];
 nameMap.set("Current Y", "_CurrentY");
-_CurrentY = 0;
+_CurrentY = 0.0;
 nameMap.set("Leading", "_Leading");
-_Leading = 0;
+_Leading = 0.0;
 
 	}
 	

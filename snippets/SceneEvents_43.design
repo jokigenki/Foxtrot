@@ -1,2 +1,260 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <set-game-val-25 comment="false" x="37" y="65">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-25>
+                    </group>
+                    <get-game-val-25 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="102">
+                    <group eventID="1" id="-1">
+                        <set-game-val-25 comment="false" x="37" y="122">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-25>
+                    </group>
+                </else>
+                <custom-747 comment="false" x="26" y="159"/>
+            </group>
+            <int id="0" val="UsedWardrobe"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-379-3 comment="false" x="26" y="40">
+                    <ACTOR eid="10" id="0"/>
+                </set-val-379-3>
+                <set-val-379-4 comment="false" x="26" y="67">
+                    <ACTOR eid="7" id="0"/>
+                </set-val-379-4>
+                <fadeTo comment="false" x="26" y="94">
+                    <ACTOR eid="7" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0"/>
+                </fadeTo>
+                <dolater comment="false" x="26" y="121">
+                    <group eventID="2" id="-1">
+                        <custom-747 comment="false" x="37" y="148"/>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receiver-1-747 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="65">
+                            <ACTORTYPE eid="9" id="0"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-xy comment="false" id="2" x="0" y="0">
+                                <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <actor-set-prop comment="false" x="37" y="110">
+                            <actor comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                            <int id="1" val="Facing Right?"/>
+                            <actor-get-prop comment="false" id="2" x="0" y="0">
+                                <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Facing Right?"/>
+                            </actor-get-prop>
+                        </actor-set-prop>
+                        <die comment="false" x="37" y="155">
+                            <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                        </die>
+                        <set-val-379-3 comment="false" x="37" y="187">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-379-3>
+                        <scene-set-attribute comment="false" x="37" y="214">
+                            <int id="0" val="Split Screen Button PM"/>
+                            <int id="1" val="_ActorToControl"/>
+                            <actor comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                        </scene-set-attribute>
+                        <set-attribute comment="false" x="37" y="247">
+                            <ACTOR eid="9" id="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="_ActorToMove"/>
+                            <actor comment="false" id="3" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="287">
+                            <ACTOR eid="8" id="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="_ActorToMove"/>
+                            <actor comment="false" id="3" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                        </set-attribute>
+                        <actor-enabledisable-snippet comment="false" x="37" y="327">
+                            <ACTOR eid="12" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="Displays Popup PM"/>
+                        </actor-enabledisable-snippet>
+                        <set-xy comment="false" x="37" y="354">
+                            <get-val-379-4 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="240"/>
+                        </set-xy>
+                        <fadeTo comment="false" x="37" y="386">
+                            <get-val-379-4 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="100"/>
+                            <int id="2" val="1"/>
+                            <int id="3" val="0"/>
+                        </fadeTo>
+                    </group>
+                    <get-game-val-25 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="430">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="450">
+                            <ACTORTYPE eid="733" id="0"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-xy comment="false" id="2" x="0" y="0">
+                                <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <actor-set-prop comment="false" x="37" y="495">
+                            <actor comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                            <int id="1" val="Facing Right?"/>
+                            <actor-get-prop comment="false" id="2" x="0" y="0">
+                                <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Facing Right?"/>
+                            </actor-get-prop>
+                        </actor-set-prop>
+                        <die comment="false" x="37" y="540">
+                            <get-val-379-3 comment="false" id="0" x="0" y="0"/>
+                        </die>
+                        <set-val-379-3 comment="false" x="37" y="572">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-379-3>
+                        <scene-set-attribute comment="false" x="37" y="599">
+                            <int id="0" val="Split Screen Button PM"/>
+                            <int id="1" val="_ActorToControl"/>
+                            <actor comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                        </scene-set-attribute>
+                        <set-attribute comment="false" x="37" y="632">
+                            <ACTOR eid="9" id="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="_ActorToMove"/>
+                            <actor comment="false" id="3" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="672">
+                            <ACTOR eid="8" id="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="_ActorToMove"/>
+                            <actor comment="false" id="3" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                            </actor>
+                        </set-attribute>
+                        <actor-enabledisable-snippet comment="false" x="37" y="712">
+                            <ACTOR eid="12" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="Displays Popup PM"/>
+                        </actor-enabledisable-snippet>
+                        <if comment="false" x="37" y="739">
+                            <group eventID="3" id="-1">
+                                <set-xy comment="false" x="48" y="772">
+                                    <ACTOR eid="7" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="174"/>
+                                </set-xy>
+                                <fadeTo comment="false" x="48" y="799">
+                                    <ACTOR eid="7" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="0"/>
+                                </fadeTo>
+                            </group>
+                            <isalive comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="4"/>
+                            </isalive>
+                        </if>
+                        <else comment="false" x="37" y="838">
+                            <group eventID="3" id="-1">
+                                <custom-713 comment="false" x="48" y="858">
+                                    <ACTOR eid="9" id="0"/>
+                                </custom-713>
+                                <custom-749 comment="false" x="48" y="885">
+                                    <int id="0" val="Tutorial_05Key"/>
+                                    <ACTORTYPE eid="142" id="1"/>
+                                </custom-749>
+                                <create-actor3 comment="false" x="48" y="912">
+                                    <ACTORTYPE eid="142" id="0"/>
+                                    <int id="1" val="209"/>
+                                    <int id="2" val="174"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <fadeTo comment="false" x="48" y="939">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="0"/>
+                                </fadeTo>
+                                <set-val-379-4 comment="false" x="48" y="966">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </set-val-379-4>
+                                <backforward comment="false" x="48" y="993">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="2"/>
+                                </backforward>
+                                <set-attribute comment="false" x="48" y="1020">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="Collectable Trigger PM"/>
+                                    <int id="2" val="_CollectionEvent"/>
+                                    <int id="3" val="KeyCollected"/>
+                                </set-attribute>
+                                <set-attribute comment="false" x="48" y="1047">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="Collectable Trigger PM"/>
+                                    <int id="2" val="_CollectableId"/>
+                                    <int id="3" val="Tutorial_05Key"/>
+                                </set-attribute>
+                                <set-attribute comment="false" x="48" y="1074">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="Collectable Trigger PM"/>
+                                    <int id="2" val="_TargetActor"/>
+                                    <actor comment="false" id="3" x="0" y="0">
+                                        <ACTOR eid="9" id="0"/>
+                                    </actor>
+                                </set-attribute>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+            </group>
+        </receiver-1-747>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

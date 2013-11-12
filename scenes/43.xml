@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="5" desc="" eventsnippetid="379" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="43" name="Tutorial_05" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
+<scene depth="6" desc="" eventsnippetid="379" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="43" name="Tutorial_05" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
     <layers>
         <layer color="255,255,0" id="5" name="Secret Areas" order="0"/>
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="1"/>
-        <layer color="0,255,0" id="2" name="Player" order="3"/>
+        <layer color="0,255,0" id="2" name="Player" order="2"/>
         <layer color="64,64,64" id="4" name="Interactives" order="4"/>
         <layer color="0,0,255" id="1" name="Ground" order="5"/>
+        <layer color="255,0,255" id="6" name="Key" order="6"/>
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
@@ -17,7 +18,7 @@
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
-        <actor a="0.0" aid="7" c="true" group="3" id="142" name="Gold Key 7" sx="1.0" sy="1.0" x="288" y="233" z="4">
+        <actor a="0.0" aid="7" c="true" group="3" id="142" name="Gold Key 7" sx="1.0" sy="1.0" x="209" y="174" z="6">
             <snippets>
                 <s enabled="true" id="91">
                     <prop id="1" list="0" val="KeyCollected"/>
@@ -100,6 +101,8 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="10" c="false" group="0" id="733" name="PANTS Nev 10" sx="1.0" sy="1.0" x="480" y="224" z="2"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="728" name="Wardrobe 11" sx="1.0" sy="1.0" x="400" y="208" z="4"/>
+        <actor a="0.0" aid="12" c="false" group="2" id="743" name="Baby Fox Left 12" sx="1.0" sy="1.0" x="197" y="235" z="2"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">

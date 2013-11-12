@@ -126,6 +126,7 @@ public static function _customBlock_LockDoor(__ExitName:String):Void
 public static function _customBlock_LockDoorActor(__DoorActor:Actor):Void
 {
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_LockDoor(__DoorActor.getValue("Activate Door PM", "_Destination"));
+        __DoorActor.say("Collectable Door PM", "_customEvent_" + "DoorActivated");
 }
     
 
@@ -243,6 +244,29 @@ if (comps.length < 4)
 	return comps[1] + "|" + comps[0] + "|" + comps[3] + "|" + comps[2];
 }
 
+}
+    
+
+/* Params are:__Id __Type */
+public static function _customBlock_LoseItemWithId(__Id:String, __Type:ActorType):Void
+{
+        if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(__Id)), Bool)))
+{
+            return;
+}
+
+        if((scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.SPEED_RUN_IN_PROGRESS)))
+{
+            (scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.COLLECTED_SPEED_RUN_ITEMS)).remove(__Id);
+}
+
+        else
+{
+            (scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.COLLECTED_ITEMS)).remove(__Id);
+            (scripts.Design_207_207_StencylExtrasPM._customBlock_GetGameAttribute(FoxtrotConstants.INVENTORY)).remove(__Id);
+}
+
+        scripts.Design_207_207_StencylExtrasPM._customBlock_TriggerEventInAllForCurrentScene("ItemRemovedFromInventory");
 }
 
  

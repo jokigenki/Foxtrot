@@ -47,18 +47,33 @@ class SceneEvents_41 extends SceneScript
 	
 public var _ExitName:String;
 
+public var _CurrentNev:Actor;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
 		nameMap.set("Exit Name", "_ExitName");
 _ExitName = "";
+nameMap.set("Current Nev", "_CurrentNev");
 
 	}
 	
 	override public function init()
 	{
-		
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    if(getGameAttribute("In Pants?"))
+{
+                        createRecycledActor(getActorType(9), getActor(13).getX(), getActor(13).getY(), Script.FRONT);
+                        getLastCreatedActor().setActorValue("Facing Right?", getActor(13).getActorValue("Facing Right?"));
+                        recycleActor(getActor(13));
+                        setValueForScene("Split Screen Button PM", "_ActorToControl", getLastCreatedActor());
+                        getActor(12).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+                        getActor(11).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+}
+
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

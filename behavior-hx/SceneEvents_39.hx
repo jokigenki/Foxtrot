@@ -58,7 +58,19 @@ _ExitName = "";
 	
 	override public function init()
 	{
-		
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    if(getGameAttribute("In Pants?"))
+{
+                        createRecycledActor(getActorType(9), getActor(8).getX(), getActor(8).getY(), Script.FRONT);
+                        getLastCreatedActor().setActorValue("Facing Right?", getActor(8).getActorValue("Facing Right?"));
+                        recycleActor(getActor(8));
+                        setValueForScene("Split Screen Button PM", "_ActorToControl", getLastCreatedActor());
+                        getActor(6).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+                        getActor(7).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+}
+
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)
