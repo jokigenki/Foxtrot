@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <toggle-image comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
+                <periodic comment="false" x="26" y="67">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="99">
+                            <group eventID="2" id="-1">
+                                <cancel comment="false" x="48" y="124"/>
+                            </group>
+                            <get-val-388-1 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="156">
+                            <group eventID="2" id="-1">
+                                <incdec comment="false" x="48" y="176">
+                                    <int id="0" val="2"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                                <if comment="false" x="48" y="203">
+                                    <group eventID="2" id="-1">
+                                        <cancel comment="false" x="59" y="238"/>
+                                    </group>
+                                    <more comment="false" id="0" x="0" y="0">
+                                        <get-val-388-2 comment="false" id="0" x="0" y="0"/>
+                                        <str-length comment="false" id="1" x="0" y="0">
+                                            <get-val-388-3 comment="false" id="0" x="0" y="0"/>
+                                        </str-length>
+                                    </more>
+                                </if>
+                                <else comment="false" x="48" y="270">
+                                    <group eventID="2" id="-1">
+                                        <set-val-388-4 comment="false" x="59" y="290">
+                                            <str-substring comment="false" id="0" x="0" y="0">
+                                                <get-val-388-3 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="0"/>
+                                                <get-val-388-2 comment="false" id="2" x="0" y="0"/>
+                                            </str-substring>
+                                        </set-val-388-4>
+                                    </group>
+                                </else>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-388-5 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <set-font-new comment="false" x="37" y="73">
+                            <FONT eid="var" id="0" vid="6"/>
+                        </set-font-new>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="6"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+                <draw-text comment="false" x="26" y="112">
+                    <get-val-388-4 comment="false" id="0" x="0" y="0"/>
+                    <get-xy comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                    <get-xy comment="false" id="2" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="2" id="1">
+        <draw-image-actor comment="false" x="191" y="198">
+            <ACTOR eid="this" id="0"/>
+        </draw-image-actor>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

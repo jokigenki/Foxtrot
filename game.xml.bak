@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<game accelFramerate="0" adsPosition="0" aheight="384" airCert="" airPass="" androidAlias="Foxtrot Cert" androidCert="/Users/owenbennett/stencylworks/android-sdk//android-sdk-macosx/stencyl.keystore" androidPassword="54u54g35" androidPublicKey="" antialias="false" appName="Foxtrot" appType="0" author="" authorURL="" autoRotate="false" awidth="640" backgroundColor="-15592942" barBackgroundColor="-12303292" barColor="-7829368" barHeight="8" barLocation="0" barOffsetX="0" barOffsetXPhone="0" barOffsetXTablet="0" barOffsetY="0" barOffsetYPhone="0" barOffsetYTablet="0" barScalePhone="1.0" barScaleTablet="2.0" barWidth="120" borderColor="-12303292" borderThickness="2" bundleID="com.bullandgate.foxtrot" bundleVersion="1.0" checksum="none" cpmID="" cws-desc="Description" cws-icon128="" cws-icon16="" cws-name="Name" cws-version="1.0" default="38" defaultFramerate="30" defaultSceneID="38" desc="Eggs and Liberty!" desktopScale="1.0" desktopScaleMode="0" deviceOS="4.3" disableBackButton="false" enablePurchases="false" engine="0" format="2.0" gameid="-1" height="384" internalVersion="1" kit="false" lockURL="" macBundleID="com.yourcompany.gamename" maxScaleAndroid="1.0" maxScaleDesktop="1.0" maxScaleIOS="1.0" maxScaleWeb="1.0" metroColor="-12566464" mochi="" multitouch="true" name="Foxtrot" ngID="" ngKey="" orientation="1" p12="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/FoxtrotCert.p12" p12pwd="54u54g35" physicsMode="0" preloaderstyle="0" products="" prov-adhoc="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/Ad_Hoc_Dist_Foxtrot.mobileprovision" prov-store="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/App_Store_Dist_Foxtrot.mobileprovision" scale="1.0" scaleModeAndroid="4" scaleModeDesktop="4" scaleModeIOS="1" scaleModeWeb="4" showAds="false" simulatorOS="4.3" splashStyle="0" swfHeight="0" swfWidth="0" swfX="0" swfY="0" swfloc="" useGlossyIcon="false" webScale="1.0" whirlKey="" width="640" windowsAppName="" windowsAuthor="" windowsBundleID="com.yourcompany.gamename">
+<game accelFramerate="0" adsPosition="0" aheight="384" airCert="" airPass="" androidAlias="Foxtrot Cert" androidCert="/Users/owenbennett/stencylworks/android-sdk//android-sdk-macosx/stencyl.keystore" androidPassword="54u54g35" androidPublicKey="" antialias="false" appName="Foxtrot" appType="0" author="" authorURL="" autoRotate="false" awidth="640" backgroundColor="-15592942" barBackgroundColor="-12303292" barColor="-7829368" barHeight="8" barLocation="0" barOffsetX="0" barOffsetXPhone="0" barOffsetXTablet="0" barOffsetY="0" barOffsetYPhone="0" barOffsetYTablet="0" barScalePhone="1.0" barScaleTablet="2.0" barWidth="120" borderColor="-12303292" borderThickness="2" bundleID="com.bullandgate.foxtrot" bundleVersion="1.0" checksum="none" cpmID="" cws-desc="Description" cws-icon128="" cws-icon16="" cws-name="Name" cws-version="1.0" default="42" defaultFramerate="30" defaultSceneID="42" desc="Eggs and Liberty!" desktopScale="1.0" desktopScaleMode="0" deviceOS="4.3" disableBackButton="false" enablePurchases="false" engine="0" format="2.0" gameid="-1" height="384" internalVersion="1" kit="false" lockURL="" macBundleID="com.yourcompany.gamename" maxScaleAndroid="1.0" maxScaleDesktop="1.0" maxScaleIOS="1.0" maxScaleWeb="1.0" metroColor="-12566464" mochi="" multitouch="true" name="Foxtrot" ngID="" ngKey="" orientation="1" p12="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/FoxtrotCert.p12" p12pwd="54u54g35" physicsMode="0" preloaderstyle="0" products="" prov-adhoc="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/Ad_Hoc_Dist_Foxtrot.mobileprovision" prov-store="/Users/timbfrost/Dropbox/Pie &amp; Mash/Games/Foxtrot/iOS Provisioning Profiles/App_Store_Dist_Foxtrot.mobileprovision" scale="1.0" scaleModeAndroid="4" scaleModeDesktop="4" scaleModeIOS="1" scaleModeWeb="4" showAds="false" simulatorOS="4.3" splashStyle="0" swfHeight="0" swfWidth="0" swfX="0" swfY="0" swfloc="" useGlossyIcon="false" webScale="1.0" whirlKey="" width="640" windowsAppName="" windowsAuthor="" windowsBundleID="com.yourcompany.gamename">
     <exts>
         <e enabled="false" id="test-native"/>
         <e enabled="true" id="raycastapi"/>
@@ -101,6 +101,7 @@
             <r id="188"/>
             <r id="22"/>
             <r id="127"/>
+            <r id="386"/>
             <r id="58"/>
             <r id="332"/>
             <r id="31"/>
@@ -356,6 +357,7 @@
         <group desc="" id="30" name="FX" type="actor">
             <r id="702"/>
             <r id="697"/>
+            <r id="739"/>
             <r id="704"/>
         </group>
     </folders>
@@ -489,7 +491,7 @@
         <poly id="22" name="Gap" pts="0.0,0.0#0.0,1.0#0.5,1.0#0.5,0.0"/>
     </collisions>
     <atlases>
-        <atlas dirty="true" id="0" members="9,39,129,140,142,148,152,158,160,176,178,180,182,189,194,205,213,219,225,230,265,267,352,403,457,553,583,614,616,618,646,690,695,714,122,165,528,604,605,643,308,312,342,343,466," name="Shared" pvr="false" resize="0" start="true" target="0"/>
+        <atlas dirty="true" id="0" members="9,39,129,140,142,148,152,158,160,176,178,180,182,189,194,205,213,219,225,230,265,267,352,403,457,553,583,614,616,618,646,690,695,714,739,122,165,528,604,605,643,308,312,342,343,466," name="Shared" pvr="false" resize="0" start="true" target="0"/>
         <atlas dirty="true" id="1" members="360,387,401,411,413,421,423,427,432,436,440,444,461,463,512,514,516,518,520,522,529,531,533,535,540,542,544,546,562,570,579,586,597,620,622,624,648,653,655,657,660,662,664,672,674,676,680,682,684,692,697,702,704,716,511,606,639,607,636,669,670,699,706,707," name="Factory" pvr="false" resize="0" start="false" target="0"/>
         <atlas dirty="true" id="2" members="199,201,269,271,298,354,581,229,415,419,420,572,574,575,576,577,578,585,593,594,599," name="Farm" pvr="false" resize="0" start="false" target="0"/>
         <atlas dirty="true" id="3" members="169,173,223,350,483,485,588,590,640,726,728,731,733,167,168,650,191,455,671,730,735,736,737,738," name="Home" pvr="false" resize="0" start="true" target="0"/>

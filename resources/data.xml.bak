@@ -6465,6 +6465,12 @@
         <blank name="Target" order="1" type="ACTOR"/>
         <blank name="Direction" order="2" type="TEXT"/>
     </custom-block>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="387" fixedrot="false" fric="0.2" gid="3" id="741" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Typewriter Text" oid="-1" pausable="true" rest="0.0" shared="false" sprite="742" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="742" name="Typewriter Text" shared="false" width="16">
+        <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="8" originy="8" sync="false" width="16"/>
+    </sprite>
     <custom-block blocktag="custom-596" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockActor(~);" desc="" global="true" gui="Unlock %0" id="596" message="UnlockActor" name="UnlockActor" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Door Actor" order="0" type="ACTOR"/>
     </custom-block>
@@ -6635,5 +6641,11 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="740" name="zzz" shared="false" width="32">
+        <anim across="4" down="1" durations="500,500,500,500" height="32" id="0" loop="true" name="Animation 0" numframes="4" originx="16" originy="16" sync="false" width="128"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="385" fixedrot="false" fric="0.2" gid="2" id="739" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="zzz" oid="-1" pausable="true" rest="0.0" shared="false" sprite="740" static="true">
+        <snippets/>
     </actor>
 </pack>
