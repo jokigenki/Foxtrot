@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="7" desc="" eventsnippetid="341" extheight="672" extwidth="992" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="640" id="35" name="Factory2_09" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="960">
+<scene depth="7" desc="" eventsnippetid="341" extheight="592" extwidth="992" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="560" id="35" name="Factory2_09" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="960">
     <layers>
         <layer color="255,255,0" id="5" name="Pipes" order="0"/>
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="1"/>
@@ -10,19 +10,17 @@
         <layer color="0,0,255" id="1" name="Ground" order="7"/>
     </layers>
     <color-bg blue="255" green="255" red="255"/>
-    <backgrounds>
-        <ref id="43"/>
-    </backgrounds>
+    <backgrounds/>
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="10" id="0" name="Region 0" pts="4,11.0,0.0,11.0,10.0,0.0,10.0,0.0,0.0" r="64" type="box" w="11" x="370" y="437"/>
+        <region b="64" g="64" h="10" id="0" name="Region 0" pts="4,0.0,0.0,0.0,10.0,11.0,10.0,11.0,0.0" r="64" type="box" w="11" x="370" y="437"/>
     </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="440" z="3"/>
-        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="272" y="562" z="2"/>
-        <actor a="0.0" aid="8" c="true" group="5" id="457" name="Small Lift 8" sx="1.0" sy="1.0" x="832" y="592" z="4">
+        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="272" y="482" z="2"/>
+        <actor a="0.0" aid="8" c="true" group="5" id="457" name="Small Lift 8" sx="1.0" sy="1.0" x="832" y="512" z="4">
             <snippets>
                 <s enabled="true" id="343"/>
                 <s enabled="true" id="54">
@@ -45,6 +43,9 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val="-1"/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="165">
@@ -72,20 +73,23 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="11" c="false" group="10" id="259" name="Spikes Up 11" sx="1.0" sy="1.0" x="832" y="592" z="1"/>
-        <actor a="0.0" aid="12" c="false" group="10" id="259" name="Spikes Up 12" sx="1.0" sy="1.0" x="848" y="592" z="1"/>
-        <actor a="0.0" aid="13" c="true" group="2" id="192" name="Crate Spawn 13" sx="1.0" sy="1.0" x="588" y="508" z="4">
+        <actor a="0.0" aid="11" c="false" group="10" id="259" name="Spikes Up 11" sx="1.0" sy="1.0" x="832" y="512" z="1"/>
+        <actor a="0.0" aid="12" c="false" group="10" id="259" name="Spikes Up 12" sx="1.0" sy="1.0" x="848" y="512" z="1"/>
+        <actor a="0.0" aid="13" c="true" group="2" id="192" name="Crate Spawn 13" sx="1.0" sy="1.0" x="604" y="444" z="4">
             <snippets>
                 <s enabled="true" id="54">
                     <prop id="1" list="0" val="false"/>
@@ -139,15 +143,18 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="17" c="true" group="3" id="180" name="Timed Switch Light 17" sx="1.0" sy="1.0" x="700" y="293" z="4">
@@ -173,7 +180,7 @@
                 <s enabled="true" id="122"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="16" c="true" group="3" id="180" name="Timed Switch Light 16" sx="1.0" sy="1.0" x="700" y="485" z="4">
+        <actor a="0.0" aid="16" c="true" group="3" id="180" name="Timed Switch Light 16" sx="1.0" sy="1.0" x="796" y="437" z="4">
             <snippets>
                 <s enabled="true" id="65">
                     <prop id="2" list="0" val="On"/>
@@ -197,6 +204,7 @@
                 <s enabled="true" id="122"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="256" c="false" group="12" id="672" name="Explodable Block 256" sx="1.0" sy="1.0" x="560" y="352" z="7"/>
         <actor a="0.0" aid="19" c="true" group="5" id="457" name="Small Lift 19" sx="1.0" sy="1.0" x="480" y="176" z="4">
             <snippets>
                 <s enabled="true" id="343"/>
@@ -220,6 +228,9 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="165">
@@ -231,8 +242,8 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="23" c="false" group="2" id="514" name="Crusher Sign 23" sx="1.0" sy="1.0" x="688" y="256" z="4"/>
-        <actor a="0.0" aid="25" c="false" group="2" id="516" name="Crate Sign 25" sx="1.0" sy="1.0" x="448" y="560" z="4"/>
-        <actor a="0.0" aid="24" c="false" group="2" id="522" name="Lift Sign 24" sx="1.0" sy="1.0" x="688" y="448" z="4"/>
+        <actor a="0.0" aid="25" c="false" group="2" id="516" name="Crate Sign 25" sx="1.0" sy="1.0" x="448" y="480" z="4"/>
+        <actor a="0.0" aid="24" c="false" group="2" id="522" name="Lift Sign 24" sx="1.0" sy="1.0" x="784" y="400" z="4"/>
         <actor a="0.0" aid="27" c="true" group="3" id="194" name="Conveyor2x 27" sx="1.0" sy="1.0" x="576" y="128" z="4">
             <snippets>
                 <s enabled="true" id="128">
@@ -285,6 +296,10 @@
         <actor a="0.0" aid="28" c="false" group="3" id="280" name="Spikes Right 28" sx="1.0" sy="1.0" x="576" y="112" z="1"/>
         <actor a="0.0" aid="31" c="true" group="2" id="265" name="Switch Single Use 31" sx="1.0" sy="1.0" x="668" y="295" z="4">
             <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="174">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="On"/>
@@ -315,6 +330,10 @@
         <actor a="0.0" aid="35" c="false" group="3" id="283" name="Spikes Left 35" sx="1.0" sy="1.0" x="800" y="96" z="1"/>
         <actor a="0.0" aid="32" c="true" group="2" id="265" name="Switch Single Use 32" sx="1.0" sy="1.0" x="604" y="295" z="4">
             <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="174">
                     <prop id="1" list="0" val="true"/>
                     <prop id="2" list="0" val="On"/>
@@ -429,15 +448,18 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="53" c="true" group="3" id="182" name="Conveyor 53" sx="1.0" sy="1.0" x="256" y="144" z="4">
@@ -471,6 +493,9 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="165">
@@ -500,6 +525,9 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0.25"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="165">
@@ -535,18 +563,21 @@
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="62" c="true" group="3" id="180" name="Timed Switch Light 62" sx="1.0" sy="1.0" x="460" y="597" z="4">
+        <actor a="0.0" aid="62" c="true" group="3" id="180" name="Timed Switch Light 62" sx="1.0" sy="1.0" x="460" y="517" z="4">
             <snippets>
                 <s enabled="true" id="65">
                     <prop id="2" list="0" val="On"/>
@@ -571,9 +602,32 @@
         </actor>
         <actor a="0.0" aid="61" c="false" group="10" id="259" name="Spikes Up 61" sx="1.0" sy="1.0" x="336" y="160" z="1"/>
         <actor a="0.0" aid="60" c="false" group="10" id="259" name="Spikes Up 60" sx="1.0" sy="1.0" x="320" y="160" z="1"/>
-        <actor a="0.0" aid="68" c="false" group="2" id="265" name="Switch Single Use 68" sx="1.0" sy="1.0" x="316" y="311" z="4"/>
+        <actor a="0.0" aid="68" c="true" group="2" id="265" name="Switch Single Use 68" sx="1.0" sy="1.0" x="316" y="311" z="4">
+            <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="174">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="On"/>
+                    <prop id="3" list="0" val="Off"/>
+                    <prop id="4" list="0" val="On"/>
+                    <prop id="10" list="0" val="Off"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="13" list="1" val=""/>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="173"/>
+            </snippets>
+        </actor>
         <actor a="0.0" aid="69" c="true" group="2" id="265" name="Switch Single Use 69" sx="1.0" sy="1.0" x="252" y="311" z="4">
             <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="174">
                     <prop id="1" list="0" val="true"/>
                     <prop id="2" list="0" val="On"/>
@@ -665,11 +719,15 @@
             </snippets>
         </actor>
         <actor a="0.0" aid="96" c="false" group="10" id="259" name="Spikes Up 96" sx="1.0" sy="1.0" x="240" y="144" z="1"/>
-        <actor a="0.0" aid="110" c="true" group="3" id="205" name="Egg Push 110" sx="1.0" sy="1.0" x="512" y="368" z="4">
+        <actor a="0.0" aid="110" c="true" group="3" id="205" name="Egg Push 110" sx="1.0" sy="1.0" x="536" y="343" z="2">
             <snippets>
                 <s enabled="true" id="64">
                     <prop id="1" list="0" val="EggCollected"/>
                     <prop id="2" list="0" val="Egg2_Boss"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="191">
@@ -681,13 +739,9 @@
                     <prop id="6" list="0" val="178"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="54">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="144"/>
                 <s enabled="true" id="77">
-                    <prop id="1" list="0" val="Factory1Boss"/>
+                    <prop id="1" list="0" val="Factory1"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -710,6 +764,9 @@
                     <prop id="8" list="0" val="Strong In"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="165">
@@ -738,6 +795,9 @@
                     <prop id="8" list="0" val="Strong In"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="165">
@@ -766,6 +826,9 @@
                     <prop id="8" list="0" val="Strong In"/>
                     <prop id="9" list="0" val="0"/>
                     <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val=""/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="165">
@@ -777,247 +840,17 @@
             </snippets>
         </actor>
         <actor a="90.0" aid="104" c="false" group="2" id="423" name="Expander Pipes 104" sx="1.0" sy="1.0" x="256" y="48" z="1"/>
-        <actor a="0.0" aid="137" c="false" group="12" id="672" name="Explodable Block 137" sx="1.0" sy="1.0" x="560" y="432" z="7"/>
-        <actor a="0.0" aid="136" c="false" group="12" id="672" name="Explodable Block 136" sx="1.0" sy="1.0" x="560" y="416" z="7"/>
-        <actor a="0.0" aid="139" c="false" group="12" id="672" name="Explodable Block 139" sx="1.0" sy="1.0" x="544" y="416" z="7"/>
-        <actor a="0.0" aid="141" c="false" group="12" id="672" name="Explodable Block 141" sx="1.0" sy="1.0" x="464" y="320" z="7"/>
-        <actor a="0.0" aid="140" c="false" group="12" id="672" name="Explodable Block 140" sx="1.0" sy="1.0" x="544" y="400" z="7"/>
-        <actor a="0.0" aid="143" c="false" group="12" id="672" name="Explodable Block 143" sx="1.0" sy="1.0" x="528" y="368" z="7"/>
-        <actor a="0.0" aid="142" c="false" group="12" id="672" name="Explodable Block 142" sx="1.0" sy="1.0" x="448" y="368" z="7"/>
-        <actor a="0.0" aid="131" c="false" group="12" id="672" name="Explodable Block 131" sx="1.0" sy="1.0" x="512" y="448" z="7"/>
-        <actor a="0.0" aid="130" c="false" group="12" id="672" name="Explodable Block 130" sx="1.0" sy="1.0" x="496" y="448" z="7"/>
-        <actor a="0.0" aid="135" c="false" group="12" id="672" name="Explodable Block 135" sx="1.0" sy="1.0" x="560" y="464" z="7"/>
-        <actor a="0.0" aid="134" c="false" group="12" id="672" name="Explodable Block 134" sx="1.0" sy="1.0" x="560" y="448" z="7"/>
-        <actor a="0.0" aid="152" c="false" group="12" id="672" name="Explodable Block 152" sx="1.0" sy="1.0" x="512" y="416" z="7"/>
-        <actor a="0.0" aid="154" c="false" group="12" id="672" name="Explodable Block 154" sx="1.0" sy="1.0" x="528" y="400" z="7"/>
-        <actor a="0.0" aid="155" c="false" group="12" id="672" name="Explodable Block 155" sx="1.0" sy="1.0" x="528" y="416" z="7"/>
-        <actor a="0.0" aid="156" c="false" group="12" id="672" name="Explodable Block 156" sx="1.0" sy="1.0" x="512" y="400" z="7"/>
-        <actor a="0.0" aid="157" c="false" group="12" id="672" name="Explodable Block 157" sx="1.0" sy="1.0" x="528" y="384" z="7"/>
-        <actor a="0.0" aid="158" c="false" group="12" id="672" name="Explodable Block 158" sx="1.0" sy="1.0" x="528" y="352" z="7"/>
-        <actor a="0.0" aid="159" c="false" group="12" id="672" name="Explodable Block 159" sx="1.0" sy="1.0" x="528" y="336" z="7"/>
-        <actor a="0.0" aid="144" c="false" group="12" id="672" name="Explodable Block 144" sx="1.0" sy="1.0" x="512" y="352" z="7"/>
-        <actor a="0.0" aid="145" c="false" group="12" id="672" name="Explodable Block 145" sx="1.0" sy="1.0" x="496" y="368" z="7"/>
-        <actor a="0.0" aid="146" c="false" group="12" id="672" name="Explodable Block 146" sx="1.0" sy="1.0" x="512" y="384" z="7"/>
-        <actor a="0.0" aid="147" c="true" group="12" id="672" name="Explodable Block 147" sx="1.0" sy="1.0" x="496" y="400" z="7">
-            <snippets>
-                <s enabled="true" id="185">
-                    <prop id="1" list="0" val="Explode With Random Pieces PM"/>
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="352"/>
-                <s enabled="true" id="353">
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="12"/>
-                    <prop id="6" list="0" val="0"/>
-                    <prop id="7" list="0" val="0.4"/>
-                    <prop id="8" list="1" val="">
-                        <text order="0" value="Bomb Crate"/>
-                    </prop>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="354">
-                    <prop id="1" list="0" val="0.0"/>
-                    <prop id="2" list="0" val="4"/>
-                    <prop id="3" list="0" val="674"/>
-                    <prop id="4" list="0" val="1"/>
-                    <prop id="5" list="0" val="0.0"/>
-                    <prop id="6" list="0" val="0.0"/>
-                    <prop id="7" list="0" val="0.0"/>
-                    <prop id="8" list="0" val="0.0"/>
-                    <prop id="9" list="0" val="0.0"/>
-                    <prop id="10" list="0" val="false"/>
-                    <prop id="11" list="0" val=""/>
-                    <prop id="12" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="148" c="true" group="12" id="672" name="Explodable Block 148" sx="1.0" sy="1.0" x="496" y="416" z="7">
-            <snippets>
-                <s enabled="true" id="185">
-                    <prop id="1" list="0" val="Explode With Random Pieces PM"/>
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="352"/>
-                <s enabled="true" id="353">
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="12"/>
-                    <prop id="6" list="0" val="0"/>
-                    <prop id="7" list="0" val="0.4"/>
-                    <prop id="8" list="1" val=""/>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="354">
-                    <prop id="1" list="0" val="0.0"/>
-                    <prop id="2" list="0" val="4"/>
-                    <prop id="3" list="0" val="674"/>
-                    <prop id="4" list="0" val="1"/>
-                    <prop id="5" list="0" val="0.0"/>
-                    <prop id="6" list="0" val="0.0"/>
-                    <prop id="7" list="0" val="0.0"/>
-                    <prop id="8" list="0" val="0.0"/>
-                    <prop id="9" list="0" val="0.0"/>
-                    <prop id="10" list="0" val="false"/>
-                    <prop id="11" list="0" val=""/>
-                    <prop id="12" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="149" c="false" group="12" id="672" name="Explodable Block 149" sx="1.0" sy="1.0" x="496" y="432" z="7"/>
-        <actor a="0.0" aid="151" c="false" group="12" id="672" name="Explodable Block 151" sx="1.0" sy="1.0" x="512" y="432" z="7"/>
-        <actor a="0.0" aid="171" c="true" group="12" id="672" name="Explodable Block 171" sx="1.0" sy="1.0" x="464" y="400" z="7">
-            <snippets>
-                <s enabled="true" id="185">
-                    <prop id="1" list="0" val="Explode With Random Pieces PM"/>
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="352"/>
-                <s enabled="true" id="353">
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="12"/>
-                    <prop id="6" list="0" val="0"/>
-                    <prop id="7" list="0" val="0.4"/>
-                    <prop id="8" list="1" val="">
-                        <text order="0" value="Bomb Crate"/>
-                    </prop>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="354">
-                    <prop id="1" list="0" val="0.0"/>
-                    <prop id="2" list="0" val="4"/>
-                    <prop id="3" list="0" val="674"/>
-                    <prop id="4" list="0" val="1"/>
-                    <prop id="5" list="0" val="0.0"/>
-                    <prop id="6" list="0" val="0.0"/>
-                    <prop id="7" list="0" val="0.0"/>
-                    <prop id="8" list="0" val="0.0"/>
-                    <prop id="9" list="0" val="0.0"/>
-                    <prop id="10" list="0" val="false"/>
-                    <prop id="11" list="0" val=""/>
-                    <prop id="12" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="170" c="true" group="12" id="672" name="Explodable Block 170" sx="1.0" sy="1.0" x="448" y="400" z="7">
-            <snippets>
-                <s enabled="true" id="185">
-                    <prop id="1" list="0" val="Explode With Random Pieces PM"/>
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="352"/>
-                <s enabled="true" id="353">
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="12"/>
-                    <prop id="6" list="0" val="0"/>
-                    <prop id="7" list="0" val="0.4"/>
-                    <prop id="8" list="1" val="">
-                        <text order="0" value="Bomb Crate"/>
-                    </prop>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="354">
-                    <prop id="1" list="0" val="0.0"/>
-                    <prop id="2" list="0" val="4"/>
-                    <prop id="3" list="0" val="674"/>
-                    <prop id="4" list="0" val="1"/>
-                    <prop id="5" list="0" val="0.0"/>
-                    <prop id="6" list="0" val="0.0"/>
-                    <prop id="7" list="0" val="0.0"/>
-                    <prop id="8" list="0" val="0.0"/>
-                    <prop id="9" list="0" val="0.0"/>
-                    <prop id="10" list="0" val="false"/>
-                    <prop id="11" list="0" val=""/>
-                    <prop id="12" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="169" c="false" group="12" id="672" name="Explodable Block 169" sx="1.0" sy="1.0" x="464" y="384" z="7"/>
-        <actor a="0.0" aid="168" c="false" group="12" id="672" name="Explodable Block 168" sx="1.0" sy="1.0" x="432" y="400" z="7"/>
-        <actor a="0.0" aid="174" c="false" group="12" id="672" name="Explodable Block 174" sx="1.0" sy="1.0" x="480" y="384" z="7"/>
-        <actor a="0.0" aid="173" c="false" group="12" id="672" name="Explodable Block 173" sx="1.0" sy="1.0" x="496" y="384" z="7"/>
-        <actor a="0.0" aid="172" c="true" group="12" id="672" name="Explodable Block 172" sx="1.0" sy="1.0" x="480" y="400" z="7">
-            <snippets>
-                <s enabled="true" id="185">
-                    <prop id="1" list="0" val="Explode With Random Pieces PM"/>
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="352"/>
-                <s enabled="true" id="353">
-                    <prop id="2" list="0" val="0"/>
-                    <prop id="3" list="0" val="0"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="12"/>
-                    <prop id="6" list="0" val="0"/>
-                    <prop id="7" list="0" val="0.4"/>
-                    <prop id="8" list="1" val="">
-                        <text order="0" value="Bomb Crate"/>
-                    </prop>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="354">
-                    <prop id="1" list="0" val="0.0"/>
-                    <prop id="2" list="0" val="4"/>
-                    <prop id="3" list="0" val="674"/>
-                    <prop id="4" list="0" val="1"/>
-                    <prop id="5" list="0" val="0.0"/>
-                    <prop id="6" list="0" val="0.0"/>
-                    <prop id="7" list="0" val="0.0"/>
-                    <prop id="8" list="0" val="0.0"/>
-                    <prop id="9" list="0" val="0.0"/>
-                    <prop id="10" list="0" val="false"/>
-                    <prop id="11" list="0" val=""/>
-                    <prop id="12" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="163" c="false" group="12" id="672" name="Explodable Block 163" sx="1.0" sy="1.0" x="480" y="320" z="7"/>
-        <actor a="0.0" aid="162" c="false" group="12" id="672" name="Explodable Block 162" sx="1.0" sy="1.0" x="496" y="320" z="7"/>
-        <actor a="0.0" aid="161" c="false" group="12" id="672" name="Explodable Block 161" sx="1.0" sy="1.0" x="512" y="320" z="7"/>
-        <actor a="0.0" aid="160" c="false" group="12" id="672" name="Explodable Block 160" sx="1.0" sy="1.0" x="528" y="320" z="7"/>
-        <actor a="0.0" aid="167" c="false" group="12" id="672" name="Explodable Block 167" sx="1.0" sy="1.0" x="464" y="336" z="7"/>
-        <actor a="0.0" aid="188" c="false" group="12" id="672" name="Explodable Block 188" sx="1.0" sy="1.0" x="448" y="384" z="7"/>
-        <actor a="0.0" aid="204" c="false" group="12" id="672" name="Explodable Block 204" sx="1.0" sy="1.0" x="480" y="352" z="7"/>
-        <actor a="0.0" aid="207" c="false" group="12" id="672" name="Explodable Block 207" sx="1.0" sy="1.0" x="464" y="368" z="7"/>
-        <actor a="0.0" aid="206" c="false" group="12" id="672" name="Explodable Block 206" sx="1.0" sy="1.0" x="464" y="352" z="7"/>
-        <actor a="0.0" aid="201" c="false" group="12" id="672" name="Explodable Block 201" sx="1.0" sy="1.0" x="496" y="336" z="7"/>
-        <actor a="0.0" aid="200" c="false" group="12" id="672" name="Explodable Block 200" sx="1.0" sy="1.0" x="480" y="336" z="7"/>
-        <actor a="0.0" aid="203" c="false" group="12" id="672" name="Explodable Block 203" sx="1.0" sy="1.0" x="496" y="352" z="7"/>
-        <actor a="0.0" aid="202" c="false" group="12" id="672" name="Explodable Block 202" sx="1.0" sy="1.0" x="512" y="336" z="7"/>
         <actor a="0.0" aid="197" c="false" group="10" id="259" name="Spikes Up 197" sx="1.0" sy="1.0" x="464" y="448" z="1"/>
         <actor a="0.0" aid="198" c="false" group="10" id="259" name="Spikes Up 198" sx="1.0" sy="1.0" x="480" y="448" z="1"/>
-        <actor a="0.0" aid="212" c="true" group="2" id="213" name="Door BLUE 212" sx="1.0" sy="1.0" x="273" y="560" z="4">
+        <actor a="0.0" aid="220" c="false" group="12" id="672" name="Explodable Block 220" sx="1.0" sy="1.0" x="496" y="448" z="7"/>
+        <actor a="0.0" aid="221" c="false" group="12" id="672" name="Explodable Block 221" sx="1.0" sy="1.0" x="496" y="400" z="7"/>
+        <actor a="0.0" aid="222" c="false" group="12" id="672" name="Explodable Block 222" sx="1.0" sy="1.0" x="512" y="400" z="7"/>
+        <actor a="0.0" aid="223" c="false" group="12" id="672" name="Explodable Block 223" sx="1.0" sy="1.0" x="512" y="384" z="7"/>
+        <actor a="0.0" aid="216" c="false" group="12" id="672" name="Explodable Block 216" sx="1.0" sy="1.0" x="512" y="432" z="7"/>
+        <actor a="0.0" aid="217" c="false" group="12" id="672" name="Explodable Block 217" sx="1.0" sy="1.0" x="512" y="416" z="7"/>
+        <actor a="0.0" aid="218" c="false" group="12" id="672" name="Explodable Block 218" sx="1.0" sy="1.0" x="496" y="416" z="7"/>
+        <actor a="0.0" aid="219" c="false" group="12" id="672" name="Explodable Block 219" sx="1.0" sy="1.0" x="496" y="432" z="7"/>
+        <actor a="0.0" aid="212" c="true" group="2" id="213" name="Door BLUE 212" sx="1.0" sy="1.0" x="273" y="480" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="0.0"/>
@@ -1107,9 +940,9 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="214" c="false" group="2" id="196" name="Teleporter 214" sx="1.0" sy="1.0" x="176" y="576" z="4"/>
-        <actor a="0.0" aid="208" c="false" group="12" id="672" name="Explodable Block 208" sx="1.0" sy="1.0" x="480" y="368" z="7"/>
-        <actor a="0.0" aid="209" c="true" group="3" id="182" name="Conveyor 209" sx="1.0" sy="1.0" x="400" y="448" z="1">
+        <actor a="0.0" aid="214" c="false" group="2" id="196" name="Teleporter 214" sx="1.0" sy="1.0" x="176" y="496" z="4"/>
+        <actor a="0.0" aid="215" c="false" group="12" id="672" name="Explodable Block 215" sx="1.0" sy="1.0" x="512" y="448" z="7"/>
+        <actor a="0.0" aid="209" c="true" group="3" id="182" name="Conveyor 209" sx="1.0" sy="1.0" x="400" y="448" z="4">
             <snippets>
                 <s enabled="true" id="128">
                     <prop id="1" list="0" val="1"/>
@@ -1121,6 +954,34 @@
                 <s enabled="true" id="123"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="239" c="false" group="12" id="672" name="Explodable Block 239" sx="1.0" sy="1.0" x="576" y="432" z="7"/>
+        <actor a="0.0" aid="238" c="false" group="12" id="672" name="Explodable Block 238" sx="1.0" sy="1.0" x="576" y="448" z="7"/>
+        <actor a="0.0" aid="237" c="false" group="12" id="672" name="Explodable Block 237" sx="1.0" sy="1.0" x="560" y="448" z="7"/>
+        <actor a="0.0" aid="236" c="false" group="12" id="672" name="Explodable Block 236" sx="1.0" sy="1.0" x="560" y="432" z="7"/>
+        <actor a="0.0" aid="235" c="false" group="12" id="672" name="Explodable Block 235" sx="1.0" sy="1.0" x="560" y="416" z="7"/>
+        <actor a="0.0" aid="234" c="false" group="12" id="672" name="Explodable Block 234" sx="1.0" sy="1.0" x="560" y="400" z="7"/>
+        <actor a="0.0" aid="233" c="false" group="12" id="672" name="Explodable Block 233" sx="1.0" sy="1.0" x="544" y="400" z="7"/>
+        <actor a="0.0" aid="232" c="false" group="12" id="672" name="Explodable Block 232" sx="1.0" sy="1.0" x="528" y="400" z="7"/>
+        <actor a="0.0" aid="231" c="false" group="12" id="672" name="Explodable Block 231" sx="1.0" sy="1.0" x="528" y="384" z="7"/>
+        <actor a="0.0" aid="230" c="false" group="12" id="672" name="Explodable Block 230" sx="1.0" sy="1.0" x="544" y="384" z="7"/>
+        <actor a="0.0" aid="229" c="false" group="12" id="672" name="Explodable Block 229" sx="1.0" sy="1.0" x="560" y="384" z="7"/>
+        <actor a="0.0" aid="228" c="false" group="12" id="672" name="Explodable Block 228" sx="1.0" sy="1.0" x="560" y="368" z="7"/>
+        <actor a="0.0" aid="225" c="false" group="12" id="672" name="Explodable Block 225" sx="1.0" sy="1.0" x="512" y="368" z="7"/>
+        <actor a="0.0" aid="224" c="false" group="12" id="672" name="Explodable Block 224" sx="1.0" sy="1.0" x="496" y="384" z="7"/>
+        <actor a="0.0" aid="254" c="false" group="12" id="672" name="Explodable Block 254" sx="1.0" sy="1.0" x="576" y="352" z="7"/>
+        <actor a="0.0" aid="255" c="false" group="12" id="672" name="Explodable Block 255" sx="1.0" sy="1.0" x="576" y="368" z="7"/>
+        <actor a="0.0" aid="252" c="false" group="12" id="672" name="Explodable Block 252" sx="1.0" sy="1.0" x="560" y="336" z="7"/>
+        <actor a="0.0" aid="253" c="false" group="12" id="672" name="Explodable Block 253" sx="1.0" sy="1.0" x="576" y="336" z="7"/>
+        <actor a="0.0" aid="250" c="false" group="12" id="672" name="Explodable Block 250" sx="1.0" sy="1.0" x="528" y="368" z="7"/>
+        <actor a="0.0" aid="251" c="false" group="12" id="672" name="Explodable Block 251" sx="1.0" sy="1.0" x="544" y="368" z="7"/>
+        <actor a="0.0" aid="248" c="false" group="12" id="672" name="Explodable Block 248" sx="1.0" sy="1.0" x="512" y="336" z="7"/>
+        <actor a="0.0" aid="249" c="false" group="12" id="672" name="Explodable Block 249" sx="1.0" sy="1.0" x="512" y="352" z="7"/>
+        <actor a="0.0" aid="246" c="false" group="12" id="672" name="Explodable Block 246" sx="1.0" sy="1.0" x="496" y="352" z="7"/>
+        <actor a="0.0" aid="247" c="false" group="12" id="672" name="Explodable Block 247" sx="1.0" sy="1.0" x="496" y="336" z="7"/>
+        <actor a="0.0" aid="245" c="false" group="12" id="672" name="Explodable Block 245" sx="1.0" sy="1.0" x="496" y="368" z="7"/>
+        <actor a="0.0" aid="242" c="false" group="12" id="672" name="Explodable Block 242" sx="1.0" sy="1.0" x="576" y="384" z="7"/>
+        <actor a="0.0" aid="240" c="false" group="12" id="672" name="Explodable Block 240" sx="1.0" sy="1.0" x="576" y="416" z="7"/>
+        <actor a="0.0" aid="241" c="false" group="12" id="672" name="Explodable Block 241" sx="1.0" sy="1.0" x="576" y="400" z="7"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -1134,11 +995,21 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val="false"/>
             <prop id="13" list="0" val="0"/>
+            <prop id="14" list="0" val="0"/>
+            <prop id="15" list="0" val="0"/>
+            <prop id="17" list="0" val="0"/>
+            <prop id="16" list="0" val="0"/>
+            <prop id="19" list="0" val="10"/>
+            <prop id="18" list="0" val="false"/>
+            <prop id="21" list="0" val="5"/>
+            <prop id="20" list="0" val="0"/>
+            <prop id="23" list="0" val="0"/>
+            <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -1175,27 +1046,26 @@
             <prop id="27" list="0" val="0"/>
             <prop id="26" list="0" val="0"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="35"/>
-        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="466"/>
             <prop id="2" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="35"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="4,16.0,0.0,16.0,48.0,0.0,48.0,0.0,0.0" x="304.0" y="160.0"/>
-        <p pts="22,32.0,192.0,0.0,192.0,0.0,128.0,32.0,128.0,32.0,112.0,48.0,112.0,48.0,80.0,16.0,80.0,16.0,0.0,32.0,0.0,32.0,64.0,64.0,64.0,64.0,128.0,48.0,128.0,48.0,208.0,144.0,208.0,144.0,240.0,112.0,240.0,112.0,256.0,80.0,256.0,80.0,272.0,32.0,272.0" x="192.0" y="96.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,128.0,0.0,128.0,16.0" x="592.0" y="288.0"/>
-        <p pts="18,48.0,576.0,48.0,544.0,16.0,544.0,16.0,272.0,0.0,272.0,0.0,176.0,16.0,176.0,16.0,144.0,0.0,144.0,0.0,48.0,16.0,48.0,16.0,0.0,848.0,0.0,848.0,64.0,816.0,64.0,816.0,592.0,752.0,592.0,752.0,576.0" x="64.0" y="32.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,112.0,0.0,112.0,16.0" x="448.0" y="464.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="528.0" y="416.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="656.0" y="464.0"/>
+        <p pts="4,64.0,0.0,64.0,16.0,0.0,16.0,0.0,0.0" x="656.0" y="384.0"/>
+        <p pts="36,752.0,464.0,752.0,480.0,784.0,480.0,784.0,32.0,816.0,32.0,816.0,0.0,496.0,0.0,496.0,96.0,480.0,96.0,480.0,64.0,432.0,64.0,432.0,32.0,464.0,32.0,464.0,0.0,240.0,0.0,240.0,48.0,176.0,48.0,176.0,32.0,208.0,32.0,208.0,0.0,48.0,0.0,48.0,48.0,0.0,48.0,0.0,96.0,16.0,96.0,16.0,112.0,32.0,112.0,32.0,176.0,0.0,176.0,0.0,224.0,16.0,224.0,16.0,240.0,48.0,240.0,48.0,304.0,16.0,304.0,16.0,464.0" x="80.0" y="48.0"/>
+        <p pts="12,32.0,240.0,32.0,0.0,48.0,0.0,48.0,384.0,32.0,384.0,32.0,352.0,0.0,352.0,0.0,336.0,32.0,336.0,32.0,256.0,0.0,256.0,0.0,240.0" x="784.0" y="96.0"/>
         <p pts="22,16.0,64.0,16.0,112.0,0.0,112.0,0.0,48.0,32.0,48.0,32.0,16.0,0.0,16.0,0.0,0.0,128.0,0.0,128.0,96.0,176.0,96.0,176.0,112.0,112.0,112.0,112.0,48.0,96.0,48.0,96.0,32.0,80.0,32.0,80.0,16.0,64.0,16.0,64.0,32.0,48.0,32.0,48.0,64.0" x="352.0" y="96.0"/>
         <p pts="4,0.0,16.0,0.0,0.0,208.0,0.0,208.0,16.0" x="192.0" y="448.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="656.0" y="480.0"/>
-        <p pts="4,96.0,0.0,96.0,16.0,0.0,16.0,0.0,0.0" x="352.0" y="256.0"/>
-        <p pts="4,64.0,0.0,64.0,16.0,0.0,16.0,0.0,0.0" x="656.0" y="384.0"/>
-        <p pts="14,48.0,448.0,0.0,448.0,0.0,432.0,32.0,432.0,32.0,352.0,0.0,352.0,0.0,336.0,32.0,336.0,32.0,256.0,0.0,256.0,0.0,240.0,32.0,240.0,32.0,0.0,48.0,0.0" x="784.0" y="96.0"/>
-        <p pts="40,784.0,32.0,816.0,32.0,816.0,0.0,496.0,0.0,496.0,96.0,480.0,96.0,480.0,64.0,432.0,64.0,432.0,32.0,464.0,32.0,464.0,0.0,240.0,0.0,240.0,48.0,176.0,48.0,176.0,32.0,208.0,32.0,208.0,0.0,48.0,0.0,48.0,48.0,0.0,48.0,0.0,96.0,16.0,96.0,16.0,112.0,32.0,112.0,32.0,176.0,0.0,176.0,0.0,224.0,16.0,224.0,16.0,240.0,48.0,240.0,48.0,304.0,16.0,304.0,16.0,512.0,48.0,512.0,48.0,544.0,480.0,544.0,480.0,528.0,752.0,528.0,752.0,560.0,784.0,560.0" x="80.0" y="48.0"/>
+        <p pts="22,80.0,256.0,80.0,272.0,32.0,272.0,32.0,192.0,0.0,192.0,0.0,128.0,32.0,128.0,32.0,112.0,48.0,112.0,48.0,80.0,16.0,80.0,16.0,0.0,32.0,0.0,32.0,64.0,64.0,64.0,64.0,128.0,48.0,128.0,48.0,208.0,144.0,208.0,144.0,240.0,112.0,240.0,112.0,256.0" x="192.0" y="96.0"/>
+        <p pts="16,816.0,512.0,752.0,512.0,752.0,496.0,16.0,496.0,16.0,272.0,0.0,272.0,0.0,176.0,16.0,176.0,16.0,144.0,0.0,144.0,0.0,48.0,16.0,48.0,16.0,0.0,848.0,0.0,848.0,64.0,816.0,64.0" x="64.0" y="32.0"/>
+        <p pts="4,16.0,0.0,16.0,48.0,0.0,48.0,0.0,0.0" x="304.0" y="160.0"/>
+        <p pts="22,256.0,48.0,256.0,224.0,96.0,224.0,96.0,208.0,240.0,208.0,240.0,80.0,144.0,80.0,144.0,96.0,112.0,96.0,112.0,80.0,96.0,80.0,96.0,16.0,0.0,16.0,0.0,0.0,112.0,0.0,112.0,32.0,144.0,32.0,144.0,64.0,224.0,64.0,224.0,32.0,368.0,32.0,368.0,48.0" x="352.0" y="256.0"/>
     </terrain>
 </scene>

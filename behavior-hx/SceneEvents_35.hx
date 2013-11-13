@@ -58,12 +58,6 @@ public var _StartRandomiser:Float;
         getActor(30).setValue("Conveyor PM", "_Direction", 1);
         getActor(43).setValue("Conveyor PM", "_Direction", 1.5);
         getActor(55).setValue("Conveyor PM", "_Direction", 1.5);
-        getActor(69).say("Single Use Region Switch PM", "_customBlock_ResetSwitch");
-        getActor(56).setValue("Conveyor PM", "_Direction", 1);
-        getActor(64).setValue("Conveyor PM", "_Direction", 1);
-        getActor(65).setValue("Conveyor PM", "_Direction", 1);
-        getActor(66).setValue("Conveyor PM", "_Direction", 1);
-        getActor(67).setValue("Conveyor PM", "_Direction", 1);
 }
 
     public function _customEvent_SwitchSingleUse32SwitchedOn():Void
@@ -74,12 +68,6 @@ public var _StartRandomiser:Float;
         getActor(30).setValue("Conveyor PM", "_Direction", -1);
         getActor(43).setValue("Conveyor PM", "_Direction", -1.5);
         getActor(55).setValue("Conveyor PM", "_Direction", -1.5);
-        getActor(68).say("Single Use Region Switch PM", "_customBlock_ResetSwitch");
-        getActor(56).setValue("Conveyor PM", "_Direction", -1);
-        getActor(64).setValue("Conveyor PM", "_Direction", -1);
-        getActor(65).setValue("Conveyor PM", "_Direction", -1);
-        getActor(66).setValue("Conveyor PM", "_Direction", -1);
-        getActor(67).setValue("Conveyor PM", "_Direction", -1);
 }
 
     public function _customEvent_TimedSwitchLight62PreSwitchedOn():Void
@@ -105,12 +93,6 @@ propertyChanged("_Crate", _Crate);
         getActor(65).setValue("Conveyor PM", "_Direction", 1);
         getActor(66).setValue("Conveyor PM", "_Direction", 1);
         getActor(67).setValue("Conveyor PM", "_Direction", 1);
-        getActor(32).say("Single Use Region Switch PM", "_customBlock_ResetSwitch");
-        getActor(26).setValue("Conveyor PM", "_Direction", 1);
-        getActor(27).setValue("Conveyor PM", "_Direction", 1);
-        getActor(30).setValue("Conveyor PM", "_Direction", 1);
-        getActor(43).setValue("Conveyor PM", "_Direction", 1.5);
-        getActor(55).setValue("Conveyor PM", "_Direction", 1.5);
 }
 
     public function _customEvent_SwitchSingleUse69SwitchedOn():Void
@@ -121,12 +103,6 @@ propertyChanged("_Crate", _Crate);
         getActor(65).setValue("Conveyor PM", "_Direction", -1);
         getActor(66).setValue("Conveyor PM", "_Direction", -1);
         getActor(67).setValue("Conveyor PM", "_Direction", -1);
-        getActor(31).say("Single Use Region Switch PM", "_customBlock_ResetSwitch");
-        getActor(26).setValue("Conveyor PM", "_Direction", -1);
-        getActor(27).setValue("Conveyor PM", "_Direction", -1);
-        getActor(30).setValue("Conveyor PM", "_Direction", -1);
-        getActor(43).setValue("Conveyor PM", "_Direction", -1.5);
-        getActor(55).setValue("Conveyor PM", "_Direction", -1.5);
 }
 
 

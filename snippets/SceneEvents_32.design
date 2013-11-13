@@ -107,14 +107,17 @@
     <group eventID="5" id="0">
         <event-type-region comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <say comment="false" x="26" y="47">
+                <print comment="false" x="26" y="47">
+                    <int id="0" val="LFT!"/>
+                </print>
+                <say comment="false" x="26" y="67">
                     <ACTOR eid="14" id="0"/>
                     <int id="1" val="Activate On Event PM"/>
                     <int id="2" val="Activate"/>
                 </say>
-                <dolater comment="false" x="26" y="74">
+                <dolater comment="false" x="26" y="94">
                     <group eventID="1" id="-1">
-                        <say comment="false" x="37" y="101">
+                        <say comment="false" x="37" y="121">
                             <ACTOR eid="14" id="0"/>
                             <int id="1" val="Activate On Event PM"/>
                             <int id="2" val="Deactivate"/>
