@@ -42,25 +42,19 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_8 extends SceneScript
+class ActorEvents_160 extends ActorScript
 {          	
 	
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
+		super(actor, engine);	
 		
 	}
 	
 	override public function init()
 	{
-		            if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Farm_Boss_Key")), Bool))
-{
-            recycleActor(getActor(17));
-            recycleActor(getActor(18));
-}
-
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)
