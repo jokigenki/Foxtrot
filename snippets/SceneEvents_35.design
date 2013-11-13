@@ -359,31 +359,4 @@
         </set-attribute>
     </group>
     <group eventID="8" id="-1"/>
-    <group eventID="12" id="0">
-        <event-actor-create-kill comment="false" x="15" y="15">
-            <group eventID="12" id="-1">
-                <create-actor3 comment="false" x="26" y="42">
-                    <ACTORTYPE eid="196" id="0"/>
-                    <int id="1" val="368"/>
-                    <int id="2" val="576"/>
-                    <int id="3" val="2"/>
-                </create-actor3>
-                <fadeTo comment="false" x="26" y="69">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="0"/>
-                    <int id="3" val="0"/>
-                </fadeTo>
-                <fadeInOut comment="false" x="26" y="96">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="2"/>
-                    <int id="3" val="9"/>
-                </fadeInOut>
-            </group>
-            <int id="0" val="1"/>
-            <ACTOR eid="110" id="1"/>
-        </event-actor-create-kill>
-    </group>
-    <group eventID="12" id="-1"/>
 </groups>
