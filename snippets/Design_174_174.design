@@ -94,7 +94,7 @@
                 </custom-406>
             </group>
             <int id="0" val="0"/>
-            <REGION eid="lastcreated" id="1"/>
+            <REGION eid="var" id="1" vid="11"/>
             <GROUP eid="0" id="2"/>
         </event-group-region>
     </group>
@@ -165,4 +165,17 @@
         </receiver-5-652>
     </group>
     <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-group-region comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <custom-406 comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                </custom-406>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="var" id="1" vid="11"/>
+            <GROUP eid="14" id="2"/>
+        </event-group-region>
+    </group>
+    <group eventID="11" id="-1"/>
 </groups>

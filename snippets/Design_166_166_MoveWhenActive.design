@@ -5,21 +5,9 @@
             <group eventID="1" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <set-val-166-4 comment="false" x="37" y="67">
-                            <get-xy comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="0"/>
-                            </get-xy>
-                        </set-val-166-4>
-                        <set-val-166-5 comment="false" x="37" y="100">
-                            <get-xy comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="1"/>
-                            </get-xy>
-                        </set-val-166-5>
-                        <if comment="false" x="37" y="133">
+                        <if comment="false" x="37" y="67">
                             <group eventID="1" id="-1">
-                                <set-val-166-10 comment="false" x="48" y="163">
+                                <set-val-166-10 comment="false" x="48" y="97">
                                     <get-val-166-6 comment="false" id="0" x="0" y="0"/>
                                 </set-val-166-10>
                             </group>
@@ -28,9 +16,9 @@
                                 <int id="1" val="0"/>
                             </eq>
                         </if>
-                        <if comment="false" x="37" y="200">
+                        <if comment="false" x="37" y="134">
                             <group eventID="1" id="-1">
-                                <set-val-166-11 comment="false" x="48" y="243">
+                                <set-val-166-11 comment="false" x="48" y="177">
                                     <get-attribute comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <int id="1" val="Rideable Platform PM"/>
@@ -53,9 +41,9 @@
                                 </has-snippet>
                             </and>
                         </if>
-                        <else-if comment="false" x="37" y="295">
+                        <else-if comment="false" x="37" y="229">
                             <group eventID="1" id="-1">
-                                <set-val-166-11 comment="false" x="48" y="328">
+                                <set-val-166-11 comment="false" x="48" y="262">
                                     <ACTOR eid="this" id="0"/>
                                 </set-val-166-11>
                             </group>
@@ -64,6 +52,42 @@
                                 <int id="1" val="1"/>
                             </value>
                         </else-if>
+                        <set-val-166-4 comment="false" x="37" y="301">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="11"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </set-val-166-4>
+                        <set-val-166-5 comment="false" x="37" y="334">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="11"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                        </set-val-166-5>
+                        <set-val-166-12 comment="false" x="37" y="367">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="11"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                            </minus>
+                        </set-val-166-12>
+                        <set-val-166-13 comment="false" x="37" y="405">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="11"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                            </minus>
+                        </set-val-166-13>
                     </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="this" id="2"/>
@@ -79,7 +103,7 @@
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-166-1>
                 <code-long comment="false" x="26" y="65">
-                    <int id="0" val="if (_MoveTarget == null) return;&#10;&#10;var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;if (_MoveDelay &amp;gt; 0)&#10;{&#10;&#9;runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void&#10;&#9;{&#10;&#9;&#9;if (_IsActive) _MoveTarget.moveTo(_XTarget, _YTarget, _MoveTime, trans);&#10;&#9;});&#10;} else {&#10;&#9;_MoveTarget.moveTo(_XTarget, _YTarget, _MoveTime, trans);&#10;}&#10;"/>
+                    <int id="0" val="if (_MoveTarget == null) return;&#10;&#10;trace(&amp;quot;MOVE! &amp;quot; + _MoveTarget);&#10;var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;if (_MoveDelay &amp;gt; 0)&#10;{&#10;&#9;runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void&#10;&#9;{&#10;&#9;&#9;if (_IsActive) _MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;&#9;});&#10;} else {&#10;&#9;_MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;}&#10;"/>
                 </code-long>
             </group>
             <int id="0" val="Activated"/>

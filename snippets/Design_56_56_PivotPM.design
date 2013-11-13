@@ -41,112 +41,143 @@
                 </set-val-56-6>
                 <repeat comment="false" x="26" y="100">
                     <group eventID="2" id="-1">
-                        <set-val-56-10 comment="false" x="37" y="125">
+                        <set-val-56-13 comment="false" x="37" y="125">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-val-56-6 comment="false" id="0" x="0" y="0"/>
+                                    <loopindex comment="false" id="1" x="0" y="0"/>
+                                </times>
+                                <to-degreesradians comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                    <get-val-56-8 comment="false" id="1" x="0" y="0"/>
+                                </to-degreesradians>
+                            </plus>
+                        </set-val-56-13>
+                        <set-val-56-10 comment="false" x="37" y="168">
                             <times comment="false" id="0" x="0" y="0">
                                 <trig-master comment="false" id="0" x="0" y="0">
                                     <int id="0" val="0"/>
-                                    <plus comment="false" id="1" x="0" y="0">
-                                        <times comment="false" id="0" x="0" y="0">
-                                            <get-val-56-6 comment="false" id="0" x="0" y="0"/>
-                                            <loopindex comment="false" id="1" x="0" y="0"/>
-                                        </times>
-                                        <to-degreesradians comment="false" id="1" x="0" y="0">
-                                            <int id="0" val="1"/>
-                                            <get-val-56-8 comment="false" id="1" x="0" y="0"/>
-                                        </to-degreesradians>
-                                    </plus>
+                                    <get-val-56-13 comment="false" id="1" x="0" y="0"/>
                                 </trig-master>
                                 <get-val-56-7 comment="false" id="1" x="0" y="0"/>
                             </times>
                         </set-val-56-10>
-                        <set-val-56-11 comment="false" x="37" y="186">
-                            <trig-master comment="false" id="0" x="0" y="0">
-                                <int id="0" val="1"/>
-                                <times comment="false" id="1" x="0" y="0">
-                                    <plus comment="false" id="0" x="0" y="0">
-                                        <times comment="false" id="0" x="0" y="0">
-                                            <get-val-56-6 comment="false" id="0" x="0" y="0"/>
-                                            <loopindex comment="false" id="1" x="0" y="0"/>
-                                        </times>
-                                        <to-degreesradians comment="false" id="1" x="0" y="0">
-                                            <int id="0" val="1"/>
-                                            <get-val-56-8 comment="false" id="1" x="0" y="0"/>
-                                        </to-degreesradians>
-                                    </plus>
-                                    <get-val-56-7 comment="false" id="1" x="0" y="0"/>
-                                </times>
-                            </trig-master>
+                        <set-val-56-11 comment="false" x="37" y="211">
+                            <times comment="false" id="0" x="0" y="0">
+                                <trig-master comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                    <get-val-56-13 comment="false" id="1" x="0" y="0"/>
+                                </trig-master>
+                                <get-val-56-7 comment="false" id="1" x="0" y="0"/>
+                            </times>
                         </set-val-56-11>
-                        <create-actor3 comment="false" x="37" y="247">
+                        <create-actor3 comment="false" x="37" y="254">
                             <ACTORTYPE eid="var" id="0" vid="3"/>
-                            <get-val-56-10 comment="false" id="1" x="0" y="0"/>
-                            <get-val-56-11 comment="false" id="2" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="2"/>
+                                </get-xy>
+                                <get-val-56-10 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="3"/>
+                                </get-xy>
+                                <get-val-56-11 comment="false" id="1" x="0" y="0"/>
+                            </plus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-56-9 comment="false" x="37" y="279">
+                        <set-val-56-9 comment="false" x="37" y="299">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-56-9>
-                        <setlayer comment="false" x="37" y="306">
+                        <set-xy comment="false" x="37" y="326">
+                            <ACTOR eid="var" id="0" vid="9"/>
+                            <int id="1" val="0"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="9"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="9"/>
+                                    <int id="1" val="2"/>
+                                </get-wh>
+                            </minus>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="371">
+                            <ACTOR eid="var" id="0" vid="9"/>
+                            <int id="1" val="1"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="9"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="9"/>
+                                    <int id="1" val="3"/>
+                                </get-wh>
+                            </minus>
+                        </set-xy>
+                        <setlayer comment="false" x="37" y="416">
                             <ACTOR eid="var" id="0" vid="9"/>
                             <getlayer comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getlayer>
                         </setlayer>
-                        <add-list comment="false" x="37" y="346">
+                        <add-list comment="false" x="37" y="456">
                             <get-val-56-4 comment="false" id="0" x="0" y="0"/>
                             <get-val-56-9 comment="false" id="1" x="0" y="0"/>
                         </add-list>
                     </group>
                     <get-val-56-5 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <set-val-56-12 comment="false" x="26" y="383">
+                <set-val-56-12 comment="false" x="26" y="493">
                     <int id="0" val="0"/>
                 </set-val-56-12>
-                <dolater comment="false" x="26" y="403">
+                <for-each comment="false" x="26" y="513">
                     <group eventID="2" id="-1">
-                        <for-each comment="false" x="37" y="430">
-                            <group eventID="2" id="-1">
-                                <set-attribute comment="false" x="48" y="455">
-                                    <for-each-item comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="Windmill Arm PM"/>
-                                    <int id="2" val="_Radius"/>
-                                    <get-val-56-7 comment="false" id="3" x="0" y="0"/>
-                                </set-attribute>
-                                <set-attribute comment="false" x="48" y="487">
-                                    <for-each-item comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="Windmill Arm PM"/>
-                                    <int id="2" val="_StartAngle"/>
-                                    <plus comment="false" id="3" x="0" y="0">
-                                        <times comment="false" id="0" x="0" y="0">
-                                            <get-val-56-6 comment="false" id="0" x="0" y="0"/>
-                                            <get-val-56-12 comment="false" id="1" x="0" y="0"/>
-                                        </times>
-                                        <to-degreesradians comment="false" id="1" x="0" y="0">
-                                            <int id="0" val="1"/>
-                                            <get-val-56-8 comment="false" id="1" x="0" y="0"/>
-                                        </to-degreesradians>
-                                    </plus>
-                                </set-attribute>
-                                <set-attribute comment="false" x="48" y="537">
-                                    <for-each-item comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="Windmill Arm PM"/>
-                                    <int id="2" val="_Pivot"/>
-                                    <code-short comment="false" id="3" x="0" y="0">
-                                        <int id="0" val="actor"/>
-                                    </code-short>
-                                </set-attribute>
-                                <incdec comment="false" x="48" y="569">
-                                    <int id="0" val="12"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="1"/>
-                                </incdec>
-                            </group>
-                            <get-val-56-4 comment="false" id="0" x="0" y="0"/>
-                        </for-each>
+                        <set-val-56-13 comment="false" x="37" y="538">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-val-56-6 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-56-12 comment="false" id="1" x="0" y="0"/>
+                                </times>
+                                <to-degreesradians comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                    <get-val-56-8 comment="false" id="1" x="0" y="0"/>
+                                </to-degreesradians>
+                            </plus>
+                        </set-val-56-13>
+                        <set-attribute comment="false" x="37" y="589">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Windmill Arm PM"/>
+                            <int id="2" val="_Radius"/>
+                            <get-val-56-7 comment="false" id="3" x="0" y="0"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="621">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Windmill Arm PM"/>
+                            <int id="2" val="_StartAngle"/>
+                            <get-val-56-13 comment="false" id="3" x="0" y="0"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="653">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Windmill Arm PM"/>
+                            <int id="2" val="_Pivot"/>
+                            <code-short comment="false" id="3" x="0" y="0">
+                                <int id="0" val="actor"/>
+                            </code-short>
+                        </set-attribute>
+                        <incdec comment="false" x="37" y="685">
+                            <int id="0" val="12"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
                     </group>
-                    <int id="0" val="0.05"/>
-                    <ACTOR eid="this" id="2"/>
-                </dolater>
+                    <get-val-56-4 comment="false" id="0" x="0" y="0"/>
+                </for-each>
             </group>
         </init>
     </group>
@@ -157,7 +188,5 @@
             <get-byobval-56-718-0 comment="false" id="0" x="0" y="0"/>
         </receiver-1-718>
     </group>
-    <group eventID="3" id="-1">
-        <get-byobval-56-718-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="3" id="-1"/>
 </groups>
