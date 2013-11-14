@@ -14,7 +14,7 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="10" id="0" name="Region 0" pts="4,11.0,0.0,11.0,10.0,0.0,10.0,0.0,0.0" r="64" type="box" w="11" x="370" y="437"/>
+        <region b="64" g="64" h="10" id="0" name="Region 0" pts="4,0.0,0.0,0.0,10.0,11.0,10.0,11.0,0.0" r="64" type="box" w="11" x="370" y="437"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -78,13 +78,13 @@
                     <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="11" c="false" group="10" id="259" name="Spikes Up 11" sx="1.0" sy="1.0" x="832" y="512" z="1"/>
@@ -148,15 +148,16 @@
                     <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="258" c="false" group="10" id="620" name="Flames 258" sx="1.0" sy="1.0" x="464" y="448" z="1"/>
         <actor a="0.0" aid="17" c="true" group="3" id="180" name="Timed Switch Light 17" sx="1.0" sy="1.0" x="700" y="293" z="4">
             <snippets>
                 <s enabled="true" id="65">
@@ -180,6 +181,7 @@
                 <s enabled="true" id="122"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="259" c="false" group="10" id="620" name="Flames 259" sx="1.0" sy="1.0" x="480" y="448" z="1"/>
         <actor a="0.0" aid="16" c="true" group="3" id="180" name="Timed Switch Light 16" sx="1.0" sy="1.0" x="796" y="437" z="4">
             <snippets>
                 <s enabled="true" id="65">
@@ -307,6 +309,10 @@
         <actor a="0.0" aid="28" c="false" group="3" id="280" name="Spikes Right 28" sx="1.0" sy="1.0" x="576" y="112" z="1"/>
         <actor a="0.0" aid="31" c="true" group="2" id="265" name="Switch Single Use 31" sx="1.0" sy="1.0" x="668" y="295" z="4">
             <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="174">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="On"/>
@@ -316,10 +322,6 @@
                     <prop id="11" list="0" val=""/>
                     <prop id="13" list="1" val=""/>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="54">
-                    <prop id="1" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="173"/>
@@ -341,6 +343,10 @@
         <actor a="0.0" aid="35" c="false" group="3" id="283" name="Spikes Left 35" sx="1.0" sy="1.0" x="800" y="96" z="1"/>
         <actor a="0.0" aid="32" c="true" group="2" id="265" name="Switch Single Use 32" sx="1.0" sy="1.0" x="604" y="295" z="4">
             <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="174">
                     <prop id="1" list="0" val="true"/>
                     <prop id="2" list="0" val="On"/>
@@ -350,10 +356,6 @@
                     <prop id="11" list="0" val=""/>
                     <prop id="13" list="1" val=""/>
                     <prop id="14" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="54">
-                    <prop id="1" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="173"/>
@@ -464,13 +466,13 @@
                     <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="53" c="true" group="3" id="182" name="Conveyor 53" sx="1.0" sy="1.0" x="256" y="144" z="4">
@@ -579,13 +581,13 @@
                     <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="302"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="302"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="62" c="true" group="3" id="180" name="Timed Switch Light 62" sx="1.0" sy="1.0" x="460" y="517" z="4">
@@ -615,6 +617,10 @@
         <actor a="0.0" aid="60" c="false" group="10" id="259" name="Spikes Up 60" sx="1.0" sy="1.0" x="320" y="160" z="1"/>
         <actor a="0.0" aid="68" c="true" group="2" id="265" name="Switch Single Use 68" sx="1.0" sy="1.0" x="316" y="311" z="4">
             <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="174">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="On"/>
@@ -626,15 +632,15 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="54">
-                    <prop id="1" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="173"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="69" c="true" group="2" id="265" name="Switch Single Use 69" sx="1.0" sy="1.0" x="252" y="311" z="4">
             <snippets>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="174">
                     <prop id="1" list="0" val="true"/>
                     <prop id="2" list="0" val="On"/>
@@ -644,10 +650,6 @@
                     <prop id="11" list="0" val=""/>
                     <prop id="13" list="1" val=""/>
                     <prop id="14" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="54">
-                    <prop id="1" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="173"/>
@@ -737,6 +739,10 @@
                     <prop id="2" list="0" val="Egg2_Boss"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="191">
                     <prop id="1" list="0" val="1"/>
                     <prop id="2" list="0" val="0.5"/>
@@ -744,10 +750,6 @@
                     <prop id="4" list="0" val="300"/>
                     <prop id="5" list="0" val="200"/>
                     <prop id="6" list="0" val="178"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="54">
-                    <prop id="1" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="144"/>
@@ -851,8 +853,6 @@
             </snippets>
         </actor>
         <actor a="90.0" aid="104" c="false" group="2" id="423" name="Expander Pipes 104" sx="1.0" sy="1.0" x="256" y="48" z="1"/>
-        <actor a="0.0" aid="197" c="false" group="10" id="259" name="Spikes Up 197" sx="1.0" sy="1.0" x="464" y="448" z="1"/>
-        <actor a="0.0" aid="198" c="false" group="10" id="259" name="Spikes Up 198" sx="1.0" sy="1.0" x="480" y="448" z="1"/>
         <actor a="0.0" aid="220" c="false" group="12" id="672" name="Explodable Block 220" sx="1.0" sy="1.0" x="496" y="448" z="7"/>
         <actor a="0.0" aid="221" c="false" group="12" id="672" name="Explodable Block 221" sx="1.0" sy="1.0" x="496" y="400" z="7"/>
         <actor a="0.0" aid="222" c="false" group="12" id="672" name="Explodable Block 222" sx="1.0" sy="1.0" x="512" y="400" z="7"/>
@@ -1017,10 +1017,10 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="21"/>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -1057,24 +1057,24 @@
             <prop id="27" list="0" val="0"/>
             <prop id="26" list="0" val="0"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="35"/>
-        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="466"/>
             <prop id="2" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="35"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="16,816.0,512.0,752.0,512.0,752.0,496.0,16.0,496.0,16.0,272.0,0.0,272.0,0.0,176.0,16.0,176.0,16.0,144.0,0.0,144.0,0.0,48.0,16.0,48.0,16.0,0.0,848.0,0.0,848.0,64.0,816.0,64.0" x="64.0" y="32.0"/>
-        <p pts="22,16.0,64.0,16.0,112.0,0.0,112.0,0.0,48.0,32.0,48.0,32.0,16.0,0.0,16.0,0.0,0.0,128.0,0.0,128.0,96.0,176.0,96.0,176.0,112.0,112.0,112.0,112.0,48.0,96.0,48.0,96.0,32.0,80.0,32.0,80.0,16.0,64.0,16.0,64.0,32.0,48.0,32.0,48.0,64.0" x="352.0" y="96.0"/>
-        <p pts="22,80.0,256.0,80.0,272.0,32.0,272.0,32.0,192.0,0.0,192.0,0.0,128.0,32.0,128.0,32.0,112.0,48.0,112.0,48.0,80.0,16.0,80.0,16.0,0.0,32.0,0.0,32.0,64.0,64.0,64.0,64.0,128.0,48.0,128.0,48.0,208.0,144.0,208.0,144.0,240.0,112.0,240.0,112.0,256.0" x="192.0" y="96.0"/>
-        <p pts="12,32.0,240.0,32.0,0.0,48.0,0.0,48.0,384.0,32.0,384.0,32.0,352.0,0.0,352.0,0.0,336.0,32.0,336.0,32.0,256.0,0.0,256.0,0.0,240.0" x="784.0" y="96.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="528.0" y="416.0"/>
         <p pts="32,288.0,224.0,288.0,192.0,256.0,192.0,256.0,224.0,96.0,224.0,96.0,208.0,240.0,208.0,240.0,80.0,144.0,80.0,144.0,96.0,112.0,96.0,112.0,80.0,96.0,80.0,96.0,16.0,0.0,16.0,0.0,0.0,112.0,0.0,112.0,32.0,144.0,32.0,144.0,64.0,224.0,64.0,224.0,32.0,368.0,32.0,368.0,48.0,256.0,48.0,256.0,128.0,368.0,128.0,368.0,144.0,304.0,144.0,304.0,208.0,368.0,208.0,368.0,224.0" x="352.0" y="256.0"/>
-        <p pts="4,16.0,0.0,16.0,48.0,0.0,48.0,0.0,0.0" x="304.0" y="160.0"/>
         <p pts="4,0.0,16.0,0.0,0.0,208.0,0.0,208.0,16.0" x="192.0" y="448.0"/>
+        <p pts="22,80.0,256.0,80.0,272.0,32.0,272.0,32.0,192.0,0.0,192.0,0.0,128.0,32.0,128.0,32.0,112.0,48.0,112.0,48.0,80.0,16.0,80.0,16.0,0.0,32.0,0.0,32.0,64.0,64.0,64.0,64.0,128.0,48.0,128.0,48.0,208.0,144.0,208.0,144.0,240.0,112.0,240.0,112.0,256.0" x="192.0" y="96.0"/>
         <p pts="36,752.0,464.0,752.0,480.0,784.0,480.0,784.0,32.0,816.0,32.0,816.0,0.0,496.0,0.0,496.0,96.0,480.0,96.0,480.0,64.0,432.0,64.0,432.0,32.0,464.0,32.0,464.0,0.0,240.0,0.0,240.0,48.0,176.0,48.0,176.0,32.0,208.0,32.0,208.0,0.0,48.0,0.0,48.0,48.0,0.0,48.0,0.0,96.0,16.0,96.0,16.0,112.0,32.0,112.0,32.0,176.0,0.0,176.0,0.0,224.0,16.0,224.0,16.0,240.0,48.0,240.0,48.0,304.0,16.0,304.0,16.0,464.0" x="80.0" y="48.0"/>
+        <p pts="12,32.0,240.0,32.0,0.0,48.0,0.0,48.0,384.0,32.0,384.0,32.0,352.0,0.0,352.0,0.0,336.0,32.0,336.0,32.0,256.0,0.0,256.0,0.0,240.0" x="784.0" y="96.0"/>
+        <p pts="4,16.0,0.0,16.0,48.0,0.0,48.0,0.0,0.0" x="304.0" y="160.0"/>
+        <p pts="22,16.0,64.0,16.0,112.0,0.0,112.0,0.0,48.0,32.0,48.0,32.0,16.0,0.0,16.0,0.0,0.0,128.0,0.0,128.0,96.0,176.0,96.0,176.0,112.0,112.0,112.0,112.0,48.0,96.0,48.0,96.0,32.0,80.0,32.0,80.0,16.0,64.0,16.0,64.0,32.0,48.0,32.0,48.0,64.0" x="352.0" y="96.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="528.0" y="416.0"/>
+        <p pts="16,816.0,512.0,752.0,512.0,752.0,496.0,16.0,496.0,16.0,272.0,0.0,272.0,0.0,176.0,16.0,176.0,16.0,144.0,0.0,144.0,0.0,48.0,16.0,48.0,16.0,0.0,848.0,0.0,848.0,64.0,816.0,64.0" x="64.0" y="32.0"/>
     </terrain>
 </scene>

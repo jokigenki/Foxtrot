@@ -108,10 +108,10 @@
         </anim>
     </sprite>
     <tileset across="2" atlasID="4" desc="" down="2" id="592" name="Altar" oid="-1" shared="false" th="16" tw="16">
-        <tile collision="1" data="" durations="100" frames="0" id="4" order="-1"/>
-        <tile collision="1" data="" durations="100" frames="1" id="5" order="-1"/>
-        <tile collision="1" data="" durations="100" frames="2" id="6" order="-1"/>
-        <tile collision="1" data="" durations="100" frames="3" id="7" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="2" id="2" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="3" id="3" order="-1"/>
     </tileset>
     <actor adamp="0.0" ascale="true" atlasID="3" bodytype="0" continuous="true" desc="Sitting in the Armchair resets the game" eventsnippetid="115" fixedrot="false" fric="0.2" gid="3" id="169" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Armchair" oid="-1" pausable="true" rest="0.0" shared="false" sprite="170" static="true">
         <snippets>
@@ -2544,6 +2544,7 @@
                     <text order="1" value="Rat"/>
                     <text order="2" value="Fanny Cannon"/>
                     <text order="3" value="Crate"/>
+                    <text order="4" value="Bomb Crate"/>
                 </prop>
                 <prop id="6" list="0" val="Burn Out PM"/>
                 <prop id="7" list="0" val="false"/>
@@ -2995,7 +2996,7 @@
     <actor adamp="0.0" ascale="true" atlasID="1" bodytype="2" continuous="true" desc="" eventsnippetid="363" fixedrot="true" fric="0.2" gid="3" id="692" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Goose Tank" oid="-1" pausable="true" rest="0.0" shared="false" sprite="693" static="false">
         <snippets>
             <s enabled="true" id="152">
-                <prop id="1" list="0" val="Left"/>
+                <prop id="1" list="0" val="Right"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="185">
@@ -3014,13 +3015,13 @@
                 <prop id="2" list="0" val="0"/>
                 <prop id="3" list="0" val="0"/>
                 <prop id="4" list="0" val="0"/>
-                <prop id="5" list="0" val="40"/>
+                <prop id="5" list="0" val="35"/>
                 <prop id="6" list="0" val="0"/>
                 <prop id="7" list="0" val="0.25"/>
                 <prop id="8" list="1" val="">
                     <text order="0" value="Egg Grenade"/>
                 </prop>
-                <prop id="9" list="0" val="true"/>
+                <prop id="9" list="0" val="false"/>
                 <prop id="10" list="0" val="true"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -3058,7 +3059,7 @@
             <s enabled="true" id="148">
                 <prop id="1" list="0" val="true"/>
                 <prop id="2" list="0" val="true"/>
-                <prop id="3" list="0" val="true"/>
+                <prop id="3" list="0" val="false"/>
                 <prop id="4" list="0" val="true"/>
                 <prop id="5" list="1" val="">
                     <text order="0" value="Jumper"/>
@@ -3072,7 +3073,7 @@
                 <prop id="2" list="0" val="Flicker Out PM"/>
                 <prop id="3" list="1" val=""/>
                 <prop id="4" list="0" val="0.0"/>
-                <prop id="5" list="0" val=""/>
+                <prop id="5" list="0" val="GooseTankKilled"/>
                 <prop id="6" list="1" val=""/>
                 <prop id="7" list="0" val="ReducedHealth"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -3095,7 +3096,7 @@
             <s enabled="true" id="151">
                 <prop id="1" list="0" val="3"/>
                 <prop id="2" list="0" val="0"/>
-                <prop id="3" list="0" val="3"/>
+                <prop id="3" list="0" val="10"/>
                 <prop id="4" list="0" val="0"/>
                 <prop id="5" list="0" val="0"/>
                 <prop id="6" list="0" val="0"/>
