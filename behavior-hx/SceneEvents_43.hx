@@ -83,6 +83,7 @@ propertyChanged("_CurrentNev", _CurrentNev);
             getActor(12).disableBehavior("Displays Popup PM");
             _LovelyKey.setY(240);
             _LovelyKey.fadeTo(100 / 100, 1, Linear.easeNone);
+            getActor(11).setAnimation("" + ("" + "closed"));
 }
 
         else
@@ -96,6 +97,7 @@ propertyChanged("_CurrentNev", _CurrentNev);
             getActor(9).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
             getActor(8).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
             getActor(12).enableBehavior("Displays Popup PM");
+            getActor(11).setAnimation("" + ("" + "open"));
             if(_LovelyKey.isAlive())
 {
                 getActor(7).setY(174);

@@ -3,10 +3,20 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <custom-261 comment="false" x="26" y="40">
+                <print comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="FLICKER OUT: "/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <actor comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </actor>
+                        </tostring>
+                    </str-combine>
+                </print>
+                <custom-261 comment="false" x="26" y="83">
                     <ACTOR eid="this" id="0"/>
                 </custom-261>
-                <set-val-151-5 comment="false" x="26" y="67">
+                <set-val-151-5 comment="false" x="26" y="110">
                     <div comment="false" id="0" x="0" y="0">
                         <get-val-151-1 comment="false" id="0" x="0" y="0"/>
                         <times comment="false" id="1" x="0" y="0">
@@ -15,14 +25,14 @@
                         </times>
                     </div>
                 </set-val-151-5>
-                <set-val-151-2 comment="false" x="26" y="102">
+                <set-val-151-2 comment="false" x="26" y="145">
                     <get-val-151-5 comment="false" id="0" x="0" y="0"/>
                 </set-val-151-2>
-                <repeat comment="false" x="26" y="127">
+                <repeat comment="false" x="26" y="170">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="152">
+                        <dolater comment="false" x="37" y="195">
                             <group eventID="1" id="-1">
-                                <toggle-image comment="false" x="48" y="184">
+                                <toggle-image comment="false" x="48" y="227">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                 </toggle-image>
@@ -30,14 +40,14 @@
                             <get-val-151-2 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <incdec comment="false" x="37" y="223">
+                        <incdec comment="false" x="37" y="266">
                             <int id="0" val="2"/>
                             <int id="1" val="0"/>
                             <get-val-151-5 comment="false" id="2" x="0" y="0"/>
                         </incdec>
-                        <dolater comment="false" x="37" y="255">
+                        <dolater comment="false" x="37" y="298">
                             <group eventID="1" id="-1">
-                                <toggle-image comment="false" x="48" y="287">
+                                <toggle-image comment="false" x="48" y="330">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </toggle-image>
@@ -45,7 +55,7 @@
                             <get-val-151-2 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <incdec comment="false" x="37" y="326">
+                        <incdec comment="false" x="37" y="369">
                             <int id="0" val="2"/>
                             <int id="1" val="0"/>
                             <get-val-151-5 comment="false" id="2" x="0" y="0"/>
@@ -53,14 +63,14 @@
                     </group>
                     <get-val-151-3 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <dolater comment="false" x="26" y="370">
+                <dolater comment="false" x="26" y="413">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="402">
+                        <die comment="false" x="37" y="445">
                             <ACTOR eid="this" id="0"/>
                         </die>
-                        <if comment="false" x="37" y="429">
+                        <if comment="false" x="37" y="472">
                             <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="462">
+                                <say comment="false" x="48" y="505">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Reload On Death PM"/>
                                     <int id="2" val="Reload"/>

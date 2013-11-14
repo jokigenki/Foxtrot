@@ -62,6 +62,7 @@ public var _KillY:Float;
 public var _KillForce:Float;
     public function _customEvent_Killed():Void
 {
+        trace("" + (("" + "FLICKER OUT: ") + ("" + ("" + actor))));
         actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
         _StepTime = asNumber((_TotalTime / (_NumberOfFlickers * 2)));
 propertyChanged("_StepTime", _StepTime);

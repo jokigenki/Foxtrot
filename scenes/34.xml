@@ -15,7 +15,44 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="17" c="false" group="3" id="540" name="Laser Beamer Right 17" sx="1.0" sy="1.0" x="272" y="144" z="4"/>
+        <actor a="0.0" aid="17" c="true" group="3" id="540" name="Laser Beamer Right 17" sx="1.0" sy="1.0" x="272" y="144" z="4">
+            <snippets>
+                <s enabled="true" id="288"/>
+                <s enabled="true" id="253">
+                    <prop id="4" list="0" val="true"/>
+                    <prop id="5" list="0" val="16"/>
+                    <prop id="6" list="0" val="8"/>
+                    <prop id="7" list="0" val=""/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="5"/>
+                    <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val="0"/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="13" list="0" val="2"/>
+                    <prop id="14" list="0" val="0"/>
+                    <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="16" list="0" val="0"/>
+                    <prop id="19" list="0" val="255,0,255,255"/>
+                    <prop id="18" list="1" val="">
+                        <text order="0" value="256|0|0"/>
+                        <text order="1" value="224|0|0"/>
+                        <text order="2" value="192|0|0"/>
+                        <text order="3" value="160|0|0"/>
+                    </prop>
+                    <prop id="21" list="0" val="0"/>
+                    <prop id="20" list="0" val="true"/>
+                    <prop id="23" list="0" val="0"/>
+                    <prop id="22" list="0" val="0"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Laser Beamer PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
         <actor a="0.0" aid="16" c="true" group="2" id="213" name="Door BLUE 16" sx="1.0" sy="1.0" x="272" y="176" z="4">
             <snippets>
                 <s enabled="true" id="304">

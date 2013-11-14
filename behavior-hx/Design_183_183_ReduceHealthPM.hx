@@ -65,7 +65,6 @@ propertyChanged("_CurrentHealth", _CurrentHealth);
         shoutToScene("_customEvent_" + _ReducedHealthEvent);
         if((_CurrentHealth <= 0))
 {
-            trace("" + "KILLED?");
             if(actor.hasBehavior(_KillBehaviour))
 {
                 actor.say(_KillBehaviour, "_customEvent_" + "Killed");
