@@ -3106,6 +3106,8 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Ready To Remove?" hidden="true" id="35" name="_ReadyToRemove" order="34"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Movement Y" hidden="true" id="32" name="_MovementY" order="31"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Reactivate After Time" hidden="false" id="33" name="_ReactivateAfterTime" order="32"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Last Piece Was Bend?" hidden="true" id="36" name="_LastPieceWasBend" order="35"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Flipped?" hidden="true" id="37" name="_IsFlipped" order="36"/>
         <blocks>
             <receiver blockID="666" id="1"/>
             <receiver blockID="667" id="2"/>
@@ -3508,6 +3510,10 @@
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_739" classname="scripts.ActorEvents_739" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="385" language="" name="ActorEvents_739" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_752" classname="scripts.ActorEvents_752" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="390" language="" name="ActorEvents_752" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
