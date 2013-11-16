@@ -42,13 +42,13 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_4 extends SceneScript
+class ActorEvents_9 extends ActorScript
 {          	
 	
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
+		super(actor, engine);	
 		
 	}
 	

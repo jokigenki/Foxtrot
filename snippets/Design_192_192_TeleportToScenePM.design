@@ -5,36 +5,49 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <scene-change-new comment="false" x="37" y="65">
-                            <scenebyname comment="false" id="0" x="0" y="0">
-                                <get-game-val-15 comment="false" id="0" x="0" y="0"/>
-                            </scenebyname>
-                            <int id="1" val="0"/>
-                            <int id="2" val="0.5"/>
-                            <int id="3" val="0"/>
-                            <int id="4" val="0.5"/>
-                        </scene-change-new>
+                        <set-game-val-20 comment="false" x="37" y="65">
+                            <get-game-val-15 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-20>
                     </group>
                     <get-game-val-10 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="114">
+                <else comment="false" x="26" y="102">
                     <group eventID="1" id="-1">
-                        <scene-change-new comment="false" x="37" y="134">
-                            <get-val-192-1 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="0.5"/>
-                            <int id="3" val="0"/>
-                            <int id="4" val="0.5"/>
-                        </scene-change-new>
+                        <set-game-val-20 comment="false" x="37" y="122">
+                            <get-val-192-2 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-20>
                     </group>
                 </else>
-                <scene-say comment="false" x="26" y="178">
+                <scene-say comment="false" x="26" y="159">
                     <int id="0" val="Speed Run Timer PM"/>
                     <int id="1" val="TimerReset"/>
                 </scene-say>
+                <scene-shout comment="false" x="26" y="179">
+                    <int id="0" val="SwitchScene"/>
+                </scene-shout>
             </group>
             <int id="0" val="Teleport"/>
         </event-custom>
+    </group>
+    <group eventID="1" id="1">
+        <scene-change-new comment="false" x="67" y="342">
+            <SCENE id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="0.5"/>
+            <int id="3" val="0"/>
+            <int id="4" val="0.5"/>
+        </scene-change-new>
+    </group>
+    <group eventID="1" id="2">
+        <scene-change-new comment="false" x="47" y="403">
+            <scenebyname comment="false" id="0" x="0" y="0">
+                <int id="0" val=""/>
+            </scenebyname>
+            <int id="1" val="0"/>
+            <int id="2" val="0.5"/>
+            <int id="3" val="0"/>
+            <int id="4" val="0.5"/>
+        </scene-change-new>
     </group>
     <group eventID="1" id="-1"/>
 </groups>
