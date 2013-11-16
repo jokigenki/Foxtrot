@@ -394,7 +394,7 @@
             <poly data="4,0,0,32,0,32,48,0,48" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <music atlasID="4" desc="" id="627" loop="true" name="Boss Theme Fast" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="4" desc="" id="627" loop="true" name="Boss Theme Fast" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <music atlasID="4" desc="" id="626" loop="true" name="Boss Theme Normal" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <custom-block blocktag="custom-64" blocktype="NORMAL" code="Number((scripts.Design_27_27_ActorExtrasPM.CalculateDistance(~,~)))" desc="Calculates distance between the centre points of 2 actors." global="true" gui="distance between %0 and %1" id="64" message="CalculateDistance" name="CalculateDistance" oid="-1" return="NUMBER" shared="false" snippetID="27">
         <blank name="First Actor" order="0" type="ACTOR"/>
@@ -855,7 +855,7 @@
             <poly data="4,0,0,30,0,30,30,0,30" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="4" bodytype="2" continuous="true" desc="" eventsnippetid="106" fixedrot="true" fric="0.1" gid="14" id="156" ignoreg="false" inertia="5.0" ldamp="0.0" lw="false" mass="1.0" name="Crate" oid="-1" pausable="true" rest="0.17" shared="false" sprite="157" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="4" bodytype="2" continuous="true" desc="" eventsnippetid="106" fixedrot="true" fric="0.1" gid="14" id="156" ignoreg="false" inertia="5.0" ldamp="0.0" lw="false" mass="0.8" name="Crate" oid="-1" pausable="true" rest="0.17" shared="false" sprite="157" static="false">
         <snippets>
             <s enabled="true" id="171">
                 <prop id="4" list="0" val="262"/>
@@ -1777,7 +1777,7 @@
             <poly data="4,0,0,30,0,30,30,0,30" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="2" bodytype="2" continuous="true" desc="" eventsnippetid="307" fixedrot="true" fric="0.1" gid="14" id="581" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Crate" oid="-1" pausable="true" rest="0.17" shared="false" sprite="582" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="2" bodytype="2" continuous="true" desc="" eventsnippetid="307" fixedrot="true" fric="0.1" gid="14" id="581" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="0.8" name="Egg Crate" oid="-1" pausable="true" rest="0.17" shared="false" sprite="582" static="false">
         <snippets>
             <s enabled="true" id="171">
                 <prop id="17" list="0" val="262"/>
@@ -2133,6 +2133,7 @@
         <tile collision="1" data="" durations="100" frames="14" id="14" order="-1"/>
         <tile collision="1" data="" durations="100" frames="15" id="15" order="-1"/>
     </tileset>
+    <music atlasID="1" desc="" id="756" loop="true" name="Factory Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <custom-block blocktag="custom-633" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;FadeOutCurrent&quot;, ~,~,~);" desc="" global="false" gui="Fade out current music over %0 fade in %1 over %2" id="633" message="FadeOutCurrent" name="FadeOutCurrent" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Fade Out Time" order="0" type="NUMBER"/>
         <blank name="Music" order="1" type="SOUND"/>
@@ -2952,6 +2953,8 @@
                 <prop id="35" list="0" val="false"/>
                 <prop id="32" list="0" val="0"/>
                 <prop id="33" list="0" val="0"/>
+                <prop id="36" list="0" val="false"/>
+                <prop id="37" list="0" val="false"/>
             </s>
         </snippets>
     </actor>
@@ -3676,7 +3679,7 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="74">
-                <prop id="3" list="0" val="90"/>
+                <prop id="3" list="0" val="95"/>
                 <prop id="4" list="0" val="25.0"/>
                 <prop id="5" list="0" val="false"/>
                 <prop id="6" list="0" val="walk-r"/>
@@ -5842,16 +5845,16 @@
             <poly data="4,28,28,42,28,42,48,28,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="64" id="1" loop="true" name="idle-r" numframes="1" originx="24" originy="32" sync="false" width="48">
-            <poly data="4,18,10,38,10,38,64,18,64" density="0.1" fric="0.2" gid="-1000" id="0" name="idle-r" rest="0.0" sensor="false"/>
-            <poly data="4,4,28,18,28,18,48,4,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
+            <poly data="4,20,10,40,10,40,64,20,64" density="0.1" fric="0.2" gid="-1000" id="0" name="idle-r" rest="0.0" sensor="false"/>
+            <poly data="4,6,28,20,28,20,48,6,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="64" id="2" loop="true" name="walk-l" numframes="1" originx="24" originy="32" sync="false" width="48">
+        <anim across="4" down="1" durations="100,100,100,100" height="64" id="2" loop="true" name="walk-l" numframes="4" originx="24" originy="32" sync="false" width="192">
             <poly data="4,8,10,28,10,28,64,8,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk-l" rest="0.0" sensor="false"/>
             <poly data="4,28,28,42,28,42,48,28,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="64" id="3" loop="true" name="walk-r" numframes="1" originx="24" originy="32" sync="false" width="48">
-            <poly data="4,18,10,38,10,38,64,18,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk-r" rest="0.0" sensor="false"/>
-            <poly data="4,4,28,18,28,18,48,4,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
+        <anim across="4" down="1" durations="100,100,100,100" height="64" id="3" loop="true" name="walk-r" numframes="4" originx="24" originy="32" sync="false" width="192">
+            <poly data="4,20,10,40,10,40,64,20,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk-r" rest="0.0" sensor="false"/>
+            <poly data="4,6,28,20,28,20,48,6,48" density="0.1" fric="0.2" gid="-1000" id="1" name="Box" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="2" bodytype="2" continuous="true" desc="" eventsnippetid="180" fixedrot="true" fric="0.2" gid="2" id="271" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Rooster Explode" oid="-1" pausable="true" rest="0.0" shared="false" sprite="272" static="false">

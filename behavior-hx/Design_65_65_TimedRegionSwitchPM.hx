@@ -229,7 +229,7 @@ if(wrapper.enabled && sameAsAny(getActorGroup(14),a.getType(),a.getGroup())){
         actor.say("Timed Region Switch PM", "_customBlock_EnterSwitch");
 }
 });
-    addActorEntersRegionListener(_SwitchRegion, function(a:Actor, list:Array<Dynamic>):Void  {
+    addActorExitsRegionListener(_SwitchRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorGroup(14),a.getType(),a.getGroup())){
         actor.say("Timed Region Switch PM", "_customBlock_ExitSwitch");
 }
