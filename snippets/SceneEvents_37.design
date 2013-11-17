@@ -20,14 +20,9 @@
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <print comment="false" x="26" y="40">
-                    <actor comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="7" id="0"/>
-                    </actor>
-                </print>
-                <if comment="false" x="26" y="73">
+                <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <say comment="false" x="37" y="111">
+                        <say comment="false" x="37" y="78">
                             <ACTOR eid="7" id="0"/>
                             <int id="1" val="Goose Head Maker PM"/>
                             <int id="2" val="Activate"/>
@@ -42,9 +37,9 @@
                         <int id="1" val="2"/>
                     </eq>
                 </if>
-                <if comment="false" x="26" y="150">
+                <if comment="false" x="26" y="117">
                     <group eventID="2" id="-1">
-                        <say comment="false" x="37" y="188">
+                        <say comment="false" x="37" y="155">
                             <ACTOR eid="8" id="0"/>
                             <int id="1" val="Goose Head Maker PM"/>
                             <int id="2" val="Activate"/>
@@ -56,6 +51,28 @@
                             <int id="1" val="Reduce Health PM"/>
                             <int id="2" val="_CurrentHealth"/>
                         </get-attribute>
+                        <int id="1" val="1"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="194">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="237">
+                            <group eventID="3" id="-1">
+                                <custom-632 comment="false" x="48" y="262">
+                                    <SOUND eid="627" id="0"/>
+                                </custom-632>
+                            </group>
+                            <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <as-number comment="false" id="0" x="0" y="0">
+                            <get-attribute comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="5" id="0"/>
+                                <int id="1" val="Reduce Health PM"/>
+                                <int id="2" val="_CurrentHealth"/>
+                            </get-attribute>
+                        </as-number>
                         <int id="1" val="1"/>
                     </eq>
                 </if>
@@ -384,6 +401,68 @@
                 <die comment="false" x="26" y="121">
                     <ACTOR eid="8" id="0"/>
                 </die>
+                <create-actor3 comment="false" x="26" y="148">
+                    <ACTORTYPE eid="196" id="0"/>
+                    <int id="1" val="512"/>
+                    <int id="2" val="320"/>
+                    <int id="3" val="2"/>
+                </create-actor3>
+                <fadeInOut comment="false" x="26" y="175">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="2"/>
+                    <int id="3" val="9"/>
+                </fadeInOut>
+                <say comment="false" x="26" y="202">
+                    <ACTOR eid="14" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Activate"/>
+                </say>
+                <if comment="false" x="26" y="229">
+                    <group eventID="2" id="-1">
+                        <set-val-362-7 comment="false" x="37" y="254">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-362-7>
+                        <for-each comment="false" x="37" y="279">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="304">
+                                    <group eventID="1" id="-1">
+                                        <print comment="false" x="59" y="339">
+                                            <str-combine comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="Missing: "/>
+                                                <for-each-item comment="false" id="1" x="0" y="0"/>
+                                            </str-combine>
+                                        </print>
+                                        <set-val-362-7 comment="false" x="59" y="369">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-362-7>
+                                        <break comment="false" x="59" y="394"/>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <contains-item comment="false" id="0" x="0" y="0">
+                                            <get-game-val-11 comment="false" id="0" x="0" y="0"/>
+                                            <for-each-item comment="false" id="1" x="0" y="0"/>
+                                        </contains-item>
+                                    </not>
+                                </if>
+                            </group>
+                            <get-game-val-13 comment="false" id="0" x="0" y="0"/>
+                        </for-each>
+                        <if comment="false" x="37" y="438">
+                            <group eventID="1" id="-1">
+                                <print comment="false" x="48" y="463">
+                                    <int id="0" val="SPEED RUN COMPLETE!"/>
+                                </print>
+                                <scene-say comment="false" x="48" y="483">
+                                    <int id="0" val="Speed Run Timer PM"/>
+                                    <int id="1" val="CompleteSpeedRun"/>
+                                </scene-say>
+                            </group>
+                            <get-val-362-7 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="GooseTankKilled"/>
         </event-custom>

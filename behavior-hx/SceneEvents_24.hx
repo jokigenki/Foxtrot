@@ -140,6 +140,11 @@ if(wrapper.enabled && sameAsAny(getActorType(360),a.getType(),a.getGroup())){
         recycleActor(a);
 }
 });
+    addWhenTypeGroupKilledListener(getActorType(156), function(eventActor:Actor, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        getActor(52).say("Single Use Region Switch PM", "_customBlock_ResetSwitch");
+}
+});
 
 	}	      	
 	

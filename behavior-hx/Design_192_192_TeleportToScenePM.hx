@@ -42,65 +42,34 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_17 extends SceneScript
+class Design_192_192_TeleportToScenePM extends ActorScript
 {          	
 	
-public var _ExitName:String;
-
-public var _RunComplete:Bool;
-    public function _customEvent_RoosterKilled():Void
+public var _DestinationSceneName:String;
+    public function _customEvent_Teleport():Void
 {
-        createRecycledActor(getActorType(196), 520, 256, Script.BACK);
-        getLastCreatedActor().fadeTo(1, 2, Quad.easeOut);
-        getActor(13).say("Activate On Event PM", "_customEvent_" + "Activate");
         if(getGameAttribute("Speed Run In Progress"))
 {
-            _RunComplete = true;
-propertyChanged("_RunComplete", _RunComplete);
-            for(item in cast(getGameAttribute("Speed Run Collectables"), Array<Dynamic>))
+            setGameAttribute("Last Destination", getGameAttribute("Speed Run Start"));
+}
+
+        else
 {
-                if(!(Utils.contains(getGameAttribute("Collected Speed Run Items"), item)))
-{
-                    trace("" + (("" + "Missing: ") + ("" + item)));
-                    _RunComplete = false;
-propertyChanged("_RunComplete", _RunComplete);
-                    break;
+            setGameAttribute("Last Destination", _DestinationSceneName);
 }
 
-}
-
-            if(_RunComplete)
-{
-                trace("" + "SPEED RUN COMPLETE!");
-                sayToScene("Speed Run Timer PM", "_customEvent_" + "CompleteSpeedRun");
-}
-
-}
-
-}
-
-    public function _customEvent_ReducedHealth():Void
-{
-        if((asNumber(getActor(8).getValue("Reduce Health PM", "_CurrentHealth")) == 1))
-{
-            if(getGameAttribute("Is Music On?"))
-{
-                sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(627)]);
-}
-
-}
-
+        sayToScene("Speed Run Timer PM", "_customEvent_" + "TimerReset");
+        shoutToScene("_customEvent_" + "SwitchScene");
 }
 
 
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-nameMap.set("Run Complete?", "_RunComplete");
-_RunComplete = false;
+		super(actor, engine);	
+		nameMap.set("Destination Scene Name", "_DestinationSceneName");
+_DestinationSceneName = "";
+nameMap.set("Actor", "actor");
 
 	}
 	
