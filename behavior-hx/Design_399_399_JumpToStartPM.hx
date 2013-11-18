@@ -42,42 +42,32 @@ import com.eclecticdesignstudio.motion.easing.Sine;
 
 
 
-class SceneEvents_46 extends SceneScript
+class Design_399_399_JumpToStartPM extends ActorScript
 {          	
 	
-public var _ExitName:String;
-
-public var _EggBall:Actor;
-    public function _customEvent_JumpStart():Void
-{
-        _EggBall.disableBehavior("Match Horizontal Movement PM");
-}
-
+public var _Target:Actor;
 
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-nameMap.set("Egg Ball", "_EggBall");
+		super(actor, engine);	
+		nameMap.set("Target", "_Target");
+nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_LockDoorActor(getActor(4));
-                    _EggBall = getActor(6);
-propertyChanged("_EggBall", _EggBall);
-}, null);
-    addWhenTypeGroupKilledListener(getActorType(757), function(eventActor:Actor, list:Array<Dynamic>):Void {
+		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        createRecycledActor(getActorType(757), getActor(3).getX(), 230, Script.FRONT);
-        getLastCreatedActor().setValue("Match Horizontal Movement PM", "_Target", getActor(3));
-        getLastCreatedActor().setValue("Jump To Start PM", "_Target", getActor(3));
-        _EggBall = getLastCreatedActor();
-propertyChanged("_EggBall", _EggBall);
+        if(((hasValue(_Target) != false) && cast((_Target.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool)))
+{
+            trace("" + "activate");
+            actor.shout("_customEvent_" + "Activate");
+            shoutToScene("_customEvent_" + "JumpStart");
+            disableThisBehavior();
+}
+
 }
 });
 

@@ -49,14 +49,28 @@ public var _SecondstilDeath:Float;
     public function _customEvent_Killed():Void
 {
         actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
-        runLater(1000 * _SecondstilDeath, function(timeTask:TimedTask):Void {
-                    recycleActor(actor);
-                    if(actor.isBehaviorEnabled("Reload On Death PM"))
+        if((_SecondstilDeath > 0))
 {
-                        actor.say("Reload On Death PM", "_customEvent_" + "Reload");
+            runLater(1000 * _SecondstilDeath, function(timeTask:TimedTask):Void {
+                        recycleActor(actor);
+                        if(actor.isBehaviorEnabled("Reload On Death PM"))
+{
+                            actor.say("Reload On Death PM", "_customEvent_" + "Reload");
 }
 
 }, actor);
+}
+
+        else
+{
+            recycleActor(actor);
+            if(actor.isBehaviorEnabled("Reload On Death PM"))
+{
+                actor.say("Reload On Death PM", "_customEvent_" + "Reload");
+}
+
+}
+
 }
 
 

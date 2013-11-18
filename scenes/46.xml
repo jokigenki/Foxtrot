@@ -15,8 +15,251 @@
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
-        <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="96" y="304" z="2"/>
-        <actor a="0.0" aid="4" c="true" group="2" id="225" name="Door Orange2 4" sx="1.0" sy="1.0" x="96" y="304" z="4">
+        <actor a="0.0" aid="3" c="true" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="304" y="288" z="2">
+            <snippets>
+                <s enabled="true" id="69">
+                    <prop id="1" list="0" val="left"/>
+                    <prop id="2" list="0" val="right"/>
+                    <prop id="3" list="0" val="No Control"/>
+                    <prop id="4" list="0" val="down"/>
+                    <prop id="5" list="0" val="up"/>
+                    <prop id="6" list="0" val="No Control"/>
+                    <prop id="7" list="0" val="action2"/>
+                    <prop id="8" list="0" val="No Control"/>
+                    <prop id="9" list="0" val="No Control"/>
+                    <prop id="10" list="0" val="No Control"/>
+                    <prop id="11" list="0" val="up"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="139">
+                    <prop id="1" list="0" val="Bump Out PM"/>
+                    <prop id="2" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="138">
+                    <prop id="1" list="0" val="2.0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="336">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="74">
+                    <prop id="3" list="0" val="105"/>
+                    <prop id="4" list="0" val="35.0"/>
+                    <prop id="5" list="0" val="false"/>
+                    <prop id="6" list="0" val="walk-r"/>
+                    <prop id="7" list="0" val="walk-l"/>
+                    <prop id="8" list="0" val="idle-r"/>
+                    <prop id="9" list="0" val="idle-l"/>
+                    <prop id="10" list="0" val="false"/>
+                    <prop id="11" list="1" val=""/>
+                    <prop id="12" list="0" val="Walking"/>
+                    <prop id="13" list="0" val="false"/>
+                    <prop id="14" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="14"/>
+                <s enabled="true" id="153">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="256">
+                    <prop id="1" list="0" val="skele-r"/>
+                    <prop id="2" list="0" val="skele-l"/>
+                    <prop id="3" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="257">
+                    <prop id="1" list="0" val="Burn Out PM"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="215">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="147">
+                    <prop id="2" list="0" val="dead-l"/>
+                    <prop id="3" list="0" val="dead-r"/>
+                    <prop id="4" list="0" val="dead-r"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="20"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="29">
+                    <prop id="7" list="0" val="Bump Out PM"/>
+                    <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val="0"/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="false"/>
+                    <prop id="17" list="0" val="false"/>
+                    <prop id="16" list="0" val="false"/>
+                    <prop id="19" list="0" val="0"/>
+                    <prop id="18" list="0" val="16"/>
+                    <prop id="20" list="0" val="false"/>
+                </s>
+                <s enabled="true" id="148">
+                    <prop id="1" list="0" val="true"/>
+                    <prop id="2" list="0" val="true"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="4" list="0" val="true"/>
+                    <prop id="5" list="1" val="">
+                        <text order="0" value="Rat"/>
+                    </prop>
+                    <prop id="6" list="0" val="Bump Out PM"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="151">
+                    <prop id="1" list="0" val="0.5"/>
+                    <prop id="2" list="0" val="0"/>
+                    <prop id="3" list="0" val="5"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="0"/>
+                    <prop id="6" list="0" val="0"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="12" list="0" val="0.0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="372">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="burn-r"/>
+                    <prop id="3" list="0" val="burn-l"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="169">
+                    <prop id="1" list="1" val="">
+                        <text order="0" value="Player Controls PM"/>
+                        <text order="1" value="Walking PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="38">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="42">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val=""/>
+                    <prop id="3" list="0" val="idle-r"/>
+                    <prop id="4" list="0" val="idle-l"/>
+                    <prop id="5" list="1" val="">
+                        <text order="0" value="Dead"/>
+                        <text order="1" value="Ground Pounding"/>
+                        <text order="2" value="Ducking"/>
+                        <text order="3" value="Wall Sliding"/>
+                        <text order="4" value="Falling"/>
+                        <text order="5" value="Wall Jumping"/>
+                        <text order="6" value="Air Jumping"/>
+                        <text order="7" value="Jumping"/>
+                        <text order="8" value="Swimming"/>
+                        <text order="9" value="Running"/>
+                        <text order="10" value="Walking"/>
+                    </prop>
+                    <prop id="6" list="0" val="false"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="43">
+                    <prop id="51" list="1" val=""/>
+                    <prop id="49" list="1" val=""/>
+                    <prop id="52" list="1" val=""/>
+                    <prop id="47" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="46">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="2" list="0" val="false"/>
+                    <prop id="3" list="0" val="fall-r"/>
+                    <prop id="4" list="0" val="fall-l"/>
+                    <prop id="5" list="0" val="0"/>
+                    <prop id="6" list="0" val="Falling"/>
+                    <prop id="9" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="317">
+                    <prop id="2" list="0" val="Jumping"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="13" list="0" val="false"/>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="15" list="0" val="No Sound"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="jump-r"/>
+                    <prop id="16" list="0" val="jump-l"/>
+                    <prop id="19" list="0" val="5"/>
+                    <prop id="18" list="0" val="5"/>
+                    <prop id="21" list="0" val="0"/>
+                    <prop id="20" list="0" val="0.75"/>
+                    <prop id="22" list="0" val="0.075"/>
+                </s>
+                <s enabled="true" id="47">
+                    <prop id="3" list="0" val="0.7"/>
+                    <prop id="4" list="0" val="0.999"/>
+                    <prop id="5" list="0" val="0.975"/>
+                    <prop id="6" list="0" val="0.975"/>
+                    <prop id="7" list="0" val="0.9"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="224">
+                    <prop id="1" list="0" val="0.8"/>
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="0"/>
+                    <prop id="6" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="50">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="false"/>
+                    <prop id="8" list="0" val="0.075"/>
+                    <prop id="12" list="0" val="jump-r"/>
+                    <prop id="13" list="0" val="jump-l"/>
+                    <prop id="14" list="0" val="false"/>
+                    <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="17" list="0" val="0"/>
+                    <prop id="16" list="0" val="0"/>
+                    <prop id="19" list="0" val="No Sound"/>
+                    <prop id="18" list="0" val="0.75"/>
+                    <prop id="21" list="0" val="Jumping"/>
+                    <prop id="20" list="0" val="29.0"/>
+                    <prop id="23" list="0" val="true"/>
+                    <prop id="22" list="0" val="30"/>
+                    <prop id="24" list="0" val="50"/>
+                </s>
+                <s enabled="true" id="48">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="false"/>
+                    <prop id="3" list="1" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="185">
+                    <prop id="1" list="0" val="Flicker Out PM"/>
+                    <prop id="2" list="0" val="0"/>
+                    <prop id="3" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="353">
+                    <prop id="2" list="0" val="0"/>
+                    <prop id="3" list="0" val="0"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="24"/>
+                    <prop id="6" list="0" val="0"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="8" list="1" val=""/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val="true"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="4" c="true" group="2" id="225" name="Door Orange2 4" sx="1.0" sy="1.0" x="304" y="288" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="0.0"/>
@@ -60,16 +303,440 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="5" c="true" group="5" id="457" name="Small Lift 5" sx="1.0" sy="1.0" x="96" y="288" z="4">
+        <actor a="0.0" aid="6" c="true" group="3" id="757" name="Egg Ball 6" sx="1.0" sy="1.0" x="312" y="230" z="4">
             <snippets>
-                <s enabled="true" id="343"/>
                 <s enabled="true" id="394">
                     <prop id="1" list="0" val="3"/>
                     <prop id="2" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="399">
+                    <prop id="1" list="0" val="3"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="397">
+                    <prop id="1" list="0" val="-1"/>
+                    <prop id="2" list="0" val="1"/>
+                    <prop id="3" list="0" val="-3"/>
+                    <prop id="4" list="0" val="-3"/>
+                    <prop id="5" list="0" val="true"/>
+                    <prop id="6" list="0" val="0"/>
+                    <prop id="7" list="0" val="0"/>
+                    <prop id="8" list="0" val="0"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="2"/>
+                    <prop id="11" list="0" val="3"/>
+                    <prop id="12" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="396"/>
+                <s enabled="true" id="177">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
             </snippets>
         </actor>
+        <actor a="0.0" aid="7" c="true" group="6" id="267" name="Horizontal Lift 7" sx="1.0" sy="1.0" x="288" y="256" z="4">
+            <snippets>
+                <s enabled="true" id="394">
+                    <prop id="1" list="0" val="3"/>
+                    <prop id="2" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="178"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="8" c="false" group="3" id="759" name="Mini Crate 8" sx="1.0" sy="1.0" x="96" y="96" z="4"/>
+        <actor a="0.0" aid="9" c="false" group="3" id="759" name="Mini Crate 9" sx="1.0" sy="1.0" x="112" y="96" z="4"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="759" name="Mini Crate 10" sx="1.0" sy="1.0" x="128" y="96" z="4"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="759" name="Mini Crate 11" sx="1.0" sy="1.0" x="144" y="96" z="4"/>
+        <actor a="0.0" aid="12" c="false" group="3" id="759" name="Mini Crate 12" sx="1.0" sy="1.0" x="160" y="96" z="4"/>
+        <actor a="0.0" aid="13" c="false" group="3" id="759" name="Mini Crate 13" sx="1.0" sy="1.0" x="176" y="96" z="4"/>
+        <actor a="0.0" aid="14" c="false" group="3" id="759" name="Mini Crate 14" sx="1.0" sy="1.0" x="192" y="96" z="4"/>
+        <actor a="0.0" aid="15" c="false" group="3" id="759" name="Mini Crate 15" sx="1.0" sy="1.0" x="208" y="96" z="4"/>
+        <actor a="0.0" aid="17" c="false" group="3" id="759" name="Mini Crate 17" sx="1.0" sy="1.0" x="240" y="96" z="4"/>
+        <actor a="0.0" aid="16" c="false" group="3" id="759" name="Mini Crate 16" sx="1.0" sy="1.0" x="224" y="96" z="4"/>
+        <actor a="0.0" aid="19" c="false" group="3" id="759" name="Mini Crate 19" sx="1.0" sy="1.0" x="272" y="96" z="4"/>
+        <actor a="0.0" aid="18" c="false" group="3" id="759" name="Mini Crate 18" sx="1.0" sy="1.0" x="256" y="96" z="4"/>
+        <actor a="0.0" aid="21" c="false" group="3" id="759" name="Mini Crate 21" sx="1.0" sy="1.0" x="304" y="96" z="4"/>
+        <actor a="0.0" aid="20" c="false" group="3" id="759" name="Mini Crate 20" sx="1.0" sy="1.0" x="288" y="96" z="4"/>
+        <actor a="0.0" aid="23" c="false" group="3" id="759" name="Mini Crate 23" sx="1.0" sy="1.0" x="336" y="96" z="4"/>
+        <actor a="0.0" aid="22" c="false" group="3" id="759" name="Mini Crate 22" sx="1.0" sy="1.0" x="320" y="96" z="4"/>
+        <actor a="0.0" aid="25" c="false" group="3" id="759" name="Mini Crate 25" sx="1.0" sy="1.0" x="368" y="96" z="4"/>
+        <actor a="0.0" aid="24" c="false" group="3" id="759" name="Mini Crate 24" sx="1.0" sy="1.0" x="352" y="96" z="4"/>
+        <actor a="0.0" aid="27" c="false" group="3" id="759" name="Mini Crate 27" sx="1.0" sy="1.0" x="400" y="96" z="4"/>
+        <actor a="0.0" aid="26" c="false" group="3" id="759" name="Mini Crate 26" sx="1.0" sy="1.0" x="384" y="96" z="4"/>
+        <actor a="0.0" aid="29" c="false" group="3" id="759" name="Mini Crate 29" sx="1.0" sy="1.0" x="432" y="96" z="4"/>
+        <actor a="0.0" aid="28" c="false" group="3" id="759" name="Mini Crate 28" sx="1.0" sy="1.0" x="416" y="96" z="4"/>
+        <actor a="0.0" aid="31" c="false" group="3" id="759" name="Mini Crate 31" sx="1.0" sy="1.0" x="464" y="96" z="4"/>
+        <actor a="0.0" aid="30" c="false" group="3" id="759" name="Mini Crate 30" sx="1.0" sy="1.0" x="448" y="96" z="4"/>
+        <actor a="0.0" aid="34" c="false" group="3" id="759" name="Mini Crate 34" sx="1.0" sy="1.0" x="512" y="96" z="4"/>
+        <actor a="0.0" aid="35" c="false" group="3" id="759" name="Mini Crate 35" sx="1.0" sy="1.0" x="528" y="96" z="4"/>
+        <actor a="0.0" aid="32" c="false" group="3" id="759" name="Mini Crate 32" sx="1.0" sy="1.0" x="480" y="96" z="4"/>
+        <actor a="0.0" aid="33" c="false" group="3" id="759" name="Mini Crate 33" sx="1.0" sy="1.0" x="496" y="96" z="4"/>
+        <actor a="0.0" aid="38" c="false" group="3" id="759" name="Mini Crate 38" sx="1.0" sy="1.0" x="496" y="112" z="4"/>
+        <actor a="0.0" aid="39" c="false" group="3" id="759" name="Mini Crate 39" sx="1.0" sy="1.0" x="480" y="112" z="4"/>
+        <actor a="0.0" aid="36" c="false" group="3" id="759" name="Mini Crate 36" sx="1.0" sy="1.0" x="528" y="112" z="4"/>
+        <actor a="0.0" aid="37" c="false" group="3" id="759" name="Mini Crate 37" sx="1.0" sy="1.0" x="512" y="112" z="4"/>
+        <actor a="0.0" aid="42" c="false" group="3" id="759" name="Mini Crate 42" sx="1.0" sy="1.0" x="432" y="112" z="4"/>
+        <actor a="0.0" aid="43" c="false" group="3" id="759" name="Mini Crate 43" sx="1.0" sy="1.0" x="416" y="112" z="4"/>
+        <actor a="0.0" aid="40" c="false" group="3" id="759" name="Mini Crate 40" sx="1.0" sy="1.0" x="464" y="112" z="4"/>
+        <actor a="0.0" aid="41" c="false" group="3" id="759" name="Mini Crate 41" sx="1.0" sy="1.0" x="448" y="112" z="4"/>
+        <actor a="0.0" aid="46" c="false" group="3" id="759" name="Mini Crate 46" sx="1.0" sy="1.0" x="368" y="112" z="4"/>
+        <actor a="0.0" aid="47" c="false" group="3" id="759" name="Mini Crate 47" sx="1.0" sy="1.0" x="352" y="112" z="4"/>
+        <actor a="0.0" aid="44" c="false" group="3" id="759" name="Mini Crate 44" sx="1.0" sy="1.0" x="400" y="112" z="4"/>
+        <actor a="0.0" aid="45" c="false" group="3" id="759" name="Mini Crate 45" sx="1.0" sy="1.0" x="384" y="112" z="4"/>
+        <actor a="0.0" aid="51" c="false" group="3" id="759" name="Mini Crate 51" sx="1.0" sy="1.0" x="288" y="112" z="4"/>
+        <actor a="0.0" aid="50" c="false" group="3" id="759" name="Mini Crate 50" sx="1.0" sy="1.0" x="304" y="112" z="4"/>
+        <actor a="0.0" aid="49" c="false" group="3" id="759" name="Mini Crate 49" sx="1.0" sy="1.0" x="320" y="112" z="4"/>
+        <actor a="0.0" aid="48" c="false" group="3" id="759" name="Mini Crate 48" sx="1.0" sy="1.0" x="336" y="112" z="4"/>
+        <actor a="0.0" aid="55" c="false" group="3" id="759" name="Mini Crate 55" sx="1.0" sy="1.0" x="224" y="112" z="4"/>
+        <actor a="0.0" aid="54" c="false" group="3" id="759" name="Mini Crate 54" sx="1.0" sy="1.0" x="240" y="112" z="4"/>
+        <actor a="0.0" aid="53" c="false" group="3" id="759" name="Mini Crate 53" sx="1.0" sy="1.0" x="256" y="112" z="4"/>
+        <actor a="0.0" aid="52" c="false" group="3" id="759" name="Mini Crate 52" sx="1.0" sy="1.0" x="272" y="112" z="4"/>
+        <actor a="0.0" aid="59" c="false" group="3" id="759" name="Mini Crate 59" sx="1.0" sy="1.0" x="160" y="112" z="4"/>
+        <actor a="0.0" aid="58" c="false" group="3" id="759" name="Mini Crate 58" sx="1.0" sy="1.0" x="176" y="112" z="4"/>
+        <actor a="0.0" aid="57" c="false" group="3" id="759" name="Mini Crate 57" sx="1.0" sy="1.0" x="192" y="112" z="4"/>
+        <actor a="0.0" aid="56" c="false" group="3" id="759" name="Mini Crate 56" sx="1.0" sy="1.0" x="208" y="112" z="4"/>
+        <actor a="0.0" aid="63" c="false" group="3" id="759" name="Mini Crate 63" sx="1.0" sy="1.0" x="96" y="112" z="4"/>
+        <actor a="0.0" aid="62" c="false" group="3" id="759" name="Mini Crate 62" sx="1.0" sy="1.0" x="112" y="112" z="4"/>
+        <actor a="0.0" aid="61" c="false" group="3" id="759" name="Mini Crate 61" sx="1.0" sy="1.0" x="128" y="112" z="4"/>
+        <actor a="0.0" aid="60" c="false" group="3" id="759" name="Mini Crate 60" sx="1.0" sy="1.0" x="144" y="112" z="4"/>
+        <actor a="0.0" aid="68" c="false" group="3" id="759" name="Mini Crate 68" sx="1.0" sy="1.0" x="160" y="128" z="4"/>
+        <actor a="0.0" aid="69" c="false" group="3" id="759" name="Mini Crate 69" sx="1.0" sy="1.0" x="176" y="128" z="4"/>
+        <actor a="0.0" aid="70" c="false" group="3" id="759" name="Mini Crate 70" sx="1.0" sy="1.0" x="192" y="128" z="4"/>
+        <actor a="0.0" aid="71" c="false" group="3" id="759" name="Mini Crate 71" sx="1.0" sy="1.0" x="208" y="128" z="4"/>
+        <actor a="0.0" aid="64" c="false" group="3" id="759" name="Mini Crate 64" sx="1.0" sy="1.0" x="96" y="128" z="4"/>
+        <actor a="0.0" aid="65" c="false" group="3" id="759" name="Mini Crate 65" sx="1.0" sy="1.0" x="112" y="128" z="4"/>
+        <actor a="0.0" aid="66" c="false" group="3" id="759" name="Mini Crate 66" sx="1.0" sy="1.0" x="128" y="128" z="4"/>
+        <actor a="0.0" aid="67" c="false" group="3" id="759" name="Mini Crate 67" sx="1.0" sy="1.0" x="144" y="128" z="4"/>
+        <actor a="0.0" aid="76" c="false" group="3" id="759" name="Mini Crate 76" sx="1.0" sy="1.0" x="288" y="128" z="4"/>
+        <actor a="0.0" aid="77" c="false" group="3" id="759" name="Mini Crate 77" sx="1.0" sy="1.0" x="304" y="128" z="4"/>
+        <actor a="0.0" aid="78" c="false" group="3" id="759" name="Mini Crate 78" sx="1.0" sy="1.0" x="320" y="128" z="4"/>
+        <actor a="0.0" aid="79" c="false" group="3" id="759" name="Mini Crate 79" sx="1.0" sy="1.0" x="336" y="128" z="4"/>
+        <actor a="0.0" aid="72" c="false" group="3" id="759" name="Mini Crate 72" sx="1.0" sy="1.0" x="224" y="128" z="4"/>
+        <actor a="0.0" aid="73" c="false" group="3" id="759" name="Mini Crate 73" sx="1.0" sy="1.0" x="240" y="128" z="4"/>
+        <actor a="0.0" aid="74" c="false" group="3" id="759" name="Mini Crate 74" sx="1.0" sy="1.0" x="256" y="128" z="4"/>
+        <actor a="0.0" aid="75" c="false" group="3" id="759" name="Mini Crate 75" sx="1.0" sy="1.0" x="272" y="128" z="4"/>
+        <actor a="0.0" aid="85" c="false" group="3" id="759" name="Mini Crate 85" sx="1.0" sy="1.0" x="432" y="128" z="4"/>
+        <actor a="0.0" aid="84" c="false" group="3" id="759" name="Mini Crate 84" sx="1.0" sy="1.0" x="416" y="128" z="4"/>
+        <actor a="0.0" aid="87" c="false" group="3" id="759" name="Mini Crate 87" sx="1.0" sy="1.0" x="464" y="128" z="4"/>
+        <actor a="0.0" aid="86" c="false" group="3" id="759" name="Mini Crate 86" sx="1.0" sy="1.0" x="448" y="128" z="4"/>
+        <actor a="0.0" aid="81" c="false" group="3" id="759" name="Mini Crate 81" sx="1.0" sy="1.0" x="368" y="128" z="4"/>
+        <actor a="0.0" aid="80" c="false" group="3" id="759" name="Mini Crate 80" sx="1.0" sy="1.0" x="352" y="128" z="4"/>
+        <actor a="0.0" aid="83" c="false" group="3" id="759" name="Mini Crate 83" sx="1.0" sy="1.0" x="400" y="128" z="4"/>
+        <actor a="0.0" aid="82" c="false" group="3" id="759" name="Mini Crate 82" sx="1.0" sy="1.0" x="384" y="128" z="4"/>
+        <actor a="0.0" aid="93" c="false" group="3" id="759" name="Mini Crate 93" sx="1.0" sy="1.0" x="512" y="144" z="4"/>
+        <actor a="0.0" aid="92" c="false" group="3" id="759" name="Mini Crate 92" sx="1.0" sy="1.0" x="528" y="144" z="4"/>
+        <actor a="0.0" aid="95" c="false" group="3" id="759" name="Mini Crate 95" sx="1.0" sy="1.0" x="480" y="144" z="4"/>
+        <actor a="0.0" aid="94" c="false" group="3" id="759" name="Mini Crate 94" sx="1.0" sy="1.0" x="496" y="144" z="4"/>
+        <actor a="0.0" aid="89" c="false" group="3" id="759" name="Mini Crate 89" sx="1.0" sy="1.0" x="496" y="128" z="4"/>
+        <actor a="0.0" aid="88" c="false" group="3" id="759" name="Mini Crate 88" sx="1.0" sy="1.0" x="480" y="128" z="4"/>
+        <actor a="0.0" aid="91" c="false" group="3" id="759" name="Mini Crate 91" sx="1.0" sy="1.0" x="528" y="128" z="4"/>
+        <actor a="0.0" aid="90" c="false" group="3" id="759" name="Mini Crate 90" sx="1.0" sy="1.0" x="512" y="128" z="4"/>
+        <actor a="0.0" aid="102" c="false" group="3" id="759" name="Mini Crate 102" sx="1.0" sy="1.0" x="368" y="144" z="4"/>
+        <actor a="0.0" aid="103" c="false" group="3" id="759" name="Mini Crate 103" sx="1.0" sy="1.0" x="352" y="144" z="4"/>
+        <actor a="0.0" aid="100" c="false" group="3" id="759" name="Mini Crate 100" sx="1.0" sy="1.0" x="400" y="144" z="4"/>
+        <actor a="0.0" aid="101" c="false" group="3" id="759" name="Mini Crate 101" sx="1.0" sy="1.0" x="384" y="144" z="4"/>
+        <actor a="0.0" aid="98" c="false" group="3" id="759" name="Mini Crate 98" sx="1.0" sy="1.0" x="432" y="144" z="4"/>
+        <actor a="0.0" aid="99" c="false" group="3" id="759" name="Mini Crate 99" sx="1.0" sy="1.0" x="416" y="144" z="4"/>
+        <actor a="0.0" aid="96" c="false" group="3" id="759" name="Mini Crate 96" sx="1.0" sy="1.0" x="464" y="144" z="4"/>
+        <actor a="0.0" aid="97" c="false" group="3" id="759" name="Mini Crate 97" sx="1.0" sy="1.0" x="448" y="144" z="4"/>
+        <actor a="0.0" aid="110" c="false" group="3" id="759" name="Mini Crate 110" sx="1.0" sy="1.0" x="208" y="144" z="4"/>
+        <actor a="0.0" aid="111" c="false" group="3" id="759" name="Mini Crate 111" sx="1.0" sy="1.0" x="192" y="144" z="4"/>
+        <actor a="0.0" aid="108" c="false" group="3" id="759" name="Mini Crate 108" sx="1.0" sy="1.0" x="240" y="144" z="4"/>
+        <actor a="0.0" aid="109" c="false" group="3" id="759" name="Mini Crate 109" sx="1.0" sy="1.0" x="224" y="144" z="4"/>
+        <actor a="0.0" aid="106" c="false" group="3" id="759" name="Mini Crate 106" sx="1.0" sy="1.0" x="272" y="144" z="4"/>
+        <actor a="0.0" aid="107" c="false" group="3" id="759" name="Mini Crate 107" sx="1.0" sy="1.0" x="256" y="144" z="4"/>
+        <actor a="0.0" aid="104" c="false" group="3" id="759" name="Mini Crate 104" sx="1.0" sy="1.0" x="336" y="144" z="4"/>
+        <actor a="0.0" aid="105" c="false" group="3" id="759" name="Mini Crate 105" sx="1.0" sy="1.0" x="288" y="144" z="4"/>
+        <actor a="0.0" aid="118" c="false" group="3" id="759" name="Mini Crate 118" sx="1.0" sy="1.0" x="304" y="144" z="4"/>
+        <actor a="0.0" aid="117" c="false" group="3" id="759" name="Mini Crate 117" sx="1.0" sy="1.0" x="96" y="144" z="4"/>
+        <actor a="0.0" aid="116" c="false" group="3" id="759" name="Mini Crate 116" sx="1.0" sy="1.0" x="112" y="144" z="4"/>
+        <actor a="0.0" aid="115" c="false" group="3" id="759" name="Mini Crate 115" sx="1.0" sy="1.0" x="128" y="144" z="4"/>
+        <actor a="0.0" aid="114" c="false" group="3" id="759" name="Mini Crate 114" sx="1.0" sy="1.0" x="144" y="144" z="4"/>
+        <actor a="0.0" aid="113" c="false" group="3" id="759" name="Mini Crate 113" sx="1.0" sy="1.0" x="160" y="144" z="4"/>
+        <actor a="0.0" aid="112" c="false" group="3" id="759" name="Mini Crate 112" sx="1.0" sy="1.0" x="176" y="144" z="4"/>
+        <actor a="0.0" aid="133" c="false" group="3" id="759" name="Mini Crate 133" sx="1.0" sy="1.0" x="320" y="144" z="4"/>
+        <actor a="0.0" aid="152" c="true" group="3" id="759" name="Mini Crate 152" sx="1.0" sy="1.0" x="192" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="199"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="153" c="true" group="3" id="759" name="Mini Crate 153" sx="1.0" sy="1.0" x="208" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="198"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="154" c="true" group="3" id="759" name="Mini Crate 154" sx="1.0" sy="1.0" x="224" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="197"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="155" c="true" group="3" id="759" name="Mini Crate 155" sx="1.0" sy="1.0" x="240" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="196"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="156" c="true" group="3" id="759" name="Mini Crate 156" sx="1.0" sy="1.0" x="256" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="195"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="157" c="true" group="3" id="759" name="Mini Crate 157" sx="1.0" sy="1.0" x="288" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="193"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="158" c="true" group="3" id="759" name="Mini Crate 158" sx="1.0" sy="1.0" x="304" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="192"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="159" c="true" group="3" id="759" name="Mini Crate 159" sx="1.0" sy="1.0" x="320" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="206"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="148" c="true" group="3" id="759" name="Mini Crate 148" sx="1.0" sy="1.0" x="96" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="205"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="149" c="true" group="3" id="759" name="Mini Crate 149" sx="1.0" sy="1.0" x="112" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="204"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="150" c="true" group="3" id="759" name="Mini Crate 150" sx="1.0" sy="1.0" x="144" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="202"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="151" c="true" group="3" id="759" name="Mini Crate 151" sx="1.0" sy="1.0" x="160" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="201"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="171" c="true" group="3" id="759" name="Mini Crate 171" sx="1.0" sy="1.0" x="512" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="183"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="170" c="true" group="3" id="759" name="Mini Crate 170" sx="1.0" sy="1.0" x="496" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="182"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="169" c="true" group="3" id="759" name="Mini Crate 169" sx="1.0" sy="1.0" x="480" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="181"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="168" c="true" group="3" id="759" name="Mini Crate 168" sx="1.0" sy="1.0" x="464" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="180"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="175" c="true" group="3" id="759" name="Mini Crate 175" sx="1.0" sy="1.0" x="272" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="194"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="174" c="true" group="3" id="759" name="Mini Crate 174" sx="1.0" sy="1.0" x="176" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="200"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="173" c="true" group="3" id="759" name="Mini Crate 173" sx="1.0" sy="1.0" x="128" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="203"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="172" c="true" group="3" id="759" name="Mini Crate 172" sx="1.0" sy="1.0" x="528" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="184"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="163" c="true" group="3" id="759" name="Mini Crate 163" sx="1.0" sy="1.0" x="384" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="188"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="162" c="true" group="3" id="759" name="Mini Crate 162" sx="1.0" sy="1.0" x="368" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="189"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="161" c="true" group="3" id="759" name="Mini Crate 161" sx="1.0" sy="1.0" x="352" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="190"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="160" c="true" group="3" id="759" name="Mini Crate 160" sx="1.0" sy="1.0" x="336" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="191"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="167" c="true" group="3" id="759" name="Mini Crate 167" sx="1.0" sy="1.0" x="448" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="179"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="166" c="true" group="3" id="759" name="Mini Crate 166" sx="1.0" sy="1.0" x="432" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="178"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="165" c="false" group="3" id="759" name="Mini Crate 165" sx="1.0" sy="1.0" x="416" y="336" z="1"/>
+        <actor a="0.0" aid="164" c="false" group="3" id="759" name="Mini Crate 164" sx="1.0" sy="1.0" x="400" y="336" z="1"/>
+        <actor a="0.0" aid="184" c="false" group="3" id="759" name="Mini Crate 184" sx="1.0" sy="1.0" x="528" y="336" z="1"/>
+        <actor a="0.0" aid="190" c="false" group="3" id="759" name="Mini Crate 190" sx="1.0" sy="1.0" x="352" y="336" z="1"/>
+        <actor a="0.0" aid="191" c="false" group="3" id="759" name="Mini Crate 191" sx="1.0" sy="1.0" x="336" y="336" z="1"/>
+        <actor a="0.0" aid="188" c="false" group="3" id="759" name="Mini Crate 188" sx="1.0" sy="1.0" x="384" y="336" z="1"/>
+        <actor a="0.0" aid="189" c="false" group="3" id="759" name="Mini Crate 189" sx="1.0" sy="1.0" x="368" y="336" z="1"/>
+        <actor a="0.0" aid="178" c="false" group="3" id="759" name="Mini Crate 178" sx="1.0" sy="1.0" x="432" y="336" z="1"/>
+        <actor a="0.0" aid="179" c="false" group="3" id="759" name="Mini Crate 179" sx="1.0" sy="1.0" x="448" y="336" z="1"/>
+        <actor a="0.0" aid="176" c="true" group="3" id="759" name="Mini Crate 176" sx="1.0" sy="1.0" x="400" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="164"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="177" c="true" group="3" id="759" name="Mini Crate 177" sx="1.0" sy="1.0" x="416" y="320" z="1">
+            <snippets>
+                <s enabled="true" id="398"/>
+                <s enabled="true" id="400">
+                    <prop id="1" list="0" val="165"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="182" c="false" group="3" id="759" name="Mini Crate 182" sx="1.0" sy="1.0" x="496" y="336" z="1"/>
+        <actor a="0.0" aid="183" c="false" group="3" id="759" name="Mini Crate 183" sx="1.0" sy="1.0" x="512" y="336" z="1"/>
+        <actor a="0.0" aid="180" c="false" group="3" id="759" name="Mini Crate 180" sx="1.0" sy="1.0" x="464" y="336" z="1"/>
+        <actor a="0.0" aid="181" c="false" group="3" id="759" name="Mini Crate 181" sx="1.0" sy="1.0" x="480" y="336" z="1"/>
+        <actor a="0.0" aid="205" c="false" group="3" id="759" name="Mini Crate 205" sx="1.0" sy="1.0" x="96" y="336" z="1"/>
+        <actor a="0.0" aid="204" c="false" group="3" id="759" name="Mini Crate 204" sx="1.0" sy="1.0" x="112" y="336" z="1"/>
+        <actor a="0.0" aid="206" c="false" group="3" id="759" name="Mini Crate 206" sx="1.0" sy="1.0" x="320" y="336" z="1"/>
+        <actor a="0.0" aid="201" c="false" group="3" id="759" name="Mini Crate 201" sx="1.0" sy="1.0" x="160" y="336" z="1"/>
+        <actor a="0.0" aid="200" c="false" group="3" id="759" name="Mini Crate 200" sx="1.0" sy="1.0" x="176" y="336" z="1"/>
+        <actor a="0.0" aid="203" c="false" group="3" id="759" name="Mini Crate 203" sx="1.0" sy="1.0" x="128" y="336" z="1"/>
+        <actor a="0.0" aid="202" c="false" group="3" id="759" name="Mini Crate 202" sx="1.0" sy="1.0" x="144" y="336" z="1"/>
+        <actor a="0.0" aid="197" c="false" group="3" id="759" name="Mini Crate 197" sx="1.0" sy="1.0" x="224" y="336" z="1"/>
+        <actor a="0.0" aid="196" c="false" group="3" id="759" name="Mini Crate 196" sx="1.0" sy="1.0" x="240" y="336" z="1"/>
+        <actor a="0.0" aid="199" c="false" group="3" id="759" name="Mini Crate 199" sx="1.0" sy="1.0" x="192" y="336" z="1"/>
+        <actor a="0.0" aid="198" c="false" group="3" id="759" name="Mini Crate 198" sx="1.0" sy="1.0" x="208" y="336" z="1"/>
+        <actor a="0.0" aid="193" c="false" group="3" id="759" name="Mini Crate 193" sx="1.0" sy="1.0" x="288" y="336" z="1"/>
+        <actor a="0.0" aid="192" c="false" group="3" id="759" name="Mini Crate 192" sx="1.0" sy="1.0" x="304" y="336" z="1"/>
+        <actor a="0.0" aid="195" c="false" group="3" id="759" name="Mini Crate 195" sx="1.0" sy="1.0" x="256" y="336" z="1"/>
+        <actor a="0.0" aid="194" c="false" group="3" id="759" name="Mini Crate 194" sx="1.0" sy="1.0" x="272" y="336" z="1"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -124,7 +791,6 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="4,448.0,0.0,0.0,0.0,0.0,288.0,448.0,288.0" x="96.0" y="48.0"/>
-        <p pts="4,0.0,320.0,0.0,0.0,480.0,0.0,480.0,320.0" x="80.0" y="32.0"/>
+        <p pts="8,464.0,16.0,16.0,16.0,16.0,320.0,0.0,320.0,0.0,0.0,480.0,0.0,480.0,320.0,464.0,320.0" x="80.0" y="32.0"/>
     </terrain>
 </scene>

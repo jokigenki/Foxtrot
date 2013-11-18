@@ -1,44 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="1" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="1" id="-1">
-                <set-val-394-2 comment="false" x="26" y="40">
-                    <get-xy comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="1"/>
-                        <int id="1" val="0"/>
-                    </get-xy>
-                </set-val-394-2>
-            </group>
-        </init>
-    </group>
-    <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-xy comment="false" x="26" y="40">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="0"/>
-                    <plus comment="false" id="2" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="73">
+                            <group eventID="2" id="-1">
+                                <set-val-394-2 comment="false" x="48" y="103">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="var" id="0" vid="1"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                </set-val-394-2>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-394-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-2000"/>
+                            </eq>
+                        </if>
+                        <set-xy comment="false" x="37" y="148">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
-                        </get-xy>
-                        <minus comment="false" id="1" x="0" y="0">
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="var" id="0" vid="1"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                    <get-val-394-2 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </plus>
+                        </set-xy>
+                        <set-val-394-2 comment="false" x="37" y="198">
                             <get-xy comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="var" id="0" vid="1"/>
                                 <int id="1" val="0"/>
                             </get-xy>
-                            <get-val-394-2 comment="false" id="1" x="0" y="0"/>
-                        </minus>
-                    </plus>
-                </set-xy>
-                <set-val-394-2 comment="false" x="26" y="90">
-                    <get-xy comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="1"/>
+                        </set-val-394-2>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
                         <int id="1" val="0"/>
-                    </get-xy>
-                </set-val-394-2>
+                    </value>
+                </if>
             </group>
         </step>
     </group>

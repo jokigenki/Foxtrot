@@ -55,20 +55,28 @@ public var _OldX:Float;
 		super(actor, engine);	
 		nameMap.set("Target", "_Target");
 nameMap.set("Old X", "_OldX");
-_OldX = 0;
+_OldX = -2000;
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            _OldX = asNumber(_Target.getX());
-propertyChanged("_OldX", _OldX);
-    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        actor.setX((actor.getX() + (_Target.getX() - _OldX)));
-        _OldX = asNumber(_Target.getX());
+        if((hasValue(_Target) != false))
+{
+            if((_OldX == -2000))
+{
+                _OldX = asNumber(_Target.getX());
 propertyChanged("_OldX", _OldX);
+}
+
+            actor.setX((actor.getX() + (_Target.getX() - _OldX)));
+            _OldX = asNumber(_Target.getX());
+propertyChanged("_OldX", _OldX);
+}
+
 }
 });
 
