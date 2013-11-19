@@ -175,7 +175,7 @@
         <event-custom-code comment="false" x="15" y="15">
             <group eventID="11" id="-1">
                 <code-long comment="false" x="26" y="40">
-                    <int id="0" val="public function updateTarget ()&#10;{&#10;&#9;var rads = _Degrees * Math.PI / 180;&#10;&#9;_cos = Math.cos(rads);&#10;&#9;_sin = Math.sin(rads);&#10;&#9;_BeamTargetX = _cos * 500;&#10;&#9;_BeamTargetY = _sin * 500;&#10;&#9;_LastDegrees = _Degrees;&#10;}&#10;"/>
+                    <int id="0" val="public function updateTarget ()&#10;{&#10;&#9;var rads = _Degrees * Math.PI / 180;&#10;&#9;_cos = Math.cos(rads);&#10;&#9;_sin = Math.sin(rads);&#10;&#9;_BeamTargetX = _cos * 1000;&#10;&#9;_BeamTargetY = _sin * 1000;&#10;&#9;_LastDegrees = _Degrees;&#10;}&#10;"/>
                 </code-long>
             </group>
         </event-custom-code>
