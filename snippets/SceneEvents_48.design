@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <push-shove comment="false" x="26" y="47">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="-1"/>
+                    <int id="4" val="75"/>
+                </push-shove>
+                <say comment="false" x="26" y="79">
+                    <ACTOR eid="9" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Activate"/>
+                </say>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="0" id="1"/>
+            <ACTORTYPE eid="653" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-type-create-kill comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <say comment="false" x="26" y="47">
+                    <ACTOR eid="9" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Deactivate"/>
+                </say>
+            </group>
+            <int id="0" val="1"/>
+            <ACTORTYPE eid="653" id="1"/>
+        </event-type-create-kill>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <say comment="false" x="26" y="42">
+                    <ACTOR eid="9" id="0"/>
+                    <int id="1" val="Activate On Event PM"/>
+                    <int id="2" val="Deactivate"/>
+                </say>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="1" id="1"/>
+            <ACTOR eid="9" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <push-shove comment="false" x="26" y="47">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="1"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="75"/>
+                </push-shove>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="2" id="1"/>
+            <ACTORTYPE eid="653" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-type-create-kill comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-401-2 comment="false" x="26" y="47">
+                    <actor-created-killed comment="false" id="0" x="0" y="0"/>
+                </set-val-401-2>
+            </group>
+            <int id="0" val="0"/>
+            <ACTORTYPE eid="653" id="1"/>
+        </event-type-create-kill>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="6" id="-1">
+                        <set-attribute comment="false" x="37" y="78">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                            <int id="1" val="Explode After Time PM"/>
+                            <int id="2" val="_ExplodeAfterSeconds"/>
+                            <int id="3" val="0.5"/>
+                        </set-attribute>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="2"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <isalive comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                        </isalive>
+                    </and>
+                </if>
+            </group>
+            <int id="0" val="TimedSwitchLight11PreSwitchedOn"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+</groups>
