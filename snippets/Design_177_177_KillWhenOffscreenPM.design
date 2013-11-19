@@ -3,11 +3,14 @@
     <group eventID="1" id="0">
         <event-actor-screen comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <dolater comment="false" x="26" y="42">
+                <print comment="false" x="26" y="42">
+                    <int id="0" val="OUT OF SCENE"/>
+                </print>
+                <dolater comment="false" x="26" y="62">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="69">
+                        <if comment="false" x="37" y="89">
                             <group eventID="1" id="-1">
-                                <die comment="false" x="48" y="107">
+                                <die comment="false" x="48" y="127">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
                             </group>
@@ -28,4 +31,151 @@
         </event-actor-screen>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-val-177-2 comment="false" x="37" y="78">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-177-2>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <neg comment="false" id="1" x="0" y="0">
+                            <get-val-177-1 comment="false" id="0" x="0" y="0"/>
+                        </neg>
+                    </less>
+                </if>
+                <else-if comment="false" x="26" y="115">
+                    <group eventID="2" id="-1">
+                        <set-val-177-2 comment="false" x="37" y="158">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-177-2>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <plus comment="false" id="1" x="0" y="0">
+                            <scene-wh comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </scene-wh>
+                            <get-val-177-1 comment="false" id="1" x="0" y="0"/>
+                        </plus>
+                    </more>
+                </else-if>
+                <else comment="false" x="26" y="195">
+                    <group eventID="2" id="-1">
+                        <set-val-177-2 comment="false" x="37" y="215">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-177-2>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="252">
+                    <group eventID="2" id="-1">
+                        <set-val-177-3 comment="false" x="37" y="290">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-177-3>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <neg comment="false" id="1" x="0" y="0">
+                            <get-val-177-1 comment="false" id="0" x="0" y="0"/>
+                        </neg>
+                    </less>
+                </if>
+                <else-if comment="false" x="26" y="327">
+                    <group eventID="2" id="-1">
+                        <set-val-177-3 comment="false" x="37" y="370">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-177-3>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <plus comment="false" id="1" x="0" y="0">
+                            <scene-wh comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </scene-wh>
+                            <get-val-177-1 comment="false" id="1" x="0" y="0"/>
+                        </plus>
+                    </more>
+                </else-if>
+                <else comment="false" x="26" y="407">
+                    <group eventID="2" id="-1">
+                        <set-val-177-3 comment="false" x="37" y="427">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-177-3>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="464">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="494">
+                            <group eventID="2" id="-1">
+                                <set-val-177-4 comment="false" x="48" y="529">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-177-4>
+                                <dolater comment="false" x="48" y="554">
+                                    <group eventID="2" id="-1">
+                                        <if comment="false" x="59" y="581">
+                                            <group eventID="2" id="-1">
+                                                <die comment="false" x="70" y="616">
+                                                    <ACTOR eid="this" id="0"/>
+                                                </die>
+                                            </group>
+                                            <or comment="false" id="0" x="0" y="0">
+                                                <not comment="false" id="0" x="0" y="0">
+                                                    <get-val-177-2 comment="false" id="0" x="0" y="0"/>
+                                                </not>
+                                                <not comment="false" id="1" x="0" y="0">
+                                                    <get-val-177-3 comment="false" id="0" x="0" y="0"/>
+                                                </not>
+                                            </or>
+                                        </if>
+                                        <set-val-177-4 comment="false" x="59" y="655">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-177-4>
+                                    </group>
+                                    <int id="0" val="1"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <or comment="false" id="0" x="0" y="0">
+                                <not comment="false" id="0" x="0" y="0">
+                                    <get-val-177-2 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-val-177-3 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                            </or>
+                        </if>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-177-4 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="4" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <ignore-screen-tolerance comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </ignore-screen-tolerance>
+            </group>
+        </init>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>

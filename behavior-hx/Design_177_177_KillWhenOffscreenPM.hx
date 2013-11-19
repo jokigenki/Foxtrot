@@ -45,25 +45,90 @@ import motion.easing.Sine;
 class Design_177_177_KillWhenOffscreenPM extends ActorScript
 {          	
 	
+public var _Boundary:Float;
+
+public var _InX:Bool;
+
+public var _InY:Bool;
+
+public var _TimingOutOfBounds:Bool;
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Actor", "actor");
+		nameMap.set("Boundary", "_Boundary");
+_Boundary = 32;
+nameMap.set("In X?", "_InX");
+_InX = false;
+nameMap.set("In Y?", "_InY");
+_InY = false;
+nameMap.set("Timing Out Of Bounds?", "_TimingOutOfBounds");
+_TimingOutOfBounds = false;
+nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		    addActorPositionListener(actor, function(enteredScreen:Bool, exitedScreen:Bool, enteredScene:Bool, exitedScene:Bool, list:Array<Dynamic>):Void {
-if(wrapper.enabled && exitedScene){
-        runLater(1000 * 1, function(timeTask:TimedTask):Void {
-                    if(!(actor.isOnScreen()))
+		            actor.makeAlwaysSimulate();
+    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if((actor.getX() < -(_Boundary)))
 {
-                        recycleActor(actor);
+            _InX = false;
+propertyChanged("_InX", _InX);
 }
 
+        else if((actor.getX() > (getSceneWidth() + _Boundary)))
+{
+            _InX = false;
+propertyChanged("_InX", _InX);
+}
+
+        else
+{
+            _InX = true;
+propertyChanged("_InX", _InX);
+}
+
+        if((actor.getY() < -(_Boundary)))
+{
+            _InY = false;
+propertyChanged("_InY", _InY);
+}
+
+        else if((actor.getY() > (getSceneHeight() + _Boundary)))
+{
+            _InY = false;
+propertyChanged("_InY", _InY);
+}
+
+        else
+{
+            _InY = true;
+propertyChanged("_InY", _InY);
+}
+
+        if(!(_TimingOutOfBounds))
+{
+            if((!(_InX) || !(_InY)))
+{
+                _TimingOutOfBounds = true;
+propertyChanged("_TimingOutOfBounds", _TimingOutOfBounds);
+                runLater(1000 * 1, function(timeTask:TimedTask):Void {
+                            if((!(_InX) || !(_InY)))
+{
+                                recycleActor(actor);
+}
+
+                            _TimingOutOfBounds = false;
+propertyChanged("_TimingOutOfBounds", _TimingOutOfBounds);
 }, actor);
+}
+
+}
+
 }
 });
 

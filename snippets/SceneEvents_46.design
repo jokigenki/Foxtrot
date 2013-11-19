@@ -35,16 +35,19 @@
     <group eventID="3" id="0">
         <event-type-create-kill comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <create-actor3 comment="false" x="26" y="47">
+                <print comment="false" x="26" y="47">
+                    <int id="0" val="EGG BALL KILLED!"/>
+                </print>
+                <create-actor3 comment="false" x="26" y="67">
                     <ACTORTYPE eid="757" id="0"/>
                     <get-xy comment="false" id="1" x="0" y="0">
                         <ACTOR eid="3" id="0"/>
                         <int id="1" val="0"/>
                     </get-xy>
-                    <int id="2" val="230"/>
+                    <int id="2" val="262"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-attribute comment="false" x="26" y="87">
+                <set-attribute comment="false" x="26" y="107">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Match Horizontal Movement PM"/>
                     <int id="2" val="_Target"/>
@@ -52,7 +55,7 @@
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-attribute comment="false" x="26" y="127">
+                <set-attribute comment="false" x="26" y="147">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Jump To Start PM"/>
                     <int id="2" val="_Target"/>
@@ -60,7 +63,7 @@
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-val-393-2 comment="false" x="26" y="167">
+                <set-val-393-2 comment="false" x="26" y="187">
                     <ACTOR eid="lastcreated" id="0"/>
                 </set-val-393-2>
             </group>
