@@ -88,9 +88,9 @@ nameMap.set("Number Of Pieces", "_NumberOfPieces");
 _NumberOfPieces = 0.0;
 nameMap.set("Piece Number", "_PieceNumber");
 _PieceNumber = 0.0;
-nameMap.set("Actor", "actor");
 nameMap.set("Shake Screen", "_ShakeScreen");
 _ShakeScreen = false;
+nameMap.set("Actor", "actor");
 
 	}
 	
