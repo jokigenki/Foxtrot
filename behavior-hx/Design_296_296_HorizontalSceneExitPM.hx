@@ -80,9 +80,9 @@ _DoorIsReady = false;
 nameMap.set("Actor by door", "_Actorbydoor");
 nameMap.set("Exit only when on ground", "_Exitonlywhenonground");
 _Exitonlywhenonground = false;
+nameMap.set("Actor", "actor");
 nameMap.set("Save Exit?", "_SaveExit");
 _SaveExit = true;
-nameMap.set("Actor", "actor");
 
 	}
 	
