@@ -29,16 +29,16 @@ import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
-import com.eclecticdesignstudio.motion.Actuate;
-import com.eclecticdesignstudio.motion.easing.Back;
-import com.eclecticdesignstudio.motion.easing.Cubic;
-import com.eclecticdesignstudio.motion.easing.Elastic;
-import com.eclecticdesignstudio.motion.easing.Expo;
-import com.eclecticdesignstudio.motion.easing.Linear;
-import com.eclecticdesignstudio.motion.easing.Quad;
-import com.eclecticdesignstudio.motion.easing.Quart;
-import com.eclecticdesignstudio.motion.easing.Quint;
-import com.eclecticdesignstudio.motion.easing.Sine;
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
 
 
 
@@ -168,8 +168,8 @@ nameMap.set("Time To Max Speed", "_TimeToMaxSpeed");
 _TimeToMaxSpeed = 0.4;
 nameMap.set("Can Slide?", "_CanSlide");
 _CanSlide = true;
-nameMap.set("Run Right Animation", "_RunRightAnimation");
 nameMap.set("Actor", "actor");
+nameMap.set("Run Right Animation", "_RunRightAnimation");
 nameMap.set("Slip Right Animation", "_SlipRightAnimation");
 nameMap.set("Run Left Animation", "_RunLeftAnimation");
 nameMap.set("Full Run Right Animation", "_FullRunRightAnimation");

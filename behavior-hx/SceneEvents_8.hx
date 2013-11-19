@@ -29,26 +29,26 @@ import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
-import com.eclecticdesignstudio.motion.Actuate;
-import com.eclecticdesignstudio.motion.easing.Back;
-import com.eclecticdesignstudio.motion.easing.Cubic;
-import com.eclecticdesignstudio.motion.easing.Elastic;
-import com.eclecticdesignstudio.motion.easing.Expo;
-import com.eclecticdesignstudio.motion.easing.Linear;
-import com.eclecticdesignstudio.motion.easing.Quad;
-import com.eclecticdesignstudio.motion.easing.Quart;
-import com.eclecticdesignstudio.motion.easing.Quint;
-import com.eclecticdesignstudio.motion.easing.Sine;
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
 
 
 
-class ActorEvents_560 extends ActorScript
+class SceneEvents_8 extends SceneScript
 {          	
 	
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
+		super(engine);
 		
 	}
 	

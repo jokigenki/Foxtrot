@@ -220,7 +220,7 @@
         <receiver-35-234 comment="false" x="15" y="15">
             <group eventID="15" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="for (item in cast(__Values, Array&amp;lt;Dynamic&amp;gt;))&#10;{&#10;&#9;var attributes;&#10;&#9;var str = &amp;quot;&amp;quot; + item;&#10;&#9;if (str.indexOf(&amp;quot;:&amp;quot;) == -1)&#10;&#9;{&#10;&#9;&#9;attributes = str.split(&amp;quot;=&amp;quot;);&#10;&#9;&#9;setValue(null, __Actor, attributes[0], attributes[1]);&#10;&#9;} else {&#10;&#9;&#9;var behaviourValues = str.split(&amp;quot;:&amp;quot;);&#10;&#9;&#9;var behaviour = behaviourValues[0];&#10;&#9;&#9;attributes = behaviourValues[1].split(&amp;quot;=&amp;quot;);&#10;&#9;&#9;setValue(behaviour, __Actor, attributes[0], attributes[1]);&#10;&#9;}&#10;}&#10;&#10;}&#10;&#10;private static function setValue (behaviour:String, actor:Actor, key:String, value:String)&#10;{&#10;&#9;switch (value)&#10;&#9;{&#10;&#9;&#9;case &amp;quot;true&amp;quot;:&#10;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, true);&#10;&#9;&#9;&#9;else actor.setValue(behaviour, key, true);&#10;&#9;&#9;case &amp;quot;false&amp;quot;:&#10;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, false);&#10;&#9;&#9;&#9;else actor.setValue(behaviour, key, false);&#10;&#9;&#9;default:&#10;&#9;&#9;&#9;var fValue = Std.parseFloat(value);&#10;&#9;&#9;&#9;if (Std.string(fValue) == value)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, fValue);&#10;&#9;&#9;&#9;&#9;else actor.setValue(behaviour, key, fValue);&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;else &#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;if (behaviour == null) actor.setActorValue(key, value);&#10;&#9;&#9;&#9;&#9;else actor.setValue(behaviour, key, value);&#10;&#9;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;private static function close () {"/>
+                    <int id="0" val="for (item in cast(__Values, Array&amp;lt;Dynamic&amp;gt;))&#10;{&#10;&#9;var attributes;&#10;&#9;var str = &amp;quot;&amp;quot; + item;&#10;&#9;if (str.indexOf(&amp;quot;:&amp;quot;) == -1)&#10;&#9;{&#10;&#9;&#9;attributes = str.split(&amp;quot;=&amp;quot;);&#10;&#9;&#9;scripts.Design_27_27_ActorExtrasPM._customBlock_SetValue(attributes[0],attributes[1],__Actor,null);&#10;&#9;} else {&#10;&#9;&#9;var behaviourValues = str.split(&amp;quot;:&amp;quot;);&#10;&#9;&#9;var behaviour = behaviourValues[0];&#10;&#9;&#9;attributes = behaviourValues[1].split(&amp;quot;=&amp;quot;);&#10;&#9;&#9;scripts.Design_27_27_ActorExtrasPM._customBlock_SetValue(attributes[0],attributes[1],__Actor,behaviour);&#10;&#9;}&#10;}"/>
                 </code-long>
             </group>
             <get-byobval-27-234-0 comment="false" id="0" x="0" y="0"/>
@@ -297,6 +297,25 @@
         </receiver-47-278>
     </group>
     <group eventID="20" id="-1"/>
+    <group eventID="23" id="0">
+        <receiver-56-761 comment="false" x="15" y="15">
+            <group eventID="23" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="switch (__Value)&#10;{&#10;&#9;case &amp;quot;true&amp;quot;:&#10;&#9;&#9;if (__BehaviourName == null) __Actor.setActorValue(__Key, true);&#10;&#9;&#9;else __Actor.setValue(__BehaviourName, __Key, true);&#10;&#9;case &amp;quot;false&amp;quot;:&#10;&#9;&#9;if (__BehaviourName == null) __Actor.setActorValue(__Key, false);&#10;&#9;&#9;else __Actor.setValue(__BehaviourName, __Key, false);&#10;&#9;default:&#10;&#9;&#9;var fValue = Std.parseFloat(__Value);&#10;&#9;&#9;if (Std.string(fValue) == __Value)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;if (__BehaviourName == null) __Actor.setActorValue(__Key, fValue);&#10;&#9;&#9;&#9;else __Actor.setValue(__BehaviourName, __Key, fValue);&#10;&#9;&#9;}&#10;&#9;&#9;else &#10;&#9;&#9;{&#10;&#9;&#9;&#9;if (__BehaviourName == null) __Actor.setActorValue(__Key, __Value);&#10;&#9;&#9;&#9;else __Actor.setValue(__BehaviourName, __Key, __Value);&#10;&#9;&#9;}&#10;}"/>
+                </code-long>
+            </group>
+            <get-byobval-27-761-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-27-761-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-27-761-2 comment="false" id="2" x="0" y="0"/>
+            <get-byobval-27-761-3 comment="false" id="3" x="0" y="0"/>
+        </receiver-56-761>
+    </group>
+    <group eventID="23" id="-1">
+        <get-byobval-27-761-0 comment="false" x="0" y="0"/>
+        <get-byobval-27-761-1 comment="false" x="0" y="0"/>
+        <get-byobval-27-761-2 comment="false" x="0" y="0"/>
+        <get-byobval-27-761-3 comment="false" x="0" y="0"/>
+    </group>
     <group eventID="22" id="0">
         <receiver-52-287 comment="false" x="36" y="29">
             <group eventID="22" id="-1">

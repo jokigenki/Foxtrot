@@ -29,16 +29,16 @@ import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
-import com.eclecticdesignstudio.motion.Actuate;
-import com.eclecticdesignstudio.motion.easing.Back;
-import com.eclecticdesignstudio.motion.easing.Cubic;
-import com.eclecticdesignstudio.motion.easing.Elastic;
-import com.eclecticdesignstudio.motion.easing.Expo;
-import com.eclecticdesignstudio.motion.easing.Linear;
-import com.eclecticdesignstudio.motion.easing.Quad;
-import com.eclecticdesignstudio.motion.easing.Quart;
-import com.eclecticdesignstudio.motion.easing.Quint;
-import com.eclecticdesignstudio.motion.easing.Sine;
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
 
 
 
@@ -46,12 +46,8 @@ class Design_169_169_DisableBehavioursOnKilledPM extends ActorScript
 {          	
 	
 public var _BehavioursToDisable:Array<Dynamic>;
-
-public var _IsKilled:Bool;
     public function _customEvent_Killed():Void
 {
-        _IsKilled = true;
-propertyChanged("_IsKilled", _IsKilled);
         for(item in cast(_BehavioursToDisable, Array<Dynamic>))
 {
             if(actor.hasBehavior(item))
@@ -86,8 +82,6 @@ var __Self:Actor = actor;
 		super(actor, engine);	
 		nameMap.set("Behaviours To Disable", "_BehavioursToDisable");
 _BehavioursToDisable = [];
-nameMap.set("Is Killed?", "_IsKilled");
-_IsKilled = false;
 nameMap.set("Actor", "actor");
 
 	}

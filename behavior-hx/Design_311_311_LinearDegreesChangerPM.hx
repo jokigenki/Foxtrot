@@ -29,16 +29,16 @@ import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
-import com.eclecticdesignstudio.motion.Actuate;
-import com.eclecticdesignstudio.motion.easing.Back;
-import com.eclecticdesignstudio.motion.easing.Cubic;
-import com.eclecticdesignstudio.motion.easing.Elastic;
-import com.eclecticdesignstudio.motion.easing.Expo;
-import com.eclecticdesignstudio.motion.easing.Linear;
-import com.eclecticdesignstudio.motion.easing.Quad;
-import com.eclecticdesignstudio.motion.easing.Quart;
-import com.eclecticdesignstudio.motion.easing.Quint;
-import com.eclecticdesignstudio.motion.easing.Sine;
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
 
 
 
@@ -64,13 +64,13 @@ public var _TargetBehaviourIsReady:Bool;
 		nameMap.set("Target Behaviour Name", "_TargetBehaviourName");
 _TargetBehaviourName = "";
 nameMap.set("Current Degrees", "_CurrentDegrees");
-_CurrentDegrees = 0;
+_CurrentDegrees = 0.0;
 nameMap.set("Direction", "_Direction");
-_Direction = 0;
+_Direction = 0.0;
 nameMap.set("Max Angle", "_MaxAngle");
-_MaxAngle = 0;
+_MaxAngle = 0.0;
 nameMap.set("Min Angle", "_MinAngle");
-_MinAngle = 0;
+_MinAngle = 0.0;
 nameMap.set("Target Behaviour Is Ready?", "_TargetBehaviourIsReady");
 _TargetBehaviourIsReady = false;
 nameMap.set("Actor", "actor");

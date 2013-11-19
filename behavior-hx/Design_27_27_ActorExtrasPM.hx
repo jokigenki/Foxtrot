@@ -29,16 +29,16 @@ import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
-import com.eclecticdesignstudio.motion.Actuate;
-import com.eclecticdesignstudio.motion.easing.Back;
-import com.eclecticdesignstudio.motion.easing.Cubic;
-import com.eclecticdesignstudio.motion.easing.Elastic;
-import com.eclecticdesignstudio.motion.easing.Expo;
-import com.eclecticdesignstudio.motion.easing.Linear;
-import com.eclecticdesignstudio.motion.easing.Quad;
-import com.eclecticdesignstudio.motion.easing.Quart;
-import com.eclecticdesignstudio.motion.easing.Quint;
-import com.eclecticdesignstudio.motion.easing.Sine;
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
 
 
 
@@ -222,43 +222,41 @@ public static function _customBlock_SetActorValues(__Values:Array<Dynamic>, __Ac
 	if (str.indexOf(":") == -1)
 	{
 		attributes = str.split("=");
-		setValue(null, __Actor, attributes[0], attributes[1]);
+		scripts.Design_27_27_ActorExtrasPM._customBlock_SetValue(attributes[0],attributes[1],__Actor,null);
 	} else {
 		var behaviourValues = str.split(":");
 		var behaviour = behaviourValues[0];
 		attributes = behaviourValues[1].split("=");
-		setValue(behaviour, __Actor, attributes[0], attributes[1]);
+		scripts.Design_27_27_ActorExtrasPM._customBlock_SetValue(attributes[0],attributes[1],__Actor,behaviour);
 	}
 }
-
 }
+    
 
-private static function setValue (behaviour:String, actor:Actor, key:String, value:String)
+/* Params are:__Key __Value __Actor __BehaviourName */
+public static function _customBlock_SetValue(__Key:String, __Value:String, __Actor:Actor, __BehaviourName:String):Void
 {
-	switch (value)
-	{
-		case "true":
-			if (behaviour == null) actor.setActorValue(key, true);
-			else actor.setValue(behaviour, key, true);
-		case "false":
-			if (behaviour == null) actor.setActorValue(key, false);
-			else actor.setValue(behaviour, key, false);
-		default:
-			var fValue = Std.parseFloat(value);
-			if (Std.string(fValue) == value)
-			{
-				if (behaviour == null) actor.setActorValue(key, fValue);
-				else actor.setValue(behaviour, key, fValue);
-			}
-			else 
-			{
-				if (behaviour == null) actor.setActorValue(key, value);
-				else actor.setValue(behaviour, key, value);
-			}
-	}
+        switch (__Value)
+{
+	case "true":
+		if (__BehaviourName == null) __Actor.setActorValue(__Key, true);
+		else __Actor.setValue(__BehaviourName, __Key, true);
+	case "false":
+		if (__BehaviourName == null) __Actor.setActorValue(__Key, false);
+		else __Actor.setValue(__BehaviourName, __Key, false);
+	default:
+		var fValue = Std.parseFloat(__Value);
+		if (Std.string(fValue) == __Value)
+		{
+			if (__BehaviourName == null) __Actor.setActorValue(__Key, fValue);
+			else __Actor.setValue(__BehaviourName, __Key, fValue);
+		}
+		else 
+		{
+			if (__BehaviourName == null) __Actor.setActorValue(__Key, __Value);
+			else __Actor.setValue(__BehaviourName, __Key, __Value);
+		}
 }
-
-private static function close () {
 }
     
 

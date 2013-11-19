@@ -103,6 +103,24 @@
             <int id="0" val="0"/>
         </event-device-multitouch>
     </group>
+    <group eventID="1" id="1">
+        <print comment="false" x="494" y="104">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="Screen: "/>
+                <screen-wh comment="false" id="1" x="0" y="0">
+                    <int id="0" val="0"/>
+                </screen-wh>
+            </str-combine>
+        </print>
+        <print comment="false" x="494" y="142">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="Scene:"/>
+                <scene-wh comment="false" id="1" x="0" y="0">
+                    <int id="0" val="0"/>
+                </scene-wh>
+            </str-combine>
+        </print>
+    </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <event-device-multitouch comment="false" x="15" y="15">
@@ -550,7 +568,7 @@
                 <draw-text comment="false" x="26" y="40">
                     <get-val-19-13 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="100"/>
-                    <int id="2" val="125"/>
+                    <int id="2" val="25"/>
                 </draw-text>
             </group>
         </draw>

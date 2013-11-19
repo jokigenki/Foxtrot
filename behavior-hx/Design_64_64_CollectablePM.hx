@@ -29,16 +29,16 @@ import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
-import com.eclecticdesignstudio.motion.Actuate;
-import com.eclecticdesignstudio.motion.easing.Back;
-import com.eclecticdesignstudio.motion.easing.Cubic;
-import com.eclecticdesignstudio.motion.easing.Elastic;
-import com.eclecticdesignstudio.motion.easing.Expo;
-import com.eclecticdesignstudio.motion.easing.Linear;
-import com.eclecticdesignstudio.motion.easing.Quad;
-import com.eclecticdesignstudio.motion.easing.Quart;
-import com.eclecticdesignstudio.motion.easing.Quint;
-import com.eclecticdesignstudio.motion.easing.Sine;
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
 
 
 
@@ -48,21 +48,6 @@ class Design_64_64_CollectablePM extends ActorScript
 public var _CollectionEventName:String;
 
 public var _CollectableId:String;
-    
-
-/* Params are:__Self */
-public function _customBlock_KillIfCollected():Bool
-{
-var __Self:Actor = actor;
-        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(_CollectableId)), Bool))
-{
-            __Self.disableBehavior("Display On Collected PM");
-            recycleActor(__Self);
-            return true;
-}
-
-        return false;
-}
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -78,9 +63,9 @@ nameMap.set("Actor", "actor");
 	
 	override public function init()
 	{
-		            if(cast((actor.say("Inventory Collectable PM", "_customBlock_KillIfCollected")), Bool))
+		            if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(_CollectableId)), Bool))
 {
-
+            recycleActor(actor);
 }
 
     addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {

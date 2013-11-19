@@ -29,16 +29,16 @@ import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
-import com.eclecticdesignstudio.motion.Actuate;
-import com.eclecticdesignstudio.motion.easing.Back;
-import com.eclecticdesignstudio.motion.easing.Cubic;
-import com.eclecticdesignstudio.motion.easing.Elastic;
-import com.eclecticdesignstudio.motion.easing.Expo;
-import com.eclecticdesignstudio.motion.easing.Linear;
-import com.eclecticdesignstudio.motion.easing.Quad;
-import com.eclecticdesignstudio.motion.easing.Quart;
-import com.eclecticdesignstudio.motion.easing.Quint;
-import com.eclecticdesignstudio.motion.easing.Sine;
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
 
 
 
@@ -87,7 +87,6 @@ if(wrapper.enabled && sameAsAny(getActorType(9), event.otherActor.getType(),even
         setGameAttribute("Speed Run Collectables", _SpeedRunCollectables);
         setGameAttribute("Speed Run Egg Name", _CompletionEggName);
         setGameAttribute("Speed Run Start", _StartScene);
-        setGameAttribute("Last Scene Name", _StartDoorId);
         sayToScene("Speed Run Timer PM", "_customEvent_" + "TimerReset");
         setGameAttribute("Speed Run In Progress", true);
         reloadCurrentScene(createFadeOut((0.5)),createFadeIn((0.5)));
