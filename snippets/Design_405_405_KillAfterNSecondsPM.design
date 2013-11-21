@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <custom-261 comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </custom-261>
+                <if comment="false" x="26" y="67">
+                    <group eventID="2" id="-1">
+                        <dolater comment="false" x="37" y="97">
+                            <group eventID="1" id="-1">
+                                <die comment="false" x="48" y="129">
+                                    <ACTOR eid="this" id="0"/>
+                                </die>
+                                <if comment="false" x="48" y="156">
+                                    <group eventID="1" id="-1">
+                                        <say comment="false" x="59" y="189">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Reload On Death PM"/>
+                                            <int id="2" val="Reload"/>
+                                        </say>
+                                    </group>
+                                    <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Reload On Death PM"/>
+                                    </is-snippet-enableda>
+                                </if>
+                            </group>
+                            <get-val-83-1 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-83-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="252">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="272">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <if comment="false" x="37" y="299">
+                            <group eventID="2" id="-1">
+                                <say comment="false" x="48" y="332">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Reload On Death PM"/>
+                                    <int id="2" val="Reload"/>
+                                </say>
+                            </group>
+                            <is-snippet-enableda comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Reload On Death PM"/>
+                            </is-snippet-enableda>
+                        </if>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="Killed"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

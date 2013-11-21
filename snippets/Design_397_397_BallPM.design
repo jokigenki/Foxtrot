@@ -52,24 +52,34 @@
                                 </else-if>
                                 <if comment="false" x="48" y="280">
                                     <group eventID="1" id="-1">
-                                        <die comment="false" x="59" y="323">
+                                        <die comment="false" x="59" y="328">
                                             <other-actor comment="false" id="0" x="0" y="0"/>
                                         </die>
                                     </group>
-                                    <eq comment="false" id="0" x="0" y="0">
-                                        <getatype comment="false" id="0" x="0" y="0">
-                                            <other-actor comment="false" id="0" x="0" y="0"/>
-                                        </getatype>
-                                        <pick-type comment="false" id="1" x="0" y="0">
-                                            <ACTORTYPE eid="759" id="0"/>
-                                        </pick-type>
-                                    </eq>
+                                    <or comment="false" id="0" x="0" y="0">
+                                        <eq comment="false" id="0" x="0" y="0">
+                                            <getatype comment="false" id="0" x="0" y="0">
+                                                <other-actor comment="false" id="0" x="0" y="0"/>
+                                            </getatype>
+                                            <pick-type comment="false" id="1" x="0" y="0">
+                                                <ACTORTYPE eid="759" id="0"/>
+                                            </pick-type>
+                                        </eq>
+                                        <eq comment="false" id="1" x="0" y="0">
+                                            <getatype comment="false" id="0" x="0" y="0">
+                                                <other-actor comment="false" id="0" x="0" y="0"/>
+                                            </getatype>
+                                            <pick-type comment="false" id="1" x="0" y="0">
+                                                <ACTORTYPE eid="772" id="0"/>
+                                            </pick-type>
+                                        </eq>
+                                    </or>
                                 </if>
-                                <dolater comment="false" x="48" y="367">
+                                <dolater comment="false" x="48" y="372">
                                     <group eventID="1" id="-1">
-                                        <if comment="false" x="59" y="394">
+                                        <if comment="false" x="59" y="399">
                                             <group eventID="1" id="-1">
-                                                <set-val-397-5 comment="false" x="70" y="427">
+                                                <set-val-397-5 comment="false" x="70" y="432">
                                                     <true comment="false" id="0" x="0" y="0"/>
                                                 </set-val-397-5>
                                             </group>
@@ -84,9 +94,9 @@
                             </group>
                             <get-val-397-5 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <if comment="false" x="37" y="488">
+                        <if comment="false" x="37" y="493">
                             <group eventID="1" id="-1">
-                                <set-val-397-6 comment="false" x="48" y="526">
+                                <set-val-397-6 comment="false" x="48" y="531">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <get-val-397-6 comment="false" id="0" x="0" y="0"/>
                                         <div comment="false" id="1" x="0" y="0">
@@ -108,9 +118,9 @@
                                 <int id="1" val="Match Horizontal Movement PM"/>
                             </has-snippet>
                         </if>
-                        <if comment="false" x="37" y="599">
+                        <if comment="false" x="37" y="604">
                             <group eventID="1" id="-1">
-                                <set-val-397-6 comment="false" x="48" y="629">
+                                <set-val-397-6 comment="false" x="48" y="634">
                                     <get-val-397-10 comment="false" id="0" x="0" y="0"/>
                                 </set-val-397-6>
                             </group>
@@ -119,9 +129,9 @@
                                 <get-val-397-10 comment="false" id="1" x="0" y="0"/>
                             </more>
                         </if>
-                        <else-if comment="false" x="37" y="666">
+                        <else-if comment="false" x="37" y="671">
                             <group eventID="1" id="-1">
-                                <set-val-397-6 comment="false" x="48" y="701">
+                                <set-val-397-6 comment="false" x="48" y="706">
                                     <neg comment="false" id="0" x="0" y="0">
                                         <get-val-397-10 comment="false" id="0" x="0" y="0"/>
                                     </neg>
@@ -134,9 +144,9 @@
                                 </neg>
                             </less>
                         </else-if>
-                        <if comment="false" x="37" y="743">
+                        <if comment="false" x="37" y="748">
                             <group eventID="1" id="-1">
-                                <set-val-397-7 comment="false" x="48" y="773">
+                                <set-val-397-7 comment="false" x="48" y="778">
                                     <get-val-397-11 comment="false" id="0" x="0" y="0"/>
                                 </set-val-397-7>
                             </group>
@@ -145,9 +155,9 @@
                                 <get-val-397-11 comment="false" id="1" x="0" y="0"/>
                             </more>
                         </if>
-                        <else-if comment="false" x="37" y="810">
+                        <else-if comment="false" x="37" y="815">
                             <group eventID="1" id="-1">
-                                <set-val-397-7 comment="false" x="48" y="845">
+                                <set-val-397-7 comment="false" x="48" y="850">
                                     <neg comment="false" id="0" x="0" y="0">
                                         <get-val-397-11 comment="false" id="0" x="0" y="0"/>
                                     </neg>

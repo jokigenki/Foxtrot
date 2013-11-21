@@ -272,8 +272,8 @@
         <number default="250" defaultValue="250" desc="Angle used when jumping towards the left&lt;br&gt;&lt;br&gt;&#10;default = 250" dropdown="" fullname="Jump Left Angle" hidden="false" id="12" name="_JumpLeftAngle" order="11"/>
         <number default="65" defaultValue="65" desc="Amount of force to apply during the jump&lt;br&gt;&lt;br&gt;&#10;default = 65" dropdown="" fullname="Jump Force" hidden="false" id="13" name="_JumpForce" order="12"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Right Animation" hidden="false" id="14" name="_WallJumpRightAnimation" order="13"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Left Animation" hidden="false" id="15" name="_WallJumpLeftAnimation" order="14"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Wall Jump Left Animation" hidden="false" id="15" name="_WallJumpLeftAnimation" order="14"/>
         <text default="Wall Jumping" defaultValue="Wall Jumping" desc="Set the category used for the animation - used for the hierarchy." dropdown="" fullname="Animation Category" hidden="false" id="17" name="_AnimationCategory" order="16"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Prevent Wall Jump" hidden="true" id="16" name="_PreventWallJump" order="15"/>
         <blocks>
@@ -627,8 +627,8 @@
         <control default="" defaultValue="" desc="Select the key used to move to the left." dropdown="" fullname="Left Key" hidden="false" id="12" name="_LeftKey" order="12"/>
         <number default="0.4" defaultValue="0.4" desc="How long should it take to get up to max speed?&lt;br&gt;&lt;br&gt;&#10;default = 0.4" dropdown="" fullname="Time To Max Speed" hidden="false" id="13" name="_TimeToMaxSpeed" order="13"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Can Slide?" hidden="false" id="14" name="_CanSlide" order="14"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Right Animation" hidden="false" id="15" name="_RunRightAnimation" order="15"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Right Animation" hidden="false" id="15" name="_RunRightAnimation" order="15"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Slip Right Animation" hidden="false" id="17" name="_SlipRightAnimation" order="17"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Run Left Animation" hidden="false" id="16" name="_RunLeftAnimation" order="16"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Full Run Right Animation" hidden="false" id="19" name="_FullRunRightAnimation" order="19"/>
@@ -1096,7 +1096,7 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_83_83_KillAfternSeconds" classname="scripts.Design_83_83_KillAfternSeconds" desc="" description="" design="true" drawOrder="0" id="83" language="" name="Kill After n Seconds PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+    <snippet attachedevent="false" class="scripts.Design_405_405_KillAfterNSecondsPM" classname="scripts.Design_405_405_KillAfterNSecondsPM" desc="" description="" design="true" drawOrder="0" id="83" language="" name="Kill After N Seconds PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Seconds til Death" hidden="false" id="1" name="_SecondstilDeath" order="1"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
@@ -1612,8 +1612,8 @@
         <actortype default="" defaultValue="" desc="" dropdown="" fullname="Explosion Actor Type" hidden="false" id="16" name="_ExplosionActorType" order="5"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Number Of Pieces" hidden="false" id="10" name="_NumberOfPieces" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Piece Number" hidden="true" id="14" name="_PieceNumber" order="3"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Shake Screen" hidden="false" id="15" name="_ShakeScreen" order="4"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Shake Screen" hidden="false" id="15" name="_ShakeScreen" order="4"/>
         <blocks/>
         <events>
             <event displayName="On Killed" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
@@ -1787,7 +1787,7 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_185_185_DefaultKillBehaviourPM" classname="scripts.Design_185_185_DefaultKillBehaviourPM" desc="" description="" design="true" drawOrder="0" id="185" language="" name="Default Kill Behaviour PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <text default="" defaultValue="" desc="" dropdown="Animate Out=Animate Out PM&#10;Bump Out=Bump Out PM&#10;Explode With Combined Pieces=Explode With Combined Pieces PM&#10;Explode With Set Pieces=Explode With Set Pieces PM&#10;Explode With Random Pieces=Explode With Random Pieces PM&#10;Flicker Out=Flicker Out PM&#10;Kill After Animation=Kill After Animation PM&#10;Kill After N Seconds=Kill After N Seconds PM&#10;Reduce Health=Reduce Health PM" fullname="Kill Behaviour" hidden="false" id="1" name="_KillBehaviour" order="1"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Kill X" hidden="true" id="2" name="_KillX" order="2"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Kill X" hidden="true" id="2" name="_KillX" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Kill Y" hidden="true" id="3" name="_KillY" order="3"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
@@ -2942,8 +2942,8 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Door Is Ready?" hidden="true" id="10" name="_DoorIsReady" order="6"/>
         <actor default="0" defaultValue="0" desc="" dropdown="" fullname="Actor by door" hidden="true" id="12" name="_Actorbydoor" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Exit only when on ground" hidden="false" id="13" name="_Exitonlywhenonground" order="8"/>
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Save Exit?" hidden="false" id="15" name="_SaveExit" order="10"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="651" id="1"/>
             <receiver blockID="102" id="2"/>

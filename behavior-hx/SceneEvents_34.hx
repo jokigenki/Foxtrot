@@ -42,41 +42,17 @@ import motion.easing.Sine;
 
 
 
-class Design_185_185_DefaultKillBehaviourPM extends ActorScript
+class SceneEvents_34 extends SceneScript
 {          	
 	
-public var _KillBehaviour:String;
-
-public var _KillX:Float;
-
-public var _KillY:Float;
-    public function _customEvent_Killed():Void
-{
-        if(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorBehaviourHasAttribute(actor,"_KillX",_KillBehaviour)), Bool))
-{
-            actor.setValue(_KillBehaviour, "_KillX", _KillX);
-}
-
-        if(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorBehaviourHasAttribute(actor,"_KillX",_KillBehaviour)), Bool))
-{
-            actor.setValue(_KillBehaviour, "_KillY", _KillY);
-}
-
-        actor.say(_KillBehaviour, "_customEvent_" + "Killed");
-}
-
+public var _ExitName:String;
 
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
-		nameMap.set("Kill Behaviour", "_KillBehaviour");
-_KillBehaviour = "";
-nameMap.set("Kill X", "_KillX");
-_KillX = 0.0;
-nameMap.set("Kill Y", "_KillY");
-_KillY = 0.0;
-nameMap.set("Actor", "actor");
+		super(engine);
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
 
 	}
 	
