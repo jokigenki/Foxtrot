@@ -27,10 +27,14 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-val-56-4 comment="false" x="26" y="40">
+                <toggle-image comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
+                <set-val-56-4 comment="false" x="26" y="67">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-56-4>
-                <set-val-56-6 comment="false" x="26" y="65">
+                <set-val-56-6 comment="false" x="26" y="92">
                     <div comment="false" id="0" x="0" y="0">
                         <times comment="false" id="0" x="0" y="0">
                             <pi comment="false" id="0" x="0" y="0"/>
@@ -39,9 +43,9 @@
                         <get-val-56-5 comment="false" id="1" x="0" y="0"/>
                     </div>
                 </set-val-56-6>
-                <repeat comment="false" x="26" y="100">
+                <repeat comment="false" x="26" y="127">
                     <group eventID="2" id="-1">
-                        <set-val-56-13 comment="false" x="37" y="125">
+                        <set-val-56-13 comment="false" x="37" y="152">
                             <plus comment="false" id="0" x="0" y="0">
                                 <times comment="false" id="0" x="0" y="0">
                                     <get-val-56-6 comment="false" id="0" x="0" y="0"/>
@@ -53,7 +57,7 @@
                                 </to-degreesradians>
                             </plus>
                         </set-val-56-13>
-                        <set-val-56-10 comment="false" x="37" y="168">
+                        <set-val-56-10 comment="false" x="37" y="195">
                             <times comment="false" id="0" x="0" y="0">
                                 <trig-master comment="false" id="0" x="0" y="0">
                                     <int id="0" val="0"/>
@@ -62,7 +66,7 @@
                                 <get-val-56-7 comment="false" id="1" x="0" y="0"/>
                             </times>
                         </set-val-56-10>
-                        <set-val-56-11 comment="false" x="37" y="211">
+                        <set-val-56-11 comment="false" x="37" y="238">
                             <times comment="false" id="0" x="0" y="0">
                                 <trig-master comment="false" id="0" x="0" y="0">
                                     <int id="0" val="1"/>
@@ -71,7 +75,7 @@
                                 <get-val-56-7 comment="false" id="1" x="0" y="0"/>
                             </times>
                         </set-val-56-11>
-                        <create-actor3 comment="false" x="37" y="254">
+                        <create-actor3 comment="false" x="37" y="281">
                             <ACTORTYPE eid="var" id="0" vid="3"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
@@ -89,10 +93,10 @@
                             </plus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-56-9 comment="false" x="37" y="299">
+                        <set-val-56-9 comment="false" x="37" y="326">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-56-9>
-                        <set-xy comment="false" x="37" y="326">
+                        <set-xy comment="false" x="37" y="353">
                             <ACTOR eid="var" id="0" vid="9"/>
                             <int id="1" val="0"/>
                             <minus comment="false" id="2" x="0" y="0">
@@ -106,7 +110,7 @@
                                 </get-wh>
                             </minus>
                         </set-xy>
-                        <set-xy comment="false" x="37" y="371">
+                        <set-xy comment="false" x="37" y="398">
                             <ACTOR eid="var" id="0" vid="9"/>
                             <int id="1" val="1"/>
                             <minus comment="false" id="2" x="0" y="0">
@@ -120,25 +124,25 @@
                                 </get-wh>
                             </minus>
                         </set-xy>
-                        <setlayer comment="false" x="37" y="416">
+                        <setlayer comment="false" x="37" y="443">
                             <ACTOR eid="var" id="0" vid="9"/>
                             <getlayer comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getlayer>
                         </setlayer>
-                        <add-list comment="false" x="37" y="456">
+                        <add-list comment="false" x="37" y="483">
                             <get-val-56-4 comment="false" id="0" x="0" y="0"/>
                             <get-val-56-9 comment="false" id="1" x="0" y="0"/>
                         </add-list>
                     </group>
                     <get-val-56-5 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <set-val-56-12 comment="false" x="26" y="493">
+                <set-val-56-12 comment="false" x="26" y="520">
                     <int id="0" val="0"/>
                 </set-val-56-12>
-                <for-each comment="false" x="26" y="513">
+                <for-each comment="false" x="26" y="540">
                     <group eventID="2" id="-1">
-                        <set-val-56-13 comment="false" x="37" y="538">
+                        <set-val-56-13 comment="false" x="37" y="565">
                             <plus comment="false" id="0" x="0" y="0">
                                 <times comment="false" id="0" x="0" y="0">
                                     <get-val-56-6 comment="false" id="0" x="0" y="0"/>
@@ -150,19 +154,19 @@
                                 </to-degreesradians>
                             </plus>
                         </set-val-56-13>
-                        <set-attribute comment="false" x="37" y="589">
+                        <set-attribute comment="false" x="37" y="608">
                             <for-each-item comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="Windmill Arm PM"/>
                             <int id="2" val="_Radius"/>
                             <get-val-56-7 comment="false" id="3" x="0" y="0"/>
                         </set-attribute>
-                        <set-attribute comment="false" x="37" y="621">
+                        <set-attribute comment="false" x="37" y="640">
                             <for-each-item comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="Windmill Arm PM"/>
                             <int id="2" val="_StartAngle"/>
                             <get-val-56-13 comment="false" id="3" x="0" y="0"/>
                         </set-attribute>
-                        <set-attribute comment="false" x="37" y="653">
+                        <set-attribute comment="false" x="37" y="672">
                             <for-each-item comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="Windmill Arm PM"/>
                             <int id="2" val="_Pivot"/>
@@ -170,7 +174,7 @@
                                 <int id="0" val="actor"/>
                             </code-short>
                         </set-attribute>
-                        <incdec comment="false" x="37" y="685">
+                        <incdec comment="false" x="37" y="704">
                             <int id="0" val="12"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>

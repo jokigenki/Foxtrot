@@ -114,7 +114,8 @@ nameMap.set("Actor", "actor");
 	
 	override public function init()
 	{
-		            _Lifts = new Array<Dynamic>();
+		            actor.disableActorDrawing();
+        _Lifts = new Array<Dynamic>();
 propertyChanged("_Lifts", _Lifts);
         _LiftAngleGap = asNumber(((Math.PI * 2) / _NumberOfLifts));
 propertyChanged("_LiftAngleGap", _LiftAngleGap);
