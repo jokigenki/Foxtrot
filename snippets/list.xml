@@ -800,6 +800,8 @@
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Activated" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Deactivated" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_60_60_VerticalOscillationPM" classname="scripts.Design_60_60_VerticalOscillationPM" desc="Moves an actor inside a region on the y axis." description="Moves an actor inside a region on the y axis." design="true" drawOrder="0" id="60" language="" name="Vertical Oscillation PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -958,7 +960,7 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
-            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="false"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
@@ -3502,6 +3504,34 @@
     <snippet attachedevent="true" class="scripts.ActorEvents_692" classname="scripts.ActorEvents_692" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="363" language="" name="ActorEvents_692" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_408_408_RandomTimedActivationPM" classname="scripts.Design_408_408_RandomTimedActivationPM" desc="" description="" design="true" drawOrder="0" id="408" language="" name="Random Timed Activation PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Min Time" hidden="false" id="1" name="_MinTime" order="1"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Max Time" hidden="false" id="2" name="_MaxTime" order="2"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Start Active?" hidden="false" id="3" name="_StartActive" order="3"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="true" id="4" name="_IsActive" order="4"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks>
+            <receiver blockID="786" id="1"/>
+        </blocks>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Switch active" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_409_409_ChuckStuffPM" classname="scripts.Design_409_409_ChuckStuffPM" desc="" description="" design="true" drawOrder="0" id="409" language="" name="Chuck Stuff PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Stuff To Chuck" hidden="false" id="1" name="_StuffToChuck" order="1"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Actor Type Name To Chuck" hidden="true" id="3" name="_ActorTypeNameToChuck" order="2"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Throw X Min" hidden="false" id="4" name="_ThrowXMin" order="3"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Throw X Max" hidden="false" id="5" name="_ThrowXMax" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Throw Y Min" hidden="false" id="6" name="_ThrowYMin" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Throw Y Max" hidden="false" id="7" name="_ThrowYMax" order="6"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Throw Force" hidden="false" id="8" name="_ThrowForce" order="7"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Deactivated" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_767" classname="scripts.ActorEvents_767" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="402" language="" name="ActorEvents_767" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>

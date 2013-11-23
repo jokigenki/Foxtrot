@@ -103,8 +103,8 @@
                                             <get-dxy comment="false" id="0" x="0" y="0">
                                                 <get-attribute comment="false" id="0" x="0" y="0">
                                                     <other-actor comment="false" id="0" x="0" y="0"/>
-                                                    <int id="1" val="Match Horizontal Movement PM"/>
-                                                    <int id="2" val="_Target"/>
+                                                    <int id="1" val="Position relative to actor PM"/>
+                                                    <int id="2" val="_TargetActor"/>
                                                 </get-attribute>
                                                 <int id="1" val="0"/>
                                             </get-dxy>
@@ -115,7 +115,7 @@
                             </group>
                             <has-snippet comment="false" id="0" x="0" y="0">
                                 <other-actor comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="Match Horizontal Movement PM"/>
+                                <int id="1" val="Position relative to actor PM"/>
                             </has-snippet>
                         </if>
                         <if comment="false" x="37" y="604">

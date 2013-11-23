@@ -42,13 +42,13 @@ import motion.easing.Sine;
 
 
 
-class ActorEvents_535 extends ActorScript
+class SceneEvents_4 extends SceneScript
 {          	
 	
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
+		super(engine);
 		
 	}
 	

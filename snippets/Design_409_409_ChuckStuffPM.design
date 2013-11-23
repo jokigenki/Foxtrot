@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-409-3 comment="false" x="26" y="40">
+                    <custom-538 comment="false" id="0" x="0" y="0">
+                        <get-val-409-1 comment="false" id="0" x="0" y="0"/>
+                    </custom-538>
+                </set-val-409-3>
+                <create-actor3 comment="false" x="26" y="70">
+                    <code-short comment="false" id="0" x="0" y="0">
+                        <int id="0" val="getActorTypeByName(&amp;quot;&amp;quot; + _ActorTypeNameToChuck)"/>
+                    </code-short>
+                    <get-xy comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="2"/>
+                    </get-xy>
+                    <get-xy comment="false" id="2" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="3"/>
+                    </get-xy>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <push-shove comment="false" x="26" y="110">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <randint comment="false" id="2" x="0" y="0">
+                        <get-val-409-4 comment="false" id="0" x="0" y="0"/>
+                        <get-val-409-5 comment="false" id="1" x="0" y="0"/>
+                    </randint>
+                    <randint comment="false" id="3" x="0" y="0">
+                        <get-val-409-6 comment="false" id="0" x="0" y="0"/>
+                        <get-val-409-7 comment="false" id="1" x="0" y="0"/>
+                    </randint>
+                    <get-val-409-8 comment="false" id="4" x="0" y="0"/>
+                </push-shove>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

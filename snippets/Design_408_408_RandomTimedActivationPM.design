@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-408-4 comment="false" x="26" y="40">
+                    <get-val-408-3 comment="false" id="0" x="0" y="0"/>
+                </set-val-408-4>
+                <dolater comment="false" x="26" y="65">
+                    <group eventID="1" id="-1">
+                        <custom-786 comment="false" x="37" y="102">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-786>
+                    </group>
+                    <randint comment="false" id="0" x="0" y="0">
+                        <get-val-408-1 comment="false" id="0" x="0" y="0"/>
+                        <get-val-408-2 comment="false" id="1" x="0" y="0"/>
+                    </randint>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-1-786 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="78">
+                            <group eventID="1" id="-1">
+                                <shout comment="false" x="48" y="103">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Deactivated"/>
+                                </shout>
+                                <set-val-408-4 comment="false" x="48" y="130">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-408-4>
+                            </group>
+                            <get-val-408-4 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="167">
+                            <group eventID="1" id="-1">
+                                <shout comment="false" x="48" y="187">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Activated"/>
+                                </shout>
+                                <set-val-408-4 comment="false" x="48" y="214">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-408-4>
+                            </group>
+                        </else>
+                        <dolater comment="false" x="37" y="251">
+                            <group eventID="1" id="-1">
+                                <custom-786 comment="false" x="48" y="288">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-786>
+                            </group>
+                            <randint comment="false" id="0" x="0" y="0">
+                                <get-val-408-1 comment="false" id="0" x="0" y="0"/>
+                                <get-val-408-2 comment="false" id="1" x="0" y="0"/>
+                            </randint>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <isalive comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                    </isalive>
+                </if>
+            </group>
+            <get-byobval-408-786-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-786>
+    </group>
+    <group eventID="2" id="-1">
+        <get-byobval-408-786-0 comment="false" x="0" y="0"/>
+    </group>
+</groups>
