@@ -5,12 +5,25 @@
             <group eventID="1" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <custom-713 comment="false" x="37" y="67">
+                        <set-val-393-3 comment="false" x="37" y="67">
+                            <int id="0" val="0"/>
+                        </set-val-393-3>
+                        <custom-713 comment="false" x="37" y="87">
                             <ACTOR eid="4" id="0"/>
                         </custom-713>
-                        <set-val-393-2 comment="false" x="37" y="94">
+                        <set-val-393-2 comment="false" x="37" y="114">
                             <ACTOR eid="6" id="0"/>
                         </set-val-393-2>
+                        <actors-of-type3 comment="false" x="37" y="141">
+                            <group eventID="1" id="-1">
+                                <incdec comment="false" x="48" y="173">
+                                    <int id="0" val="3"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                            </group>
+                            <ACTORTYPE eid="772" id="0"/>
+                        </actors-of-type3>
                     </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
@@ -44,10 +57,16 @@
                         <ACTOR eid="3" id="0"/>
                         <int id="1" val="0"/>
                     </get-xy>
-                    <int id="2" val="256"/>
+                    <minus comment="false" id="2" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="3" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <int id="1" val="32"/>
+                    </minus>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-attribute comment="false" x="26" y="107">
+                <set-attribute comment="false" x="26" y="112">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Match Horizontal Movement PM"/>
                     <int id="2" val="_Target"/>
@@ -55,7 +74,7 @@
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-attribute comment="false" x="26" y="147">
+                <set-attribute comment="false" x="26" y="152">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Jump To Start PM"/>
                     <int id="2" val="_Target"/>
@@ -63,7 +82,7 @@
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-val-393-2 comment="false" x="26" y="187">
+                <set-val-393-2 comment="false" x="26" y="192">
                     <ACTOR eid="lastcreated" id="0"/>
                 </set-val-393-2>
             </group>
@@ -72,4 +91,32 @@
         </event-type-create-kill>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="5" id="0">
+        <event-type-create-kill comment="false" x="15" y="17">
+            <group eventID="5" id="-1">
+                <incdec comment="false" x="26" y="49">
+                    <int id="0" val="3"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="1"/>
+                </incdec>
+                <print comment="false" x="26" y="76">
+                    <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                </print>
+                <if comment="false" x="26" y="101">
+                    <group eventID="5" id="-1">
+                        <print comment="false" x="37" y="131">
+                            <int id="0" val="KILLED!"/>
+                        </print>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <ACTORTYPE eid="772" id="1"/>
+        </event-type-create-kill>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>
