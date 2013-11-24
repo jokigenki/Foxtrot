@@ -104,7 +104,53 @@
                 </print>
                 <if comment="false" x="26" y="101">
                     <group eventID="5" id="-1">
-                        <print comment="false" x="37" y="131">
+                        <set-attribute comment="false" x="37" y="131">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Horizontal Oscillation PM"/>
+                            <int id="2" val="_XSpeed"/>
+                            <int id="3" val="10"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="158">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MaxTime"/>
+                            <int id="3" val="4"/>
+                        </set-attribute>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="56"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="197">
+                    <group eventID="5" id="-1">
+                        <set-attribute comment="false" x="37" y="227">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Horizontal Oscillation PM"/>
+                            <int id="2" val="_XSpeed"/>
+                            <int id="3" val="12"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="254">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MinTime"/>
+                            <int id="3" val="2"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="281">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MaxTime"/>
+                            <int id="3" val="3"/>
+                        </set-attribute>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="28"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="320">
+                    <group eventID="5" id="-1">
+                        <print comment="false" x="37" y="350">
                             <int id="0" val="KILLED!"/>
                         </print>
                     </group>
@@ -112,7 +158,7 @@
                         <get-val-393-3 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
                     </eq>
-                </if>
+                </else-if>
             </group>
             <int id="0" val="1"/>
             <ACTORTYPE eid="772" id="1"/>
