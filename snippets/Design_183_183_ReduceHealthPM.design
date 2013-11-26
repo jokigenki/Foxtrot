@@ -67,6 +67,32 @@
                         <int id="1" val="Super Simple State Machine PM"/>
                     </has-snippet>
                 </if>
+                <for-each comment="false" x="26" y="557">
+                    <group eventID="1" id="-1">
+                        <code-long comment="false" x="37" y="582">
+                            <int id="0" val="var values = item.split(&amp;quot;:&amp;quot;);&#10;var healthValue = Std.parseInt(values[0]);&#10;var sound = values[1];&#10;"/>
+                        </code-long>
+                        <if comment="false" x="37" y="742">
+                            <group eventID="1" id="-1">
+                                <play-sound4 comment="false" x="48" y="777">
+                                    <int id="0" val="0"/>
+                                    <custom-477 comment="false" id="1" x="0" y="0">
+                                        <code-short comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="sound"/>
+                                        </code-short>
+                                    </custom-477>
+                                </play-sound4>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <code-short comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="healthValue"/>
+                                </code-short>
+                                <get-val-183-4 comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                    </group>
+                    <get-val-183-8 comment="false" id="0" x="0" y="0"/>
+                </for-each>
             </group>
             <int id="0" val="Killed"/>
         </event-custom>

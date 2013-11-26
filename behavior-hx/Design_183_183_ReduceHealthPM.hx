@@ -55,9 +55,9 @@ public var _CurrentHealth:Float;
 
 public var _KilledSceneEvent:String;
 
-public var _HealthStates:Array<Dynamic>;
-
 public var _ReducedHealthEvent:String;
+
+public var _SoundsForHealthValues:Array<Dynamic>;
     public function _customEvent_Killed():Void
 {
         _CurrentHealth -= 1;
@@ -90,6 +90,19 @@ var state = values[1];
 
 }
 
+        for(item in cast(_SoundsForHealthValues, Array<Dynamic>))
+{
+            var values = item.split(":");
+var healthValue = Std.parseInt(values[0]);
+var sound = values[1];
+
+            if((healthValue == _CurrentHealth))
+{
+                playSound(cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(sound)), Sound));
+}
+
+}
+
 }
 
 
@@ -107,10 +120,9 @@ nameMap.set("Current Health", "_CurrentHealth");
 _CurrentHealth = 0.0;
 nameMap.set("Killed Scene Event", "_KilledSceneEvent");
 _KilledSceneEvent = "";
-nameMap.set("Health States", "_HealthStates");
-_HealthStates = [];
 nameMap.set("Reduced Health Event", "_ReducedHealthEvent");
 _ReducedHealthEvent = "ReducedHealth";
+nameMap.set("Sounds For Health Values", "_SoundsForHealthValues");
 nameMap.set("Actor", "actor");
 
 	}
