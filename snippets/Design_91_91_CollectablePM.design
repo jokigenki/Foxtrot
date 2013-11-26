@@ -3,18 +3,15 @@
     <group eventID="1" id="0">
         <event-collide-actortogroup comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <die comment="false" x="26" y="47">
-                    <ACTOR eid="this" id="0"/>
-                </die>
-                <if comment="false" x="26" y="74">
+                <if comment="false" x="26" y="47">
                     <group eventID="3" id="-1">
-                        <custom-327 comment="false" x="37" y="109">
+                        <custom-327 comment="false" x="37" y="82">
                             <get-val-91-3 comment="false" id="0" x="0" y="0"/>
                             <getatype comment="false" id="1" x="0" y="0">
                                 <this-actor comment="false" id="0" x="0" y="0"/>
                             </getatype>
                         </custom-327>
-                        <scene-shout comment="false" x="37" y="154">
+                        <scene-shout comment="false" x="37" y="127">
                             <get-val-91-1 comment="false" id="0" x="0" y="0"/>
                         </scene-shout>
                     </group>
@@ -24,9 +21,9 @@
                         </str-empty>
                     </not>
                 </if>
-                <if comment="false" x="26" y="191">
+                <if comment="false" x="26" y="164">
                     <group eventID="1" id="-1">
-                        <shout comment="false" x="37" y="234">
+                        <shout comment="false" x="37" y="207">
                             <get-val-91-2 comment="false" id="0" x="0" y="0"/>
                             <get-val-91-1 comment="false" id="1" x="0" y="0"/>
                         </shout>
@@ -37,9 +34,23 @@
                         </custom-65>
                     </not>
                 </if>
-                <save-game comment="false" x="26" y="278">
+                <if comment="false" x="26" y="251">
+                    <group eventID="1" id="-1">
+                        <custom-668 comment="false" x="37" y="284">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-668>
+                    </group>
+                    <has-snippet comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Display On Collected PM"/>
+                    </has-snippet>
+                </if>
+                <save-game comment="false" x="26" y="323">
                     <group eventID="1" id="-1"/>
                 </save-game>
+                <die comment="false" x="26" y="380">
+                    <ACTOR eid="this" id="0"/>
+                </die>
             </group>
             <ACTOR eid="this" id="0"/>
             <GROUP eid="0" id="1"/>
@@ -51,13 +62,21 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="37" y="70">
+                        <die comment="false" x="37" y="83">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>
-                    <custom-326 comment="false" id="0" x="0" y="0">
-                        <get-val-91-3 comment="false" id="0" x="0" y="0"/>
-                    </custom-326>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Display On Collected PM"/>
+                            </has-snippet>
+                        </not>
+                        <custom-326 comment="false" id="1" x="0" y="0">
+                            <get-val-91-3 comment="false" id="0" x="0" y="0"/>
+                        </custom-326>
+                    </and>
                 </if>
             </group>
         </init>

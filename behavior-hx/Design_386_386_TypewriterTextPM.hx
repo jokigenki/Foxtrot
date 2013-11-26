@@ -134,11 +134,11 @@ if(wrapper.enabled){
             g.setFont(_UseFont);
 }
 
-        _CurrentY = asNumber(_YPos);
+        _CurrentY = asNumber((_YPos - getScreenY()));
 propertyChanged("_CurrentY", _CurrentY);
         for(index0 in 0...Std.int(_Lines.length))
 {
-            g.drawString("" + _Lines[Std.int(index0)], _XPos, _CurrentY);
+            g.drawString("" + _Lines[Std.int(index0)], (_XPos - getScreenX()), _CurrentY);
             _CurrentY += (g.font.getHeight()/Engine.SCALE + _Leading);
 propertyChanged("_CurrentY", _CurrentY);
 }

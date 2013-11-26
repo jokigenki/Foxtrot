@@ -15,19 +15,29 @@
                     </value>
                 </if>
                 <set-val-386-10 comment="false" x="26" y="112">
-                    <get-val-386-4 comment="false" id="0" x="0" y="0"/>
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-386-4 comment="false" id="0" x="0" y="0"/>
+                        <screen-xy comment="false" id="1" x="0" y="0">
+                            <int id="0" val="1"/>
+                        </screen-xy>
+                    </minus>
                 </set-val-386-10>
-                <repeat comment="false" x="26" y="137">
+                <repeat comment="false" x="26" y="150">
                     <group eventID="1" id="-1">
-                        <draw-text comment="false" x="37" y="167">
+                        <draw-text comment="false" x="37" y="180">
                             <get-item comment="false" id="0" x="0" y="0">
                                 <get-val-386-9 comment="false" id="0" x="0" y="0"/>
                                 <loopindex comment="false" id="1" x="0" y="0"/>
                             </get-item>
-                            <get-val-386-3 comment="false" id="1" x="0" y="0"/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-val-386-3 comment="false" id="0" x="0" y="0"/>
+                                <screen-xy comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </screen-xy>
+                            </minus>
                             <get-val-386-10 comment="false" id="2" x="0" y="0"/>
                         </draw-text>
-                        <incdec comment="false" x="37" y="197">
+                        <incdec comment="false" x="37" y="218">
                             <int id="0" val="10"/>
                             <int id="1" val="0"/>
                             <plus comment="false" id="2" x="0" y="0">

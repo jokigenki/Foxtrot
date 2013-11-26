@@ -159,6 +159,7 @@ propertyChanged("_DoorReady", _DoorReady);
 
             if(_SaveExit)
 {
+                trace("" + (("" + "SAVING ") + ("" + _Destination)));
                 setGameAttribute("Save Destination", _Destination);
                 saveGame("mySave", function(success:Bool):Void {
 

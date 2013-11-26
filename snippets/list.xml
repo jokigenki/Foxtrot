@@ -1154,7 +1154,7 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
-            <event displayName=" Actor - Group" enabled="true" id="1" name="event-collide-actortogroup" order="1" repeats="true"/>
+            <event displayName=" Actor - Group" enabled="true" id="1" name="event-collide-actortogroup" order="3" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
@@ -1812,18 +1812,16 @@
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_191_191_DisplayOnCollectedPM" classname="scripts.Design_191_191_DisplayOnCollectedPM" desc="When the object is collected, display it in the centre of the screen, with a scaling effect followed by fade out." description="When the object is collected, display it in the centre of the screen, with a scaling effect followed by fade out." design="true" drawOrder="0" id="191" language="" name="Display On Collected PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Grow Time" hidden="false" id="1" name="_GrowTime" order="1"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Fade Time" hidden="false" id="2" name="_FadeTime" order="2"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Displaying?" hidden="true" id="3" name="_IsDisplaying" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Grow Percent" hidden="false" id="4" name="_GrowPercent" order="4"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Size Percent" hidden="false" id="5" name="_StartSizePercent" order="5"/>
-        <actortype default="" defaultValue="" desc="" dropdown="" fullname="Collection Display Type" hidden="false" id="6" name="_CollectionDisplayType" order="6"/>
+        <actortype default="" defaultValue="" desc="" dropdown="" fullname="Collection Display Type" hidden="false" id="6" name="_CollectionDisplayType" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Collected?" hidden="true" id="7" name="_IsCollected" order="2"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Grow Percent" hidden="false" id="8" name="_GrowPercent" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Grow Time" hidden="false" id="9" name="_GrowTime" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Fade Time" hidden="false" id="10" name="_FadeTime" order="5"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks>
             <receiver blockID="668" id="1"/>
         </blocks>
         <events>
-            <event displayName="Actor Killed" enabled="true" id="1" name="event-actor-create-kill" order="2" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
             <event displayName="Display collected" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
         </events>
@@ -1905,8 +1903,8 @@
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
-            <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_310" classname="scripts.ActorEvents_310" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="204" language="" name="ActorEvents_310" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -3502,6 +3500,10 @@
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_692" classname="scripts.ActorEvents_692" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="363" language="" name="ActorEvents_692" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_787" classname="scripts.ActorEvents_787" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="410" language="" name="ActorEvents_787" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
