@@ -30,44 +30,53 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="47">
                     <group eventID="3" id="-1">
-                        <if comment="false" x="37" y="85">
-                            <group eventID="1" id="-1">
-                                <custom-327 comment="false" x="48" y="120">
-                                    <get-val-64-2 comment="false" id="0" x="0" y="0"/>
-                                    <getatype comment="false" id="1" x="0" y="0">
-                                        <this-actor comment="false" id="0" x="0" y="0"/>
-                                    </getatype>
-                                </custom-327>
-                                <shout comment="false" x="48" y="165">
+                        <if comment="false" x="37" y="82">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="120">
+                                    <group eventID="1" id="-1">
+                                        <custom-327 comment="false" x="59" y="155">
+                                            <get-val-64-2 comment="false" id="0" x="0" y="0"/>
+                                            <getatype comment="false" id="1" x="0" y="0">
+                                                <this-actor comment="false" id="0" x="0" y="0"/>
+                                            </getatype>
+                                        </custom-327>
+                                        <shout comment="false" x="59" y="200">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-64-1 comment="false" id="1" x="0" y="0"/>
+                                        </shout>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <str-empty comment="false" id="0" x="0" y="0">
+                                            <get-val-64-2 comment="false" id="0" x="0" y="0"/>
+                                        </str-empty>
+                                    </not>
+                                </if>
+                                <if comment="false" x="48" y="244">
+                                    <group eventID="1" id="-1">
+                                        <custom-668 comment="false" x="59" y="277">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-668>
+                                    </group>
+                                    <has-snippet comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Display On Collected PM"/>
+                                    </has-snippet>
+                                </if>
+                                <die comment="false" x="48" y="316">
                                     <ACTOR eid="this" id="0"/>
-                                    <get-val-64-1 comment="false" id="1" x="0" y="0"/>
-                                </shout>
-                            </group>
-                            <not comment="false" id="0" x="0" y="0">
-                                <str-empty comment="false" id="0" x="0" y="0">
-                                    <get-val-64-2 comment="false" id="0" x="0" y="0"/>
-                                </str-empty>
-                            </not>
-                        </if>
-                        <if comment="false" x="37" y="209">
-                            <group eventID="1" id="-1">
-                                <custom-668 comment="false" x="48" y="242">
-                                    <ACTOR eid="this" id="0"/>
-                                </custom-668>
+                                </die>
                             </group>
                             <has-snippet comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="Display On Collected PM"/>
+                                <collide-member-of-group comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Collector PM"/>
                             </has-snippet>
                         </if>
-                        <die comment="false" x="37" y="281">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
                     </group>
-                    <has-snippet comment="false" id="0" x="0" y="0">
-                        <collide-member-of-group comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="Collector PM"/>
-                    </has-snippet>
+                    <not comment="false" id="0" x="0" y="0">
+                        <custom-326 comment="false" id="0" x="0" y="0">
+                            <get-val-64-2 comment="false" id="0" x="0" y="0"/>
+                        </custom-326>
+                    </not>
                 </if>
             </group>
             <ACTOR eid="this" id="0"/>
