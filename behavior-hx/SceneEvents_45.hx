@@ -42,57 +42,25 @@ import motion.easing.Sine;
 
 
 
-class Design_169_169_DisableBehavioursOnKilledPM extends ActorScript
+class SceneEvents_45 extends SceneScript
 {          	
 	
-public var _BehavioursToDisable:Array<Dynamic>;
-
-public var _IsKilled:Bool;
-    public function _customEvent_Killed():Void
-{
-        for(item in cast(_BehavioursToDisable, Array<Dynamic>))
-{
-            if(actor.hasBehavior(item))
-{
-                actor.disableBehavior(item);
-}
-
-}
-
-        actor.setXVelocity(0);
-        actor.setYVelocity(0);
-}
-
-    
-
-/* Params are:__Self */
-public function _customBlock_RunDisableOnKilled():Void
-{
-var __Self:Actor = actor;
-        if(actor.hasBehavior("Disable Behaviours On Killed PM"))
-{
-            actor.say("Disable Behaviours On Killed PM", "_customEvent_" + "Killed");
-}
-
-        actor.setXVelocity(0);
-        actor.setYVelocity(0);
-}
-
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
-		nameMap.set("Behaviours To Disable", "_BehavioursToDisable");
-_BehavioursToDisable = [];
-nameMap.set("Is Killed?", "_IsKilled");
-_IsKilled = false;
-nameMap.set("Actor", "actor");
-
+		super(engine);
+		
 	}
 	
 	override public function init()
 	{
-		
+		            setGameAttribute("Last Destination", "_Larder|Farm1_01|B|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Farm1_01|B|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Transition To Farm|A|A");
+        runLater(1000 * 8, function(timeTask:TimedTask):Void {
+                    shoutToScene("_customEvent_" + "SwitchScene");
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

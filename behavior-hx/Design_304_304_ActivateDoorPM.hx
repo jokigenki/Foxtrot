@@ -64,6 +64,16 @@ public var _TargetDoorName:String;
 public var _ExitTime:Float;
 
 public var _EntranceTime:Float;
+
+public var _ExitVertical:Float;
+
+public var _SlideToX:Float;
+
+public var _SlideToY:Float;
+
+public var _SlideStartY:Float;
+
+public var _SlideStartX:Float;
     public function _customEvent_ActivateDoor():Void
 {
         if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_DoExitsMatch(_Destination,getGameAttribute("Last Destination"))), Bool))
@@ -83,33 +93,73 @@ propertyChanged("_DoorReady", _DoorReady);
             _ActorToMove.fadeTo(0 / 100, 0, Linear.easeNone);
             _ActorToMove.fadeTo(1, _EntranceTime, Linear.easeNone);
             _ActorToMove.setY(actor.getY());
-            if(_SlideToCentre)
+            if((_ExitSide < 0))
 {
-                if((_ExitSide < 0))
-{
-                    _ActorToMove.setActorValue("Facing Right?", false);
-                    _ActorToMove.setX((actor.getXCenter() - _ActorToMove.getWidth()));
-                    _ActorToMove.moveTo((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float) - (_ActorToMove.getWidth() + 5)), _ActorToMove.getY(), _EntranceTime, Expo.easeOut);
+                actor.setActorValue("Facing Right?", false);
+                _SlideToX = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float) - (actor.getWidth() + 5)));
+propertyChanged("_SlideToX", _SlideToX);
+                _SlideStartX = asNumber((actor.getXCenter() - actor.getWidth()));
+propertyChanged("_SlideStartX", _SlideStartX);
 }
 
-                else if((_ExitSide > 0))
+            else if((_ExitSide > 0))
 {
-                    _ActorToMove.setActorValue("Facing Right?", true);
-                    _ActorToMove.setX((actor.getXCenter() + _ActorToMove.getWidth()));
-                    _ActorToMove.moveTo((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(actor)), Float) + 5), _ActorToMove.getY(), _EntranceTime, Expo.easeOut);
+                actor.setActorValue("Facing Right?", true);
+                _SlideToX = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(actor)), Float) + 5));
+propertyChanged("_SlideToX", _SlideToX);
+                _SlideStartX = asNumber((actor.getXCenter() + actor.getWidth()));
+propertyChanged("_SlideStartX", _SlideStartX);
+}
+
+            else
+{
+                if(_MoveToLastX)
+{
+                    _SlideToX = asNumber(getGameAttribute("Last Scene X Position"));
+propertyChanged("_SlideToX", _SlideToX);
+                    _SlideStartX = asNumber(getGameAttribute("Last Scene X Position"));
+propertyChanged("_SlideStartX", _SlideStartX);
 }
 
                 else
 {
-                    _ActorToMove.setX(actor.getX());
-                    _ActorToMove.setY(actor.getY());
+                    _SlideToX = asNumber(actor.getX());
+propertyChanged("_SlideToX", _SlideToX);
+                    _SlideStartX = asNumber(actor.getX());
+propertyChanged("_SlideStartX", _SlideStartX);
 }
 
 }
 
-            else if(_MoveToLastX)
+            if((_ExitVertical < 0))
 {
-                _ActorToMove.setX(getGameAttribute("Last Scene X Position"));
+                _SlideToY = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float) - (actor.getHeight() + 5)));
+propertyChanged("_SlideToY", _SlideToY);
+                _SlideStartY = asNumber((actor.getYCenter() - actor.getHeight()));
+propertyChanged("_SlideStartY", _SlideStartY);
+}
+
+            else if((_ExitVertical > 0))
+{
+                _SlideToY = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) + 5));
+propertyChanged("_SlideToY", _SlideToY);
+                _SlideStartY = asNumber((actor.getYCenter() + actor.getHeight()));
+propertyChanged("_SlideStartY", _SlideStartY);
+}
+
+            else
+{
+                _SlideToY = asNumber(actor.getY());
+propertyChanged("_SlideToY", _SlideToY);
+                _SlideStartY = asNumber(actor.getY());
+propertyChanged("_SlideStartY", _SlideStartY);
+}
+
+            _ActorToMove.setX(_SlideStartX);
+            _ActorToMove.setY(_SlideStartY);
+            if((!(_SlideStartX == _SlideToX) || !(_SlideStartY == _SlideToY)))
+{
+                _ActorToMove.moveTo(_SlideToX, _SlideToY, _EntranceTime, Expo.easeOut);
 }
 
 }
@@ -127,7 +177,7 @@ propertyChanged("_DoorReady", _DoorReady);
 
             _DoorReady = false;
 propertyChanged("_DoorReady", _DoorReady);
-            runLater(1000 * _ExitSide, function(timeTask:TimedTask):Void {
+            runLater(1000 * _ExitTime, function(timeTask:TimedTask):Void {
                         _DoorReady = true;
 propertyChanged("_DoorReady", _DoorReady);
 }, actor);
@@ -207,7 +257,17 @@ nameMap.set("Exit Time", "_ExitTime");
 _ExitTime = 0.5;
 nameMap.set("Entrance Time", "_EntranceTime");
 _EntranceTime = 0.5;
+nameMap.set("Exit Vertical", "_ExitVertical");
+_ExitVertical = 0;
+nameMap.set("Slide To X", "_SlideToX");
+_SlideToX = 0;
+nameMap.set("Slide To Y", "_SlideToY");
+_SlideToY = 0;
 nameMap.set("Actor", "actor");
+nameMap.set("Slide Start Y", "_SlideStartY");
+_SlideStartY = 0;
+nameMap.set("Slide Start X", "_SlideStartX");
+_SlideStartX = 0;
 
 	}
 	

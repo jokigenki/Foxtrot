@@ -58,8 +58,11 @@ public var _KillY:Float;
 public var _KillForce:Float;
 
 public var _ChosenAnimation:String;
+
+public var _SFX:Sound;
     public function _customEvent_Killed():Void
 {
+        playSound(_SFX);
         actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
         if((_KillX < 0))
 {
@@ -118,6 +121,7 @@ _KillY = 0.0;
 nameMap.set("Kill Force", "_KillForce");
 _KillForce = 0.0;
 nameMap.set("Chosen Animation", "_ChosenAnimation");
+nameMap.set("SFX", "_SFX");
 nameMap.set("Actor", "actor");
 
 	}

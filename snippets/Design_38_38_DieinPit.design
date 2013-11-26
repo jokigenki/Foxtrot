@@ -7,12 +7,15 @@
                     <group eventID="-1" id="-1">
                         <if comment="false" x="37" y="83">
                             <group eventID="-1" id="-1">
-                                <die comment="false" x="48" y="113">
+                                <print comment="false" x="48" y="113">
+                                    <int id="0" val="KILLED BY PIT!"/>
+                                </print>
+                                <die comment="false" x="48" y="133">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
-                                <if comment="false" x="48" y="140">
+                                <if comment="false" x="48" y="160">
                                     <group eventID="1" id="-1">
-                                        <say comment="false" x="59" y="173">
+                                        <say comment="false" x="59" y="193">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="Reload On Death PM"/>
                                             <int id="2" val="Reload"/>
@@ -32,7 +35,7 @@
                     <more comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="5"/>
+                            <int id="1" val="1"/>
                         </get-xy>
                         <plus comment="false" id="1" x="0" y="0">
                             <scene-wh comment="false" id="0" x="0" y="0">
@@ -45,9 +48,5 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="-1">
-        <screen-wh comment="false" x="493" y="109">
-            <int id="0" val="1"/>
-        </screen-wh>
-    </group>
+    <group eventID="1" id="-1"/>
 </groups>

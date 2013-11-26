@@ -57,10 +57,11 @@ class Design_38_38_DieinPit extends ActorScript
 	{
 		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if((actor.getScreenY() > (getSceneHeight() + 32)))
+        if((actor.getY() > (getSceneHeight() + 32)))
 {
             if(!(isTransitioning()))
 {
+                trace("" + "KILLED BY PIT!");
                 recycleActor(actor);
                 if(actor.isBehaviorEnabled("Reload On Death PM"))
 {

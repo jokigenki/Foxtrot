@@ -50,131 +50,217 @@
                         </set-xy>
                         <if comment="false" x="37" y="350">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="375">
-                                    <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="405">
-                                            <ACTOR eid="var" id="0" vid="4"/>
-                                            <int id="1" val="Facing Right?"/>
-                                            <false comment="false" id="2" x="0" y="0"/>
-                                        </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="437">
-                                            <ACTOR eid="var" id="0" vid="4"/>
+                                <actor-set-prop comment="false" x="48" y="380">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                                <set-val-304-14 comment="false" x="48" y="412">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <custom-63 comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-63>
+                                        <plus comment="false" id="1" x="0" y="0">
+                                            <get-wh comment="false" id="0" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                                <int id="1" val="0"/>
+                                            </get-wh>
+                                            <int id="1" val="5"/>
+                                        </plus>
+                                    </minus>
+                                </set-val-304-14>
+                                <set-val-304-16 comment="false" x="48" y="455">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="2"/>
+                                        </get-xy>
+                                        <get-wh comment="false" id="1" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
                                             <int id="1" val="0"/>
-                                            <minus comment="false" id="2" x="0" y="0">
-                                                <get-xy comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                    <int id="1" val="2"/>
-                                                </get-xy>
-                                                <get-wh comment="false" id="1" x="0" y="0">
-                                                    <ACTOR eid="var" id="0" vid="4"/>
-                                                    <int id="1" val="0"/>
-                                                </get-wh>
-                                            </minus>
-                                        </set-xy>
-                                        <moveToBy comment="false" x="59" y="482">
-                                            <ACTOR eid="var" id="0" vid="4"/>
-                                            <int id="1" val="1"/>
-                                            <minus comment="false" id="2" x="0" y="0">
-                                                <custom-63 comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                </custom-63>
-                                                <plus comment="false" id="1" x="0" y="0">
-                                                    <get-wh comment="false" id="0" x="0" y="0">
-                                                        <ACTOR eid="var" id="0" vid="4"/>
-                                                        <int id="1" val="0"/>
-                                                    </get-wh>
-                                                    <int id="1" val="5"/>
-                                                </plus>
-                                            </minus>
-                                            <get-xy comment="false" id="3" x="0" y="0">
-                                                <ACTOR eid="var" id="0" vid="4"/>
-                                                <int id="1" val="1"/>
-                                            </get-xy>
-                                            <get-val-304-12 comment="false" id="4" x="0" y="0"/>
-                                            <int id="5" val="12"/>
-                                        </moveToBy>
+                                        </get-wh>
+                                    </minus>
+                                </set-val-304-16>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-304-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </less>
+                        </if>
+                        <else-if comment="false" x="37" y="505">
+                            <group eventID="1" id="-1">
+                                <actor-set-prop comment="false" x="48" y="535">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Facing Right?"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                                <set-val-304-14 comment="false" x="48" y="567">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <custom-61 comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-61>
+                                        <int id="1" val="5"/>
+                                    </plus>
+                                </set-val-304-14>
+                                <set-val-304-16 comment="false" x="48" y="605">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="2"/>
+                                        </get-xy>
+                                        <get-wh comment="false" id="1" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                        </get-wh>
+                                    </plus>
+                                </set-val-304-16>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-304-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </else-if>
+                        <else comment="false" x="37" y="655">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="675">
+                                    <group eventID="1" id="-1">
+                                        <set-val-304-14 comment="false" x="59" y="700">
+                                            <get-game-val-7 comment="false" id="0" x="0" y="0"/>
+                                        </set-val-304-14>
+                                        <set-val-304-16 comment="false" x="59" y="725">
+                                            <get-game-val-7 comment="false" id="0" x="0" y="0"/>
+                                        </set-val-304-16>
                                     </group>
-                                    <less comment="false" id="0" x="0" y="0">
-                                        <get-val-304-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="0"/>
-                                    </less>
+                                    <get-val-304-8 comment="false" id="0" x="0" y="0"/>
                                 </if>
-                                <else-if comment="false" x="48" y="544">
+                                <else comment="false" x="48" y="762">
                                     <group eventID="1" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="574">
-                                            <ACTOR eid="var" id="0" vid="4"/>
-                                            <int id="1" val="Facing Right?"/>
-                                            <true comment="false" id="2" x="0" y="0"/>
-                                        </actor-set-prop>
-                                        <set-xy comment="false" x="59" y="606">
-                                            <ACTOR eid="var" id="0" vid="4"/>
-                                            <int id="1" val="0"/>
-                                            <plus comment="false" id="2" x="0" y="0">
-                                                <get-xy comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                    <int id="1" val="2"/>
-                                                </get-xy>
-                                                <get-wh comment="false" id="1" x="0" y="0">
-                                                    <ACTOR eid="var" id="0" vid="4"/>
-                                                    <int id="1" val="0"/>
-                                                </get-wh>
-                                            </plus>
-                                        </set-xy>
-                                        <moveToBy comment="false" x="59" y="651">
-                                            <ACTOR eid="var" id="0" vid="4"/>
-                                            <int id="1" val="1"/>
-                                            <plus comment="false" id="2" x="0" y="0">
-                                                <custom-61 comment="false" id="0" x="0" y="0">
-                                                    <ACTOR eid="this" id="0"/>
-                                                </custom-61>
-                                                <int id="1" val="5"/>
-                                            </plus>
-                                            <get-xy comment="false" id="3" x="0" y="0">
-                                                <ACTOR eid="var" id="0" vid="4"/>
-                                                <int id="1" val="1"/>
-                                            </get-xy>
-                                            <get-val-304-12 comment="false" id="4" x="0" y="0"/>
-                                            <int id="5" val="12"/>
-                                        </moveToBy>
-                                    </group>
-                                    <more comment="false" id="0" x="0" y="0">
-                                        <get-val-304-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="0"/>
-                                    </more>
-                                </else-if>
-                                <else comment="false" x="48" y="708">
-                                    <group eventID="1" id="-1">
-                                        <set-xy comment="false" x="59" y="728">
-                                            <ACTOR eid="var" id="0" vid="4"/>
-                                            <int id="1" val="0"/>
-                                            <get-xy comment="false" id="2" x="0" y="0">
+                                        <set-val-304-14 comment="false" x="59" y="782">
+                                            <get-xy comment="false" id="0" x="0" y="0">
                                                 <ACTOR eid="this" id="0"/>
                                                 <int id="1" val="0"/>
                                             </get-xy>
-                                        </set-xy>
-                                        <set-xy comment="false" x="59" y="768">
-                                            <ACTOR eid="var" id="0" vid="4"/>
-                                            <int id="1" val="1"/>
-                                            <get-xy comment="false" id="2" x="0" y="0">
+                                        </set-val-304-14>
+                                        <set-val-304-16 comment="false" x="59" y="815">
+                                            <get-xy comment="false" id="0" x="0" y="0">
                                                 <ACTOR eid="this" id="0"/>
-                                                <int id="1" val="1"/>
+                                                <int id="1" val="0"/>
                                             </get-xy>
-                                        </set-xy>
+                                        </set-val-304-16>
                                     </group>
                                 </else>
                             </group>
-                            <get-val-304-7 comment="false" id="0" x="0" y="0"/>
-                        </if>
-                        <else-if comment="false" x="37" y="832">
-                            <group eventID="2" id="-1">
-                                <set-xy comment="false" x="48" y="857">
-                                    <ACTOR eid="var" id="0" vid="4"/>
-                                    <int id="1" val="0"/>
-                                    <get-game-val-7 comment="false" id="2" x="0" y="0"/>
-                                </set-xy>
+                        </else>
+                        <if comment="false" x="37" y="872">
+                            <group eventID="1" id="-1">
+                                <set-val-304-15 comment="false" x="48" y="902">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <custom-62 comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-62>
+                                        <plus comment="false" id="1" x="0" y="0">
+                                            <get-wh comment="false" id="0" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                                <int id="1" val="1"/>
+                                            </get-wh>
+                                            <int id="1" val="5"/>
+                                        </plus>
+                                    </minus>
+                                </set-val-304-15>
+                                <set-val-304-17 comment="false" x="48" y="945">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="3"/>
+                                        </get-xy>
+                                        <get-wh comment="false" id="1" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-wh>
+                                    </minus>
+                                </set-val-304-17>
                             </group>
-                            <get-val-304-8 comment="false" id="0" x="0" y="0"/>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-304-13 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </less>
+                        </if>
+                        <else-if comment="false" x="37" y="995">
+                            <group eventID="1" id="-1">
+                                <set-val-304-15 comment="false" x="48" y="1025">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <custom-66 comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-66>
+                                        <int id="1" val="5"/>
+                                    </plus>
+                                </set-val-304-15>
+                                <set-val-304-17 comment="false" x="48" y="1063">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="3"/>
+                                        </get-xy>
+                                        <get-wh comment="false" id="1" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-wh>
+                                    </plus>
+                                </set-val-304-17>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-304-13 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
                         </else-if>
+                        <else comment="false" x="37" y="1118">
+                            <group eventID="1" id="-1">
+                                <set-val-304-15 comment="false" x="48" y="1138">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                </set-val-304-15>
+                                <set-val-304-17 comment="false" x="48" y="1171">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                </set-val-304-17>
+                            </group>
+                        </else>
+                        <set-xy comment="false" x="37" y="1216">
+                            <ACTOR eid="var" id="0" vid="4"/>
+                            <int id="1" val="0"/>
+                            <get-val-304-16 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="1248">
+                            <ACTOR eid="var" id="0" vid="4"/>
+                            <int id="1" val="1"/>
+                            <get-val-304-17 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <if comment="false" x="37" y="1280">
+                            <group eventID="1" id="-1">
+                                <moveToBy comment="false" x="48" y="1315">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="1"/>
+                                    <get-val-304-14 comment="false" id="2" x="0" y="0"/>
+                                    <get-val-304-15 comment="false" id="3" x="0" y="0"/>
+                                    <get-val-304-12 comment="false" id="4" x="0" y="0"/>
+                                    <int id="5" val="12"/>
+                                </moveToBy>
+                            </group>
+                            <or comment="false" id="0" x="0" y="0">
+                                <noteq comment="false" id="0" x="0" y="0">
+                                    <get-val-304-16 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-304-14 comment="false" id="1" x="0" y="0"/>
+                                </noteq>
+                                <noteq comment="false" id="1" x="0" y="0">
+                                    <get-val-304-17 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-304-15 comment="false" id="1" x="0" y="0"/>
+                                </noteq>
+                            </or>
+                        </if>
                     </group>
                     <custom-551 comment="false" id="0" x="0" y="0">
                         <get-val-304-3 comment="false" id="0" x="0" y="0"/>
@@ -185,16 +271,23 @@
             <int id="0" val="ActivateDoor"/>
         </event-custom>
     </group>
-    <group eventID="1" id="-1">
-        <div comment="false" x="535" y="328">
-            <int id="0" val=""/>
-            <int id="1" val="2"/>
-        </div>
-        <div comment="false" x="545" y="371">
-            <int id="0" val=""/>
-            <int id="1" val="2"/>
-        </div>
+    <group eventID="1" id="1">
+        <if comment="false" x="606" y="343">
+            <group eventID="1" id="-1"/>
+            <get-val-304-7 comment="false" id="0" x="0" y="0"/>
+        </if>
+        <else-if comment="false" x="606" y="400">
+            <group eventID="2" id="-1">
+                <set-xy comment="false" x="617" y="425">
+                    <ACTOR eid="var" id="0" vid="4"/>
+                    <int id="1" val="0"/>
+                    <get-game-val-7 comment="false" id="2" x="0" y="0"/>
+                </set-xy>
+            </group>
+            <get-val-304-8 comment="false" id="0" x="0" y="0"/>
+        </else-if>
     </group>
+    <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
@@ -217,7 +310,7 @@
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-304-9>
                             </group>
-                            <get-val-304-2 comment="false" id="0" x="0" y="0"/>
+                            <get-val-304-11 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                         <set-game-val-20 comment="false" x="37" y="226">
