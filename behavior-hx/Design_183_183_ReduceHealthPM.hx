@@ -98,7 +98,7 @@ var sound = values[1];
 
             if((healthValue == _CurrentHealth))
 {
-                playSound(cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(sound)), Sound));
+                sayToScene("Sound Manager PM", "_customBlock_PlayNamedSound", [sound]);
 }
 
 }
@@ -123,6 +123,7 @@ _KilledSceneEvent = "";
 nameMap.set("Reduced Health Event", "_ReducedHealthEvent");
 _ReducedHealthEvent = "ReducedHealth";
 nameMap.set("Sounds For Health Values", "_SoundsForHealthValues");
+_SoundsForHealthValues = [];
 nameMap.set("Actor", "actor");
 
 	}

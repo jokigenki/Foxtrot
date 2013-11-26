@@ -153,4 +153,48 @@
         </receiver-9-642>
     </group>
     <group eventID="8" id="-1"/>
+    <group eventID="11" id="0">
+        <receiver-15-796 comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="11" id="-1">
+                        <play-sound4 comment="false" x="37" y="70">
+                            <int id="0" val="0"/>
+                            <get-byobval-329-796-0 comment="false" id="1" x="0" y="0"/>
+                        </play-sound4>
+                    </group>
+                    <code-short comment="false" id="0" x="0" y="0">
+                        <int id="0" val="__Sound != null"/>
+                    </code-short>
+                </if>
+            </group>
+            <get-byobval-329-796-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-15-796>
+    </group>
+    <group eventID="11" id="-1">
+        <get-byobval-329-796-0 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="12" id="0">
+        <receiver-16-797 comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="12" id="-1">
+                        <play-sound4 comment="false" x="37" y="70">
+                            <int id="0" val="0"/>
+                            <custom-477 comment="false" id="1" x="0" y="0">
+                                <get-byobval-329-797-0 comment="false" id="0" x="0" y="0"/>
+                            </custom-477>
+                        </play-sound4>
+                    </group>
+                    <code-short comment="false" id="0" x="0" y="0">
+                        <int id="0" val="__SoundName != null"/>
+                    </code-short>
+                </if>
+            </group>
+            <get-byobval-329-797-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-16-797>
+    </group>
+    <group eventID="12" id="-1">
+        <get-byobval-329-797-0 comment="false" x="0" y="0"/>
+    </group>
 </groups>

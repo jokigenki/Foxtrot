@@ -93,7 +93,11 @@ public var _IdleAnimationLeft:String;
 
 public var _FireAnimationRight:String;
 
+public var _SFX:Sound;
+
 public var _IdleAnimationRight:String;
+
+public var _HasFired:Bool;
             public function updateTarget ()
 {
 	var targetDistance = 500; 
@@ -154,7 +158,10 @@ nameMap.set("Is Charging?", "_IsCharging");
 _IsCharging = false;
 nameMap.set("Idle Animation Left", "_IdleAnimationLeft");
 nameMap.set("Fire Animation Right", "_FireAnimationRight");
+nameMap.set("SFX", "_SFX");
 nameMap.set("Idle Animation Right", "_IdleAnimationRight");
+nameMap.set("Has Fired?", "_HasFired");
+_HasFired = false;
 
 	}
 	
@@ -262,11 +269,14 @@ propertyChanged("_IsCharging", _IsCharging);
 }
 
             runLater(1000 * _ChargeTime, function(timeTask:TimedTask):Void {
-                        if(_HasCollision)
+                        if((_HasCollision && !(_HasFired)))
 {
+                            _HasFired = true;
+propertyChanged("_HasFired", _HasFired);
                             _IsCharged = true;
 propertyChanged("_IsCharged", _IsCharged);
                             actor.say("Walking PM", "_customBlock_PreventWalk", [true]);
+                            sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
 }
 
 }, actor);
@@ -274,6 +284,8 @@ propertyChanged("_IsCharged", _IsCharged);
 
         else
 {
+            _HasFired = false;
+propertyChanged("_HasFired", _HasFired);
             actor.say("Walking PM", "_customBlock_PreventWalk", [false]);
             _IsCharged = false;
 propertyChanged("_IsCharged", _IsCharged);

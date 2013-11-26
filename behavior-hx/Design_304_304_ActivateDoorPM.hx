@@ -74,6 +74,8 @@ public var _SlideToY:Float;
 public var _SlideStartY:Float;
 
 public var _SlideStartX:Float;
+
+public var _OpenSound:Sound;
     public function _customEvent_ActivateDoor():Void
 {
         if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_DoExitsMatch(_Destination,getGameAttribute("Last Destination"))), Bool))
@@ -223,6 +225,7 @@ propertyChanged("_DoorReady", _DoorReady);
     public function _customEvent_UnlockDestination():Void
 {
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit(_Destination);
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_OpenSound]);
 }
 
     
@@ -258,16 +261,17 @@ _ExitTime = 0.5;
 nameMap.set("Entrance Time", "_EntranceTime");
 _EntranceTime = 0.5;
 nameMap.set("Exit Vertical", "_ExitVertical");
-_ExitVertical = 0;
+_ExitVertical = 0.0;
 nameMap.set("Slide To X", "_SlideToX");
-_SlideToX = 0;
+_SlideToX = 0.0;
 nameMap.set("Slide To Y", "_SlideToY");
-_SlideToY = 0;
+_SlideToY = 0.0;
 nameMap.set("Actor", "actor");
 nameMap.set("Slide Start Y", "_SlideStartY");
-_SlideStartY = 0;
+_SlideStartY = 0.0;
 nameMap.set("Slide Start X", "_SlideStartX");
-_SlideStartX = 0;
+_SlideStartX = 0.0;
+nameMap.set("Open Sound", "_OpenSound");
 
 	}
 	

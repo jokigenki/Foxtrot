@@ -101,6 +101,28 @@ public function _customBlock_StopCurrentMusic():Void
 }
 
 }
+    
+
+/* Params are:__Sound */
+public function _customBlock_PlaySound(__Sound:Sound):Void
+{
+        if(__Sound != null)
+{
+            playSound(__Sound);
+}
+
+}
+    
+
+/* Params are:__SoundName */
+public function _customBlock_PlayNamedSound(__SoundName:String):Void
+{
+        if(__SoundName != null)
+{
+            playSound(cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound));
+}
+
+}
 
  
  	public function new(dummy:Int, engine:Engine)

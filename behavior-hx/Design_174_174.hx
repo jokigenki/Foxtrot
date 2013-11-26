@@ -60,6 +60,8 @@ public var _SwitchRegion:Region;
 public var _SwitchTargetIDs:Array<Dynamic>;
 
 public var _HasBeenSwitched:Bool;
+
+public var _SFX:Sound;
     
 
 /* Params are: */
@@ -78,6 +80,7 @@ propertyChanged("_IsActive", _IsActive);
         scripts.Design_165_165_MoveOnActivatedPM._customBlock_ActivateList(_SwitchTargetIDs,_IsActive);
         actor.say("Single Use Region Switch PM", "_customBlock_UpdateSwitchAnimation");
         dispatchEvent();
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
 }
     
 
@@ -119,6 +122,7 @@ propertyChanged("_HasBeenSwitched", _HasBeenSwitched);
 propertyChanged("_IsActive", _IsActive);
         scripts.Design_165_165_MoveOnActivatedPM._customBlock_ActivateList(_SwitchTargetIDs,_IsActive);
         actor.say("Single Use Region Switch PM", "_customBlock_UpdateSwitchAnimation");
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
 }
 
  
@@ -136,6 +140,8 @@ nameMap.set("Switch Target IDs", "_SwitchTargetIDs");
 _SwitchTargetIDs = [];
 nameMap.set("Has Been Switched?", "_HasBeenSwitched");
 _HasBeenSwitched = false;
+nameMap.set("SFX", "_SFX");
+_SFX = getSound(800);
 nameMap.set("Actor", "actor");
 
 	}

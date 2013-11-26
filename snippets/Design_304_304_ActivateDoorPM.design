@@ -213,15 +213,15 @@
                                 <int id="1" val="0"/>
                             </more>
                         </else-if>
-                        <else comment="false" x="37" y="1118">
+                        <else comment="false" x="37" y="1113">
                             <group eventID="1" id="-1">
-                                <set-val-304-15 comment="false" x="48" y="1138">
+                                <set-val-304-15 comment="false" x="48" y="1133">
                                     <get-xy comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <int id="1" val="1"/>
                                     </get-xy>
                                 </set-val-304-15>
-                                <set-val-304-17 comment="false" x="48" y="1171">
+                                <set-val-304-17 comment="false" x="48" y="1166">
                                     <get-xy comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <int id="1" val="1"/>
@@ -229,19 +229,19 @@
                                 </set-val-304-17>
                             </group>
                         </else>
-                        <set-xy comment="false" x="37" y="1216">
+                        <set-xy comment="false" x="37" y="1211">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="0"/>
                             <get-val-304-16 comment="false" id="2" x="0" y="0"/>
                         </set-xy>
-                        <set-xy comment="false" x="37" y="1248">
+                        <set-xy comment="false" x="37" y="1243">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="1"/>
                             <get-val-304-17 comment="false" id="2" x="0" y="0"/>
                         </set-xy>
-                        <if comment="false" x="37" y="1280">
+                        <if comment="false" x="37" y="1275">
                             <group eventID="1" id="-1">
-                                <moveToBy comment="false" x="48" y="1315">
+                                <moveToBy comment="false" x="48" y="1310">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="1"/>
                                     <get-val-304-14 comment="false" id="2" x="0" y="0"/>
@@ -441,6 +441,9 @@
                 <custom-325 comment="false" x="26" y="40">
                     <get-val-304-3 comment="false" id="0" x="0" y="0"/>
                 </custom-325>
+                <custom-796 comment="false" x="26" y="65">
+                    <SOUND eid="var" id="0" vid="18"/>
+                </custom-796>
             </group>
             <int id="0" val="UnlockDestination"/>
         </event-custom>

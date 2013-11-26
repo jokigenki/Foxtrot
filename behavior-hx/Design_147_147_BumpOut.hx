@@ -62,7 +62,7 @@ public var _ChosenAnimation:String;
 public var _SFX:Sound;
     public function _customEvent_Killed():Void
 {
-        playSound(_SFX);
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
         actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
         if((_KillX < 0))
 {

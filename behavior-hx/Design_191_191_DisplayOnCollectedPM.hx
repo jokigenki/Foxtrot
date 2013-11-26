@@ -54,6 +54,8 @@ public var _GrowPercent:Float;
 public var _GrowTime:Float;
 
 public var _FadeTime:Float;
+
+public var _SFX:Sound;
     
 
 /* Params are:__Self */
@@ -66,6 +68,7 @@ var __Self:Actor = actor;
         getLastCreatedActor().setY((getLastCreatedActor().getY() - (getLastCreatedActor().getHeight() / 2)));
         getLastCreatedActor().setActorValue("Collection Display", true);
         getLastCreatedActor().setActorValue("Collection Animation", ("" + actor.getAnimation()));
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
 }
 
  
@@ -81,6 +84,8 @@ nameMap.set("Grow Time", "_GrowTime");
 _GrowTime = 0.0;
 nameMap.set("Fade Time", "_FadeTime");
 _FadeTime = 0.0;
+nameMap.set("SFX", "_SFX");
+_SFX = getSound(799);
 nameMap.set("Actor", "actor");
 
 	}
