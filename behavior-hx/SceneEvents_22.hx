@@ -42,7 +42,7 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_16 extends SceneScript
+class SceneEvents_22 extends SceneScript
 {          	
 	
 public var _ExitName:String;
@@ -58,7 +58,13 @@ _ExitName = "";
 	
 	override public function init()
 	{
-		
+		    addActorEntersRegionListener(getRegion(1), function(a:Actor, list:Array<Dynamic>):Void  {
+if(wrapper.enabled && sameAs(getActor(3), a)){
+        getActor(162).say("Activate On Event PM", "_customEvent_" + "Activate");
+        getActor(179).say("Activate On Event PM", "_customEvent_" + "Activate");
+}
+});
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

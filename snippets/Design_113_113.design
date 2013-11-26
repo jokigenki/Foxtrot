@@ -30,9 +30,9 @@
                         </custom-62>
                     </minus>
                 </create-region>
-                <set-val-73-5 comment="false" x="26" y="98">
+                <set-val-113-5 comment="false" x="26" y="98">
                     <REGION eid="lastcreated" id="0"/>
-                </set-val-73-5>
+                </set-val-113-5>
                 <comment-short comment="false" x="26" y="125">
                     <int id="0" val="GA: Last Scene Name (Text)"/>
                 </comment-short>
@@ -84,18 +84,54 @@
                 </if>
                 <if comment="false" x="26" y="132">
                     <group eventID="4" id="-1">
-                        <stop comment="false" x="37" y="162"/>
+                        <stop comment="false" x="37" y="175"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <get-val-113-14 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </less>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-dxy>
+                            <int id="1" val="0"/>
+                        </more>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="207">
+                    <group eventID="4" id="-1">
+                        <stop comment="false" x="37" y="250"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <get-val-113-14 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </more>
+                        <less comment="false" id="1" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-dxy>
+                            <int id="1" val="0"/>
+                        </less>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="282">
+                    <group eventID="4" id="-1">
+                        <stop comment="false" x="37" y="312"/>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <get-val-113-10 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <say comment="false" x="26" y="194">
+                <say comment="false" x="26" y="344">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="Activate Door PM"/>
                     <int id="2" val="UseDoor"/>
                 </say>
-                <set-val-113-10 comment="false" x="26" y="221">
+                <set-val-113-10 comment="false" x="26" y="371">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-113-10>
             </group>

@@ -42,7 +42,7 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_11 extends SceneScript
+class SceneEvents_44 extends SceneScript
 {          	
 	
  
@@ -54,7 +54,13 @@ class SceneEvents_11 extends SceneScript
 	
 	override public function init()
 	{
-		
+		            setGameAttribute("Last Destination", "_Larder|Factory2_01|C|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Factory2_01|C|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Transition To Factory|A|A");
+        runLater(1000 * 8, function(timeTask:TimedTask):Void {
+                    shoutToScene("_customEvent_" + "SwitchScene");
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

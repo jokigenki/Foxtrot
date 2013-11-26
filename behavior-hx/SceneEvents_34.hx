@@ -42,14 +42,18 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_13 extends SceneScript
+class SceneEvents_34 extends SceneScript
 {          	
 	
+public var _ExitName:String;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
+
 	}
 	
 	override public function init()

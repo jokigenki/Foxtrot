@@ -13,7 +13,7 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="130" id="0" name="Region 0" pts="4,-16.0,-65.0,16.0,-65.0,16.0,65.0,-16.0,65.0" r="64" type="box" w="32" x="512" y="127"/>
+        <region b="64" g="64" h="130" id="0" name="Region 0" pts="4,-16.0,65.0,16.0,65.0,16.0,-65.0,-16.0,-65.0" r="64" type="box" w="32" x="512" y="127"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -44,7 +44,6 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -63,6 +62,7 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
+                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="9" c="false" group="10" id="259" name="Spikes Up 9" sx="1.0" sy="1.0" x="400" y="208" z="1"/>
@@ -100,10 +100,18 @@
         </actor>
         <actor a="0.0" aid="23" c="true" group="3" id="142" name="Gold Key 23" sx="1.0" sy="1.0" x="342" y="68" z="4">
             <snippets>
+                <s enabled="true" id="191">
+                    <prop id="6" list="0" val="-1"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="200"/>
+                    <prop id="9" list="0" val="0.5"/>
+                    <prop id="10" list="0" val="1"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="91">
                     <prop id="1" list="0" val="KeyCollected"/>
                     <prop id="2" list="0" val="8"/>
-                    <prop id="3" list="0" val="Key1_05"/>
+                    <prop id="3" list="0" val="Key1_04"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="90"/>
@@ -123,7 +131,11 @@
                     <prop id="3" list="0" val="false"/>
                     <prop id="4" list="0" val="300"/>
                     <prop id="5" list="0" val="200"/>
-                    <prop id="6" list="0" val=""/>
+                    <prop id="6" list="0" val="-1"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="200"/>
+                    <prop id="9" list="0" val="0.5"/>
+                    <prop id="10" list="0" val="1"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="77">
@@ -292,10 +304,14 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="21">
+            <prop id="1" list="0" val=""/>
+            <prop id="2" list="0" val=""/>
+            <prop id="3" list="0" val="0"/>
+        </s>
         <s enabled="true" id="190">
             <prop id="1" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="21"/>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
             <prop id="2" list="0" val="false"/>
@@ -308,13 +324,13 @@
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="30.0"/>
         </s>
-        <s enabled="true" id="329">
-            <prop id="1" list="0" val="466"/>
-            <prop id="2" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="303">
             <prop id="1" list="0" val="0.5"/>
             <prop id="2" list="0" val="19"/>
+        </s>
+        <s enabled="true" id="329">
+            <prop id="1" list="0" val="466"/>
+            <prop id="2" list="0" val="-1"/>
         </s>
     </snippets>
     <terrain>
