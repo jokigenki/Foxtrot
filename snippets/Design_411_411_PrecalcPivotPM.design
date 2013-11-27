@@ -52,7 +52,7 @@
                                 </times>
                             </plus>
                         </add-list>
-                        <add-list comment="false" x="37" y="294">
+                        <add-list comment="false" x="37" y="281">
                             <get-val-411-15 comment="false" id="0" x="0" y="0"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
@@ -71,9 +71,9 @@
                     </group>
                     <get-val-411-11 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <repeat comment="false" x="26" y="367">
+                <repeat comment="false" x="26" y="341">
                     <group eventID="2" id="-1">
-                        <set-val-411-18 comment="false" x="37" y="392">
+                        <set-val-411-18 comment="false" x="37" y="366">
                             <plus comment="false" id="0" x="0" y="0">
                                 <times comment="false" id="0" x="0" y="0">
                                     <get-val-411-2 comment="false" id="0" x="0" y="0"/>
@@ -88,19 +88,19 @@
                                 </times>
                             </plus>
                         </set-val-411-18>
-                        <set-val-411-6 comment="false" x="37" y="432">
+                        <set-val-411-6 comment="false" x="37" y="406">
                             <get-item comment="false" id="0" x="0" y="0">
                                 <get-val-411-14 comment="false" id="0" x="0" y="0"/>
                                 <get-val-411-18 comment="false" id="1" x="0" y="0"/>
                             </get-item>
                         </set-val-411-6>
-                        <set-val-411-8 comment="false" x="37" y="462">
+                        <set-val-411-8 comment="false" x="37" y="436">
                             <get-item comment="false" id="0" x="0" y="0">
                                 <get-val-411-15 comment="false" id="0" x="0" y="0"/>
                                 <get-val-411-18 comment="false" id="1" x="0" y="0"/>
                             </get-item>
                         </set-val-411-8>
-                        <create-actor3 comment="false" x="37" y="492">
+                        <create-actor3 comment="false" x="37" y="466">
                             <ACTORTYPE eid="var" id="0" vid="13"/>
                             <minus comment="false" id="1" x="0" y="0">
                                 <get-val-411-6 comment="false" id="0" x="0" y="0"/>
@@ -112,24 +112,24 @@
                             </minus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-411-9 comment="false" x="37" y="529">
+                        <set-val-411-9 comment="false" x="37" y="503">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-411-9>
-                        <if comment="false" x="37" y="556">
+                        <if comment="false" x="37" y="530">
                             <group eventID="1" id="-1">
-                                <set-val-411-16 comment="false" x="48" y="591">
+                                <set-val-411-16 comment="false" x="48" y="565">
                                     <get-wh comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <int id="1" val="2"/>
                                     </get-wh>
                                 </set-val-411-16>
-                                <set-val-411-17 comment="false" x="48" y="624">
+                                <set-val-411-17 comment="false" x="48" y="598">
                                     <get-wh comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <int id="1" val="3"/>
                                     </get-wh>
                                 </set-val-411-17>
-                                <set-xy comment="false" x="48" y="657">
+                                <set-xy comment="false" x="48" y="631">
                                     <ACTOR eid="var" id="0" vid="9"/>
                                     <int id="1" val="0"/>
                                     <minus comment="false" id="2" x="0" y="0">
@@ -143,7 +143,7 @@
                                         </get-wh>
                                     </minus>
                                 </set-xy>
-                                <set-xy comment="false" x="48" y="702">
+                                <set-xy comment="false" x="48" y="676">
                                     <ACTOR eid="var" id="0" vid="9"/>
                                     <int id="1" val="1"/>
                                     <minus comment="false" id="2" x="0" y="0">
@@ -169,35 +169,35 @@
                                 </eq>
                             </and>
                         </if>
-                        <setlayer comment="false" x="37" y="759">
+                        <setlayer comment="false" x="37" y="733">
                             <ACTOR eid="var" id="0" vid="9"/>
                             <getlayer comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getlayer>
                         </setlayer>
-                        <add-list comment="false" x="37" y="799">
+                        <add-list comment="false" x="37" y="773">
                             <get-val-411-1 comment="false" id="0" x="0" y="0"/>
                             <get-val-411-9 comment="false" id="1" x="0" y="0"/>
                         </add-list>
-                        <add-list comment="false" x="37" y="824">
+                        <add-list comment="false" x="37" y="798">
                             <get-val-411-19 comment="false" id="0" x="0" y="0"/>
                             <get-val-411-18 comment="false" id="1" x="0" y="0"/>
                         </add-list>
                     </group>
                     <get-val-411-3 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <set-val-411-10 comment="false" x="26" y="861">
+                <set-val-411-10 comment="false" x="26" y="835">
                     <int id="0" val="0"/>
                 </set-val-411-10>
-                <for-each comment="false" x="26" y="881">
+                <for-each comment="false" x="26" y="855">
                     <group eventID="2" id="-1">
-                        <set-attribute comment="false" x="37" y="906">
+                        <set-attribute comment="false" x="37" y="880">
                             <for-each-item comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="Windmill Arm PM"/>
                             <int id="2" val="_Radius"/>
                             <get-val-411-7 comment="false" id="3" x="0" y="0"/>
                         </set-attribute>
-                        <set-attribute comment="false" x="37" y="938">
+                        <set-attribute comment="false" x="37" y="912">
                             <for-each-item comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="Windmill Arm PM"/>
                             <int id="2" val="_Pivot"/>
@@ -205,7 +205,7 @@
                                 <int id="0" val="actor"/>
                             </code-short>
                         </set-attribute>
-                        <incdec comment="false" x="37" y="970">
+                        <incdec comment="false" x="37" y="944">
                             <int id="0" val="10"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -300,14 +300,11 @@
                     <get-val-411-1 comment="false" id="0" x="0" y="0"/>
                 </for-each>
             </group>
-            <get-byobval-411-810-0 comment="false" id="0" x="0" y="0"/>
+            <int id="0" val=""/>
             <get-byobval-411-810-1 comment="false" id="1" x="0" y="0"/>
         </receiver-3-810>
     </group>
-    <group eventID="5" id="-1">
-        <get-byobval-411-810-0 comment="false" x="0" y="0"/>
-        <get-byobval-411-810-1 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="5" id="-1"/>
     <group eventID="6" id="0">
         <receiver-4-811 comment="false" x="15" y="15">
             <group eventID="6" id="-1">
@@ -342,12 +339,9 @@
                     <get-val-411-1 comment="false" id="0" x="0" y="0"/>
                 </for-each>
             </group>
-            <get-byobval-411-811-0 comment="false" id="0" x="0" y="0"/>
+            <int id="0" val=""/>
             <get-byobval-411-811-1 comment="false" id="1" x="0" y="0"/>
         </receiver-4-811>
     </group>
-    <group eventID="6" id="-1">
-        <get-byobval-411-811-0 comment="false" x="0" y="0"/>
-        <get-byobval-411-811-1 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="6" id="-1"/>
 </groups>
