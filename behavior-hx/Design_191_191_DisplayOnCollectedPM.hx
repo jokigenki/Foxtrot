@@ -102,6 +102,7 @@ nameMap.set("Actor", "actor");
         runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
                     if(actor.getActorValue("Collection Display"))
 {
+                        trace("" + "COLLECTION SET");
                         actor.setAnimation("" + ("" + (("" + actor.getActorValue("Collection Animation")) + ("" + " Collected"))));
                         runLater(1000 * 0.6, function(timeTask:TimedTask):Void {
                                     actor.enableActorDrawing();
@@ -120,11 +121,13 @@ nameMap.set("Actor", "actor");
 {
                         if((actor.hasBehavior("Inventory Collectable PM") && cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(actor.getValue("Inventory Collectable PM", "_CollectableId"))), Bool)))
 {
+                            trace("" + "HAS BEEN COLLECTED");
                             recycleActor(actor);
 }
 
                         if((actor.hasBehavior("Collectable Trigger PM") && cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(actor.getValue("Collectable Trigger PM", "_CollectableId"))), Bool)))
 {
+                            trace("" + "HAS BEEN COLLECTED");
                             recycleActor(actor);
 }
 

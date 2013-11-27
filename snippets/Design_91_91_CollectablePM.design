@@ -5,15 +5,21 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="47">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="82">
+                        <print comment="false" x="37" y="87">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="COLLECT  "/>
+                                <get-val-91-3 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                        </print>
+                        <if comment="false" x="37" y="117">
                             <group eventID="3" id="-1">
-                                <custom-327 comment="false" x="48" y="117">
+                                <custom-327 comment="false" x="48" y="152">
                                     <get-val-91-3 comment="false" id="0" x="0" y="0"/>
                                     <getatype comment="false" id="1" x="0" y="0">
                                         <this-actor comment="false" id="0" x="0" y="0"/>
                                     </getatype>
                                 </custom-327>
-                                <scene-shout comment="false" x="48" y="162">
+                                <scene-shout comment="false" x="48" y="197">
                                     <get-val-91-1 comment="false" id="0" x="0" y="0"/>
                                 </scene-shout>
                             </group>
@@ -23,9 +29,9 @@
                                 </str-empty>
                             </not>
                         </if>
-                        <if comment="false" x="37" y="199">
+                        <if comment="false" x="37" y="234">
                             <group eventID="1" id="-1">
-                                <shout comment="false" x="48" y="242">
+                                <shout comment="false" x="48" y="277">
                                     <get-val-91-2 comment="false" id="0" x="0" y="0"/>
                                     <get-val-91-1 comment="false" id="1" x="0" y="0"/>
                                 </shout>
@@ -36,9 +42,9 @@
                                 </custom-65>
                             </not>
                         </if>
-                        <if comment="false" x="37" y="286">
+                        <if comment="false" x="37" y="321">
                             <group eventID="1" id="-1">
-                                <custom-668 comment="false" x="48" y="319">
+                                <custom-668 comment="false" x="48" y="354">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-668>
                             </group>
@@ -47,18 +53,25 @@
                                 <int id="1" val="Display On Collected PM"/>
                             </has-snippet>
                         </if>
-                        <save-game comment="false" x="37" y="358">
+                        <save-game comment="false" x="37" y="393">
                             <group eventID="1" id="-1"/>
                         </save-game>
-                        <die comment="false" x="37" y="415">
+                        <die comment="false" x="37" y="450">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <custom-326 comment="false" id="0" x="0" y="0">
-                            <get-val-91-3 comment="false" id="0" x="0" y="0"/>
-                        </custom-326>
-                    </not>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <str-empty comment="false" id="0" x="0" y="0">
+                                <get-val-91-3 comment="false" id="0" x="0" y="0"/>
+                            </str-empty>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <custom-326 comment="false" id="0" x="0" y="0">
+                                <get-val-91-3 comment="false" id="0" x="0" y="0"/>
+                            </custom-326>
+                        </not>
+                    </and>
                 </if>
             </group>
             <ACTOR eid="this" id="0"/>

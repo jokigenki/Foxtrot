@@ -27,7 +27,10 @@
                     <group eventID="1" id="-1">
                         <if comment="false" x="37" y="184">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="217">
+                                <print comment="false" x="48" y="217">
+                                    <int id="0" val="COLLECTION SET"/>
+                                </print>
+                                <setanim comment="false" x="48" y="237">
                                     <ACTOR eid="this" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <str-combine comment="false" id="0" x="0" y="0">
@@ -39,13 +42,13 @@
                                         </str-combine>
                                     </string-to-anim>
                                 </setanim>
-                                <dolater comment="false" x="48" y="267">
+                                <dolater comment="false" x="48" y="287">
                                     <group eventID="3" id="-1">
-                                        <toggle-image comment="false" x="59" y="294">
+                                        <toggle-image comment="false" x="59" y="314">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="0"/>
                                         </toggle-image>
-                                        <scaleTo comment="false" x="59" y="321">
+                                        <scaleTo comment="false" x="59" y="341">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-191-8 comment="false" id="1" x="0" y="0"/>
                                             <get-val-191-8 comment="false" id="2" x="0" y="0"/>
@@ -55,24 +58,24 @@
                                             </div>
                                             <int id="4" val="8"/>
                                         </scaleTo>
-                                        <dolater comment="false" x="59" y="358">
+                                        <dolater comment="false" x="59" y="378">
                                             <group eventID="2" id="-1">
-                                                <scaleTo comment="false" x="70" y="395">
+                                                <scaleTo comment="false" x="70" y="415">
                                                     <ACTOR eid="this" id="0"/>
                                                     <int id="1" val="100"/>
                                                     <int id="2" val="100"/>
                                                     <get-val-191-9 comment="false" id="3" x="0" y="0"/>
                                                     <int id="4" val="8"/>
                                                 </scaleTo>
-                                                <fadeInOut comment="false" x="70" y="427">
+                                                <fadeInOut comment="false" x="70" y="447">
                                                     <ACTOR eid="this" id="0"/>
                                                     <int id="1" val="1"/>
                                                     <get-val-191-10 comment="false" id="2" x="0" y="0"/>
                                                     <int id="3" val="9"/>
                                                 </fadeInOut>
-                                                <dolater comment="false" x="70" y="459">
+                                                <dolater comment="false" x="70" y="479">
                                                     <group eventID="2" id="-1">
-                                                        <die comment="false" x="81" y="491">
+                                                        <die comment="false" x="81" y="511">
                                                             <ACTOR eid="this" id="0"/>
                                                         </die>
                                                     </group>
@@ -96,11 +99,14 @@
                                 <int id="1" val="Collection Display"/>
                             </actor-get-prop>
                         </if>
-                        <else comment="false" x="37" y="566">
+                        <else comment="false" x="37" y="586">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="586">
+                                <if comment="false" x="48" y="606">
                                     <group eventID="2" id="-1">
-                                        <die comment="false" x="59" y="629">
+                                        <print comment="false" x="59" y="649">
+                                            <int id="0" val="HAS BEEN COLLECTED"/>
+                                        </print>
+                                        <die comment="false" x="59" y="669">
                                             <ACTOR eid="this" id="0"/>
                                         </die>
                                     </group>
@@ -118,9 +124,12 @@
                                         </custom-326>
                                     </and>
                                 </if>
-                                <if comment="false" x="48" y="668">
+                                <if comment="false" x="48" y="708">
                                     <group eventID="2" id="-1">
-                                        <die comment="false" x="59" y="711">
+                                        <print comment="false" x="59" y="751">
+                                            <int id="0" val="HAS BEEN COLLECTED"/>
+                                        </print>
+                                        <die comment="false" x="59" y="771">
                                             <ACTOR eid="this" id="0"/>
                                         </die>
                                     </group>
@@ -138,7 +147,7 @@
                                         </custom-326>
                                     </and>
                                 </if>
-                                <toggle-image comment="false" x="48" y="750">
+                                <toggle-image comment="false" x="48" y="810">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </toggle-image>
