@@ -42,14 +42,36 @@ import motion.easing.Sine;
 
 
 
-class ActorEvents_767 extends ActorScript
+class Design_192_192_TeleportToScenePM extends ActorScript
 {          	
 	
+public var _DestinationSceneName:String;
+    public function _customEvent_Teleport():Void
+{
+        if(getGameAttribute("Speed Run In Progress"))
+{
+            setGameAttribute("Last Destination", getGameAttribute("Speed Run Start"));
+}
+
+        else
+{
+            setGameAttribute("Last Destination", _DestinationSceneName);
+}
+
+        sayToScene("Speed Run Timer PM", "_customEvent_" + "TimerReset");
+        shoutToScene("_customEvent_" + "SwitchScene");
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [getSound(804)]);
+}
+
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		
+		nameMap.set("Destination Scene Name", "_DestinationSceneName");
+_DestinationSceneName = "";
+nameMap.set("Actor", "actor");
+
 	}
 	
 	override public function init()

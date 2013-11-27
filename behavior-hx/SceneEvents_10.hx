@@ -42,19 +42,24 @@ import motion.easing.Sine;
 
 
 
-class ActorEvents_9 extends ActorScript
+class SceneEvents_10 extends SceneScript
 {          	
 	
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
+		super(engine);
 		
 	}
 	
 	override public function init()
 	{
-		
+		            if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg1_05")), Bool))
+{
+            recycleActor(getActor(14));
+}
+
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)
