@@ -116,6 +116,12 @@
         <tile collision="1" data="" durations="100" frames="2" id="2" order="-1"/>
         <tile collision="1" data="" durations="100" frames="3" id="3" order="-1"/>
     </tileset>
+    <tileset across="2" atlasID="0" desc="" down="2" id="807" name="Altar FLIPPED" oid="-1" shared="false" th="16" tw="16">
+        <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="2" id="2" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="3" id="3" order="-1"/>
+    </tileset>
     <actor adamp="0.0" ascale="true" atlasID="3" bodytype="0" continuous="true" desc="Sitting in the Armchair resets the game" eventsnippetid="115" fixedrot="false" fric="0.2" gid="3" id="169" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Armchair" oid="-1" pausable="true" rest="0.0" shared="false" sprite="170" static="true">
         <snippets>
             <s enabled="true" id="188">
@@ -1739,6 +1745,66 @@
             </s>
             <s enabled="true" id="133">
                 <prop id="14" list="0" val="9"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="false"/>
+                <prop id="16" list="0" val=""/>
+                <prop id="19" list="0" val="false"/>
+                <prop id="18" list="0" val="false"/>
+                <prop id="21" list="0" val=""/>
+                <prop id="20" list="0" val="false"/>
+                <prop id="23" list="0" val=""/>
+                <prop id="25" list="0" val=""/>
+                <prop id="24" list="0" val="UseDoor"/>
+                <prop id="27" list="0" val="0"/>
+                <prop id="26" list="0" val="1"/>
+                <prop id="29" list="0" val="4"/>
+                <prop id="28" list="0" val=""/>
+                <prop id="30" list="0" val="4"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="806" name="Door BLUE BOSS" shared="false" width="32">
+        <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="false" name="opening" numframes="4" originx="16" originy="16" sync="false" width="128">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="opening" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="32" id="1" loop="true" name="closed" numframes="1" originx="16" originy="16" sync="false" width="32">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="closed" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="32" id="2" loop="true" name="open" numframes="1" originx="16" originy="16" sync="false" width="32">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="open" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="411" fixedrot="false" fric="0.2" gid="3" id="805" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Door BLUE BOSS" oid="-1" pausable="true" rest="0.0" shared="false" sprite="806" static="false">
+        <snippets>
+            <s enabled="true" id="304">
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val=""/>
+                <prop id="6" list="0" val="true"/>
+                <prop id="7" list="0" val="true"/>
+                <prop id="8" list="0" val="false"/>
+                <prop id="9" list="0" val="true"/>
+                <prop id="10" list="0" val=""/>
+                <prop id="11" list="0" val="0.5"/>
+                <prop id="12" list="0" val="0.5"/>
+                <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val="0"/>
+                <prop id="15" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="0"/>
+                <prop id="16" list="0" val="0"/>
+                <prop id="18" list="0" val="792"/>
+            </s>
+            <s enabled="true" id="92">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="open"/>
+                <prop id="3" list="0" val="closed"/>
+                <prop id="4" list="0" val="opening"/>
+                <prop id="13" list="0" val=""/>
+                <prop id="14" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="133">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="17" list="0" val="false"/>
                 <prop id="16" list="0" val=""/>
