@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <custom-block blocktag="custom-805" blocktype="ACTION" code="~.say(&quot;Precalc Pivot PM&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="805" message="" name="" oid="-1" return="VOID" shared="false" snippetID="411">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
     <custom-block blocktag="custom-748" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_41&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="748" message="" name="" oid="-1" return="VOID" shared="false" snippetID="375"/>
     <custom-block blocktag="custom-651" blocktype="ACTION" code="~.say(&quot;Single Use Region Switch PM&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="651" message="" name="" oid="-1" return="VOID" shared="false" snippetID="174">
         <blank name="Self" order="0" type="ACTOR"/>
@@ -5832,8 +5835,9 @@
         <blank name="y" order="1" type="NUMBER"/>
         <blank name="Actor" order="2" type="ACTOR"/>
     </custom-block>
-    <custom-block blocktag="custom-718" blocktype="ACTION" code="~.say(&quot;Pivot PM&quot;, &quot;PrecalcPositions&quot;);" desc="" global="false" gui="Precalculate positions for %0" id="718" message="PrecalcPositions" name="PrecalcPositions" oid="-1" return="VOID" shared="false" snippetID="56">
+    <custom-block blocktag="custom-806" blocktype="ACTION" code="~.say(&quot;Precalc Pivot PM&quot;, &quot;PositionLift&quot;, ~);" desc="" global="false" gui="Position lift %1" id="806" message="PositionLift" name="PositionLift" oid="-1" return="VOID" shared="false" snippetID="411">
         <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Lift" order="1" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-96" blocktype="ACTION" code="~.say(&quot;Air Jumping PM&quot;, &quot;PreventAirJump&quot;, ~);" desc="" global="false" gui="Set Prevent Air Jump for %0 to %1" id="96" message="PreventAirJump" name="PreventAirJump" oid="-1" return="VOID" shared="false" snippetID="45">
         <blank name="Self" order="0" type="ACTOR"/>
