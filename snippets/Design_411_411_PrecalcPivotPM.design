@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <toggle-image comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
+                <set-val-411-1 comment="false" x="26" y="67">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-411-1>
+                <set-val-411-19 comment="false" x="26" y="92">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-411-19>
+                <set-val-411-2 comment="false" x="26" y="117">
+                    <roundnew comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <div comment="false" id="1" x="0" y="0">
+                            <get-val-411-11 comment="false" id="0" x="0" y="0"/>
+                            <get-val-411-3 comment="false" id="1" x="0" y="0"/>
+                        </div>
+                    </roundnew>
+                </set-val-411-2>
+                <repeat comment="false" x="26" y="160">
+                    <group eventID="1" id="-1">
+                        <set-val-411-4 comment="false" x="37" y="185">
+                            <to-degreesradians comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <loopindex comment="false" id="0" x="0" y="0"/>
+                                    <div comment="false" id="1" x="0" y="0">
+                                        <get-val-411-11 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="360"/>
+                                    </div>
+                                </times>
+                            </to-degreesradians>
+                        </set-val-411-4>
+                        <add-list comment="false" x="37" y="233">
+                            <get-val-411-14 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="2"/>
+                                </get-xy>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <trig-master comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <get-val-411-4 comment="false" id="1" x="0" y="0"/>
+                                    </trig-master>
+                                    <get-val-411-7 comment="false" id="1" x="0" y="0"/>
+                                </times>
+                            </plus>
+                        </add-list>
+                        <add-list comment="false" x="37" y="294">
+                            <get-val-411-15 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="3"/>
+                                </get-xy>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <trig-master comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="1"/>
+                                        <get-val-411-4 comment="false" id="1" x="0" y="0"/>
+                                    </trig-master>
+                                    <get-val-411-7 comment="false" id="1" x="0" y="0"/>
+                                </times>
+                            </plus>
+                        </add-list>
+                    </group>
+                    <get-val-411-11 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <repeat comment="false" x="26" y="367">
+                    <group eventID="2" id="-1">
+                        <set-val-411-18 comment="false" x="37" y="392">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-val-411-2 comment="false" id="0" x="0" y="0"/>
+                                    <loopindex comment="false" id="1" x="0" y="0"/>
+                                </times>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <get-val-411-5 comment="false" id="0" x="0" y="0"/>
+                                    <div comment="false" id="1" x="0" y="0">
+                                        <get-val-411-11 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="360"/>
+                                    </div>
+                                </times>
+                            </plus>
+                        </set-val-411-18>
+                        <set-val-411-6 comment="false" x="37" y="432">
+                            <get-item comment="false" id="0" x="0" y="0">
+                                <get-val-411-14 comment="false" id="0" x="0" y="0"/>
+                                <get-val-411-18 comment="false" id="1" x="0" y="0"/>
+                            </get-item>
+                        </set-val-411-6>
+                        <set-val-411-8 comment="false" x="37" y="462">
+                            <get-item comment="false" id="0" x="0" y="0">
+                                <get-val-411-15 comment="false" id="0" x="0" y="0"/>
+                                <get-val-411-18 comment="false" id="1" x="0" y="0"/>
+                            </get-item>
+                        </set-val-411-8>
+                        <create-actor3 comment="false" x="37" y="492">
+                            <ACTORTYPE eid="var" id="0" vid="13"/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-val-411-6 comment="false" id="0" x="0" y="0"/>
+                                <get-val-411-16 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-val-411-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-411-17 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <set-val-411-9 comment="false" x="37" y="529">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-411-9>
+                        <if comment="false" x="37" y="556">
+                            <group eventID="1" id="-1">
+                                <set-val-411-16 comment="false" x="48" y="591">
+                                    <get-wh comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="2"/>
+                                    </get-wh>
+                                </set-val-411-16>
+                                <set-val-411-17 comment="false" x="48" y="624">
+                                    <get-wh comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="3"/>
+                                    </get-wh>
+                                </set-val-411-17>
+                                <set-xy comment="false" x="48" y="657">
+                                    <ACTOR eid="var" id="0" vid="9"/>
+                                    <int id="1" val="0"/>
+                                    <minus comment="false" id="2" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="var" id="0" vid="9"/>
+                                            <int id="1" val="0"/>
+                                        </get-xy>
+                                        <get-wh comment="false" id="1" x="0" y="0">
+                                            <ACTOR eid="var" id="0" vid="9"/>
+                                            <int id="1" val="2"/>
+                                        </get-wh>
+                                    </minus>
+                                </set-xy>
+                                <set-xy comment="false" x="48" y="702">
+                                    <ACTOR eid="var" id="0" vid="9"/>
+                                    <int id="1" val="1"/>
+                                    <minus comment="false" id="2" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="var" id="0" vid="9"/>
+                                            <int id="1" val="1"/>
+                                        </get-xy>
+                                        <get-wh comment="false" id="1" x="0" y="0">
+                                            <ACTOR eid="var" id="0" vid="9"/>
+                                            <int id="1" val="3"/>
+                                        </get-wh>
+                                    </minus>
+                                </set-xy>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <eq comment="false" id="0" x="0" y="0">
+                                    <get-val-411-16 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </eq>
+                                <eq comment="false" id="1" x="0" y="0">
+                                    <get-val-411-17 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </eq>
+                            </and>
+                        </if>
+                        <setlayer comment="false" x="37" y="759">
+                            <ACTOR eid="var" id="0" vid="9"/>
+                            <getlayer comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                        </setlayer>
+                        <add-list comment="false" x="37" y="799">
+                            <get-val-411-1 comment="false" id="0" x="0" y="0"/>
+                            <get-val-411-9 comment="false" id="1" x="0" y="0"/>
+                        </add-list>
+                        <add-list comment="false" x="37" y="824">
+                            <get-val-411-19 comment="false" id="0" x="0" y="0"/>
+                            <get-val-411-18 comment="false" id="1" x="0" y="0"/>
+                        </add-list>
+                    </group>
+                    <get-val-411-3 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <set-val-411-10 comment="false" x="26" y="861">
+                    <int id="0" val="0"/>
+                </set-val-411-10>
+                <for-each comment="false" x="26" y="881">
+                    <group eventID="2" id="-1">
+                        <set-attribute comment="false" x="37" y="906">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Windmill Arm PM"/>
+                            <int id="2" val="_Radius"/>
+                            <get-val-411-7 comment="false" id="3" x="0" y="0"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="938">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Windmill Arm PM"/>
+                            <int id="2" val="_Pivot"/>
+                            <code-short comment="false" id="3" x="0" y="0">
+                                <int id="0" val="actor"/>
+                            </code-short>
+                        </set-attribute>
+                        <incdec comment="false" x="37" y="970">
+                            <int id="0" val="10"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                    <get-val-411-1 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1">
+        <minus comment="false" x="395" y="677">
+            <int id="0" val=""/>
+            <get-val-411-17 comment="false" id="1" x="0" y="0"/>
+        </minus>
+    </group>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-411-10 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-411-10>
+                <for-each comment="false" x="26" y="60">
+                    <group eventID="3" id="-1">
+                        <set-val-411-18 comment="false" x="37" y="85">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                        </set-val-411-18>
+                        <incdec comment="false" x="37" y="110">
+                            <int id="0" val="18"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                        <if comment="false" x="37" y="137">
+                            <group eventID="3" id="-1">
+                                <set-val-411-18 comment="false" x="48" y="167">
+                                    <int id="0" val="0"/>
+                                </set-val-411-18>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-411-18 comment="false" id="0" x="0" y="0"/>
+                                <get-val-411-11 comment="false" id="1" x="0" y="0"/>
+                            </more>
+                        </if>
+                        <replace-list comment="false" x="37" y="199">
+                            <get-val-411-19 comment="false" id="0" x="0" y="0"/>
+                            <get-val-411-10 comment="false" id="1" x="0" y="0"/>
+                            <get-val-411-18 comment="false" id="2" x="0" y="0"/>
+                        </replace-list>
+                        <incdec comment="false" x="37" y="224">
+                            <int id="0" val="10"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                    <get-val-411-19 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="5" id="0">
+        <receiver-3-810 comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-411-10 comment="false" x="26" y="45">
+                    <int id="0" val="0"/>
+                </set-val-411-10>
+                <for-each comment="false" x="26" y="65">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="90">
+                            <group eventID="2" id="-1">
+                                <return comment="false" x="48" y="120">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-item comment="false" id="0" x="0" y="0">
+                                            <get-val-411-15 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-411-10 comment="false" id="1" x="0" y="0"/>
+                                        </get-item>
+                                        <get-val-411-17 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                </return>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <for-each-item comment="false" id="0" x="0" y="0"/>
+                                <get-byobval-411-810-1 comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                        <incdec comment="false" x="37" y="167">
+                            <int id="0" val="10"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                    <get-val-411-1 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+            </group>
+            <get-byobval-411-810-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-411-810-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-3-810>
+    </group>
+    <group eventID="5" id="-1">
+        <get-byobval-411-810-0 comment="false" x="0" y="0"/>
+        <get-byobval-411-810-1 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="6" id="0">
+        <receiver-4-811 comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-411-10 comment="false" x="26" y="45">
+                    <int id="0" val="0"/>
+                </set-val-411-10>
+                <for-each comment="false" x="26" y="65">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="90">
+                            <group eventID="2" id="-1">
+                                <return comment="false" x="48" y="120">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-item comment="false" id="0" x="0" y="0">
+                                            <get-val-411-14 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-411-10 comment="false" id="1" x="0" y="0"/>
+                                        </get-item>
+                                        <get-val-411-16 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                </return>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <for-each-item comment="false" id="0" x="0" y="0"/>
+                                <get-byobval-411-811-1 comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                        <incdec comment="false" x="37" y="167">
+                            <int id="0" val="10"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                    <get-val-411-1 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+            </group>
+            <get-byobval-411-811-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-411-811-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-4-811>
+    </group>
+    <group eventID="6" id="-1">
+        <get-byobval-411-811-0 comment="false" x="0" y="0"/>
+        <get-byobval-411-811-1 comment="false" x="0" y="0"/>
+    </group>
+</groups>

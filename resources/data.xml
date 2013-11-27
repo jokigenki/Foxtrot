@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <custom-block blocktag="custom-805" blocktype="ACTION" code="~.say(&quot;Precalc Pivot PM&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="805" message="" name="" oid="-1" return="VOID" shared="false" snippetID="411">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
     <custom-block blocktag="custom-748" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_41&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="748" message="" name="" oid="-1" return="VOID" shared="false" snippetID="375"/>
     <custom-block blocktag="custom-651" blocktype="ACTION" code="~.say(&quot;Single Use Region Switch PM&quot;, &quot;&quot;);" desc="" global="false" gui="[MISSING]" id="651" message="" name="" oid="-1" return="VOID" shared="false" snippetID="174">
         <blank name="Self" order="0" type="ACTOR"/>
@@ -2541,6 +2544,7 @@
                 <prop id="11" list="0" val="shoot-l"/>
                 <prop id="12" list="0" val="false"/>
                 <prop id="13" list="0" val="0.4"/>
+                <prop id="14" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="169">
@@ -3148,6 +3152,14 @@
     </custom-block>
     <custom-block blocktag="custom-17" blocktype="NORMAL" code="" desc="" global="false" gui="Get Walk Accel for %0" id="17" message="GetWalkAccel" name="GetWalkAccel" oid="-1" return="NUMBER" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-811" blocktype="NORMAL" code="Number((~.say(&quot;Precalc Pivot PM&quot;, &quot;GetXPostionForLift&quot;, ~)))" desc="" global="false" gui="Get x position for %1" id="811" message="GetXPostionForLift" name="GetXPostionForLift" oid="-1" return="NUMBER" shared="false" snippetID="411">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Lift" order="1" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-810" blocktype="NORMAL" code="Number((~.say(&quot;Precalc Pivot PM&quot;, &quot;GetYPositionForLift&quot;, ~)))" desc="" global="false" gui="Get y position for %1" id="810" message="GetYPositionForLift" name="GetYPositionForLift" oid="-1" return="NUMBER" shared="false" snippetID="411">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Lift" order="1" type="ACTOR"/>
     </custom-block>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="90" fixedrot="false" fric="0.2" gid="3" id="142" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Gold Key" oid="-1" pausable="true" rest="0.0" shared="false" sprite="143" static="false">
         <snippets>
@@ -5764,9 +5776,6 @@
         <blank name="x" order="0" type="NUMBER"/>
         <blank name="y" order="1" type="NUMBER"/>
         <blank name="Actor" order="2" type="ACTOR"/>
-    </custom-block>
-    <custom-block blocktag="custom-718" blocktype="ACTION" code="~.say(&quot;Pivot PM&quot;, &quot;PrecalcPositions&quot;);" desc="" global="false" gui="Precalculate positions for %0" id="718" message="PrecalcPositions" name="PrecalcPositions" oid="-1" return="VOID" shared="false" snippetID="56">
-        <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-96" blocktype="ACTION" code="~.say(&quot;Air Jumping PM&quot;, &quot;PreventAirJump&quot;, ~);" desc="" global="false" gui="Set Prevent Air Jump for %0 to %1" id="96" message="PreventAirJump" name="PreventAirJump" oid="-1" return="VOID" shared="false" snippetID="45">
         <blank name="Self" order="0" type="ACTOR"/>

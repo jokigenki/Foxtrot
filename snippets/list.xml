@@ -779,7 +779,6 @@
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
-            <event displayName="Precalculate" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_63_63_RandomiseAnimationFramePM" classname="scripts.Design_63_63_RandomiseAnimationFramePM" desc="When the actor is created, it will be sent to a random frame inside the default animation." description="When the actor is created, it will be sent to a random frame inside the default animation." design="true" drawOrder="0" id="63" language="" name="Randomise Animation Frame PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -3530,6 +3529,39 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_411_411_PrecalcPivotPM" classname="scripts.Design_411_411_PrecalcPivotPM" desc="" description="" design="true" drawOrder="0" id="411" language="" name="Precalc Pivot PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lifts" hidden="true" id="1" name="_Lifts" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Lift Angle Gap" hidden="true" id="2" name="_LiftAngleGap" order="2"/>
+        <number default="4.0" defaultValue="4.0" desc="" dropdown="" fullname="Number Of Lifts" hidden="false" id="3" name="_NumberOfLifts" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Angle" hidden="true" id="4" name="_Angle" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Angle Offset" hidden="false" id="5" name="_AngleOffset" order="5"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="X Pos" hidden="true" id="6" name="_XPos" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Radius" hidden="false" id="7" name="_Radius" order="7"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Y Pos" hidden="true" id="8" name="_YPos" order="8"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Lift" hidden="true" id="9" name="_Lift" order="9"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Count" hidden="true" id="10" name="_Count" order="10"/>
+        <number default="360" defaultValue="360" desc="" dropdown="" fullname="Steps" hidden="false" id="11" name="_Steps" order="11"/>
+        <actortype default="616" defaultValue="616" desc="" dropdown="" fullname="Lift Type" hidden="false" id="13" name="_LiftType" order="12"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Positions X" hidden="true" id="14" name="_PositionsX" order="13"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Positions Y" hidden="true" id="15" name="_PositionsY" order="14"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Offset Y" hidden="true" id="17" name="_LiftOffsetY" order="16"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Offset X" hidden="true" id="16" name="_LiftOffsetX" order="15"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lift Indices" hidden="true" id="19" name="_LiftIndices" order="18"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Index" hidden="true" id="18" name="_LiftIndex" order="17"/>
+        <blocks>
+            <receiver blockID="806" id="1"/>
+            <receiver blockID="809" id="2"/>
+            <receiver blockID="810" id="3"/>
+            <receiver blockID="811" id="4"/>
+        </blocks>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="3" name="step" order="2" repeats="true"/>
+            <event displayName="Get y position" enabled="true" id="5" name="event-custom-block" order="6" repeats="true"/>
+            <event displayName="Get x position" enabled="true" id="6" name="event-custom-block" order="5" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="false" class="scripts.Design_408_408_RandomTimedActivationPM" classname="scripts.Design_408_408_RandomTimedActivationPM" desc="" description="" design="true" drawOrder="0" id="408" language="" name="Random Timed Activation PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Min Time" hidden="false" id="1" name="_MinTime" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Max Time" hidden="false" id="2" name="_MaxTime" order="2"/>
@@ -3556,6 +3588,20 @@
         <blocks/>
         <events>
             <event displayName="Deactivated" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_413_413_PrecalcWindmillArmPM" classname="scripts.Design_413_413_PrecalcWindmillArmPM" desc="" description="" design="true" drawOrder="0" id="413" language="" name="Precalc Windmill Arm PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Target X" hidden="true" id="1" name="_TargetX" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Start Angle" hidden="true" id="2" name="_StartAngle" order="2"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Radius" hidden="true" id="3" name="_Radius" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Target Y" hidden="true" id="4" name="_TargetY" order="4"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Was Initialised?" hidden="true" id="5" name="_WasInitialised" order="5"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Move Target" hidden="false" id="6" name="_MoveTarget" order="6"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Pivot" hidden="false" id="7" name="_Pivot" order="7"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_767" classname="scripts.ActorEvents_767" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="402" language="" name="ActorEvents_767" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">

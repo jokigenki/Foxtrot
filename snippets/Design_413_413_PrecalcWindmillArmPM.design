@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-val-413-1 comment="false" x="37" y="73">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="7"/>
+                                    <int id="1" val="2"/>
+                                </get-xy>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <trig-master comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <plus comment="false" id="1" x="0" y="0">
+                                            <to-degreesradians comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="1"/>
+                                                <getdir comment="false" id="1" x="0" y="0">
+                                                    <ACTOR eid="var" id="0" vid="7"/>
+                                                </getdir>
+                                            </to-degreesradians>
+                                            <get-val-413-2 comment="false" id="1" x="0" y="0"/>
+                                        </plus>
+                                    </trig-master>
+                                    <get-val-413-3 comment="false" id="1" x="0" y="0"/>
+                                </times>
+                            </plus>
+                        </set-val-413-1>
+                        <set-val-413-4 comment="false" x="37" y="147">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="7"/>
+                                    <int id="1" val="3"/>
+                                </get-xy>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <trig-master comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="1"/>
+                                        <plus comment="false" id="1" x="0" y="0">
+                                            <to-degreesradians comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="1"/>
+                                                <getdir comment="false" id="1" x="0" y="0">
+                                                    <ACTOR eid="var" id="0" vid="7"/>
+                                                </getdir>
+                                            </to-degreesradians>
+                                            <get-val-413-2 comment="false" id="1" x="0" y="0"/>
+                                        </plus>
+                                    </trig-master>
+                                    <get-val-413-3 comment="false" id="1" x="0" y="0"/>
+                                </times>
+                            </plus>
+                        </set-val-413-4>
+                        <set-xy comment="false" x="37" y="221">
+                            <ACTOR eid="var" id="0" vid="8"/>
+                            <int id="1" val="0"/>
+                            <get-val-413-1 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="253">
+                            <ACTOR eid="var" id="0" vid="8"/>
+                            <int id="1" val="1"/>
+                            <get-val-413-4 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="6"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+                <else-if comment="false" x="26" y="297">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="330">
+                            <group eventID="2" id="-1">
+                                <set-val-413-5 comment="false" x="48" y="360">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-413-5>
+                                <dolater comment="false" x="48" y="385">
+                                    <group eventID="2" id="-1">
+                                        <comment-short comment="false" x="59" y="412">
+                                            <int id="0" val="Custom: distance between &amp;lt;Pivot&amp;gt; and Self"/>
+                                        </comment-short>
+                                        <if comment="false" x="59" y="432">
+                                            <group eventID="1" id="-1">
+                                                <set-val-413-6 comment="false" x="70" y="475">
+                                                    <get-attribute comment="false" id="0" x="0" y="0">
+                                                        <ACTOR eid="this" id="0"/>
+                                                        <int id="1" val="Rideable Platform PM"/>
+                                                        <int id="2" val="_Target"/>
+                                                    </get-attribute>
+                                                </set-val-413-6>
+                                            </group>
+                                            <and comment="false" id="0" x="0" y="0">
+                                                <eq comment="false" id="0" x="0" y="0">
+                                                    <getgroup comment="false" id="0" x="0" y="0">
+                                                        <ACTOR eid="this" id="0"/>
+                                                    </getgroup>
+                                                    <pick-group comment="false" id="1" x="0" y="0">
+                                                        <int id="0" val="6"/>
+                                                    </pick-group>
+                                                </eq>
+                                                <has-snippet comment="false" id="1" x="0" y="0">
+                                                    <ACTOR eid="this" id="0"/>
+                                                    <int id="1" val="Rideable Platform PM"/>
+                                                </has-snippet>
+                                            </and>
+                                        </if>
+                                        <else-if comment="false" x="59" y="527">
+                                            <group eventID="1" id="-1">
+                                                <set-val-413-6 comment="false" x="70" y="560">
+                                                    <ACTOR eid="this" id="0"/>
+                                                </set-val-413-6>
+                                            </group>
+                                            <value comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="6"/>
+                                                <int id="1" val="1"/>
+                                            </value>
+                                        </else-if>
+                                    </group>
+                                    <int id="0" val="0.1"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-413-5 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="7"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
