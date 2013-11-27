@@ -336,14 +336,22 @@
     <group eventID="27" id="0">
         <receiver-32-713 comment="false" x="15" y="15">
             <group eventID="27" id="-1">
-                <custom-712 comment="false" x="26" y="45">
+                <if comment="false" x="26" y="45">
+                    <group eventID="27" id="-1">
+                        <stop comment="false" x="37" y="70"/>
+                    </group>
+                    <code-short comment="false" id="0" x="0" y="0">
+                        <int id="0" val="__DoorActor == null"/>
+                    </code-short>
+                </if>
+                <custom-712 comment="false" x="26" y="102">
                     <get-attribute comment="false" id="0" x="0" y="0">
                         <get-byobval-206-713-0 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="Activate Door PM"/>
                         <int id="2" val="_Destination"/>
                     </get-attribute>
                 </custom-712>
-                <say comment="false" x="26" y="83">
+                <say comment="false" x="26" y="140">
                     <get-byobval-206-713-0 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="Collectable Door PM"/>
                     <int id="2" val="DoorActivated"/>

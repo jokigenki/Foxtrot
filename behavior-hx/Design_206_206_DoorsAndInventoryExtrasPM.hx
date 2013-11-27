@@ -125,6 +125,11 @@ public static function _customBlock_LockDoor(__ExitName:String):Void
 /* Params are:__DoorActor */
 public static function _customBlock_LockDoorActor(__DoorActor:Actor):Void
 {
+        if(__DoorActor == null)
+{
+            return;
+}
+
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_LockDoor(__DoorActor.getValue("Activate Door PM", "_Destination"));
         __DoorActor.say("Collectable Door PM", "_customEvent_" + "DoorActivated");
 }
