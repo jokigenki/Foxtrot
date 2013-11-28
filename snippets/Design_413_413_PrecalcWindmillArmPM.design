@@ -4,27 +4,38 @@
         <step comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
-                    <group eventID="2" id="-1"/>
+                    <group eventID="2" id="-1">
+                        <set-xy comment="false" x="37" y="73">
+                            <ACTOR eid="var" id="0" vid="6"/>
+                            <int id="1" val="0"/>
+                            <get-val-413-1 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="105">
+                            <ACTOR eid="var" id="0" vid="6"/>
+                            <int id="1" val="1"/>
+                            <get-val-413-4 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                    </group>
                     <value comment="false" id="0" x="0" y="0">
                         <int id="0" val="6"/>
                         <int id="1" val="0"/>
                     </value>
                 </if>
-                <else-if comment="false" x="26" y="105">
+                <else-if comment="false" x="26" y="149">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="138">
+                        <if comment="false" x="37" y="182">
                             <group eventID="2" id="-1">
-                                <set-val-413-5 comment="false" x="48" y="168">
+                                <set-val-413-5 comment="false" x="48" y="212">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-413-5>
-                                <dolater comment="false" x="48" y="193">
+                                <dolater comment="false" x="48" y="237">
                                     <group eventID="2" id="-1">
-                                        <comment-short comment="false" x="59" y="220">
+                                        <comment-short comment="false" x="59" y="264">
                                             <int id="0" val="Custom: distance between &amp;lt;Pivot&amp;gt; and Self"/>
                                         </comment-short>
-                                        <if comment="false" x="59" y="240">
+                                        <if comment="false" x="59" y="284">
                                             <group eventID="1" id="-1">
-                                                <set-val-413-6 comment="false" x="70" y="283">
+                                                <set-val-413-6 comment="false" x="70" y="327">
                                                     <get-attribute comment="false" id="0" x="0" y="0">
                                                         <ACTOR eid="this" id="0"/>
                                                         <int id="1" val="Rideable Platform PM"/>
@@ -47,9 +58,9 @@
                                                 </has-snippet>
                                             </and>
                                         </if>
-                                        <else-if comment="false" x="59" y="335">
+                                        <else-if comment="false" x="59" y="379">
                                             <group eventID="1" id="-1">
-                                                <set-val-413-6 comment="false" x="70" y="368">
+                                                <set-val-413-6 comment="false" x="70" y="412">
                                                     <ACTOR eid="this" id="0"/>
                                                 </set-val-413-6>
                                             </group>
@@ -75,24 +86,6 @@
                 </else-if>
             </group>
         </step>
-    </group>
-    <group eventID="1" id="1">
-        <set-xy comment="false" x="428" y="108">
-            <ACTOR eid="var" id="0" vid="6"/>
-            <int id="1" val="0"/>
-            <custom-811 comment="false" id="2" x="0" y="0">
-                <ACTOR eid="this" id="0"/>
-                <ACTOR eid="this" id="1"/>
-            </custom-811>
-        </set-xy>
-        <set-xy comment="false" x="428" y="148">
-            <ACTOR eid="var" id="0" vid="6"/>
-            <int id="1" val="1"/>
-            <custom-810 comment="false" id="2" x="0" y="0">
-                <ACTOR eid="this" id="0"/>
-                <ACTOR eid="this" id="1"/>
-            </custom-810>
-        </set-xy>
     </group>
     <group eventID="1" id="-1"/>
 </groups>
