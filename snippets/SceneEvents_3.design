@@ -3,22 +3,25 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
+                <set-game-val-10 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-10>
+                <if comment="false" x="26" y="65">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="85">
+                        <dolater comment="false" x="37" y="110">
                             <group eventID="1" id="-1">
-                                <set-game-val-20 comment="false" x="48" y="112">
+                                <set-game-val-20 comment="false" x="48" y="137">
                                     <custom-552 comment="false" id="0" x="0" y="0">
                                         <get-game-val-21 comment="false" id="0" x="0" y="0"/>
                                     </custom-552>
                                 </set-game-val-20>
-                                <set-attribute comment="false" x="48" y="142">
+                                <set-attribute comment="false" x="48" y="167">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Activate Door PM"/>
                                     <int id="2" val="_Destination"/>
                                     <get-game-val-21 comment="false" id="3" x="0" y="0"/>
                                 </set-attribute>
-                                <say comment="false" x="48" y="174">
+                                <say comment="false" x="48" y="199">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Collectable Door PM"/>
                                     <int id="2" val="DoorActivated"/>

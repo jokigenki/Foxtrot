@@ -1,2 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <event-actor-create-kill comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="67">
+                            <ACTOR eid="60" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="94">
+                            <ACTOR eid="61" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="121">
+                            <ACTOR eid="62" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="148">
+                            <ACTOR eid="63" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="175">
+                            <ACTOR eid="64" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="202">
+                            <ACTOR eid="57" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="229">
+                            <ACTOR eid="58" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="256">
+                            <ACTOR eid="59" id="0"/>
+                        </die>
+                    </group>
+                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="12" id="1"/>
+        </event-actor-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="75">
+                            <ACTOR eid="60" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="102">
+                            <ACTOR eid="61" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="129">
+                            <ACTOR eid="62" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="156">
+                            <ACTOR eid="63" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="183">
+                            <ACTOR eid="64" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="210">
+                            <ACTOR eid="57" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="237">
+                            <ACTOR eid="58" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="264">
+                            <ACTOR eid="59" id="0"/>
+                        </die>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <custom-326 comment="false" id="1" x="0" y="0">
+                            <int id="0" val="Egg1_10"/>
+                        </custom-326>
+                    </or>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

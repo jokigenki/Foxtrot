@@ -64,6 +64,10 @@ public var _CollectedSpeedRunItems:Array<Dynamic>;
 public var _XPosition:Float;
 
 public var _YPosition:Float;
+
+public var _DoorToOpen:Actor;
+
+public var _KeyToKill:Actor;
     public function _customEvent_TimerReset():Void
 {
         _TimerCancelled = true;
@@ -146,6 +150,15 @@ public function _customBlock_SaveSpeedRunData():Void
         setGameAttribute("Speed Run In Progress", _LocalRunInProgress);
         setGameAttribute("Speed Run Timer", _LocalSpeedRunTime);
 }
+    public function _customEvent_EggCollected():Void
+{
+        if((getGameAttribute("Speed Run In Progress") && _DoorToOpen != null))
+{
+            _DoorToOpen.say("Collectable Door PM", "_customEvent_" + "KeyCollected");
+}
+
+}
+
 
  
  	public function new(dummy:Int, engine:Engine)
@@ -171,6 +184,8 @@ nameMap.set("X Position", "_XPosition");
 _XPosition = 288.0;
 nameMap.set("Y Position", "_YPosition");
 _YPosition = 30.0;
+nameMap.set("Door To Open", "_DoorToOpen");
+nameMap.set("Key To Kill", "_KeyToKill");
 
 	}
 	
@@ -186,6 +201,11 @@ propertyChanged("_TimerRunning", _TimerRunning);
 propertyChanged("_LocalSpeedRunTime", _LocalSpeedRunTime);
             _LocalSpeedRunSuccessTime = asNumber(getGameAttribute("Speed Run Success Time"));
 propertyChanged("_LocalSpeedRunSuccessTime", _LocalSpeedRunSuccessTime);
+            if(_KeyToKill != null)
+{
+                recycleActor(_KeyToKill);
+}
+
             runPeriodically(1000 * 1, function(timeTask:TimedTask):Void {
                         if((_LocalRunInProgress && !(_TimerCancelled)))
 {

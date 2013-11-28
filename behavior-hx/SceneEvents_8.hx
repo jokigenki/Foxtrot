@@ -54,7 +54,23 @@ class SceneEvents_8 extends SceneScript
 	
 	override public function init()
 	{
-		
+		            if((!(getGameAttribute("Speed Run In Progress")) || (cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Farm_Boss_Key")), Bool) && cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg1_03")), Bool))))
+{
+            recycleActor(getActor(17));
+            recycleActor(getActor(18));
+}
+
+    addWhenKilledListener(getActor(12), function(list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Farm_Boss_Key")), Bool))
+{
+            recycleActor(getActor(17));
+            recycleActor(getActor(18));
+}
+
+}
+});
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

@@ -94,26 +94,36 @@
                         <set-val-202-6 comment="false" x="37" y="140">
                             <get-game-val-9 comment="false" id="0" x="0" y="0"/>
                         </set-val-202-6>
-                        <periodic comment="false" x="37" y="165">
+                        <if comment="false" x="37" y="165">
+                            <group eventID="5" id="-1">
+                                <die comment="false" x="48" y="190">
+                                    <ACTOR eid="var" id="0" vid="13"/>
+                                </die>
+                            </group>
+                            <code-short comment="false" id="0" x="0" y="0">
+                                <int id="0" val="_KeyToKill != null"/>
+                            </code-short>
+                        </if>
+                        <periodic comment="false" x="37" y="229">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="192">
+                                <if comment="false" x="48" y="256">
                                     <group eventID="1" id="-1">
-                                        <incdec comment="false" x="59" y="227">
+                                        <incdec comment="false" x="59" y="291">
                                             <int id="0" val="5"/>
                                             <int id="1" val="0"/>
                                             <int id="2" val="1"/>
                                         </incdec>
-                                        <if comment="false" x="59" y="254">
+                                        <if comment="false" x="59" y="318">
                                             <group eventID="5" id="-1">
-                                                <scene-say comment="false" x="70" y="284">
+                                                <scene-say comment="false" x="70" y="348">
                                                     <int id="0" val="Speed Run Timer PM"/>
                                                     <int id="1" val="TimerReset"/>
                                                 </scene-say>
-                                                <if comment="false" x="70" y="304">
+                                                <if comment="false" x="70" y="368">
                                                     <group eventID="5" id="-1">
-                                                        <dolater comment="false" x="81" y="329">
+                                                        <dolater comment="false" x="81" y="393">
                                                             <group eventID="5" id="-1">
-                                                                <scene-change-new comment="false" x="92" y="356">
+                                                                <scene-change-new comment="false" x="92" y="420">
                                                                     <scenebyname comment="false" id="0" x="0" y="0">
                                                                         <get-game-val-15 comment="false" id="0" x="0" y="0"/>
                                                                     </scenebyname>
@@ -129,9 +139,9 @@
                                                     </group>
                                                     <is-transitioning comment="false" id="0" x="0" y="0"/>
                                                 </if>
-                                                <else comment="false" x="70" y="417">
+                                                <else comment="false" x="70" y="481">
                                                     <group eventID="5" id="-1">
-                                                        <scene-change-new comment="false" x="81" y="437">
+                                                        <scene-change-new comment="false" x="81" y="501">
                                                             <scenebyname comment="false" id="0" x="0" y="0">
                                                                 <get-game-val-15 comment="false" id="0" x="0" y="0"/>
                                                             </scenebyname>
@@ -156,23 +166,23 @@
                                         </not>
                                     </and>
                                 </if>
-                                <else comment="false" x="48" y="510">
+                                <else comment="false" x="48" y="574">
                                     <group eventID="1" id="-1">
-                                        <print comment="false" x="59" y="530">
+                                        <print comment="false" x="59" y="594">
                                             <int id="0" val="stopping timer"/>
                                         </print>
-                                        <set-val-202-1 comment="false" x="59" y="550">
+                                        <set-val-202-1 comment="false" x="59" y="614">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-202-1>
-                                        <set-val-202-2 comment="false" x="59" y="575">
+                                        <set-val-202-2 comment="false" x="59" y="639">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-202-2>
-                                        <set-game-val-10 comment="false" x="59" y="600">
+                                        <set-game-val-10 comment="false" x="59" y="664">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-10>
-                                        <custom-339 comment="false" x="59" y="625"/>
-                                        <custom-328 comment="false" x="59" y="645"/>
-                                        <cancel comment="false" x="59" y="665"/>
+                                        <custom-339 comment="false" x="59" y="689"/>
+                                        <custom-328 comment="false" x="59" y="709"/>
+                                        <cancel comment="false" x="59" y="729"/>
                                     </group>
                                 </else>
                             </group>
@@ -318,4 +328,27 @@
         </receiver-2-344>
     </group>
     <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <say comment="false" x="37" y="70">
+                            <ACTOR eid="var" id="0" vid="12"/>
+                            <int id="1" val="Collectable Door PM"/>
+                            <int id="2" val="KeyCollected"/>
+                        </say>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        <code-short comment="false" id="1" x="0" y="0">
+                            <int id="0" val="_DoorToOpen != null"/>
+                        </code-short>
+                    </and>
+                </if>
+            </group>
+            <int id="0" val="EggCollected"/>
+        </event-custom>
+    </group>
+    <group eventID="11" id="-1"/>
 </groups>

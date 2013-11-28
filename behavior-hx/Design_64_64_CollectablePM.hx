@@ -78,6 +78,7 @@ if(wrapper.enabled && sameAsAny(getActorGroup(0),event.otherActor.getType(),even
 {
                     scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType(_CollectableId,event.thisActor.getType());
                     actor.shout("_customEvent_" + _CollectionEventName);
+                    shoutToScene("_customEvent_" + _CollectionEventName);
 }
 
                 if(actor.hasBehavior("Display On Collected PM"))

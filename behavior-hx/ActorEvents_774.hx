@@ -42,20 +42,19 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_4 extends SceneScript
+class ActorEvents_774 extends ActorScript
 {          	
 	
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
+		super(actor, engine);	
 		
 	}
 	
 	override public function init()
 	{
-		            setGameAttribute("Speed Run In Progress", false);
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

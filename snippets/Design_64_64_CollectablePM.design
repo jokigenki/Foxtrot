@@ -44,6 +44,9 @@
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-64-1 comment="false" id="1" x="0" y="0"/>
                                         </shout>
+                                        <scene-shout comment="false" x="59" y="237">
+                                            <get-val-64-1 comment="false" id="0" x="0" y="0"/>
+                                        </scene-shout>
                                     </group>
                                     <not comment="false" id="0" x="0" y="0">
                                         <str-empty comment="false" id="0" x="0" y="0">
@@ -51,9 +54,9 @@
                                         </str-empty>
                                     </not>
                                 </if>
-                                <if comment="false" x="48" y="249">
+                                <if comment="false" x="48" y="274">
                                     <group eventID="1" id="-1">
-                                        <custom-668 comment="false" x="59" y="282">
+                                        <custom-668 comment="false" x="59" y="307">
                                             <ACTOR eid="this" id="0"/>
                                         </custom-668>
                                     </group>
@@ -62,7 +65,7 @@
                                         <int id="1" val="Display On Collected PM"/>
                                     </has-snippet>
                                 </if>
-                                <die comment="false" x="48" y="321">
+                                <die comment="false" x="48" y="346">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
                             </group>
