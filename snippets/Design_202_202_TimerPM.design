@@ -30,53 +30,6 @@
         </comment-short>
     </group>
     <group eventID="2" id="-1"/>
-    <group eventID="4" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="4" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="4" id="-1">
-                        <create-actor3 comment="false" x="37" y="65">
-                            <ACTORTYPE eid="178" id="0"/>
-                            <int id="1" val="136"/>
-                            <int id="2" val="289"/>
-                            <int id="3" val="2"/>
-                        </create-actor3>
-                        <fadeInOut comment="false" x="37" y="92">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="2"/>
-                            <int id="3" val="9"/>
-                        </fadeInOut>
-                        <set-attribute comment="false" x="37" y="119">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="Inventory Collectable PM"/>
-                            <int id="2" val="_Collectioneventname"/>
-                            <int id="3" val="EggCollected"/>
-                        </set-attribute>
-                        <set-attribute comment="false" x="37" y="146">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="Inventory Collectable PM"/>
-                            <int id="2" val="_CollectableId"/>
-                            <get-game-val-14 comment="false" id="3" x="0" y="0"/>
-                        </set-attribute>
-                        <setanim comment="false" x="37" y="178">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <string-to-anim comment="false" id="1" x="0" y="0">
-                                <get-game-val-14 comment="false" id="0" x="0" y="0"/>
-                            </string-to-anim>
-                        </setanim>
-                    </group>
-                    <get-val-202-7 comment="false" id="0" x="0" y="0"/>
-                </if>
-                <scene-say comment="false" x="26" y="227">
-                    <int id="0" val="Speed Run Timer PM"/>
-                    <int id="1" val="TimerReset"/>
-                </scene-say>
-            </group>
-            <int id="0" val="CompleteSpeedRun"/>
-        </event-custom>
-    </group>
-    <group eventID="4" id="-1"/>
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
@@ -351,4 +304,20 @@
         </event-custom>
     </group>
     <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <scene-say comment="false" x="26" y="40">
+                    <int id="0" val="Speed Run Timer PM"/>
+                    <int id="1" val="TimerReset"/>
+                </scene-say>
+                <custom-327 comment="false" x="26" y="60">
+                    <int id="0" val="Egg1_Speed"/>
+                    <ACTORTYPE eid="178" id="1"/>
+                </custom-327>
+            </group>
+            <int id="0" val="CompleteSpeedRun"/>
+        </event-custom>
+    </group>
+    <group eventID="12" id="-1"/>
 </groups>

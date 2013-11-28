@@ -61,7 +61,6 @@ propertyChanged("_RunComplete", _RunComplete);
 {
                 if(!(Utils.contains(getGameAttribute("Collected Speed Run Items"), item)))
 {
-                    trace("" + (("" + "Missing: ") + ("" + item)));
                     _RunComplete = false;
 propertyChanged("_RunComplete", _RunComplete);
                     break;
@@ -71,7 +70,6 @@ propertyChanged("_RunComplete", _RunComplete);
 
             if(_RunComplete)
 {
-                trace("" + "SPEED RUN COMPLETE!");
                 sayToScene("Speed Run Timer PM", "_customEvent_" + "CompleteSpeedRun");
 }
 
@@ -106,7 +104,15 @@ _RunComplete = false;
 	
 	override public function init()
 	{
-		
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    if(getGameAttribute("Speed Run In Progress"))
+{
+                        getActor(14).setValue("Inventory Collectable PM", "_CollectableId", "Egg1_Speed");
+                        getActor(14).setAnimation("" + ("" + "Egg1_Speed"));
+}
+
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

@@ -82,20 +82,6 @@ propertyChanged("_LocalSpeedRunTime", _LocalSpeedRunTime);
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_LockAllSpeedRunDoors();
 }
 
-    public function _customEvent_CompleteSpeedRun():Void
-{
-        if(_LocalRunInProgress)
-{
-            createRecycledActor(getActorType(178), 136, 289, Script.BACK);
-            getLastCreatedActor().fadeTo(1, 2, Quad.easeOut);
-            getLastCreatedActor().setValue("Inventory Collectable PM", "_Collectioneventname", "EggCollected");
-            getLastCreatedActor().setValue("Inventory Collectable PM", "_CollectableId", getGameAttribute("Speed Run Egg Name"));
-            getLastCreatedActor().setAnimation("" + ("" + getGameAttribute("Speed Run Egg Name")));
-}
-
-        sayToScene("Speed Run Timer PM", "_customEvent_" + "TimerReset");
-}
-
     public function _customEvent_ItemAddedToInventory():Void
 {
         if(!(getGameAttribute("Speed Run In Progress")))
@@ -157,6 +143,12 @@ public function _customBlock_SaveSpeedRunData():Void
             _DoorToOpen.say("Collectable Door PM", "_customEvent_" + "KeyCollected");
 }
 
+}
+
+    public function _customEvent_CompleteSpeedRun():Void
+{
+        sayToScene("Speed Run Timer PM", "_customEvent_" + "TimerReset");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType("Egg1_Speed",getActorType(178));
 }
 
 

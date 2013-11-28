@@ -29,16 +29,10 @@
                             <group eventID="1" id="-1">
                                 <if comment="false" x="48" y="196">
                                     <group eventID="1" id="-1">
-                                        <print comment="false" x="59" y="231">
-                                            <str-combine comment="false" id="0" x="0" y="0">
-                                                <int id="0" val="Missing: "/>
-                                                <for-each-item comment="false" id="1" x="0" y="0"/>
-                                            </str-combine>
-                                        </print>
-                                        <set-val-175-2 comment="false" x="59" y="261">
+                                        <set-val-175-2 comment="false" x="59" y="231">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-175-2>
-                                        <break comment="false" x="59" y="286"/>
+                                        <break comment="false" x="59" y="256"/>
                                     </group>
                                     <not comment="false" id="0" x="0" y="0">
                                         <contains-item comment="false" id="0" x="0" y="0">
@@ -50,12 +44,9 @@
                             </group>
                             <get-game-val-13 comment="false" id="0" x="0" y="0"/>
                         </for-each>
-                        <if comment="false" x="37" y="330">
+                        <if comment="false" x="37" y="300">
                             <group eventID="1" id="-1">
-                                <print comment="false" x="48" y="355">
-                                    <int id="0" val="SPEED RUN COMPLETE!"/>
-                                </print>
-                                <scene-say comment="false" x="48" y="375">
+                                <scene-say comment="false" x="48" y="325">
                                     <int id="0" val="Speed Run Timer PM"/>
                                     <int id="1" val="CompleteSpeedRun"/>
                                 </scene-say>
@@ -100,4 +91,34 @@
         </event-custom>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="4" id="-1">
+                                <set-attribute comment="false" x="48" y="92">
+                                    <ACTOR eid="14" id="0"/>
+                                    <int id="1" val="Inventory Collectable PM"/>
+                                    <int id="2" val="_CollectableId"/>
+                                    <int id="3" val="Egg1_Speed"/>
+                                </set-attribute>
+                                <setanim comment="false" x="48" y="119">
+                                    <ACTOR eid="14" id="0"/>
+                                    <string-to-anim comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="Egg1_Speed"/>
+                                    </string-to-anim>
+                                </setanim>
+                            </group>
+                            <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>

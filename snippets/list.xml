@@ -1661,6 +1661,7 @@
         <events>
             <event displayName="Rooster Killed" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
             <event displayName="Reduced Health" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_174_174" classname="scripts.Design_174_174" desc="A switch that switches once from start state to on or off when the player jumps on it. Effect is immediate." description="A switch that switches once from start state to on or off when the player jumps on it. Effect is immediate." design="true" drawOrder="0" id="174" language="" name="Single Use Region Switch PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
@@ -2063,13 +2064,13 @@
         </blocks>
         <events>
             <event displayName="On Timer Reset" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
-            <event displayName="On Check Complete" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
             <event displayName="Created" enabled="true" id="5" name="init" order="5" repeats="true"/>
             <event displayName="On Added To Inventory" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="8" name="draw" order="8" repeats="true"/>
             <event displayName="Time to string" enabled="true" id="9" name="event-custom-block" order="9" repeats="true"/>
             <event displayName="Save speed run data" enabled="true" id="10" name="event-custom-block" order="10" repeats="true"/>
             <event displayName="Egg Collected" enabled="true" id="11" name="event-custom" order="11" repeats="true"/>
+            <event displayName="Complete Speed Run" enabled="true" id="12" name="event-custom" order="12" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_197_197_SuperBasicStateMachinePM" classname="scripts.Design_197_197_SuperBasicStateMachinePM" desc="Has a list of states in the format: StateId:behaviour1=0,behaviour2=1 etc. where 0 means send a &quot;Deactivated&quot; event to the behaviour and 1 means send an &quot;Activated&quot; signal to the behaviour when changing to the state." description="Has a list of states in the format: StateId:behaviour1=0,behaviour2=1 etc. where 0 means send a &quot;Deactivated&quot; event to the behaviour and 1 means send an &quot;Activated&quot; signal to the behaviour when changing to the state." design="true" drawOrder="0" id="197" language="" name="Super Simple State Machine PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
