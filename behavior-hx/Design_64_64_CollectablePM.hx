@@ -72,7 +72,6 @@ nameMap.set("Actor", "actor");
 if(wrapper.enabled && sameAsAny(getActorGroup(0),event.otherActor.getType(),event.otherActor.getGroup())){
         if((!(("" + _CollectableId) == ("")) && !(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected(_CollectableId)), Bool))))
 {
-            trace("" + (("" + "COLLECT  ") + ("" + _CollectableId)));
             if(event.otherActor.hasBehavior("Collector PM"))
 {
                 if(!(("" + _CollectableId) == ("")))

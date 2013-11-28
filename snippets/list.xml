@@ -564,12 +564,12 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Offset" hidden="true" id="1" name="_XOffset" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="true" id="2" name="_YOffset" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Radius" hidden="true" id="3" name="_Radius" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Start Angle" hidden="true" id="4" name="_StartAngle" order="4"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Pivot" hidden="false" id="5" name="_Pivot" order="5"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target X" hidden="true" id="6" name="_TargetX" order="6"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target Y" hidden="true" id="7" name="_TargetY" order="7"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Move Target" hidden="false" id="8" name="_MoveTarget" order="8"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Was Initialised?" hidden="true" id="9" name="_WasInitialised" order="9"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Pivot" hidden="false" id="5" name="_Pivot" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target X" hidden="true" id="6" name="_TargetX" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Target Y" hidden="true" id="7" name="_TargetY" order="6"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Move Target" hidden="false" id="8" name="_MoveTarget" order="7"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Was Initialised?" hidden="true" id="9" name="_WasInitialised" order="8"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Start Angle" hidden="true" id="10" name="_StartAngle" order="9"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <blocks/>
         <events>
@@ -3549,6 +3549,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Offset X" hidden="true" id="16" name="_LiftOffsetX" order="15"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lift Indices" hidden="true" id="19" name="_LiftIndices" order="18"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Index" hidden="true" id="18" name="_LiftIndex" order="17"/>
+        <number default="1" defaultValue="1" desc="" dropdown="-1=-1&#10;0=0&#10;1=1" fullname="Direction" hidden="false" id="20" name="_Direction" order="19"/>
         <blocks>
             <receiver blockID="806" id="1"/>
             <receiver blockID="809" id="2"/>

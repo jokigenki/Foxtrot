@@ -21,7 +21,7 @@
                                                     <ACTOR eid="var" id="0" vid="5"/>
                                                 </getdir>
                                             </to-degreesradians>
-                                            <get-val-51-4 comment="false" id="1" x="0" y="0"/>
+                                            <get-val-51-10 comment="false" id="1" x="0" y="0"/>
                                         </plus>
                                     </trig-master>
                                     <get-val-51-3 comment="false" id="1" x="0" y="0"/>
@@ -44,7 +44,7 @@
                                                     <ACTOR eid="var" id="0" vid="5"/>
                                                 </getdir>
                                             </to-degreesradians>
-                                            <get-val-51-4 comment="false" id="1" x="0" y="0"/>
+                                            <get-val-51-10 comment="false" id="1" x="0" y="0"/>
                                         </plus>
                                     </trig-master>
                                     <get-val-51-3 comment="false" id="1" x="0" y="0"/>
@@ -79,33 +79,9 @@
                                         <comment-short comment="false" x="59" y="412">
                                             <int id="0" val="Custom: distance between &amp;lt;Pivot&amp;gt; and Self"/>
                                         </comment-short>
-                                        <set-val-51-4 comment="false" x="59" y="432">
-                                            <atan2 comment="false" id="0" x="0" y="0">
-                                                <minus comment="false" id="0" x="0" y="0">
-                                                    <get-xy comment="false" id="0" x="0" y="0">
-                                                        <ACTOR eid="this" id="0"/>
-                                                        <int id="1" val="3"/>
-                                                    </get-xy>
-                                                    <get-xy comment="false" id="1" x="0" y="0">
-                                                        <ACTOR eid="var" id="0" vid="5"/>
-                                                        <int id="1" val="3"/>
-                                                    </get-xy>
-                                                </minus>
-                                                <minus comment="false" id="1" x="0" y="0">
-                                                    <get-xy comment="false" id="0" x="0" y="0">
-                                                        <ACTOR eid="this" id="0"/>
-                                                        <int id="1" val="2"/>
-                                                    </get-xy>
-                                                    <get-xy comment="false" id="1" x="0" y="0">
-                                                        <ACTOR eid="var" id="0" vid="5"/>
-                                                        <int id="1" val="2"/>
-                                                    </get-xy>
-                                                </minus>
-                                            </atan2>
-                                        </set-val-51-4>
-                                        <if comment="false" x="59" y="475">
+                                        <if comment="false" x="59" y="432">
                                             <group eventID="1" id="-1">
-                                                <set-val-51-8 comment="false" x="70" y="518">
+                                                <set-val-51-8 comment="false" x="70" y="475">
                                                     <get-attribute comment="false" id="0" x="0" y="0">
                                                         <ACTOR eid="this" id="0"/>
                                                         <int id="1" val="Rideable Platform PM"/>
@@ -128,9 +104,9 @@
                                                 </has-snippet>
                                             </and>
                                         </if>
-                                        <else-if comment="false" x="59" y="570">
+                                        <else-if comment="false" x="59" y="527">
                                             <group eventID="1" id="-1">
-                                                <set-val-51-8 comment="false" x="70" y="603">
+                                                <set-val-51-8 comment="false" x="70" y="560">
                                                     <ACTOR eid="this" id="0"/>
                                                 </set-val-51-8>
                                             </group>

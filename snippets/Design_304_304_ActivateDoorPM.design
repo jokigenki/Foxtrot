@@ -271,22 +271,6 @@
             <int id="0" val="ActivateDoor"/>
         </event-custom>
     </group>
-    <group eventID="1" id="1">
-        <if comment="false" x="606" y="343">
-            <group eventID="1" id="-1"/>
-            <get-val-304-7 comment="false" id="0" x="0" y="0"/>
-        </if>
-        <else-if comment="false" x="606" y="400">
-            <group eventID="2" id="-1">
-                <set-xy comment="false" x="617" y="425">
-                    <ACTOR eid="var" id="0" vid="4"/>
-                    <int id="1" val="0"/>
-                    <get-game-val-7 comment="false" id="2" x="0" y="0"/>
-                </set-xy>
-            </group>
-            <get-val-304-8 comment="false" id="0" x="0" y="0"/>
-        </else-if>
-    </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
@@ -316,23 +300,20 @@
                         <set-game-val-20 comment="false" x="37" y="226">
                             <get-val-304-3 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-20>
-                        <comment-short comment="false" x="37" y="251">
-                            <int id="0" val="GA: Set Destination Scene (Text) to &amp;lt;Exit Name&amp;gt;"/>
-                        </comment-short>
-                        <set-dxy comment="false" x="37" y="271">
+                        <set-dxy comment="false" x="37" y="251">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                         </set-dxy>
-                        <fadeTo comment="false" x="37" y="298">
+                        <fadeTo comment="false" x="37" y="278">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="0"/>
                             <get-val-304-11 comment="false" id="2" x="0" y="0"/>
                             <int id="3" val="9"/>
                         </fadeTo>
-                        <if comment="false" x="37" y="330">
+                        <if comment="false" x="37" y="310">
                             <group eventID="2" id="-1">
-                                <moveToBy comment="false" x="48" y="355">
+                                <moveToBy comment="false" x="48" y="335">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="1"/>
                                     <get-xy comment="false" id="2" x="0" y="0">
@@ -354,9 +335,9 @@
                             </group>
                             <get-val-304-7 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else-if comment="false" x="37" y="412">
+                        <else-if comment="false" x="37" y="392">
                             <group eventID="2" id="-1">
-                                <set-game-val-7 comment="false" x="48" y="437">
+                                <set-game-val-7 comment="false" x="48" y="417">
                                     <get-xy comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="var" id="0" vid="4"/>
                                         <int id="1" val="0"/>
@@ -365,11 +346,11 @@
                             </group>
                             <get-val-304-8 comment="false" id="0" x="0" y="0"/>
                         </else-if>
-                        <if comment="false" x="37" y="482">
+                        <if comment="false" x="37" y="462">
                             <group eventID="2" id="-1">
-                                <dolater comment="false" x="48" y="535">
+                                <dolater comment="false" x="48" y="515">
                                     <group eventID="2" id="-1">
-                                        <say comment="false" x="59" y="572">
+                                        <say comment="false" x="59" y="552">
                                             <custom-252 comment="false" id="0" x="0" y="0">
                                                 <get-val-304-10 comment="false" id="0" x="0" y="0"/>
                                             </custom-252>
@@ -399,26 +380,26 @@
                                 </not>
                             </and>
                         </if>
-                        <else comment="false" x="37" y="633">
+                        <else comment="false" x="37" y="613">
                             <group eventID="2" id="-1">
-                                <scene-say comment="false" x="48" y="653">
+                                <scene-say comment="false" x="48" y="633">
                                     <int id="0" val="Scene Transition PM"/>
                                     <int id="1" val="SwitchScene"/>
                                 </scene-say>
                             </group>
                         </else>
-                        <if comment="false" x="37" y="685">
+                        <if comment="false" x="37" y="665">
                             <group eventID="2" id="-1">
-                                <print comment="false" x="48" y="710">
+                                <print comment="false" x="48" y="690">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <int id="0" val="SAVING "/>
                                         <get-val-304-3 comment="false" id="1" x="0" y="0"/>
                                     </str-combine>
                                 </print>
-                                <set-game-val-21 comment="false" x="48" y="740">
+                                <set-game-val-21 comment="false" x="48" y="720">
                                     <get-val-304-3 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-21>
-                                <save-game comment="false" x="48" y="765">
+                                <save-game comment="false" x="48" y="745">
                                     <group eventID="2" id="-1"/>
                                 </save-game>
                             </group>

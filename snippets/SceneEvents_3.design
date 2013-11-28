@@ -3,31 +3,22 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <print comment="false" x="26" y="40">
-                    <int id="0" val="HOME CREATED"/>
-                </print>
-                <if comment="false" x="26" y="60">
+                <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="105">
+                        <dolater comment="false" x="37" y="85">
                             <group eventID="1" id="-1">
-                                <print comment="false" x="48" y="132">
-                                    <str-combine comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="Last scene: "/>
-                                        <get-game-val-21 comment="false" id="1" x="0" y="0"/>
-                                    </str-combine>
-                                </print>
-                                <set-attribute comment="false" x="48" y="162">
+                                <set-game-val-20 comment="false" x="48" y="112">
+                                    <custom-552 comment="false" id="0" x="0" y="0">
+                                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                    </custom-552>
+                                </set-game-val-20>
+                                <set-attribute comment="false" x="48" y="142">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Activate Door PM"/>
                                     <int id="2" val="_Destination"/>
                                     <get-game-val-21 comment="false" id="3" x="0" y="0"/>
                                 </set-attribute>
-                                <say comment="false" x="48" y="194">
-                                    <ACTOR eid="18" id="0"/>
-                                    <int id="1" val="Activate Door PM"/>
-                                    <int id="2" val="ActivateDoor"/>
-                                </say>
-                                <say comment="false" x="48" y="221">
+                                <say comment="false" x="48" y="174">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Collectable Door PM"/>
                                     <int id="2" val="DoorActivated"/>

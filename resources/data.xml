@@ -5765,7 +5765,28 @@
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="320" fixedrot="false" fric="0.2" gid="3" id="614" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Pivot" oid="-1" pausable="true" rest="0.0" shared="false" sprite="615" static="false">
         <snippets>
-            <s enabled="true" id="56">
+            <s enabled="true" id="411">
+                <prop id="1" list="1" val=""/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="3" list="0" val="4.0"/>
+                <prop id="4" list="0" val="0.0"/>
+                <prop id="5" list="0" val="0.0"/>
+                <prop id="6" list="0" val="0.0"/>
+                <prop id="7" list="0" val="0.0"/>
+                <prop id="8" list="0" val="0.0"/>
+                <prop id="9" list="0" val=""/>
+                <prop id="10" list="0" val="0.0"/>
+                <prop id="11" list="0" val="360"/>
+                <prop id="13" list="0" val="616"/>
+                <prop id="14" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="15" list="1" val=""/>
+                <prop id="17" list="0" val="0"/>
+                <prop id="16" list="0" val="0"/>
+                <prop id="19" list="1" val=""/>
+                <prop id="18" list="0" val="0"/>
+            </s>
+            <s enabled="false" id="56">
                 <prop id="1" list="0" val="true"/>
                 <prop id="2" list="0" val="100"/>
                 <prop id="3" list="0" val="616"/>
@@ -6674,7 +6695,7 @@
         <snippets>
             <s enabled="true" id="57">
                 <prop id="4" list="0" val="0"/>
-                <prop id="5" list="0" val="45"/>
+                <prop id="5" list="0" val="40"/>
                 <prop id="7" list="1" val="">
                     <text order="0" value="Rat"/>
                     <text order="1" value="Egg Push"/>
@@ -7062,7 +7083,7 @@
                 <prop id="2" list="0" val="false"/>
                 <prop id="3" list="0" val=""/>
                 <prop id="4" list="0" val="0"/>
-                <prop id="5" list="0" val="45"/>
+                <prop id="5" list="0" val="40"/>
                 <prop id="6" list="0" val="50"/>
                 <prop id="7" list="1" val="">
                     <text order="0" value="Rat"/>
@@ -7357,7 +7378,7 @@
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="321" fixedrot="false" fric="0.2" gid="6" id="616" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Windmill Platform" oid="-1" pausable="true" rest="0.0" shared="false" sprite="617" static="false">
         <snippets>
-            <s enabled="true" id="51">
+            <s enabled="false" id="51">
                 <prop id="1" list="0" val="0"/>
                 <prop id="2" list="0" val="0"/>
                 <prop id="3" list="0" val="0"/>
@@ -7367,6 +7388,7 @@
                 <prop id="7" list="0" val="0"/>
                 <prop id="8" list="0" val=""/>
                 <prop id="9" list="0" val="false"/>
+                <prop id="10" list="0" val="0.0"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="54">
@@ -7393,6 +7415,14 @@
             <s enabled="true" id="233">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="true"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="413">
+                <prop id="1" list="0" val="0.0"/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="3" list="0" val="0.0"/>
+                <prop id="4" list="0" val="0.0"/>
+                <prop id="5" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
