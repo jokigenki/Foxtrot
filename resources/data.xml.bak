@@ -399,6 +399,12 @@
             </s>
         </snippets>
     </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="75" id="813" name="Big Boss Vignette" shared="false" width="75">
+        <anim across="1" down="1" durations="100" height="75" id="0" loop="true" name="Animation 0" numframes="1" originx="37" originy="37" sync="false" width="75"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="416" fixedrot="false" fric="0.2" gid="2" id="812" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Big Boss Vignette" oid="-1" pausable="true" rest="0.0" shared="false" sprite="813" static="true">
+        <snippets/>
+    </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="13" id="768" name="Big Hat" shared="false" width="64">
         <anim across="1" down="1" durations="100" height="13" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="8" sync="false" width="64">
             <poly data="4,0,5,64,5,64,13,0,13" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
@@ -2564,6 +2570,12 @@
         <tile collision="1" data="" durations="100" frames="15" id="15" order="-1"/>
     </tileset>
     <music atlasID="1" desc="" id="756" loop="true" name="Factory Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="75" id="811" name="Factory Vignette" shared="false" width="75">
+        <anim across="1" down="1" durations="100" height="75" id="0" loop="true" name="Animation 0" numframes="1" originx="37" originy="37" sync="false" width="75"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="415" fixedrot="false" fric="0.2" gid="2" id="810" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Factory Vignette" oid="-1" pausable="true" rest="0.0" shared="false" sprite="811" static="true">
+        <snippets/>
+    </actor>
     <custom-block blocktag="custom-633" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;FadeOutCurrent&quot;, ~,~,~);" desc="" global="false" gui="Fade out current music over %0 fade in %1 over %2" id="633" message="FadeOutCurrent" name="FadeOutCurrent" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Fade Out Time" order="0" type="NUMBER"/>
         <blank name="Music" order="1" type="SOUND"/>
@@ -2937,6 +2949,12 @@
         <tile collision="1" data="" durations="100" frames="124" id="124" order="-1"/>
         <tile collision="1" data="" durations="100" frames="125" id="125" order="-1"/>
     </tileset>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="75" id="809" name="Farm Vignette" shared="false" width="75">
+        <anim across="1" down="1" durations="100" height="75" id="0" loop="true" name="Animation 0" numframes="1" originx="37" originy="37" sync="false" width="75"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="414" fixedrot="false" fric="0.2" gid="2" id="808" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Farm Vignette" oid="-1" pausable="true" rest="0.0" shared="false" sprite="809" static="true">
+        <snippets/>
+    </actor>
     <music atlasID="0" desc="" id="803" loop="true" name="Fart SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="1" default="1" defaultAnimation="1" desc="" height="16" id="462" name="Filling Liquid" shared="false" width="64">
         <anim across="1" down="1" durations="100" height="16" id="1" loop="true" name="Layout" numframes="1" originx="0" originy="16" sync="false" width="64">
@@ -7445,7 +7463,9 @@
         <anim across="1" down="1" durations="100" height="40" id="0" loop="true" name="Animation 0" numframes="1" originx="35" originy="20" sync="false" width="70"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="740" name="zzz" shared="false" width="32">
-        <anim across="4" down="1" durations="500,500,500,500" height="32" id="0" loop="true" name="Animation 0" numframes="4" originx="16" originy="16" sync="false" width="128"/>
+        <anim across="3" down="1" durations="100,100,100" height="32" id="0" loop="true" name="Animation 0" numframes="3" originx="16" originy="16" sync="false" width="96">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="385" fixedrot="false" fric="0.2" gid="2" id="739" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="zzz" oid="-1" pausable="true" rest="0.0" shared="false" sprite="740" static="true">
         <snippets/>
