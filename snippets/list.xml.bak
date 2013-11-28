@@ -1109,7 +1109,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="93" language="" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" scenespecific="true" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_92_92" classname="scripts.Design_92_92" desc="A door that is unlocked by picking up a certain item (or by triggering the collection event in another way)" description="A door that is unlocked by picking up a certain item (or by triggering the collection event in another way)" design="true" drawOrder="0" id="92" language="" name="Collectable Door PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Open?" hidden="true" id="1" name="_IsOpen" order="1"/>
@@ -3601,6 +3603,14 @@
             <event displayName="Deactivated" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_808" classname="scripts.ActorEvents_808" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="414" language="" name="ActorEvents_808" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_810" classname="scripts.ActorEvents_810" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="415" language="" name="ActorEvents_810" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
     <snippet attachedevent="false" class="scripts.Design_413_413_PrecalcWindmillArmPM" classname="scripts.Design_413_413_PrecalcWindmillArmPM" desc="" description="" design="true" drawOrder="0" id="413" language="" name="Precalc Windmill Arm PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Target X" hidden="true" id="1" name="_TargetX" order="1"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Start Angle" hidden="true" id="2" name="_StartAngle" order="2"/>
@@ -3772,6 +3782,10 @@
         <events/>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_745" classname="scripts.ActorEvents_745" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="388" language="" name="ActorEvents_745" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_812" classname="scripts.ActorEvents_812" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="416" language="" name="ActorEvents_812" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
