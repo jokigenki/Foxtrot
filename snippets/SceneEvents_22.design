@@ -20,4 +20,29 @@
         </event-actor-region>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="72" y="9">
+            <group eventID="2" id="-1">
+                <if comment="false" x="83" y="34">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="94" y="69">
+                            <ACTOR eid="184" id="0"/>
+                        </die>
+                        <die comment="false" x="94" y="96">
+                            <ACTOR eid="185" id="0"/>
+                        </die>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <custom-326 comment="false" id="1" x="0" y="0">
+                            <int id="0" val="FactoryBossKey"/>
+                        </custom-326>
+                    </or>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

@@ -555,6 +555,64 @@
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="8" id="675" name="Block Explode" shared="false" width="8">
         <anim across="1" down="1" durations="100" height="8" id="0" loop="true" name="p1" numframes="1" originx="4" originy="4" sync="false" width="8"/>
     </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="809" name="Blue Boss Door" shared="false" width="32">
+        <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="false" name="Opening" numframes="4" originx="16" originy="16" sync="false" width="128"/>
+        <anim across="1" down="1" durations="100" height="32" id="1" loop="true" name="Closed" numframes="1" originx="16" originy="16" sync="false" width="32">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Closed" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="32" id="2" loop="true" name="Open" numframes="1" originx="16" originy="16" sync="false" width="32">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Open" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="414" fixedrot="false" fric="0.2" gid="3" id="808" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Blue Boss Door" oid="-1" pausable="true" rest="0.0" shared="false" sprite="809" static="true">
+        <snippets>
+            <s enabled="true" id="304">
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="3" list="0" val="Factory2_11|Factory2_Boss|B|A"/>
+                <prop id="4" list="0" val=""/>
+                <prop id="6" list="0" val="true"/>
+                <prop id="7" list="0" val="true"/>
+                <prop id="8" list="0" val="false"/>
+                <prop id="9" list="0" val="true"/>
+                <prop id="10" list="0" val=""/>
+                <prop id="11" list="0" val="0.5"/>
+                <prop id="12" list="0" val="0.5"/>
+                <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val="0"/>
+                <prop id="15" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="0"/>
+                <prop id="16" list="0" val="0"/>
+                <prop id="18" list="0" val="792"/>
+            </s>
+            <s enabled="true" id="92">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="Open"/>
+                <prop id="3" list="0" val="Closed"/>
+                <prop id="4" list="0" val="Opening"/>
+                <prop id="13" list="0" val="KeyCollected"/>
+                <prop id="14" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="133">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="false"/>
+                <prop id="16" list="0" val=""/>
+                <prop id="19" list="0" val="false"/>
+                <prop id="18" list="0" val="false"/>
+                <prop id="21" list="0" val=""/>
+                <prop id="20" list="0" val="false"/>
+                <prop id="23" list="0" val=""/>
+                <prop id="25" list="0" val=""/>
+                <prop id="24" list="0" val="UseDoor"/>
+                <prop id="27" list="0" val="0"/>
+                <prop id="26" list="0" val="1"/>
+                <prop id="29" list="0" val="4"/>
+                <prop id="28" list="0" val=""/>
+                <prop id="30" list="0" val="4"/>
+            </s>
+        </snippets>
+    </actor>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="30" id="654" name="Bomb Crate" shared="false" width="30">
         <anim across="10" down="1" durations="100,100,100,100,100,100,100,100,100,100" height="30" id="0" loop="true" name="Anim" numframes="10" originx="15" originy="15" sync="false" width="300">
             <poly data="8,0,2,0,28,2,30,28,30,30,28,30,2,28,0,2,0" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
@@ -568,7 +626,7 @@
                 <prop id="4" list="0" val="9"/>
                 <prop id="5" list="0" val="10"/>
                 <prop id="6" list="0" val="11"/>
-                <prop id="7" list="0" val="18"/>
+                <prop id="7" list="0" val="11"/>
                 <prop id="8" list="0" val="262"/>
                 <prop id="9" list="0" val="true"/>
                 <prop id="10" list="0" val="704"/>
@@ -1760,66 +1818,6 @@
             </s>
         </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="806" name="Door BLUE BOSS" shared="false" width="32">
-        <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="false" name="opening" numframes="4" originx="16" originy="16" sync="false" width="128">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="opening" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="32" id="1" loop="true" name="closed" numframes="1" originx="16" originy="16" sync="false" width="32">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="closed" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="32" id="2" loop="true" name="open" numframes="1" originx="16" originy="16" sync="false" width="32">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="open" rest="0.0" sensor="false"/>
-        </anim>
-    </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="411" fixedrot="false" fric="0.2" gid="3" id="805" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Door BLUE BOSS" oid="-1" pausable="true" rest="0.0" shared="false" sprite="806" static="false">
-        <snippets>
-            <s enabled="true" id="304">
-                <prop id="2" list="0" val="0.0"/>
-                <prop id="3" list="0" val=""/>
-                <prop id="4" list="0" val=""/>
-                <prop id="6" list="0" val="true"/>
-                <prop id="7" list="0" val="true"/>
-                <prop id="8" list="0" val="false"/>
-                <prop id="9" list="0" val="true"/>
-                <prop id="10" list="0" val=""/>
-                <prop id="11" list="0" val="0.5"/>
-                <prop id="12" list="0" val="0.5"/>
-                <prop id="13" list="0" val="0"/>
-                <prop id="14" list="0" val="0"/>
-                <prop id="15" list="0" val="0"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="17" list="0" val="0"/>
-                <prop id="16" list="0" val="0"/>
-                <prop id="18" list="0" val="792"/>
-            </s>
-            <s enabled="true" id="92">
-                <prop id="1" list="0" val="false"/>
-                <prop id="2" list="0" val="open"/>
-                <prop id="3" list="0" val="closed"/>
-                <prop id="4" list="0" val="opening"/>
-                <prop id="13" list="0" val=""/>
-                <prop id="14" list="0" val="false"/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="133">
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="17" list="0" val="false"/>
-                <prop id="16" list="0" val=""/>
-                <prop id="19" list="0" val="false"/>
-                <prop id="18" list="0" val="false"/>
-                <prop id="21" list="0" val=""/>
-                <prop id="20" list="0" val="false"/>
-                <prop id="23" list="0" val=""/>
-                <prop id="25" list="0" val=""/>
-                <prop id="24" list="0" val="UseDoor"/>
-                <prop id="27" list="0" val="0"/>
-                <prop id="26" list="0" val="1"/>
-                <prop id="29" list="0" val="4"/>
-                <prop id="28" list="0" val=""/>
-                <prop id="30" list="0" val="4"/>
-            </s>
-        </snippets>
-    </actor>
     <sprite atlasID="3" default="1" defaultAnimation="1" desc="" height="32" id="224" name="Door Green2" shared="false" width="32">
         <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Open" numframes="1" originx="16" originy="16" sync="false" width="32">
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Open" rest="0.0" sensor="false"/>
@@ -2025,16 +2023,10 @@
         <anim across="1" down="1" durations="100" height="16" id="1" loop="true" name="Factory1" numframes="1" originx="8" originy="8" sync="true" width="16">
             <poly data="4,4,1,12,1,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Factory1" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="16" id="2" loop="true" name="Hades1" numframes="1" originx="8" originy="8" sync="true" width="16">
-            <poly data="4,4,1,12,1,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
-        </anim>
         <anim across="1" down="1" durations="100" height="16" id="3" loop="true" name="Egg1_Speed" numframes="1" originx="8" originy="8" sync="true" width="16">
             <poly data="4,4,1,12,1,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Speed" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="16" id="4" loop="true" name="Factory1Speed" numframes="1" originx="8" originy="8" sync="true" width="16">
-            <poly data="4,4,1,12,1,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Speed" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="16" id="5" loop="true" name="Hades1Speed" numframes="1" originx="8" originy="8" sync="true" width="16">
+        <anim across="1" down="1" durations="100" height="16" id="4" loop="true" name="Egg2_Speed" numframes="1" originx="8" originy="8" sync="true" width="16">
             <poly data="4,4,1,12,1,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Speed" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="16" id="6" loop="true" name="Egg1_Boss" numframes="1" originx="8" originy="8" sync="true" width="16">
@@ -2042,18 +2034,6 @@
         </anim>
         <anim across="1" down="1" durations="100" height="16" id="7" loop="true" name="Egg2_Boss" numframes="1" originx="8" originy="8" sync="true" width="16">
             <poly data="4,4,1,12,1,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Boss" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="16" id="8" loop="true" name="Hades1Boss" numframes="1" originx="8" originy="8" sync="true" width="16">
-            <poly data="4,4,1,12,1,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Boss" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="16" id="9" loop="true" name="Farm1 Collected" numframes="1" originx="8" originy="8" sync="false" width="16">
-            <poly data="4,4,0,12,0,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1 Collected" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="16" id="10" loop="true" name="Egg1_Boss Collected" numframes="1" originx="8" originy="8" sync="false" width="16">
-            <poly data="4,4,0,12,0,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Egg1_Boss Collected" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="16" id="11" loop="true" name="Egg1_Speed Collected" numframes="1" originx="8" originy="8" sync="false" width="16">
-            <poly data="4,4,0,12,0,12,16,4,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Egg1_Speed Collected" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="179" name="Egg" shared="false" width="16">
@@ -2063,25 +2043,19 @@
         <anim across="4" down="1" durations="100,100,100,100" height="16" id="1" loop="true" name="Factory1" numframes="4" originx="8" originy="8" sync="true" width="64">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Factory1" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="2" loop="true" name="Hades1" numframes="4" originx="8" originy="8" sync="true" width="64">
-            <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Underworld1" rest="0.0" sensor="true"/>
-        </anim>
         <anim across="4" down="1" durations="100,100,100,100" height="16" id="3" loop="true" name="Egg1_Speed" numframes="4" originx="8" originy="8" sync="true" width="64">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Speed" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="4" loop="true" name="Factory1Speed" numframes="4" originx="8" originy="8" sync="true" width="64">
+        <anim across="4" down="1" durations="100,100,100,100" height="16" id="4" loop="true" name="Egg2_Speed" numframes="4" originx="8" originy="8" sync="true" width="64">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Speed" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="5" loop="true" name="Hades1Speed" numframes="4" originx="8" originy="8" sync="true" width="64">
+        <anim across="1" down="1" durations="100" height="16" id="5" loop="true" name="Egg2_Speed Collected" numframes="1" originx="8" originy="8" sync="true" width="16">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Speed" rest="0.0" sensor="true"/>
         </anim>
         <anim across="4" down="1" durations="100,100,100,100" height="16" id="6" loop="true" name="Egg1_Boss" numframes="4" originx="8" originy="8" sync="true" width="64">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Box" rest="0.0" sensor="true"/>
         </anim>
         <anim across="4" down="1" durations="100,100,100,100" height="16" id="7" loop="true" name="Egg2_Boss" numframes="4" originx="8" originy="8" sync="true" width="64">
-            <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Boss" rest="0.0" sensor="true"/>
-        </anim>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="8" loop="true" name="Hades1Boss" numframes="4" originx="8" originy="8" sync="true" width="64">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Farm1Boss" rest="0.0" sensor="true"/>
         </anim>
         <anim across="1" down="1" durations="100" height="16" id="9" loop="true" name="Farm1 Collected" numframes="1" originx="8" originy="8" sync="false" width="16">
@@ -2140,13 +2114,10 @@
         <anim across="4" down="1" durations="100,100,100,100" height="16" id="1" loop="true" name="Factory1" numframes="4" originx="8" originy="8" sync="true" width="64">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Factory1" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="2" loop="true" name="Hades1" numframes="4" originx="8" originy="8" sync="true" width="64"/>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="3" loop="true" name="Farm1Speed" numframes="4" originx="8" originy="8" sync="true" width="64"/>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="4" loop="true" name="Factory1Speed" numframes="4" originx="8" originy="8" sync="true" width="64"/>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="5" loop="true" name="Hades1Speed" numframes="4" originx="8" originy="8" sync="true" width="64"/>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="6" loop="true" name="Farm1Boss" numframes="4" originx="8" originy="8" sync="true" width="64"/>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="7" loop="true" name="Factory1Boss" numframes="4" originx="8" originy="8" sync="true" width="64"/>
-        <anim across="4" down="1" durations="100,100,100,100" height="16" id="8" loop="true" name="Hades1Boss" numframes="4" originx="8" originy="8" sync="true" width="64"/>
+        <anim across="4" down="1" durations="100,100,100,100" height="16" id="3" loop="true" name="Egg1_Speed" numframes="4" originx="8" originy="8" sync="true" width="64"/>
+        <anim across="4" down="1" durations="100,100,100,100" height="16" id="4" loop="true" name="Egg2_Speed" numframes="4" originx="8" originy="8" sync="true" width="64"/>
+        <anim across="4" down="1" durations="100,100,100,100" height="16" id="6" loop="true" name="Egg1_Boss" numframes="4" originx="8" originy="8" sync="true" width="64"/>
+        <anim across="4" down="1" durations="100,100,100,100" height="16" id="7" loop="true" name="Egg2_Boss" numframes="4" originx="8" originy="8" sync="true" width="64"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="396" fixedrot="true" fric="0.2" gid="16" id="757" ignoreg="true" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Egg Ball" oid="-1" pausable="true" rest="0.0" shared="false" sprite="758" static="false">
         <snippets>
@@ -5757,33 +5728,11 @@
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="320" fixedrot="false" fric="0.2" gid="3" id="614" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Pivot" oid="-1" pausable="true" rest="0.0" shared="false" sprite="615" static="false">
         <snippets>
-            <s enabled="true" id="411">
-                <prop id="1" list="1" val=""/>
-                <prop id="2" list="0" val="0.0"/>
-                <prop id="3" list="0" val="4.0"/>
-                <prop id="4" list="0" val="0.0"/>
-                <prop id="5" list="0" val="0.0"/>
-                <prop id="6" list="0" val="0.0"/>
-                <prop id="7" list="0" val="0.0"/>
-                <prop id="8" list="0" val="0.0"/>
-                <prop id="9" list="0" val=""/>
-                <prop id="10" list="0" val="0.0"/>
-                <prop id="11" list="0" val="360"/>
-                <prop id="13" list="0" val="616"/>
-                <prop id="14" list="1" val=""/>
-                <prop id="15" list="1" val=""/>
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="17" list="0" val="0"/>
-                <prop id="16" list="0" val="0"/>
-                <prop id="19" list="1" val=""/>
-                <prop id="18" list="0" val="0"/>
-                <prop id="20" list="0" val="1"/>
-            </s>
             <s enabled="true" id="54">
                 <prop id="1" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
-            <s enabled="false" id="56">
+            <s enabled="true" id="56">
                 <prop id="1" list="0" val="true"/>
                 <prop id="2" list="0" val="100"/>
                 <prop id="3" list="0" val="616"/>
@@ -5797,7 +5746,15 @@
                 <prop id="11" list="0" val="0"/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val="0.0"/>
+                <prop id="15" list="0" val="360.0"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="1" val=""/>
+                <prop id="16" list="1" val=""/>
+                <prop id="19" list="0" val="0.0"/>
+                <prop id="18" list="1" val=""/>
+                <prop id="21" list="0" val="1"/>
+                <prop id="20" list="0" val="0.0"/>
             </s>
         </snippets>
     </actor>
@@ -7445,7 +7402,9 @@
         <anim across="1" down="1" durations="100" height="40" id="0" loop="true" name="Animation 0" numframes="1" originx="35" originy="20" sync="false" width="70"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="740" name="zzz" shared="false" width="32">
-        <anim across="4" down="1" durations="500,500,500,500" height="32" id="0" loop="true" name="Animation 0" numframes="4" originx="16" originy="16" sync="false" width="128"/>
+        <anim across="3" down="1" durations="100,100,100" height="32" id="0" loop="true" name="Animation 0" numframes="3" originx="16" originy="16" sync="false" width="96">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="385" fixedrot="false" fric="0.2" gid="2" id="739" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="zzz" oid="-1" pausable="true" rest="0.0" shared="false" sprite="740" static="true">
         <snippets/>

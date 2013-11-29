@@ -167,32 +167,50 @@
         <init comment="false" x="15" y="15">
             <group eventID="8" id="-1">
                 <dolater comment="false" x="26" y="40">
-                    <group eventID="8" id="-1"/>
+                    <group eventID="8" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="4" id="-1">
+                                <set-attribute comment="false" x="48" y="92">
+                                    <ACTOR eid="15" id="0"/>
+                                    <int id="1" val="Inventory Collectable PM"/>
+                                    <int id="2" val="_CollectableId"/>
+                                    <int id="3" val="Egg2_Speed"/>
+                                </set-attribute>
+                                <setanim comment="false" x="48" y="119">
+                                    <ACTOR eid="15" id="0"/>
+                                    <string-to-anim comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="Egg2_Speed"/>
+                                    </string-to-anim>
+                                </setanim>
+                            </group>
+                            <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <set-val-362-4 comment="false" x="26" y="99">
+                <set-val-362-4 comment="false" x="26" y="175">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-362-4>
-                <add-list comment="false" x="26" y="124">
+                <add-list comment="false" x="26" y="200">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="12" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="157">
+                <add-list comment="false" x="26" y="233">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="9" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="190">
+                <add-list comment="false" x="26" y="266">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="10" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="223">
+                <add-list comment="false" x="26" y="299">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="11" id="0"/>
@@ -427,16 +445,10 @@
                             <group eventID="1" id="-1">
                                 <if comment="false" x="48" y="304">
                                     <group eventID="1" id="-1">
-                                        <print comment="false" x="59" y="339">
-                                            <str-combine comment="false" id="0" x="0" y="0">
-                                                <int id="0" val="Missing: "/>
-                                                <for-each-item comment="false" id="1" x="0" y="0"/>
-                                            </str-combine>
-                                        </print>
-                                        <set-val-362-7 comment="false" x="59" y="369">
+                                        <set-val-362-7 comment="false" x="59" y="339">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-362-7>
-                                        <break comment="false" x="59" y="394"/>
+                                        <break comment="false" x="59" y="364"/>
                                     </group>
                                     <not comment="false" id="0" x="0" y="0">
                                         <contains-item comment="false" id="0" x="0" y="0">
@@ -448,12 +460,9 @@
                             </group>
                             <get-game-val-13 comment="false" id="0" x="0" y="0"/>
                         </for-each>
-                        <if comment="false" x="37" y="438">
+                        <if comment="false" x="37" y="408">
                             <group eventID="1" id="-1">
-                                <print comment="false" x="48" y="463">
-                                    <int id="0" val="SPEED RUN COMPLETE!"/>
-                                </print>
-                                <scene-say comment="false" x="48" y="483">
+                                <scene-say comment="false" x="48" y="433">
                                     <int id="0" val="Speed Run Timer PM"/>
                                     <int id="1" val="CompleteSpeedRun"/>
                                 </scene-say>

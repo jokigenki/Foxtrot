@@ -760,19 +760,26 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_56_56_PivotPM" classname="scripts.Design_56_56_PivotPM" desc="A pivot that turns when active." description="A pivot that turns when active." design="true" drawOrder="0" id="56" language="" name="Pivot PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="false" id="1" name="_IsActive" order="1"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Engine Force" hidden="false" id="2" name="_EngineForce" order="2"/>
-        <actortype default="616" defaultValue="616" desc="" dropdown="" fullname="Lift Type" hidden="false" id="3" name="_LiftType" order="3"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lifts" hidden="true" id="4" name="_Lifts" order="4"/>
-        <number default="4" defaultValue="4" desc="" dropdown="" fullname="Number Of Lifts" hidden="false" id="5" name="_NumberOfLifts" order="5"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Angle Gap" hidden="true" id="6" name="_LiftAngleGap" order="6"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Radius" hidden="false" id="7" name="_Radius" order="7"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle Offset" hidden="false" id="8" name="_AngleOffset" order="8"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Lift" hidden="true" id="9" name="_Lift" order="9"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Pos" hidden="true" id="10" name="_XPos" order="10"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Pos" hidden="true" id="11" name="_YPos" order="11"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Count" hidden="true" id="12" name="_Count" order="12"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle" hidden="true" id="13" name="_Angle" order="13"/>
+        <actortype default="616" defaultValue="616" desc="" dropdown="" fullname="Lift Type" hidden="false" id="3" name="_LiftType" order="2"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lifts" hidden="true" id="4" name="_Lifts" order="3"/>
+        <number default="4" defaultValue="4" desc="" dropdown="" fullname="Number Of Lifts" hidden="false" id="5" name="_NumberOfLifts" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Angle Gap" hidden="true" id="6" name="_LiftAngleGap" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Radius" hidden="false" id="7" name="_Radius" order="6"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle Offset" hidden="false" id="8" name="_AngleOffset" order="7"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Lift" hidden="true" id="9" name="_Lift" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X Pos" hidden="true" id="10" name="_XPos" order="9"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Pos" hidden="true" id="11" name="_YPos" order="10"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Count" hidden="true" id="12" name="_Count" order="11"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Angle" hidden="true" id="13" name="_Angle" order="12"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Lift Index" hidden="true" id="14" name="_LiftIndex" order="13"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="360.0" defaultValue="360.0" desc="" dropdown="" fullname="Steps" hidden="false" id="15" name="_Steps" order="14"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Positions X" hidden="true" id="17" name="_PositionsX" order="16"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lift Indices" hidden="true" id="16" name="_LiftIndices" order="15"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Lift Offset X" hidden="true" id="19" name="_LiftOffsetX" order="18"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Positions Y" hidden="true" id="18" name="_PositionsY" order="17"/>
+        <number default="1" defaultValue="1" desc="" dropdown="AntiClockwise=1&#10;Clockwise=-1" fullname="Direction" hidden="false" id="21" name="_Direction" order="20"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Lift Offset Y" hidden="true" id="20" name="_LiftOffsetY" order="19"/>
         <blocks>
             <receiver blockID="718" id="1"/>
         </blocks>
@@ -2281,7 +2288,8 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
         <blocks/>
         <events>
-            <event displayName="Enters Region" enabled="true" id="1" name="event-actor-region" order="1" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="1" name="event-actor-region" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_21" classname="scripts.SceneEvents_21" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="237" language="" name="SceneEvents_21" oid="-1" package="scripts." sceneid="21" scenespecific="true" shared="false" type="scene">
@@ -3542,40 +3550,6 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_411_411_PrecalcPivotPM" classname="scripts.Design_411_411_PrecalcPivotPM" desc="" description="" design="true" drawOrder="0" id="411" language="" name="Precalc Pivot PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lifts" hidden="true" id="1" name="_Lifts" order="1"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Lift Angle Gap" hidden="true" id="2" name="_LiftAngleGap" order="2"/>
-        <number default="4.0" defaultValue="4.0" desc="" dropdown="" fullname="Number Of Lifts" hidden="false" id="3" name="_NumberOfLifts" order="3"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Angle" hidden="true" id="4" name="_Angle" order="4"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Angle Offset" hidden="false" id="5" name="_AngleOffset" order="5"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="X Pos" hidden="true" id="6" name="_XPos" order="6"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Radius" hidden="false" id="7" name="_Radius" order="7"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Y Pos" hidden="true" id="8" name="_YPos" order="8"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Lift" hidden="true" id="9" name="_Lift" order="9"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Count" hidden="true" id="10" name="_Count" order="10"/>
-        <number default="360" defaultValue="360" desc="" dropdown="" fullname="Steps" hidden="false" id="11" name="_Steps" order="11"/>
-        <actortype default="616" defaultValue="616" desc="" dropdown="" fullname="Lift Type" hidden="false" id="13" name="_LiftType" order="12"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Positions X" hidden="true" id="14" name="_PositionsX" order="13"/>
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Positions Y" hidden="true" id="15" name="_PositionsY" order="14"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Offset Y" hidden="true" id="17" name="_LiftOffsetY" order="16"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Offset X" hidden="true" id="16" name="_LiftOffsetX" order="15"/>
-        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Lift Indices" hidden="true" id="19" name="_LiftIndices" order="18"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lift Index" hidden="true" id="18" name="_LiftIndex" order="17"/>
-        <number default="1" defaultValue="1" desc="" dropdown="-1=-1&#10;0=0&#10;1=1" fullname="Direction" hidden="false" id="20" name="_Direction" order="19"/>
-        <blocks>
-            <receiver blockID="806" id="1"/>
-            <receiver blockID="809" id="2"/>
-            <receiver blockID="810" id="3"/>
-            <receiver blockID="811" id="4"/>
-            <receiver blockID="812" id="5"/>
-            <receiver blockID="813" id="6"/>
-        </blocks>
-        <events>
-            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="9" name="step" order="7" repeats="true"/>
-        </events>
-    </snippet>
     <snippet attachedevent="false" class="scripts.Design_408_408_RandomTimedActivationPM" classname="scripts.Design_408_408_RandomTimedActivationPM" desc="" description="" design="true" drawOrder="0" id="408" language="" name="Random Timed Activation PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Min Time" hidden="false" id="1" name="_MinTime" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Max Time" hidden="false" id="2" name="_MaxTime" order="2"/>
@@ -3603,6 +3577,10 @@
         <events>
             <event displayName="Deactivated" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
         </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_808" classname="scripts.ActorEvents_808" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="414" language="" name="ActorEvents_808" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_413_413_PrecalcWindmillArmPM" classname="scripts.Design_413_413_PrecalcWindmillArmPM" desc="" description="" design="true" drawOrder="0" id="413" language="" name="Precalc Windmill Arm PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Target X" hidden="true" id="1" name="_TargetX" order="1"/>
@@ -3639,12 +3617,14 @@
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Bomb Crate" hidden="false" id="2" name="_BombCrate" order="1"/>
         <blocks/>
         <events>
-            <event displayName="Crate Up" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
-            <event displayName="Crate Killed" enabled="true" id="2" name="event-type-create-kill" order="4" repeats="true"/>
-            <event displayName="Crusher Up Deactivate" enabled="true" id="3" name="event-actor-region" order="5" repeats="true"/>
-            <event displayName="Crate Across" enabled="true" id="4" name="event-type-region" order="3" repeats="true"/>
-            <event displayName="Crate Created" enabled="true" id="5" name="event-type-create-kill" order="2" repeats="true"/>
-            <event displayName="Crate Switch Pre" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
+            <event displayName="Crate Up" enabled="true" id="1" name="event-type-region" order="2" repeats="true"/>
+            <event displayName="Crate Killed" enabled="true" id="2" name="event-type-create-kill" order="5" repeats="true"/>
+            <event displayName="Crusher Up Deactivate" enabled="true" id="3" name="event-actor-region" order="6" repeats="true"/>
+            <event displayName="Crate Across" enabled="true" id="4" name="event-type-region" order="4" repeats="true"/>
+            <event displayName="Crate Created" enabled="true" id="5" name="event-type-create-kill" order="3" repeats="true"/>
+            <event displayName="Crate Switch Pre" enabled="true" id="6" name="event-custom" order="7" repeats="true"/>
+            <event displayName="Egg Collected" enabled="true" id="7" name="event-actor-create-kill" order="8" repeats="true"/>
+            <event displayName="Created" enabled="true" id="8" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_782" classname="scripts.ActorEvents_782" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="406" language="" name="ActorEvents_782" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">

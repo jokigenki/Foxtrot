@@ -70,7 +70,13 @@ nameMap.set("Bomb Crate", "_BombCrate");
 	
 	override public function init()
 	{
-		    addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void  {
+		            if(!(getGameAttribute("Speed Run In Progress")))
+{
+            recycleActor(getActor(54));
+            recycleActor(getActor(55));
+}
+
+    addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorType(653),a.getType(),a.getGroup())){
         a.applyImpulse(0, -1, 75);
         getActor(9).say("Activate On Event PM", "_customEvent_" + "Activate");
@@ -95,6 +101,16 @@ if(wrapper.enabled){
     addActorEntersRegionListener(getRegion(1), function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAs(getActor(9), a)){
         getActor(9).say("Activate On Event PM", "_customEvent_" + "Deactivate");
+}
+});
+    addWhenKilledListener(getActor(52), function(list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if(getGameAttribute("Speed Run In Progress"))
+{
+            recycleActor(getActor(54));
+            recycleActor(getActor(55));
+}
+
 }
 });
 

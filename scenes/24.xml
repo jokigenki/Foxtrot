@@ -16,7 +16,7 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="64" id="0" name="Region 0" pts="4,-240.0,-32.0,240.0,-32.0,240.0,32.0,-240.0,32.0" r="64" type="box" w="480" x="80" y="352"/>
+        <region b="64" g="64" h="64" id="0" name="Region 0" pts="4,-240.0,32.0,240.0,32.0,240.0,-32.0,-240.0,-32.0" r="64" type="box" w="480" x="80" y="352"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -24,7 +24,6 @@
         <actor a="0.0" aid="3" c="false" group="0" id="9" name="Jumper 3" sx="1.0" sy="1.0" x="144" y="64" z="2"/>
         <actor a="0.0" aid="10" c="true" group="2" id="432" name="Chocolate Spawner 10" sx="1.0" sy="1.0" x="93" y="30" z="6">
             <snippets>
-                <s enabled="true" id="249"/>
                 <s enabled="true" id="52">
                     <prop id="2" list="0" val="none"/>
                     <prop id="5" list="0" val="5"/>
@@ -45,6 +44,7 @@
                     <prop id="21" list="0" val="false"/>
                     <prop id="20" list="0" val=""/>
                 </s>
+                <s enabled="true" id="249"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Spawn PM"/>
@@ -191,6 +191,7 @@
                     <prop id="2" list="0" val="true"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="432"/>
@@ -207,7 +208,6 @@
                     <prop id="13" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -405,8 +405,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="15" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -514,8 +514,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="15" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -591,8 +591,8 @@
                         <text order="0" value="Crate Spawn 51"/>
                     </prop>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="15" list="0" val="800"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="800"/>
                 </s>
                 <s enabled="true" id="173"/>
             </snippets>
@@ -621,13 +621,13 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
+        </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -640,20 +640,22 @@
             <prop id="9" list="1" val=""/>
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="30.0"/>
-        </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="24"/>
+            <prop id="12" list="0" val="48"/>
+            <prop id="13" list="0" val="38"/>
         </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="756"/>
             <prop id="2" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="24"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="272.0" y="160.0"/>
-        <p pts="4,0.0,128.0,0.0,0.0,160.0,0.0,160.0,128.0" x="128.0" y="256.0"/>
-        <p pts="8,112.0,16.0,112.0,64.0,0.0,64.0,0.0,48.0,96.0,48.0,96.0,0.0,144.0,0.0,144.0,16.0" x="336.0" y="96.0"/>
         <p pts="50,304.0,368.0,304.0,240.0,512.0,240.0,512.0,224.0,304.0,224.0,304.0,208.0,432.0,208.0,432.0,192.0,496.0,192.0,496.0,144.0,464.0,144.0,464.0,128.0,496.0,128.0,496.0,16.0,432.0,16.0,432.0,48.0,416.0,48.0,416.0,16.0,384.0,16.0,384.0,48.0,368.0,48.0,368.0,16.0,96.0,16.0,96.0,80.0,128.0,80.0,128.0,128.0,192.0,128.0,192.0,144.0,96.0,144.0,96.0,208.0,80.0,208.0,80.0,16.0,48.0,16.0,48.0,240.0,16.0,240.0,16.0,272.0,48.0,272.0,48.0,368.0,32.0,368.0,32.0,288.0,0.0,288.0,0.0,224.0,32.0,224.0,32.0,0.0,512.0,0.0,512.0,208.0,528.0,208.0,528.0,256.0,512.0,256.0,512.0,368.0" x="48.0" y="16.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,32.0,0.0,32.0,16.0" x="272.0" y="160.0"/>
+        <p pts="8,112.0,16.0,112.0,64.0,0.0,64.0,0.0,48.0,96.0,48.0,96.0,0.0,144.0,0.0,144.0,16.0" x="336.0" y="96.0"/>
+        <p pts="4,0.0,128.0,0.0,0.0,160.0,0.0,160.0,128.0" x="128.0" y="256.0"/>
     </terrain>
 </scene>
