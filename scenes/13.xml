@@ -36,8 +36,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -51,6 +51,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -69,7 +70,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="5" c="true" group="5" id="160" name="Rotating Lift 5" sx="1.0" sy="1.0" x="208" y="384" z="4">
@@ -376,7 +376,7 @@
                 <s enabled="true" id="111"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="46" c="true" group="8" id="201" name="Fanny Cannon 46" sx="1.0" sy="1.0" x="496" y="240" z="1">
+        <actor a="0.0" aid="46" c="true" group="8" id="201" name="Fanny Cannon 46" sx="1.0" sy="1.0" x="495" y="239" z="1">
             <snippets>
                 <s enabled="true" id="136">
                     <prop id="1" list="0" val="1"/>
@@ -394,6 +394,8 @@
                     <prop id="13" list="0" val="0.4"/>
                     <prop id="14" list="0" val="803"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="Fart"/>
+                    <prop id="16" list="0" val="5"/>
                 </s>
                 <s enabled="true" id="169">
                     <prop id="1" list="1" val="">
@@ -451,6 +453,8 @@
                     <prop id="13" list="0" val="0.4"/>
                     <prop id="14" list="0" val="803"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="Fart"/>
+                    <prop id="16" list="0" val="5"/>
                 </s>
                 <s enabled="true" id="169">
                     <prop id="1" list="1" val="">
@@ -505,8 +509,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -540,65 +544,12 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="45" c="true" group="8" id="201" name="Fanny Cannon 45" sx="1.0" sy="1.0" x="496" y="320" z="1">
-            <snippets>
-                <s enabled="true" id="136">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="2" list="0" val="3"/>
-                    <prop id="3" list="0" val="199"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="13"/>
-                    <prop id="6" list="0" val="30"/>
-                    <prop id="7" list="0" val="-1"/>
-                    <prop id="8" list="0" val="0"/>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="idle-l"/>
-                    <prop id="11" list="0" val="shoot-l"/>
-                    <prop id="12" list="0" val="false"/>
-                    <prop id="13" list="0" val="0.4"/>
-                    <prop id="14" list="0" val="803"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="169">
-                    <prop id="1" list="1" val="">
-                        <text order="0" value="Deadly Sides PM"/>
-                        <text order="1" value="Timed Shoot PM"/>
-                    </prop>
-                    <prop id="2" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="141">
-                    <prop id="1" list="1" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="147">
-                    <prop id="2" list="0" val="dead-l"/>
-                    <prop id="3" list="0" val="dead-l"/>
-                    <prop id="4" list="0" val="dead-r"/>
-                    <prop id="7" list="0" val="0"/>
-                    <prop id="8" list="0" val="0"/>
-                    <prop id="9" list="0" val="20"/>
-                    <prop id="10" list="0" val=""/>
-                    <prop id="11" list="0" val="789"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="148">
-                    <prop id="1" list="0" val="true"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="4" list="0" val="false"/>
-                    <prop id="5" list="1" val="">
-                        <text order="0" value="Jumper"/>
-                    </prop>
-                    <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="135"/>
-            </snippets>
-        </actor>
         <actor a="0.0" aid="51" c="true" group="8" id="201" name="Fanny Cannon 51" sx="1.0" sy="1.0" x="112" y="160" z="1">
             <snippets>
+                <s enabled="true" id="327">
+                    <prop id="1" list="0" val="Right"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="136">
                     <prop id="1" list="0" val="2.5"/>
                     <prop id="2" list="0" val="3"/>
@@ -615,6 +566,8 @@
                     <prop id="13" list="0" val="0.4"/>
                     <prop id="14" list="0" val="803"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="Fart"/>
+                    <prop id="16" list="0" val="5"/>
                 </s>
                 <s enabled="true" id="169">
                     <prop id="1" list="1" val="">
@@ -656,6 +609,10 @@
         </actor>
         <actor a="0.0" aid="50" c="true" group="8" id="201" name="Fanny Cannon 50" sx="1.0" sy="1.0" x="112" y="240" z="1">
             <snippets>
+                <s enabled="true" id="327">
+                    <prop id="1" list="0" val="Right"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="136">
                     <prop id="1" list="0" val="3.5"/>
                     <prop id="2" list="0" val="3"/>
@@ -672,63 +629,8 @@
                     <prop id="13" list="0" val="0.4"/>
                     <prop id="14" list="0" val="803"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="169">
-                    <prop id="1" list="1" val="">
-                        <text order="0" value="Deadly Sides PM"/>
-                        <text order="1" value="Timed Shoot PM"/>
-                    </prop>
-                    <prop id="2" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="141">
-                    <prop id="1" list="1" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="147">
-                    <prop id="2" list="0" val="dead-l"/>
-                    <prop id="3" list="0" val="dead-l"/>
-                    <prop id="4" list="0" val="dead-r"/>
-                    <prop id="7" list="0" val="0"/>
-                    <prop id="8" list="0" val="0"/>
-                    <prop id="9" list="0" val="20"/>
-                    <prop id="10" list="0" val=""/>
-                    <prop id="11" list="0" val="789"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="148">
-                    <prop id="1" list="0" val="true"/>
-                    <prop id="2" list="0" val="true"/>
-                    <prop id="3" list="0" val="false"/>
-                    <prop id="4" list="0" val="false"/>
-                    <prop id="5" list="1" val="">
-                        <text order="0" value="Jumper"/>
-                    </prop>
-                    <prop id="6" list="0" val="Bump Out PM"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="135"/>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="49" c="true" group="8" id="201" name="Fanny Cannon 49" sx="1.0" sy="1.0" x="112" y="320" z="1">
-            <snippets>
-                <s enabled="true" id="136">
-                    <prop id="1" list="0" val="4.5"/>
-                    <prop id="2" list="0" val="3"/>
-                    <prop id="3" list="0" val="199"/>
-                    <prop id="4" list="0" val="0"/>
-                    <prop id="5" list="0" val="13"/>
-                    <prop id="6" list="0" val="30"/>
-                    <prop id="7" list="0" val="0"/>
-                    <prop id="8" list="0" val="0"/>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val="idle-l"/>
-                    <prop id="11" list="0" val="shoot-l"/>
-                    <prop id="12" list="0" val="false"/>
-                    <prop id="13" list="0" val="0.4"/>
-                    <prop id="14" list="0" val="803"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="Fart"/>
+                    <prop id="16" list="0" val="5"/>
                 </s>
                 <s enabled="true" id="169">
                     <prop id="1" list="1" val="">
@@ -786,6 +688,8 @@
                     <prop id="13" list="0" val="0.4"/>
                     <prop id="14" list="0" val="803"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="Fart"/>
+                    <prop id="16" list="0" val="5"/>
                 </s>
                 <s enabled="true" id="169">
                     <prop id="1" list="1" val="">
@@ -830,6 +734,10 @@
         <actor a="0.0" aid="53" c="false" group="10" id="257" name="Spikes 53" sx="1.0" sy="1.0" x="368" y="32" z="7"/>
         <actor a="0.0" aid="52" c="true" group="8" id="201" name="Fanny Cannon 52" sx="1.0" sy="1.0" x="112" y="80" z="1">
             <snippets>
+                <s enabled="true" id="327">
+                    <prop id="1" list="0" val="Right"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="136">
                     <prop id="1" list="0" val="1.5"/>
                     <prop id="2" list="0" val="3"/>
@@ -846,6 +754,8 @@
                     <prop id="13" list="0" val="0.4"/>
                     <prop id="14" list="0" val="803"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="Fart"/>
+                    <prop id="16" list="0" val="5"/>
                 </s>
                 <s enabled="true" id="169">
                     <prop id="1" list="1" val="">
@@ -918,13 +828,13 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
+        </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -937,6 +847,8 @@
             <prop id="9" list="1" val=""/>
             <prop id="10" list="0" val="288.0"/>
             <prop id="11" list="0" val="30.0"/>
+            <prop id="12" list="0" val="-1"/>
+            <prop id="13" list="0" val="-1"/>
         </s>
         <s enabled="true" id="314">
             <prop id="1" list="0" val="3"/>
@@ -962,29 +874,29 @@
             <prop id="27" list="0" val="0"/>
             <prop id="26" list="0" val="0"/>
         </s>
-        <s enabled="true" id="329">
-            <prop id="1" list="0" val="466"/>
-            <prop id="2" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="303">
             <prop id="1" list="0" val="0.5"/>
             <prop id="2" list="0" val="13"/>
         </s>
+        <s enabled="true" id="329">
+            <prop id="1" list="0" val="466"/>
+            <prop id="2" list="0" val="-1"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="4,0.0,16.0,16.0,16.0,16.0,0.0,0.0,0.0" x="320.0" y="16.0"/>
-        <p pts="12,0.0,48.0,0.0,0.0,16.0,0.0,16.0,16.0,32.0,16.0,32.0,0.0,64.0,0.0,64.0,16.0,80.0,16.0,80.0,0.0,96.0,0.0,96.0,48.0" x="272.0" y="0.0"/>
-        <p pts="8,80.0,0.0,80.0,16.0,96.0,16.0,96.0,32.0,0.0,32.0,0.0,16.0,16.0,16.0,16.0,0.0" x="272.0" y="464.0"/>
-        <p pts="4,96.0,0.0,96.0,16.0,0.0,16.0,0.0,0.0" x="272.0" y="560.0"/>
-        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="304.0" y="320.0"/>
-        <p pts="4,96.0,0.0,96.0,16.0,0.0,16.0,0.0,0.0" x="272.0" y="640.0"/>
-        <p pts="4,48.0,0.0,48.0,16.0,0.0,16.0,0.0,0.0" x="432.0" y="640.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="288.0" y="240.0"/>
-        <p pts="8,96.0,112.0,80.0,112.0,80.0,32.0,16.0,32.0,16.0,64.0,0.0,64.0,0.0,0.0,96.0,0.0" x="272.0" y="128.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,48.0,0.0,48.0,16.0" x="160.0" y="560.0"/>
         <p pts="8,96.0,0.0,96.0,48.0,80.0,48.0,80.0,16.0,16.0,16.0,16.0,48.0,0.0,48.0,0.0,0.0" x="272.0" y="720.0"/>
+        <p pts="8,96.0,112.0,80.0,112.0,80.0,32.0,16.0,32.0,16.0,64.0,0.0,64.0,0.0,0.0,96.0,0.0" x="272.0" y="128.0"/>
+        <p pts="4,96.0,0.0,96.0,16.0,0.0,16.0,0.0,0.0" x="272.0" y="640.0"/>
+        <p pts="54,96.0,496.0,96.0,608.0,112.0,608.0,112.0,624.0,128.0,624.0,128.0,640.0,208.0,640.0,208.0,656.0,96.0,656.0,96.0,720.0,208.0,720.0,208.0,768.0,192.0,768.0,192.0,736.0,80.0,736.0,80.0,640.0,96.0,640.0,96.0,624.0,80.0,624.0,80.0,384.0,32.0,384.0,32.0,400.0,0.0,400.0,0.0,384.0,16.0,384.0,16.0,368.0,32.0,368.0,32.0,352.0,48.0,352.0,48.0,336.0,64.0,336.0,64.0,320.0,80.0,320.0,80.0,32.0,192.0,32.0,192.0,0.0,208.0,0.0,208.0,48.0,96.0,48.0,96.0,112.0,160.0,112.0,160.0,128.0,96.0,128.0,96.0,192.0,160.0,192.0,160.0,208.0,96.0,208.0,96.0,272.0,160.0,272.0,160.0,288.0,96.0,288.0,96.0,480.0,208.0,480.0,208.0,496.0" x="0.0" y="0.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,64.0,0.0,64.0,16.0" x="288.0" y="240.0"/>
+        <p pts="4,96.0,0.0,96.0,16.0,0.0,16.0,0.0,0.0" x="272.0" y="560.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,48.0,0.0,48.0,16.0" x="160.0" y="560.0"/>
         <p pts="4,0.0,16.0,0.0,0.0,48.0,0.0,48.0,16.0" x="432.0" y="480.0"/>
-        <p pts="58,96.0,496.0,96.0,608.0,112.0,608.0,112.0,624.0,128.0,624.0,128.0,640.0,208.0,640.0,208.0,656.0,96.0,656.0,96.0,720.0,208.0,720.0,208.0,768.0,192.0,768.0,192.0,736.0,80.0,736.0,80.0,640.0,96.0,640.0,96.0,624.0,80.0,624.0,80.0,384.0,32.0,384.0,32.0,400.0,0.0,400.0,0.0,384.0,16.0,384.0,16.0,368.0,32.0,368.0,32.0,352.0,48.0,352.0,48.0,336.0,64.0,336.0,64.0,320.0,80.0,320.0,80.0,32.0,192.0,32.0,192.0,0.0,208.0,0.0,208.0,48.0,96.0,48.0,96.0,112.0,160.0,112.0,160.0,128.0,96.0,128.0,96.0,192.0,160.0,192.0,160.0,208.0,96.0,208.0,96.0,272.0,160.0,272.0,160.0,288.0,96.0,288.0,96.0,352.0,160.0,352.0,160.0,368.0,96.0,368.0,96.0,480.0,208.0,480.0,208.0,496.0" x="0.0" y="0.0"/>
-        <p pts="62,0.0,720.0,80.0,720.0,80.0,704.0,96.0,704.0,96.0,688.0,112.0,688.0,112.0,576.0,0.0,576.0,0.0,560.0,80.0,560.0,80.0,544.0,96.0,544.0,96.0,528.0,112.0,528.0,112.0,368.0,48.0,368.0,48.0,352.0,112.0,352.0,112.0,288.0,48.0,288.0,48.0,272.0,112.0,272.0,112.0,208.0,48.0,208.0,48.0,192.0,112.0,192.0,112.0,128.0,48.0,128.0,48.0,112.0,112.0,112.0,112.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0,128.0,32.0,128.0,320.0,144.0,320.0,144.0,336.0,160.0,336.0,160.0,352.0,176.0,352.0,176.0,368.0,192.0,368.0,192.0,384.0,208.0,384.0,208.0,400.0,176.0,400.0,176.0,384.0,128.0,384.0,128.0,544.0,112.0,544.0,112.0,560.0,128.0,560.0,128.0,704.0,112.0,704.0,112.0,720.0,96.0,720.0,96.0,736.0,16.0,736.0,16.0,768.0,0.0,768.0" x="432.0" y="0.0"/>
+        <p pts="12,0.0,48.0,0.0,0.0,16.0,0.0,16.0,16.0,32.0,16.0,32.0,0.0,64.0,0.0,64.0,16.0,80.0,16.0,80.0,0.0,96.0,0.0,96.0,48.0" x="272.0" y="0.0"/>
+        <p pts="4,0.0,16.0,16.0,16.0,16.0,0.0,0.0,0.0" x="320.0" y="16.0"/>
+        <p pts="4,32.0,0.0,32.0,16.0,0.0,16.0,0.0,0.0" x="304.0" y="320.0"/>
+        <p pts="8,80.0,0.0,80.0,16.0,96.0,16.0,96.0,32.0,0.0,32.0,0.0,16.0,16.0,16.0,16.0,0.0" x="272.0" y="464.0"/>
+        <p pts="58,0.0,720.0,80.0,720.0,80.0,704.0,96.0,704.0,96.0,688.0,112.0,688.0,112.0,576.0,0.0,576.0,0.0,560.0,80.0,560.0,80.0,544.0,96.0,544.0,96.0,528.0,112.0,528.0,112.0,288.0,48.0,288.0,48.0,272.0,112.0,272.0,112.0,208.0,48.0,208.0,48.0,192.0,112.0,192.0,112.0,128.0,48.0,128.0,48.0,112.0,112.0,112.0,112.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0,128.0,32.0,128.0,320.0,144.0,320.0,144.0,336.0,160.0,336.0,160.0,352.0,176.0,352.0,176.0,368.0,192.0,368.0,192.0,384.0,208.0,384.0,208.0,400.0,176.0,400.0,176.0,384.0,128.0,384.0,128.0,544.0,112.0,544.0,112.0,560.0,128.0,560.0,128.0,704.0,112.0,704.0,112.0,720.0,96.0,720.0,96.0,736.0,16.0,736.0,16.0,768.0,0.0,768.0" x="432.0" y="0.0"/>
+        <p pts="4,48.0,0.0,48.0,16.0,0.0,16.0,0.0,0.0" x="432.0" y="640.0"/>
     </terrain>
 </scene>

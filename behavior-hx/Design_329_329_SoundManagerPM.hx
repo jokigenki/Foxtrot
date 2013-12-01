@@ -123,6 +123,17 @@ public function _customBlock_PlayNamedSound(__SoundName:String):Void
 }
 
 }
+    
+
+/* Params are:__SetName __NumberOfSounds */
+public function _customBlock_PlayRandomSoundFromSet(__SetName:String, __NumberOfSounds:Float):Void
+{
+        var soundIndex = randomInt(1, __NumberOfSounds);
+var soundName = __SetName + " " + soundIndex + " SFX";
+var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);
+if (sound == null) return;
+        playSound(sound);
+}
 
  
  	public function new(dummy:Int, engine:Engine)

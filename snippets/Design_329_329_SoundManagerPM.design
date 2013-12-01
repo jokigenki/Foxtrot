@@ -171,9 +171,7 @@
             <get-byobval-329-796-0 comment="false" id="0" x="0" y="0"/>
         </receiver-15-796>
     </group>
-    <group eventID="11" id="-1">
-        <get-byobval-329-796-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="11" id="-1"/>
     <group eventID="12" id="0">
         <receiver-16-797 comment="false" x="15" y="15">
             <group eventID="12" id="-1">
@@ -194,7 +192,26 @@
             <get-byobval-329-797-0 comment="false" id="0" x="0" y="0"/>
         </receiver-16-797>
     </group>
-    <group eventID="12" id="-1">
-        <get-byobval-329-797-0 comment="false" x="0" y="0"/>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <receiver-17-816 comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="var soundIndex = randomInt(1, __NumberOfSounds);&#10;var soundName = __SetName + &amp;quot; &amp;quot; + soundIndex + &amp;quot; SFX&amp;quot;;&#10;var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);&#10;if (sound == null) return;"/>
+                </code-long>
+                <play-sound4 comment="false" x="26" y="205">
+                    <int id="0" val="0"/>
+                    <code-short comment="false" id="1" x="0" y="0">
+                        <int id="0" val="sound"/>
+                    </code-short>
+                </play-sound4>
+            </group>
+            <get-byobval-329-816-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-329-816-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-17-816>
+    </group>
+    <group eventID="13" id="-1">
+        <get-byobval-329-816-0 comment="false" x="0" y="0"/>
+        <get-byobval-329-816-1 comment="false" x="0" y="0"/>
     </group>
 </groups>

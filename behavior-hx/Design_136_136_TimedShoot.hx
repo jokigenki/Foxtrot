@@ -71,7 +71,9 @@ public var _ResetToIdle:Bool;
 
 public var _ProjectileDelayAfterShootAnimationStarts:Float;
 
-public var _SFX:Sound;
+public var _SFXName:String;
+
+public var _SFXCount:Float;
     public function _customEvent_ShootProjectile():Void
 {
         if(!(_IsActive))
@@ -103,7 +105,7 @@ public var _SFX:Sound;
 
     public function _customEvent_CreateProjectile():Void
 {
-        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
+        sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_SFXName,_SFXCount]);
         createRecycledActor(_ProjectileType, (actor.getX() + _OriginX), (actor.getY() + _OriginY), Script.BACK);
         if((_DirX > 0))
 {
@@ -146,8 +148,11 @@ nameMap.set("ResetToIdle", "_ResetToIdle");
 _ResetToIdle = false;
 nameMap.set("Projectile Delay After Shoot Animation Starts", "_ProjectileDelayAfterShootAnimationStarts");
 _ProjectileDelayAfterShootAnimationStarts = 0.0;
-nameMap.set("SFX", "_SFX");
+nameMap.set("SFX Name", "_SFXName");
+_SFXName = "";
 nameMap.set("Actor", "actor");
+nameMap.set("SFX Count", "_SFXCount");
+_SFXCount = 1;
 
 	}
 	
