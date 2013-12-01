@@ -42,7 +42,7 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_47 extends SceneScript
+class SceneEvents_4 extends SceneScript
 {          	
 	
  
@@ -54,12 +54,7 @@ class SceneEvents_47 extends SceneScript
 	
 	override public function init()
 	{
-		            setGameAttribute("Last Destination", "_Larder|Final Boss|D|A");
-        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Final Boss|D|A");
-        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Transition To Humpty|A|A");
-        runLater(1000 * 8, function(timeTask:TimedTask):Void {
-                    shoutToScene("_customEvent_" + "SwitchScene");
-}, null);
+		            setGameAttribute("Speed Run In Progress", false);
 
 	}	      	
 	
