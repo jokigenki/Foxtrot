@@ -93,11 +93,13 @@ public var _IdleAnimationLeft:String;
 
 public var _FireAnimationRight:String;
 
-public var _SFX:Sound;
-
 public var _IdleAnimationRight:String;
 
+public var _ShootSFX:Sound;
+
 public var _HasFired:Bool;
+
+public var _AlarmSFX:Sound;
             public function updateTarget ()
 {
 	var targetDistance = 500; 
@@ -158,10 +160,11 @@ nameMap.set("Is Charging?", "_IsCharging");
 _IsCharging = false;
 nameMap.set("Idle Animation Left", "_IdleAnimationLeft");
 nameMap.set("Fire Animation Right", "_FireAnimationRight");
-nameMap.set("SFX", "_SFX");
 nameMap.set("Idle Animation Right", "_IdleAnimationRight");
+nameMap.set("Shoot SFX", "_ShootSFX");
 nameMap.set("Has Fired?", "_HasFired");
 _HasFired = false;
+nameMap.set("Alarm SFX", "_AlarmSFX");
 
 	}
 	
@@ -255,6 +258,11 @@ propertyChanged("_FrameCount", _FrameCount);
 
         if(_HasCollision)
 {
+            if(!(_IsCharging))
+{
+                sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_AlarmSFX]);
+}
+
             _IsCharging = true;
 propertyChanged("_IsCharging", _IsCharging);
             actor.say("Animation Manager", "_customBlock_ClearCat");
@@ -276,7 +284,7 @@ propertyChanged("_HasFired", _HasFired);
                             _IsCharged = true;
 propertyChanged("_IsCharged", _IsCharged);
                             actor.say("Walking PM", "_customBlock_PreventWalk", [true]);
-                            sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
+                            sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_ShootSFX]);
 }
 
 }, actor);

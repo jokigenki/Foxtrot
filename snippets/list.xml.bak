@@ -1246,7 +1246,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_10" classname="scripts.SceneEvents_10" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="104" language="" name="SceneEvents_10" oid="-1" package="scripts." sceneid="10" scenespecific="true" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_11" classname="scripts.SceneEvents_11" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="105" language="" name="SceneEvents_11" oid="-1" package="scripts." sceneid="11" scenespecific="true" shared="false" type="scene">
         <blocks/>
@@ -1365,8 +1367,9 @@
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Shoot Animation" hidden="false" id="11" name="_ShootAnimation" order="11"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="ResetToIdle" hidden="true" id="12" name="_ResetToIdle" order="12"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Projectile Delay After Shoot Animation Starts" hidden="false" id="13" name="_ProjectileDelayAfterShootAnimationStarts" order="13"/>
-        <sound default="" defaultValue="" desc="" dropdown="" fullname="SFX" hidden="false" id="14" name="_SFX" order="14"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="1" defaultValue="1" desc="" dropdown="" fullname="Number Of SFX" hidden="false" id="15" name="_NumberOfSFX" order="14"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="SFX Name" hidden="false" id="16" name="_SFXName" order="15"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
@@ -2958,9 +2961,10 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Charging?" hidden="true" id="22" name="_IsCharging" order="21"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Idle Animation Left" hidden="false" id="25" name="_IdleAnimationLeft" order="24"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Fire Animation Right" hidden="false" id="24" name="_FireAnimationRight" order="23"/>
-        <sound default="" defaultValue="" desc="" dropdown="" fullname="SFX" hidden="false" id="27" name="_SFX" order="26"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="Idle Animation Right" hidden="false" id="26" name="_IdleAnimationRight" order="25"/>
+        <sound default="" defaultValue="" desc="" dropdown="" fullname="Shoot SFX" hidden="false" id="29" name="_ShootSFX" order="28"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Has Fired?" hidden="true" id="28" name="_HasFired" order="27"/>
+        <sound default="" defaultValue="" desc="" dropdown="" fullname="Alarm SFX" hidden="false" id="30" name="_AlarmSFX" order="29"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
@@ -3314,7 +3318,10 @@
             <receiver blockID="794" id="13"/>
             <receiver blockID="795" id="14"/>
             <receiver blockID="796" id="15"/>
+            <receiver blockID="815" id="17"/>
             <receiver blockID="797" id="16"/>
+            <receiver blockID="817" id="19"/>
+            <receiver blockID="816" id="18"/>
         </blocks>
         <events>
             <event displayName="Loop Music" enabled="true" id="4" name="event-custom-block" order="5" repeats="true"/>
@@ -3324,6 +3331,7 @@
             <event displayName="Loop current music" enabled="true" id="8" name="event-custom-block" order="6" repeats="true"/>
             <event displayName="Play sound" enabled="true" id="11" name="event-custom-block" order="11" repeats="true"/>
             <event displayName="Play named sound" enabled="true" id="12" name="event-custom-block" order="12" repeats="true"/>
+            <event displayName="Play sound from set" enabled="true" id="15" name="event-custom-block" order="15" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_39" classname="scripts.SceneEvents_39" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="373" language="" name="SceneEvents_39" oid="-1" package="scripts." sceneid="39" scenespecific="true" shared="false" type="scene">

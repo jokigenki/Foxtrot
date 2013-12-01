@@ -170,10 +170,11 @@
     <group eventID="5" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <custom-796 comment="false" x="26" y="40">
-                    <SOUND eid="var" id="0" vid="14"/>
-                </custom-796>
-                <create-actor3 comment="false" x="26" y="67">
+                <custom-817 comment="false" x="26" y="40">
+                    <get-val-136-16 comment="false" id="0" x="0" y="0"/>
+                    <get-val-136-15 comment="false" id="1" x="0" y="0"/>
+                </custom-817>
+                <create-actor3 comment="false" x="26" y="65">
                     <ACTORTYPE eid="var" id="0" vid="3"/>
                     <plus comment="false" id="1" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
@@ -191,9 +192,9 @@
                     </plus>
                     <int id="3" val="2"/>
                 </create-actor3>
-                <if comment="false" x="26" y="112">
+                <if comment="false" x="26" y="110">
                     <group eventID="5" id="-1">
-                        <setanim comment="false" x="37" y="142">
+                        <setanim comment="false" x="37" y="140">
                             <ACTOR eid="lastcreated" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="right"/>
@@ -205,9 +206,9 @@
                         <int id="1" val="0"/>
                     </more>
                 </if>
-                <else comment="false" x="26" y="186">
+                <else comment="false" x="26" y="184">
                     <group eventID="5" id="-1">
-                        <setanim comment="false" x="37" y="206">
+                        <setanim comment="false" x="37" y="204">
                             <ACTOR eid="lastcreated" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="left"/>
@@ -215,7 +216,7 @@
                         </setanim>
                     </group>
                 </else>
-                <push-shove comment="false" x="26" y="250">
+                <push-shove comment="false" x="26" y="248">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="0"/>
                     <get-val-136-7 comment="false" id="2" x="0" y="0"/>
