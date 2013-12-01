@@ -42,7 +42,7 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_4 extends SceneScript
+class SceneEvents_10 extends SceneScript
 {          	
 	
  
@@ -54,8 +54,7 @@ class SceneEvents_4 extends SceneScript
 	
 	override public function init()
 	{
-		            setGameAttribute("Speed Run In Progress", false);
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

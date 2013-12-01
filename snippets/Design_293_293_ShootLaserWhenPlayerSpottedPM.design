@@ -77,25 +77,15 @@
                 </else>
                 <if comment="false" x="26" y="536">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="561">
-                            <group eventID="1" id="-1">
-                                <custom-796 comment="false" x="48" y="591">
-                                    <SOUND eid="var" id="0" vid="30"/>
-                                </custom-796>
-                            </group>
-                            <not comment="false" id="0" x="0" y="0">
-                                <get-val-293-22 comment="false" id="0" x="0" y="0"/>
-                            </not>
-                        </if>
-                        <set-val-293-22 comment="false" x="37" y="630">
+                        <set-val-293-22 comment="false" x="37" y="561">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-293-22>
-                        <custom-87 comment="false" x="37" y="655">
+                        <custom-87 comment="false" x="37" y="586">
                             <ACTOR eid="this" id="0"/>
                         </custom-87>
-                        <if comment="false" x="37" y="682">
+                        <if comment="false" x="37" y="613">
                             <group eventID="1" id="-1">
-                                <custom-127 comment="false" x="48" y="720">
+                                <custom-127 comment="false" x="48" y="651">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-23 comment="false" id="1" x="0" y="0"/>
                                     <int id="2" val="Firing"/>
@@ -109,31 +99,31 @@
                                 <false comment="false" id="1" x="0" y="0"/>
                             </eq>
                         </if>
-                        <else comment="false" x="37" y="764">
+                        <else comment="false" x="37" y="695">
                             <group eventID="1" id="-1">
-                                <custom-127 comment="false" x="48" y="784">
+                                <custom-127 comment="false" x="48" y="715">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-24 comment="false" id="1" x="0" y="0"/>
                                     <int id="2" val="Firing"/>
                                 </custom-127>
                             </group>
                         </else>
-                        <dolater comment="false" x="37" y="828">
+                        <dolater comment="false" x="37" y="759">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="860">
+                                <if comment="false" x="48" y="791">
                                     <group eventID="1" id="-1">
-                                        <set-val-293-28 comment="false" x="59" y="895">
+                                        <set-val-293-28 comment="false" x="59" y="826">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-293-28>
-                                        <set-val-293-21 comment="false" x="59" y="920">
+                                        <set-val-293-21 comment="false" x="59" y="851">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-293-21>
-                                        <custom-108 comment="false" x="59" y="945">
+                                        <custom-108 comment="false" x="59" y="876">
                                             <ACTOR eid="this" id="0"/>
                                             <true comment="false" id="1" x="0" y="0"/>
                                         </custom-108>
-                                        <custom-796 comment="false" x="59" y="977">
-                                            <SOUND eid="var" id="0" vid="29"/>
+                                        <custom-796 comment="false" x="59" y="908">
+                                            <SOUND eid="var" id="0" vid="27"/>
                                         </custom-796>
                                     </group>
                                     <and comment="false" id="0" x="0" y="0">
@@ -150,27 +140,27 @@
                     </group>
                     <get-val-293-16 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="1040">
+                <else comment="false" x="26" y="971">
                     <group eventID="1" id="-1">
-                        <set-val-293-28 comment="false" x="37" y="1060">
+                        <set-val-293-28 comment="false" x="37" y="991">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-28>
-                        <custom-108 comment="false" x="37" y="1085">
+                        <custom-108 comment="false" x="37" y="1016">
                             <ACTOR eid="this" id="0"/>
                             <false comment="false" id="1" x="0" y="0"/>
                         </custom-108>
-                        <set-val-293-21 comment="false" x="37" y="1117">
+                        <set-val-293-21 comment="false" x="37" y="1048">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-21>
-                        <set-val-293-22 comment="false" x="37" y="1142">
+                        <set-val-293-22 comment="false" x="37" y="1073">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-293-22>
-                        <custom-87 comment="false" x="37" y="1167">
+                        <custom-87 comment="false" x="37" y="1098">
                             <ACTOR eid="this" id="0"/>
                         </custom-87>
-                        <if comment="false" x="37" y="1194">
+                        <if comment="false" x="37" y="1125">
                             <group eventID="1" id="-1">
-                                <custom-127 comment="false" x="48" y="1232">
+                                <custom-127 comment="false" x="48" y="1163">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-25 comment="false" id="1" x="0" y="0"/>
                                     <int id="2" val="Walking"/>
@@ -184,9 +174,9 @@
                                 <false comment="false" id="1" x="0" y="0"/>
                             </eq>
                         </if>
-                        <else comment="false" x="37" y="1276">
+                        <else comment="false" x="37" y="1207">
                             <group eventID="1" id="-1">
-                                <custom-127 comment="false" x="48" y="1296">
+                                <custom-127 comment="false" x="48" y="1227">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-293-26 comment="false" id="1" x="0" y="0"/>
                                     <int id="2" val="Walking"/>
