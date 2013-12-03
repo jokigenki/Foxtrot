@@ -660,7 +660,7 @@
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
                 <prop id="3" list="0" val="false"/>
-                <prop id="4" list="0" val="845"/>
+                <prop id="4" list="0" val="850"/>
                 <prop id="5" list="0" val="2"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -1256,7 +1256,7 @@
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
                 <prop id="3" list="0" val="false"/>
-                <prop id="4" list="0" val="845"/>
+                <prop id="4" list="0" val="850"/>
                 <prop id="5" list="0" val="2"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -2211,7 +2211,7 @@
             <s enabled="true" id="171">
                 <prop id="17" list="0" val="262"/>
                 <prop id="16" list="0" val="-1"/>
-                <prop id="18" list="0" val=""/>
+                <prop id="18" list="0" val="-1"/>
                 <prop id="4" list="0" val="262"/>
                 <prop id="10" list="0" val="9"/>
                 <prop id="14" list="0" val="0"/>
@@ -2260,7 +2260,7 @@
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="false"/>
                 <prop id="3" list="0" val="false"/>
-                <prop id="4" list="0" val="845"/>
+                <prop id="4" list="0" val="850"/>
                 <prop id="5" list="0" val="2"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -4165,6 +4165,10 @@
     <custom-block blocktag="custom-49" blocktype="NORMAL" code="Boolean((sayToScene(&quot;Inventory PM&quot;, &quot;IsInInventory&quot;, ~)))" desc="Returns true if the given item name is in the inventory." global="false" gui="Is %0 In Inventory?" id="49" message="IsInInventory" name="IsInInventory" oid="-1" return="BOOLEAN" shared="false" snippetID="22">
         <blank name="Item Name" order="0" type="TEXT"/>
     </custom-block>
+    <custom-block blocktag="custom-858" blocktype="NORMAL" code="Boolean((sayToScene(&quot;Sound Manager PM&quot;, &quot;IsSceneSoundPlaying&quot;, ~,~)))" desc="" global="false" gui="Is scene sound %0 playing in %1" id="858" message="IsSceneSoundPlaying" name="IsSceneSoundPlaying" oid="-1" return="BOOLEAN" shared="false" snippetID="329">
+        <blank name="Sound Name" order="0" type="TEXT"/>
+        <blank name="Scene Name" order="1" type="TEXT"/>
+    </custom-block>
     <custom-block blocktag="custom-78" blocktype="NORMAL" code="Boolean((~.say(&quot;Edge Teeter PM&quot;, &quot;IsTeeteringLeft&quot;, ~)))" desc="" global="false" gui="%0 is teetering on left of %1" id="78" message="IsTeeteringLeft" name="IsTeeteringLeft" oid="-1" return="BOOLEAN" shared="false" snippetID="39">
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="ground actor" order="1" type="ACTOR"/>
@@ -4561,6 +4565,7 @@
                 <prop id="20" list="0" val="true"/>
                 <prop id="23" list="0" val="0"/>
                 <prop id="22" list="0" val="0"/>
+                <prop id="24" list="0" val="Laser Loop SFX"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -4601,6 +4606,7 @@
                 <prop id="20" list="0" val="true"/>
                 <prop id="23" list="0" val="0"/>
                 <prop id="22" list="0" val="0"/>
+                <prop id="24" list="0" val="Laser Loop SFX"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -4638,6 +4644,7 @@
                 <prop id="20" list="0" val="true"/>
                 <prop id="23" list="0" val="0"/>
                 <prop id="22" list="0" val="0"/>
+                <prop id="24" list="0" val="Laser Loop SFX"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -5157,6 +5164,14 @@
     <custom-block blocktag="custom-632" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopMusic&quot;, ~);" desc="" global="false" gui="Loop music %0" id="632" message="LoopMusic" name="LoopMusic" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Music" order="0" type="SOUND"/>
     </custom-block>
+    <custom-block blocktag="custom-857" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopSceneSound&quot;, ~,~);" desc="" global="false" gui="Loop scene sound %0 for %1" id="857" message="LoopSceneSound" name="LoopSceneSound" oid="-1" return="VOID" shared="false" snippetID="329">
+        <blank name="Sound Name" order="0" type="TEXT"/>
+        <blank name="Scene Name" order="1" type="TEXT"/>
+    </custom-block>
+    <custom-block blocktag="custom-861" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopSoundNamed&quot;, ~,~);" desc="" global="false" gui="Loop sound named %0 on channel %1" id="861" message="LoopSoundNamed" name="LoopSoundNamed" oid="-1" return="VOID" shared="false" snippetID="329">
+        <blank name="Sound Name" order="0" type="TEXT"/>
+        <blank name="Channel" order="1" type="NUMBER"/>
+    </custom-block>
     <custom-block blocktag="custom-844" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopSoundOnChannel&quot;, ~,~);" desc="" global="false" gui="Loop sound %0 on channel %1" id="844" message="LoopSoundOnChannel" name="LoopSoundOnChannel" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Sound" order="0" type="SOUND"/>
         <blank name="Channel" order="1" type="NUMBER"/>
@@ -5441,6 +5456,7 @@
                 <prop id="20" list="0" val="false"/>
                 <prop id="23" list="0" val="0"/>
                 <prop id="22" list="0" val="0"/>
+                <prop id="24" list="0" val="Laser Loop SFX"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -7038,6 +7054,10 @@
         <blank name="Stomped" order="1" type="ACTOR"/>
     </custom-block>
     <custom-block blocktag="custom-635" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;StopCurrentMusic&quot;);" desc="" global="false" gui="Stop current music" id="635" message="StopCurrentMusic" name="StopCurrentMusic" oid="-1" return="VOID" shared="false" snippetID="329"/>
+    <custom-block blocktag="custom-856" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;StopSceneSound&quot;, ~,~);" desc="" global="false" gui="Stop scene sound %0 for %1" id="856" message="StopSceneSound" name="StopSceneSound" oid="-1" return="VOID" shared="false" snippetID="329">
+        <blank name="Sound Name" order="0" type="TEXT"/>
+        <blank name="Scene Name" order="1" type="TEXT"/>
+    </custom-block>
     <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="8" id="181" name="Switch Light" shared="false" width="8">
         <anim across="1" down="1" durations="100" height="8" id="0" loop="true" name="On" numframes="1" originx="4" originy="4" sync="false" width="8">
             <poly data="4,0,0,8,0,8,8,0,8" density="0.1" fric="0.2" gid="-1000" id="0" name="On" rest="0.0" sensor="false"/>

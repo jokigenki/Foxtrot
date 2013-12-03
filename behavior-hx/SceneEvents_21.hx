@@ -63,7 +63,7 @@ _HasPlayedSound = false;
 	override public function init()
 	{
 		            runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
-                    loopSoundOnChannel(getSound(828), Std.int(1));
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Milk Loop SFX",getCurrentSceneName()]);
 }, null);
 
 	}	      	

@@ -64,6 +64,9 @@ _LiquidLevel = 0.0;
 	{
 		            _LiquidLevel = asNumber(32);
 propertyChanged("_LiquidLevel", _LiquidLevel);
+        runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Fire Loop SFX",getCurrentSceneName()]);
+}, null);
     addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAs(getActor(3), a)){
         getActor(239).say("Activate On Event PM", "_customEvent_" + "Activate");

@@ -5,22 +5,22 @@
             <group eventID="4" id="-1">
                 <if comment="false" x="26" y="45">
                     <group eventID="1" id="-1">
-                        <stop-sounds comment="false" x="37" y="80"/>
-                        <play-sound4 comment="false" x="37" y="100">
+                        <play-sound-channel comment="false" x="37" y="80">
                             <int id="0" val="1"/>
                             <get-byobval-329-632-0 comment="false" id="1" x="0" y="0"/>
-                        </play-sound4>
-                        <set-game-val-22 comment="false" x="37" y="132">
+                            <int id="2" val="0"/>
+                        </play-sound-channel>
+                        <set-game-val-22 comment="false" x="37" y="112">
                             <tostring comment="false" id="0" x="0" y="0">
                                 <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
                             </tostring>
                         </set-game-val-22>
-                        <set-game-val-23 comment="false" x="37" y="162">
+                        <set-game-val-23 comment="false" x="37" y="142">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-23>
-                        <if comment="false" x="37" y="187">
+                        <if comment="false" x="37" y="167">
                             <group eventID="4" id="-1">
-                                <say comment="false" x="48" y="220">
+                                <say comment="false" x="48" y="200">
                                     <ACTOR eid="var" id="0" vid="2"/>
                                     <int id="1" val="Music Toggle PM"/>
                                     <int id="2" val="MusicOn"/>
@@ -47,25 +47,43 @@
     <group eventID="5" id="0">
         <receiver-6-633 comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <fade-sounds comment="false" x="26" y="45">
+                <fade-sound-channel comment="false" x="26" y="45">
                     <int id="0" val="1"/>
-                    <get-byobval-329-633-0 comment="false" id="1" x="0" y="0"/>
-                </fade-sounds>
+                    <int id="1" val="0"/>
+                    <get-byobval-329-633-0 comment="false" id="2" x="0" y="0"/>
+                </fade-sound-channel>
                 <dolater comment="false" x="26" y="77">
                     <group eventID="2" id="-1">
-                        <play-sound4 comment="false" x="37" y="109">
-                            <int id="0" val="1"/>
-                            <get-byobval-329-633-1 comment="false" id="1" x="0" y="0"/>
-                        </play-sound4>
-                        <fade-sounds comment="false" x="37" y="141">
+                        <play-sound-channel comment="false" x="37" y="109">
                             <int id="0" val="0"/>
-                            <get-byobval-329-633-2 comment="false" id="1" x="0" y="0"/>
-                        </fade-sounds>
-                        <set-game-val-22 comment="false" x="37" y="173">
+                            <get-byobval-329-633-1 comment="false" id="1" x="0" y="0"/>
+                            <int id="2" val="0"/>
+                        </play-sound-channel>
+                        <if comment="false" x="37" y="141">
+                            <group eventID="5" id="-1">
+                                <set-volume-channel comment="false" x="48" y="171">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </set-volume-channel>
+                                <fade-sound-channel comment="false" x="48" y="191">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-byobval-329-633-0 comment="false" id="2" x="0" y="0"/>
+                                </fade-sound-channel>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-byobval-329-633-0 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <set-game-val-22 comment="false" x="37" y="235">
                             <tostring comment="false" id="0" x="0" y="0">
                                 <get-byobval-329-633-1 comment="false" id="0" x="0" y="0"/>
                             </tostring>
                         </set-game-val-22>
+                        <set-game-val-23 comment="false" x="37" y="265">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-23>
                     </group>
                     <get-byobval-329-633-0 comment="false" id="0" x="0" y="0"/>
                     <ACTOR eid="lastcreated" id="2"/>
@@ -80,16 +98,24 @@
     <group eventID="6" id="0">
         <receiver-8-635 comment="false" x="15" y="15">
             <group eventID="6" id="-1">
-                <stop-sounds comment="false" x="26" y="40"/>
-                <set-game-val-22 comment="false" x="26" y="60">
-                    <int id="0" val="None"/>
-                </set-game-val-22>
-                <set-game-val-23 comment="false" x="26" y="80">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-23>
-                <if comment="false" x="26" y="105">
+                <if comment="false" x="26" y="40">
+                    <group eventID="6" id="-1">
+                        <control-sound-channel comment="false" x="37" y="65">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </control-sound-channel>
+                        <set-game-val-22 comment="false" x="37" y="92">
+                            <int id="0" val="None"/>
+                        </set-game-val-22>
+                        <set-game-val-23 comment="false" x="37" y="112">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-23>
+                    </group>
+                    <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="149">
                     <group eventID="4" id="-1">
-                        <say comment="false" x="37" y="138">
+                        <say comment="false" x="37" y="182">
                             <ACTOR eid="var" id="0" vid="2"/>
                             <int id="1" val="Music Toggle PM"/>
                             <int id="2" val="MusicOff"/>
@@ -107,15 +133,51 @@
     <group eventID="7" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <periodic comment="false" x="26" y="40">
+                <set-val-329-4 comment="false" x="26" y="40">
+                    <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                </set-val-329-4>
+                <set-val-329-3 comment="false" x="26" y="65">
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-val-329-4 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </set-val-329-3>
+                <repeat comment="false" x="26" y="95">
                     <group eventID="7" id="-1">
-                        <if comment="false" x="37" y="67">
+                        <code-long comment="false" x="37" y="120">
+                            <int id="0" val="var item = _LocalSceneSounds[index0];&#10;if (item != null)&#10;{&#10;&#9;var comps = item.split(&amp;quot;|&amp;quot;);&#10;&#9;var soundName = comps[0];&#10;&#9;var sceneName = &amp;quot;&amp;quot; + comps[1];&#10;&#9;var channel = Std.parseInt(comps[2]);&#10;&#10;&#9;if (sceneName != getCurrentSceneName())&#10;&#9;{&#10;&#9;&#9;stopSoundOnChannel(channel + 1);&#10;&#9;&#9;_LocalSceneSounds[index0] = null;&#10;&#9;}&#10;}&#10;&#10;"/>
+                        </code-long>
+                        <set-game-val-26 comment="false" x="37" y="280">
+                            <get-val-329-4 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-26>
+                    </group>
+                    <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <periodic comment="false" x="26" y="317">
+                    <group eventID="7" id="-1">
+                        <if comment="false" x="37" y="344">
                             <group eventID="7" id="-1">
-                                <if comment="false" x="48" y="92">
+                                <if comment="false" x="48" y="369">
                                     <group eventID="7" id="-1">
-                                        <custom-632 comment="false" x="59" y="130">
-                                            <get-val-329-1 comment="false" id="0" x="0" y="0"/>
-                                        </custom-632>
+                                        <if comment="false" x="59" y="407">
+                                            <group eventID="7" id="-1">
+                                                <custom-633 comment="false" x="70" y="442">
+                                                    <int id="0" val="1"/>
+                                                    <get-val-329-1 comment="false" id="1" x="0" y="0"/>
+                                                    <int id="2" val="0"/>
+                                                </custom-633>
+                                            </group>
+                                            <noteq comment="false" id="0" x="0" y="0">
+                                                <get-game-val-22 comment="false" id="0" x="0" y="0"/>
+                                                <tostring comment="false" id="1" x="0" y="0">
+                                                    <get-val-329-1 comment="false" id="0" x="0" y="0"/>
+                                                </tostring>
+                                            </noteq>
+                                        </if>
+                                        <else comment="false" x="59" y="486">
+                                            <group eventID="7" id="-1">
+                                                <custom-642 comment="false" x="70" y="506"/>
+                                            </group>
+                                        </else>
                                     </group>
                                     <and comment="false" id="0" x="0" y="0">
                                         <value comment="false" id="0" x="0" y="0">
@@ -125,12 +187,12 @@
                                         <get-game-val-23 comment="false" id="1" x="0" y="0"/>
                                     </and>
                                 </if>
-                                <else comment="false" x="48" y="174">
+                                <else comment="false" x="48" y="550">
                                     <group eventID="7" id="-1">
-                                        <custom-635 comment="false" x="59" y="194"/>
+                                        <custom-635 comment="false" x="59" y="570"/>
                                     </group>
                                 </else>
-                                <cancel comment="false" x="48" y="226"/>
+                                <cancel comment="false" x="48" y="602"/>
                             </group>
                             <get-game-val-16 comment="false" id="0" x="0" y="0"/>
                         </if>
@@ -176,12 +238,34 @@
             <group eventID="12" id="-1">
                 <if comment="false" x="26" y="45">
                     <group eventID="12" id="-1">
-                        <play-sound4 comment="false" x="37" y="70">
-                            <int id="0" val="0"/>
-                            <custom-477 comment="false" id="1" x="0" y="0">
-                                <get-byobval-329-797-0 comment="false" id="0" x="0" y="0"/>
-                            </custom-477>
-                        </play-sound4>
+                        <custom-code comment="false" x="37" y="70">
+                            <int id="0" val="_Sound = cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound);"/>
+                        </custom-code>
+                        <if comment="false" x="37" y="90">
+                            <group eventID="12" id="-1">
+                                <play-sound4 comment="false" x="48" y="123">
+                                    <int id="0" val="0"/>
+                                    <SOUND eid="var" id="1" vid="5"/>
+                                </play-sound4>
+                            </group>
+                            <value comment="false" id="0" x="0" y="0">
+                                <int id="0" val="5"/>
+                                <int id="1" val="0"/>
+                            </value>
+                        </if>
+                        <else comment="false" x="37" y="162">
+                            <group eventID="12" id="-1">
+                                <print comment="false" x="48" y="182">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="Sound "/>
+                                        <str-combine comment="false" id="1" x="0" y="0">
+                                            <get-byobval-329-797-0 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val=" is missing!"/>
+                                        </str-combine>
+                                    </str-combine>
+                                </print>
+                            </group>
+                        </else>
                     </group>
                     <code-short comment="false" id="0" x="0" y="0">
                         <int id="0" val="__SoundName != null"/>
@@ -196,7 +280,7 @@
         <receiver-17-816 comment="false" x="15" y="15">
             <group eventID="13" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="if (__SetName == null || __SetName == &amp;quot;&amp;quot;) return;&#10;var soundIndex = randomInt(1, __NumberOfSounds);&#10;var soundName = __SetName;&#10;if (__NumberOfSounds &amp;gt; 1) soundName = soundName + &amp;quot; &amp;quot; + soundIndex + &amp;quot; SFX&amp;quot;;&#10;else soundName = soundName + &amp;quot; SFX&amp;quot;;&#10;var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);&#10;if (sound == null)&#10;{&#10;&#9;trace(soundName + &amp;quot; is missing&amp;quot;);&#10;&#9;return;&#10;}&#10;"/>
+                    <int id="0" val="if (__SetName == null || __SetName == &amp;quot;&amp;quot;) return;&#10;var soundIndex = randomInt(1, __NumberOfSounds);&#10;var soundName = __SetName;&#10;if (__NumberOfSounds &amp;gt; 1) soundName = soundName + &amp;quot; &amp;quot; + soundIndex + &amp;quot; SFX&amp;quot;;&#10;else soundName = soundName + &amp;quot; SFX&amp;quot;;&#10;var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);&#10;if (sound == null)&#10;{&#10;&#9;trace(&amp;quot;Sound &amp;quot; + soundName + &amp;quot; is missing!&amp;quot;);&#10;&#9;return;&#10;}&#10;"/>
                 </code-long>
                 <play-sound4 comment="false" x="26" y="205">
                     <int id="0" val="0"/>
@@ -213,18 +297,261 @@
     <group eventID="14" id="0">
         <receiver-18-844 comment="false" x="15" y="15">
             <group eventID="14" id="-1">
-                <play-sound-channel comment="false" x="26" y="45">
-                    <int id="0" val="1"/>
-                    <get-byobval-329-844-0 comment="false" id="1" x="0" y="0"/>
-                    <get-byobval-329-844-1 comment="false" id="2" x="0" y="0"/>
-                </play-sound-channel>
+                <if comment="false" x="26" y="45">
+                    <group eventID="14" id="-1">
+                        <play-sound-channel comment="false" x="37" y="70">
+                            <int id="0" val="1"/>
+                            <get-byobval-329-844-0 comment="false" id="1" x="0" y="0"/>
+                            <get-byobval-329-844-1 comment="false" id="2" x="0" y="0"/>
+                        </play-sound-channel>
+                    </group>
+                    <code-short comment="false" id="0" x="0" y="0">
+                        <int id="0" val="__Sound != null"/>
+                    </code-short>
+                </if>
+                <else comment="false" x="26" y="114">
+                    <group eventID="14" id="-1">
+                        <print comment="false" x="37" y="134">
+                            <int id="0" val="Missing Sound for loop on channel!"/>
+                        </print>
+                    </group>
+                </else>
             </group>
             <get-byobval-329-844-0 comment="false" id="0" x="0" y="0"/>
             <get-byobval-329-844-1 comment="false" id="1" x="0" y="0"/>
         </receiver-18-844>
     </group>
-    <group eventID="14" id="-1">
-        <get-byobval-329-844-0 comment="false" x="0" y="0"/>
-        <get-byobval-329-844-1 comment="false" x="0" y="0"/>
+    <group eventID="14" id="-1"/>
+    <group eventID="17" id="0">
+        <receiver-22-857 comment="false" x="15" y="15">
+            <group eventID="17" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="17" id="-1">
+                        <stop comment="false" x="37" y="75"/>
+                    </group>
+                    <custom-858 comment="false" id="0" x="0" y="0">
+                        <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+                        <get-byobval-329-857-1 comment="false" id="1" x="0" y="0"/>
+                    </custom-858>
+                </if>
+                <set-val-329-3 comment="false" x="26" y="107">
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </set-val-329-3>
+                <if comment="false" x="26" y="137">
+                    <group eventID="15" id="-1">
+                        <custom-861 comment="false" x="37" y="167">
+                            <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </custom-861>
+                        <add-list comment="false" x="37" y="197">
+                            <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                            <str-combine comment="false" id="1" x="0" y="0">
+                                <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+                                <str-combine comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="|"/>
+                                    <str-combine comment="false" id="1" x="0" y="0">
+                                        <get-byobval-329-857-1 comment="false" id="0" x="0" y="0"/>
+                                        <str-combine comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="|"/>
+                                            <get-val-329-3 comment="false" id="1" x="0" y="0"/>
+                                        </str-combine>
+                                    </str-combine>
+                                </str-combine>
+                            </str-combine>
+                        </add-list>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <else comment="false" x="26" y="254">
+                    <group eventID="15" id="-1">
+                        <repeat comment="false" x="37" y="274">
+                            <group eventID="15" id="-1">
+                                <if comment="false" x="48" y="299">
+                                    <group eventID="15" id="-1">
+                                        <custom-861 comment="false" x="59" y="329">
+                                            <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+                                            <plus comment="false" id="1" x="0" y="0">
+                                                <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="1"/>
+                                            </plus>
+                                        </custom-861>
+                                        <add-list comment="false" x="59" y="359">
+                                            <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                                            <str-combine comment="false" id="1" x="0" y="0">
+                                                <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+                                                <str-combine comment="false" id="1" x="0" y="0">
+                                                    <int id="0" val="|"/>
+                                                    <str-combine comment="false" id="1" x="0" y="0">
+                                                        <get-byobval-329-857-1 comment="false" id="0" x="0" y="0"/>
+                                                        <str-combine comment="false" id="1" x="0" y="0">
+                                                            <int id="0" val="|"/>
+                                                            <get-val-329-3 comment="false" id="1" x="0" y="0"/>
+                                                        </str-combine>
+                                                    </str-combine>
+                                                </str-combine>
+                                            </str-combine>
+                                        </add-list>
+                                        <break comment="false" x="59" y="404"/>
+                                    </group>
+                                    <eq comment="false" id="0" x="0" y="0">
+                                        <loopindex comment="false" id="0" x="0" y="0"/>
+                                        <get-val-329-3 comment="false" id="1" x="0" y="0"/>
+                                    </eq>
+                                </if>
+                                <else-if comment="false" x="48" y="436">
+                                    <group eventID="15" id="-1">
+                                        <custom-861 comment="false" x="59" y="471">
+                                            <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+                                            <plus comment="false" id="1" x="0" y="0">
+                                                <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="1"/>
+                                            </plus>
+                                        </custom-861>
+                                        <insert-list comment="false" x="59" y="501">
+                                            <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                                            <loopindex comment="false" id="1" x="0" y="0"/>
+                                            <str-combine comment="false" id="2" x="0" y="0">
+                                                <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+                                                <str-combine comment="false" id="1" x="0" y="0">
+                                                    <int id="0" val="|"/>
+                                                    <str-combine comment="false" id="1" x="0" y="0">
+                                                        <get-byobval-329-857-1 comment="false" id="0" x="0" y="0"/>
+                                                        <str-combine comment="false" id="1" x="0" y="0">
+                                                            <int id="0" val="|"/>
+                                                            <get-val-329-3 comment="false" id="1" x="0" y="0"/>
+                                                        </str-combine>
+                                                    </str-combine>
+                                                </str-combine>
+                                            </str-combine>
+                                        </insert-list>
+                                        <break comment="false" x="59" y="546"/>
+                                    </group>
+                                    <eq comment="false" id="0" x="0" y="0">
+                                        <get-item comment="false" id="0" x="0" y="0">
+                                            <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                                            <loopindex comment="false" id="1" x="0" y="0"/>
+                                        </get-item>
+                                        <code-short comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="null"/>
+                                        </code-short>
+                                    </eq>
+                                </else-if>
+                            </group>
+                            <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                        </repeat>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-329-857-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-22-857>
     </group>
+    <group eventID="17" id="-1"/>
+    <group eventID="16" id="0">
+        <receiver-21-856 comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <set-val-329-4 comment="false" x="26" y="45">
+                    <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                </set-val-329-4>
+                <set-val-329-3 comment="false" x="26" y="70">
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-val-329-4 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </set-val-329-3>
+                <repeat comment="false" x="26" y="100">
+                    <group eventID="7" id="-1">
+                        <code-long comment="false" x="37" y="125">
+                            <int id="0" val="var item = _LocalSceneSounds[index0];&#10;if (item != null)&#10;{&#10;&#9;var comps = item.split(&amp;quot;|&amp;quot;);&#10;&#9;var soundName = comps[0];&#10;&#9;var sceneName = &amp;quot;&amp;quot; + comps[1];&#10;&#9;var channel = Std.parseInt(comps[2]);&#10;&#10;&#9;if (sceneName == __SceneName &amp;amp;&amp;amp; soundName == __SoundName)&#10;&#9;{&#10;&#9;&#9;stopSoundOnChannel(channel + 1);&#10;&#9;&#9;_LocalSceneSounds[index0] = null;&#10;&#9;}&#10;}&#10;&#10;"/>
+                        </code-long>
+                        <set-game-val-26 comment="false" x="37" y="285">
+                            <get-val-329-4 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-26>
+                    </group>
+                    <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+            </group>
+            <get-byobval-329-856-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-329-856-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-21-856>
+    </group>
+    <group eventID="16" id="-1"/>
+    <group eventID="19" id="0">
+        <receiver-24-861 comment="false" x="15" y="15">
+            <group eventID="19" id="-1">
+                <custom-code comment="false" x="26" y="45">
+                    <int id="0" val="_Sound = cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound);"/>
+                </custom-code>
+                <if comment="false" x="26" y="65">
+                    <group eventID="12" id="-1">
+                        <play-sound-channel comment="false" x="37" y="98">
+                            <int id="0" val="1"/>
+                            <custom-477 comment="false" id="1" x="0" y="0">
+                                <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
+                            </custom-477>
+                            <get-byobval-329-861-1 comment="false" id="2" x="0" y="0"/>
+                        </play-sound-channel>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="5"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+                <else comment="false" x="26" y="147">
+                    <group eventID="12" id="-1">
+                        <print comment="false" x="37" y="167">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Sound "/>
+                                <str-combine comment="false" id="1" x="0" y="0">
+                                    <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val=" is missing!"/>
+                                </str-combine>
+                            </str-combine>
+                        </print>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-329-861-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-24-861>
+    </group>
+    <group eventID="19" id="-1">
+        <get-byobval-329-861-0 comment="false" x="0" y="0"/>
+        <get-byobval-329-861-1 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="18" id="0">
+        <receiver-23-858 comment="false" x="15" y="15">
+            <group eventID="18" id="-1">
+                <set-val-329-4 comment="false" x="26" y="45">
+                    <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                </set-val-329-4>
+                <set-val-329-3 comment="false" x="26" y="70">
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-val-329-4 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </set-val-329-3>
+                <repeat comment="false" x="26" y="100">
+                    <group eventID="7" id="-1">
+                        <code-long comment="false" x="37" y="125">
+                            <int id="0" val="var item = _LocalSceneSounds[index0];&#10;if (item != null)&#10;{&#10;&#9;var comps = item.split(&amp;quot;|&amp;quot;);&#10;&#9;var soundName = comps[0];&#10;&#9;var sceneName = &amp;quot;&amp;quot; + comps[1];&#10;&#10;&#9;if (sceneName == __SceneName &amp;amp;&amp;amp; soundName == __SoundName)&#10;&#9;{&#10;&#9;&#9;return true;&#10;&#9;}&#10;}&#10;"/>
+                        </code-long>
+                    </group>
+                    <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <return comment="false" x="26" y="297">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-329-858-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-329-858-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-23-858>
+    </group>
+    <group eventID="18" id="-1"/>
 </groups>

@@ -94,8 +94,7 @@ _freq = 0.0;
 	
 	override public function init()
 	{
-		            stopSoundOnChannel(Std.int(1));
-        if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg2_Boss")), Bool)))
+		            if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg2_Boss")), Bool)))
 {
             recycleActor(getActor(29));
 }

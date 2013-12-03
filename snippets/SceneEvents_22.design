@@ -21,18 +21,14 @@
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
-        <init comment="false" x="72" y="9">
+        <init comment="false" x="18" y="12">
             <group eventID="2" id="-1">
-                <control-sound-channel comment="false" x="83" y="34">
-                    <int id="0" val="0"/>
-                    <int id="1" val="1"/>
-                </control-sound-channel>
-                <if comment="false" x="83" y="61">
+                <if comment="false" x="29" y="37">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="94" y="96">
+                        <die comment="false" x="40" y="72">
                             <ACTOR eid="184" id="0"/>
                         </die>
-                        <die comment="false" x="94" y="123">
+                        <die comment="false" x="40" y="99">
                             <ACTOR eid="185" id="0"/>
                         </die>
                     </group>
@@ -45,7 +41,7 @@
                         </custom-326>
                     </or>
                 </if>
-                <set-val-238-2 comment="false" x="83" y="162">
+                <set-val-238-2 comment="false" x="29" y="138">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-238-2>
             </group>
@@ -210,4 +206,175 @@
         </event-actor-region>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <if comment="false" x="37" y="83">
+                            <group eventID="5" id="-1">
+                                <set-attribute comment="false" x="48" y="126">
+                                    <ACTOR eid="177" id="0"/>
+                                    <int id="1" val="Laser Beamer PM"/>
+                                    <int id="2" val="_IsActive"/>
+                                    <true comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                                <set-attribute comment="false" x="48" y="158">
+                                    <ACTOR eid="178" id="0"/>
+                                    <int id="1" val="Laser Beamer PM"/>
+                                    <int id="2" val="_IsActive"/>
+                                    <true comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <more comment="false" id="0" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="3" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <int id="1" val="160"/>
+                                </more>
+                                <less comment="false" id="1" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="3" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <int id="1" val="240"/>
+                                </less>
+                            </and>
+                        </if>
+                        <else comment="false" x="37" y="202">
+                            <group eventID="5" id="-1">
+                                <set-attribute comment="false" x="48" y="222">
+                                    <ACTOR eid="177" id="0"/>
+                                    <int id="1" val="Laser Beamer PM"/>
+                                    <int id="2" val="_IsActive"/>
+                                    <false comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                                <set-attribute comment="false" x="48" y="254">
+                                    <ACTOR eid="178" id="0"/>
+                                    <int id="1" val="Laser Beamer PM"/>
+                                    <int id="2" val="_IsActive"/>
+                                    <false comment="false" id="3" x="0" y="0"/>
+                                </set-attribute>
+                            </group>
+                        </else>
+                        <if comment="false" x="37" y="298">
+                            <group eventID="5" id="-1">
+                                <if comment="false" x="48" y="336">
+                                    <group eventID="3" id="-1">
+                                        <scene-shout comment="false" x="59" y="366">
+                                            <int id="0" val="ToggleCrushers"/>
+                                        </scene-shout>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <get-val-238-2 comment="false" id="0" x="0" y="0"/>
+                                    </not>
+                                </if>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="3" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <int id="1" val="240"/>
+                            </more>
+                        </if>
+                        <else-if comment="false" x="37" y="410">
+                            <group eventID="5" id="-1">
+                                <scene-shout comment="false" x="48" y="435">
+                                    <int id="0" val="ToggleCrushers"/>
+                                </scene-shout>
+                            </group>
+                            <get-val-238-2 comment="false" id="0" x="0" y="0"/>
+                        </else-if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <custom-65 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="3" id="0"/>
+                            </custom-65>
+                        </not>
+                        <isalive comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="3" id="0"/>
+                        </isalive>
+                    </and>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-238-2 comment="false" x="26" y="40">
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-238-2 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </set-val-238-2>
+                <actors-of-type3 comment="false" x="26" y="70">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="102">
+                            <group eventID="3" id="-1">
+                                <say comment="false" x="48" y="145">
+                                    <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="Deactivate"/>
+                                </say>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <get-attribute comment="false" id="0" x="0" y="0">
+                                    <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="_IsActive"/>
+                                </get-attribute>
+                            </as-boolean>
+                        </if>
+                        <else comment="false" x="37" y="189">
+                            <group eventID="3" id="-1">
+                                <say comment="false" x="48" y="209">
+                                    <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="Activate"/>
+                                </say>
+                            </group>
+                        </else>
+                    </group>
+                    <ACTORTYPE eid="421" id="0"/>
+                </actors-of-type3>
+                <actors-of-type3 comment="false" x="26" y="265">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="297">
+                            <group eventID="3" id="-1">
+                                <say comment="false" x="48" y="340">
+                                    <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="Deactivate"/>
+                                </say>
+                            </group>
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <get-attribute comment="false" id="0" x="0" y="0">
+                                    <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="_IsActive"/>
+                                </get-attribute>
+                            </as-boolean>
+                        </if>
+                        <else comment="false" x="37" y="384">
+                            <group eventID="3" id="-1">
+                                <say comment="false" x="48" y="404">
+                                    <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Timed Activation PM"/>
+                                    <int id="2" val="Activate"/>
+                                </say>
+                            </group>
+                        </else>
+                    </group>
+                    <ACTORTYPE eid="427" id="0"/>
+                </actors-of-type3>
+            </group>
+            <int id="0" val="ToggleCrushers"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

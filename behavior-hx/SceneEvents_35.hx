@@ -120,7 +120,10 @@ _StartRandomiser = 0.0;
 	
 	override public function init()
 	{
-		    addWhenTypeGroupKilledListener(getActorType(653), function(eventActor:Actor, list:Array<Dynamic>):Void {
+		            runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Fire Loop SFX",getCurrentSceneName()]);
+}, null);
+    addWhenTypeGroupKilledListener(getActorType(653), function(eventActor:Actor, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         startShakingScreen(1 / 100, 0.25);
 }
