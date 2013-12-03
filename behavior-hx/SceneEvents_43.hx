@@ -70,7 +70,7 @@ public var _LovelyKey:Actor;
 /* Params are:*/
 public function _customBlock_UpdateWardrobe():Void
 {
-        if(getGameAttribute("In Pants?"))
+        if(!(getGameAttribute("In Pants?")))
 {
             createRecycledActor(getActorType(9), _CurrentNev.getX(), _CurrentNev.getY(), Script.FRONT);
             getLastCreatedActor().setActorValue("Facing Right?", _CurrentNev.getActorValue("Facing Right?"));

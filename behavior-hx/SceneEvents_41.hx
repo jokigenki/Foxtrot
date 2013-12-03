@@ -62,7 +62,7 @@ nameMap.set("Current Nev", "_CurrentNev");
 	override public function init()
 	{
 		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    if(getGameAttribute("In Pants?"))
+                    if(!(getGameAttribute("In Pants?")))
 {
                         createRecycledActor(getActorType(9), getActor(13).getX(), getActor(13).getY(), Script.FRONT);
                         getLastCreatedActor().setActorValue("Facing Right?", getActor(13).getActorValue("Facing Right?"));

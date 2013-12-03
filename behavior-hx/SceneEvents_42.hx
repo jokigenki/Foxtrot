@@ -106,7 +106,7 @@ propertyChanged("_WasInitialised", _WasInitialised);
                             setGameAttribute("Speed Run Timer", 0);
                             setGameAttribute("Save Destination", "none");
                             setGameAttribute("Last Destination", "none");
-                            setGameAttribute("In Pants?", false);
+                            setGameAttribute("In Pants?", true);
                             saveGame("mySave", function(success:Bool):Void {
                                 setGameAttribute("Last Destination", "Tutorial_01|Tutorial_01|A|A");
                                 shoutToScene("_customEvent_" + "SwitchScene");

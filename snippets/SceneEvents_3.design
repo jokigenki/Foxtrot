@@ -6,56 +6,62 @@
                 <set-game-val-10 comment="false" x="26" y="40">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-10>
-                <if comment="false" x="26" y="65">
+                <dolater comment="false" x="26" y="65">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="110">
+                        <set-attribute comment="false" x="37" y="92">
+                            <ACTOR eid="17" id="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="_Destination"/>
+                            <int id="3" val="_Home|Tutorial_01|A|A"/>
+                        </set-attribute>
+                        <custom-596 comment="false" x="37" y="119">
+                            <ACTOR eid="17" id="0"/>
+                        </custom-596>
+                        <say comment="false" x="37" y="146">
+                            <ACTOR eid="17" id="0"/>
+                            <int id="1" val="Collectable Door PM"/>
+                            <int id="2" val="DoorActivated"/>
+                        </say>
+                        <if comment="false" x="37" y="173">
                             <group eventID="1" id="-1">
-                                <custom-596 comment="false" x="48" y="137">
-                                    <ACTOR eid="17" id="0"/>
-                                </custom-596>
-                                <say comment="false" x="48" y="164">
-                                    <ACTOR eid="17" id="0"/>
-                                    <int id="1" val="Collectable Door PM"/>
-                                    <int id="2" val="DoorActivated"/>
-                                </say>
-                                <set-game-val-20 comment="false" x="48" y="191">
+                                <set-game-val-20 comment="false" x="48" y="218">
                                     <custom-552 comment="false" id="0" x="0" y="0">
                                         <get-game-val-21 comment="false" id="0" x="0" y="0"/>
                                     </custom-552>
                                 </set-game-val-20>
-                                <set-attribute comment="false" x="48" y="221">
+                                <set-attribute comment="false" x="48" y="248">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Activate Door PM"/>
                                     <int id="2" val="_Destination"/>
                                     <get-game-val-21 comment="false" id="3" x="0" y="0"/>
                                 </set-attribute>
-                                <say comment="false" x="48" y="253">
+                                <say comment="false" x="48" y="280">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Collectable Door PM"/>
                                     <int id="2" val="DoorActivated"/>
                                 </say>
                             </group>
-                            <int id="0" val="0.3"/>
-                            <ACTOR eid="lastcreated" id="2"/>
-                        </dolater>
-                    </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <noteq comment="false" id="0" x="0" y="0">
-                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="none"/>
-                        </noteq>
-                        <noteq comment="false" id="1" x="0" y="0">
-                            <get-item comment="false" id="0" x="0" y="0">
-                                <str-split comment="false" id="0" x="0" y="0">
+                            <and comment="false" id="0" x="0" y="0">
+                                <noteq comment="false" id="0" x="0" y="0">
                                     <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="|"/>
-                                </str-split>
-                                <int id="1" val="1"/>
-                            </get-item>
-                            <int id="1" val="_Home"/>
-                        </noteq>
-                    </and>
-                </if>
+                                    <int id="1" val="none"/>
+                                </noteq>
+                                <noteq comment="false" id="1" x="0" y="0">
+                                    <get-item comment="false" id="0" x="0" y="0">
+                                        <str-split comment="false" id="0" x="0" y="0">
+                                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="|"/>
+                                        </str-split>
+                                        <int id="1" val="1"/>
+                                    </get-item>
+                                    <int id="1" val="_Home"/>
+                                </noteq>
+                            </and>
+                        </if>
+                    </group>
+                    <int id="0" val="0.2"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
             </group>
         </init>
     </group>

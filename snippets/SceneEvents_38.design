@@ -5,9 +5,35 @@
             <group eventID="1" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="67">
+                        <print comment="false" x="37" y="67">
+                            <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                        </print>
+                        <print comment="false" x="37" y="92">
+                            <str-indexof comment="false" id="0" x="0" y="0">
+                                <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Tutorial"/>
+                            </str-indexof>
+                        </print>
+                        <if comment="false" x="37" y="122">
                             <group eventID="1" id="-1">
-                                <create-actor3 comment="false" x="48" y="92">
+                                <print comment="false" x="48" y="157">
+                                    <int id="0" val="PANTS!"/>
+                                </print>
+                                <set-game-val-25 comment="false" x="48" y="177">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-25>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <str-indexof comment="false" id="0" x="0" y="0">
+                                    <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Tutorial"/>
+                                </str-indexof>
+                                <int id="1" val="0"/>
+                            </noteq>
+                        </if>
+                        <if comment="false" x="37" y="214">
+                            <group eventID="1" id="-1">
+                                <create-actor3 comment="false" x="48" y="244">
                                     <ACTORTYPE eid="9" id="0"/>
                                     <get-xy comment="false" id="1" x="0" y="0">
                                         <ACTOR eid="6" id="0"/>
@@ -19,7 +45,7 @@
                                     </get-xy>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <actor-set-prop comment="false" x="48" y="132">
+                                <actor-set-prop comment="false" x="48" y="284">
                                     <actor comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="lastcreated" id="0"/>
                                     </actor>
@@ -29,17 +55,17 @@
                                         <int id="1" val="Facing Right?"/>
                                     </actor-get-prop>
                                 </actor-set-prop>
-                                <die comment="false" x="48" y="172">
+                                <die comment="false" x="48" y="324">
                                     <ACTOR eid="6" id="0"/>
                                 </die>
-                                <scene-set-attribute comment="false" x="48" y="199">
+                                <scene-set-attribute comment="false" x="48" y="351">
                                     <int id="0" val="Split Screen Button PM"/>
                                     <int id="1" val="_ActorToControl"/>
                                     <actor comment="false" id="2" x="0" y="0">
                                         <ACTOR eid="lastcreated" id="0"/>
                                     </actor>
                                 </scene-set-attribute>
-                                <set-attribute comment="false" x="48" y="232">
+                                <set-attribute comment="false" x="48" y="384">
                                     <ACTOR eid="4" id="0"/>
                                     <int id="1" val="Activate Door PM"/>
                                     <int id="2" val="_ActorToMove"/>
@@ -48,7 +74,9 @@
                                     </actor>
                                 </set-attribute>
                             </group>
-                            <get-game-val-25 comment="false" id="0" x="0" y="0"/>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-game-val-25 comment="false" id="0" x="0" y="0"/>
+                            </not>
                         </if>
                     </group>
                     <int id="0" val="0.1"/>

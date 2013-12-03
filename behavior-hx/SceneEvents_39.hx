@@ -59,7 +59,7 @@ _ExitName = "";
 	override public function init()
 	{
 		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    if(getGameAttribute("In Pants?"))
+                    if(!(getGameAttribute("In Pants?")))
 {
                         createRecycledActor(getActorType(9), getActor(8).getX(), getActor(8).getY(), Script.FRONT);
                         getLastCreatedActor().setActorValue("Facing Right?", getActor(8).getActorValue("Facing Right?"));
