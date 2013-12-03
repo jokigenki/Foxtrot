@@ -53,6 +53,10 @@ public var _ExcludedActors:Array<Dynamic>;
 
 public var _MinBounce:Float;
 
+public var _SFXName:String;
+
+public var _SFXNumber:Float;
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
@@ -65,6 +69,10 @@ nameMap.set("Excluded Actors", "_ExcludedActors");
 _ExcludedActors = [];
 nameMap.set("Min Bounce", "_MinBounce");
 _MinBounce = 0.0;
+nameMap.set("SFX Name", "_SFXName");
+_SFXName = "";
+nameMap.set("SFX Number", "_SFXNumber");
+_SFXNumber = 1;
 nameMap.set("Actor", "actor");
 
 	}
@@ -98,7 +106,23 @@ propertyChanged("_BounceForce", _BounceForce);
 
             if((_BounceForce > 0))
 {
+                sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_SFXName,_SFXNumber]);
                 event.otherActor.push(0, -1, (_BounceForce * 100));
+                if(event.otherActor.hasBehavior("Jumping PM"))
+{
+                    event.otherActor.say("Animation Manager", "_customBlock_ClearCat");
+                    if(asBoolean(event.otherActor.getActorValue("Facing Right?")))
+{
+                        event.otherActor.say("Animation Manager", "_customBlock_LoopAnim", [event.otherActor.getValue("Jumping PM", "_JumpRightAnimation"),event.otherActor.getValue("Jumping PM", "_AnimationCategory")]);
+}
+
+                    else
+{
+                        event.otherActor.say("Animation Manager", "_customBlock_LoopAnim", [event.otherActor.getValue("Jumping PM", "_JumpLeftAnimation"),event.otherActor.getValue("Jumping PM", "_AnimationCategory")]);
+}
+
+}
+
 }
 
             _BounceForce = asNumber(0);

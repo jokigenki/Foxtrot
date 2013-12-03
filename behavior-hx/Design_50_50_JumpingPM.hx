@@ -63,8 +63,6 @@ public var _oldY:Float;
 
 public var _CurrentJumpTime:Float;
 
-public var _JumpSound:Sound;
-
 public var _JumpingSlowdown:Float;
 
 public var _AnimationCategory:String;
@@ -75,7 +73,13 @@ public var _AllowSwipeJumping:Bool;
 
 public var _MobileJumpForce:Float;
 
+public var _SFXName:String;
+
 public var _SwipeJumpForce:Float;
+
+public var _PlaySound:Bool;
+
+public var _SFXNumber:Float;
     
 
 /* Params are:__Self __Value */
@@ -136,9 +140,15 @@ propertyChanged("_KeyReleased", _KeyReleased);
 
         /* "Detect the jump key press, and initiate the jump" */
         /* "Custom: Is \"Jump\" on for Self" */
+        if((cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool) && _PlaySound))
+{
+            _PlaySound = false;
+propertyChanged("_PlaySound", _PlaySound);
+            sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_SFXName,_SFXNumber]);
+}
+
         if((cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool) && (_CanJump && _KeyReleased)))
 {
-            sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_JumpSound]);
             _ElapsedJumpTime = asNumber(0);
 propertyChanged("_ElapsedJumpTime", _ElapsedJumpTime);
             if(#if mobile true #else false #end)
@@ -256,7 +266,6 @@ nameMap.set("oldY", "_oldY");
 _oldY = 0.0;
 nameMap.set("Current Jump Time", "_CurrentJumpTime");
 _CurrentJumpTime = 0.0;
-nameMap.set("Jump Sound", "_JumpSound");
 nameMap.set("Jumping Slowdown", "_JumpingSlowdown");
 _JumpingSlowdown = 0.75;
 nameMap.set("Animation Category", "_AnimationCategory");
@@ -267,8 +276,14 @@ nameMap.set("Allow Swipe Jumping?", "_AllowSwipeJumping");
 _AllowSwipeJumping = true;
 nameMap.set("Mobile Jump Force", "_MobileJumpForce");
 _MobileJumpForce = 35.0;
+nameMap.set("SFX Name", "_SFXName");
+_SFXName = "";
 nameMap.set("Swipe Jump Force", "_SwipeJumpForce");
 _SwipeJumpForce = 50.0;
+nameMap.set("Play Sound?", "_PlaySound");
+_PlaySound = false;
+nameMap.set("SFX Number", "_SFXNumber");
+_SFXNumber = 1.0;
 
 	}
 	
@@ -279,6 +294,8 @@ _SwipeJumpForce = 50.0;
         /* "\"Facing Right?\" -- <Boolean> Actor Level Attribute, from \"Walking\" Behavior (required)" */
         /* "Outputs: ---------------------" */
         /* "\"Is Jumping?\" -- <Boolean> Actor Level Attribute" */
+        _PlaySound = true;
+propertyChanged("_PlaySound", _PlaySound);
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         if(_PreventJumping)
@@ -298,6 +315,8 @@ propertyChanged("_CanJump", _CanJump);
 {
                 _CanJump = true;
 propertyChanged("_CanJump", _CanJump);
+                _PlaySound = true;
+propertyChanged("_PlaySound", _PlaySound);
 }
 
 }

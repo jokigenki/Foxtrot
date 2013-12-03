@@ -10,24 +10,32 @@
                     <group eventID="1" id="-1">
                         <dolater comment="false" x="37" y="110">
                             <group eventID="1" id="-1">
-                                <set-game-val-20 comment="false" x="48" y="137">
+                                <custom-596 comment="false" x="48" y="137">
+                                    <ACTOR eid="17" id="0"/>
+                                </custom-596>
+                                <say comment="false" x="48" y="164">
+                                    <ACTOR eid="17" id="0"/>
+                                    <int id="1" val="Collectable Door PM"/>
+                                    <int id="2" val="DoorActivated"/>
+                                </say>
+                                <set-game-val-20 comment="false" x="48" y="191">
                                     <custom-552 comment="false" id="0" x="0" y="0">
                                         <get-game-val-21 comment="false" id="0" x="0" y="0"/>
                                     </custom-552>
                                 </set-game-val-20>
-                                <set-attribute comment="false" x="48" y="167">
+                                <set-attribute comment="false" x="48" y="221">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Activate Door PM"/>
                                     <int id="2" val="_Destination"/>
                                     <get-game-val-21 comment="false" id="3" x="0" y="0"/>
                                 </set-attribute>
-                                <say comment="false" x="48" y="199">
+                                <say comment="false" x="48" y="253">
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Collectable Door PM"/>
                                     <int id="2" val="DoorActivated"/>
                                 </say>
                             </group>
-                            <int id="0" val="0.5"/>
+                            <int id="0" val="0.3"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
                     </group>

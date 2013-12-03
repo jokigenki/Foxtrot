@@ -53,16 +53,15 @@
                 </fade-sounds>
                 <dolater comment="false" x="26" y="77">
                     <group eventID="2" id="-1">
-                        <stop-sounds comment="false" x="37" y="109"/>
-                        <play-sound4 comment="false" x="37" y="129">
+                        <play-sound4 comment="false" x="37" y="109">
                             <int id="0" val="1"/>
                             <get-byobval-329-633-1 comment="false" id="1" x="0" y="0"/>
                         </play-sound4>
-                        <fade-sounds comment="false" x="37" y="161">
+                        <fade-sounds comment="false" x="37" y="141">
                             <int id="0" val="0"/>
                             <get-byobval-329-633-2 comment="false" id="1" x="0" y="0"/>
                         </fade-sounds>
-                        <set-game-val-22 comment="false" x="37" y="193">
+                        <set-game-val-22 comment="false" x="37" y="173">
                             <tostring comment="false" id="0" x="0" y="0">
                                 <get-byobval-329-633-1 comment="false" id="0" x="0" y="0"/>
                             </tostring>
@@ -197,7 +196,7 @@
         <receiver-17-816 comment="false" x="15" y="15">
             <group eventID="13" id="-1">
                 <code-long comment="false" x="26" y="45">
-                    <int id="0" val="var soundIndex = randomInt(1, __NumberOfSounds);&#10;var soundName = __SetName + &amp;quot; &amp;quot; + soundIndex + &amp;quot; SFX&amp;quot;;&#10;var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);&#10;if (sound == null) return;"/>
+                    <int id="0" val="if (__SetName == null || __SetName == &amp;quot;&amp;quot;) return;&#10;var soundIndex = randomInt(1, __NumberOfSounds);&#10;var soundName = __SetName;&#10;if (__NumberOfSounds &amp;gt; 1) soundName = soundName + &amp;quot; &amp;quot; + soundIndex + &amp;quot; SFX&amp;quot;;&#10;else soundName = soundName + &amp;quot; SFX&amp;quot;;&#10;var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);&#10;if (sound == null)&#10;{&#10;&#9;trace(soundName + &amp;quot; is missing&amp;quot;);&#10;&#9;return;&#10;}&#10;"/>
                 </code-long>
                 <play-sound4 comment="false" x="26" y="205">
                     <int id="0" val="0"/>
@@ -210,8 +209,22 @@
             <get-byobval-329-816-1 comment="false" id="1" x="0" y="0"/>
         </receiver-17-816>
     </group>
-    <group eventID="13" id="-1">
-        <get-byobval-329-816-0 comment="false" x="0" y="0"/>
-        <get-byobval-329-816-1 comment="false" x="0" y="0"/>
+    <group eventID="13" id="-1"/>
+    <group eventID="14" id="0">
+        <receiver-18-844 comment="false" x="15" y="15">
+            <group eventID="14" id="-1">
+                <play-sound-channel comment="false" x="26" y="45">
+                    <int id="0" val="1"/>
+                    <get-byobval-329-844-0 comment="false" id="1" x="0" y="0"/>
+                    <get-byobval-329-844-1 comment="false" id="2" x="0" y="0"/>
+                </play-sound-channel>
+            </group>
+            <get-byobval-329-844-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-329-844-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-18-844>
+    </group>
+    <group eventID="14" id="-1">
+        <get-byobval-329-844-0 comment="false" x="0" y="0"/>
+        <get-byobval-329-844-1 comment="false" x="0" y="0"/>
     </group>
 </groups>

@@ -58,7 +58,7 @@ public var _TimingOutOfBounds:Bool;
 	{
 		super(actor, engine);	
 		nameMap.set("Boundary", "_Boundary");
-_Boundary = 32;
+_Boundary = 32.0;
 nameMap.set("In X?", "_InX");
 _InX = false;
 nameMap.set("In Y?", "_InY");

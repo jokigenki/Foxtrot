@@ -23,12 +23,16 @@
     <group eventID="2" id="0">
         <init comment="false" x="72" y="9">
             <group eventID="2" id="-1">
-                <if comment="false" x="83" y="34">
+                <control-sound-channel comment="false" x="83" y="34">
+                    <int id="0" val="0"/>
+                    <int id="1" val="1"/>
+                </control-sound-channel>
+                <if comment="false" x="83" y="61">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="94" y="69">
+                        <die comment="false" x="94" y="96">
                             <ACTOR eid="184" id="0"/>
                         </die>
-                        <die comment="false" x="94" y="96">
+                        <die comment="false" x="94" y="123">
                             <ACTOR eid="185" id="0"/>
                         </die>
                     </group>
@@ -41,8 +45,169 @@
                         </custom-326>
                     </or>
                 </if>
+                <set-val-238-2 comment="false" x="83" y="162">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-238-2>
             </group>
         </init>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="3" id="-1">
+                        <set-val-238-2 comment="false" x="37" y="72">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-238-2>
+                        <actors-of-type3 comment="false" x="37" y="97">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="129">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="172">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Deactivate"/>
+                                        </say>
+                                    </group>
+                                    <as-boolean comment="false" id="0" x="0" y="0">
+                                        <get-attribute comment="false" id="0" x="0" y="0">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="_IsActive"/>
+                                        </get-attribute>
+                                    </as-boolean>
+                                </if>
+                                <else comment="false" x="48" y="216">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="236">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Activate"/>
+                                        </say>
+                                    </group>
+                                </else>
+                            </group>
+                            <ACTORTYPE eid="421" id="0"/>
+                        </actors-of-type3>
+                        <actors-of-type3 comment="false" x="37" y="292">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="324">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="367">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Deactivate"/>
+                                        </say>
+                                    </group>
+                                    <as-boolean comment="false" id="0" x="0" y="0">
+                                        <get-attribute comment="false" id="0" x="0" y="0">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="_IsActive"/>
+                                        </get-attribute>
+                                    </as-boolean>
+                                </if>
+                                <else comment="false" x="48" y="411">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="431">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Activate"/>
+                                        </say>
+                                    </group>
+                                </else>
+                            </group>
+                            <ACTORTYPE eid="427" id="0"/>
+                        </actors-of-type3>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-238-2 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="4" id="1"/>
+            <ACTOR eid="3" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="3" id="-1">
+                        <set-val-238-2 comment="false" x="37" y="67">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-238-2>
+                        <actors-of-type3 comment="false" x="37" y="92">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="124">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="167">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Deactivate"/>
+                                        </say>
+                                    </group>
+                                    <as-boolean comment="false" id="0" x="0" y="0">
+                                        <get-attribute comment="false" id="0" x="0" y="0">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="_IsActive"/>
+                                        </get-attribute>
+                                    </as-boolean>
+                                </if>
+                                <else comment="false" x="48" y="211">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="231">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Activate"/>
+                                        </say>
+                                    </group>
+                                </else>
+                            </group>
+                            <ACTORTYPE eid="421" id="0"/>
+                        </actors-of-type3>
+                        <actors-of-type3 comment="false" x="37" y="287">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="319">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="362">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Deactivate"/>
+                                        </say>
+                                    </group>
+                                    <as-boolean comment="false" id="0" x="0" y="0">
+                                        <get-attribute comment="false" id="0" x="0" y="0">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="_IsActive"/>
+                                        </get-attribute>
+                                    </as-boolean>
+                                </if>
+                                <else comment="false" x="48" y="406">
+                                    <group eventID="3" id="-1">
+                                        <say comment="false" x="59" y="426">
+                                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="Timed Activation PM"/>
+                                            <int id="2" val="Activate"/>
+                                        </say>
+                                    </group>
+                                </else>
+                            </group>
+                            <ACTORTYPE eid="427" id="0"/>
+                        </actors-of-type3>
+                    </group>
+                    <get-val-238-2 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+            <REGION eid="4" id="1"/>
+            <ACTOR eid="3" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>

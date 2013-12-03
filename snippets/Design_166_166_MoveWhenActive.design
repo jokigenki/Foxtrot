@@ -105,6 +105,25 @@
                 <code-long comment="false" x="26" y="65">
                     <int id="0" val="if (_MoveTarget == null) return;&#10;&#10;var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;if (_MoveDelay &amp;gt; 0)&#10;{&#10;&#9;runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void&#10;&#9;{&#10;&#9;&#9;if (_IsActive) _MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;&#9;});&#10;} else {&#10;&#9;_MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;}&#10;"/>
                 </code-long>
+                <if comment="false" x="26" y="225">
+                    <group eventID="5" id="-1">
+                        <custom-816 comment="false" x="37" y="265">
+                            <get-val-166-14 comment="false" id="0" x="0" y="0"/>
+                            <get-val-166-16 comment="false" id="1" x="0" y="0"/>
+                        </custom-816>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="14"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <not comment="false" id="1" x="0" y="0">
+                            <str-empty comment="false" id="0" x="0" y="0">
+                                <get-val-166-14 comment="false" id="0" x="0" y="0"/>
+                            </str-empty>
+                        </not>
+                    </and>
+                </if>
             </group>
             <int id="0" val="Activated"/>
         </event-custom>
@@ -119,6 +138,25 @@
                 <code-long comment="false" x="26" y="65">
                     <int id="0" val="if (_MoveTarget == null) return;&#10;&#10;var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;_MoveTarget.moveTo(_XStart, _YStart, _ReturnTime, trans);"/>
                 </code-long>
+                <if comment="false" x="26" y="225">
+                    <group eventID="5" id="-1">
+                        <custom-816 comment="false" x="37" y="265">
+                            <get-val-166-15 comment="false" id="0" x="0" y="0"/>
+                            <get-val-166-17 comment="false" id="1" x="0" y="0"/>
+                        </custom-816>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="15"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <not comment="false" id="1" x="0" y="0">
+                            <str-empty comment="false" id="0" x="0" y="0">
+                                <get-val-166-15 comment="false" id="0" x="0" y="0"/>
+                            </str-empty>
+                        </not>
+                    </and>
+                </if>
             </group>
             <int id="0" val="Deactivated"/>
         </event-custom>

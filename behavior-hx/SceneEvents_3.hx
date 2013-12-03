@@ -57,7 +57,9 @@ class SceneEvents_3 extends SceneScript
 		            setGameAttribute("Speed Run In Progress", false);
         if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
 {
-            runLater(1000 * 0.5, function(timeTask:TimedTask):Void {
+            runLater(1000 * 0.3, function(timeTask:TimedTask):Void {
+                        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockActor(getActor(17));
+                        getActor(17).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
                         setGameAttribute("Last Destination", "" + (scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ReverseDestination(getGameAttribute("Save Destination"))));
                         getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
                         getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");

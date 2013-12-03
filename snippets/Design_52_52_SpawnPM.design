@@ -99,7 +99,11 @@
                         </not>
                     </or>
                 </if>
-                <create-actor3 comment="false" x="26" y="140">
+                <custom-816 comment="false" x="26" y="140">
+                    <get-val-52-22 comment="false" id="0" x="0" y="0"/>
+                    <get-val-52-23 comment="false" id="1" x="0" y="0"/>
+                </custom-816>
+                <create-actor3 comment="false" x="26" y="165">
                     <ACTORTYPE eid="var" id="0" vid="13"/>
                     <get-xy comment="false" id="1" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
@@ -111,25 +115,25 @@
                     </get-xy>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-val-52-19 comment="false" x="26" y="180">
+                <set-val-52-19 comment="false" x="26" y="205">
                     <ACTOR eid="lastcreated" id="0"/>
                 </set-val-52-19>
-                <setlayer comment="false" x="26" y="207">
+                <setlayer comment="false" x="26" y="232">
                     <ACTOR eid="var" id="0" vid="19"/>
                     <getlayer comment="false" id="1" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
                     </getlayer>
                 </setlayer>
-                <if comment="false" x="26" y="247">
+                <if comment="false" x="26" y="272">
                     <group eventID="6" id="-1">
-                        <backforward comment="false" x="37" y="272">
+                        <backforward comment="false" x="37" y="297">
                             <ACTOR eid="var" id="0" vid="19"/>
                             <int id="1" val="0"/>
                         </backforward>
                     </group>
                     <get-val-52-21 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <set-xy comment="false" x="26" y="311">
+                <set-xy comment="false" x="26" y="336">
                     <ACTOR eid="var" id="0" vid="19"/>
                     <int id="1" val="0"/>
                     <plus comment="false" id="2" x="0" y="0">
@@ -155,7 +159,7 @@
                         <get-val-52-17 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-xy>
-                <set-xy comment="false" x="26" y="371">
+                <set-xy comment="false" x="26" y="396">
                     <ACTOR eid="var" id="0" vid="19"/>
                     <int id="1" val="1"/>
                     <plus comment="false" id="2" x="0" y="0">
@@ -181,30 +185,30 @@
                         <get-val-52-18 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-xy>
-                <custom-99 comment="false" x="26" y="431">
+                <custom-99 comment="false" x="26" y="456">
                     <ACTOR eid="this" id="0"/>
                     <ACTOR eid="var" id="1" vid="19"/>
                 </custom-99>
-                <incdec comment="false" x="26" y="458">
+                <incdec comment="false" x="26" y="483">
                     <int id="0" val="9"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1"/>
                 </incdec>
-                <custom-234 comment="false" x="26" y="485">
+                <custom-234 comment="false" x="26" y="510">
                     <get-val-52-14 comment="false" id="0" x="0" y="0"/>
                     <ACTOR eid="var" id="1" vid="19"/>
                 </custom-234>
-                <if comment="false" x="26" y="517">
+                <if comment="false" x="26" y="542">
                     <group eventID="6" id="-1">
-                        <if comment="false" x="37" y="550">
+                        <if comment="false" x="37" y="575">
                             <group eventID="6" id="-1">
-                                <shout comment="false" x="48" y="593">
+                                <shout comment="false" x="48" y="618">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Spawned"/>
                                 </shout>
-                                <if comment="false" x="48" y="620">
+                                <if comment="false" x="48" y="645">
                                     <group eventID="6" id="-1">
-                                        <custom-256 comment="false" x="59" y="653">
+                                        <custom-256 comment="false" x="59" y="678">
                                             <ACTOR eid="this" id="0"/>
                                         </custom-256>
                                     </group>
@@ -223,14 +227,14 @@
                                 </custom-326>
                             </not>
                         </if>
-                        <else comment="false" x="37" y="704">
+                        <else comment="false" x="37" y="729">
                             <group eventID="6" id="-1">
-                                <actor-enabledisable-snippet comment="false" x="48" y="724">
+                                <actor-enabledisable-snippet comment="false" x="48" y="749">
                                     <ACTOR eid="var" id="0" vid="19"/>
                                     <int id="1" val="1"/>
                                     <int id="2" val="Display On Collected PM"/>
                                 </actor-enabledisable-snippet>
-                                <die comment="false" x="48" y="751">
+                                <die comment="false" x="48" y="776">
                                     <ACTOR eid="var" id="0" vid="19"/>
                                 </die>
                             </group>
@@ -241,15 +245,15 @@
                         <int id="1" val="Inventory Collectable PM"/>
                     </has-snippet>
                 </if>
-                <else comment="false" x="26" y="802">
+                <else comment="false" x="26" y="827">
                     <group eventID="6" id="-1">
-                        <shout comment="false" x="37" y="822">
+                        <shout comment="false" x="37" y="847">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Spawned"/>
                         </shout>
-                        <if comment="false" x="37" y="849">
+                        <if comment="false" x="37" y="874">
                             <group eventID="2" id="-1">
-                                <custom-256 comment="false" x="48" y="882">
+                                <custom-256 comment="false" x="48" y="907">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-256>
                             </group>

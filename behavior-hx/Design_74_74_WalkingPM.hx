@@ -67,7 +67,11 @@ public var _AnimationCategory:String;
 
 public var _ShouldPlaySound:Bool;
 
-public var _FootstepSounds:Array<Dynamic>;
+public var _FootstepSFXName:String;
+
+public var _FootstepSFXNumber:Float;
+
+public var _SFXSpacing:Float;
     
 
 /* Params are:__Self */
@@ -170,15 +174,11 @@ var __Self:Actor = actor;
 {
             _ShouldPlaySound = false;
 propertyChanged("_ShouldPlaySound", _ShouldPlaySound);
-            runLater(1000 * 0.3, function(timeTask:TimedTask):Void {
+            runLater(1000 * _SFXSpacing, function(timeTask:TimedTask):Void {
                         _ShouldPlaySound = true;
 propertyChanged("_ShouldPlaySound", _ShouldPlaySound);
 }, actor);
-            if(!((_FootstepSounds.length == 0)))
-{
-                playSound(cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound((scripts.Design_207_207_StencylExtrasPM._customBlock_GetRandomItemFromList(_FootstepSounds)))), Sound));
-}
-
+            sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_FootstepSFXName,_FootstepSFXNumber]);
 }
 
 }
@@ -205,9 +205,13 @@ nameMap.set("Animation Category", "_AnimationCategory");
 _AnimationCategory = "Walking";
 nameMap.set("Should Play Sound?", "_ShouldPlaySound");
 _ShouldPlaySound = false;
-nameMap.set("Footstep Sounds", "_FootstepSounds");
-_FootstepSounds = [];
+nameMap.set("Footstep SFX Name", "_FootstepSFXName");
+_FootstepSFXName = "";
 nameMap.set("Actor", "actor");
+nameMap.set("Footstep SFX Number", "_FootstepSFXNumber");
+_FootstepSFXNumber = 1.0;
+nameMap.set("SFX Spacing", "_SFXSpacing");
+_SFXSpacing = 0.4;
 
 	}
 	
@@ -300,8 +304,6 @@ if(wrapper.enabled){
         /* "Custom: Is \"Right\" on for Self, Is \"Left\" on for Self" */
         if((!(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Right"])), Bool)) && !(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Left"])), Bool))))
 {
-            _ShouldPlaySound = true;
-propertyChanged("_ShouldPlaySound", _ShouldPlaySound);
             if(asBoolean(actor.getActorValue("On Ground?")))
 {
                 if(asBoolean(actor.getActorValue("Facing Right?")))

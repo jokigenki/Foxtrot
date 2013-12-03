@@ -49,6 +49,8 @@ public var _ShrapnelActorType:ActorType;
 
 public var _ExplosionActorType:ActorType;
 
+public var _SFX:Sound;
+
 public var _NumberOfPieces:Float;
 
 public var _PieceNumber:Float;
@@ -70,6 +72,7 @@ propertyChanged("_PieceNumber", _PieceNumber);
 }
 
         recycleActor(actor);
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
         if(_ShakeScreen)
 {
             startShakingScreen(0.5 / 100, 0.5);
@@ -84,6 +87,7 @@ propertyChanged("_PieceNumber", _PieceNumber);
 		super(actor, engine);	
 		nameMap.set("Shrapnel Actor Type", "_ShrapnelActorType");
 nameMap.set("Explosion Actor Type", "_ExplosionActorType");
+nameMap.set("SFX", "_SFX");
 nameMap.set("Number Of Pieces", "_NumberOfPieces");
 _NumberOfPieces = 0.0;
 nameMap.set("Piece Number", "_PieceNumber");

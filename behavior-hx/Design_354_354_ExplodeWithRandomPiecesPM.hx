@@ -56,6 +56,8 @@ public var _ShakeScreen:Bool;
 public var _ExplosionActorType:ActorType;
 
 public var _ShrapnelActorType:ActorType;
+
+public var _SFX:Sound;
     public function _customEvent_Killed():Void
 {
         if((hasValue(_ExplosionActorType) != false))
@@ -72,6 +74,7 @@ propertyChanged("_PieceNumber", _PieceNumber);
 }
 
         recycleActor(actor);
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
         if(_ShakeScreen)
 {
             startShakingScreen(0.5 / 100, 0.5);
@@ -94,6 +97,7 @@ nameMap.set("Shake Screen", "_ShakeScreen");
 _ShakeScreen = false;
 nameMap.set("Explosion Actor Type", "_ExplosionActorType");
 nameMap.set("Shrapnel Actor Type", "_ShrapnelActorType");
+nameMap.set("SFX", "_SFX");
 nameMap.set("Actor", "actor");
 
 	}

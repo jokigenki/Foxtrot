@@ -50,6 +50,8 @@ public var _IsKilled:Bool;
 public var _RightAnimation:String;
 
 public var _LeftAnimation:String;
+
+public var _SFX:Sound;
     public function _customEvent_Killed():Void
 {
         _IsKilled = true;
@@ -65,6 +67,7 @@ propertyChanged("_IsKilled", _IsKilled);
             actor.say("Animation Manager", "_customBlock_PlayOnce", [_LeftAnimation]);
 }
 
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
 }
 
             public function animationHasFinished ():Bool
@@ -84,6 +87,7 @@ propertyChanged("_IsKilled", _IsKilled);
 _IsKilled = false;
 nameMap.set("Right Animation", "_RightAnimation");
 nameMap.set("Left Animation", "_LeftAnimation");
+nameMap.set("SFX", "_SFX");
 nameMap.set("Actor", "actor");
 
 	}

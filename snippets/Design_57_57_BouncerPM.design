@@ -56,7 +56,11 @@
                         </if>
                         <if comment="false" x="55" y="372">
                             <group eventID="4" id="-1">
-                                <push-shove comment="false" x="66" y="402">
+                                <custom-816 comment="false" x="66" y="402">
+                                    <get-val-57-9 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-57-10 comment="false" id="1" x="0" y="0"/>
+                                </custom-816>
+                                <push-shove comment="false" x="66" y="427">
                                     <other-actor comment="false" id="0" x="0" y="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="0"/>
@@ -66,13 +70,64 @@
                                         <int id="1" val="100"/>
                                     </times>
                                 </push-shove>
+                                <if comment="false" x="66" y="464">
+                                    <group eventID="4" id="-1">
+                                        <custom-87 comment="false" x="77" y="502">
+                                            <other-actor comment="false" id="0" x="0" y="0"/>
+                                        </custom-87>
+                                        <if comment="false" x="77" y="534">
+                                            <group eventID="4" id="-1">
+                                                <custom-90 comment="false" x="88" y="577">
+                                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                                    <get-attribute comment="false" id="1" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                        <int id="1" val="Jumping PM"/>
+                                                        <int id="2" val="_JumpRightAnimation"/>
+                                                    </get-attribute>
+                                                    <get-attribute comment="false" id="2" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                        <int id="1" val="Jumping PM"/>
+                                                        <int id="2" val="_AnimationCategory"/>
+                                                    </get-attribute>
+                                                </custom-90>
+                                            </group>
+                                            <as-boolean comment="false" id="0" x="0" y="0">
+                                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                                    <int id="1" val="Facing Right?"/>
+                                                </actor-get-prop>
+                                            </as-boolean>
+                                        </if>
+                                        <else comment="false" x="77" y="634">
+                                            <group eventID="4" id="-1">
+                                                <custom-90 comment="false" x="88" y="654">
+                                                    <other-actor comment="false" id="0" x="0" y="0"/>
+                                                    <get-attribute comment="false" id="1" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                        <int id="1" val="Jumping PM"/>
+                                                        <int id="2" val="_JumpLeftAnimation"/>
+                                                    </get-attribute>
+                                                    <get-attribute comment="false" id="2" x="0" y="0">
+                                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                                        <int id="1" val="Jumping PM"/>
+                                                        <int id="2" val="_AnimationCategory"/>
+                                                    </get-attribute>
+                                                </custom-90>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <has-snippet comment="false" id="0" x="0" y="0">
+                                        <other-actor comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="Jumping PM"/>
+                                    </has-snippet>
+                                </if>
                             </group>
                             <more comment="false" id="0" x="0" y="0">
                                 <get-val-57-4 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="0"/>
                             </more>
                         </if>
-                        <set-val-57-4 comment="false" x="55" y="451">
+                        <set-val-57-4 comment="false" x="55" y="735">
                             <int id="0" val="0"/>
                         </set-val-57-4>
                     </group>

@@ -81,7 +81,6 @@ public function _customBlock_FadeOutCurrent(__FadeOutTime:Float, __Music:Sound, 
 {
         fadeOutForAllSounds(__FadeOutTime);
         runLater(1000 * __FadeOutTime, function(timeTask:TimedTask):Void {
-                    stopAllSounds();
                     loopSound(__Music);
                     fadeInForAllSounds(__FadeInTime);
                     setGameAttribute("Current Music", ("" + __Music));
@@ -128,11 +127,26 @@ public function _customBlock_PlayNamedSound(__SoundName:String):Void
 /* Params are:__SetName __NumberOfSounds */
 public function _customBlock_PlayRandomSoundFromSet(__SetName:String, __NumberOfSounds:Float):Void
 {
-        var soundIndex = randomInt(1, __NumberOfSounds);
-var soundName = __SetName + " " + soundIndex + " SFX";
+        if (__SetName == null || __SetName == "") return;
+var soundIndex = randomInt(1, __NumberOfSounds);
+var soundName = __SetName;
+if (__NumberOfSounds > 1) soundName = soundName + " " + soundIndex + " SFX";
+else soundName = soundName + " SFX";
 var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);
-if (sound == null) return;
+if (sound == null)
+{
+	trace(soundName + " is missing");
+	return;
+}
+
         playSound(sound);
+}
+    
+
+/* Params are:__Sound __Channel */
+public function _customBlock_LoopSoundOnChannel(__Sound:Sound, __Channel:Float):Void
+{
+        loopSoundOnChannel(__Sound, Std.int(__Channel));
 }
 
  

@@ -631,6 +631,7 @@
                 <prop id="9" list="0" val="true"/>
                 <prop id="10" list="0" val="704"/>
                 <prop id="11" list="0" val="262"/>
+                <prop id="12" list="0" val="846"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="185">
@@ -653,6 +654,14 @@
             </s>
             <s enabled="true" id="54">
                 <prop id="1" list="0" val="true"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="418">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="4" list="0" val="845"/>
+                <prop id="5" list="0" val="2"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="345">
@@ -711,6 +720,8 @@
         </anim>
     </sprite>
     <music atlasID="4" desc="" id="626" loop="true" name="Boss Key Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="847" loop="true" name="Break Crate SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="821" loop="true" name="Cable SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-64" blocktype="NORMAL" code="Number((scripts.Design_27_27_ActorExtrasPM.CalculateDistance(~,~)))" desc="Calculates distance between the centre points of 2 actors." global="true" gui="distance between %0 and %1" id="64" message="CalculateDistance" name="CalculateDistance" oid="-1" return="NUMBER" shared="false" snippetID="27">
         <blank name="First Actor" order="0" type="ACTOR"/>
         <blank name="Second Actor" order="1" type="ACTOR"/>
@@ -925,8 +936,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val="1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
         </snippets>
     </actor>
@@ -1061,6 +1074,8 @@
                 <prop id="18" list="0" val="0"/>
                 <prop id="21" list="0" val="false"/>
                 <prop id="20" list="0" val=""/>
+                <prop id="23" list="0" val="1"/>
+                <prop id="22" list="0" val=""/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -1197,6 +1212,7 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="17" list="0" val="262"/>
                 <prop id="16" list="0" val="-1"/>
+                <prop id="18" list="0" val="847"/>
             </s>
             <s enabled="true" id="139">
                 <prop id="1" list="0" val="Bump Out PM"/>
@@ -1227,6 +1243,14 @@
                     <text order="1" value="Conveyor2x"/>
                     <text order="2" value="Water"/>
                 </prop>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="418">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="4" list="0" val="845"/>
+                <prop id="5" list="0" val="2"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="177">
@@ -1299,6 +1323,7 @@
             </s>
         </snippets>
     </actor>
+    <music atlasID="0" desc="" id="845" loop="true" name="Crate Drag SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="4" default="0" defaultAnimation="0" desc="" height="30" id="263" name="Crate Explide" shared="false" width="30">
         <anim across="1" down="1" durations="100" height="30" id="0" loop="true" name="p1" numframes="1" originx="0" originy="0" sync="false" width="30">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="1" name="default" rest="0.0" sensor="false"/>
@@ -1377,6 +1402,8 @@
                 <prop id="18" list="0" val="0"/>
                 <prop id="21" list="0" val="false"/>
                 <prop id="20" list="0" val=""/>
+                <prop id="23" list="0" val="1"/>
+                <prop id="22" list="0" val=""/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -1581,7 +1608,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -1619,6 +1650,7 @@
                 <prop id="5" list="0" val="1"/>
                 <prop id="6" list="0" val="1"/>
                 <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="166">
@@ -1635,7 +1667,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -2015,6 +2051,7 @@
         </anim>
     </sprite>
     <custom-block blocktag="custom-348" blocktype="ACTION" code="sayToScene(&quot;Scene Transition PM&quot;, &quot;DoSwitchScene&quot;);" desc="" global="false" gui="Switch scene" id="348" message="DoSwitchScene" name="DoSwitchScene" oid="-1" return="VOID" shared="false" snippetID="21"/>
+    <music atlasID="0" desc="" id="822" loop="true" name="Duck Alarm SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="798" loop="true" name="Duck Laser SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="206" name="Egg" shared="false" width="16">
         <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Farm1" numframes="1" originx="8" originy="8" sync="true" width="16">
@@ -2211,6 +2248,14 @@
                 </prop>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
+            <s enabled="true" id="418">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="4" list="0" val="845"/>
+                <prop id="5" list="0" val="2"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="177">
                 <prop id="1" list="0" val="32"/>
                 <prop id="2" list="0" val="false"/>
@@ -2264,6 +2309,7 @@
                 <prop id="10" list="0" val="true"/>
                 <prop id="11" list="0" val="702"/>
                 <prop id="12" list="0" val="697"/>
+                <prop id="13" list="0" val="846"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="345">
@@ -2373,6 +2419,8 @@
                 <prop id="18" list="0" val="0"/>
                 <prop id="21" list="0" val="false"/>
                 <prop id="20" list="0" val=""/>
+                <prop id="23" list="0" val="1"/>
+                <prop id="22" list="0" val=""/>
             </s>
         </snippets>
     </actor>
@@ -2417,6 +2465,7 @@
                 <prop id="5" list="0" val="1"/>
                 <prop id="6" list="0" val="1"/>
                 <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="166">
@@ -2433,7 +2482,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -2516,6 +2569,7 @@
             </s>
         </snippets>
     </actor>
+    <music atlasID="0" desc="" id="846" loop="true" name="Explosion SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <tileset across="4" atlasID="1" desc="" down="4" id="606" name="Factory" oid="-1" shared="false" th="16" tw="16">
         <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -2534,6 +2588,7 @@
         <tile collision="1" data="" durations="100" frames="14" id="14" order="-1"/>
         <tile collision="1" data="" durations="100" frames="15" id="15" order="-1"/>
     </tileset>
+    <music atlasID="0" desc="" id="853" loop="true" name="Factory Interstitial Theme" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="1" desc="" id="756" loop="true" name="Factory Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <custom-block blocktag="custom-633" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;FadeOutCurrent&quot;, ~,~,~);" desc="" global="false" gui="Fade out current music over %0 fade in %1 over %2" id="633" message="FadeOutCurrent" name="FadeOutCurrent" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Fade Out Time" order="0" type="NUMBER"/>
@@ -2579,8 +2634,8 @@
                 <prop id="12" list="0" val="false"/>
                 <prop id="13" list="0" val="0.4"/>
                 <prop id="14" list="0" val="-1"/>
-                <prop id="15" list="0" val="Fart"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="15" list="0" val="Fart"/>
                 <prop id="16" list="0" val="5"/>
             </s>
             <s enabled="true" id="169">
@@ -2936,6 +2991,7 @@
             </s>
         </snippets>
     </actor>
+    <music atlasID="0" desc="" id="848" loop="true" name="Fire Loop SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="16" id="621" name="Flames" shared="false" width="16">
         <anim across="3" down="1" durations="100,100,100" height="16" id="0" loop="true" name="Animation 0" numframes="3" originx="8" originy="8" sync="true" width="48">
             <poly data="4,0,8,16,8,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
@@ -2964,6 +3020,11 @@
             </s>
         </snippets>
     </actor>
+    <music atlasID="0" desc="" id="829" loop="true" name="Footstep 1 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="830" loop="true" name="Footstep 2 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="831" loop="true" name="Footstep 3 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="832" loop="true" name="Footstep 4 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="833" loop="true" name="Footstep 5 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-309" blocktype="NORMAL" code="" desc="" global="true" gui="Convert Number %0 to Time String" id="309" message="FormatNumberAsTime" name="FormatNumberAsTime" oid="-1" return="TEXT" shared="false" snippetID="-1">
         <blank name="TimeNumber" order="0" type="NUMBER"/>
     </custom-block>
@@ -2988,7 +3049,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -3025,7 +3090,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -3066,7 +3135,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -3527,8 +3600,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val="1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
             <s enabled="true" id="151">
                 <prop id="1" list="0" val="3"/>
@@ -3579,7 +3654,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -3932,7 +4011,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -4113,7 +4196,11 @@
     <actor adamp="0.0" ascale="true" atlasID="3" bodytype="0" continuous="true" desc="" eventsnippetid="378" fixedrot="false" fric="0.2" gid="2" id="726" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Jump" oid="-1" pausable="true" rest="0.0" shared="false" sprite="727" static="true">
         <snippets/>
     </actor>
-    <music atlasID="0" desc="" id="801" loop="true" name="Jump SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="834" loop="true" name="Jump 1 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="835" loop="true" name="Jump 2 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="836" loop="true" name="Jump 3 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="837" loop="true" name="Jump 4 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="838" loop="true" name="Jump 5 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="32" id="10" name="Jumper" shared="false" width="32">
         <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="true" name="idle-l" numframes="4" originx="16" originy="16" sync="false" width="128">
             <poly data="6,0,7,0,31,2,32,22,32,24,31,24,7" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
@@ -4197,8 +4284,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val="Footstep"/>
+                <prop id="15" list="0" val="5"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
             <s enabled="true" id="153">
                 <prop id="1" list="0" val="0.5"/>
@@ -4290,6 +4379,7 @@
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="burn-r"/>
                 <prop id="3" list="0" val="burn-l"/>
+                <prop id="4" list="0" val="No Sound"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="169">
@@ -4392,9 +4482,12 @@
                 <prop id="18" list="0" val="0.75"/>
                 <prop id="21" list="0" val="Jumping"/>
                 <prop id="20" list="0" val="29.0"/>
-                <prop id="23" list="0" val="true"/>
+                <prop id="23" list="0" val="false"/>
                 <prop id="22" list="0" val="30"/>
+                <prop id="25" list="0" val="Jump"/>
                 <prop id="24" list="0" val="50"/>
+                <prop id="27" list="0" val="false"/>
+                <prop id="26" list="0" val="5"/>
             </s>
             <s enabled="true" id="185">
                 <prop id="1" list="0" val="Flicker Out PM"/>
@@ -4618,8 +4711,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val="1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
             <s enabled="true" id="152">
                 <prop id="1" list="0" val="Left"/>
@@ -4675,7 +4770,9 @@
                 <prop id="24" list="0" val="Fire Right"/>
                 <prop id="27" list="0" val="798"/>
                 <prop id="26" list="0" val="Right"/>
+                <prop id="29" list="0" val="822"/>
                 <prop id="28" list="0" val="false"/>
+                <prop id="30" list="0" val="798"/>
             </s>
             <s enabled="true" id="147">
                 <prop id="2" list="0" val="Dead Left"/>
@@ -4750,12 +4847,15 @@
                 <prop id="18" list="0" val="0"/>
                 <prop id="21" list="0" val="true"/>
                 <prop id="20" list="0" val=""/>
+                <prop id="23" list="0" val="1"/>
+                <prop id="22" list="0" val=""/>
             </s>
         </snippets>
     </actor>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="36" id="625" name="Laser Duck Spawner" shared="false" width="35">
         <anim across="1" down="1" durations="100" height="36" id="0" loop="true" name="Animation 0" numframes="1" originx="16" originy="16" sync="false" width="35"/>
     </sprite>
+    <music atlasID="0" desc="" id="849" loop="true" name="Laser Loop SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="32" id="547" name="Laspin" shared="false" width="32">
         <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="true" name="Left" numframes="4" originx="16" originy="16" sync="false" width="128">
             <poly data="4,2,9,28,9,28,32,2,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Left" rest="0.0" sensor="false"/>
@@ -5054,6 +5154,10 @@
     <custom-block blocktag="custom-632" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopMusic&quot;, ~);" desc="" global="false" gui="Loop music %0" id="632" message="LoopMusic" name="LoopMusic" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Music" order="0" type="SOUND"/>
     </custom-block>
+    <custom-block blocktag="custom-844" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoopSoundOnChannel&quot;, ~,~);" desc="" global="false" gui="Loop sound %0 on channel %1" id="844" message="LoopSoundOnChannel" name="LoopSoundOnChannel" oid="-1" return="VOID" shared="false" snippetID="329">
+        <blank name="Sound" order="0" type="SOUND"/>
+        <blank name="Channel" order="1" type="NUMBER"/>
+    </custom-block>
     <custom-block blocktag="custom-749" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.LoseItemWithId(~,~);" desc="" global="true" gui="Lose Item with Id %0 of type %1" id="749" message="LoseItemWithId" name="LoseItemWithId" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Id" order="0" type="TEXT"/>
         <blank name="Type" order="1" type="ACTORTYPE"/>
@@ -5109,6 +5213,12 @@
             <poly data="4,0,0,32,0,32,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="823" loop="true" name="Milk 1 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="824" loop="true" name="Milk 2 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="825" loop="true" name="Milk 3 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="826" loop="true" name="Milk 4 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="827" loop="true" name="Milk 5 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="828" loop="true" name="Milk Loop SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <tileset across="6" atlasID="1" desc="" down="3" id="639" name="Milk Pipes" oid="-1" shared="false" th="16" tw="16">
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -5153,6 +5263,8 @@
                 <prop id="18" list="0" val="-32"/>
                 <prop id="21" list="0" val="false"/>
                 <prop id="20" list="0" val=""/>
+                <prop id="23" list="0" val="5"/>
+                <prop id="22" list="0" val="Milk"/>
             </s>
             <s enabled="true" id="241">
                 <prop id="1" list="0" val="0.9"/>
@@ -5256,6 +5368,7 @@
                 <prop id="5" list="0" val="0.5"/>
                 <prop id="6" list="0" val="1"/>
                 <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="63">
@@ -5275,7 +5388,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -5354,6 +5471,7 @@
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="852" loop="true" name="Once upon a Time Theme" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="3" default="0" defaultAnimation="0" desc="" height="32" id="734" name="PANTS Nev" shared="false" width="32">
         <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="true" name="idle-r" numframes="4" originx="16" originy="16" sync="false" width="128">
             <poly data="8,7,7,7,31,9,32,30,32,32,31,32,7,31,5,8,5" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
@@ -5485,8 +5603,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val="Footstep"/>
+                <prop id="15" list="0" val="5"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
             <s enabled="true" id="153">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -5508,7 +5628,10 @@
                 <prop id="20" list="0" val="29.0"/>
                 <prop id="23" list="0" val="true"/>
                 <prop id="22" list="0" val="30.0"/>
+                <prop id="25" list="0" val="Jump"/>
                 <prop id="24" list="0" val="50"/>
+                <prop id="27" list="0" val="true"/>
+                <prop id="26" list="0" val="5"/>
             </s>
             <s enabled="true" id="48">
                 <prop id="1" list="0" val="false"/>
@@ -5534,7 +5657,7 @@
                 <prop id="8" list="0" val="0.0"/>
                 <prop id="9" list="0" val="20"/>
                 <prop id="10" list="0" val=""/>
-                <prop id="11" list="0" val=""/>
+                <prop id="11" list="0" val="-1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="215">
@@ -5729,6 +5852,11 @@
         <tile collision="-1" data="" durations="100" frames="22" id="46" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="23" id="47" order="-1"/>
     </tileset>
+    <music atlasID="0" desc="" id="839" loop="true" name="Piston Block 1 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="840" loop="true" name="Piston Block 2 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="841" loop="true" name="Piston Block 3 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="842" loop="true" name="Piston Block 4 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="843" loop="true" name="Piston Block 5 SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="615" name="Pivot" shared="false" width="16">
         <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="8" originy="8" sync="false" width="16"/>
     </sprite>
@@ -5940,8 +6068,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val="1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
             <s enabled="true" id="152">
                 <prop id="1" list="0" val="Left"/>
@@ -5964,7 +6094,10 @@
                 <prop id="20" list="0" val="35.0"/>
                 <prop id="23" list="0" val="true"/>
                 <prop id="22" list="0" val="35.0"/>
+                <prop id="25" list="0" val=""/>
                 <prop id="24" list="0" val="50"/>
+                <prop id="27" list="0" val="false"/>
+                <prop id="26" list="0" val="1"/>
             </s>
             <s enabled="true" id="257">
                 <prop id="1" list="0" val="Explode With Set Pieces PM"/>
@@ -6035,6 +6168,8 @@
                 <prop id="18" list="0" val="0"/>
                 <prop id="21" list="0" val="true"/>
                 <prop id="20" list="0" val=""/>
+                <prop id="23" list="0" val="1"/>
+                <prop id="22" list="0" val=""/>
             </s>
         </snippets>
     </actor>
@@ -6095,7 +6230,10 @@
                 <prop id="20" list="0" val="35.0"/>
                 <prop id="23" list="0" val="true"/>
                 <prop id="22" list="0" val="35.0"/>
+                <prop id="25" list="0" val=""/>
                 <prop id="24" list="0" val="50"/>
+                <prop id="27" list="0" val="false"/>
+                <prop id="26" list="0" val="1"/>
             </s>
             <s enabled="true" id="48">
                 <prop id="1" list="0" val="false"/>
@@ -6187,8 +6325,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val="1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
         </snippets>
     </actor>
@@ -6223,6 +6363,8 @@
                 <prop id="18" list="0" val="0"/>
                 <prop id="21" list="0" val="false"/>
                 <prop id="20" list="0" val=""/>
+                <prop id="23" list="0" val="1"/>
+                <prop id="22" list="0" val=""/>
             </s>
         </snippets>
     </actor>
@@ -6383,8 +6525,10 @@
                 <prop id="11" list="1" val=""/>
                 <prop id="12" list="0" val="Walking"/>
                 <prop id="13" list="0" val="false"/>
-                <prop id="14" list="1" val=""/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val="1"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="16" list="0" val="0.4"/>
             </s>
             <s enabled="true" id="50">
                 <prop id="1" list="0" val="false"/>
@@ -6403,7 +6547,10 @@
                 <prop id="20" list="0" val="38.0"/>
                 <prop id="23" list="0" val="true"/>
                 <prop id="22" list="0" val="38.0"/>
+                <prop id="25" list="0" val=""/>
                 <prop id="24" list="0" val="50"/>
+                <prop id="27" list="0" val="false"/>
+                <prop id="26" list="0" val="1"/>
             </s>
             <s enabled="true" id="48">
                 <prop id="1" list="0" val="false"/>
@@ -6590,6 +6737,7 @@
     <custom-block blocktag="custom-709" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_37&quot;, &quot;ShootGrenade&quot;, ~);" desc="" global="false" gui="Shoot grenade from %0" id="709" message="ShootGrenade" name="ShootGrenade" oid="-1" return="VOID" shared="false" snippetID="362">
         <blank name="Grenade Maker" order="0" type="ACTOR"/>
     </custom-block>
+    <music atlasID="0" desc="" id="850" loop="true" name="Sliding Block SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-112" blocktype="ACTION" code="~.say(&quot;Walking PM&quot;, &quot;SlowToMax&quot;, ~);" desc="" global="false" gui="Slow Down %0 To Max Speed Using Rate %1" id="112" message="SlowToMax" name="SlowToMax" oid="-1" return="VOID" shared="false" snippetID="74">
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Rate" order="1" type="NUMBER"/>
@@ -6665,6 +6813,8 @@
                     <text order="1" value="Egg Push"/>
                 </prop>
                 <prop id="8" list="0" val="15"/>
+                <prop id="9" list="0" val="Jump"/>
+                <prop id="10" list="0" val="5"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -7065,6 +7215,8 @@
                     <text order="1" value="Egg Push"/>
                 </prop>
                 <prop id="8" list="0" val="15"/>
+                <prop id="9" list="0" val="Jump"/>
+                <prop id="10" list="0" val="5"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
@@ -7095,7 +7247,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -7131,7 +7287,11 @@
                 <prop id="11" list="0" val=""/>
                 <prop id="12" list="0" val="0"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val=""/>
+                <prop id="15" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="1"/>
+                <prop id="16" list="0" val="1"/>
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
@@ -7170,6 +7330,7 @@
         <blank name="Target" order="1" type="ACTOR"/>
         <blank name="Direction" order="2" type="TEXT"/>
     </custom-block>
+    <music atlasID="0" desc="" id="851" loop="true" name="Tutorial Theme" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-596" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockActor(~);" desc="" global="true" gui="Unlock %0" id="596" message="UnlockActor" name="UnlockActor" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Door Actor" order="0" type="ACTOR"/>
     </custom-block>

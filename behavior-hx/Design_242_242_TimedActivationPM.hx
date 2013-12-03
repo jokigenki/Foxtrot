@@ -54,13 +54,15 @@ public var _DelayBeforeActivate:Float;
 public var _DelayBeforeDeactivate:Float;
 
 public var _IsRunning:Bool;
+
+public var _IsActivated:Bool;
     public function _customEvent_ToggleActive():Void
 {
-        _IsActive = !(_IsActive);
-propertyChanged("_IsActive", _IsActive);
+        _IsActivated = !(_IsActivated);
+propertyChanged("_IsActivated", _IsActivated);
         _IsRunning = false;
 propertyChanged("_IsRunning", _IsRunning);
-        if(_IsActive)
+        if((_IsActivated && _IsActive))
 {
             actor.say("Activate On Event PM", "_customEvent_" + "Activate");
             if((_DelayBeforeDeactivate > 0))
@@ -100,6 +102,36 @@ propertyChanged("_IsRunning", _IsRunning);
 
 }
 
+    public function _customEvent_Activate():Void
+{
+        if((!(_IsActive) && !(_IsRunning)))
+{
+            if((_InitialDelay > 0))
+{
+                _IsRunning = true;
+propertyChanged("_IsRunning", _IsRunning);
+                runLater(1000 * _InitialDelay, function(timeTask:TimedTask):Void {
+                            actor.say("Timed Activation PM", "_customEvent_" + "ToggleActive");
+}, actor);
+}
+
+            else
+{
+                actor.say("Timed Activation PM", "_customEvent_" + "ToggleActive");
+}
+
+}
+
+        _IsActive = true;
+propertyChanged("_IsActive", _IsActive);
+}
+
+    public function _customEvent_Deactivate():Void
+{
+        _IsActive = false;
+propertyChanged("_IsActive", _IsActive);
+}
+
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -108,20 +140,27 @@ propertyChanged("_IsRunning", _IsRunning);
 		nameMap.set("Initial Delay", "_InitialDelay");
 _InitialDelay = 0.0;
 nameMap.set("Is Active?", "_IsActive");
-_IsActive = false;
+_IsActive = true;
 nameMap.set("Delay Before Activate", "_DelayBeforeActivate");
 _DelayBeforeActivate = 0.0;
 nameMap.set("Delay Before Deactivate", "_DelayBeforeDeactivate");
 _DelayBeforeDeactivate = 0.0;
 nameMap.set("Is Running?", "_IsRunning");
 _IsRunning = false;
+nameMap.set("Is Activated?", "_IsActivated");
+_IsActivated = false;
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            if((_InitialDelay > 0))
+		            if(!(_IsActive))
+{
+            return;
+}
+
+        if((_InitialDelay > 0))
 {
             _IsRunning = true;
 propertyChanged("_IsRunning", _IsRunning);
@@ -135,7 +174,7 @@ propertyChanged("_IsRunning", _IsRunning);
             actor.say("Timed Activation PM", "_customEvent_" + "ToggleActive");
 }
 
-    addPropertyChangeListener("_IsActive", null, function(property:Dynamic, list:Array<Dynamic>):Void {
+    addPropertyChangeListener("_IsActivated", null, function(property:Dynamic, list:Array<Dynamic>):Void {
 if(wrapper.enabled && cast(property, Bool) == true){
         if(!(_IsRunning))
 {

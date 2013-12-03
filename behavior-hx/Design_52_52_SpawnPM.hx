@@ -78,6 +78,10 @@ public var _YOffset:Float;
 public var _PlaceSpawnedActorBehind:Bool;
 
 public var _SwitchToAnimationNamed:String;
+
+public var _SpawnSFXNumber:Float;
+
+public var _SpawnSFXName:String;
     public function _customEvent_MakeSpawn():Void
 {
         _IsRunning = false;
@@ -87,6 +91,7 @@ propertyChanged("_IsRunning", _IsRunning);
             return;
 }
 
+        sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_SpawnSFXName,_SpawnSFXNumber]);
         createRecycledActor(_SpawnType, actor.getX(), actor.getY(), Script.FRONT);
         _LastSpawn = getLastCreatedActor();
 propertyChanged("_LastSpawn", _LastSpawn);
@@ -278,6 +283,10 @@ nameMap.set("Place Spawned Actor Behind?", "_PlaceSpawnedActorBehind");
 _PlaceSpawnedActorBehind = false;
 nameMap.set("Switch To Animation Named", "_SwitchToAnimationNamed");
 _SwitchToAnimationNamed = "";
+nameMap.set("Spawn SFX Number", "_SpawnSFXNumber");
+_SpawnSFXNumber = 1;
+nameMap.set("Spawn SFX Name", "_SpawnSFXName");
+_SpawnSFXName = "";
 
 	}
 	

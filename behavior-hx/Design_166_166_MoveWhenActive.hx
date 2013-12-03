@@ -70,6 +70,14 @@ public var _MoveTarget:Actor;
 public var _XOffset:Float;
 
 public var _YOffset:Float;
+
+public var _ActiveSFXName:String;
+
+public var _InactiveSFXName:String;
+
+public var _InactiveSFXNumber:Float;
+
+public var _ActiveSFXNumber:Float;
     public function _customEvent_Activated():Void
 {
         _IsActive = true;
@@ -103,6 +111,11 @@ if (_MoveDelay > 0)
 	_MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);
 }
 
+        if(((hasValue(_ActiveSFXName) != false) && !(("" + _ActiveSFXName) == (""))))
+{
+            sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_ActiveSFXName,_ActiveSFXNumber]);
+}
+
 }
 
     public function _customEvent_Deactivated():Void
@@ -129,6 +142,11 @@ switch(_EaseType)
 }
 
 _MoveTarget.moveTo(_XStart, _YStart, _ReturnTime, trans);
+        if(((hasValue(_InactiveSFXName) != false) && !(("" + _InactiveSFXName) == (""))))
+{
+            sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_InactiveSFXName,_InactiveSFXNumber]);
+}
+
 }
 
 
@@ -161,7 +179,15 @@ nameMap.set("X Offset", "_XOffset");
 _XOffset = 0.0;
 nameMap.set("Y Offset", "_YOffset");
 _YOffset = 0.0;
+nameMap.set("Active SFX Name", "_ActiveSFXName");
+_ActiveSFXName = "";
 nameMap.set("Actor", "actor");
+nameMap.set("Inactive SFX Name", "_InactiveSFXName");
+_InactiveSFXName = "";
+nameMap.set("Inactive SFX Number", "_InactiveSFXNumber");
+_InactiveSFXNumber = 1.0;
+nameMap.set("Active SFX Number", "_ActiveSFXNumber");
+_ActiveSFXNumber = 1.0;
 
 	}
 	

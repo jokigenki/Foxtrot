@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-418-2 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-418-2>
+                <if comment="false" x="26" y="65">
+                    <group eventID="1" id="-1">
+                        <set-val-418-2 comment="false" x="37" y="103">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-418-2>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-dxy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-dxy>
+                        <int id="1" val="0"/>
+                    </noteq>
+                </if>
+                <if comment="false" x="26" y="140">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="170">
+                            <group eventID="1" id="-1">
+                                <set-val-418-3 comment="false" x="48" y="200">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-418-3>
+                                <custom-844 comment="false" x="48" y="225">
+                                    <SOUND eid="var" id="0" vid="4"/>
+                                    <get-val-418-5 comment="false" id="1" x="0" y="0"/>
+                                </custom-844>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-418-3 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-418-1 comment="false" id="0" x="0" y="0"/>
+                        <get-val-418-2 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <else comment="false" x="26" y="281">
+                    <group eventID="1" id="-1">
+                        <set-val-418-3 comment="false" x="37" y="301">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-418-3>
+                        <control-sound-channel comment="false" x="37" y="326">
+                            <int id="0" val="0"/>
+                            <get-val-418-5 comment="false" id="1" x="0" y="0"/>
+                        </control-sound-channel>
+                    </group>
+                </else>
+                <set-val-418-1 comment="false" x="26" y="370">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-418-1>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="2" id="-1">
+                        <set-val-418-1 comment="false" x="37" y="78">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-418-1>
+                    </group>
+                    <collision-bottom comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-bottom>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

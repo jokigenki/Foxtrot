@@ -47,18 +47,25 @@ class SceneEvents_21 extends SceneScript
 	
 public var _ExitName:String;
 
+public var _HasPlayedSound:Bool;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
 		nameMap.set("Exit Name", "_ExitName");
 _ExitName = "";
+nameMap.set("Has Played Sound?", "_HasPlayedSound");
+_HasPlayedSound = false;
 
 	}
 	
 	override public function init()
 	{
-		
+		            runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
+                    loopSoundOnChannel(getSound(828), Std.int(1));
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

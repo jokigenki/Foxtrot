@@ -238,17 +238,14 @@
                 </comment-short>
                 <if comment="false" x="26" y="1168">
                     <group eventID="-1" id="-1">
-                        <set-val-74-13 comment="false" x="37" y="1211">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-74-13>
-                        <if comment="false" x="37" y="1236">
+                        <if comment="false" x="37" y="1211">
                             <group eventID="-1" id="-1">
-                                <if comment="false" x="48" y="1274">
+                                <if comment="false" x="48" y="1249">
                                     <group eventID="-1" id="-1">
-                                        <comment-short comment="false" x="59" y="1312">
+                                        <comment-short comment="false" x="59" y="1287">
                                             <int id="0" val="Loop &amp;lt;Idle Right Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
                                         </comment-short>
-                                        <custom-127 comment="false" x="59" y="1332">
+                                        <custom-127 comment="false" x="59" y="1307">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-74-8 comment="false" id="1" x="0" y="0"/>
                                             <get-val-74-12 comment="false" id="2" x="0" y="0"/>
@@ -261,12 +258,12 @@
                                         </actor-get-prop>
                                     </as-boolean>
                                 </if>
-                                <else comment="false" x="48" y="1376">
+                                <else comment="false" x="48" y="1351">
                                     <group eventID="-1" id="-1">
-                                        <comment-short comment="false" x="59" y="1396">
+                                        <comment-short comment="false" x="59" y="1371">
                                             <int id="0" val="Loop &amp;lt;Idle Left Animation&amp;gt; for Self Using &amp;lt;Animation Category&amp;gt;"/>
                                         </comment-short>
-                                        <custom-127 comment="false" x="59" y="1416">
+                                        <custom-127 comment="false" x="59" y="1391">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-74-9 comment="false" id="1" x="0" y="0"/>
                                             <get-val-74-12 comment="false" id="2" x="0" y="0"/>
@@ -495,30 +492,17 @@
                         </set-val-74-13>
                         <dolater comment="false" x="37" y="90">
                             <group eventID="2" id="-1">
-                                <set-val-74-13 comment="false" x="48" y="117">
+                                <set-val-74-13 comment="false" x="48" y="122">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-74-13>
                             </group>
-                            <int id="0" val="0.3"/>
+                            <get-val-74-16 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <if comment="false" x="37" y="154">
-                            <group eventID="11" id="-1">
-                                <play-sound4 comment="false" x="48" y="189">
-                                    <int id="0" val="0"/>
-                                    <custom-477 comment="false" id="1" x="0" y="0">
-                                        <custom-538 comment="false" id="0" x="0" y="0">
-                                            <get-val-74-14 comment="false" id="0" x="0" y="0"/>
-                                        </custom-538>
-                                    </custom-477>
-                                </play-sound4>
-                            </group>
-                            <not comment="false" id="0" x="0" y="0">
-                                <is-empty comment="false" id="0" x="0" y="0">
-                                    <get-val-74-14 comment="false" id="0" x="0" y="0"/>
-                                </is-empty>
-                            </not>
-                        </if>
+                        <custom-816 comment="false" x="37" y="159">
+                            <get-val-74-14 comment="false" id="0" x="0" y="0"/>
+                            <get-val-74-15 comment="false" id="1" x="0" y="0"/>
+                        </custom-816>
                     </group>
                     <get-val-74-13 comment="false" id="0" x="0" y="0"/>
                 </if>
