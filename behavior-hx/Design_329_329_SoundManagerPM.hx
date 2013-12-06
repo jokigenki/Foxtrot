@@ -291,7 +291,7 @@ public function _customBlock_LoopSoundNamed(__SoundName:String, __Channel:Float)
         _Sound = cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound);
         if((hasValue(_Sound) != false))
 {
-            loopSoundOnChannel(cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound), Std.int(__Channel));
+            loopSoundOnChannel(_Sound, Std.int(__Channel));
 }
 
         else

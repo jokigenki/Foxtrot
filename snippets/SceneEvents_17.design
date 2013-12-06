@@ -64,11 +64,16 @@
     <group eventID="3" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <if comment="false" x="26" y="40">
+                <say comment="false" x="26" y="40">
+                    <ACTOR eid="8" id="0"/>
+                    <int id="1" val="Flash Actor PM"/>
+                    <int id="2" val="Flash"/>
+                </say>
+                <if comment="false" x="26" y="67">
                     <group eventID="3" id="-1">
-                        <if comment="false" x="37" y="83">
+                        <if comment="false" x="37" y="110">
                             <group eventID="3" id="-1">
-                                <custom-632 comment="false" x="48" y="108">
+                                <custom-632 comment="false" x="48" y="135">
                                     <SOUND eid="627" id="0"/>
                                 </custom-632>
                             </group>

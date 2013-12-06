@@ -81,6 +81,10 @@ public var _RunComplete:Bool;
 
     public function _customEvent_ReducedHealth():Void
 {
+        getActor(5).say("Flash Actor PM", "_customEvent_" + "Flash");
+        getActor(6).say("Goose Head Maker PM", "_customEvent_" + "Flash");
+        getActor(7).say("Goose Head Maker PM", "_customEvent_" + "Flash");
+        getActor(8).say("Goose Head Maker PM", "_customEvent_" + "Flash");
         if((getActor(5).getValue("Reduce Health PM", "_CurrentHealth") == 2))
 {
             getActor(7).say("Goose Head Maker PM", "_customEvent_" + "Activate");

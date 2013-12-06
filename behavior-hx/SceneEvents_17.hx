@@ -79,6 +79,7 @@ propertyChanged("_RunComplete", _RunComplete);
 
     public function _customEvent_ReducedHealth():Void
 {
+        getActor(8).say("Flash Actor PM", "_customEvent_" + "Flash");
         if((asNumber(getActor(8).getValue("Reduce Health PM", "_CurrentHealth")) == 1))
 {
             if(getGameAttribute("Is Music On?"))

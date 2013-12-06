@@ -611,6 +611,20 @@ var __Self:Actor = actor;
         /* "replace \" \" with \"\"" */
         shoutToScene("_customEvent_" + (("" + (("" + StringTools.replace(("" + "" + (scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(actor))), ("" + " "), ("" + ""))) + ("" + "_"))) + ("" + __EventName)));
 }
+    public function _customEvent_Flash():Void
+{
+        if((hasValue(_Head) != false))
+{
+            _Head.say("Flash Actor PM", "_customEvent_" + "Flash");
+}
+
+        for(item in cast(_Pipes, Array<Dynamic>))
+{
+            item.say("Flash Actor PM", "_customEvent_" + "Flash");
+}
+
+}
+
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)

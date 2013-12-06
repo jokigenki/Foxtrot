@@ -20,9 +20,29 @@
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <if comment="false" x="26" y="40">
+                <say comment="false" x="26" y="40">
+                    <ACTOR eid="5" id="0"/>
+                    <int id="1" val="Flash Actor PM"/>
+                    <int id="2" val="Flash"/>
+                </say>
+                <say comment="false" x="26" y="67">
+                    <ACTOR eid="6" id="0"/>
+                    <int id="1" val="Goose Head Maker PM"/>
+                    <int id="2" val="Flash"/>
+                </say>
+                <say comment="false" x="26" y="94">
+                    <ACTOR eid="7" id="0"/>
+                    <int id="1" val="Goose Head Maker PM"/>
+                    <int id="2" val="Flash"/>
+                </say>
+                <say comment="false" x="26" y="121">
+                    <ACTOR eid="8" id="0"/>
+                    <int id="1" val="Goose Head Maker PM"/>
+                    <int id="2" val="Flash"/>
+                </say>
+                <if comment="false" x="26" y="148">
                     <group eventID="2" id="-1">
-                        <say comment="false" x="37" y="78">
+                        <say comment="false" x="37" y="186">
                             <ACTOR eid="7" id="0"/>
                             <int id="1" val="Goose Head Maker PM"/>
                             <int id="2" val="Activate"/>
@@ -37,9 +57,9 @@
                         <int id="1" val="2"/>
                     </eq>
                 </if>
-                <if comment="false" x="26" y="117">
+                <if comment="false" x="26" y="225">
                     <group eventID="2" id="-1">
-                        <say comment="false" x="37" y="155">
+                        <say comment="false" x="37" y="263">
                             <ACTOR eid="8" id="0"/>
                             <int id="1" val="Goose Head Maker PM"/>
                             <int id="2" val="Activate"/>
@@ -54,11 +74,11 @@
                         <int id="1" val="1"/>
                     </eq>
                 </if>
-                <if comment="false" x="26" y="194">
+                <if comment="false" x="26" y="302">
                     <group eventID="3" id="-1">
-                        <if comment="false" x="37" y="237">
+                        <if comment="false" x="37" y="345">
                             <group eventID="3" id="-1">
-                                <custom-632 comment="false" x="48" y="262">
+                                <custom-632 comment="false" x="48" y="370">
                                     <SOUND eid="627" id="0"/>
                                 </custom-632>
                             </group>

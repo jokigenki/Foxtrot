@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <print comment="false" x="26" y="40">
+                    <int id="0" val="FLASH!"/>
+                </print>
+                <set-val-421-7 comment="false" x="26" y="60">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-421-7>
+                <set-val-421-6 comment="false" x="26" y="85">
+                    <int id="0" val="0"/>
+                </set-val-421-6>
+                <custom-867 comment="false" x="26" y="105">
+                    <ACTOR eid="this" id="0"/>
+                </custom-867>
+            </group>
+            <int id="0" val="Flash"/>
+        </event-custom>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <receiver-2-867 comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <apply-filter comment="false" x="26" y="45">
+                    <get-byobval-421-867-0 comment="false" id="0" x="0" y="0"/>
+                    <filter-bright comment="false" id="1" x="0" y="0">
+                        <get-val-421-8 comment="false" id="0" x="0" y="0"/>
+                    </filter-bright>
+                </apply-filter>
+                <dolater comment="false" x="26" y="82">
+                    <group eventID="2" id="-1">
+                        <custom-868 comment="false" x="37" y="114">
+                            <get-byobval-421-867-0 comment="false" id="0" x="0" y="0"/>
+                        </custom-868>
+                    </group>
+                    <get-val-421-4 comment="false" id="0" x="0" y="0"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <get-byobval-421-867-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-2-867>
+    </group>
+    <group eventID="2" id="-1">
+        <get-byobval-421-867-0 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="3" id="0">
+        <receiver-3-868 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <clear-filter comment="false" x="26" y="45">
+                    <get-byobval-421-868-0 comment="false" id="0" x="0" y="0"/>
+                </clear-filter>
+                <incdec comment="false" x="26" y="77">
+                    <int id="0" val="6"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="1"/>
+                </incdec>
+                <if comment="false" x="26" y="104">
+                    <group eventID="3" id="-1">
+                        <dolater comment="false" x="37" y="139">
+                            <group eventID="3" id="-1">
+                                <custom-867 comment="false" x="48" y="171">
+                                    <get-byobval-421-868-0 comment="false" id="0" x="0" y="0"/>
+                                </custom-867>
+                            </group>
+                            <get-val-421-3 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <get-val-421-6 comment="false" id="0" x="0" y="0"/>
+                            <get-val-421-1 comment="false" id="1" x="0" y="0"/>
+                        </less>
+                        <get-val-421-7 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <else comment="false" x="26" y="227">
+                    <group eventID="3" id="-1">
+                        <set-val-421-7 comment="false" x="37" y="247">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-421-7>
+                    </group>
+                </else>
+            </group>
+            <get-byobval-421-868-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-3-868>
+    </group>
+    <group eventID="3" id="-1">
+        <get-byobval-421-868-0 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-421-6 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-421-6>
+                <custom-867 comment="false" x="26" y="60">
+                    <ACTOR eid="this" id="0"/>
+                </custom-867>
+            </group>
+            <int id="0" val="Activated"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-421-7 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-421-7>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>

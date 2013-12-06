@@ -508,9 +508,7 @@
                     <group eventID="12" id="-1">
                         <play-sound-channel comment="false" x="37" y="138">
                             <int id="0" val="1"/>
-                            <custom-477 comment="false" id="1" x="0" y="0">
-                                <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
-                            </custom-477>
+                            <SOUND eid="var" id="1" vid="5"/>
                             <get-byobval-329-861-1 comment="false" id="2" x="0" y="0"/>
                         </play-sound-channel>
                     </group>
@@ -519,9 +517,9 @@
                         <int id="1" val="0"/>
                     </value>
                 </if>
-                <else comment="false" x="26" y="187">
+                <else comment="false" x="26" y="182">
                     <group eventID="12" id="-1">
-                        <print comment="false" x="37" y="207">
+                        <print comment="false" x="37" y="202">
                             <str-combine comment="false" id="0" x="0" y="0">
                                 <int id="0" val="Sound "/>
                                 <str-combine comment="false" id="1" x="0" y="0">

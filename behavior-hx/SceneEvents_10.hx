@@ -54,7 +54,12 @@ class SceneEvents_10 extends SceneScript
 	
 	override public function init()
 	{
-		
+		            if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg1_05")), Bool))
+{
+            recycleActor(getActor(14));
+}
+
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

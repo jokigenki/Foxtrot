@@ -1254,7 +1254,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_10" classname="scripts.SceneEvents_10" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="104" language="" name="SceneEvents_10" oid="-1" package="scripts." sceneid="10" scenespecific="true" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_11" classname="scripts.SceneEvents_11" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="105" language="" name="SceneEvents_11" oid="-1" package="scripts." sceneid="11" scenespecific="true" shared="false" type="scene">
         <blocks/>
@@ -3214,6 +3216,7 @@
             <event displayName="Killed" enabled="true" id="11" name="event-actor-create-kill" order="2" repeats="true"/>
             <event displayName="Updated" enabled="true" id="12" name="step" order="12" repeats="true"/>
             <event displayName="Trigger Event" enabled="true" id="13" name="event-custom-block" order="13" repeats="true"/>
+            <event displayName="Flash" enabled="true" id="14" name="event-custom" order="14" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_660" classname="scripts.ActorEvents_660" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="348" language="" name="ActorEvents_660" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -3837,6 +3840,27 @@
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
             <event displayName="Actor - Any" enabled="true" id="2" name="collide" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_421_421_FlashActorPM" classname="scripts.Design_421_421_FlashActorPM" desc="" description="" design="true" drawOrder="0" id="421" language="" name="Flash Actor PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <number default="3" defaultValue="3" desc="" dropdown="" fullname="Number Of Flashes" hidden="false" id="1" name="_NumberOfFlashes" order="1"/>
+        <number default="0.1" defaultValue="0.1" desc="" dropdown="" fullname="Length Of Gap" hidden="false" id="3" name="_LengthOfGap" order="2"/>
+        <number default="0.1" defaultValue="0.1" desc="" dropdown="" fullname="Length Of Flash" hidden="false" id="4" name="_LengthOfFlash" order="3"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Flash Count" hidden="true" id="6" name="_FlashCount" order="4"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Is Active?" hidden="true" id="7" name="_IsActive" order="5"/>
+        <number default="50" defaultValue="50" desc="" dropdown="" fullname="Flash Strength (%)" hidden="false" id="8" name="_FlashStrength" order="6"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks>
+            <receiver blockID="866" id="1"/>
+            <receiver blockID="867" id="2"/>
+            <receiver blockID="868" id="3"/>
+        </blocks>
+        <events>
+            <event displayName="Flash" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+            <event displayName="Add flash" enabled="true" id="2" name="event-custom-block" order="2" repeats="true"/>
+            <event displayName="Remove flash" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
+            <event displayName="Activated" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Deactivated" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_864" classname="scripts.ActorEvents_864" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="420" language="" name="ActorEvents_864" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
