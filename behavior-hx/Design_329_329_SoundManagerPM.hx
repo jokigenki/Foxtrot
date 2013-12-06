@@ -202,7 +202,7 @@ propertyChanged("_Count", _Count);
 
         else
 {
-            for(index0 in 0...Std.int(_Count))
+            for(index0 in 0...Std.int((_Count + 1)))
 {
                 if((index0 == _Count))
 {
@@ -287,6 +287,7 @@ if (item != null)
 /* Params are:__SoundName __Channel */
 public function _customBlock_LoopSoundNamed(__SoundName:String, __Channel:Float):Void
 {
+        trace("" + (("" + "LOOPING ") + ("" + (("" + __SoundName) + ("" + (("" + " ON ") + ("" + __Channel)))))));
         _Sound = cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound);
         if((hasValue(_Sound) != false))
 {

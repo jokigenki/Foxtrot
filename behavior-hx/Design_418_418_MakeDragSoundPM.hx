@@ -51,9 +51,9 @@ public var _IsDragging:Bool;
 
 public var _IsPlayingSound:Bool;
 
-public var _SFX:Sound;
+public var _MinimumDragSpeed:Float;
 
-public var _ChannelNumber:Float;
+public var _SFXName:String;
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -65,9 +65,10 @@ nameMap.set("Is Dragging?", "_IsDragging");
 _IsDragging = false;
 nameMap.set("Is Playing Sound?", "_IsPlayingSound");
 _IsPlayingSound = false;
-nameMap.set("SFX", "_SFX");
-nameMap.set("Channel Number", "_ChannelNumber");
-_ChannelNumber = 2;
+nameMap.set("Minimum Drag Speed", "_MinimumDragSpeed");
+_MinimumDragSpeed = 1;
+nameMap.set("SFX Name", "_SFXName");
+_SFXName = "";
 nameMap.set("Actor", "actor");
 
 	}
@@ -78,7 +79,7 @@ nameMap.set("Actor", "actor");
 if(wrapper.enabled){
         _IsDragging = false;
 propertyChanged("_IsDragging", _IsDragging);
-        if(!(actor.getXVelocity() == 0))
+        if(((actor.getXVelocity() >= _MinimumDragSpeed) || (actor.getXVelocity() <= -(_MinimumDragSpeed))))
 {
             _IsDragging = true;
 propertyChanged("_IsDragging", _IsDragging);
@@ -90,7 +91,7 @@ propertyChanged("_IsDragging", _IsDragging);
 {
                 _IsPlayingSound = true;
 propertyChanged("_IsPlayingSound", _IsPlayingSound);
-                sayToScene("Sound Manager PM", "_customBlock_LoopSoundOnChannel", [_SFX,_ChannelNumber]);
+                sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", [_SFXName,getCurrentSceneName()]);
 }
 
 }
@@ -99,7 +100,7 @@ propertyChanged("_IsPlayingSound", _IsPlayingSound);
 {
             _IsPlayingSound = false;
 propertyChanged("_IsPlayingSound", _IsPlayingSound);
-            stopSoundOnChannel(Std.int(_ChannelNumber));
+            sayToScene("Sound Manager PM", "_customBlock_StopSceneSound", [_SFXName,getCurrentSceneName()]);
 }
 
         _IsOnGround = false;

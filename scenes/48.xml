@@ -13,10 +13,10 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="8" id="0" name="Region 0" pts="4,-1.0,4.0,1.0,4.0,1.0,-4.0,-1.0,-4.0" r="64" type="box" w="2" x="220" y="309"/>
-        <region b="64" g="64" h="8" id="2" name="Region 2" pts="4,-1.0,4.0,1.0,4.0,1.0,-4.0,-1.0,-4.0" r="64" type="box" w="2" x="251" y="104"/>
-        <region b="64" g="64" h="114" id="3" name="Region 3" pts="4,-8.0,-57.0,8.0,-57.0,8.0,57.0,-8.0,57.0" r="64" type="box" w="16" x="528" y="175"/>
-        <region b="64" g="64" h="130" id="4" name="Region 4" pts="4,-16.0,-65.0,16.0,-65.0,16.0,65.0,-16.0,65.0" r="64" type="box" w="32" x="240" y="207"/>
+        <region b="64" g="64" h="8" id="0" name="Region 0" pts="4,-1.0,-4.0,1.0,-4.0,1.0,4.0,-1.0,4.0" r="64" type="box" w="2" x="220" y="309"/>
+        <region b="64" g="64" h="8" id="2" name="Region 2" pts="4,-1.0,-4.0,1.0,-4.0,1.0,4.0,-1.0,4.0" r="64" type="box" w="2" x="251" y="104"/>
+        <region b="64" g="64" h="114" id="3" name="Region 3" pts="4,-8.0,57.0,8.0,57.0,8.0,-57.0,-8.0,-57.0" r="64" type="box" w="16" x="528" y="175"/>
+        <region b="64" g="64" h="130" id="4" name="Region 4" pts="4,-16.0,65.0,16.0,65.0,16.0,-65.0,-16.0,-65.0" r="64" type="box" w="32" x="240" y="207"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -37,8 +37,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -122,7 +122,6 @@
         </actor>
         <actor a="180.0" aid="9" c="true" group="8" id="421" name="Crusher 9" sx="1.0" sy="1.0" x="192" y="320" z="4">
             <snippets>
-                <s enabled="true" id="243"/>
                 <s enabled="true" id="166">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="192"/>
@@ -138,11 +137,12 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                 </s>
+                <s enabled="true" id="243"/>
                 <s enabled="true" id="165">
                     <prop id="4" list="1" val="">
                         <text order="0" value="Reposition Whilst Activated PM"/>
@@ -166,8 +166,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="-1"/>
@@ -216,7 +216,7 @@
                     <prop id="3" list="0" val="80"/>
                     <prop id="4" list="0" val="0"/>
                     <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="0.1"/>
+                    <prop id="6" list="0" val="0.15"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="8" list="0" val="None"/>
                     <prop id="9" list="0" val="0"/>
@@ -225,8 +225,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                 </s>
@@ -250,6 +250,7 @@
                     <prop id="13" list="0" val="0"/>
                     <prop id="15" list="1" val="">
                         <text order="0" value="Cruncher BL 12"/>
+                        <text order="1" value="Cruncher BL 61"/>
                     </prop>
                     <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="Off to On"/>
@@ -260,45 +261,6 @@
                     <prop id="20" list="0" val="0"/>
                 </s>
                 <s enabled="true" id="122"/>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="14" c="true" group="3" id="436" name="Laser Beamer Left 14" sx="1.0" sy="1.0" x="224" y="208" z="4">
-            <snippets>
-                <s enabled="true" id="254"/>
-                <s enabled="true" id="253">
-                    <prop id="4" list="0" val="true"/>
-                    <prop id="5" list="0" val="0"/>
-                    <prop id="6" list="0" val="8"/>
-                    <prop id="7" list="0" val=""/>
-                    <prop id="8" list="0" val="0"/>
-                    <prop id="9" list="0" val="5"/>
-                    <prop id="10" list="0" val="0"/>
-                    <prop id="11" list="0" val="0"/>
-                    <prop id="12" list="0" val="false"/>
-                    <prop id="13" list="0" val="2"/>
-                    <prop id="14" list="0" val="0"/>
-                    <prop id="15" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                    <prop id="16" list="0" val="180"/>
-                    <prop id="19" list="0" val="255,0,255,255"/>
-                    <prop id="18" list="1" val="">
-                        <text order="0" value="256|0|0"/>
-                        <text order="1" value="224|0|0"/>
-                        <text order="2" value="192|0|0"/>
-                        <text order="3" value="160|0|0"/>
-                    </prop>
-                    <prop id="21" list="0" val="0"/>
-                    <prop id="20" list="0" val="true"/>
-                    <prop id="23" list="0" val="0"/>
-                    <prop id="22" list="0" val="0"/>
-                    <prop id="24" list="0" val="Laser Loop SFX"/>
-                </s>
-                <s enabled="true" id="165">
-                    <prop id="4" list="1" val="">
-                        <text order="0" value="Laser Beamer PM"/>
-                    </prop>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
             </snippets>
         </actor>
         <actor a="0.0" aid="15" c="false" group="12" id="672" name="Explodable Block 15" sx="1.0" sy="1.0" x="384" y="112" z="1"/>
@@ -345,6 +307,7 @@
                     <prop id="20" list="0" val="true"/>
                     <prop id="23" list="0" val="0"/>
                     <prop id="22" list="0" val="0"/>
+                    <prop id="25" list="0" val="false"/>
                     <prop id="24" list="0" val="Laser Loop SFX"/>
                 </s>
                 <s enabled="true" id="165">
@@ -405,8 +368,8 @@
                         <text order="0" value="Small Lift 46"/>
                     </prop>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="800"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="173"/>
             </snippets>
@@ -418,7 +381,7 @@
         <actor a="0.0" aid="55" c="false" group="10" id="259" name="Spikes Up 55" sx="1.0" sy="1.0" x="512" y="320" z="3"/>
         <actor a="0.0" aid="54" c="false" group="10" id="257" name="Spikes 54" sx="1.0" sy="1.0" x="512" y="304" z="3"/>
         <actor a="0.0" aid="53" c="false" group="12" id="672" name="Explodable Block 53" sx="1.0" sy="1.0" x="464" y="128" z="1"/>
-        <actor a="0.0" aid="52" c="true" group="3" id="178" name="Egg 52" sx="1.0" sy="1.0" x="288" y="80" z="3">
+        <actor a="0.0" aid="52" c="true" group="3" id="178" name="Egg 52" sx="1.0" sy="1.0" x="315" y="80" z="3">
             <snippets>
                 <s enabled="true" id="64">
                     <prop id="1" list="0" val="EggCollected"/>
@@ -445,6 +408,52 @@
                 <s enabled="true" id="121"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="59" c="false" group="2" id="423" name="Expander Pipes 59" sx="1.0" sy="1.0" x="192" y="256" z="1"/>
+        <actor a="0.0" aid="58" c="false" group="2" id="423" name="Expander Pipes 58" sx="1.0" sy="1.0" x="192" y="288" z="1"/>
+        <actor a="0.0" aid="57" c="false" group="2" id="423" name="Expander Pipes 57" sx="1.0" sy="1.0" x="192" y="320" z="1"/>
+        <actor a="90.0" aid="56" c="false" group="2" id="423" name="Expander Pipes 56" sx="1.0" sy="1.0" x="160" y="80" z="1"/>
+        <actor a="0.0" aid="63" c="false" group="12" id="672" name="Explodable Block 63" sx="1.0" sy="1.0" x="288" y="96" z="1"/>
+        <actor a="0.0" aid="62" c="false" group="12" id="672" name="Explodable Block 62" sx="1.0" sy="1.0" x="288" y="112" z="1"/>
+        <actor a="0.0" aid="61" c="true" group="10" id="562" name="Cruncher BL 61" sx="1.0" sy="1.0" x="160" y="48" z="4">
+            <snippets>
+                <s enabled="true" id="233">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="true"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="300"/>
+                <s enabled="true" id="166">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2" list="0" val="192"/>
+                    <prop id="3" list="0" val="48"/>
+                    <prop id="4" list="0" val="0"/>
+                    <prop id="5" list="0" val="0"/>
+                    <prop id="6" list="0" val="0.1"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="None"/>
+                    <prop id="9" list="0" val="0"/>
+                    <prop id="10" list="0" val="0"/>
+                    <prop id="11" list="0" val="-1"/>
+                    <prop id="12" list="0" val="0"/>
+                    <prop id="13" list="0" val="0"/>
+                    <prop id="14" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val=""/>
+                    <prop id="17" list="0" val="1"/>
+                    <prop id="16" list="0" val="1"/>
+                </s>
+                <s enabled="true" id="165">
+                    <prop id="4" list="1" val="">
+                        <text order="0" value="Reposition Whilst Activated PM"/>
+                    </prop>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="90.0" aid="60" c="false" group="2" id="423" name="Expander Pipes 60" sx="1.0" sy="1.0" x="160" y="48" z="1"/>
+        <actor a="0.0" aid="64" c="false" group="12" id="672" name="Explodable Block 64" sx="1.0" sy="1.0" x="288" y="64" z="1"/>
+        <actor a="0.0" aid="65" c="false" group="12" id="672" name="Explodable Block 65" sx="1.0" sy="1.0" x="288" y="80" z="1"/>
+        <actor a="0.0" aid="66" c="false" group="12" id="672" name="Explodable Block 66" sx="1.0" sy="1.0" x="288" y="48" z="1"/>
     </actors>
     <snippets>
         <s enabled="true" id="19">
@@ -469,13 +478,13 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
+        </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -491,10 +500,6 @@
             <prop id="12" list="0" val="-1"/>
             <prop id="13" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="-1"/>
             <prop id="2" list="0" val="-1"/>
@@ -502,15 +507,19 @@
             <prop id="4" list="1" val=""/>
             <prop id="5" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="-1"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="6,128.0,80.0,128.0,0.0,0.0,0.0,0.0,48.0,48.0,48.0,48.0,80.0" x="288.0" y="208.0"/>
-        <p pts="36,560.0,336.0,560.0,352.0,208.0,352.0,208.0,368.0,96.0,368.0,96.0,336.0,32.0,336.0,32.0,208.0,0.0,208.0,0.0,112.0,64.0,112.0,64.0,64.0,96.0,64.0,96.0,0.0,112.0,0.0,112.0,80.0,80.0,80.0,80.0,112.0,112.0,112.0,112.0,128.0,16.0,128.0,16.0,192.0,112.0,192.0,112.0,272.0,80.0,272.0,80.0,240.0,48.0,240.0,48.0,320.0,112.0,320.0,112.0,352.0,144.0,352.0,144.0,224.0,160.0,224.0,160.0,352.0,192.0,352.0,192.0,336.0" x="80.0" y="0.0"/>
-        <p pts="14,320.0,304.0,320.0,160.0,288.0,160.0,288.0,80.0,0.0,80.0,0.0,0.0,16.0,0.0,16.0,64.0,304.0,64.0,304.0,144.0,336.0,144.0,336.0,288.0,416.0,288.0,416.0,304.0" x="224.0" y="0.0"/>
         <p pts="4,224.0,0.0,224.0,16.0,0.0,16.0,0.0,0.0" x="240.0" y="128.0"/>
         <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="224.0" y="192.0"/>
-        <p pts="6,160.0,112.0,48.0,112.0,48.0,80.0,0.0,80.0,0.0,0.0,160.0,0.0" x="272.0" y="192.0"/>
+        <p pts="6,128.0,80.0,128.0,0.0,0.0,0.0,0.0,48.0,48.0,48.0,48.0,80.0" x="288.0" y="208.0"/>
+        <p pts="36,560.0,336.0,560.0,352.0,208.0,352.0,208.0,368.0,96.0,368.0,96.0,336.0,32.0,336.0,32.0,208.0,0.0,208.0,0.0,112.0,64.0,112.0,64.0,32.0,96.0,32.0,96.0,0.0,112.0,0.0,112.0,48.0,80.0,48.0,80.0,112.0,112.0,112.0,112.0,128.0,16.0,128.0,16.0,192.0,112.0,192.0,112.0,272.0,80.0,272.0,80.0,240.0,48.0,240.0,48.0,320.0,112.0,320.0,112.0,352.0,144.0,352.0,144.0,224.0,160.0,224.0,160.0,352.0,192.0,352.0,192.0,336.0" x="80.0" y="0.0"/>
         <p pts="4,48.0,0.0,48.0,16.0,0.0,16.0,0.0,0.0" x="464.0" y="192.0"/>
         <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="512.0" y="288.0"/>
+        <p pts="6,160.0,112.0,48.0,112.0,48.0,80.0,0.0,80.0,0.0,0.0,160.0,0.0" x="272.0" y="192.0"/>
+        <p pts="18,320.0,304.0,320.0,160.0,288.0,160.0,288.0,80.0,144.0,80.0,144.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0,160.0,32.0,160.0,64.0,304.0,64.0,304.0,144.0,336.0,144.0,336.0,288.0,416.0,288.0,416.0,304.0" x="224.0" y="0.0"/>
     </terrain>
 </scene>

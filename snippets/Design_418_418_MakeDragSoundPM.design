@@ -8,29 +8,40 @@
                 </set-val-418-2>
                 <if comment="false" x="26" y="65">
                     <group eventID="1" id="-1">
-                        <set-val-418-2 comment="false" x="37" y="103">
+                        <set-val-418-2 comment="false" x="37" y="108">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-418-2>
                     </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <get-dxy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                        </get-dxy>
-                        <int id="1" val="0"/>
-                    </noteq>
+                    <or comment="false" id="0" x="0" y="0">
+                        <moreeq comment="false" id="0" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                            <get-val-418-6 comment="false" id="1" x="0" y="0"/>
+                        </moreeq>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                            <neg comment="false" id="1" x="0" y="0">
+                                <get-val-418-6 comment="false" id="0" x="0" y="0"/>
+                            </neg>
+                        </lesseq>
+                    </or>
                 </if>
-                <if comment="false" x="26" y="140">
+                <if comment="false" x="26" y="145">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="170">
+                        <if comment="false" x="37" y="175">
                             <group eventID="1" id="-1">
-                                <set-val-418-3 comment="false" x="48" y="200">
+                                <set-val-418-3 comment="false" x="48" y="205">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-418-3>
-                                <custom-844 comment="false" x="48" y="225">
-                                    <SOUND eid="var" id="0" vid="4"/>
-                                    <get-val-418-5 comment="false" id="1" x="0" y="0"/>
-                                </custom-844>
+                                <custom-857 comment="false" x="48" y="230">
+                                    <get-val-418-7 comment="false" id="0" x="0" y="0"/>
+                                    <scenename comment="false" id="1" x="0" y="0"/>
+                                </custom-857>
                             </group>
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-418-3 comment="false" id="0" x="0" y="0"/>
@@ -42,18 +53,18 @@
                         <get-val-418-2 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
-                <else comment="false" x="26" y="281">
+                <else comment="false" x="26" y="279">
                     <group eventID="1" id="-1">
-                        <set-val-418-3 comment="false" x="37" y="301">
+                        <set-val-418-3 comment="false" x="37" y="299">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-418-3>
-                        <control-sound-channel comment="false" x="37" y="326">
-                            <int id="0" val="0"/>
-                            <get-val-418-5 comment="false" id="1" x="0" y="0"/>
-                        </control-sound-channel>
+                        <custom-856 comment="false" x="37" y="324">
+                            <get-val-418-7 comment="false" id="0" x="0" y="0"/>
+                            <scenename comment="false" id="1" x="0" y="0"/>
+                        </custom-856>
                     </group>
                 </else>
-                <set-val-418-1 comment="false" x="26" y="370">
+                <set-val-418-1 comment="false" x="26" y="361">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-418-1>
             </group>

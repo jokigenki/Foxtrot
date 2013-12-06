@@ -374,16 +374,16 @@
                     <group eventID="15" id="-1">
                         <repeat comment="false" x="37" y="274">
                             <group eventID="15" id="-1">
-                                <if comment="false" x="48" y="299">
+                                <if comment="false" x="48" y="304">
                                     <group eventID="15" id="-1">
-                                        <custom-861 comment="false" x="59" y="329">
+                                        <custom-861 comment="false" x="59" y="334">
                                             <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
                                             <plus comment="false" id="1" x="0" y="0">
                                                 <get-val-329-3 comment="false" id="0" x="0" y="0"/>
                                                 <int id="1" val="1"/>
                                             </plus>
                                         </custom-861>
-                                        <add-list comment="false" x="59" y="359">
+                                        <add-list comment="false" x="59" y="364">
                                             <get-game-val-26 comment="false" id="0" x="0" y="0"/>
                                             <str-combine comment="false" id="1" x="0" y="0">
                                                 <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
@@ -399,23 +399,23 @@
                                                 </str-combine>
                                             </str-combine>
                                         </add-list>
-                                        <break comment="false" x="59" y="404"/>
+                                        <break comment="false" x="59" y="409"/>
                                     </group>
                                     <eq comment="false" id="0" x="0" y="0">
                                         <loopindex comment="false" id="0" x="0" y="0"/>
                                         <get-val-329-3 comment="false" id="1" x="0" y="0"/>
                                     </eq>
                                 </if>
-                                <else-if comment="false" x="48" y="436">
+                                <else-if comment="false" x="48" y="441">
                                     <group eventID="15" id="-1">
-                                        <custom-861 comment="false" x="59" y="471">
+                                        <custom-861 comment="false" x="59" y="476">
                                             <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
                                             <plus comment="false" id="1" x="0" y="0">
                                                 <get-val-329-3 comment="false" id="0" x="0" y="0"/>
                                                 <int id="1" val="1"/>
                                             </plus>
                                         </custom-861>
-                                        <insert-list comment="false" x="59" y="501">
+                                        <insert-list comment="false" x="59" y="506">
                                             <get-game-val-26 comment="false" id="0" x="0" y="0"/>
                                             <loopindex comment="false" id="1" x="0" y="0"/>
                                             <str-combine comment="false" id="2" x="0" y="0">
@@ -432,7 +432,7 @@
                                                 </str-combine>
                                             </str-combine>
                                         </insert-list>
-                                        <break comment="false" x="59" y="546"/>
+                                        <break comment="false" x="59" y="551"/>
                                     </group>
                                     <eq comment="false" id="0" x="0" y="0">
                                         <get-item comment="false" id="0" x="0" y="0">
@@ -445,7 +445,10 @@
                                     </eq>
                                 </else-if>
                             </group>
-                            <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-329-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
                         </repeat>
                     </group>
                 </else>
@@ -486,12 +489,24 @@
     <group eventID="19" id="0">
         <receiver-24-861 comment="false" x="15" y="15">
             <group eventID="19" id="-1">
-                <custom-code comment="false" x="26" y="45">
+                <print comment="false" x="26" y="45">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="LOOPING "/>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
+                            <str-combine comment="false" id="1" x="0" y="0">
+                                <int id="0" val=" ON "/>
+                                <get-byobval-329-861-1 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                        </str-combine>
+                    </str-combine>
+                </print>
+                <custom-code comment="false" x="26" y="85">
                     <int id="0" val="_Sound = cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound);"/>
                 </custom-code>
-                <if comment="false" x="26" y="65">
+                <if comment="false" x="26" y="105">
                     <group eventID="12" id="-1">
-                        <play-sound-channel comment="false" x="37" y="98">
+                        <play-sound-channel comment="false" x="37" y="138">
                             <int id="0" val="1"/>
                             <custom-477 comment="false" id="1" x="0" y="0">
                                 <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
@@ -504,9 +519,9 @@
                         <int id="1" val="0"/>
                     </value>
                 </if>
-                <else comment="false" x="26" y="147">
+                <else comment="false" x="26" y="187">
                     <group eventID="12" id="-1">
-                        <print comment="false" x="37" y="167">
+                        <print comment="false" x="37" y="207">
                             <str-combine comment="false" id="0" x="0" y="0">
                                 <int id="0" val="Sound "/>
                                 <str-combine comment="false" id="1" x="0" y="0">
@@ -522,10 +537,7 @@
             <get-byobval-329-861-1 comment="false" id="1" x="0" y="0"/>
         </receiver-24-861>
     </group>
-    <group eventID="19" id="-1">
-        <get-byobval-329-861-0 comment="false" x="0" y="0"/>
-        <get-byobval-329-861-1 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="19" id="-1"/>
     <group eventID="18" id="0">
         <receiver-23-858 comment="false" x="15" y="15">
             <group eventID="18" id="-1">
