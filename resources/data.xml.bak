@@ -5013,6 +5013,10 @@
         <blank name="Self" order="0" type="ACTOR"/>
         <blank name="Limit" order="1" type="BOOLEAN"/>
     </custom-block>
+    <custom-block blocktag="custom-869" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;LoadSoundXML&quot;, ~,~);" desc="" global="false" gui="Load sound xml named %0 then trigger event %1" id="869" message="LoadSoundXML" name="LoadSoundXML" oid="-1" return="VOID" shared="false" snippetID="329">
+        <blank name="XML Name" order="0" type="TEXT"/>
+        <blank name="Event Name" order="1" type="TEXT"/>
+    </custom-block>
     <custom-block blocktag="custom-334" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.LockAllDoors();" desc="Locks all doors." global="true" gui="Lock doors" id="334" message="LockAllDoors" name="LockAllDoors" oid="-1" return="VOID" shared="false" snippetID="206"/>
     <custom-block blocktag="custom-328" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.LockAllSpeedRunDoors();" desc="" global="true" gui="Lock Speed Run Doors" id="328" message="LockAllSpeedRunDoors" name="LockAllSpeedRunDoors" oid="-1" return="VOID" shared="false" snippetID="206"/>
     <custom-block blocktag="custom-712" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.LockDoor(~);" desc="" global="true" gui="Lock %0" id="712" message="LockDoor" name="LockDoor" oid="-1" return="VOID" shared="false" snippetID="206">
@@ -5418,7 +5422,7 @@
         <blank name="X" order="1" type="NUMBER"/>
         <blank name="Y" order="2" type="NUMBER"/>
     </custom-block>
-    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="1" continuous="true" desc="" eventsnippetid="309" fixedrot="true" fric="0.2" gid="10" id="586" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Moving Flames" oid="-1" pausable="true" rest="0.0" shared="false" sprite="587" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="1" bodytype="0" continuous="true" desc="" eventsnippetid="309" fixedrot="true" fric="0.2" gid="10" id="586" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Moving Flames" oid="-1" pausable="true" rest="0.0" shared="false" sprite="587" static="true">
         <snippets>
             <s enabled="true" id="148">
                 <prop id="1" list="0" val="false"/>
