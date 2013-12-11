@@ -62,8 +62,30 @@
                     <int id="0" val="0.2"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
+                <create-region comment="false" x="26" y="331">
+                    <int id="0" val="422"/>
+                    <int id="1" val="222"/>
+                    <int id="2" val="45"/>
+                    <int id="3" val="43"/>
+                </create-region>
+                <set-val-75-1 comment="false" x="26" y="351">
+                    <REGION eid="lastcreated" id="0"/>
+                </set-val-75-1>
             </group>
         </init>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <print comment="false" x="26" y="47">
+                    <int id="0" val="HELLO"/>
+                </print>
+            </group>
+            <int id="0" val="0"/>
+            <get-val-75-1 comment="false" id="1" x="0" y="0"/>
+            <ACTOR eid="3" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

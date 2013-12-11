@@ -82,7 +82,7 @@ nameMap.set("Actor", "actor");
         _DoorReady = false;
 propertyChanged("_DoorReady", _DoorReady);
         /* "GA: Unlocked Doors (List)" */
-        createBoxRegion((actor.getXCenter() - 2), cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float), 4, (cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) - cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float)));
+        createBoxRegion((actor.getXCenter() - 0), (actor.getYCenter() - 0), 32, 32);
         _DoorRegion = getLastCreatedRegion();
 propertyChanged("_DoorRegion", _DoorRegion);
         _Canusedoor = false;
@@ -129,6 +129,15 @@ if(wrapper.enabled && sameAsAny(getActorGroup(0),a.getType(),a.getGroup())){
 propertyChanged("_Canusedoor", _Canusedoor);
         _DoorReady = true;
 propertyChanged("_DoorReady", _DoorReady);
+}
+});
+    addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        g.translateToScreen();
+        g.fillColor = Utils.getColorRGB(255,200,0);
+        g.strokeColor = Utils.getColorRGB(255,200,0);
+        g.strokeSize = Std.int(0);
+        g.fillRect((actor.getXCenter() - 16), (actor.getYCenter() - 16), 32, 32);
 }
 });
 

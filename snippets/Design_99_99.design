@@ -24,20 +24,17 @@
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="2"/>
                         </get-xy>
-                        <int id="1" val="2"/>
+                        <int id="1" val="0"/>
                     </minus>
-                    <custom-62 comment="false" id="1" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                    </custom-62>
-                    <int id="2" val="4"/>
-                    <minus comment="false" id="3" x="0" y="0">
-                        <custom-66 comment="false" id="0" x="0" y="0">
+                    <minus comment="false" id="1" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
-                        </custom-66>
-                        <custom-62 comment="false" id="1" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                        </custom-62>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <int id="1" val="0"/>
                     </minus>
+                    <int id="2" val="32"/>
+                    <int id="3" val="32"/>
                 </create-region>
                 <set-val-99-5 comment="false" x="26" y="187">
                     <REGION eid="lastcreated" id="0"/>
@@ -68,7 +65,19 @@
             </group>
         </init>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="1" id="-1">
+        <minus comment="false" x="535" y="337">
+            <custom-66 comment="false" id="0" x="0" y="0">
+                <ACTOR eid="this" id="0"/>
+            </custom-66>
+            <custom-62 comment="false" id="1" x="0" y="0">
+                <ACTOR eid="this" id="0"/>
+            </custom-62>
+        </minus>
+        <custom-62 comment="false" x="499" y="255">
+            <ACTOR eid="this" id="0"/>
+        </custom-62>
+    </group>
     <group eventID="4" id="0">
         <event-group-region comment="false" x="15" y="15">
             <group eventID="4" id="-1">
@@ -139,4 +148,40 @@
         </event-group-region>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <to-screen-space comment="false" x="26" y="40"/>
+                <set-color comment="false" x="26" y="60">
+                    <color b="0" g="200" id="0" r="255"/>
+                </set-color>
+                <set-stroke-color comment="false" x="26" y="87">
+                    <color b="0" g="200" id="0" r="255"/>
+                </set-stroke-color>
+                <set-thickness comment="false" x="26" y="114">
+                    <int id="0" val="0"/>
+                </set-thickness>
+                <drawfill-rect comment="false" x="26" y="134">
+                    <int id="0" val="1"/>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                        <int id="1" val="16"/>
+                    </minus>
+                    <minus comment="false" id="2" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <int id="1" val="16"/>
+                    </minus>
+                    <int id="3" val="32"/>
+                    <int id="4" val="32"/>
+                </drawfill-rect>
+            </group>
+        </draw>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>
