@@ -449,7 +449,7 @@ nameMap.set("Sound", "_Sound");
 {
                             if(!(getGameAttribute("Current Music") == ("" + _Music)))
 {
-                                sayToScene("Sound Manager PM", "_customBlock_FadeOutCurrent", [1,_Music,0]);
+                                sayToScene("Sound Manager PM", "_customBlock_FadeOutCurrent", [0.2,_Music,0]);
 }
 
                             else

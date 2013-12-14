@@ -145,7 +145,7 @@
                                         <if comment="false" x="59" y="155">
                                             <group eventID="7" id="-1">
                                                 <custom-633 comment="false" x="70" y="190">
-                                                    <int id="0" val="1"/>
+                                                    <int id="0" val="0.2"/>
                                                     <get-val-329-1 comment="false" id="1" x="0" y="0"/>
                                                     <int id="2" val="0"/>
                                                 </custom-633>
@@ -447,11 +447,11 @@
     <group eventID="17" id="1">
         <if comment="false" x="431" y="65">
             <group eventID="17" id="-1">
-                <stop comment="false" x="442" y="95"/>
+                <stop comment="false" x="442" y="90"/>
             </group>
             <custom-858 comment="false" id="0" x="0" y="0">
-                <get-byobval-329-857-0 comment="false" id="0" x="0" y="0"/>
-                <get-byobval-329-857-1 comment="false" id="1" x="0" y="0"/>
+                <int id="0" val=""/>
+                <int id="1" val=""/>
             </custom-858>
         </if>
     </group>
@@ -698,9 +698,7 @@
             <get-byobval-329-885-0 comment="false" id="0" x="0" y="0"/>
         </receiver-32-885>
     </group>
-    <group eventID="25" id="-1">
-        <get-byobval-329-885-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="25" id="-1"/>
     <group eventID="24" id="0">
         <receiver-31-884 comment="false" x="15" y="15">
             <group eventID="24" id="-1">
@@ -727,7 +725,5 @@
             <get-byobval-329-884-0 comment="false" id="0" x="0" y="0"/>
         </receiver-31-884>
     </group>
-    <group eventID="24" id="-1">
-        <get-byobval-329-884-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="24" id="-1"/>
 </groups>
