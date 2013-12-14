@@ -96,7 +96,7 @@ propertyChanged("_LastAtlases", _LastAtlases);
 propertyChanged("_NewAtlases", _NewAtlases);
 }
 
-        else if((nextScene.indexOf("Factory") > -1))
+        else if(((nextScene.indexOf("Factory") > -1) || (nextScene.indexOf("Final Boss") > -1)))
 {
             _NewAtlases = "014";
 propertyChanged("_NewAtlases", _NewAtlases);

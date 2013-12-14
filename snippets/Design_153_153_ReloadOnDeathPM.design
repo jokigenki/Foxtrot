@@ -3,17 +3,20 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
+                <custom-884 comment="false" x="26" y="40">
+                    <scenename comment="false" id="0" x="0" y="0"/>
+                </custom-884>
+                <if comment="false" x="26" y="65">
                     <group eventID="1" id="-1">
-                        <custom-344 comment="false" x="37" y="65"/>
+                        <custom-344 comment="false" x="37" y="90"/>
                     </group>
                     <get-game-val-10 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <if comment="false" x="26" y="97">
+                <if comment="false" x="26" y="122">
                     <group eventID="-1" id="-1">
-                        <if comment="false" x="37" y="127">
+                        <if comment="false" x="37" y="152">
                             <group eventID="2" id="-1">
-                                <scene-say comment="false" x="48" y="152">
+                                <scene-say comment="false" x="48" y="177">
                                     <int id="0" val="Reload Scene On Death PM"/>
                                     <int id="1" val="Reload"/>
                                 </scene-say>
@@ -27,13 +30,13 @@
                         <is-transitioning comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <else comment="false" x="26" y="196">
+                <else comment="false" x="26" y="221">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="216">
+                        <dolater comment="false" x="37" y="241">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="243">
+                                <if comment="false" x="48" y="268">
                                     <group eventID="2" id="-1">
-                                        <scene-say comment="false" x="59" y="268">
+                                        <scene-say comment="false" x="59" y="293">
                                             <int id="0" val="Reload Scene On Death PM"/>
                                             <int id="1" val="Reload"/>
                                         </scene-say>

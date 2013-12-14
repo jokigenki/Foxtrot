@@ -76,14 +76,28 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="45">
                     <group eventID="2" id="-1">
-                        <set-val-418-1 comment="false" x="37" y="78">
+                        <set-val-418-1 comment="false" x="37" y="88">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-418-1>
                     </group>
-                    <collision-bottom comment="false" id="0" x="0" y="0">
-                        <int id="0" val="0"/>
-                        <int id="1" val="0"/>
-                    </collision-bottom>
+                    <and comment="false" id="0" x="0" y="0">
+                        <or comment="false" id="0" x="0" y="0">
+                            <collision-type2 comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                                <int id="2" val="1"/>
+                            </collision-type2>
+                            <collision-type2 comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                                <int id="2" val="2"/>
+                            </collision-type2>
+                        </or>
+                        <collision-bottom comment="false" id="1" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </collision-bottom>
+                    </and>
                 </if>
             </group>
         </collide>

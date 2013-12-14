@@ -3,15 +3,24 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-val-256-3 comment="false" x="26" y="40">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <get-val-256-3 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <custom-796 comment="false" x="26" y="97">
+                    <SOUND eid="var" id="0" vid="4"/>
+                </custom-796>
+                <set-val-256-3 comment="false" x="26" y="124">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-256-3>
-                <custom-261 comment="false" x="26" y="65">
+                <custom-261 comment="false" x="26" y="149">
                     <ACTOR eid="this" id="0"/>
                 </custom-261>
-                <if comment="false" x="26" y="92">
+                <if comment="false" x="26" y="176">
                     <group eventID="1" id="-1">
-                        <custom-88 comment="false" x="37" y="130">
+                        <custom-88 comment="false" x="37" y="214">
                             <ACTOR eid="this" id="0"/>
                             <get-val-256-1 comment="false" id="1" x="0" y="0"/>
                         </custom-88>
@@ -24,9 +33,9 @@
                         <true comment="false" id="1" x="0" y="0"/>
                     </eq>
                 </if>
-                <else comment="false" x="26" y="174">
+                <else comment="false" x="26" y="258">
                     <group eventID="1" id="-1">
-                        <custom-88 comment="false" x="37" y="194">
+                        <custom-88 comment="false" x="37" y="278">
                             <ACTOR eid="this" id="0"/>
                             <get-val-256-2 comment="false" id="1" x="0" y="0"/>
                         </custom-88>

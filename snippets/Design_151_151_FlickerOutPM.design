@@ -3,20 +3,22 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <print comment="false" x="26" y="40">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="FLICKER OUT: "/>
-                        <tostring comment="false" id="1" x="0" y="0">
-                            <actor comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                            </actor>
-                        </tostring>
-                    </str-combine>
-                </print>
-                <custom-261 comment="false" x="26" y="83">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <get-val-151-14 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <set-val-151-14 comment="false" x="26" y="97">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-151-14>
+                <custom-796 comment="false" x="26" y="122">
+                    <SOUND eid="var" id="0" vid="13"/>
+                </custom-796>
+                <custom-261 comment="false" x="26" y="149">
                     <ACTOR eid="this" id="0"/>
                 </custom-261>
-                <set-val-151-5 comment="false" x="26" y="110">
+                <set-val-151-5 comment="false" x="26" y="176">
                     <div comment="false" id="0" x="0" y="0">
                         <get-val-151-1 comment="false" id="0" x="0" y="0"/>
                         <times comment="false" id="1" x="0" y="0">
@@ -25,14 +27,14 @@
                         </times>
                     </div>
                 </set-val-151-5>
-                <set-val-151-2 comment="false" x="26" y="145">
+                <set-val-151-2 comment="false" x="26" y="211">
                     <get-val-151-5 comment="false" id="0" x="0" y="0"/>
                 </set-val-151-2>
-                <repeat comment="false" x="26" y="170">
+                <repeat comment="false" x="26" y="236">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="195">
+                        <dolater comment="false" x="37" y="261">
                             <group eventID="1" id="-1">
-                                <toggle-image comment="false" x="48" y="227">
+                                <toggle-image comment="false" x="48" y="293">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                 </toggle-image>
@@ -40,14 +42,14 @@
                             <get-val-151-2 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <incdec comment="false" x="37" y="266">
+                        <incdec comment="false" x="37" y="332">
                             <int id="0" val="2"/>
                             <int id="1" val="0"/>
                             <get-val-151-5 comment="false" id="2" x="0" y="0"/>
                         </incdec>
-                        <dolater comment="false" x="37" y="298">
+                        <dolater comment="false" x="37" y="364">
                             <group eventID="1" id="-1">
-                                <toggle-image comment="false" x="48" y="330">
+                                <toggle-image comment="false" x="48" y="396">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </toggle-image>
@@ -55,7 +57,7 @@
                             <get-val-151-2 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <incdec comment="false" x="37" y="369">
+                        <incdec comment="false" x="37" y="435">
                             <int id="0" val="2"/>
                             <int id="1" val="0"/>
                             <get-val-151-5 comment="false" id="2" x="0" y="0"/>
@@ -63,14 +65,14 @@
                     </group>
                     <get-val-151-3 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <dolater comment="false" x="26" y="413">
+                <dolater comment="false" x="26" y="479">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="445">
+                        <die comment="false" x="37" y="511">
                             <ACTOR eid="this" id="0"/>
                         </die>
-                        <if comment="false" x="37" y="472">
+                        <if comment="false" x="37" y="538">
                             <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="505">
+                                <say comment="false" x="48" y="571">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Reload On Death PM"/>
                                     <int id="2" val="Reload"/>

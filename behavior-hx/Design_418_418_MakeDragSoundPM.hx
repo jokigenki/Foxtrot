@@ -66,7 +66,7 @@ _IsDragging = false;
 nameMap.set("Is Playing Sound?", "_IsPlayingSound");
 _IsPlayingSound = false;
 nameMap.set("Minimum Drag Speed", "_MinimumDragSpeed");
-_MinimumDragSpeed = 1;
+_MinimumDragSpeed = 1.0;
 nameMap.set("SFX Name", "_SFXName");
 _SFXName = "";
 nameMap.set("Actor", "actor");
@@ -109,7 +109,7 @@ propertyChanged("_IsOnGround", _IsOnGround);
 });
     addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if(event.thisFromBottom)
+        if(((event.thisCollidedWithTerrain || event.thisCollidedWithTile) && event.thisFromBottom))
 {
             _IsOnGround = true;
 propertyChanged("_IsOnGround", _IsOnGround);

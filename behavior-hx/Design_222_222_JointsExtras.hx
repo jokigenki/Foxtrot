@@ -63,7 +63,7 @@ var jointDef:B2RevoluteJointDef = new B2RevoluteJointDef();
 jointDef.initialize(__actor1.getBody(), __actor2.getBody(), new B2Vec2(__x1, __y1));
 jointDef.localAnchorA.set(__x1,__y1);
 jointDef.localAnchorB.set(__x2,__y2);
-Script.lastCreatedJoint = Engine.engine.world.createJoint(jointDef);
+Script.lastCreatedJoint = Engine.PHYSICS_MODE.createJoint(jointDef);
 }
     
 
@@ -86,7 +86,7 @@ __x2 = Engine.toPhysicalUnits(__x2);
 __y2 = Engine.toPhysicalUnits(__y2);
 var jointDef:B2DistanceJointDef = new B2DistanceJointDef();
 jointDef.initialize(__actor1.getBody(), __actor2.getBody(), new B2Vec2(__x1, __y1), new B2Vec2(__x2, __y2));
-Script.lastCreatedJoint = Engine.engine.world.createJoint(jointDef);
+Script.lastCreatedJoint = Engine.PHYSICS_MODE.createJoint(jointDef);
 }
     
 
@@ -103,7 +103,7 @@ j.setFrequency(__frequency);
 /* Params are:__joint */
 public static function _customBlock_DestroyJoint(__joint:B2Joint):Void
 {
-        Engine.engine.world.destroyJoint(__joint);
+        Engine.PHYSICS_MODE.destroyJoint(__joint);
 }
     
 

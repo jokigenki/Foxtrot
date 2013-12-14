@@ -52,16 +52,30 @@ public var _XSpeed:Float;
 public var _IsActive:Bool;
 
 public var _MoveDelay:Float;
+
+public var _SFXName:String;
     public function _customEvent_Activated():Void
 {
         _IsActive = true;
 propertyChanged("_IsActive", _IsActive);
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    if(((hasValue(_SFXName) != false) && !(_SFXName == "")))
+{
+                        sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", [_SFXName,getCurrentSceneName()]);
+}
+
+}, actor);
 }
 
     public function _customEvent_Deactivated():Void
 {
         _IsActive = false;
 propertyChanged("_IsActive", _IsActive);
+        if(((hasValue(_SFXName) != false) && !(_SFXName == "")))
+{
+            sayToScene("Sound Manager PM", "_customBlock_StopSceneSound", [_SFXName,getCurrentSceneName()]);
+}
+
 }
 
 
@@ -76,6 +90,8 @@ nameMap.set("Is Active?", "_IsActive");
 _IsActive = false;
 nameMap.set("Move Delay", "_MoveDelay");
 _MoveDelay = 0.0;
+nameMap.set("SFX Name", "_SFXName");
+_SFXName = "";
 nameMap.set("Actor", "actor");
 
 	}

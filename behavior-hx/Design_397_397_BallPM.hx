@@ -133,14 +133,18 @@ if(wrapper.enabled){
 propertyChanged("_ReadyToBounce", _ReadyToBounce);
                 if((event.otherFromTop || event.otherFromBottom))
 {
-                    _VelocityY = asNumber((_VelocityY * -1));
+                    runLater(1000 * 0.02, function(timeTask:TimedTask):Void {
+                                _VelocityY = asNumber((_VelocityY * -1));
 propertyChanged("_VelocityY", _VelocityY);
+}, actor);
 }
 
                 else if((event.otherFromLeft || event.otherFromRight))
 {
-                    _VelocityX = asNumber((_VelocityX * -1));
+                    runLater(1000 * 0.02, function(timeTask:TimedTask):Void {
+                                _VelocityX = asNumber((_VelocityX * -1));
 propertyChanged("_VelocityX", _VelocityX);
+}, actor);
 }
 
                 if(((event.otherActor.getType() == getActorType(759)) || (event.otherActor.getType() == getActorType(772))))

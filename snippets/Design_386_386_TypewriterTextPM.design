@@ -72,7 +72,11 @@
                             <group eventID="2" id="-1">
                                 <if comment="false" x="48" y="174">
                                     <group eventID="2" id="-1">
-                                        <cancel comment="false" x="59" y="209"/>
+                                        <custom-856 comment="false" x="59" y="209">
+                                            <int id="0" val="Typewriter SFX"/>
+                                            <scenename comment="false" id="1" x="0" y="0"/>
+                                        </custom-856>
+                                        <cancel comment="false" x="59" y="234"/>
                                     </group>
                                     <moreeq comment="false" id="0" x="0" y="0">
                                         <get-val-386-8 comment="false" id="0" x="0" y="0"/>
@@ -81,9 +85,9 @@
                                         </str-length>
                                     </moreeq>
                                 </if>
-                                <else comment="false" x="48" y="241">
+                                <else comment="false" x="48" y="266">
                                     <group eventID="2" id="-1">
-                                        <set-val-386-5 comment="false" x="59" y="261">
+                                        <set-val-386-5 comment="false" x="59" y="286">
                                             <str-substring comment="false" id="0" x="0" y="0">
                                                 <get-val-386-7 comment="false" id="0" x="0" y="0"/>
                                                 <int id="1" val="0"/>
@@ -93,7 +97,7 @@
                                                 </plus>
                                             </str-substring>
                                         </set-val-386-5>
-                                        <set-val-386-9 comment="false" x="59" y="296">
+                                        <set-val-386-9 comment="false" x="59" y="321">
                                             <str-split comment="false" id="0" x="0" y="0">
                                                 <get-val-386-5 comment="false" id="0" x="0" y="0"/>
                                                 <int id="1" val="|"/>
@@ -101,7 +105,7 @@
                                         </set-val-386-9>
                                     </group>
                                 </else>
-                                <incdec comment="false" x="48" y="338">
+                                <incdec comment="false" x="48" y="363">
                                     <int id="0" val="8"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="1"/>
@@ -112,6 +116,16 @@
                     <get-val-386-6 comment="false" id="0" x="0" y="0"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>
+                <dolater comment="false" x="26" y="414">
+                    <group eventID="2" id="-1">
+                        <custom-857 comment="false" x="37" y="441">
+                            <int id="0" val="Typewriter SFX"/>
+                            <scenename comment="false" id="1" x="0" y="0"/>
+                        </custom-857>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
             </group>
         </init>
     </group>

@@ -54,7 +54,10 @@ class SceneEvents_12 extends SceneScript
 	
 	override public function init()
 	{
-		
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Conveyor Loop SFX",getCurrentSceneName()]);
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

@@ -67,6 +67,8 @@ public var _CurrentY:Float;
 
 public var _Leading:Float;
 
+public var _SFX:Sound;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
@@ -92,6 +94,7 @@ nameMap.set("Current Y", "_CurrentY");
 _CurrentY = 0.0;
 nameMap.set("Leading", "_Leading");
 _Leading = 0.0;
+nameMap.set("SFX", "_SFX");
 
 	}
 	
@@ -110,6 +113,7 @@ return;
 {
                         if((_CurrentIndex >= ("" + _TextToDraw).length))
 {
+                            sayToScene("Sound Manager PM", "_customBlock_StopSceneSound", ["Typewriter SFX",getCurrentSceneName()]);
                             timeTask.repeats = false;
 return;
 }
@@ -126,6 +130,9 @@ propertyChanged("_Lines", _Lines);
 propertyChanged("_CurrentIndex", _CurrentIndex);
 }
 
+}, null);
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Typewriter SFX",getCurrentSceneName()]);
 }, null);
     addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){

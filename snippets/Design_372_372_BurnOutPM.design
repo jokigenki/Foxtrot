@@ -3,15 +3,21 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-val-372-1 comment="false" x="26" y="40">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <get-val-372-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <set-val-372-1 comment="false" x="26" y="97">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-372-1>
-                <custom-261 comment="false" x="26" y="65">
+                <custom-261 comment="false" x="26" y="122">
                     <ACTOR eid="this" id="0"/>
                 </custom-261>
-                <if comment="false" x="26" y="92">
+                <if comment="false" x="26" y="149">
                     <group eventID="1" id="-1">
-                        <custom-88 comment="false" x="37" y="130">
+                        <custom-88 comment="false" x="37" y="187">
                             <ACTOR eid="this" id="0"/>
                             <get-val-372-2 comment="false" id="1" x="0" y="0"/>
                         </custom-88>
@@ -24,15 +30,15 @@
                         <true comment="false" id="1" x="0" y="0"/>
                     </eq>
                 </if>
-                <else comment="false" x="26" y="174">
+                <else comment="false" x="26" y="231">
                     <group eventID="1" id="-1">
-                        <custom-88 comment="false" x="37" y="194">
+                        <custom-88 comment="false" x="37" y="251">
                             <ACTOR eid="this" id="0"/>
                             <get-val-372-3 comment="false" id="1" x="0" y="0"/>
                         </custom-88>
                     </group>
                 </else>
-                <custom-796 comment="false" x="26" y="238">
+                <custom-796 comment="false" x="26" y="295">
                     <get-val-372-4 comment="false" id="0" x="0" y="0"/>
                 </custom-796>
             </group>

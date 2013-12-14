@@ -54,16 +54,28 @@ public var _YSpeed:Float;
 public var _IsActive:Bool;
 
 public var _HasSwitchedDirection:Bool;
+
+public var _SFXName:String;
     public function _customEvent_Activated():Void
 {
         _IsActive = true;
 propertyChanged("_IsActive", _IsActive);
+        if(((hasValue(_SFXName) != false) && !(_SFXName == "")))
+{
+            sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", [_SFXName,getCurrentSceneName()]);
+}
+
 }
 
     public function _customEvent_Deactivated():Void
 {
         _IsActive = false;
 propertyChanged("_IsActive", _IsActive);
+        if(((hasValue(_SFXName) != false) && !(_SFXName == "")))
+{
+            sayToScene("Sound Manager PM", "_customBlock_StopSceneSound", [_SFXName,getCurrentSceneName()]);
+}
+
 }
 
 
@@ -80,6 +92,8 @@ nameMap.set("Is Active?", "_IsActive");
 _IsActive = false;
 nameMap.set("Has Switched Direction?", "_HasSwitchedDirection");
 _HasSwitchedDirection = false;
+nameMap.set("SFX Name", "_SFXName");
+_SFXName = "";
 nameMap.set("Actor", "actor");
 
 	}
@@ -93,6 +107,11 @@ propertyChanged("_HasSwitchedDirection", _HasSwitchedDirection);
         if(_IsActive)
 {
             actor.setYVelocity(_CurrentVelocity);
+            if(((hasValue(_SFXName) != false) && !(_SFXName == "")))
+{
+                sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", [_SFXName,getCurrentSceneName()]);
+}
+
 }
 
     addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {

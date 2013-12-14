@@ -113,28 +113,36 @@
                 </if>
                 <else-if comment="false" x="26" y="408">
                     <group eventID="5" id="-1">
-                        <set-val-21-2 comment="false" x="37" y="438">
+                        <set-val-21-2 comment="false" x="37" y="443">
                             <int id="0" val="014"/>
                         </set-val-21-2>
                     </group>
-                    <more comment="false" id="0" x="0" y="0">
-                        <code-short comment="false" id="0" x="0" y="0">
-                            <int id="0" val="nextScene.indexOf(&amp;quot;Factory&amp;quot;)"/>
-                        </code-short>
-                        <int id="1" val="-1"/>
-                    </more>
+                    <or comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <code-short comment="false" id="0" x="0" y="0">
+                                <int id="0" val="nextScene.indexOf(&amp;quot;Factory&amp;quot;)"/>
+                            </code-short>
+                            <int id="1" val="-1"/>
+                        </more>
+                        <more comment="false" id="1" x="0" y="0">
+                            <code-short comment="false" id="0" x="0" y="0">
+                                <int id="0" val="nextScene.indexOf(&amp;quot;Final Boss&amp;quot;)"/>
+                            </code-short>
+                            <int id="1" val="-1"/>
+                        </more>
+                    </or>
                 </else-if>
-                <else comment="false" x="26" y="470">
+                <else comment="false" x="26" y="475">
                     <group eventID="5" id="-1">
-                        <set-val-21-2 comment="false" x="37" y="490">
+                        <set-val-21-2 comment="false" x="37" y="495">
                             <int id="0" val="03"/>
                         </set-val-21-2>
                     </group>
                 </else>
-                <set-val-21-3 comment="false" x="26" y="522">
+                <set-val-21-3 comment="false" x="26" y="527">
                     <int id="0" val="0"/>
                 </set-val-21-3>
-                <print comment="false" x="26" y="542">
+                <print comment="false" x="26" y="547">
                     <str-combine comment="false" id="0" x="0" y="0">
                         <int id="0" val="ATLASES WERE: "/>
                         <str-combine comment="false" id="1" x="0" y="0">
@@ -146,11 +154,11 @@
                         </str-combine>
                     </str-combine>
                 </print>
-                <repeat comment="false" x="26" y="582">
+                <repeat comment="false" x="26" y="587">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="612">
+                        <if comment="false" x="37" y="617">
                             <group eventID="5" id="-1">
-                                <print comment="false" x="48" y="652">
+                                <print comment="false" x="48" y="657">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <int id="0" val="UNLOAD: "/>
                                         <str-char-at comment="false" id="1" x="0" y="0">
@@ -159,7 +167,7 @@
                                         </str-char-at>
                                     </str-combine>
                                 </print>
-                                <load-unload-atlas comment="false" x="48" y="687">
+                                <load-unload-atlas comment="false" x="48" y="692">
                                     <int id="0" val="1"/>
                                     <as-number comment="false" id="1" x="0" y="0">
                                         <str-char-at comment="false" id="0" x="0" y="0">
@@ -180,7 +188,7 @@
                                 <int id="1" val="-1"/>
                             </eq>
                         </if>
-                        <incdec comment="false" x="37" y="741">
+                        <incdec comment="false" x="37" y="746">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -190,14 +198,14 @@
                         <get-val-21-1 comment="false" id="0" x="0" y="0"/>
                     </str-length>
                 </repeat>
-                <set-val-21-3 comment="false" x="26" y="780">
+                <set-val-21-3 comment="false" x="26" y="785">
                     <int id="0" val="0"/>
                 </set-val-21-3>
-                <repeat comment="false" x="26" y="800">
+                <repeat comment="false" x="26" y="805">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="830">
+                        <if comment="false" x="37" y="835">
                             <group eventID="5" id="-1">
-                                <print comment="false" x="48" y="870">
+                                <print comment="false" x="48" y="875">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <int id="0" val="LOAD: "/>
                                         <str-char-at comment="false" id="1" x="0" y="0">
@@ -206,7 +214,7 @@
                                         </str-char-at>
                                     </str-combine>
                                 </print>
-                                <load-unload-atlas comment="false" x="48" y="905">
+                                <load-unload-atlas comment="false" x="48" y="910">
                                     <int id="0" val="0"/>
                                     <as-number comment="false" id="1" x="0" y="0">
                                         <str-char-at comment="false" id="0" x="0" y="0">
@@ -227,7 +235,7 @@
                                 <int id="1" val="-1"/>
                             </eq>
                         </if>
-                        <incdec comment="false" x="37" y="959">
+                        <incdec comment="false" x="37" y="964">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -237,10 +245,10 @@
                         <get-val-21-2 comment="false" id="0" x="0" y="0"/>
                     </str-length>
                 </repeat>
-                <set-game-val-24 comment="false" x="26" y="998">
+                <set-game-val-24 comment="false" x="26" y="1003">
                     <get-val-21-2 comment="false" id="0" x="0" y="0"/>
                 </set-game-val-24>
-                <scene-change-new comment="false" x="26" y="1023">
+                <scene-change-new comment="false" x="26" y="1028">
                     <scenebyname comment="false" id="0" x="0" y="0">
                         <get-item comment="false" id="0" x="0" y="0">
                             <str-split comment="false" id="0" x="0" y="0">

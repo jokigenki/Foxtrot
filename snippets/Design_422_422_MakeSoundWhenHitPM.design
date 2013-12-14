@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1">
+                        <set-val-422-2 comment="false" x="37" y="83">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-422-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-top comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </collision-top>
+                        <get-val-422-7 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="120">
+                    <group eventID="1" id="-1">
+                        <set-val-422-2 comment="false" x="37" y="158">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-422-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-left comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </collision-left>
+                        <get-val-422-5 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="195">
+                    <group eventID="1" id="-1">
+                        <set-val-422-2 comment="false" x="37" y="233">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-422-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-bottom comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </collision-bottom>
+                        <get-val-422-8 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="270">
+                    <group eventID="1" id="-1">
+                        <set-val-422-2 comment="false" x="37" y="308">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-422-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-right comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </collision-right>
+                        <get-val-422-6 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-422-14 comment="false" x="26" y="40">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <abs comment="false" id="0" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                        </abs>
+                        <get-val-422-14 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-422-14>
+                <set-val-422-15 comment="false" x="26" y="83">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <abs comment="false" id="0" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-dxy>
+                        </abs>
+                        <get-val-422-15 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-422-15>
+                <if comment="false" x="26" y="126">
+                    <group eventID="2" id="-1">
+                        <set-val-422-11 comment="false" x="37" y="156">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-422-14 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="100"/>
+                            </times>
+                        </set-val-422-11>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-422-14 comment="false" id="0" x="0" y="0"/>
+                        <get-val-422-15 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="198">
+                    <group eventID="2" id="-1">
+                        <set-val-422-11 comment="false" x="37" y="218">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-422-15 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="100"/>
+                            </times>
+                        </set-val-422-11>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="260">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="285">
+                            <group eventID="2" id="-1">
+                                <if comment="false" x="48" y="320">
+                                    <group eventID="2" id="-1">
+                                        <set-val-422-12 comment="false" x="59" y="345">
+                                            <times comment="false" id="0" x="0" y="0">
+                                                <div comment="false" id="0" x="0" y="0">
+                                                    <get-val-422-11 comment="false" id="0" x="0" y="0"/>
+                                                    <get-val-422-10 comment="false" id="1" x="0" y="0"/>
+                                                </div>
+                                                <int id="1" val="100"/>
+                                            </times>
+                                        </set-val-422-12>
+                                        <if comment="false" x="59" y="380">
+                                            <group eventID="2" id="-1">
+                                                <set-val-422-12 comment="false" x="70" y="410">
+                                                    <int id="0" val="100"/>
+                                                </set-val-422-12>
+                                            </group>
+                                            <more comment="false" id="0" x="0" y="0">
+                                                <get-val-422-12 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="100"/>
+                                            </more>
+                                        </if>
+                                        <if comment="false" x="59" y="442">
+                                            <group eventID="2" id="-1">
+                                                <custom-876 comment="false" x="70" y="472">
+                                                    <get-val-422-3 comment="false" id="0" x="0" y="0"/>
+                                                    <get-val-422-4 comment="false" id="1" x="0" y="0"/>
+                                                    <get-val-422-12 comment="false" id="2" x="0" y="0"/>
+                                                </custom-876>
+                                                <set-val-422-1 comment="false" x="70" y="497">
+                                                    <true comment="false" id="0" x="0" y="0"/>
+                                                </set-val-422-1>
+                                            </group>
+                                            <more comment="false" id="0" x="0" y="0">
+                                                <get-val-422-12 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="0"/>
+                                            </more>
+                                        </if>
+                                    </group>
+                                    <get-val-422-9 comment="false" id="0" x="0" y="0"/>
+                                </if>
+                                <else comment="false" x="48" y="546">
+                                    <group eventID="2" id="-1">
+                                        <custom-816 comment="false" x="59" y="566">
+                                            <get-val-422-3 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-422-4 comment="false" id="1" x="0" y="0"/>
+                                        </custom-816>
+                                        <set-val-422-1 comment="false" x="59" y="591">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-val-422-1>
+                                    </group>
+                                </else>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <not comment="false" id="0" x="0" y="0">
+                                    <get-val-422-1 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                                <more comment="false" id="1" x="0" y="0">
+                                    <get-val-422-11 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-422-13 comment="false" id="1" x="0" y="0"/>
+                                </more>
+                            </and>
+                        </if>
+                    </group>
+                    <get-val-422-2 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="652">
+                    <group eventID="2" id="-1">
+                        <set-val-422-1 comment="false" x="37" y="672">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-422-1>
+                    </group>
+                </else>
+                <set-val-422-2 comment="false" x="26" y="709">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-422-2>
+                <set-val-422-14 comment="false" x="26" y="734">
+                    <abs comment="false" id="0" x="0" y="0">
+                        <get-dxy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-dxy>
+                    </abs>
+                </set-val-422-14>
+                <set-val-422-15 comment="false" x="26" y="772">
+                    <abs comment="false" id="0" x="0" y="0">
+                        <get-dxy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-dxy>
+                    </abs>
+                </set-val-422-15>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

@@ -46,6 +46,7 @@ class Design_153_153_ReloadOnDeathPM extends ActorScript
 {          	
 	    public function _customEvent_Reload():Void
 {
+        sayToScene("Sound Manager PM", "_customBlock_StopAllSceneSounds", [getCurrentSceneName()]);
         if(getGameAttribute("Speed Run In Progress"))
 {
             sayToScene("Speed Run Timer PM", "_customBlock_SaveSpeedRunData");

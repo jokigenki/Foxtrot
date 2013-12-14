@@ -66,6 +66,12 @@ class SceneEvents_13 extends SceneScript
             recycleActor(getActor(59));
 }
 
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Lift Loop SFX",getCurrentSceneName()]);
+}, null);
+        runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Lift Loop SFX",getCurrentSceneName()]);
+}, null);
     addWhenKilledListener(getActor(12), function(list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         if(getGameAttribute("Speed Run In Progress"))

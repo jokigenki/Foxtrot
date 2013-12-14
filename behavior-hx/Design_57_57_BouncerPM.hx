@@ -72,7 +72,7 @@ _MinBounce = 0.0;
 nameMap.set("SFX Name", "_SFXName");
 _SFXName = "";
 nameMap.set("SFX Number", "_SFXNumber");
-_SFXNumber = 1;
+_SFXNumber = 1.0;
 nameMap.set("Actor", "actor");
 
 	}

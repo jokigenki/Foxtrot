@@ -72,6 +72,8 @@ public var _OntoOffAnimation:String;
 public var _SFX:Sound;
 
 public var _Beatsperframe:Float;
+
+public var _SFXOff:Sound;
     
 
 /* Params are: */
@@ -122,7 +124,7 @@ propertyChanged("_TimeElapsed", _TimeElapsed);
                         _IsRunning = false;
 propertyChanged("_IsRunning", _IsRunning);
                         actor.say("Timed Region Switch PM", "_customBlock_UpdateSwitchAnimation");
-                        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
+                        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFXOff]);
 }
 
 }, actor);
@@ -206,6 +208,7 @@ nameMap.set("SFX", "_SFX");
 _SFX = getSound(800);
 nameMap.set("Beats per frame", "_Beatsperframe");
 _Beatsperframe = 0.0;
+nameMap.set("SFX Off", "_SFXOff");
 
 	}
 	

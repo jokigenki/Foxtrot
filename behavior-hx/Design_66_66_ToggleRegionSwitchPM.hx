@@ -45,6 +45,8 @@ import motion.easing.Sine;
 class Design_66_66_ToggleRegionSwitchPM extends ActorScript
 {          	
 	
+public var _SFXOff:Sound;
+
 public var _IsActive:Bool;
 
 public var _ActiveAnimation:String;
@@ -75,7 +77,16 @@ propertyChanged("_IsActive", _IsActive);
         scripts.Design_165_165_MoveOnActivatedPM._customBlock_ActivateList(_SwitchTargetIDs,_IsActive);
         dispatchEvent();
         actor.say("Toggle Region Switch PM", "_customBlock_UpdateSwitchAnimation");
-        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
+        if(_IsActive)
+{
+            sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
+}
+
+        else
+{
+            sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFXOff]);
+}
+
 }
     
 
@@ -134,7 +145,8 @@ var __Self:Actor = actor;
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Is Active?", "_IsActive");
+		nameMap.set("SFX Off", "_SFXOff");
+nameMap.set("Is Active?", "_IsActive");
 _IsActive = false;
 nameMap.set("Active Animation", "_ActiveAnimation");
 nameMap.set("Inactive Animation", "_InactiveAnimation");
@@ -145,9 +157,9 @@ nameMap.set("Switch Target IDs", "_SwitchTargetIDs");
 _SwitchTargetIDs = [];
 nameMap.set("Is Pressed?", "_IsPressed");
 _IsPressed = false;
+nameMap.set("Actor", "actor");
 nameMap.set("SFX", "_SFX");
 _SFX = getSound(800);
-nameMap.set("Actor", "actor");
 
 	}
 	

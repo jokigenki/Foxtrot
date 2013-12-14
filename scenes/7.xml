@@ -38,8 +38,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -94,6 +94,7 @@
                     <prop id="3" list="0" val="5"/>
                     <prop id="4" list="0" val="false"/>
                     <prop id="5" list="0" val="false"/>
+                    <prop id="6" list="0" val="Lift Loop SFX"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -118,6 +119,7 @@
                     <prop id="3" list="0" val="8"/>
                     <prop id="4" list="0" val="false"/>
                     <prop id="5" list="0" val="false"/>
+                    <prop id="6" list="0" val="Lift Loop SFX"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
@@ -138,8 +140,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="null"/>
@@ -172,8 +174,9 @@
                         <text order="0" value="Lift 6"/>
                     </prop>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="15" list="0" val="800"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="800"/>
+                    <prop id="16" list="0" val="886"/>
                 </s>
             </snippets>
         </actor>
@@ -182,6 +185,7 @@
                 <s enabled="true" id="118"/>
                 <s enabled="true" id="66">
                     <prop id="1" list="0" val="false"/>
+                    <prop id="16" list="0" val="886"/>
                     <prop id="2" list="0" val="On"/>
                     <prop id="3" list="0" val="Off"/>
                     <prop id="4" list="0" val="On"/>
@@ -192,8 +196,8 @@
                         <text order="0" value="Lift 8"/>
                     </prop>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="800"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
             </snippets>
         </actor>
@@ -320,8 +324,10 @@
                     <prop id="11" list="1" val=""/>
                     <prop id="12" list="0" val="Walking"/>
                     <prop id="13" list="0" val="false"/>
-                    <prop id="14" list="1" val=""/>
+                    <prop id="14" list="0" val=""/>
+                    <prop id="15" list="0" val="1"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="16" list="0" val="0.4"/>
                 </s>
             </snippets>
         </actor>
@@ -375,6 +381,9 @@
         <s enabled="true" id="329">
             <prop id="1" list="0" val="466"/>
             <prop id="2" list="0" val="-1"/>
+            <prop id="3" list="0" val="0"/>
+            <prop id="4" list="1" val=""/>
+            <prop id="5" list="0" val="-1"/>
         </s>
         <s enabled="true" id="303">
             <prop id="1" list="0" val="0.5"/>
@@ -382,8 +391,8 @@
         </s>
     </snippets>
     <terrain>
-        <p pts="4,32.0,16.0,32.0,0.0,0.0,0.0,0.0,16.0" x="320.0" y="224.0"/>
-        <p pts="48,352.0,96.0,560.0,96.0,560.0,112.0,368.0,112.0,368.0,240.0,400.0,240.0,400.0,176.0,480.0,176.0,480.0,320.0,272.0,320.0,272.0,304.0,240.0,304.0,240.0,320.0,144.0,320.0,144.0,304.0,112.0,304.0,112.0,288.0,80.0,288.0,80.0,272.0,0.0,272.0,0.0,160.0,112.0,160.0,112.0,0.0,480.0,0.0,480.0,32.0,560.0,32.0,560.0,48.0,464.0,48.0,464.0,16.0,128.0,16.0,128.0,144.0,160.0,144.0,160.0,176.0,16.0,176.0,16.0,256.0,128.0,256.0,128.0,288.0,160.0,288.0,160.0,304.0,224.0,304.0,224.0,288.0,288.0,288.0,288.0,304.0,464.0,304.0,464.0,192.0,416.0,192.0,416.0,256.0,352.0,256.0" x="80.0" y="32.0"/>
         <p pts="4,0.0,48.0,0.0,0.0,64.0,0.0,64.0,48.0" x="304.0" y="208.0"/>
+        <p pts="48,352.0,96.0,560.0,96.0,560.0,112.0,368.0,112.0,368.0,240.0,400.0,240.0,400.0,176.0,480.0,176.0,480.0,320.0,272.0,320.0,272.0,304.0,240.0,304.0,240.0,320.0,144.0,320.0,144.0,304.0,112.0,304.0,112.0,288.0,80.0,288.0,80.0,272.0,0.0,272.0,0.0,160.0,112.0,160.0,112.0,0.0,480.0,0.0,480.0,32.0,560.0,32.0,560.0,48.0,464.0,48.0,464.0,16.0,128.0,16.0,128.0,144.0,160.0,144.0,160.0,176.0,16.0,176.0,16.0,256.0,128.0,256.0,128.0,288.0,160.0,288.0,160.0,304.0,224.0,304.0,224.0,288.0,288.0,288.0,288.0,304.0,464.0,304.0,464.0,192.0,416.0,192.0,416.0,256.0,352.0,256.0" x="80.0" y="32.0"/>
+        <p pts="4,32.0,16.0,32.0,0.0,0.0,0.0,0.0,16.0" x="320.0" y="224.0"/>
     </terrain>
 </scene>

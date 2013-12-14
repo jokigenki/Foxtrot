@@ -60,11 +60,34 @@
                 <set-val-61-5 comment="false" x="26" y="65">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-61-5>
-                <set-dxy comment="false" x="26" y="90">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="0"/>
-                    <get-val-61-2 comment="false" id="2" x="0" y="0"/>
-                </set-dxy>
+                <if comment="false" x="26" y="90">
+                    <group eventID="2" id="-1">
+                        <set-dxy comment="false" x="37" y="115">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-val-61-2 comment="false" id="2" x="0" y="0"/>
+                        </set-dxy>
+                        <if comment="false" x="37" y="147">
+                            <group eventID="3" id="-1">
+                                <custom-857 comment="false" x="48" y="185">
+                                    <get-val-61-6 comment="false" id="0" x="0" y="0"/>
+                                    <scenename comment="false" id="1" x="0" y="0"/>
+                                </custom-857>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <value comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="6"/>
+                                    <int id="1" val="0"/>
+                                </value>
+                                <noteq comment="false" id="1" x="0" y="0">
+                                    <get-val-61-6 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val=""/>
+                                </noteq>
+                            </and>
+                        </if>
+                    </group>
+                    <get-val-61-4 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
         </init>
     </group>
@@ -75,6 +98,24 @@
                 <set-val-61-4 comment="false" x="26" y="40">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-61-4>
+                <if comment="false" x="26" y="65">
+                    <group eventID="3" id="-1">
+                        <custom-857 comment="false" x="37" y="103">
+                            <get-val-61-6 comment="false" id="0" x="0" y="0"/>
+                            <scenename comment="false" id="1" x="0" y="0"/>
+                        </custom-857>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="6"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <noteq comment="false" id="1" x="0" y="0">
+                            <get-val-61-6 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val=""/>
+                        </noteq>
+                    </and>
+                </if>
             </group>
             <int id="0" val="Activated"/>
         </event-custom>
@@ -86,6 +127,24 @@
                 <set-val-61-4 comment="false" x="26" y="40">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-61-4>
+                <if comment="false" x="26" y="65">
+                    <group eventID="3" id="-1">
+                        <custom-856 comment="false" x="37" y="103">
+                            <get-val-61-6 comment="false" id="0" x="0" y="0"/>
+                            <scenename comment="false" id="1" x="0" y="0"/>
+                        </custom-856>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="6"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <noteq comment="false" id="1" x="0" y="0">
+                            <get-val-61-6 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val=""/>
+                        </noteq>
+                    </and>
+                </if>
             </group>
             <int id="0" val="Deactivated"/>
         </event-custom>

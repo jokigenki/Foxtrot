@@ -76,6 +76,9 @@ nameMap.set("Bomb Crate", "_BombCrate");
             recycleActor(getActor(55));
 }
 
+        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Conveyor Loop SFX",getCurrentSceneName()]);
+}, null);
     addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorType(653),a.getType(),a.getGroup())){
         a.applyImpulse(0, -1, 75);
@@ -111,6 +114,11 @@ if(wrapper.enabled){
             recycleActor(getActor(55));
 }
 
+}
+});
+    addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void  {
+if(wrapper.enabled && sameAs(getActor(3), a)){
+        getActor(8).say("Spawn PM", "_customEvent_" + "Activated");
 }
 });
 

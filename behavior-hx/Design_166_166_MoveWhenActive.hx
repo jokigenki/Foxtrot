@@ -78,6 +78,8 @@ public var _InactiveSFXName:String;
 public var _InactiveSFXNumber:Float;
 
 public var _ActiveSFXNumber:Float;
+
+public var _LoopSoundWhilstMoving:Bool;
     public function _customEvent_Activated():Void
 {
         _IsActive = true;
@@ -113,7 +115,41 @@ if (_MoveDelay > 0)
 
         if(((hasValue(_ActiveSFXName) != false) && !(("" + _ActiveSFXName) == (""))))
 {
-            sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_ActiveSFXName,_ActiveSFXNumber]);
+            if(_LoopSoundWhilstMoving)
+{
+                if((_MoveDelay > 0))
+{
+                    runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void {
+                                sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", [_ActiveSFXName,getCurrentSceneName()]);
+}, actor);
+                    runLater(1000 * (_MoveDelay + _MoveTime), function(timeTask:TimedTask):Void {
+                                if(_IsActive)
+{
+                                    sayToScene("Sound Manager PM", "_customBlock_StopSceneSound", [_ActiveSFXName,getCurrentSceneName()]);
+}
+
+}, actor);
+}
+
+                else
+{
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", [_ActiveSFXName,getCurrentSceneName()]);
+                    runLater(1000 * _MoveTime, function(timeTask:TimedTask):Void {
+                                if(_IsActive)
+{
+                                    sayToScene("Sound Manager PM", "_customBlock_StopSceneSound", [_ActiveSFXName,getCurrentSceneName()]);
+}
+
+}, actor);
+}
+
+}
+
+            else
+{
+                sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_ActiveSFXName,_ActiveSFXNumber]);
+}
+
 }
 
 }
@@ -144,7 +180,23 @@ switch(_EaseType)
 _MoveTarget.moveTo(_XStart, _YStart, _ReturnTime, trans);
         if(((hasValue(_InactiveSFXName) != false) && !(("" + _InactiveSFXName) == (""))))
 {
-            sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_InactiveSFXName,_InactiveSFXNumber]);
+            if(_LoopSoundWhilstMoving)
+{
+                sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", [_InactiveSFXName,getCurrentSceneName()]);
+                runLater(1000 * _MoveTime, function(timeTask:TimedTask):Void {
+                            if(!(_IsActive))
+{
+                                sayToScene("Sound Manager PM", "_customBlock_StopSceneSound", [_InactiveSFXName,getCurrentSceneName()]);
+}
+
+}, actor);
+}
+
+            else
+{
+                sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_InactiveSFXName,_InactiveSFXNumber]);
+}
+
 }
 
 }
@@ -188,6 +240,8 @@ nameMap.set("Inactive SFX Number", "_InactiveSFXNumber");
 _InactiveSFXNumber = 1.0;
 nameMap.set("Active SFX Number", "_ActiveSFXNumber");
 _ActiveSFXNumber = 1.0;
+nameMap.set("Loop Sound Whilst Moving?", "_LoopSoundWhilstMoving");
+_LoopSoundWhilstMoving = false;
 
 	}
 	

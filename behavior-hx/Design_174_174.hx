@@ -45,6 +45,8 @@ import motion.easing.Sine;
 class Design_174_174 extends ActorScript
 {          	
 	
+public var _SFXOff:Sound;
+
 public var _IsActive:Bool;
 
 public var _ActiveAnimation:String;
@@ -122,14 +124,15 @@ propertyChanged("_HasBeenSwitched", _HasBeenSwitched);
 propertyChanged("_IsActive", _IsActive);
         scripts.Design_165_165_MoveOnActivatedPM._customBlock_ActivateList(_SwitchTargetIDs,_IsActive);
         actor.say("Single Use Region Switch PM", "_customBlock_UpdateSwitchAnimation");
-        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFXOff]);
 }
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Is Active?", "_IsActive");
+		nameMap.set("SFX Off", "_SFXOff");
+nameMap.set("Is Active?", "_IsActive");
 _IsActive = false;
 nameMap.set("Active Animation", "_ActiveAnimation");
 nameMap.set("Inactive Animation", "_InactiveAnimation");
@@ -140,9 +143,9 @@ nameMap.set("Switch Target IDs", "_SwitchTargetIDs");
 _SwitchTargetIDs = [];
 nameMap.set("Has Been Switched?", "_HasBeenSwitched");
 _HasBeenSwitched = false;
+nameMap.set("Actor", "actor");
 nameMap.set("SFX", "_SFX");
 _SFX = getSound(800);
-nameMap.set("Actor", "actor");
 
 	}
 	
