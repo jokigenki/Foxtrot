@@ -207,9 +207,9 @@ nameMap.set("Should Play Sound?", "_ShouldPlaySound");
 _ShouldPlaySound = false;
 nameMap.set("Footstep SFX Name", "_FootstepSFXName");
 _FootstepSFXName = "";
-nameMap.set("Actor", "actor");
 nameMap.set("Footstep SFX Number", "_FootstepSFXNumber");
 _FootstepSFXNumber = 1.0;
+nameMap.set("Actor", "actor");
 nameMap.set("SFX Spacing", "_SFXSpacing");
 _SFXSpacing = 0.4;
 

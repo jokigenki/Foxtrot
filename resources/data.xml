@@ -1461,7 +1461,7 @@
     <custom-block blocktag="custom-686" blocktype="NORMAL" code="((~.say(&quot;Goose Head Maker PM&quot;, &quot;CreateCurve&quot;)) as Actor)" desc="" global="false" gui="Create curve for %0" id="686" message="CreateCurve" name="CreateCurve" oid="-1" return="ACTOR" shared="false" snippetID="349">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
-    <custom-block blocktag="custom-374" blocktype="ACTION" code="scripts.Design_222_222_JointsExtras.CreateDistanceJoint(~,~,~,~,~,~);" desc="A distance joint constrains two points on two bodies to remain at a fixed distance from each other. You can view this as a massless, rigid rod. You can also specify the damping force of the rod if it is not completely rigid, and the frequency of the spring." global="true" gui="Create distance joint between %0 ( x: %1 y: %2 ) and %3 ( x: %4 y: %5 )" id="374" message="CreateDistanceJoint" name="CreateDistanceJoint" oid="-1" return="VOID" shared="false" snippetID="222">
+    <custom-block blocktag="custom-374" blocktype="ACTION" code="" desc="A distance joint constrains two points on two bodies to remain at a fixed distance from each other. You can view this as a massless, rigid rod. You can also specify the damping force of the rod if it is not completely rigid, and the frequency of the spring." global="true" gui="Create distance joint between %0 ( x: %1 y: %2 ) and %3 ( x: %4 y: %5 )" id="374" message="CreateDistanceJoint" name="CreateDistanceJoint" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="actor1" order="0" type="ACTOR"/>
         <blank name="x1" order="1" type="NUMBER"/>
         <blank name="y1" order="2" type="NUMBER"/>
@@ -1469,7 +1469,7 @@
         <blank name="x2" order="4" type="NUMBER"/>
         <blank name="y2" order="5" type="NUMBER"/>
     </custom-block>
-    <custom-block blocktag="custom-371" blocktype="ACTION" code="scripts.Design_222_222_JointsExtras.CreateDistanceJointWithParams(~,~,~,~,~,~,~,~);" desc="A distance joint constrains two points on two bodies to remain at a fixed distance from each other. You can view this as a massless, rigid rod. You can also specify the damping force of the rod if it is not completely rigid, and the frequency of the spring." global="true" gui="Create distance joint between %0 ( x: %1 y: %2) and %3 (x: %4 y: %5) with damping: %6 and frequency %7" id="371" message="CreateDistanceJointWithParams" name="CreateDistanceJointWithParams" oid="-1" return="VOID" shared="false" snippetID="222">
+    <custom-block blocktag="custom-371" blocktype="ACTION" code="" desc="A distance joint constrains two points on two bodies to remain at a fixed distance from each other. You can view this as a massless, rigid rod. You can also specify the damping force of the rod if it is not completely rigid, and the frequency of the spring." global="true" gui="Create distance joint between %0 ( x: %1 y: %2) and %3 (x: %4 y: %5) with damping: %6 and frequency %7" id="371" message="CreateDistanceJointWithParams" name="CreateDistanceJointWithParams" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="actor1" order="0" type="ACTOR"/>
         <blank name="x1" order="1" type="NUMBER"/>
         <blank name="y1" order="2" type="NUMBER"/>
@@ -1512,7 +1512,7 @@
         <blank name="x" order="2" type="NUMBER"/>
         <blank name="y" order="3" type="NUMBER"/>
     </custom-block>
-    <custom-block blocktag="custom-370" blocktype="ACTION" code="scripts.Design_222_222_JointsExtras.CreateRevoluteJoint(~,~,~,~,~,~);" desc="A revolute joint constrains to bodies to share a common point while they are free to rotate about the point. The relative rotation about the shared point is the joint angle. You can limit the relative rotation with a joint limit that specifies a lower and upper angle." global="true" gui="Create revolute joint between %0 ( x: %1 y: %2) and %3 (x: %4 y: %5 )" id="370" message="CreateRevoluteJoint" name="CreateRevoluteJoint" oid="-1" return="VOID" shared="false" snippetID="222">
+    <custom-block blocktag="custom-370" blocktype="ACTION" code="" desc="A revolute joint constrains to bodies to share a common point while they are free to rotate about the point. The relative rotation about the shared point is the joint angle. You can limit the relative rotation with a joint limit that specifies a lower and upper angle." global="true" gui="Create revolute joint between %0 ( x: %1 y: %2) and %3 (x: %4 y: %5 )" id="370" message="CreateRevoluteJoint" name="CreateRevoluteJoint" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="actor1" order="0" type="ACTOR"/>
         <blank name="x1" order="1" type="NUMBER"/>
         <blank name="y1" order="2" type="NUMBER"/>
@@ -1520,7 +1520,7 @@
         <blank name="x2" order="4" type="NUMBER"/>
         <blank name="y2" order="5" type="NUMBER"/>
     </custom-block>
-    <custom-block blocktag="custom-375" blocktype="ACTION" code="scripts.Design_222_222_JointsExtras.CreateRevoluteJointWithParams(~,~,~,~,~,~,~,~);" desc="A revolute joint constrains to bodies to share a common point while they are free to rotate about the point. The relative rotation about the shared point is the joint angle. You can limit the relative rotation with a joint limit that specifies a lower and upper angle." global="true" gui="Create revolute joint between %0 ( x: %1 y: %2) and %3 (x: %4 y: %5 ) with upper limit: %6 lower limit %7:" id="375" message="CreateRevoluteJointWithParams" name="CreateRevoluteJointWithParams" oid="-1" return="VOID" shared="false" snippetID="222">
+    <custom-block blocktag="custom-375" blocktype="ACTION" code="" desc="A revolute joint constrains to bodies to share a common point while they are free to rotate about the point. The relative rotation about the shared point is the joint angle. You can limit the relative rotation with a joint limit that specifies a lower and upper angle." global="true" gui="Create revolute joint between %0 ( x: %1 y: %2) and %3 (x: %4 y: %5 ) with upper limit: %6 lower limit %7:" id="375" message="CreateRevoluteJointWithParams" name="CreateRevoluteJointWithParams" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="actor1" order="0" type="ACTOR"/>
         <blank name="x1" order="1" type="NUMBER"/>
         <blank name="y1" order="2" type="NUMBER"/>
@@ -1721,7 +1721,7 @@
         </snippets>
     </actor>
     <custom-block blocktag="custom-333" blocktype="NORMAL" code="String((scripts.Design_207_207_StencylExtrasPM.CurrentSceneName()))" desc="Global method for getting the current scene name." global="true" gui="current scene name" id="333" message="CurrentSceneName" name="CurrentSceneName" oid="-1" return="TEXT" shared="false" snippetID="207"/>
-    <custom-block blocktag="custom-372" blocktype="ACTION" code="scripts.Design_222_222_JointsExtras.DestroyJoint(~);" desc="" global="true" gui="Destroy joint %0" id="372" message="DestroyJoint" name="DestroyJoint" oid="-1" return="VOID" shared="false" snippetID="222">
+    <custom-block blocktag="custom-372" blocktype="ACTION" code="" desc="" global="true" gui="Destroy joint %0" id="372" message="DestroyJoint" name="DestroyJoint" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="joint" order="0" type="JOINT"/>
     </custom-block>
     <custom-block blocktag="custom-507" blocktype="ACTION" code="~.say(&quot;Rotation Pipe PM&quot;, &quot;DisableOutput&quot;, ~,~);" desc="" global="false" gui="Disable output for %1 in direction %2" id="507" message="DisableOutput" name="DisableOutput" oid="-1" return="VOID" shared="false" snippetID="274">
@@ -5008,7 +5008,7 @@
         <anim across="1" down="1" durations="100" height="32" id="4" loop="true" name="Dead Left" numframes="1" originx="16" originy="16" sync="false" width="32"/>
         <anim across="1" down="1" durations="100" height="32" id="5" loop="true" name="Dead Right" numframes="1" originx="16" originy="16" sync="false" width="32"/>
     </sprite>
-    <custom-block blocktag="custom-367" blocktype="NORMAL" code="((scripts.Design_222_222_JointsExtras.lastJoint()))" desc="" global="true" gui="lastCreatedJoint" id="367" message="lastJoint" name="lastJoint" oid="-1" return="OBJECT" shared="false" snippetID="222"/>
+    <custom-block blocktag="custom-367" blocktype="NORMAL" code="" desc="" global="true" gui="lastCreatedJoint" id="367" message="lastJoint" name="lastJoint" oid="-1" return="OBJECT" shared="false" snippetID="-1"/>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="16" id="437" name="Lazer Beamer" shared="false" width="16">
         <anim across="2" down="1" durations="100,100" height="16" id="0" loop="true" name="Active" numframes="2" originx="8" originy="8" sync="false" width="32">
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
@@ -6892,7 +6892,7 @@
         <blank name="Control Name" order="1" type="TEXT"/>
         <blank name="Value" order="2" type="BOOLEAN"/>
     </custom-block>
-    <custom-block blocktag="custom-368" blocktype="ACTION" code="scripts.Design_222_222_JointsExtras.setLimits(~,~,~);" desc="" global="true" gui="set argument: %0  to value: %1  for joint: %2" id="368" message="setLimits" name="setLimits" oid="-1" return="VOID" shared="false" snippetID="222">
+    <custom-block blocktag="custom-368" blocktype="ACTION" code="" desc="" global="true" gui="set argument: %0  to value: %1  for joint: %2" id="368" message="setLimits" name="setLimits" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="argument" order="0" type="TEXT"/>
         <blank name="value" order="1" type="OBJECT"/>
         <blank name="joint" order="2" type="OBJECT"/>

@@ -42,42 +42,45 @@ import motion.easing.Sine;
 
 
 
-class Design_171_171_ExplodeWithSetPiecesPM extends ActorScript
+class Design_256_256_SkeletonOutPM extends ActorScript
 {          	
 	
-public var _ShrapnelActorType:ActorType;
+public var _RightAnimation:String;
 
-public var _ExplosionActorType:ActorType;
+public var _LeftAnimation:String;
+
+public var _IsKilled:Bool;
 
 public var _SFX:Sound;
-
-public var _NumberOfPieces:Float;
-
-public var _PieceNumber:Float;
-
-public var _ShakeScreen:Bool;
     public function _customEvent_Killed():Void
 {
-        if((hasValue(_ExplosionActorType) != false))
+        if(_IsKilled)
 {
-            createRecycledActor(_ExplosionActorType, actor.getX(), actor.getY(), Script.FRONT);
+            return;
 }
 
-        for(index0 in 0...Std.int(_NumberOfPieces))
-{
-            createRecycledActor(_ShrapnelActorType, actor.getX(), actor.getY(), Script.FRONT);
-            _PieceNumber = asNumber(index0);
-propertyChanged("_PieceNumber", _PieceNumber);
-            getLastCreatedActor().setAnimation("" + ("" + (("" + "p") + ("" + _PieceNumber))));
-}
-
-        recycleActor(actor);
         sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
-        if(_ShakeScreen)
+        _IsKilled = true;
+propertyChanged("_IsKilled", _IsKilled);
+        actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
+        if((actor.getActorValue("Facing Right?") == true))
 {
-            startShakingScreen(0.5 / 100, 0.5);
+            actor.say("Animation Manager", "_customBlock_PlayOnce", [_RightAnimation]);
 }
 
+        else
+{
+            actor.say("Animation Manager", "_customBlock_PlayOnce", [_LeftAnimation]);
+}
+
+}
+
+            public function animationHasFinished ():Bool
+{
+	return _IsKilled &&
+		(!actor.isAnimationPlaying() ||
+		(actor.getAnimation() != _LeftAnimation &&
+		actor.getAnimation() != _RightAnimation));
 }
 
 
@@ -85,22 +88,32 @@ propertyChanged("_PieceNumber", _PieceNumber);
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Shrapnel Actor Type", "_ShrapnelActorType");
-nameMap.set("Explosion Actor Type", "_ExplosionActorType");
+		nameMap.set("Right Animation", "_RightAnimation");
+nameMap.set("Left Animation", "_LeftAnimation");
+nameMap.set("Is Killed?", "_IsKilled");
+_IsKilled = false;
 nameMap.set("SFX", "_SFX");
-nameMap.set("Number Of Pieces", "_NumberOfPieces");
-_NumberOfPieces = 0.0;
-nameMap.set("Piece Number", "_PieceNumber");
-_PieceNumber = 0.0;
 nameMap.set("Actor", "actor");
-nameMap.set("Shake Screen", "_ShakeScreen");
-_ShakeScreen = false;
 
 	}
 	
 	override public function init()
 	{
-		
+		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if(animationHasFinished ())
+{
+            recycleActor(actor);
+            if(actor.isBehaviorEnabled("Reload On Death PM"))
+{
+                actor.say("Reload On Death PM", "_customEvent_" + "Reload");
+}
+
+}
+
+}
+});
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)
