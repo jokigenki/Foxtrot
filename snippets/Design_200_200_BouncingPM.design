@@ -7,14 +7,18 @@
                     <group eventID="1" id="-1">
                         <if comment="false" x="37" y="65">
                             <group eventID="1" id="-1">
-                                <custom-94 comment="false" x="48" y="108">
+                                <custom-816 comment="false" x="48" y="108">
+                                    <get-val-200-5 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-200-4 comment="false" id="1" x="0" y="0"/>
+                                </custom-816>
+                                <custom-94 comment="false" x="48" y="133">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Jump"/>
                                     <true comment="false" id="2" x="0" y="0"/>
                                 </custom-94>
-                                <dolater comment="false" x="48" y="140">
+                                <dolater comment="false" x="48" y="165">
                                     <group eventID="1" id="-1">
-                                        <custom-94 comment="false" x="59" y="172">
+                                        <custom-94 comment="false" x="59" y="197">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="Jump"/>
                                             <false comment="false" id="2" x="0" y="0"/>
@@ -25,13 +29,12 @@
                                 </dolater>
                             </group>
                             <and comment="false" id="0" x="0" y="0">
-                                <eq comment="false" id="0" x="0" y="0">
+                                <as-boolean comment="false" id="0" x="0" y="0">
                                     <actor-get-prop comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <int id="1" val="On Ground?"/>
                                     </actor-get-prop>
-                                    <true comment="false" id="1" x="0" y="0"/>
-                                </eq>
+                                </as-boolean>
                                 <not comment="false" id="1" x="0" y="0">
                                     <custom-93 comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
@@ -43,9 +46,9 @@
                     </group>
                     <get-val-200-1 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="240">
+                <else comment="false" x="26" y="265">
                     <group eventID="1" id="-1">
-                        <custom-94 comment="false" x="37" y="260">
+                        <custom-94 comment="false" x="37" y="285">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Jump"/>
                             <false comment="false" id="2" x="0" y="0"/>

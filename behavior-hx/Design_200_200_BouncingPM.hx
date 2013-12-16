@@ -48,6 +48,10 @@ class Design_200_200_BouncingPM extends ActorScript
 public var _IsActive:Bool;
 
 public var _JumpTime:Float;
+
+public var _SFXNumber:Float;
+
+public var _SFXName:String;
     public function _customEvent_Activated():Void
 {
         _IsActive = true;
@@ -69,6 +73,10 @@ propertyChanged("_IsActive", _IsActive);
 _IsActive = false;
 nameMap.set("Jump Time", "_JumpTime");
 _JumpTime = 0.25;
+nameMap.set("SFX Number", "_SFXNumber");
+_SFXNumber = 1;
+nameMap.set("SFX Name", "_SFXName");
+_SFXName = "";
 nameMap.set("Actor", "actor");
 
 	}
@@ -79,8 +87,9 @@ nameMap.set("Actor", "actor");
 if(wrapper.enabled){
         if(_IsActive)
 {
-            if(((actor.getActorValue("On Ground?") == true) && !(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool))))
+            if((asBoolean(actor.getActorValue("On Ground?")) && !(cast((actor.say("Control Adapter PM", "_customBlock_ControlIsOn", ["Jump"])), Bool))))
 {
+                sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_SFXName,_SFXNumber]);
                 actor.say("Control Adapter PM", "_customBlock_SetIsOn", ["Jump",true]);
                 runLater(1000 * _JumpTime, function(timeTask:TimedTask):Void {
                             actor.say("Control Adapter PM", "_customBlock_SetIsOn", ["Jump",false]);

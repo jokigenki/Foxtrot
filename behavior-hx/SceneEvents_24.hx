@@ -66,6 +66,7 @@ public var _IsFunnelClosed:Bool;
             getActor(32).say("Particle Emitter PM", "_customBlock_ChangeParticleCount", [-16]);
 }
 
+        sayToScene("Sound Manager PM", "_customBlock_PlayNamedSound", ["Gloop SFX"]);
         getActor(32).say("Activate On Event PM", "_customEvent_" + "Deactivate");
         getActor(32).say("Activate On Event PM", "_customEvent_" + "Activate");
 }

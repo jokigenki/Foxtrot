@@ -103,14 +103,14 @@ propertyChanged("_CratesLeft", _CratesLeft);
         if((_CratesLeft == 56))
 {
             getActor(299).setValue("Horizontal Oscillation PM", "_XSpeed", 10);
-            getLastCreatedActor().setValue("Random Timed Activation PM", "_MaxTime", 4);
+            getActor(299).setValue("Random Timed Activation PM", "_MaxTime", 4);
 }
 
         else if((_CratesLeft == 28))
 {
             getActor(299).setValue("Horizontal Oscillation PM", "_XSpeed", 12);
-            getLastCreatedActor().setValue("Random Timed Activation PM", "_MinTime", 2);
-            getLastCreatedActor().setValue("Random Timed Activation PM", "_MaxTime", 3);
+            getActor(299).setValue("Random Timed Activation PM", "_MinTime", 2);
+            getActor(299).setValue("Random Timed Activation PM", "_MaxTime", 3);
 }
 
         else if((_CratesLeft == 0))

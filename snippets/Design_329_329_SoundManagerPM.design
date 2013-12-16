@@ -136,6 +136,54 @@
                 <custom-885 comment="false" x="26" y="40">
                     <scenename comment="false" id="0" x="0" y="0"/>
                 </custom-885>
+                <periodic comment="false" x="26" y="65">
+                    <group eventID="7" id="-1">
+                        <if comment="false" x="37" y="92">
+                            <group eventID="7" id="-1">
+                                <if comment="false" x="48" y="117">
+                                    <group eventID="7" id="-1">
+                                        <if comment="false" x="59" y="155">
+                                            <group eventID="7" id="-1">
+                                                <custom-633 comment="false" x="70" y="190">
+                                                    <int id="0" val="0.2"/>
+                                                    <get-val-329-1 comment="false" id="1" x="0" y="0"/>
+                                                    <int id="2" val="0"/>
+                                                </custom-633>
+                                            </group>
+                                            <noteq comment="false" id="0" x="0" y="0">
+                                                <get-game-val-22 comment="false" id="0" x="0" y="0"/>
+                                                <tostring comment="false" id="1" x="0" y="0">
+                                                    <get-val-329-1 comment="false" id="0" x="0" y="0"/>
+                                                </tostring>
+                                            </noteq>
+                                        </if>
+                                        <else comment="false" x="59" y="234">
+                                            <group eventID="7" id="-1">
+                                                <custom-642 comment="false" x="70" y="254"/>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <and comment="false" id="0" x="0" y="0">
+                                        <value comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="1"/>
+                                            <int id="1" val="0"/>
+                                        </value>
+                                        <get-game-val-23 comment="false" id="1" x="0" y="0"/>
+                                    </and>
+                                </if>
+                                <else comment="false" x="48" y="298">
+                                    <group eventID="7" id="-1">
+                                        <custom-635 comment="false" x="59" y="318"/>
+                                    </group>
+                                </else>
+                                <cancel comment="false" x="48" y="350"/>
+                            </group>
+                            <get-game-val-16 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <int id="0" val="0.05"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
             </group>
         </init>
     </group>
@@ -666,60 +714,4 @@
         </receiver-31-884>
     </group>
     <group eventID="24" id="-1"/>
-    <group eventID="27" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="27" id="-1">
-                <periodic comment="false" x="26" y="40">
-                    <group eventID="7" id="-1">
-                        <if comment="false" x="37" y="67">
-                            <group eventID="7" id="-1">
-                                <if comment="false" x="48" y="92">
-                                    <group eventID="7" id="-1">
-                                        <if comment="false" x="59" y="130">
-                                            <group eventID="7" id="-1">
-                                                <custom-633 comment="false" x="70" y="165">
-                                                    <int id="0" val="0.2"/>
-                                                    <get-val-329-1 comment="false" id="1" x="0" y="0"/>
-                                                    <int id="2" val="0"/>
-                                                </custom-633>
-                                            </group>
-                                            <noteq comment="false" id="0" x="0" y="0">
-                                                <get-game-val-22 comment="false" id="0" x="0" y="0"/>
-                                                <tostring comment="false" id="1" x="0" y="0">
-                                                    <get-val-329-1 comment="false" id="0" x="0" y="0"/>
-                                                </tostring>
-                                            </noteq>
-                                        </if>
-                                        <else comment="false" x="59" y="209">
-                                            <group eventID="7" id="-1">
-                                                <custom-642 comment="false" x="70" y="229"/>
-                                            </group>
-                                        </else>
-                                    </group>
-                                    <and comment="false" id="0" x="0" y="0">
-                                        <value comment="false" id="0" x="0" y="0">
-                                            <int id="0" val="1"/>
-                                            <int id="1" val="0"/>
-                                        </value>
-                                        <get-game-val-23 comment="false" id="1" x="0" y="0"/>
-                                    </and>
-                                </if>
-                                <else comment="false" x="48" y="273">
-                                    <group eventID="7" id="-1">
-                                        <custom-635 comment="false" x="59" y="293"/>
-                                    </group>
-                                </else>
-                                <cancel comment="false" x="48" y="325"/>
-                            </group>
-                            <get-game-val-16 comment="false" id="0" x="0" y="0"/>
-                        </if>
-                    </group>
-                    <int id="0" val="0.05"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </periodic>
-            </group>
-            <int id="0" val="SoundLevelsReady"/>
-        </event-custom>
-    </group>
-    <group eventID="27" id="-1"/>
 </groups>

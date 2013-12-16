@@ -51,6 +51,14 @@ public var _Liquidity:Float;
 
 public var _AllowSwimming:Bool;
 
+public var _WasHit:Bool;
+
+public var _IsHit:Bool;
+
+public var _SplashSFXName:String;
+
+public var _SplashSFXNumber:Float;
+
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
@@ -61,13 +69,50 @@ nameMap.set("Liquidity", "_Liquidity");
 _Liquidity = 0.0;
 nameMap.set("Allow Swimming?", "_AllowSwimming");
 _AllowSwimming = false;
+nameMap.set("Was Hit?", "_WasHit");
+_WasHit = false;
+nameMap.set("Is Hit?", "_IsHit");
+_IsHit = false;
+nameMap.set("Splash SFX Name", "_SplashSFXName");
+_SplashSFXName = "";
+nameMap.set("Splash SFX Number", "_SplashSFXNumber");
+_SplashSFXNumber = 1;
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		
+		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if(_IsHit)
+{
+            if(!(_WasHit))
+{
+                sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_SplashSFXName,_SplashSFXNumber]);
+                _WasHit = true;
+propertyChanged("_WasHit", _WasHit);
+}
+
+}
+
+        else
+{
+            _WasHit = false;
+propertyChanged("_WasHit", _WasHit);
+}
+
+        _IsHit = false;
+propertyChanged("_IsHit", _IsHit);
+}
+});
+    addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        _IsHit = true;
+propertyChanged("_IsHit", _IsHit);
+}
+});
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

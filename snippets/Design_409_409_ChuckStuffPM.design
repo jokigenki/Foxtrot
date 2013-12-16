@@ -3,12 +3,70 @@
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-val-409-3 comment="false" x="26" y="40">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <dolater comment="false" x="37" y="70">
+                            <group eventID="2" id="-1">
+                                <custom-889 comment="false" x="48" y="102">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-889>
+                            </group>
+                            <get-val-409-12 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-409-12 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="153">
+                    <group eventID="2" id="-1">
+                        <custom-889 comment="false" x="37" y="173">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-889>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="Deactivated"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <set-val-409-10 comment="false" x="37" y="83">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-409-10>
+                        <setanim comment="false" x="37" y="108">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-409-11 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-409-10 comment="false" id="0" x="0" y="0"/>
+                        <not comment="false" id="1" x="0" y="0">
+                            <is-anim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </is-anim>
+                        </not>
+                    </and>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <receiver-1-889 comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-409-3 comment="false" x="26" y="45">
                     <custom-538 comment="false" id="0" x="0" y="0">
                         <get-val-409-1 comment="false" id="0" x="0" y="0"/>
                     </custom-538>
                 </set-val-409-3>
-                <create-actor3 comment="false" x="26" y="70">
+                <create-actor3 comment="false" x="26" y="75">
                     <code-short comment="false" id="0" x="0" y="0">
                         <int id="0" val="getActorTypeByName(&amp;quot;&amp;quot; + _ActorTypeNameToChuck)"/>
                     </code-short>
@@ -16,14 +74,17 @@
                         <ACTOR eid="this" id="0"/>
                         <int id="1" val="2"/>
                     </get-xy>
-                    <get-xy comment="false" id="2" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="3"/>
-                    </get-xy>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <int id="1" val="10"/>
+                    </plus>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <push-shove comment="false" x="26" y="110">
-                    <ACTOR eid="this" id="0"/>
+                <push-shove comment="false" x="26" y="120">
+                    <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
                     <randint comment="false" id="2" x="0" y="0">
                         <get-val-409-4 comment="false" id="0" x="0" y="0"/>
@@ -35,9 +96,28 @@
                     </randint>
                     <get-val-409-8 comment="false" id="4" x="0" y="0"/>
                 </push-shove>
+                <if comment="false" x="26" y="157">
+                    <group eventID="2" id="-1">
+                        <set-val-409-10 comment="false" x="37" y="195">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-409-10>
+                        <setanim comment="false" x="37" y="220">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-409-9 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                        <get-val-409-9 comment="false" id="1" x="0" y="0"/>
+                    </noteq>
+                </if>
             </group>
-            <int id="0" val="Deactivated"/>
-        </event-custom>
+            <get-byobval-409-889-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-889>
     </group>
-    <group eventID="2" id="-1"/>
+    <group eventID="4" id="-1">
+        <get-byobval-409-889-0 comment="false" x="0" y="0"/>
+    </group>
 </groups>

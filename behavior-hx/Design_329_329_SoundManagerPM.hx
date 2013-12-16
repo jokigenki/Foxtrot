@@ -54,37 +54,6 @@ public var _Count:Float;
 public var _LocalSceneSounds:Array<Dynamic>;
 
 public var _Sound:Sound;
-    public function _customEvent_SoundLevelsReady():Void
-{
-        runPeriodically(1000 * 0.05, function(timeTask:TimedTask):Void {
-                    if(getGameAttribute("Game Was Loaded"))
-{
-                        if(((hasValue(_Music) != false) && getGameAttribute("Is Music On?")))
-{
-                            if(!(getGameAttribute("Current Music") == ("" + _Music)))
-{
-                                sayToScene("Sound Manager PM", "_customBlock_FadeOutCurrent", [0.2,_Music,0]);
-}
-
-                            else
-{
-                                sayToScene("Sound Manager PM", "_customBlock_LoopCurrentMusic");
-}
-
-}
-
-                        else
-{
-                            sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
-}
-
-                        timeTask.repeats = false;
-return;
-}
-
-}, null);
-}
-
     
 
 /* Params are:__Music */
@@ -466,6 +435,33 @@ nameMap.set("Sound", "_Sound");
 	override public function init()
 	{
 		            sayToScene("Sound Manager PM", "_customBlock_StopAllOtherSceneSounds", [getCurrentSceneName()]);
+        runPeriodically(1000 * 0.05, function(timeTask:TimedTask):Void {
+                    if(getGameAttribute("Game Was Loaded"))
+{
+                        if(((hasValue(_Music) != false) && getGameAttribute("Is Music On?")))
+{
+                            if(!(getGameAttribute("Current Music") == ("" + _Music)))
+{
+                                sayToScene("Sound Manager PM", "_customBlock_FadeOutCurrent", [0.2,_Music,0]);
+}
+
+                            else
+{
+                                sayToScene("Sound Manager PM", "_customBlock_LoopCurrentMusic");
+}
+
+}
+
+                        else
+{
+                            sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
+}
+
+                        timeTask.repeats = false;
+return;
+}
+
+}, null);
 
 	}	      	
 	
