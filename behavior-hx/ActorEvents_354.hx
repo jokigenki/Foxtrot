@@ -42,7 +42,7 @@ import motion.easing.Sine;
 
 
 
-class ActorEvents_695 extends ActorScript
+class ActorEvents_354 extends ActorScript
 {          	
 	
  
