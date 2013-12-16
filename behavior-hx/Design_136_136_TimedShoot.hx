@@ -152,7 +152,7 @@ nameMap.set("SFX Name", "_SFXName");
 _SFXName = "";
 nameMap.set("Actor", "actor");
 nameMap.set("SFX Count", "_SFXCount");
-_SFXCount = 1;
+_SFXCount = 1.0;
 
 	}
 	

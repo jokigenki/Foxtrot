@@ -107,9 +107,9 @@ nameMap.set("Minimum Velocity For Sound", "_MinimumVelocityForSound");
 _MinimumVelocityForSound = -10.0;
 nameMap.set("Stored X Speed", "_StoredXSpeed");
 _StoredXSpeed = 0.0;
-nameMap.set("Actor", "actor");
 nameMap.set("Stored Y Speed", "_StoredYSpeed");
 _StoredYSpeed = 0.0;
+nameMap.set("Actor", "actor");
 
 	}
 	

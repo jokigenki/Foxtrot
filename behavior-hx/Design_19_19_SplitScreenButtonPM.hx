@@ -350,6 +350,11 @@ propertyChanged("_HasJumped", _HasJumped);
 
 }
 });
+    addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        g.drawString("" + _LastXTouch, 100, 25);
+}
+});
 
 	}	      	
 	

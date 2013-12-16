@@ -284,7 +284,7 @@ _PlaceSpawnedActorBehind = false;
 nameMap.set("Switch To Animation Named", "_SwitchToAnimationNamed");
 _SwitchToAnimationNamed = "";
 nameMap.set("Spawn SFX Number", "_SpawnSFXNumber");
-_SpawnSFXNumber = 1;
+_SpawnSFXNumber = 1.0;
 nameMap.set("Spawn SFX Name", "_SpawnSFXName");
 _SpawnSFXName = "";
 
