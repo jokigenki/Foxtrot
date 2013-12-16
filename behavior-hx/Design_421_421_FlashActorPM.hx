@@ -58,7 +58,6 @@ public var _IsActive:Bool;
 public var _FlashStrength:Float;
     public function _customEvent_Flash():Void
 {
-        trace("" + "FLASH!");
         _IsActive = true;
 propertyChanged("_IsActive", _IsActive);
         _FlashCount = asNumber(0);
