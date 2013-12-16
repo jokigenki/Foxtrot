@@ -45,9 +45,9 @@ import motion.easing.Sine;
 class Design_174_174 extends ActorScript
 {          	
 	
-public var _SFXOff:Sound;
-
 public var _IsActive:Bool;
+
+public var _SFXOff:Sound;
 
 public var _ActiveAnimation:String;
 
@@ -131,9 +131,9 @@ propertyChanged("_IsActive", _IsActive);
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("SFX Off", "_SFXOff");
-nameMap.set("Is Active?", "_IsActive");
+		nameMap.set("Is Active?", "_IsActive");
 _IsActive = false;
+nameMap.set("SFX Off", "_SFXOff");
 nameMap.set("Active Animation", "_ActiveAnimation");
 nameMap.set("Inactive Animation", "_InactiveAnimation");
 nameMap.set("Pressed Animation", "_PressedAnimation");
@@ -143,9 +143,9 @@ nameMap.set("Switch Target IDs", "_SwitchTargetIDs");
 _SwitchTargetIDs = [];
 nameMap.set("Has Been Switched?", "_HasBeenSwitched");
 _HasBeenSwitched = false;
-nameMap.set("Actor", "actor");
 nameMap.set("SFX", "_SFX");
 _SFX = getSound(800);
+nameMap.set("Actor", "actor");
 
 	}
 	

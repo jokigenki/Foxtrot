@@ -148,9 +148,9 @@ nameMap.set("ResetToIdle", "_ResetToIdle");
 _ResetToIdle = false;
 nameMap.set("Projectile Delay After Shoot Animation Starts", "_ProjectileDelayAfterShootAnimationStarts");
 _ProjectileDelayAfterShootAnimationStarts = 0.0;
+nameMap.set("Actor", "actor");
 nameMap.set("SFX Name", "_SFXName");
 _SFXName = "";
-nameMap.set("Actor", "actor");
 nameMap.set("SFX Count", "_SFXCount");
 _SFXCount = 1.0;
 
