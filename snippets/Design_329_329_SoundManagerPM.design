@@ -100,22 +100,25 @@
             <group eventID="6" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="6" id="-1">
-                        <control-sound-channel comment="false" x="37" y="65">
+                        <print comment="false" x="37" y="65">
+                            <int id="0" val="STOP MUSIC"/>
+                        </print>
+                        <control-sound-channel comment="false" x="37" y="85">
                             <int id="0" val="0"/>
                             <int id="1" val="0"/>
                         </control-sound-channel>
-                        <set-game-val-22 comment="false" x="37" y="92">
+                        <set-game-val-22 comment="false" x="37" y="112">
                             <int id="0" val="None"/>
                         </set-game-val-22>
-                        <set-game-val-23 comment="false" x="37" y="112">
+                        <set-game-val-23 comment="false" x="37" y="132">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-23>
                     </group>
                     <get-game-val-23 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <if comment="false" x="26" y="149">
+                <if comment="false" x="26" y="169">
                     <group eventID="4" id="-1">
-                        <say comment="false" x="37" y="182">
+                        <say comment="false" x="37" y="202">
                             <ACTOR eid="var" id="0" vid="2"/>
                             <int id="1" val="Music Toggle PM"/>
                             <int id="2" val="MusicOff"/>

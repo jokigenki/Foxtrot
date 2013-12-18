@@ -10,21 +10,9 @@
                 <set-val-349-19 comment="false" x="26" y="67">
                     <int id="0" val="Inactive"/>
                 </set-val-349-19>
-                <set-val-349-29 comment="false" x="26" y="87">
-                    <get-xy comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="0"/>
-                    </get-xy>
-                </set-val-349-29>
-                <set-val-349-30 comment="false" x="26" y="120">
-                    <get-xy comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="1"/>
-                    </get-xy>
-                </set-val-349-30>
-                <if comment="false" x="26" y="153">
+                <if comment="false" x="26" y="87">
                     <group eventID="1" id="-1">
-                        <custom-689 comment="false" x="37" y="178">
+                        <custom-689 comment="false" x="37" y="112">
                             <ACTOR eid="this" id="0"/>
                         </custom-689>
                     </group>
@@ -629,15 +617,19 @@
                         <set-val-349-12 comment="false" x="37" y="123">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-349-12>
-                        <setangle comment="false" x="37" y="150">
+                        <backforward comment="false" x="37" y="150">
+                            <ACTOR eid="var" id="0" vid="12"/>
+                            <int id="1" val="3"/>
+                        </backforward>
+                        <setangle comment="false" x="37" y="177">
                             <ACTOR eid="var" id="0" vid="12"/>
                             <get-val-349-1 comment="false" id="1" x="0" y="0"/>
                         </setangle>
-                        <add-list comment="false" x="37" y="182">
+                        <add-list comment="false" x="37" y="209">
                             <get-val-349-13 comment="false" id="0" x="0" y="0"/>
                             <get-val-349-12 comment="false" id="1" x="0" y="0"/>
                         </add-list>
-                        <add-list comment="false" x="37" y="207">
+                        <add-list comment="false" x="37" y="234">
                             <get-val-349-22 comment="false" id="0" x="0" y="0"/>
                             <minus comment="false" id="1" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
@@ -650,7 +642,7 @@
                                 </get-xy>
                             </minus>
                         </add-list>
-                        <add-list comment="false" x="37" y="245">
+                        <add-list comment="false" x="37" y="272">
                             <get-val-349-23 comment="false" id="0" x="0" y="0"/>
                             <minus comment="false" id="1" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
@@ -663,18 +655,18 @@
                                 </get-xy>
                             </minus>
                         </add-list>
-                        <add-list comment="false" x="37" y="283">
+                        <add-list comment="false" x="37" y="310">
                             <get-val-349-25 comment="false" id="0" x="0" y="0"/>
                             <getdir comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="var" id="0" vid="12"/>
                             </getdir>
                         </add-list>
-                        <if comment="false" x="37" y="316">
+                        <if comment="false" x="37" y="343">
                             <group eventID="2" id="-1">
-                                <set-val-349-37 comment="false" x="48" y="346">
+                                <set-val-349-37 comment="false" x="48" y="373">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-349-37>
-                                <scaleTo comment="false" x="48" y="371">
+                                <scaleTo comment="false" x="48" y="398">
                                     <ACTOR eid="var" id="0" vid="12"/>
                                     <int id="1" val="100"/>
                                     <int id="2" val="-100"/>
@@ -687,12 +679,12 @@
                                 <int id="1" val="0.5"/>
                             </less>
                         </if>
-                        <else comment="false" x="37" y="410">
+                        <else comment="false" x="37" y="437">
                             <group eventID="2" id="-1">
-                                <set-val-349-37 comment="false" x="48" y="430">
+                                <set-val-349-37 comment="false" x="48" y="457">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-349-37>
-                                <scaleTo comment="false" x="48" y="455">
+                                <scaleTo comment="false" x="48" y="482">
                                     <ACTOR eid="var" id="0" vid="12"/>
                                     <int id="1" val="100"/>
                                     <int id="2" val="100"/>
@@ -707,24 +699,24 @@
                         <int id="1" val="1"/>
                     </value>
                 </if>
-                <if comment="false" x="26" y="506">
+                <if comment="false" x="26" y="533">
                     <group eventID="6" id="-1">
-                        <set-val-349-7 comment="false" x="37" y="536">
+                        <set-val-349-7 comment="false" x="37" y="563">
                             <randint comment="false" id="0" x="0" y="0">
                                 <int id="0" val="0"/>
                                 <int id="1" val="2"/>
                             </randint>
                         </set-val-349-7>
-                        <if comment="false" x="37" y="561">
+                        <if comment="false" x="37" y="588">
                             <group eventID="1" id="-1">
-                                <set-val-349-6 comment="false" x="48" y="591">
+                                <set-val-349-6 comment="false" x="48" y="618">
                                     <custom-678 comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <get-val-349-26 comment="false" id="1" x="0" y="0"/>
                                         <int id="2" val="-90"/>
                                     </custom-678>
                                 </set-val-349-6>
-                                <set-val-349-36 comment="false" x="48" y="629">
+                                <set-val-349-36 comment="false" x="48" y="656">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-349-36>
                             </group>
@@ -733,16 +725,16 @@
                                 <int id="1" val="0"/>
                             </eq>
                         </if>
-                        <else-if comment="false" x="37" y="666">
+                        <else-if comment="false" x="37" y="693">
                             <group eventID="1" id="-1">
-                                <set-val-349-6 comment="false" x="48" y="696">
+                                <set-val-349-6 comment="false" x="48" y="723">
                                     <custom-678 comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <get-val-349-26 comment="false" id="1" x="0" y="0"/>
                                         <int id="2" val="90"/>
                                     </custom-678>
                                 </set-val-349-6>
-                                <set-val-349-36 comment="false" x="48" y="734">
+                                <set-val-349-36 comment="false" x="48" y="761">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-349-36>
                             </group>
@@ -751,9 +743,9 @@
                                 <int id="1" val="1"/>
                             </eq>
                         </else-if>
-                        <else comment="false" x="37" y="771">
+                        <else comment="false" x="37" y="798">
                             <group eventID="1" id="-1">
-                                <set-val-349-6 comment="false" x="48" y="791">
+                                <set-val-349-6 comment="false" x="48" y="818">
                                     <get-val-349-26 comment="false" id="0" x="0" y="0"/>
                                 </set-val-349-6>
                             </group>
@@ -763,37 +755,37 @@
                         <get-val-349-36 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <else comment="false" x="26" y="840">
+                <else comment="false" x="26" y="867">
                     <group eventID="6" id="-1">
-                        <set-val-349-36 comment="false" x="37" y="860">
+                        <set-val-349-36 comment="false" x="37" y="887">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-349-36>
-                        <set-val-349-6 comment="false" x="37" y="885">
+                        <set-val-349-6 comment="false" x="37" y="912">
                             <get-val-349-26 comment="false" id="0" x="0" y="0"/>
                         </set-val-349-6>
                     </group>
                 </else>
-                <set-val-349-10 comment="false" x="26" y="922">
+                <set-val-349-10 comment="false" x="26" y="949">
                     <custom-686 comment="false" id="0" x="0" y="0">
                         <ACTOR eid="this" id="0"/>
                     </custom-686>
                 </set-val-349-10>
-                <custom-667 comment="false" x="26" y="962">
+                <custom-667 comment="false" x="26" y="989">
                     <ACTOR eid="this" id="0"/>
                 </custom-667>
-                <set-val-349-26 comment="false" x="26" y="989">
+                <set-val-349-26 comment="false" x="26" y="1016">
                     <get-val-349-6 comment="false" id="0" x="0" y="0"/>
                 </set-val-349-26>
-                <incdec comment="false" x="26" y="1014">
+                <incdec comment="false" x="26" y="1041">
                     <int id="0" val="5"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1"/>
                 </incdec>
-                <add-list comment="false" x="26" y="1041">
+                <add-list comment="false" x="26" y="1068">
                     <get-val-349-13 comment="false" id="0" x="0" y="0"/>
                     <get-val-349-10 comment="false" id="1" x="0" y="0"/>
                 </add-list>
-                <add-list comment="false" x="26" y="1066">
+                <add-list comment="false" x="26" y="1093">
                     <get-val-349-22 comment="false" id="0" x="0" y="0"/>
                     <minus comment="false" id="1" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
@@ -806,7 +798,7 @@
                         </get-xy>
                     </minus>
                 </add-list>
-                <add-list comment="false" x="26" y="1104">
+                <add-list comment="false" x="26" y="1131">
                     <get-val-349-23 comment="false" id="0" x="0" y="0"/>
                     <minus comment="false" id="1" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
@@ -819,27 +811,27 @@
                         </get-xy>
                     </minus>
                 </add-list>
-                <add-list comment="false" x="26" y="1142">
+                <add-list comment="false" x="26" y="1169">
                     <get-val-349-25 comment="false" id="0" x="0" y="0"/>
                     <getdir comment="false" id="1" x="0" y="0">
                         <ACTOR eid="var" id="0" vid="12"/>
                     </getdir>
                 </add-list>
-                <if comment="false" x="26" y="1175">
+                <if comment="false" x="26" y="1202">
                     <group eventID="1" id="-1">
-                        <clear comment="false" x="37" y="1205">
+                        <clear comment="false" x="37" y="1232">
                             <int id="0" val="10"/>
                         </clear>
-                        <set-val-349-19 comment="false" x="37" y="1232">
+                        <set-val-349-19 comment="false" x="37" y="1259">
                             <int id="0" val="Waiting"/>
                         </set-val-349-19>
-                        <custom-694 comment="false" x="37" y="1252">
+                        <custom-694 comment="false" x="37" y="1279">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="GooseHeadComplete"/>
                         </custom-694>
-                        <dolater comment="false" x="37" y="1279">
+                        <dolater comment="false" x="37" y="1306">
                             <group eventID="6" id="-1">
-                                <set-val-349-19 comment="false" x="48" y="1311">
+                                <set-val-349-19 comment="false" x="48" y="1338">
                                     <int id="0" val="Removing"/>
                                 </set-val-349-19>
                             </group>
@@ -997,27 +989,45 @@
                 <set-val-349-9 comment="false" x="26" y="130">
                     <int id="0" val="0"/>
                 </set-val-349-9>
-                <set-val-349-13 comment="false" x="26" y="150">
+                <set-val-349-31 comment="false" x="26" y="150">
+                    <int id="0" val="0"/>
+                </set-val-349-31>
+                <set-val-349-32 comment="false" x="26" y="170">
+                    <int id="0" val="0"/>
+                </set-val-349-32>
+                <set-val-349-13 comment="false" x="26" y="190">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-349-13>
-                <set-val-349-22 comment="false" x="26" y="175">
+                <set-val-349-22 comment="false" x="26" y="215">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-349-22>
-                <set-val-349-23 comment="false" x="26" y="200">
+                <set-val-349-23 comment="false" x="26" y="240">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-349-23>
-                <set-val-349-25 comment="false" x="26" y="225">
+                <set-val-349-25 comment="false" x="26" y="265">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-349-25>
-                <set-val-349-26 comment="false" x="26" y="250">
+                <set-val-349-26 comment="false" x="26" y="290">
                     <get-val-349-1 comment="false" id="0" x="0" y="0"/>
                 </set-val-349-26>
-                <if comment="false" x="26" y="275">
+                <set-val-349-29 comment="false" x="26" y="315">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-349-29>
+                <set-val-349-30 comment="false" x="26" y="348">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-349-30>
+                <if comment="false" x="26" y="381">
                     <group eventID="9" id="-1">
-                        <set-val-349-14 comment="false" x="37" y="305">
+                        <set-val-349-14 comment="false" x="37" y="411">
                             <int id="0" val="8"/>
                         </set-val-349-14>
-                        <set-val-349-15 comment="false" x="37" y="325">
+                        <set-val-349-15 comment="false" x="37" y="431">
                             <int id="0" val="0"/>
                         </set-val-349-15>
                     </group>
@@ -1026,12 +1036,12 @@
                         <int id="1" val="0"/>
                     </eq>
                 </if>
-                <else-if comment="false" x="26" y="357">
+                <else-if comment="false" x="26" y="463">
                     <group eventID="9" id="-1">
-                        <set-val-349-14 comment="false" x="37" y="387">
+                        <set-val-349-14 comment="false" x="37" y="493">
                             <int id="0" val="0"/>
                         </set-val-349-14>
-                        <set-val-349-15 comment="false" x="37" y="407">
+                        <set-val-349-15 comment="false" x="37" y="513">
                             <int id="0" val="8"/>
                         </set-val-349-15>
                     </group>
@@ -1040,12 +1050,12 @@
                         <int id="1" val="90"/>
                     </eq>
                 </else-if>
-                <else-if comment="false" x="26" y="439">
+                <else-if comment="false" x="26" y="545">
                     <group eventID="9" id="-1">
-                        <set-val-349-14 comment="false" x="37" y="469">
+                        <set-val-349-14 comment="false" x="37" y="575">
                             <int id="0" val="-8"/>
                         </set-val-349-14>
-                        <set-val-349-15 comment="false" x="37" y="489">
+                        <set-val-349-15 comment="false" x="37" y="595">
                             <int id="0" val="0"/>
                         </set-val-349-15>
                     </group>
@@ -1054,12 +1064,12 @@
                         <int id="1" val="180"/>
                     </eq>
                 </else-if>
-                <else-if comment="false" x="26" y="521">
+                <else-if comment="false" x="26" y="627">
                     <group eventID="9" id="-1">
-                        <set-val-349-14 comment="false" x="37" y="551">
+                        <set-val-349-14 comment="false" x="37" y="657">
                             <int id="0" val="0"/>
                         </set-val-349-14>
-                        <set-val-349-15 comment="false" x="37" y="571">
+                        <set-val-349-15 comment="false" x="37" y="677">
                             <int id="0" val="-8"/>
                         </set-val-349-15>
                     </group>
@@ -1068,11 +1078,11 @@
                         <int id="1" val="270"/>
                     </eq>
                 </else-if>
-                <periodic comment="false" x="26" y="603">
+                <periodic comment="false" x="26" y="709">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="635">
+                        <if comment="false" x="37" y="741">
                             <group eventID="1" id="-1">
-                                <set-val-349-34 comment="false" x="48" y="665">
+                                <set-val-349-34 comment="false" x="48" y="771">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-349-34>
                             </group>
@@ -1081,9 +1091,9 @@
                                 <int id="1" val="Making"/>
                             </eq>
                         </if>
-                        <else-if comment="false" x="37" y="702">
+                        <else-if comment="false" x="37" y="808">
                             <group eventID="1" id="-1">
-                                <set-val-349-35 comment="false" x="48" y="732">
+                                <set-val-349-35 comment="false" x="48" y="838">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-349-35>
                             </group>
@@ -1092,9 +1102,9 @@
                                 <int id="1" val="Removing"/>
                             </eq>
                         </else-if>
-                        <else-if comment="false" x="37" y="769">
+                        <else-if comment="false" x="37" y="875">
                             <group eventID="9" id="-1">
-                                <comment-short comment="false" x="48" y="799">
+                                <comment-short comment="false" x="48" y="905">
                                     <int id="0" val="Do nothing"/>
                                 </comment-short>
                             </group>
@@ -1103,20 +1113,20 @@
                                 <int id="1" val="Waiting"/>
                             </eq>
                         </else-if>
-                        <else comment="false" x="37" y="831">
+                        <else comment="false" x="37" y="937">
                             <group eventID="1" id="-1">
-                                <custom-694 comment="false" x="48" y="851">
+                                <custom-694 comment="false" x="48" y="957">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="GooseHeadRemoved"/>
                                 </custom-694>
-                                <if comment="false" x="48" y="878">
+                                <if comment="false" x="48" y="984">
                                     <group eventID="7" id="-1">
-                                        <if comment="false" x="59" y="908">
+                                        <if comment="false" x="59" y="1014">
                                             <group eventID="7" id="-1">
-                                                <set-val-349-20 comment="false" x="70" y="938">
+                                                <set-val-349-20 comment="false" x="70" y="1044">
                                                     <true comment="false" id="0" x="0" y="0"/>
                                                 </set-val-349-20>
-                                                <custom-689 comment="false" x="70" y="963">
+                                                <custom-689 comment="false" x="70" y="1069">
                                                     <ACTOR eid="this" id="0"/>
                                                 </custom-689>
                                             </group>
@@ -1125,14 +1135,14 @@
                                                 <int id="1" val="0"/>
                                             </eq>
                                         </if>
-                                        <else comment="false" x="59" y="1002">
+                                        <else comment="false" x="59" y="1108">
                                             <group eventID="7" id="-1">
-                                                <dolater comment="false" x="70" y="1022">
+                                                <dolater comment="false" x="70" y="1128">
                                                     <group eventID="7" id="-1">
-                                                        <set-val-349-20 comment="false" x="81" y="1054">
+                                                        <set-val-349-20 comment="false" x="81" y="1160">
                                                             <true comment="false" id="0" x="0" y="0"/>
                                                         </set-val-349-20>
-                                                        <custom-689 comment="false" x="81" y="1079">
+                                                        <custom-689 comment="false" x="81" y="1185">
                                                             <ACTOR eid="this" id="0"/>
                                                         </custom-689>
                                                     </group>
@@ -1147,7 +1157,7 @@
                                         <int id="1" val="-1"/>
                                     </more>
                                 </if>
-                                <cancel comment="false" x="48" y="1142"/>
+                                <cancel comment="false" x="48" y="1248"/>
                             </group>
                         </else>
                     </group>
@@ -1192,7 +1202,52 @@
     <group eventID="12" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="12" id="-1">
-                <set-val-349-31 comment="false" x="26" y="40">
+                <for-each comment="false" x="26" y="40">
+                    <group eventID="12" id="-1">
+                        <set-xy comment="false" x="37" y="65">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <for-each-item comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                    <get-val-349-31 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                    <get-val-349-29 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </plus>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="120">
+                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <for-each-item comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <get-val-349-32 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <minus comment="false" id="1" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <get-val-349-30 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </plus>
+                        </set-xy>
+                    </group>
+                    <get-val-349-13 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <set-val-349-31 comment="false" x="26" y="187">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -1201,7 +1256,7 @@
                         <get-val-349-29 comment="false" id="1" x="0" y="0"/>
                     </minus>
                 </set-val-349-31>
-                <set-val-349-32 comment="false" x="26" y="78">
+                <set-val-349-32 comment="false" x="26" y="225">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
@@ -1210,65 +1265,26 @@
                         <get-val-349-30 comment="false" id="1" x="0" y="0"/>
                     </minus>
                 </set-val-349-32>
-                <for-each comment="false" x="26" y="116">
+                <if comment="false" x="26" y="263">
                     <group eventID="12" id="-1">
-                        <set-xy comment="false" x="37" y="141">
-                            <for-each-item comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="0"/>
-                            <plus comment="false" id="2" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
-                                    <for-each-item comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="0"/>
-                                </get-xy>
-                                <get-val-349-31 comment="false" id="1" x="0" y="0"/>
-                            </plus>
-                        </set-xy>
-                        <set-xy comment="false" x="37" y="191">
-                            <for-each-item comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="1"/>
-                            <plus comment="false" id="2" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
-                                    <for-each-item comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="1"/>
-                                </get-xy>
-                                <get-val-349-32 comment="false" id="1" x="0" y="0"/>
-                            </plus>
-                        </set-xy>
-                    </group>
-                    <get-val-349-13 comment="false" id="0" x="0" y="0"/>
-                </for-each>
-                <set-val-349-29 comment="false" x="26" y="253">
-                    <get-xy comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="0"/>
-                    </get-xy>
-                </set-val-349-29>
-                <set-val-349-30 comment="false" x="26" y="286">
-                    <get-xy comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="1"/>
-                    </get-xy>
-                </set-val-349-30>
-                <if comment="false" x="26" y="319">
-                    <group eventID="12" id="-1">
-                        <custom-687 comment="false" x="37" y="344">
+                        <custom-687 comment="false" x="37" y="288">
                             <ACTOR eid="this" id="0"/>
                         </custom-687>
                     </group>
                     <get-val-349-34 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else-if comment="false" x="26" y="383">
+                <else-if comment="false" x="26" y="327">
                     <group eventID="12" id="-1">
-                        <custom-688 comment="false" x="37" y="408">
+                        <custom-688 comment="false" x="37" y="352">
                             <ACTOR eid="this" id="0"/>
                         </custom-688>
                     </group>
                     <get-val-349-35 comment="false" id="0" x="0" y="0"/>
                 </else-if>
-                <set-val-349-34 comment="false" x="26" y="447">
+                <set-val-349-34 comment="false" x="26" y="391">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-349-34>
-                <set-val-349-35 comment="false" x="26" y="472">
+                <set-val-349-35 comment="false" x="26" y="416">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-349-35>
             </group>

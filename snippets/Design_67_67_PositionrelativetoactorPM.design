@@ -3,37 +3,21 @@
     <group eventID="1" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-dxy comment="false" x="26" y="40">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="0"/>
-                    <get-dxy comment="false" id="2" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="3"/>
-                        <int id="1" val="0"/>
-                    </get-dxy>
-                </set-dxy>
-                <set-dxy comment="false" x="26" y="80">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                    <get-dxy comment="false" id="2" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="3"/>
-                        <int id="1" val="1"/>
-                    </get-dxy>
-                </set-dxy>
-                <if comment="false" x="26" y="120">
+                <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="153">
+                        <if comment="false" x="37" y="73">
                             <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="183">
+                                <incdec comment="false" x="48" y="103">
                                     <int id="0" val="1"/>
                                     <int id="1" val="1"/>
                                     <get-val-67-4 comment="false" id="2" x="0" y="0"/>
                                 </incdec>
-                                <incdec comment="false" x="48" y="215">
+                                <incdec comment="false" x="48" y="135">
                                     <int id="0" val="1"/>
                                     <int id="1" val="0"/>
                                     <get-val-67-5 comment="false" id="2" x="0" y="0"/>
                                 </incdec>
-                                <set-val-67-6 comment="false" x="48" y="247">
+                                <set-val-67-6 comment="false" x="48" y="167">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-67-6>
                             </group>
@@ -47,21 +31,21 @@
                         <int id="1" val="Facing Right?"/>
                     </actor-get-prop>
                 </if>
-                <else comment="false" x="26" y="296">
+                <else comment="false" x="26" y="216">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="316">
+                        <if comment="false" x="37" y="236">
                             <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="341">
+                                <incdec comment="false" x="48" y="261">
                                     <int id="0" val="1"/>
                                     <int id="1" val="1"/>
                                     <get-val-67-5 comment="false" id="2" x="0" y="0"/>
                                 </incdec>
-                                <incdec comment="false" x="48" y="373">
+                                <incdec comment="false" x="48" y="293">
                                     <int id="0" val="1"/>
                                     <int id="1" val="0"/>
                                     <get-val-67-4 comment="false" id="2" x="0" y="0"/>
                                 </incdec>
-                                <set-val-67-6 comment="false" x="48" y="405">
+                                <set-val-67-6 comment="false" x="48" y="325">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-67-6>
                             </group>
@@ -69,28 +53,34 @@
                         </if>
                     </group>
                 </else>
-                <set-xy comment="false" x="26" y="454">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="0"/>
-                    <plus comment="false" id="2" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <get-val-67-3 comment="false" id="0" x="0" y="0"/>
+                <dolater comment="false" x="26" y="374">
+                    <group eventID="1" id="-1">
+                        <set-xy comment="false" x="37" y="401">
+                            <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
-                        </get-xy>
-                        <get-val-67-1 comment="false" id="1" x="0" y="0"/>
-                    </plus>
-                </set-xy>
-                <set-xy comment="false" x="26" y="504">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                    <plus comment="false" id="2" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <get-val-67-3 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <get-val-67-3 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-val-67-1 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="451">
+                            <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
-                        </get-xy>
-                        <get-val-67-2 comment="false" id="1" x="0" y="0"/>
-                    </plus>
-                </set-xy>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <get-val-67-3 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-val-67-2 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-xy>
+                    </group>
+                    <int id="0" val="0.01"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
             </group>
         </step>
     </group>
