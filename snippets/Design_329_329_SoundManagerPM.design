@@ -10,17 +10,21 @@
                             <get-byobval-329-632-0 comment="false" id="1" x="0" y="0"/>
                             <int id="2" val="0"/>
                         </play-sound-channel>
-                        <set-game-val-22 comment="false" x="37" y="112">
+                        <set-volume-channel comment="false" x="37" y="112">
+                            <int id="0" val="100"/>
+                            <int id="1" val="0"/>
+                        </set-volume-channel>
+                        <set-game-val-22 comment="false" x="37" y="132">
                             <tostring comment="false" id="0" x="0" y="0">
                                 <get-byobval-329-632-0 comment="false" id="0" x="0" y="0"/>
                             </tostring>
                         </set-game-val-22>
-                        <set-game-val-23 comment="false" x="37" y="142">
+                        <set-game-val-23 comment="false" x="37" y="162">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-23>
-                        <if comment="false" x="37" y="167">
+                        <if comment="false" x="37" y="187">
                             <group eventID="4" id="-1">
-                                <say comment="false" x="48" y="200">
+                                <say comment="false" x="48" y="220">
                                     <ACTOR eid="var" id="0" vid="2"/>
                                     <int id="1" val="Music Toggle PM"/>
                                     <int id="2" val="MusicOn"/>
@@ -101,7 +105,7 @@
                 <if comment="false" x="26" y="40">
                     <group eventID="6" id="-1">
                         <print comment="false" x="37" y="65">
-                            <int id="0" val="STOP MUSIC"/>
+                            <int id="0" val="STOP CURRENT MUSIC"/>
                         </print>
                         <control-sound-channel comment="false" x="37" y="85">
                             <int id="0" val="0"/>
@@ -194,7 +198,15 @@
     <group eventID="8" id="0">
         <receiver-9-642 comment="false" x="15" y="15">
             <group eventID="8" id="-1">
-                <custom-632 comment="false" x="26" y="40">
+                <print comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="LOOP CURRENT MUSIC"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <get-val-329-1 comment="false" id="0" x="0" y="0"/>
+                        </tostring>
+                    </str-combine>
+                </print>
+                <custom-632 comment="false" x="26" y="75">
                     <get-val-329-1 comment="false" id="0" x="0" y="0"/>
                 </custom-632>
             </group>
@@ -931,9 +943,5 @@
             <get-byobval-329-910-2 comment="false" id="2" x="0" y="0"/>
         </receiver-36-910>
     </group>
-    <group eventID="28" id="-1">
-        <get-byobval-329-910-0 comment="false" x="0" y="0"/>
-        <get-byobval-329-910-1 comment="false" x="0" y="0"/>
-        <get-byobval-329-910-2 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="28" id="-1"/>
 </groups>
