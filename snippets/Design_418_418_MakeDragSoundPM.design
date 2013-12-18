@@ -38,10 +38,11 @@
                                 <set-val-418-3 comment="false" x="48" y="205">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-418-3>
-                                <custom-857 comment="false" x="48" y="230">
+                                <custom-909 comment="false" x="48" y="230">
                                     <get-val-418-7 comment="false" id="0" x="0" y="0"/>
                                     <scenename comment="false" id="1" x="0" y="0"/>
-                                </custom-857>
+                                    <ACTOR eid="this" id="2"/>
+                                </custom-909>
                             </group>
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-418-3 comment="false" id="0" x="0" y="0"/>
@@ -53,18 +54,19 @@
                         <get-val-418-2 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
-                <else comment="false" x="26" y="279">
+                <else comment="false" x="26" y="286">
                     <group eventID="1" id="-1">
-                        <set-val-418-3 comment="false" x="37" y="299">
+                        <set-val-418-3 comment="false" x="37" y="306">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-418-3>
-                        <custom-856 comment="false" x="37" y="324">
+                        <custom-910 comment="false" x="37" y="331">
                             <get-val-418-7 comment="false" id="0" x="0" y="0"/>
                             <scenename comment="false" id="1" x="0" y="0"/>
-                        </custom-856>
+                            <ACTOR eid="this" id="2"/>
+                        </custom-910>
                     </group>
                 </else>
-                <set-val-418-1 comment="false" x="26" y="361">
+                <set-val-418-1 comment="false" x="26" y="375">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-418-1>
             </group>

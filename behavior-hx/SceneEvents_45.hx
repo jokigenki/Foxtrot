@@ -42,19 +42,25 @@ import motion.easing.Sine;
 
 
 
-class ActorEvents_156 extends ActorScript
+class SceneEvents_45 extends SceneScript
 {          	
 	
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
+		super(engine);
 		
 	}
 	
 	override public function init()
 	{
-		
+		            setGameAttribute("Last Destination", "_Larder|Farm1_01|B|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Farm1_01|B|A");
+        scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Transition To Farm|A|A");
+        runLater(1000 * 8, function(timeTask:TimedTask):Void {
+                    shoutToScene("_customEvent_" + "SwitchScene");
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

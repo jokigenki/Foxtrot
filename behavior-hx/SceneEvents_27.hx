@@ -42,63 +42,37 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_20 extends SceneScript
+class SceneEvents_27 extends SceneScript
 {          	
 	
-public var _x1:Float;
+public var _ExitName:String;
 
-public var _y1:Float;
+public var _RatHasLeft:Bool;
 
-public var _x2:Float;
+public var _RatLeftTime:Float;
 
-public var _y2:Float;
-
-public var _x3:Float;
-
-public var _x4:Float;
-
-public var _y3:Float;
-
-public var _y4:Float;
-
-public var _damping:Float;
-
-public var _freq:Float;
+public var _RatOffset:Float;
 
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		nameMap.set("x1", "_x1");
-_x1 = 0.0;
-nameMap.set("y1", "_y1");
-_y1 = 0.0;
-nameMap.set("x2", "_x2");
-_x2 = 0.0;
-nameMap.set("y2", "_y2");
-_y2 = 0.0;
-nameMap.set("x3", "_x3");
-_x3 = 0.0;
-nameMap.set("x4", "_x4");
-_x4 = 0.0;
-nameMap.set("y3", "_y3");
-_y3 = 0.0;
-nameMap.set("y4", "_y4");
-_y4 = 0.0;
-nameMap.set("damping", "_damping");
-_damping = 0.0;
-nameMap.set("freq", "_freq");
-_freq = 0.0;
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
+nameMap.set("Rat Has Left?", "_RatHasLeft");
+_RatHasLeft = false;
+nameMap.set("Rat Left Time", "_RatLeftTime");
+_RatLeftTime = 0.0;
+nameMap.set("Rat Offset", "_RatOffset");
+_RatOffset = 0.0;
 
 	}
 	
 	override public function init()
 	{
-		            if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg2_Boss")), Bool)))
-{
-            recycleActor(getActor(29));
-}
-
+		            runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Milk Loop SFX",getCurrentSceneName()]);
+}, null);
 
 	}	      	
 	
