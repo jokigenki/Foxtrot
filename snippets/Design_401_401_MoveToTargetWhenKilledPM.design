@@ -5,7 +5,7 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="42">
                     <group eventID="1" id="-1">
-                        <moveToBy comment="false" x="37" y="75">
+                        <moveToBy comment="false" x="37" y="80">
                             <ACTOR eid="var" id="0" vid="1"/>
                             <int id="1" val="1"/>
                             <get-xy comment="false" id="2" x="0" y="0">
@@ -20,10 +20,15 @@
                             <int id="5" val="0"/>
                         </moveToBy>
                     </group>
-                    <value comment="false" id="0" x="0" y="0">
-                        <int id="0" val="1"/>
-                        <int id="1" val="0"/>
-                    </value>
+                    <and comment="false" id="0" x="0" y="0">
+                        <value comment="false" id="0" x="0" y="0">
+                            <int id="0" val="1"/>
+                            <int id="1" val="0"/>
+                        </value>
+                        <isalive comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="1"/>
+                        </isalive>
+                    </and>
                 </if>
             </group>
             <int id="0" val="1"/>
@@ -31,14 +36,14 @@
         </event-actor-create-kill>
     </group>
     <group eventID="1" id="1">
-        <if comment="false" x="223" y="178">
+        <if comment="false" x="110" y="291">
             <group eventID="1" id="-1">
-                <custom-code comment="false" x="234" y="211">
+                <custom-code comment="false" x="121" y="324">
                     <int id="0" val="var newTarget = _Target.getValue(&amp;quot;Move To Target When Killed PM&amp;quot;, &amp;quot;_Target&amp;quot;);"/>
                 </custom-code>
-                <if comment="false" x="234" y="231">
+                <if comment="false" x="121" y="344">
                     <group eventID="1" id="-1">
-                        <set-val-400-1 comment="false" x="245" y="279">
+                        <set-val-400-1 comment="false" x="132" y="392">
                             <code-short comment="false" id="0" x="0" y="0">
                                 <int id="0" val="newTarget"/>
                             </code-short>
@@ -59,9 +64,9 @@
                         </isalive>
                     </and>
                 </if>
-                <else comment="false" x="234" y="323">
+                <else comment="false" x="121" y="436">
                     <group eventID="1" id="-1">
-                        <clear comment="false" x="245" y="343">
+                        <clear comment="false" x="132" y="456">
                             <int id="0" val="1"/>
                         </clear>
                     </group>
@@ -74,4 +79,16 @@
         </if>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-actor-create-kill comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <clear comment="false" x="26" y="42">
+                    <int id="0" val="1"/>
+                </clear>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="var" id="1" vid="1"/>
+        </event-actor-create-kill>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

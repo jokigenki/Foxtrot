@@ -16,12 +16,12 @@
                         </print>
                         <dolater comment="false" x="37" y="145">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="172">
+                                <if comment="false" x="48" y="177">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-20 comment="false" x="59" y="212">
+                                        <set-game-val-20 comment="false" x="59" y="217">
                                             <int id="0" val="_Home|_Home|A|A"/>
                                         </set-game-val-20>
-                                        <scene-shout comment="false" x="59" y="232">
+                                        <scene-shout comment="false" x="59" y="237">
                                             <int id="0" val="SwitchScene"/>
                                         </scene-shout>
                                     </group>
@@ -39,53 +39,53 @@
                                         </eq>
                                     </and>
                                 </if>
-                                <else comment="false" x="48" y="264">
+                                <else comment="false" x="48" y="269">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-16 comment="false" x="59" y="284">
+                                        <set-game-val-16 comment="false" x="59" y="289">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
-                                        <set-game-val-3 comment="false" x="59" y="309">
+                                        <set-game-val-3 comment="false" x="59" y="314">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-3>
-                                        <set-game-val-11 comment="false" x="59" y="334">
+                                        <set-game-val-11 comment="false" x="59" y="339">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-11>
-                                        <set-game-val-0 comment="false" x="59" y="359">
+                                        <set-game-val-0 comment="false" x="59" y="364">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-0>
-                                        <set-game-val-1 comment="false" x="59" y="384">
+                                        <set-game-val-1 comment="false" x="59" y="389">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-1>
-                                        <set-game-val-13 comment="false" x="59" y="409">
+                                        <set-game-val-13 comment="false" x="59" y="414">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-13>
-                                        <set-game-val-5 comment="false" x="59" y="434">
+                                        <set-game-val-5 comment="false" x="59" y="439">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-5>
-                                        <set-game-val-12 comment="false" x="59" y="459">
+                                        <set-game-val-12 comment="false" x="59" y="464">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-12>
-                                        <set-game-val-6 comment="false" x="59" y="484">
+                                        <set-game-val-6 comment="false" x="59" y="489">
                                             <int id="0" val="0"/>
                                         </set-game-val-6>
-                                        <set-game-val-8 comment="false" x="59" y="504">
+                                        <set-game-val-8 comment="false" x="59" y="509">
                                             <int id="0" val="0"/>
                                         </set-game-val-8>
-                                        <set-game-val-21 comment="false" x="59" y="524">
+                                        <set-game-val-21 comment="false" x="59" y="529">
                                             <int id="0" val="none"/>
                                         </set-game-val-21>
-                                        <set-game-val-20 comment="false" x="59" y="544">
+                                        <set-game-val-20 comment="false" x="59" y="549">
                                             <int id="0" val="none"/>
                                         </set-game-val-20>
-                                        <set-game-val-25 comment="false" x="59" y="564">
+                                        <set-game-val-25 comment="false" x="59" y="569">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-25>
-                                        <save-game comment="false" x="59" y="589">
+                                        <save-game comment="false" x="59" y="594">
                                             <group eventID="1" id="-1">
-                                                <set-game-val-20 comment="false" x="70" y="614">
+                                                <set-game-val-20 comment="false" x="70" y="619">
                                                     <int id="0" val="Tutorial_01|Tutorial_01|A|A"/>
                                                 </set-game-val-20>
-                                                <scene-shout comment="false" x="70" y="634">
+                                                <scene-shout comment="false" x="70" y="639">
                                                     <int id="0" val="SwitchScene"/>
                                                 </scene-shout>
                                             </group>
@@ -93,7 +93,10 @@
                                     </group>
                                 </else>
                             </group>
-                            <int id="0" val="5"/>
+                            <scene-get-attribute comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Typewriter Text PM"/>
+                                <int id="1" val="_TotalTime"/>
+                            </scene-get-attribute>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
                     </group>

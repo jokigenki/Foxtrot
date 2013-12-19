@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="73">
+                            <group eventID="2" id="-1">
+                                <set-val-427-2 comment="false" x="48" y="103">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-xy>
+                                        <get-val-427-4 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                </set-val-427-2>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-427-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-2000"/>
+                            </eq>
+                        </if>
+                        <set-xy comment="false" x="37" y="153">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <get-val-427-4 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <plus comment="false" id="1" x="0" y="0">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="var" id="0" vid="3"/>
+                                            <int id="1" val="1"/>
+                                        </get-xy>
+                                        <get-val-427-2 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                    <get-val-427-4 comment="false" id="1" x="0" y="0"/>
+                                </plus>
+                            </plus>
+                        </set-xy>
+                        <set-val-427-2 comment="false" x="37" y="208">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="3"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                        </set-val-427-2>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="3"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

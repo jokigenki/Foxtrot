@@ -40,6 +40,11 @@
                     <int id="1" val="1"/>
                     <int id="2" val="Match Horizontal Movement PM"/>
                 </actor-enabledisable-snippet>
+                <actor-enabledisable-snippet comment="false" x="26" y="72">
+                    <get-val-393-2 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="Match Vertical Movement PM"/>
+                </actor-enabledisable-snippet>
             </group>
             <int id="0" val="JumpStart"/>
         </event-custom>
@@ -76,13 +81,27 @@
                 </set-attribute>
                 <set-attribute comment="false" x="26" y="152">
                     <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="Match Vertical Movement PM"/>
+                    <int id="2" val="_Target"/>
+                    <actor comment="false" id="3" x="0" y="0">
+                        <ACTOR eid="3" id="0"/>
+                    </actor>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="192">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="Match Vertical Movement PM"/>
+                    <int id="2" val="_Offset"/>
+                    <int id="3" val="-35"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="219">
+                    <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Jump To Start PM"/>
                     <int id="2" val="_Target"/>
                     <actor comment="false" id="3" x="0" y="0">
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-val-393-2 comment="false" x="26" y="192">
+                <set-val-393-2 comment="false" x="26" y="259">
                     <ACTOR eid="lastcreated" id="0"/>
                 </set-val-393-2>
             </group>

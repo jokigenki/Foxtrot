@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <receiver-1-911 comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <code-long comment="false" x="26" y="45">
+                    <int id="0" val="__Characters = __Characters.toLowerCase();&#10;for (i in 0...__Characters.length)&#10;{&#10;&#9;var charCode = __Characters.charCodeAt(i);&#10;&#9;if (charCode &amp;lt; 97 || charCode &amp;gt; 123) continue;&#10;&#9;var sequence = _MorseList[charCode - 97];&#10;&#9;for (j in 0...sequence.length)&#10;&#9;{&#10;&#9;&#9;var time = j * 100;&#10;&#9;&#9;var code = sequence.charAt(j);&#10;&#9;&#9;var sfx = code == &amp;quot;.&amp;quot; ? &amp;quot;Dot SFX&amp;quot; : &amp;quot;Dash SFX&amp;quot;;&#10;&#9;&#9;if (time &amp;gt; 0)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;runLater(time, function(timeTask:TimedTask):Void {&#10;            &#9;&#9;sayToScene(&amp;quot;Sound Manager PM&amp;quot;, &amp;quot;_customBlock_PlayNamedSound&amp;quot;, [sfx]);&#10;            &#9;&#9;}, null);&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;sayToScene(&amp;quot;Sound Manager PM&amp;quot;, &amp;quot;_customBlock_PlayNamedSound&amp;quot;, [sfx]);&#10;&#9;&#9;}&#10;&#9;}&#10;}"/>
+                </code-long>
+            </group>
+            <get-byobval-426-911-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-911>
+    </group>
+    <group eventID="1" id="-1">
+        <get-byobval-426-911-0 comment="false" x="0" y="0"/>
+    </group>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <code-long comment="false" x="26" y="40">
+                    <int id="0" val="_MorseList = [&#10;&amp;quot;.-&amp;quot;, &amp;quot;-...&amp;quot;, &amp;quot;-.-.&amp;quot;, &amp;quot;-..&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;..-.&amp;quot;, &amp;quot;--.&amp;quot;,&#10;&amp;quot;....&amp;quot;, &amp;quot;..&amp;quot;, &amp;quot;.---&amp;quot;, &amp;quot;-.-&amp;quot;, &amp;quot;.-..&amp;quot;, &amp;quot;--&amp;quot;, &amp;quot;-.&amp;quot;,&#10;&amp;quot;---&amp;quot;, &amp;quot;.--.&amp;quot;, &amp;quot;--.-&amp;quot;, &amp;quot;.-.&amp;quot;, &amp;quot;...&amp;quot;, &amp;quot;-&amp;quot;, &amp;quot;..-&amp;quot;,&#10;&amp;quot;...-&amp;quot;, &amp;quot;.--,&amp;quot;, &amp;quot;-..-&amp;quot;, &amp;quot;-.--&amp;quot;, &amp;quot;--..&amp;quot;];"/>
+                </code-long>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

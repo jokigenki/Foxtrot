@@ -69,6 +69,10 @@ public var _Leading:Float;
 
 public var _SFX:Sound;
 
+public var _TotalTime:Float;
+
+public var _SFX2:Sound;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
@@ -95,6 +99,9 @@ _CurrentY = 0.0;
 nameMap.set("Leading", "_Leading");
 _Leading = 0.0;
 nameMap.set("SFX", "_SFX");
+nameMap.set("Total Time", "_TotalTime");
+_TotalTime = 0.0;
+nameMap.set("SFX 2", "_SFX2");
 
 	}
 	
@@ -102,6 +109,8 @@ nameMap.set("SFX", "_SFX");
 	{
 		            _Lines = new Array<Dynamic>();
 propertyChanged("_Lines", _Lines);
+        _TotalTime = asNumber((_DrawCharacterEveryNSeconds * ("" + _TextToDraw).length));
+propertyChanged("_TotalTime", _TotalTime);
         runPeriodically(1000 * _DrawCharacterEveryNSeconds, function(timeTask:TimedTask):Void {
                     if(_CancelDrawing)
 {
@@ -124,15 +133,26 @@ return;
 propertyChanged("_CurrentText", _CurrentText);
                             _Lines = ("" + _CurrentText).split("|");
 propertyChanged("_Lines", _Lines);
+                            if(!(("" + _TextToDraw).substring(Std.int(_CurrentIndex), Std.int((_CurrentIndex + 1))) == " "))
+{
+                                if((randomFloat() < 0.5))
+{
+                                    sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);
+}
+
+                                else
+{
+                                    sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX2]);
+}
+
+}
+
 }
 
                         _CurrentIndex += 1;
 propertyChanged("_CurrentIndex", _CurrentIndex);
 }
 
-}, null);
-        runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Typewriter SFX",getCurrentSceneName()]);
 }, null);
     addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){

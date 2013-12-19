@@ -1736,6 +1736,7 @@
         </snippets>
     </actor>
     <custom-block blocktag="custom-333" blocktype="NORMAL" code="String((scripts.Design_207_207_StencylExtrasPM.CurrentSceneName()))" desc="Global method for getting the current scene name." global="true" gui="current scene name" id="333" message="CurrentSceneName" name="CurrentSceneName" oid="-1" return="TEXT" shared="false" snippetID="207"/>
+    <music atlasID="0" desc="" id="913" loop="true" name="Dash SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-372" blocktype="ACTION" code="" desc="" global="true" gui="Destroy joint %0" id="372" message="DestroyJoint" name="DestroyJoint" oid="-1" return="VOID" shared="false" snippetID="-1">
         <blank name="joint" order="0" type="JOINT"/>
     </custom-block>
@@ -2075,6 +2076,7 @@
         <anim across="4" down="1" durations="100,100,100,100" height="32" id="2" loop="false" name="Opening" numframes="4" originx="16" originy="16" sync="false" width="128"/>
     </sprite>
     <custom-block blocktag="custom-348" blocktype="ACTION" code="sayToScene(&quot;Scene Transition PM&quot;, &quot;DoSwitchScene&quot;);" desc="" global="false" gui="Switch scene" id="348" message="DoSwitchScene" name="DoSwitchScene" oid="-1" return="VOID" shared="false" snippetID="21"/>
+    <music atlasID="0" desc="" id="912" loop="true" name="Dot SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="822" loop="true" name="Duck Alarm SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="798" loop="true" name="Duck Laser SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="206" name="Egg" shared="false" width="16">
@@ -2188,6 +2190,12 @@
                 <prop id="2" list="0" val="0"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
+            <s enabled="true" id="427">
+                <prop id="1" list="0" val="-2000.0"/>
+                <prop id="2" list="0" val="-2000"/>
+                <prop id="4" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
             <s enabled="true" id="399">
                 <prop id="1" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -2209,7 +2217,13 @@
                 <prop id="10" list="0" val="2"/>
                 <prop id="11" list="0" val="3"/>
                 <prop id="12" list="0" val="false"/>
+                <prop id="13" list="0" val="96"/>
+                <prop id="14" list="0" val="536"/>
+                <prop id="15" list="0" val="48"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="504"/>
+                <prop id="16" list="0" val="128"/>
+                <prop id="18" list="0" val="264"/>
             </s>
             <s enabled="true" id="177">
                 <prop id="1" list="0" val="32"/>
@@ -4337,6 +4351,15 @@
     <custom-block blocktag="custom-49" blocktype="NORMAL" code="Boolean((sayToScene(&quot;Inventory PM&quot;, &quot;IsInInventory&quot;, ~)))" desc="Returns true if the given item name is in the inventory." global="false" gui="Is %0 In Inventory?" id="49" message="IsInInventory" name="IsInInventory" oid="-1" return="BOOLEAN" shared="false" snippetID="22">
         <blank name="Item Name" order="0" type="TEXT"/>
     </custom-block>
+    <custom-block blocktag="custom-915" blocktype="NORMAL" code="Boolean((~.say(&quot;Ball PM&quot;, &quot;IsInLeftBound&quot;)))" desc="" global="false" gui="Is in left bound?" id="915" message="IsInLeftBound" name="IsInLeftBound" oid="-1" return="BOOLEAN" shared="false" snippetID="397">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-916" blocktype="NORMAL" code="Boolean((~.say(&quot;Ball PM&quot;, &quot;IsInRightBound&quot;)))" desc="" global="false" gui="Is in right bound?" id="916" message="IsInRightBound" name="IsInRightBound" oid="-1" return="BOOLEAN" shared="false" snippetID="397">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-917" blocktype="NORMAL" code="Boolean((~.say(&quot;Ball PM&quot;, &quot;IsInTopBounds&quot;)))" desc="" global="false" gui="Is is top bounds?" id="917" message="IsInTopBounds" name="IsInTopBounds" oid="-1" return="BOOLEAN" shared="false" snippetID="397">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
     <custom-block blocktag="custom-858" blocktype="NORMAL" code="Boolean((sayToScene(&quot;Sound Manager PM&quot;, &quot;IsSceneSoundPlaying&quot;, ~,~)))" desc="" global="false" gui="Is scene sound %0 playing in %1" id="858" message="IsSceneSoundPlaying" name="IsSceneSoundPlaying" oid="-1" return="BOOLEAN" shared="false" snippetID="329">
         <blank name="Sound Name" order="0" type="TEXT"/>
         <blank name="Scene Name" order="1" type="TEXT"/>
@@ -6137,6 +6160,9 @@
     <custom-block blocktag="custom-471" blocktype="ACTION" code="~.say(&quot;Walking PM&quot;, &quot;PlayFootsteps&quot;);" desc="" global="false" gui="Play footstep sound" id="471" message="PlayFootsteps" name="PlayFootsteps" oid="-1" return="VOID" shared="false" snippetID="74">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
+    <custom-block blocktag="custom-911" blocktype="ACTION" code="sayToScene(&quot;Morse Code PM&quot;, &quot;PlayMorseCode&quot;, ~);" desc="" global="false" gui="Play morse code for %0" id="911" message="PlayMorseCode" name="PlayMorseCode" oid="-1" return="VOID" shared="false" snippetID="426">
+        <blank name="Characters" order="0" type="TEXT"/>
+    </custom-block>
     <custom-block blocktag="custom-797" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;PlayNamedSound&quot;, ~);" desc="" global="false" gui="Play sound named %0" id="797" message="PlayNamedSound" name="PlayNamedSound" oid="-1" return="VOID" shared="false" snippetID="329">
         <blank name="Sound Name" order="0" type="TEXT"/>
     </custom-block>
@@ -7627,7 +7653,6 @@
         <blank name="Direction" order="2" type="TEXT"/>
     </custom-block>
     <music atlasID="0" desc="" id="851" loop="true" name="Tutorial Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
-    <music atlasID="0" desc="" id="881" loop="true" name="Typewriter SFX" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <custom-block blocktag="custom-596" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockActor(~);" desc="" global="true" gui="Unlock %0" id="596" message="UnlockActor" name="UnlockActor" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Door Actor" order="0" type="ACTOR"/>
     </custom-block>

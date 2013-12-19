@@ -42,19 +42,55 @@ import motion.easing.Sine;
 
 
 
-class ActorEvents_757 extends ActorScript
+class Design_426_426_MorseCodePM extends SceneScript
 {          	
 	
- 
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+public var _MorseList:Array<Dynamic>;
+    
+
+/* Params are:__Characters */
+public function _customBlock_PlayMorseCode(__Characters:String):Void
+{
+        __Characters = __Characters.toLowerCase();
+for (i in 0...__Characters.length)
+{
+	var charCode = __Characters.charCodeAt(i);
+	if (charCode < 97 || charCode > 123) continue;
+	var sequence = _MorseList[charCode - 97];
+	for (j in 0...sequence.length)
 	{
-		super(actor, engine);	
-		
+		var time = j * 100;
+		var code = sequence.charAt(j);
+		var sfx = code == "." ? "Dot SFX" : "Dash SFX";
+		if (time > 0)
+		{
+			runLater(time, function(timeTask:TimedTask):Void {
+            		sayToScene("Sound Manager PM", "_customBlock_PlayNamedSound", [sfx]);
+            		}, null);
+		} else {
+			sayToScene("Sound Manager PM", "_customBlock_PlayNamedSound", [sfx]);
+		}
+	}
+}
+}
+
+ 
+ 	public function new(dummy:Int, engine:Engine)
+	{
+		super(engine);
+		nameMap.set("Morse List", "_MorseList");
+_MorseList = [];
+
 	}
 	
 	override public function init()
 	{
-		
+		            _MorseList = [
+".-", "-...", "-.-.", "-..", ".", "..-.", "--.",
+"....", "..", ".---", "-.-", ".-..", "--", "-.",
+"---", ".--.", "--.-", ".-.", "...", "-", "..-",
+"...-", ".--,", "-..-", "-.--", "--.."];
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

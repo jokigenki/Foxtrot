@@ -86,7 +86,7 @@ if(wrapper.enabled){
 propertyChanged("_WasInitialised", _WasInitialised);
             /* "load shared and home atlases" */
             trace("" + getGameAttribute("Save Destination"));
-            runLater(1000 * 5, function(timeTask:TimedTask):Void {
+            runLater(1000 * getValueForScene("Typewriter Text PM", "_TotalTime"), function(timeTask:TimedTask):Void {
                         if((!(getGameAttribute("Save Destination") == "none") && (("" + getGameAttribute("Save Destination")).indexOf("Tutorial") == -1)))
 {
                             setGameAttribute("Last Destination", "_Home|_Home|A|A");
