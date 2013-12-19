@@ -196,9 +196,12 @@
                     <group eventID="3" id="-1">
                         <if comment="false" x="37" y="65">
                             <group eventID="3" id="-1">
-                                <if comment="false" x="48" y="103">
+                                <print comment="false" x="48" y="103">
+                                    <int id="0" val="not in left"/>
+                                </print>
+                                <if comment="false" x="48" y="123">
                                     <group eventID="3" id="-1">
-                                        <set-val-397-6 comment="false" x="59" y="133">
+                                        <set-val-397-6 comment="false" x="59" y="153">
                                             <neg comment="false" id="0" x="0" y="0">
                                                 <get-val-397-6 comment="false" id="0" x="0" y="0"/>
                                             </neg>
@@ -216,11 +219,14 @@
                                 </custom-915>
                             </not>
                         </if>
-                        <if comment="false" x="37" y="187">
+                        <if comment="false" x="37" y="207">
                             <group eventID="3" id="-1">
-                                <if comment="false" x="48" y="225">
+                                <print comment="false" x="48" y="245">
+                                    <int id="0" val="not in right"/>
+                                </print>
+                                <if comment="false" x="48" y="265">
                                     <group eventID="3" id="-1">
-                                        <set-val-397-6 comment="false" x="59" y="255">
+                                        <set-val-397-6 comment="false" x="59" y="295">
                                             <neg comment="false" id="0" x="0" y="0">
                                                 <get-val-397-6 comment="false" id="0" x="0" y="0"/>
                                             </neg>
@@ -238,11 +244,14 @@
                                 </custom-916>
                             </not>
                         </if>
-                        <if comment="false" x="37" y="309">
+                        <if comment="false" x="37" y="349">
                             <group eventID="3" id="-1">
-                                <if comment="false" x="48" y="347">
+                                <print comment="false" x="48" y="387">
+                                    <int id="0" val="not in top"/>
+                                </print>
+                                <if comment="false" x="48" y="407">
                                     <group eventID="3" id="-1">
-                                        <set-val-397-7 comment="false" x="59" y="377">
+                                        <set-val-397-7 comment="false" x="59" y="437">
                                             <neg comment="false" id="0" x="0" y="0">
                                                 <get-val-397-7 comment="false" id="0" x="0" y="0"/>
                                             </neg>
@@ -260,11 +269,14 @@
                                 </custom-917>
                             </not>
                         </if>
-                        <if comment="false" x="37" y="431">
+                        <if comment="false" x="37" y="491">
                             <group eventID="3" id="-1">
-                                <if comment="false" x="48" y="469">
+                                <print comment="false" x="48" y="529">
+                                    <int id="0" val="not in bottom"/>
+                                </print>
+                                <if comment="false" x="48" y="549">
                                     <group eventID="3" id="-1">
-                                        <set-val-397-7 comment="false" x="59" y="499">
+                                        <set-val-397-7 comment="false" x="59" y="579">
                                             <neg comment="false" id="0" x="0" y="0">
                                                 <get-val-397-7 comment="false" id="0" x="0" y="0"/>
                                             </neg>
@@ -282,22 +294,22 @@
                                 </custom-918>
                             </not>
                         </if>
-                        <incdec comment="false" x="37" y="553">
+                        <incdec comment="false" x="37" y="633">
                             <int id="0" val="8"/>
                             <int id="1" val="0"/>
                             <get-val-397-6 comment="false" id="2" x="0" y="0"/>
                         </incdec>
-                        <incdec comment="false" x="37" y="585">
+                        <incdec comment="false" x="37" y="665">
                             <int id="0" val="9"/>
                             <int id="1" val="0"/>
                             <get-val-397-7 comment="false" id="2" x="0" y="0"/>
                         </incdec>
-                        <set-xy comment="false" x="37" y="617">
+                        <set-xy comment="false" x="37" y="697">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <get-val-397-8 comment="false" id="2" x="0" y="0"/>
                         </set-xy>
-                        <set-xy comment="false" x="37" y="649">
+                        <set-xy comment="false" x="37" y="729">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <get-val-397-9 comment="false" id="2" x="0" y="0"/>
@@ -491,10 +503,10 @@
     <group eventID="10" id="0">
         <receiver-5-918 comment="false" x="15" y="15">
             <group eventID="10" id="-1">
-                <if comment="false" x="26" y="45">
+                <if comment="false" x="26" y="40">
                     <group eventID="10" id="-1">
-                        <return comment="false" x="37" y="83">
-                            <true comment="false" id="0" x="0" y="0"/>
+                        <return comment="false" x="37" y="78">
+                            <false comment="false" id="0" x="0" y="0"/>
                         </return>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
@@ -502,14 +514,12 @@
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                         </get-xy>
-                        <scene-wh comment="false" id="1" x="0" y="0">
-                            <int id="0" val="1"/>
-                        </scene-wh>
+                        <get-val-397-19 comment="false" id="1" x="0" y="0"/>
                     </more>
                 </if>
-                <if comment="false" x="26" y="120">
+                <if comment="false" x="26" y="115">
                     <group eventID="3" id="-1">
-                        <return comment="false" x="37" y="163">
+                        <return comment="false" x="37" y="158">
                             <false comment="false" id="0" x="0" y="0"/>
                         </return>
                     </group>
@@ -530,9 +540,9 @@
                         </more>
                     </and>
                 </if>
-                <if comment="false" x="26" y="200">
+                <if comment="false" x="26" y="195">
                     <group eventID="3" id="-1">
-                        <return comment="false" x="37" y="243">
+                        <return comment="false" x="37" y="238">
                             <false comment="false" id="0" x="0" y="0"/>
                         </return>
                     </group>
@@ -553,14 +563,12 @@
                         </more>
                     </and>
                 </if>
-                <return comment="false" x="26" y="280">
+                <return comment="false" x="26" y="275">
                     <true comment="false" id="0" x="0" y="0"/>
                 </return>
             </group>
-            <get-byobval-397-918-0 comment="false" id="0" x="0" y="0"/>
+            <int id="0" val=""/>
         </receiver-5-918>
     </group>
-    <group eventID="10" id="-1">
-        <get-byobval-397-918-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="10" id="-1"/>
 </groups>
