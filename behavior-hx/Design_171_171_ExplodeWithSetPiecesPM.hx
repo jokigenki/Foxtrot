@@ -60,6 +60,11 @@ public var _PieceNumber:Float;
 public var _ShakeScreen:Bool;
     public function _customEvent_Killed():Void
 {
+        if(isTransitioning())
+{
+            return;
+}
+
         if((hasValue(_ExplosionActorType) != false))
 {
             createRecycledActor(_ExplosionActorType, actor.getX(), actor.getY(), Script.FRONT);

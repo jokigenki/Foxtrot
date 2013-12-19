@@ -52,6 +52,11 @@ public var _KillX:Float;
 public var _KillY:Float;
     public function _customEvent_Killed():Void
 {
+        if(isTransitioning())
+{
+            return;
+}
+
         if(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorBehaviourHasAttribute(actor,"_KillX",_KillBehaviour)), Bool))
 {
             actor.setValue(_KillBehaviour, "_KillX", _KillX);

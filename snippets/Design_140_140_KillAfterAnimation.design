@@ -3,10 +3,16 @@
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <custom-261 comment="false" x="26" y="40">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                </if>
+                <custom-261 comment="false" x="26" y="97">
                     <ACTOR eid="this" id="0"/>
                 </custom-261>
-                <set-val-140-3 comment="false" x="26" y="67">
+                <set-val-140-3 comment="false" x="26" y="124">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-140-3>
             </group>
@@ -43,12 +49,18 @@
                     <group eventID="5" id="-1">
                         <if comment="false" x="37" y="214">
                             <group eventID="5" id="-1">
-                                <die comment="false" x="48" y="257">
+                                <if comment="false" x="48" y="257">
+                                    <group eventID="1" id="-1">
+                                        <stop comment="false" x="59" y="282"/>
+                                    </group>
+                                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                                </if>
+                                <die comment="false" x="48" y="314">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
-                                <if comment="false" x="48" y="284">
+                                <if comment="false" x="48" y="341">
                                     <group eventID="1" id="-1">
-                                        <say comment="false" x="59" y="317">
+                                        <say comment="false" x="59" y="374">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="Reload On Death PM"/>
                                             <int id="2" val="Reload"/>

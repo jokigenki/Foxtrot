@@ -42,53 +42,47 @@ import motion.easing.Sine;
 
 
 
-class Design_137_137_EnemyProjectile extends ActorScript
+class Design_427_427_MatchVerticalMovementPM extends ActorScript
 {          	
 	
-public var _ExcludedActorTypes:Array<Dynamic>;
+public var _OldX:Float;
 
-public var _KillBehaviour:String;
+public var _OldY:Float;
 
-public var _KillX:Float;
+public var _Target:Actor;
 
-public var _KillY:Float;
+public var _Offset:Float;
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
 		super(actor, engine);	
-		nameMap.set("Excluded Actor Types", "_ExcludedActorTypes");
-_ExcludedActorTypes = [];
-nameMap.set("Kill Behaviour", "_KillBehaviour");
-_KillBehaviour = "";
-nameMap.set("Kill X", "_KillX");
-_KillX = 0.0;
-nameMap.set("Kill Y", "_KillY");
-_KillY = 0.0;
+		nameMap.set("Old X", "_OldX");
+_OldX = -2000.0;
+nameMap.set("Old Y", "_OldY");
+_OldY = -2000.0;
+nameMap.set("Target", "_Target");
+nameMap.set("Offset", "_Offset");
+_Offset = 0.0;
 nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		    addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void {
+		    addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if(!(("" + _KillBehaviour) == ("")))
+        if((hasValue(_Target) != false))
 {
-            for(point in event.points)
+            if((_OldY == -2000))
 {
-                _KillX = asNumber(Math.round(Engine.toPixelUnits(point.normalX)));
-propertyChanged("_KillX", _KillX);
-                _KillY = asNumber(Math.round(Engine.toPixelUnits(point.normalY)));
-propertyChanged("_KillY", _KillY);
+                _OldY = asNumber((actor.getY() - _Offset));
+propertyChanged("_OldY", _OldY);
 }
 
-            scripts.Design_27_27_ActorExtrasPM._customBlock_TriggerKilledInActor(event.thisActor,_KillBehaviour,_KillX,_KillY);
-}
-
-        else
-{
-            recycleActor(event.thisActor);
+            actor.setY(((actor.getY() - _Offset) + ((_Target.getY() - _OldY) + _Offset)));
+            _OldY = asNumber(_Target.getY());
+propertyChanged("_OldY", _OldY);
 }
 
 }

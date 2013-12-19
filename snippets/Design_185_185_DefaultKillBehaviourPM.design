@@ -4,8 +4,14 @@
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="97">
                     <group eventID="2" id="-1">
-                        <set-attribute comment="false" x="37" y="78">
+                        <set-attribute comment="false" x="37" y="135">
                             <ACTOR eid="this" id="0"/>
                             <get-val-185-1 comment="false" id="1" x="0" y="0"/>
                             <int id="2" val="_KillX"/>
@@ -18,9 +24,9 @@
                         <get-val-185-1 comment="false" id="2" x="0" y="0"/>
                     </custom-285>
                 </if>
-                <if comment="false" x="26" y="122">
+                <if comment="false" x="26" y="179">
                     <group eventID="2" id="-1">
-                        <set-attribute comment="false" x="37" y="160">
+                        <set-attribute comment="false" x="37" y="217">
                             <ACTOR eid="this" id="0"/>
                             <get-val-185-1 comment="false" id="1" x="0" y="0"/>
                             <int id="2" val="_KillY"/>
@@ -33,7 +39,7 @@
                         <get-val-185-1 comment="false" id="2" x="0" y="0"/>
                     </custom-285>
                 </if>
-                <say comment="false" x="26" y="204">
+                <say comment="false" x="26" y="261">
                     <ACTOR eid="this" id="0"/>
                     <get-val-185-1 comment="false" id="1" x="0" y="0"/>
                     <int id="2" val="Killed"/>

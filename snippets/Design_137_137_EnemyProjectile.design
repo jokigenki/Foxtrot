@@ -34,7 +34,13 @@
                 </if>
                 <else comment="false" x="26" y="222">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="242">
+                        <if comment="false" x="37" y="242">
+                            <group eventID="1" id="-1">
+                                <stop comment="false" x="48" y="267"/>
+                            </group>
+                            <is-transitioning comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <die comment="false" x="37" y="299">
                             <this-actor comment="false" id="0" x="0" y="0"/>
                         </die>
                     </group>

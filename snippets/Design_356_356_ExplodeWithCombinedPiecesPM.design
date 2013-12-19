@@ -5,7 +5,13 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="73">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="97">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="130">
                             <ACTORTYPE eid="var" id="0" vid="10"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
@@ -23,9 +29,9 @@
                         <int id="1" val="0"/>
                     </value>
                 </if>
-                <repeat comment="false" x="26" y="125">
+                <repeat comment="false" x="26" y="182">
                     <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="150">
+                        <create-actor3 comment="false" x="37" y="207">
                             <ACTORTYPE eid="var" id="0" vid="11"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
@@ -37,9 +43,9 @@
                             </get-xy>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <if comment="false" x="37" y="190">
+                        <if comment="false" x="37" y="247">
                             <group eventID="1" id="-1">
-                                <set-val-356-1 comment="false" x="48" y="225">
+                                <set-val-356-1 comment="false" x="48" y="282">
                                     <minus comment="false" id="0" x="0" y="0">
                                         <plus comment="false" id="0" x="0" y="0">
                                             <loopindex comment="false" id="0" x="0" y="0"/>
@@ -57,9 +63,9 @@
                                 </minus>
                             </lesseq>
                         </if>
-                        <else comment="false" x="37" y="272">
+                        <else comment="false" x="37" y="329">
                             <group eventID="1" id="-1">
-                                <set-val-356-1 comment="false" x="48" y="292">
+                                <set-val-356-1 comment="false" x="48" y="349">
                                     <randint comment="false" id="0" x="0" y="0">
                                         <get-val-356-5 comment="false" id="0" x="0" y="0"/>
                                         <get-val-356-6 comment="false" id="1" x="0" y="0"/>
@@ -67,7 +73,7 @@
                                 </set-val-356-1>
                             </group>
                         </else>
-                        <setanim comment="false" x="37" y="334">
+                        <setanim comment="false" x="37" y="391">
                             <ACTOR eid="lastcreated" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <str-combine comment="false" id="0" x="0" y="0">
@@ -79,16 +85,16 @@
                     </group>
                     <get-val-356-7 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <die comment="false" x="26" y="388">
+                <die comment="false" x="26" y="445">
                     <ACTOR eid="this" id="0"/>
                 </die>
-                <custom-816 comment="false" x="26" y="415">
+                <custom-816 comment="false" x="26" y="472">
                     <get-val-356-13 comment="false" id="0" x="0" y="0"/>
                     <get-val-356-14 comment="false" id="1" x="0" y="0"/>
                 </custom-816>
-                <if comment="false" x="26" y="440">
+                <if comment="false" x="26" y="497">
                     <group eventID="1" id="-1">
-                        <shake-start comment="false" x="37" y="465">
+                        <shake-start comment="false" x="37" y="522">
                             <int id="0" val="0.5"/>
                             <int id="1" val="0.5"/>
                         </shake-start>

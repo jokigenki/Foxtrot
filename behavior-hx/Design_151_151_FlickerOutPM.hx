@@ -66,6 +66,11 @@ public var _SFX:Sound;
 public var _IsKilled:Bool;
     public function _customEvent_Killed():Void
 {
+        if(isTransitioning())
+{
+            return;
+}
+
         if(_IsKilled)
 {
             return;

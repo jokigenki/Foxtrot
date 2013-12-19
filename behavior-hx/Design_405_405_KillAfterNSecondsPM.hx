@@ -48,10 +48,20 @@ class Design_405_405_KillAfterNSecondsPM extends ActorScript
 public var _SecondstilDeath:Float;
     public function _customEvent_Killed():Void
 {
+        if(isTransitioning())
+{
+            return;
+}
+
         actor.say("Disable Behaviours On Killed PM", "_customBlock_RunDisableOnKilled");
         if((_SecondstilDeath > 0))
 {
             runLater(1000 * _SecondstilDeath, function(timeTask:TimedTask):Void {
+                        if(isTransitioning())
+{
+                            return;
+}
+
                         recycleActor(actor);
                         if(actor.isBehaviorEnabled("Reload On Death PM"))
 {

@@ -10,7 +10,13 @@
                     <group eventID="1" id="-1">
                         <if comment="false" x="37" y="89">
                             <group eventID="1" id="-1">
-                                <die comment="false" x="48" y="127">
+                                <if comment="false" x="48" y="127">
+                                    <group eventID="1" id="-1">
+                                        <stop comment="false" x="59" y="152"/>
+                                    </group>
+                                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                                </if>
+                                <die comment="false" x="48" y="184">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
                             </group>
@@ -129,7 +135,13 @@
                                     <group eventID="2" id="-1">
                                         <if comment="false" x="59" y="581">
                                             <group eventID="2" id="-1">
-                                                <die comment="false" x="70" y="616">
+                                                <if comment="false" x="70" y="616">
+                                                    <group eventID="1" id="-1">
+                                                        <stop comment="false" x="81" y="641"/>
+                                                    </group>
+                                                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                                                </if>
+                                                <die comment="false" x="70" y="673">
                                                     <ACTOR eid="this" id="0"/>
                                                 </die>
                                             </group>
@@ -142,7 +154,7 @@
                                                 </not>
                                             </or>
                                         </if>
-                                        <set-val-177-4 comment="false" x="59" y="655">
+                                        <set-val-177-4 comment="false" x="59" y="712">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-177-4>
                                     </group>

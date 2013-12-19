@@ -7,18 +7,24 @@
                     <group eventID="1" id="-1">
                         <stop comment="false" x="37" y="65"/>
                     </group>
+                    <is-transitioning comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="97">
+                    <group eventID="1" id="-1">
+                        <stop comment="false" x="37" y="122"/>
+                    </group>
                     <get-val-151-14 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <set-val-151-14 comment="false" x="26" y="97">
+                <set-val-151-14 comment="false" x="26" y="154">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-151-14>
-                <custom-796 comment="false" x="26" y="122">
+                <custom-796 comment="false" x="26" y="179">
                     <SOUND eid="var" id="0" vid="13"/>
                 </custom-796>
-                <custom-261 comment="false" x="26" y="149">
+                <custom-261 comment="false" x="26" y="206">
                     <ACTOR eid="this" id="0"/>
                 </custom-261>
-                <set-val-151-5 comment="false" x="26" y="176">
+                <set-val-151-5 comment="false" x="26" y="233">
                     <div comment="false" id="0" x="0" y="0">
                         <get-val-151-1 comment="false" id="0" x="0" y="0"/>
                         <times comment="false" id="1" x="0" y="0">
@@ -27,14 +33,14 @@
                         </times>
                     </div>
                 </set-val-151-5>
-                <set-val-151-2 comment="false" x="26" y="211">
+                <set-val-151-2 comment="false" x="26" y="268">
                     <get-val-151-5 comment="false" id="0" x="0" y="0"/>
                 </set-val-151-2>
-                <repeat comment="false" x="26" y="236">
+                <repeat comment="false" x="26" y="293">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="261">
+                        <dolater comment="false" x="37" y="318">
                             <group eventID="1" id="-1">
-                                <toggle-image comment="false" x="48" y="293">
+                                <toggle-image comment="false" x="48" y="350">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                 </toggle-image>
@@ -42,14 +48,14 @@
                             <get-val-151-2 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <incdec comment="false" x="37" y="332">
+                        <incdec comment="false" x="37" y="389">
                             <int id="0" val="2"/>
                             <int id="1" val="0"/>
                             <get-val-151-5 comment="false" id="2" x="0" y="0"/>
                         </incdec>
-                        <dolater comment="false" x="37" y="364">
+                        <dolater comment="false" x="37" y="421">
                             <group eventID="1" id="-1">
-                                <toggle-image comment="false" x="48" y="396">
+                                <toggle-image comment="false" x="48" y="453">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </toggle-image>
@@ -57,7 +63,7 @@
                             <get-val-151-2 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <incdec comment="false" x="37" y="435">
+                        <incdec comment="false" x="37" y="492">
                             <int id="0" val="2"/>
                             <int id="1" val="0"/>
                             <get-val-151-5 comment="false" id="2" x="0" y="0"/>
@@ -65,14 +71,14 @@
                     </group>
                     <get-val-151-3 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <dolater comment="false" x="26" y="479">
+                <dolater comment="false" x="26" y="536">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="511">
+                        <die comment="false" x="37" y="568">
                             <ACTOR eid="this" id="0"/>
                         </die>
-                        <if comment="false" x="37" y="538">
+                        <if comment="false" x="37" y="595">
                             <group eventID="1" id="-1">
-                                <say comment="false" x="48" y="571">
+                                <say comment="false" x="48" y="628">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Reload On Death PM"/>
                                     <int id="2" val="Reload"/>
