@@ -50,16 +50,31 @@
                                 </set-val-408-4>
                             </group>
                         </else>
-                        <dolater comment="false" x="37" y="251">
+                        <set-val-408-5 comment="false" x="37" y="251">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-408-1 comment="false" id="0" x="0" y="0"/>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <random comment="false" id="0" x="0" y="0"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <get-val-408-2 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-408-1 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                </times>
+                            </plus>
+                        </set-val-408-5>
+                        <print comment="false" x="37" y="291">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="DELAY TIME: "/>
+                                <get-val-408-5 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                        </print>
+                        <dolater comment="false" x="37" y="321">
                             <group eventID="1" id="-1">
-                                <custom-786 comment="false" x="48" y="288">
+                                <custom-786 comment="false" x="48" y="353">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-786>
                             </group>
-                            <randint comment="false" id="0" x="0" y="0">
-                                <get-val-408-1 comment="false" id="0" x="0" y="0"/>
-                                <get-val-408-2 comment="false" id="1" x="0" y="0"/>
-                            </randint>
+                            <get-val-408-5 comment="false" id="0" x="0" y="0"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
@@ -71,7 +86,5 @@
             <get-byobval-408-786-0 comment="false" id="0" x="0" y="0"/>
         </receiver-1-786>
     </group>
-    <group eventID="2" id="-1">
-        <get-byobval-408-786-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="2" id="-1"/>
 </groups>

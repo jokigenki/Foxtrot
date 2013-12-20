@@ -63,7 +63,7 @@
         <receiver-3-348 comment="false" x="15" y="15">
             <group eventID="5" id="-1">
                 <comment-long comment="false" x="26" y="40">
-                    <int id="0" val="0 = Shared, 1 = Factory, 2 = Farm, 3 = Home, 4 = Levels"/>
+                    <int id="0" val="0 = Shared, 1 = Factory, 2 = Farm, 3 = Home, 4 = Levels, 5 = Humpty"/>
                 </comment-long>
                 <if comment="false" x="26" y="120">
                     <group eventID="5" id="-1">
@@ -113,36 +113,41 @@
                 </if>
                 <else-if comment="false" x="26" y="408">
                     <group eventID="5" id="-1">
-                        <set-val-21-2 comment="false" x="37" y="443">
+                        <set-val-21-2 comment="false" x="37" y="438">
                             <int id="0" val="014"/>
                         </set-val-21-2>
                     </group>
-                    <or comment="false" id="0" x="0" y="0">
-                        <more comment="false" id="0" x="0" y="0">
-                            <code-short comment="false" id="0" x="0" y="0">
-                                <int id="0" val="nextScene.indexOf(&amp;quot;Factory&amp;quot;)"/>
-                            </code-short>
-                            <int id="1" val="-1"/>
-                        </more>
-                        <more comment="false" id="1" x="0" y="0">
-                            <code-short comment="false" id="0" x="0" y="0">
-                                <int id="0" val="nextScene.indexOf(&amp;quot;Final Boss&amp;quot;)"/>
-                            </code-short>
-                            <int id="1" val="-1"/>
-                        </more>
-                    </or>
+                    <more comment="false" id="0" x="0" y="0">
+                        <code-short comment="false" id="0" x="0" y="0">
+                            <int id="0" val="nextScene.indexOf(&amp;quot;Factory&amp;quot;)"/>
+                        </code-short>
+                        <int id="1" val="-1"/>
+                    </more>
                 </else-if>
-                <else comment="false" x="26" y="475">
+                <else-if comment="false" x="26" y="470">
                     <group eventID="5" id="-1">
-                        <set-val-21-2 comment="false" x="37" y="495">
+                        <set-val-21-2 comment="false" x="37" y="500">
+                            <int id="0" val="05"/>
+                        </set-val-21-2>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <code-short comment="false" id="0" x="0" y="0">
+                            <int id="0" val="nextScene.indexOf(&amp;quot;Final Boss&amp;quot;)"/>
+                        </code-short>
+                        <int id="1" val="-1"/>
+                    </more>
+                </else-if>
+                <else comment="false" x="26" y="532">
+                    <group eventID="5" id="-1">
+                        <set-val-21-2 comment="false" x="37" y="552">
                             <int id="0" val="03"/>
                         </set-val-21-2>
                     </group>
                 </else>
-                <set-val-21-3 comment="false" x="26" y="527">
+                <set-val-21-3 comment="false" x="26" y="584">
                     <int id="0" val="0"/>
                 </set-val-21-3>
-                <print comment="false" x="26" y="547">
+                <print comment="false" x="26" y="604">
                     <str-combine comment="false" id="0" x="0" y="0">
                         <int id="0" val="ATLASES WERE: "/>
                         <str-combine comment="false" id="1" x="0" y="0">
@@ -154,11 +159,11 @@
                         </str-combine>
                     </str-combine>
                 </print>
-                <repeat comment="false" x="26" y="587">
+                <repeat comment="false" x="26" y="644">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="617">
+                        <if comment="false" x="37" y="674">
                             <group eventID="5" id="-1">
-                                <print comment="false" x="48" y="657">
+                                <print comment="false" x="48" y="714">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <int id="0" val="UNLOAD: "/>
                                         <str-char-at comment="false" id="1" x="0" y="0">
@@ -167,7 +172,7 @@
                                         </str-char-at>
                                     </str-combine>
                                 </print>
-                                <load-unload-atlas comment="false" x="48" y="692">
+                                <load-unload-atlas comment="false" x="48" y="749">
                                     <int id="0" val="1"/>
                                     <as-number comment="false" id="1" x="0" y="0">
                                         <str-char-at comment="false" id="0" x="0" y="0">
@@ -188,7 +193,7 @@
                                 <int id="1" val="-1"/>
                             </eq>
                         </if>
-                        <incdec comment="false" x="37" y="746">
+                        <incdec comment="false" x="37" y="803">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -198,14 +203,14 @@
                         <get-val-21-1 comment="false" id="0" x="0" y="0"/>
                     </str-length>
                 </repeat>
-                <set-val-21-3 comment="false" x="26" y="785">
+                <set-val-21-3 comment="false" x="26" y="842">
                     <int id="0" val="0"/>
                 </set-val-21-3>
-                <repeat comment="false" x="26" y="805">
+                <repeat comment="false" x="26" y="862">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="835">
+                        <if comment="false" x="37" y="892">
                             <group eventID="5" id="-1">
-                                <print comment="false" x="48" y="875">
+                                <print comment="false" x="48" y="932">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <int id="0" val="LOAD: "/>
                                         <str-char-at comment="false" id="1" x="0" y="0">
@@ -214,7 +219,7 @@
                                         </str-char-at>
                                     </str-combine>
                                 </print>
-                                <load-unload-atlas comment="false" x="48" y="910">
+                                <load-unload-atlas comment="false" x="48" y="967">
                                     <int id="0" val="0"/>
                                     <as-number comment="false" id="1" x="0" y="0">
                                         <str-char-at comment="false" id="0" x="0" y="0">
@@ -235,7 +240,7 @@
                                 <int id="1" val="-1"/>
                             </eq>
                         </if>
-                        <incdec comment="false" x="37" y="964">
+                        <incdec comment="false" x="37" y="1021">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -245,10 +250,10 @@
                         <get-val-21-2 comment="false" id="0" x="0" y="0"/>
                     </str-length>
                 </repeat>
-                <set-game-val-24 comment="false" x="26" y="1003">
+                <set-game-val-24 comment="false" x="26" y="1060">
                     <get-val-21-2 comment="false" id="0" x="0" y="0"/>
                 </set-game-val-24>
-                <scene-change-new comment="false" x="26" y="1028">
+                <scene-change-new comment="false" x="26" y="1085">
                     <scenebyname comment="false" id="0" x="0" y="0">
                         <get-item comment="false" id="0" x="0" y="0">
                             <str-split comment="false" id="0" x="0" y="0">
@@ -266,7 +271,12 @@
             </group>
         </receiver-3-348>
     </group>
-    <group eventID="5" id="-1"/>
+    <group eventID="5" id="-1">
+        <or comment="false" x="321" y="347">
+            <int id="0" val=""/>
+            <int id="1" val=""/>
+        </or>
+    </group>
     <group eventID="6" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="6" id="-1">

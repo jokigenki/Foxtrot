@@ -61,12 +61,12 @@
     <group eventID="4" id="0">
         <receiver-1-889 comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <set-val-409-3 comment="false" x="26" y="45">
+                <set-val-409-3 comment="false" x="26" y="40">
                     <custom-538 comment="false" id="0" x="0" y="0">
                         <get-val-409-1 comment="false" id="0" x="0" y="0"/>
                     </custom-538>
                 </set-val-409-3>
-                <create-actor3 comment="false" x="26" y="75">
+                <create-actor3 comment="false" x="26" y="70">
                     <code-short comment="false" id="0" x="0" y="0">
                         <int id="0" val="getActorTypeByName(&amp;quot;&amp;quot; + _ActorTypeNameToChuck)"/>
                     </code-short>
@@ -83,7 +83,7 @@
                     </plus>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <push-shove comment="false" x="26" y="120">
+                <push-shove comment="false" x="26" y="115">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
                     <randint comment="false" id="2" x="0" y="0">
@@ -96,12 +96,12 @@
                     </randint>
                     <get-val-409-8 comment="false" id="4" x="0" y="0"/>
                 </push-shove>
-                <if comment="false" x="26" y="157">
+                <if comment="false" x="26" y="152">
                     <group eventID="2" id="-1">
-                        <set-val-409-10 comment="false" x="37" y="195">
+                        <set-val-409-10 comment="false" x="37" y="190">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-409-10>
-                        <setanim comment="false" x="37" y="220">
+                        <setanim comment="false" x="37" y="215">
                             <ACTOR eid="this" id="0"/>
                             <get-val-409-9 comment="false" id="1" x="0" y="0"/>
                         </setanim>
@@ -114,10 +114,8 @@
                     </noteq>
                 </if>
             </group>
-            <get-byobval-409-889-0 comment="false" id="0" x="0" y="0"/>
+            <int id="0" val=""/>
         </receiver-1-889>
     </group>
-    <group eventID="4" id="-1">
-        <get-byobval-409-889-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="4" id="-1"/>
 </groups>

@@ -5,20 +5,25 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="37" y="83">
+                        <die comment="false" x="37" y="88">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <not comment="false" id="0" x="0" y="0">
-                            <has-snippet comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="Display On Collected PM"/>
-                            </has-snippet>
+                            <get-val-64-3 comment="false" id="0" x="0" y="0"/>
                         </not>
-                        <custom-326 comment="false" id="1" x="0" y="0">
-                            <get-val-64-2 comment="false" id="0" x="0" y="0"/>
-                        </custom-326>
+                        <and comment="false" id="1" x="0" y="0">
+                            <not comment="false" id="0" x="0" y="0">
+                                <has-snippet comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Display On Collected PM"/>
+                                </has-snippet>
+                            </not>
+                            <custom-326 comment="false" id="1" x="0" y="0">
+                                <get-val-64-2 comment="false" id="0" x="0" y="0"/>
+                            </custom-326>
+                        </and>
                     </and>
                 </if>
             </group>
