@@ -420,6 +420,7 @@
                 <prop id="1" list="0" val="KeyCollected"/>
                 <prop id="2" list="0" val=""/>
                 <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="120">
@@ -775,6 +776,7 @@
                 <prop id="1" list="0" val="KeyCollected"/>
                 <prop id="2" list="0" val=""/>
                 <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="120">
@@ -792,7 +794,6 @@
             <poly data="4,0,0,32,0,32,48,0,48" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <music atlasID="4" desc="" id="626" loop="true" name="Boss Key Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="847" loop="true" name="Break Crate SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="821" loop="true" name="Cable SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-64" blocktype="NORMAL" code="Number((scripts.Design_27_27_ActorExtrasPM.CalculateDistance(~,~)))" desc="Calculates distance between the centre points of 2 actors." global="true" gui="distance between %0 and %1" id="64" message="CalculateDistance" name="CalculateDistance" oid="-1" return="NUMBER" shared="false" snippetID="27">
@@ -2173,6 +2174,7 @@
             <s enabled="true" id="64">
                 <prop id="1" list="0" val="EggCollected"/>
                 <prop id="2" list="0" val=""/>
+                <prop id="3" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="191">
@@ -2469,6 +2471,7 @@
             <s enabled="true" id="64">
                 <prop id="1" list="0" val="EggCollected"/>
                 <prop id="2" list="0" val=""/>
+                <prop id="3" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="54">
@@ -2694,6 +2697,7 @@
         <tile collision="1" data="" durations="100" frames="14" id="14" order="-1"/>
         <tile collision="1" data="" durations="100" frames="15" id="15" order="-1"/>
     </tileset>
+    <music atlasID="0" desc="" id="924" loop="true" name="Factory Boss Key Room Theme" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="853" loop="true" name="Factory Interstitial Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <music atlasID="1" desc="" id="756" loop="true" name="Factory Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <custom-block blocktag="custom-633" blocktype="ACTION" code="sayToScene(&quot;Sound Manager PM&quot;, &quot;FadeOutCurrent&quot;, ~,~,~);" desc="" global="false" gui="Fade out current music over %0 fade in %1 over %2" id="633" message="FadeOutCurrent" name="FadeOutCurrent" oid="-1" return="VOID" shared="false" snippetID="329">
@@ -2795,6 +2799,7 @@
         <tile collision="1" data="" durations="100" frames="10" id="10" order="-1"/>
         <tile collision="1" data="" durations="100" frames="11" id="11" order="-1"/>
     </tileset>
+    <music atlasID="4" desc="" id="626" loop="true" name="Farm Boss Key Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <tileset across="6" atlasID="2" desc="" down="12" id="229" name="Farm Hen House" oid="-1" shared="false" th="16" tw="16">
         <tile collision="1" data="" durations="100" frames="0" id="72" order="-1"/>
         <tile collision="1" data="" durations="100" frames="1" id="73" order="-1"/>
@@ -2869,6 +2874,7 @@
         <tile collision="-1" data="" durations="100" frames="70" id="142" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="71" id="143" order="-1"/>
     </tileset>
+    <music atlasID="0" desc="" id="923" loop="true" name="Farm Interstitial Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <tileset across="12" atlasID="0" desc="" down="6" id="643" name="Farm Tiles" oid="-1" shared="false" th="16" tw="16">
         <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -3382,6 +3388,7 @@
             <s enabled="true" id="64">
                 <prop id="1" list="0" val="EggCollected"/>
                 <prop id="2" list="0" val="BigBossEgg"/>
+                <prop id="3" list="0" val="false"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="191">
@@ -7725,6 +7732,7 @@
         <blank name="Direction" order="2" type="TEXT"/>
     </custom-block>
     <music atlasID="0" desc="" id="851" loop="true" name="Tutorial Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="925" loop="true" name="Underwater Loop SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-596" blocktype="ACTION" code="scripts.Design_206_206_DoorsAndInventoryExtrasPM.UnlockActor(~);" desc="" global="true" gui="Unlock %0" id="596" message="UnlockActor" name="UnlockActor" oid="-1" return="VOID" shared="false" snippetID="206">
         <blank name="Door Actor" order="0" type="ACTOR"/>
     </custom-block>

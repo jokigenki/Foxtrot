@@ -91,8 +91,8 @@ public function _customBlock_FadeOutCurrent(__FadeOutTime:Float, __Music:Sound, 
                     loopSoundOnChannel(__Music, Std.int(0));
                     if((__FadeOutTime > 0))
 {
-                        setVolumeForChannel(0/100, Std.int(0));
-                        fadeInSoundOnChannel(Std.int(0),__FadeOutTime);
+                        setVolumeForChannel(100/100, Std.int(0));
+                        fadeInSoundOnChannel(Std.int(0),__FadeInTime);
 }
 
                     setGameAttribute("Current Music", ("" + __Music));
