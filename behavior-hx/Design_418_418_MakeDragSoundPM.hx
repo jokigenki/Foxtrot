@@ -117,6 +117,11 @@ propertyChanged("_IsOnGround", _IsOnGround);
 
 }
 });
+    addWhenKilledListener(actor, function(list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        sayToScene("Sound Manager PM", "_customBlock_StopSceneSoundForActor", [_SFXName,getCurrentSceneName(),actor]);
+}
+});
 
 	}	      	
 	
