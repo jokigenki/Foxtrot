@@ -42,7 +42,7 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_6 extends SceneScript
+class SceneEvents_4 extends SceneScript
 {          	
 	
  
@@ -54,11 +54,7 @@ class SceneEvents_6 extends SceneScript
 	
 	override public function init()
 	{
-		            if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg1_Boss")), Bool)))
-{
-            recycleActor(getActor(11));
-}
-
+		            setGameAttribute("Speed Run In Progress", false);
 
 	}	      	
 	
