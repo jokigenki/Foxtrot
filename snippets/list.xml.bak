@@ -2862,19 +2862,20 @@
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_317_317_SwimmingPM" classname="scripts.Design_317_317_SwimmingPM" desc="" description="" design="true" drawOrder="0" id="317" language="" name="Swimming PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
-        <text default="Swimming" defaultValue="Swimming" desc="Set the category used for the animation - used for the hierarchy." dropdown="" fullname="Animation Category" hidden="false" id="2" name="_AnimationCategory" order="2"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Key Released?" hidden="true" id="4" name="_KeyReleased" order="4"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Prevent Swimming?" hidden="true" id="13" name="_PreventSwimming" order="13"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Can Swim?" hidden="true" id="14" name="_CanSwim" order="14"/>
-        <sound default="" defaultValue="" desc="" dropdown="" fullname="Swim Sound" hidden="false" id="15" name="_SwimSound" order="15"/>
+        <text default="Swimming" defaultValue="Swimming" desc="Set the category used for the animation - used for the hierarchy." dropdown="" fullname="Animation Category" hidden="false" id="2" name="_AnimationCategory" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Key Released?" hidden="true" id="4" name="_KeyReleased" order="2"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Prevent Swimming?" hidden="true" id="13" name="_PreventSwimming" order="3"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Can Swim?" hidden="true" id="14" name="_CanSwim" order="4"/>
+        <sound default="" defaultValue="" desc="" dropdown="" fullname="Swim Sound" hidden="false" id="15" name="_SwimSound" order="5"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Swim Right Animation" hidden="false" id="17" name="_SwimRightAnimation" order="17"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="Swim Left Animation" hidden="false" id="16" name="_SwimLeftAnimation" order="16"/>
-        <number default="35" defaultValue="35" desc="Amount of force applied when swimming.&lt;br&gt;&#10;Default = 35" dropdown="" fullname="Swim Force" hidden="false" id="19" name="_SwimForce" order="19"/>
-        <number default="35" defaultValue="35" desc="Amount of force applied when swimming(mobile only).&lt;br&gt;&#10;Default = 35" dropdown="" fullname="Mobile Swim Force" hidden="false" id="18" name="_MobileSwimForce" order="18"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Elapsed Swim Time" hidden="true" id="21" name="_ElapsedSwimTime" order="21"/>
-        <number default="0.75" defaultValue="0.75" desc="When releasing the jump key before reaching the max&lt;br&gt;&#10;height, what is the rate of upward slowdown?&lt;br&gt;&lt;br&gt;&#10;default = 0.75" dropdown="" fullname="Swimming Slowdown" hidden="false" id="20" name="_SwimmingSlowdown" order="20"/>
-        <number default="0.075" defaultValue="0.075" desc="Maximum amount of time that the&lt;br&gt;&#10;swim force will be applied when holding down the swim button.&lt;br&gt;&lt;br&gt;&#10;default = 0.075" dropdown="" fullname="Max Swim Time" hidden="false" id="22" name="_MaxSwimTime" order="22"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Swim Right Animation" hidden="false" id="17" name="_SwimRightAnimation" order="7"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Swim Left Animation" hidden="false" id="16" name="_SwimLeftAnimation" order="6"/>
+        <number default="35" defaultValue="35" desc="Amount of force applied when swimming.&lt;br&gt;&#10;Default = 35" dropdown="" fullname="Swim Force" hidden="false" id="19" name="_SwimForce" order="9"/>
+        <number default="35" defaultValue="35" desc="Amount of force applied when swimming(mobile only).&lt;br&gt;&#10;Default = 35" dropdown="" fullname="Mobile Swim Force" hidden="false" id="18" name="_MobileSwimForce" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Elapsed Swim Time" hidden="true" id="21" name="_ElapsedSwimTime" order="11"/>
+        <number default="0.75" defaultValue="0.75" desc="When releasing the jump key before reaching the max&lt;br&gt;&#10;height, what is the rate of upward slowdown?&lt;br&gt;&lt;br&gt;&#10;default = 0.75" dropdown="" fullname="Swimming Slowdown" hidden="false" id="20" name="_SwimmingSlowdown" order="10"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Swim Sound Name" hidden="false" id="23" name="_SwimSoundName" order="13"/>
+        <number default="0.075" defaultValue="0.075" desc="Maximum amount of time that the&lt;br&gt;&#10;swim force will be applied when holding down the swim button.&lt;br&gt;&lt;br&gt;&#10;default = 0.075" dropdown="" fullname="Max Swim Time" hidden="false" id="22" name="_MaxSwimTime" order="12"/>
         <blocks>
             <receiver blockID="602" id="1"/>
             <receiver blockID="603" id="2"/>
