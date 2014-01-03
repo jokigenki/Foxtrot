@@ -426,7 +426,7 @@
             <poly data="4,0,0,25,0,25,19,0,19" density="0.1" fric="0.2" gid="-1000" id="0" name="Key Collected" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="406" fixedrot="false" fric="0.2" gid="3" id="782" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Big Boss Key" oid="-1" pausable="true" rest="0.0" shared="false" sprite="783" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="406" fixedrot="true" fric="0.2" gid="3" id="782" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Big Boss Key" oid="-1" pausable="true" rest="0.0" shared="false" sprite="783" static="false">
         <snippets>
             <s enabled="true" id="191">
                 <prop id="6" list="0" val="-1"/>
@@ -474,6 +474,48 @@
             </s>
         </snippets>
     </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="13" id="938" name="Big Hat Collectable" shared="false" width="64">
+        <anim across="1" down="1" durations="100" height="13" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="6" sync="false" width="64">
+            <poly data="4,0,0,64,0,64,13,0,13" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="435" fixedrot="true" fric="0.2" gid="3" id="937" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Big Hat Collectable" oid="-1" pausable="true" rest="0.0" shared="false" sprite="938" static="false">
+        <snippets>
+            <s enabled="true" id="64">
+                <prop id="1" list="0" val="HatCollected"/>
+                <prop id="2" list="0" val="BigHat"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="191">
+                <prop id="6" list="0" val="939"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="200"/>
+                <prop id="9" list="0" val="0.5"/>
+                <prop id="10" list="0" val="1"/>
+                <prop id="11" list="0" val="891"/>
+                <prop id="12" list="0" val="787"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="436" fixedrot="false" fric="0.2" gid="2" id="939" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Big Hat Display" oid="-1" pausable="true" rest="0.0" shared="false" sprite="940" static="true">
+        <snippets>
+            <s enabled="true" id="191">
+                <prop id="6" list="0" val="937"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="200"/>
+                <prop id="9" list="0" val="0.5"/>
+                <prop id="10" list="0" val="1"/>
+                <prop id="11" list="0" val="891"/>
+                <prop id="12" list="0" val="787"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="13" id="940" name="Big Hat Display" shared="false" width="64">
+        <anim across="1" down="1" durations="100" height="13" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="6" sync="false" width="64"/>
+    </sprite>
     <tileset across="19" atlasID="0" desc="" down="6" id="766" name="Big Pipes Overlay" oid="-1" shared="false" th="16" tw="16">
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -814,6 +856,37 @@
             <poly data="4,0,0,32,0,32,48,0,48" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="19" id="934" name="Boss Key Physics" shared="false" width="25">
+        <anim across="1" down="1" durations="100" height="19" id="0" loop="true" name="Animation 0" numframes="1" originx="12" originy="9" sync="false" width="25">
+            <poly data="4,0,0,25,0,25,19,0,19" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="433" fixedrot="true" fric="0.2" gid="3" id="933" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Boss Key Physics" oid="-1" pausable="true" rest="0.0" shared="false" sprite="934" static="false">
+        <snippets>
+            <s enabled="true" id="191">
+                <prop id="6" list="0" val="782"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="200"/>
+                <prop id="9" list="0" val="0.5"/>
+                <prop id="10" list="0" val="1"/>
+                <prop id="11" list="0" val="802"/>
+                <prop id="12" list="0" val="787"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="91">
+                <prop id="1" list="0" val="KeyCollected"/>
+                <prop id="2" list="0" val=""/>
+                <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="120">
+                <prop id="1" list="0" val="KeyCollected"/>
+                <prop id="2" list="0" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
     <music atlasID="0" desc="" id="847" loop="true" name="Break Crate SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="821" loop="true" name="Cable SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-64" blocktype="NORMAL" code="Number((scripts.Design_27_27_ActorExtrasPM.CalculateDistance(~,~)))" desc="Calculates distance between the centre points of 2 actors." global="true" gui="distance between %0 and %1" id="64" message="CalculateDistance" name="CalculateDistance" oid="-1" return="NUMBER" shared="false" snippetID="27">
@@ -3437,6 +3510,36 @@
             <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Key Collected" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="434" fixedrot="true" fric="0.2" gid="3" id="935" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="Gold Key Physics" oid="-1" pausable="true" rest="0.0" shared="false" sprite="936" static="false">
+        <snippets>
+            <s enabled="true" id="191">
+                <prop id="6" list="0" val="142"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="8" list="0" val="200"/>
+                <prop id="9" list="0" val="0.5"/>
+                <prop id="10" list="0" val="1"/>
+                <prop id="11" list="0" val="802"/>
+                <prop id="12" list="0" val="787"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="91">
+                <prop id="1" list="0" val="KeyCollected"/>
+                <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="120">
+                <prop id="1" list="0" val="KeyCollected"/>
+                <prop id="2" list="0" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="936" name="Gold Key Physics" shared="false" width="16">
+        <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="8" originy="8" sync="false" width="16">
+            <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <music atlasID="0" desc="" id="891" loop="true" name="Golden Egg Collect SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="1" default="0" defaultAnimation="0" desc="" height="16" id="665" name="Goose Curve" shared="false" width="16">
         <anim across="1" down="1" durations="100" height="16" id="0" loop="true" name="Animation 0" numframes="1" originx="8" originy="8" sync="false" width="16"/>
@@ -5265,7 +5368,7 @@
             </s>
             <s enabled="true" id="165">
                 <prop id="4" list="1" val="">
-                    <text order="0" value="Vertical Oscillation PM"/>
+                    <text order="0" value="Reposition Whilst Activated PM"/>
                 </prop>
                 <prop id="5" list="0" val=""/>
                 <prop id="2147483647" list="0" val="thisactor"/>

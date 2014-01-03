@@ -5,9 +5,16 @@
             <group eventID="1" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <custom-709 comment="false" x="37" y="67">
-                            <ACTOR eid="6" id="0"/>
-                        </custom-709>
+                        <if comment="false" x="37" y="67">
+                            <group eventID="1" id="-1">
+                                <custom-709 comment="false" x="48" y="100">
+                                    <ACTOR eid="6" id="0"/>
+                                </custom-709>
+                            </group>
+                            <isalive comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="6" id="0"/>
+                            </isalive>
+                        </if>
                     </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
@@ -47,18 +54,27 @@
                 </actor-enabledisable-snippet>
                 <dolater comment="false" x="26" y="175">
                     <group eventID="2" id="-1">
-                        <actor-enabledisable-snippet comment="false" x="37" y="202">
-                            <ACTOR eid="5" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="Walking PM"/>
-                        </actor-enabledisable-snippet>
+                        <if comment="false" x="37" y="202">
+                            <group eventID="2" id="-1">
+                                <actor-enabledisable-snippet comment="false" x="48" y="240">
+                                    <ACTOR eid="5" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="Walking PM"/>
+                                </actor-enabledisable-snippet>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <custom-65 comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="5" id="0"/>
+                                </custom-65>
+                            </not>
+                        </if>
                     </group>
                     <int id="0" val="1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <if comment="false" x="26" y="241">
+                <if comment="false" x="26" y="291">
                     <group eventID="2" id="-1">
-                        <say comment="false" x="37" y="279">
+                        <say comment="false" x="37" y="329">
                             <ACTOR eid="7" id="0"/>
                             <int id="1" val="Goose Head Maker PM"/>
                             <int id="2" val="Activate"/>
@@ -73,25 +89,13 @@
                         <int id="1" val="2"/>
                     </eq>
                 </if>
-                <if comment="false" x="26" y="318">
+                <if comment="false" x="26" y="368">
                     <group eventID="2" id="-1">
-                        <say comment="false" x="37" y="356">
+                        <say comment="false" x="37" y="411">
                             <ACTOR eid="8" id="0"/>
                             <int id="1" val="Goose Head Maker PM"/>
                             <int id="2" val="Activate"/>
                         </say>
-                    </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-attribute comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="5" id="0"/>
-                            <int id="1" val="Reduce Health PM"/>
-                            <int id="2" val="_CurrentHealth"/>
-                        </get-attribute>
-                        <int id="1" val="1"/>
-                    </eq>
-                </if>
-                <if comment="false" x="26" y="395">
-                    <group eventID="3" id="-1">
                         <if comment="false" x="37" y="438">
                             <group eventID="3" id="-1">
                                 <custom-632 comment="false" x="48" y="463">
@@ -122,9 +126,16 @@
             <group eventID="4" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <custom-709 comment="false" x="37" y="67">
-                            <ACTOR eid="7" id="0"/>
-                        </custom-709>
+                        <if comment="false" x="37" y="67">
+                            <group eventID="4" id="-1">
+                                <custom-709 comment="false" x="48" y="100">
+                                    <ACTOR eid="7" id="0"/>
+                                </custom-709>
+                            </group>
+                            <isalive comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="7" id="0"/>
+                            </isalive>
+                        </if>
                     </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
@@ -139,9 +150,16 @@
             <group eventID="5" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <custom-709 comment="false" x="37" y="67">
-                            <ACTOR eid="8" id="0"/>
-                        </custom-709>
+                        <if comment="false" x="37" y="67">
+                            <group eventID="5" id="-1">
+                                <custom-709 comment="false" x="48" y="100">
+                                    <ACTOR eid="8" id="0"/>
+                                </custom-709>
+                            </group>
+                            <isalive comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="8" id="0"/>
+                            </isalive>
+                        </if>
                     </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
@@ -468,7 +486,7 @@
                     <int id="3" val="9"/>
                 </fadeInOut>
                 <say comment="false" x="26" y="202">
-                    <ACTOR eid="14" id="0"/>
+                    <ACTOR eid="16" id="0"/>
                     <int id="1" val="Activate On Event PM"/>
                     <int id="2" val="Activate"/>
                 </say>
