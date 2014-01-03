@@ -88,10 +88,10 @@
                         </not>
                         <and comment="false" id="1" x="0" y="0">
                             <not comment="false" id="0" x="0" y="0">
-                                <has-snippet comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="Display On Collected PM"/>
-                                </has-snippet>
+                                    <int id="1" val="Collection Display"/>
+                                </actor-get-prop>
                             </not>
                             <custom-326 comment="false" id="1" x="0" y="0">
                                 <get-val-91-3 comment="false" id="0" x="0" y="0"/>
@@ -102,5 +102,10 @@
             </group>
         </init>
     </group>
-    <group eventID="2" id="-1"/>
+    <group eventID="2" id="-1">
+        <has-snippet comment="false" x="371" y="176">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="Display On Collected PM"/>
+        </has-snippet>
+    </group>
 </groups>

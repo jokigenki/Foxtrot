@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-collide-actortogroup comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="92">
+                            <group eventID="3" id="-1">
+                                <if comment="false" x="48" y="130">
+                                    <group eventID="1" id="-1">
+                                        <print comment="false" x="59" y="165">
+                                            <str-combine comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="Collect "/>
+                                                <get-val-429-1 comment="false" id="1" x="0" y="0"/>
+                                            </str-combine>
+                                        </print>
+                                        <custom-327 comment="false" x="59" y="195">
+                                            <get-val-429-1 comment="false" id="0" x="0" y="0"/>
+                                            <getatype comment="false" id="1" x="0" y="0">
+                                                <this-actor comment="false" id="0" x="0" y="0"/>
+                                            </getatype>
+                                        </custom-327>
+                                        <shout comment="false" x="59" y="240">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-429-2 comment="false" id="1" x="0" y="0"/>
+                                        </shout>
+                                        <scene-shout comment="false" x="59" y="272">
+                                            <get-val-429-2 comment="false" id="0" x="0" y="0"/>
+                                        </scene-shout>
+                                    </group>
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <str-empty comment="false" id="0" x="0" y="0">
+                                            <get-val-429-1 comment="false" id="0" x="0" y="0"/>
+                                        </str-empty>
+                                    </not>
+                                </if>
+                                <if comment="false" x="48" y="309">
+                                    <group eventID="1" id="-1">
+                                        <custom-668 comment="false" x="59" y="342">
+                                            <ACTOR eid="this" id="0"/>
+                                        </custom-668>
+                                    </group>
+                                    <has-snippet comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="Display On Collected PM"/>
+                                    </has-snippet>
+                                </if>
+                                <die comment="false" x="48" y="381">
+                                    <ACTOR eid="this" id="0"/>
+                                </die>
+                            </group>
+                            <has-snippet comment="false" id="0" x="0" y="0">
+                                <collide-member-of-group comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Collector PM"/>
+                            </has-snippet>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <str-empty comment="false" id="0" x="0" y="0">
+                                <get-val-429-1 comment="false" id="0" x="0" y="0"/>
+                            </str-empty>
+                        </not>
+                        <or comment="false" id="1" x="0" y="0">
+                            <get-val-429-3 comment="false" id="0" x="0" y="0"/>
+                            <not comment="false" id="1" x="0" y="0">
+                                <custom-326 comment="false" id="0" x="0" y="0">
+                                    <get-val-429-1 comment="false" id="0" x="0" y="0"/>
+                                </custom-326>
+                            </not>
+                        </or>
+                    </and>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <GROUP eid="0" id="1"/>
+        </event-collide-actortogroup>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="88">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-429-3 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <and comment="false" id="1" x="0" y="0">
+                            <not comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Collection Display"/>
+                                </actor-get-prop>
+                            </not>
+                            <custom-326 comment="false" id="1" x="0" y="0">
+                                <get-val-429-1 comment="false" id="0" x="0" y="0"/>
+                            </custom-326>
+                        </and>
+                    </and>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

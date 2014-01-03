@@ -3,12 +3,16 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <if comment="false" x="26" y="40">
+                <toggle-image comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
+                <if comment="false" x="26" y="67">
                     <group eventID="2" id="-1">
-                        <custom-code comment="false" x="37" y="78">
+                        <custom-code comment="false" x="37" y="105">
                             <int id="0" val="_CollectionDisplayType = actor.getType();"/>
                         </custom-code>
-                        <custom-code comment="false" x="37" y="98">
+                        <custom-code comment="false" x="37" y="125">
                             <int id="0" val="propertyChanged(&amp;quot;_CollectionDisplayType&amp;quot;, _CollectionDisplayType);"/>
                         </custom-code>
                     </group>
@@ -19,15 +23,30 @@
                         </value>
                     </not>
                 </if>
-                <toggle-image comment="false" x="26" y="130">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                </toggle-image>
                 <dolater comment="false" x="26" y="157">
                     <group eventID="1" id="-1">
                         <if comment="false" x="37" y="184">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="217">
+                                <print comment="false" x="48" y="217">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="SHOW "/>
+                                        <tostring comment="false" id="1" x="0" y="0">
+                                            <actor comment="false" id="0" x="0" y="0">
+                                                <ACTOR eid="this" id="0"/>
+                                            </actor>
+                                        </tostring>
+                                    </str-combine>
+                                </print>
+                                <toggle-image comment="false" x="48" y="260">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </toggle-image>
+                                <actor-set-prop comment="false" x="48" y="287">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Collection Display"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                                <setanim comment="false" x="48" y="319">
                                     <ACTOR eid="this" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <str-combine comment="false" id="0" x="0" y="0">
@@ -39,13 +58,13 @@
                                         </str-combine>
                                     </string-to-anim>
                                 </setanim>
-                                <dolater comment="false" x="48" y="267">
+                                <dolater comment="false" x="48" y="369">
                                     <group eventID="3" id="-1">
-                                        <toggle-image comment="false" x="59" y="294">
+                                        <toggle-image comment="false" x="59" y="396">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="0"/>
                                         </toggle-image>
-                                        <scaleTo comment="false" x="59" y="321">
+                                        <scaleTo comment="false" x="59" y="423">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-191-8 comment="false" id="1" x="0" y="0"/>
                                             <get-val-191-8 comment="false" id="2" x="0" y="0"/>
@@ -55,24 +74,24 @@
                                             </div>
                                             <int id="4" val="8"/>
                                         </scaleTo>
-                                        <dolater comment="false" x="59" y="358">
+                                        <dolater comment="false" x="59" y="460">
                                             <group eventID="2" id="-1">
-                                                <scaleTo comment="false" x="70" y="395">
+                                                <scaleTo comment="false" x="70" y="497">
                                                     <ACTOR eid="this" id="0"/>
                                                     <int id="1" val="100"/>
                                                     <int id="2" val="100"/>
                                                     <get-val-191-9 comment="false" id="3" x="0" y="0"/>
                                                     <int id="4" val="8"/>
                                                 </scaleTo>
-                                                <fadeInOut comment="false" x="70" y="427">
+                                                <fadeInOut comment="false" x="70" y="529">
                                                     <ACTOR eid="this" id="0"/>
                                                     <int id="1" val="1"/>
                                                     <get-val-191-10 comment="false" id="2" x="0" y="0"/>
                                                     <int id="3" val="9"/>
                                                 </fadeInOut>
-                                                <dolater comment="false" x="70" y="459">
+                                                <dolater comment="false" x="70" y="561">
                                                     <group eventID="2" id="-1">
-                                                        <die comment="false" x="81" y="491">
+                                                        <die comment="false" x="81" y="593">
                                                             <ACTOR eid="this" id="0"/>
                                                         </die>
                                                     </group>
@@ -96,49 +115,9 @@
                                 <int id="1" val="Collection Display"/>
                             </actor-get-prop>
                         </if>
-                        <else comment="false" x="37" y="566">
-                            <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="586">
-                                    <group eventID="2" id="-1">
-                                        <die comment="false" x="59" y="629">
-                                            <ACTOR eid="this" id="0"/>
-                                        </die>
-                                    </group>
-                                    <and comment="false" id="0" x="0" y="0">
-                                        <has-snippet comment="false" id="0" x="0" y="0">
-                                            <ACTOR eid="this" id="0"/>
-                                            <int id="1" val="Inventory Collectable PM"/>
-                                        </has-snippet>
-                                        <custom-326 comment="false" id="1" x="0" y="0">
-                                            <get-attribute comment="false" id="0" x="0" y="0">
-                                                <ACTOR eid="this" id="0"/>
-                                                <int id="1" val="Inventory Collectable PM"/>
-                                                <int id="2" val="_CollectableId"/>
-                                            </get-attribute>
-                                        </custom-326>
-                                    </and>
-                                </if>
-                                <if comment="false" x="48" y="668">
-                                    <group eventID="2" id="-1">
-                                        <die comment="false" x="59" y="711">
-                                            <ACTOR eid="this" id="0"/>
-                                        </die>
-                                    </group>
-                                    <and comment="false" id="0" x="0" y="0">
-                                        <has-snippet comment="false" id="0" x="0" y="0">
-                                            <ACTOR eid="this" id="0"/>
-                                            <int id="1" val="Collectable Trigger PM"/>
-                                        </has-snippet>
-                                        <custom-326 comment="false" id="1" x="0" y="0">
-                                            <get-attribute comment="false" id="0" x="0" y="0">
-                                                <ACTOR eid="this" id="0"/>
-                                                <int id="1" val="Collectable Trigger PM"/>
-                                                <int id="2" val="_CollectableId"/>
-                                            </get-attribute>
-                                        </custom-326>
-                                    </and>
-                                </if>
-                                <toggle-image comment="false" x="48" y="750">
+                        <else comment="false" x="37" y="668">
+                            <group eventID="2" id="-1">
+                                <toggle-image comment="false" x="48" y="688">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </toggle-image>
@@ -151,11 +130,80 @@
             </group>
         </init>
     </group>
+    <group eventID="2" id="2">
+        <if comment="false" x="624" y="600">
+            <group eventID="2" id="-1">
+                <die comment="false" x="635" y="643">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <and comment="false" id="0" x="0" y="0">
+                <has-snippet comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Big Boss Egg Collectable PM"/>
+                </has-snippet>
+                <custom-326 comment="false" id="1" x="0" y="0">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Big Boss Egg Collectable PM"/>
+                        <int id="2" val="_CollectableId"/>
+                    </get-attribute>
+                </custom-326>
+            </and>
+        </if>
+        <if comment="false" x="624" y="682">
+            <group eventID="2" id="-1">
+                <die comment="false" x="635" y="725">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <and comment="false" id="0" x="0" y="0">
+                <has-snippet comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Inventory Collectable PM"/>
+                </has-snippet>
+                <custom-326 comment="false" id="1" x="0" y="0">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Inventory Collectable PM"/>
+                        <int id="2" val="_CollectableId"/>
+                    </get-attribute>
+                </custom-326>
+            </and>
+        </if>
+        <if comment="false" x="624" y="764">
+            <group eventID="2" id="-1">
+                <die comment="false" x="635" y="807">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <and comment="false" id="0" x="0" y="0">
+                <has-snippet comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Collectable Trigger PM"/>
+                </has-snippet>
+                <custom-326 comment="false" id="1" x="0" y="0">
+                    <get-attribute comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="Collectable Trigger PM"/>
+                        <int id="2" val="_CollectableId"/>
+                    </get-attribute>
+                </custom-326>
+            </and>
+        </if>
+        <toggle-image comment="false" x="624" y="846">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+        </toggle-image>
+    </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <receiver-1-668 comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <create-actor3 comment="false" x="26" y="45">
+                <print comment="false" x="26" y="45">
+                    <int id="0" val="DISPLAY"/>
+                </print>
+                <create-actor3 comment="false" x="26" y="65">
                     <ACTORTYPE eid="var" id="0" vid="12"/>
                     <minus comment="false" id="1" x="0" y="0">
                         <plus comment="false" id="0" x="0" y="0">
@@ -187,7 +235,7 @@
                     </minus>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <create-actor3 comment="false" x="26" y="100">
+                <create-actor3 comment="false" x="26" y="120">
                     <ACTORTYPE eid="var" id="0" vid="6"/>
                     <get-xy comment="false" id="1" x="0" y="0">
                         <ACTOR eid="lastcreated" id="0"/>
@@ -199,7 +247,7 @@
                     </get-xy>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-xy comment="false" x="26" y="140">
+                <set-xy comment="false" x="26" y="160">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="0"/>
                     <minus comment="false" id="2" x="0" y="0">
@@ -216,7 +264,7 @@
                         </div>
                     </minus>
                 </set-xy>
-                <set-xy comment="false" x="26" y="190">
+                <set-xy comment="false" x="26" y="210">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
                     <minus comment="false" id="2" x="0" y="0">
@@ -233,12 +281,12 @@
                         </div>
                     </minus>
                 </set-xy>
-                <actor-set-prop comment="false" x="26" y="240">
+                <actor-set-prop comment="false" x="26" y="260">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Collection Display"/>
                     <true comment="false" id="2" x="0" y="0"/>
                 </actor-set-prop>
-                <actor-set-prop comment="false" x="26" y="272">
+                <actor-set-prop comment="false" x="26" y="292">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Collection Animation"/>
                     <tostring comment="false" id="2" x="0" y="0">
@@ -247,7 +295,7 @@
                         </getanim>
                     </tostring>
                 </actor-set-prop>
-                <custom-796 comment="false" x="26" y="317">
+                <custom-796 comment="false" x="26" y="337">
                     <SOUND eid="var" id="0" vid="11"/>
                 </custom-796>
             </group>
