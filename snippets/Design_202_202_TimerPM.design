@@ -68,15 +68,22 @@
                                         </incdec>
                                         <if comment="false" x="59" y="318">
                                             <group eventID="5" id="-1">
-                                                <scene-say comment="false" x="70" y="348">
+                                                <shake-start comment="false" x="70" y="348">
+                                                    <int id="0" val="1"/>
+                                                    <int id="1" val="0.5"/>
+                                                </shake-start>
+                                                <set-val-202-14 comment="false" x="70" y="368">
+                                                    <true comment="false" id="0" x="0" y="0"/>
+                                                </set-val-202-14>
+                                                <scene-say comment="false" x="70" y="393">
                                                     <int id="0" val="Speed Run Timer PM"/>
                                                     <int id="1" val="TimerReset"/>
                                                 </scene-say>
-                                                <if comment="false" x="70" y="368">
+                                                <if comment="false" x="70" y="413">
                                                     <group eventID="5" id="-1">
-                                                        <dolater comment="false" x="81" y="393">
+                                                        <dolater comment="false" x="81" y="438">
                                                             <group eventID="5" id="-1">
-                                                                <scene-change-new comment="false" x="92" y="420">
+                                                                <scene-change-new comment="false" x="92" y="465">
                                                                     <scenebyname comment="false" id="0" x="0" y="0">
                                                                         <get-game-val-15 comment="false" id="0" x="0" y="0"/>
                                                                     </scenebyname>
@@ -86,23 +93,29 @@
                                                                     <int id="4" val="0.5"/>
                                                                 </scene-change-new>
                                                             </group>
-                                                            <int id="0" val="1.5"/>
+                                                            <int id="0" val="4"/>
                                                             <ACTOR eid="lastcreated" id="2"/>
                                                         </dolater>
                                                     </group>
                                                     <is-transitioning comment="false" id="0" x="0" y="0"/>
                                                 </if>
-                                                <else comment="false" x="70" y="481">
+                                                <else comment="false" x="70" y="526">
                                                     <group eventID="5" id="-1">
-                                                        <scene-change-new comment="false" x="81" y="501">
-                                                            <scenebyname comment="false" id="0" x="0" y="0">
-                                                                <get-game-val-15 comment="false" id="0" x="0" y="0"/>
-                                                            </scenebyname>
-                                                            <int id="1" val="0"/>
-                                                            <int id="2" val="0.5"/>
-                                                            <int id="3" val="0"/>
-                                                            <int id="4" val="0.5"/>
-                                                        </scene-change-new>
+                                                        <dolater comment="false" x="81" y="546">
+                                                            <group eventID="5" id="-1">
+                                                                <scene-change-new comment="false" x="92" y="573">
+                                                                    <scenebyname comment="false" id="0" x="0" y="0">
+                                                                        <get-game-val-15 comment="false" id="0" x="0" y="0"/>
+                                                                    </scenebyname>
+                                                                    <int id="1" val="0"/>
+                                                                    <int id="2" val="0.5"/>
+                                                                    <int id="3" val="0"/>
+                                                                    <int id="4" val="0.5"/>
+                                                                </scene-change-new>
+                                                            </group>
+                                                            <int id="0" val="2.5"/>
+                                                            <ACTOR eid="lastcreated" id="2"/>
+                                                        </dolater>
                                                     </group>
                                                 </else>
                                             </group>
@@ -119,23 +132,23 @@
                                         </not>
                                     </and>
                                 </if>
-                                <else comment="false" x="48" y="574">
+                                <else comment="false" x="48" y="658">
                                     <group eventID="1" id="-1">
-                                        <print comment="false" x="59" y="594">
+                                        <print comment="false" x="59" y="678">
                                             <int id="0" val="stopping timer"/>
                                         </print>
-                                        <set-val-202-1 comment="false" x="59" y="614">
+                                        <set-val-202-1 comment="false" x="59" y="698">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-202-1>
-                                        <set-val-202-2 comment="false" x="59" y="639">
+                                        <set-val-202-2 comment="false" x="59" y="723">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-202-2>
-                                        <set-game-val-10 comment="false" x="59" y="664">
+                                        <set-game-val-10 comment="false" x="59" y="748">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-10>
-                                        <custom-339 comment="false" x="59" y="689"/>
-                                        <custom-328 comment="false" x="59" y="709"/>
-                                        <cancel comment="false" x="59" y="729"/>
+                                        <custom-339 comment="false" x="59" y="773"/>
+                                        <custom-328 comment="false" x="59" y="793"/>
+                                        <cancel comment="false" x="59" y="813"/>
                                     </group>
                                 </else>
                             </group>
@@ -244,8 +257,30 @@
                                     <get-val-202-5 comment="false" id="1" x="0" y="0"/>
                                 </minus>
                             </custom-341>
-                            <get-val-202-10 comment="false" id="1" x="0" y="0"/>
-                            <get-val-202-11 comment="false" id="2" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-val-202-10 comment="false" id="0" x="0" y="0"/>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <screen-wh comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="0"/>
+                                        </screen-wh>
+                                        <int id="1" val="640"/>
+                                    </minus>
+                                    <int id="1" val="2"/>
+                                </div>
+                            </plus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-val-202-11 comment="false" id="0" x="0" y="0"/>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <screen-wh comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="1"/>
+                                        </screen-wh>
+                                        <int id="1" val="384"/>
+                                    </minus>
+                                    <int id="1" val="2"/>
+                                </div>
+                            </plus>
                         </draw-text>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
@@ -253,6 +288,38 @@
                         <get-val-202-1 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
+                <else-if comment="false" x="26" y="263">
+                    <group eventID="8" id="-1">
+                        <set-font-new comment="false" x="37" y="288">
+                            <FONT eid="742" id="0"/>
+                        </set-font-new>
+                        <to-screen-space comment="false" x="37" y="315"/>
+                        <draw-text comment="false" x="37" y="335">
+                            <int id="0" val="OUT OF TIME!"/>
+                            <div comment="false" id="1" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <screen-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </screen-wh>
+                                    <get-font-width comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="OUT OF TIME!"/>
+                                    </get-font-width>
+                                </minus>
+                                <int id="1" val="2"/>
+                            </div>
+                            <div comment="false" id="2" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <screen-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="1"/>
+                                    </screen-wh>
+                                    <get-font-height comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <int id="1" val="2"/>
+                            </div>
+                        </draw-text>
+                    </group>
+                    <get-val-202-14 comment="false" id="0" x="0" y="0"/>
+                </else-if>
             </group>
         </draw>
     </group>

@@ -2097,13 +2097,14 @@
         <number default="30.0" defaultValue="30.0" desc="" dropdown="" fullname="Y Position" hidden="false" id="11" name="_YPosition" order="9"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Door To Open" hidden="false" id="12" name="_DoorToOpen" order="10"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Key To Kill" hidden="false" id="13" name="_KeyToKill" order="11"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Timed Out?" hidden="true" id="14" name="_TimedOut" order="12"/>
         <blocks>
             <receiver blockID="341" id="1"/>
             <receiver blockID="344" id="2"/>
         </blocks>
         <events>
-            <event displayName="On Timer Reset" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
-            <event displayName="Created" enabled="true" id="5" name="init" order="5" repeats="true"/>
+            <event displayName="On Timer Reset" enabled="true" id="2" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="2" repeats="true"/>
             <event displayName="On Added To Inventory" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="8" name="draw" order="8" repeats="true"/>
             <event displayName="Time to string" enabled="true" id="9" name="event-custom-block" order="9" repeats="true"/>
