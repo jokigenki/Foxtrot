@@ -191,9 +191,16 @@
         <receiver-1-668 comment="false" x="15" y="15">
             <group eventID="3" id="-1">
                 <print comment="false" x="26" y="45">
-                    <int id="0" val="DISPLAY"/>
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="DISPLAY "/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <actor comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </actor>
+                        </tostring>
+                    </str-combine>
                 </print>
-                <create-actor3 comment="false" x="26" y="65">
+                <create-actor3 comment="false" x="26" y="88">
                     <ACTORTYPE eid="var" id="0" vid="12"/>
                     <minus comment="false" id="1" x="0" y="0">
                         <plus comment="false" id="0" x="0" y="0">
@@ -225,7 +232,7 @@
                     </minus>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <create-actor3 comment="false" x="26" y="120">
+                <create-actor3 comment="false" x="26" y="143">
                     <ACTORTYPE eid="var" id="0" vid="6"/>
                     <get-xy comment="false" id="1" x="0" y="0">
                         <ACTOR eid="lastcreated" id="0"/>
@@ -237,7 +244,22 @@
                     </get-xy>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-xy comment="false" x="26" y="160">
+                <print comment="false" x="26" y="183">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <int id="0" val=":"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                                <int id="1" val="3"/>
+                            </get-xy>
+                        </str-combine>
+                    </str-combine>
+                </print>
+                <set-xy comment="false" x="26" y="226">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="0"/>
                     <minus comment="false" id="2" x="0" y="0">
@@ -254,7 +276,7 @@
                         </div>
                     </minus>
                 </set-xy>
-                <set-xy comment="false" x="26" y="210">
+                <set-xy comment="false" x="26" y="276">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
                     <minus comment="false" id="2" x="0" y="0">
@@ -271,12 +293,12 @@
                         </div>
                     </minus>
                 </set-xy>
-                <actor-set-prop comment="false" x="26" y="260">
+                <actor-set-prop comment="false" x="26" y="326">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Collection Display"/>
                     <true comment="false" id="2" x="0" y="0"/>
                 </actor-set-prop>
-                <actor-set-prop comment="false" x="26" y="292">
+                <actor-set-prop comment="false" x="26" y="358">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Collection Animation"/>
                     <tostring comment="false" id="2" x="0" y="0">
@@ -285,7 +307,7 @@
                         </getanim>
                     </tostring>
                 </actor-set-prop>
-                <custom-796 comment="false" x="26" y="337">
+                <custom-796 comment="false" x="26" y="403">
                     <SOUND eid="var" id="0" vid="11"/>
                 </custom-796>
             </group>

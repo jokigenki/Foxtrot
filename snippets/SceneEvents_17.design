@@ -20,19 +20,25 @@
                     <int id="1" val="Activate On Event PM"/>
                     <int id="2" val="Activate"/>
                 </say>
-                <if comment="false" x="26" y="121">
+                <die comment="false" x="26" y="121">
+                    <ACTOR eid="11" id="0"/>
+                </die>
+                <die comment="false" x="26" y="148">
+                    <ACTOR eid="12" id="0"/>
+                </die>
+                <if comment="false" x="26" y="175">
                     <group eventID="2" id="-1">
-                        <set-val-175-2 comment="false" x="37" y="146">
+                        <set-val-175-2 comment="false" x="37" y="200">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-175-2>
-                        <for-each comment="false" x="37" y="171">
+                        <for-each comment="false" x="37" y="225">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="196">
+                                <if comment="false" x="48" y="250">
                                     <group eventID="1" id="-1">
-                                        <set-val-175-2 comment="false" x="59" y="231">
+                                        <set-val-175-2 comment="false" x="59" y="285">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-175-2>
-                                        <break comment="false" x="59" y="256"/>
+                                        <break comment="false" x="59" y="310"/>
                                     </group>
                                     <not comment="false" id="0" x="0" y="0">
                                         <contains-item comment="false" id="0" x="0" y="0">
@@ -44,9 +50,9 @@
                             </group>
                             <get-game-val-13 comment="false" id="0" x="0" y="0"/>
                         </for-each>
-                        <if comment="false" x="37" y="300">
+                        <if comment="false" x="37" y="354">
                             <group eventID="1" id="-1">
-                                <scene-say comment="false" x="48" y="325">
+                                <scene-say comment="false" x="48" y="379">
                                     <int id="0" val="Speed Run Timer PM"/>
                                     <int id="1" val="CompleteSpeedRun"/>
                                 </scene-say>

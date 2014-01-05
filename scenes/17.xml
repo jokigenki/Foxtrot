@@ -14,15 +14,15 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="32" id="0" name="Region 0" pts="4,-182.0,-16.0,182.0,-16.0,182.0,16.0,-182.0,16.0" r="64" type="box" w="364" x="178" y="70"/>
-        <region b="64" g="64" h="32" id="1" name="Region 1" pts="4,-182.0,-16.0,182.0,-16.0,182.0,16.0,-182.0,16.0" r="64" type="box" w="364" x="96" y="104"/>
+        <region b="64" g="64" h="32" id="0" name="Region 0" pts="4,-182.0,16.0,182.0,16.0,182.0,-16.0,-182.0,-16.0" r="64" type="box" w="364" x="178" y="70"/>
+        <region b="64" g="64" h="32" id="1" name="Region 1" pts="4,-182.0,16.0,182.0,16.0,182.0,-16.0,-182.0,-16.0" r="64" type="box" w="364" x="96" y="104"/>
     </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="17" c="true" group="3" id="935" name="Gold Key Physics 17" sx="1.0" sy="1.0" x="329" y="35" z="1">
             <snippets>
                 <s enabled="true" id="191">
-                    <prop id="6" list="0" val="-1"/>
+                    <prop id="6" list="0" val="142"/>
                     <prop id="7" list="0" val="false"/>
                     <prop id="8" list="0" val="200"/>
                     <prop id="9" list="0" val="0.5"/>
@@ -64,8 +64,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="18" list="0" val="false"/>
@@ -96,8 +96,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -111,6 +111,7 @@
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="89"/>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
@@ -129,7 +130,6 @@
                     <prop id="28" list="0" val=""/>
                     <prop id="30" list="0" val="4"/>
                 </s>
-                <s enabled="true" id="89"/>
             </snippets>
         </actor>
         <actor a="0.0" aid="8" c="false" group="11" id="269" name="Rooster 8" sx="1.0" sy="1.0" x="319" y="272" z="2"/>
@@ -302,6 +302,10 @@
                     <prop id="3" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
+                <s enabled="true" id="54">
+                    <prop id="1" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="191">
                     <prop id="1" list="0" val="1"/>
                     <prop id="2" list="0" val="0.5"/>
@@ -315,10 +319,6 @@
                     <prop id="10" list="0" val="1"/>
                     <prop id="11" list="0" val="891"/>
                     <prop id="12" list="0" val="787"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
-                <s enabled="true" id="54">
-                    <prop id="1" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="144"/>
@@ -352,13 +352,13 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
+        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
-        </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -374,16 +374,16 @@
             <prop id="12" list="0" val="-1"/>
             <prop id="13" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="17"/>
+        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="626"/>
             <prop id="2" list="0" val="-1"/>
             <prop id="3" list="0" val="0"/>
             <prop id="4" list="1" val=""/>
             <prop id="5" list="0" val="-1"/>
-        </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="17"/>
         </s>
     </snippets>
     <terrain>
