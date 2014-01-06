@@ -19,7 +19,10 @@
                         <if comment="false" x="37" y="142">
                             <group eventID="9" id="-1">
                                 <set-val-56-14 comment="false" x="48" y="172">
-                                    <int id="0" val="0"/>
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-val-56-14 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-56-15 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
                                 </set-val-56-14>
                             </group>
                             <moreeq comment="false" id="0" x="0" y="0">
@@ -27,13 +30,13 @@
                                 <get-val-56-15 comment="false" id="1" x="0" y="0"/>
                             </moreeq>
                         </if>
-                        <else-if comment="false" x="37" y="204">
+                        <else-if comment="false" x="37" y="214">
                             <group eventID="9" id="-1">
-                                <set-val-56-14 comment="false" x="48" y="234">
-                                    <minus comment="false" id="0" x="0" y="0">
-                                        <get-val-56-15 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="1"/>
-                                    </minus>
+                                <set-val-56-14 comment="false" x="48" y="244">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-56-14 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-56-15 comment="false" id="1" x="0" y="0"/>
+                                    </plus>
                                 </set-val-56-14>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -41,18 +44,18 @@
                                 <int id="1" val="0"/>
                             </less>
                         </else-if>
-                        <set-val-56-9 comment="false" x="37" y="276">
+                        <set-val-56-9 comment="false" x="37" y="286">
                             <get-item comment="false" id="0" x="0" y="0">
                                 <get-val-56-4 comment="false" id="0" x="0" y="0"/>
                                 <get-val-56-12 comment="false" id="1" x="0" y="0"/>
                             </get-item>
                         </set-val-56-9>
-                        <replace-list comment="false" x="37" y="313">
+                        <replace-list comment="false" x="37" y="323">
                             <get-val-56-16 comment="false" id="0" x="0" y="0"/>
                             <get-val-56-12 comment="false" id="1" x="0" y="0"/>
                             <get-val-56-14 comment="false" id="2" x="0" y="0"/>
                         </replace-list>
-                        <set-attribute comment="false" x="37" y="338">
+                        <set-attribute comment="false" x="37" y="348">
                             <get-val-56-9 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="Precalc Windmill Arm PM"/>
                             <int id="2" val="_TargetX"/>
@@ -61,7 +64,7 @@
                                 <get-val-56-14 comment="false" id="1" x="0" y="0"/>
                             </get-item>
                         </set-attribute>
-                        <set-attribute comment="false" x="37" y="375">
+                        <set-attribute comment="false" x="37" y="385">
                             <get-val-56-9 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="Precalc Windmill Arm PM"/>
                             <int id="2" val="_TargetY"/>
@@ -70,7 +73,7 @@
                                 <get-val-56-14 comment="false" id="1" x="0" y="0"/>
                             </get-item>
                         </set-attribute>
-                        <incdec comment="false" x="37" y="412">
+                        <incdec comment="false" x="37" y="422">
                             <int id="0" val="12"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -81,7 +84,12 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="1" id="-1">
+        <minus comment="false" x="305" y="206">
+            <get-val-56-14 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="1"/>
+        </minus>
+    </group>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
@@ -156,19 +164,19 @@
                 <repeat comment="false" x="26" y="341">
                     <group eventID="2" id="-1">
                         <set-val-56-14 comment="false" x="37" y="366">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <times comment="false" id="0" x="0" y="0">
-                                    <get-val-56-6 comment="false" id="0" x="0" y="0"/>
-                                    <loopindex comment="false" id="1" x="0" y="0"/>
-                                </times>
-                                <times comment="false" id="1" x="0" y="0">
-                                    <get-val-56-8 comment="false" id="0" x="0" y="0"/>
-                                    <div comment="false" id="1" x="0" y="0">
-                                        <get-val-56-15 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="360"/>
-                                    </div>
-                                </times>
-                            </plus>
+                            <times comment="false" id="0" x="0" y="0">
+                                <plus comment="false" id="0" x="0" y="0">
+                                    <times comment="false" id="0" x="0" y="0">
+                                        <get-val-56-6 comment="false" id="0" x="0" y="0"/>
+                                        <loopindex comment="false" id="1" x="0" y="0"/>
+                                    </times>
+                                    <get-val-56-8 comment="false" id="1" x="0" y="0"/>
+                                </plus>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <get-val-56-15 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="360"/>
+                                </div>
+                            </times>
                         </set-val-56-14>
                         <set-val-56-10 comment="false" x="37" y="406">
                             <get-item comment="false" id="0" x="0" y="0">

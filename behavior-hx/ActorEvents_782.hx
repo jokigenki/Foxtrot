@@ -42,26 +42,19 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_31 extends SceneScript
+class ActorEvents_782 extends ActorScript
 {          	
 	
-public var _ExitName:String;
-
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-
+		super(actor, engine);	
+		
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Lift Loop SFX",getCurrentSceneName()]);
-}, null);
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

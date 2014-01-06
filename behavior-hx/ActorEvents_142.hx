@@ -42,32 +42,19 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_3 extends SceneScript
+class ActorEvents_142 extends ActorScript
 {          	
 	
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
+		super(actor, engine);	
 		
 	}
 	
 	override public function init()
 	{
-		            setGameAttribute("Speed Run In Progress", false);
-        runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
-                    getActor(17).setValue("Activate Door PM", "_Destination", "_Home|Tutorial_01|A|A");
-                    scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockActor(getActor(17));
-                    getActor(17).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
-                    if((!(getGameAttribute("Save Destination") == "none") && !(("" + getGameAttribute("Save Destination")).split("|")[Std.int(1)] == "_Home")))
-{
-                        setGameAttribute("Last Destination", "" + (scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ReverseDestination(getGameAttribute("Save Destination"))));
-                        getActor(18).setValue("Activate Door PM", "_Destination", getGameAttribute("Save Destination"));
-                        getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
-}
-
-}, null);
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)
