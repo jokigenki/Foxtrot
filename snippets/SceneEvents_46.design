@@ -5,18 +5,22 @@
             <group eventID="1" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <set-val-393-3 comment="false" x="37" y="67">
+                        <toggle-image comment="false" x="37" y="67">
+                            <ACTOR eid="301" id="0"/>
+                            <int id="1" val="1"/>
+                        </toggle-image>
+                        <set-val-393-3 comment="false" x="37" y="94">
                             <int id="0" val="0"/>
                         </set-val-393-3>
-                        <custom-713 comment="false" x="37" y="87">
+                        <custom-713 comment="false" x="37" y="114">
                             <ACTOR eid="4" id="0"/>
                         </custom-713>
-                        <set-val-393-2 comment="false" x="37" y="114">
+                        <set-val-393-2 comment="false" x="37" y="141">
                             <ACTOR eid="6" id="0"/>
                         </set-val-393-2>
-                        <actors-of-type3 comment="false" x="37" y="141">
+                        <actors-of-type3 comment="false" x="37" y="168">
                             <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="173">
+                                <incdec comment="false" x="48" y="200">
                                     <int id="0" val="3"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="1"/>
@@ -251,7 +255,7 @@
             <ACTORTYPE eid="772" id="1"/>
         </event-type-create-kill>
     </group>
-    <group eventID="5" id="2">
+    <group eventID="5" id="1">
         <if comment="false" x="648" y="133">
             <group eventID="5" id="-1">
                 <shout comment="false" x="659" y="163">
@@ -287,14 +291,42 @@
                     </plus>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-val-393-4 comment="false" x="26" y="87">
+                <toggle-image comment="false" x="26" y="87">
+                    <ACTOR eid="301" id="0"/>
+                    <int id="1" val="0"/>
+                </toggle-image>
+                <fadeTo comment="false" x="26" y="114">
+                    <ACTOR eid="301" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0"/>
+                </fadeTo>
+                <fadeInOut comment="false" x="26" y="141">
+                    <ACTOR eid="301" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="2"/>
+                    <int id="3" val="9"/>
+                </fadeInOut>
+                <set-attribute comment="false" x="26" y="168">
+                    <ACTOR eid="301" id="0"/>
+                    <int id="1" val="Usable Item PM"/>
+                    <int id="2" val="_IsEnabled"/>
+                    <true comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="200">
+                    <ACTOR eid="301" id="0"/>
+                    <int id="1" val="Displays Popup PM"/>
+                    <int id="2" val="_IsEnabled"/>
+                    <true comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+                <set-val-393-4 comment="false" x="26" y="232">
                     <int id="0" val="0"/>
                 </set-val-393-4>
-                <periodic comment="false" x="26" y="107">
+                <periodic comment="false" x="26" y="252">
                     <group eventID="4" id="-1">
-                        <repeat comment="false" x="37" y="134">
+                        <repeat comment="false" x="37" y="279">
                             <group eventID="2" id="-1">
-                                <create-actor3 comment="false" x="48" y="159">
+                                <create-actor3 comment="false" x="48" y="304">
                                     <ACTORTYPE eid="941" id="0"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <div comment="false" id="0" x="0" y="0">
@@ -317,14 +349,14 @@
                             </group>
                             <int id="0" val="10"/>
                         </repeat>
-                        <incdec comment="false" x="37" y="226">
+                        <incdec comment="false" x="37" y="371">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
                         </incdec>
-                        <if comment="false" x="37" y="253">
+                        <if comment="false" x="37" y="398">
                             <group eventID="4" id="-1">
-                                <cancel comment="false" x="48" y="283"/>
+                                <cancel comment="false" x="48" y="428"/>
                             </group>
                             <moreeq comment="false" id="0" x="0" y="0">
                                 <get-val-393-4 comment="false" id="0" x="0" y="0"/>

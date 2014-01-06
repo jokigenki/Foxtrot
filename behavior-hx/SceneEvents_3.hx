@@ -66,6 +66,12 @@ class SceneEvents_3 extends SceneScript
                         getActor(18).say("Collectable Door PM", "_customEvent_" + "DoorActivated");
 }
 
+                    if(getGameAttribute("Game Complete"))
+{
+                        getActor(19).setValue("Displays Popup PM", "_PopupType", getActorType(945));
+                        getActor(19).setValue("Displays Popup PM", "_InactivePopupType", getActorType(945));
+}
+
 }, null);
 
 	}	      	

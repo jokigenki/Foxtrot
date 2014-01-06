@@ -71,6 +71,7 @@ public var _Index:Float;
 /* Params are:*/
 public function _customBlock_DoSwitchScene():Void
 {
+        trace("" + (("" + "SWITCH TO ") + ("" + getGameAttribute("Last Destination"))));
         /* 0 = Shared, 1 = Factory, 2 = Farm, 3 = Home, 4 = Levels, 5 = Humpty */
         if(("" + getGameAttribute("Last Destination")) == (""))
 {

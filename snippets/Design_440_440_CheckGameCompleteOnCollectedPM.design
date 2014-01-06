@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-actor-create-kill comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-440-1 comment="false" x="26" y="42">
+                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                </set-val-440-1>
+                <for-each comment="false" x="26" y="67">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="92">
+                            <group eventID="1" id="-1">
+                                <incdec comment="false" x="48" y="127">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <str-indexof comment="false" id="0" x="0" y="0">
+                                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Egg"/>
+                                </str-indexof>
+                                <int id="1" val="-1"/>
+                            </more>
+                        </if>
+                    </group>
+                    <get-val-440-1 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <set-game-val-28 comment="false" x="26" y="178">
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-440-2 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="25"/>
+                    </eq>
+                </set-game-val-28>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="this" id="1"/>
+        </event-actor-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

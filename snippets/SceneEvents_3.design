@@ -58,6 +58,27 @@
                                 </noteq>
                             </and>
                         </if>
+                        <if comment="false" x="37" y="319">
+                            <group eventID="1" id="-1">
+                                <set-attribute comment="false" x="48" y="344">
+                                    <ACTOR eid="19" id="0"/>
+                                    <int id="1" val="Displays Popup PM"/>
+                                    <int id="2" val="_PopupType"/>
+                                    <pick-type comment="false" id="3" x="0" y="0">
+                                        <ACTORTYPE eid="945" id="0"/>
+                                    </pick-type>
+                                </set-attribute>
+                                <set-attribute comment="false" x="48" y="384">
+                                    <ACTOR eid="19" id="0"/>
+                                    <int id="1" val="Displays Popup PM"/>
+                                    <int id="2" val="_InactivePopupType"/>
+                                    <pick-type comment="false" id="3" x="0" y="0">
+                                        <ACTORTYPE eid="945" id="0"/>
+                                    </pick-type>
+                                </set-attribute>
+                            </group>
+                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                        </if>
                     </group>
                     <int id="0" val="0.2"/>
                     <ACTOR eid="lastcreated" id="2"/>

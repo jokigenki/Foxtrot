@@ -62,6 +62,8 @@ public var _DisappearDelay:Float;
 public var _XPos:Float;
 
 public var _YPos:Float;
+
+public var _IsEnabled:Bool;
     public function _customEvent_RefreshPopup():Void
 {
         if((actor.hasBehavior("Usable Item PM") && (actor.getValue("Usable Item PM", "_CurrentNumberOfUses") < (actor.getValue("Usable Item PM", "_ActivateAfterNumberOfUses") - 1))))
@@ -96,6 +98,8 @@ nameMap.set("X Pos", "_XPos");
 _XPos = 0.0;
 nameMap.set("Y Pos", "_YPos");
 _YPos = 0.0;
+nameMap.set("Is Enabled?", "_IsEnabled");
+_IsEnabled = true;
 nameMap.set("Actor", "actor");
 
 	}
@@ -115,9 +119,13 @@ propertyChanged("_ActivationRegion", _ActivationRegion);
 
     addActorEntersRegionListener(_ActivationRegion, function(a:Actor, list:Array<Dynamic>):Void  {
 if(wrapper.enabled && sameAsAny(getActorGroup(0),a.getType(),a.getGroup())){
-        actor.say("Displays Popup PM", "_customEvent_" + "RefreshPopup");
-        _IsDisplaying = true;
+        if(_IsEnabled)
+{
+            actor.say("Displays Popup PM", "_customEvent_" + "RefreshPopup");
+            _IsDisplaying = true;
 propertyChanged("_IsDisplaying", _IsDisplaying);
+}
+
 }
 });
     addActorExitsRegionListener(_ActivationRegion, function(a:Actor, list:Array<Dynamic>):Void  {

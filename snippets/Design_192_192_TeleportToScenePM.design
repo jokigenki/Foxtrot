@@ -18,22 +18,22 @@
                         </set-game-val-20>
                     </group>
                 </else>
-                <scene-say comment="false" x="26" y="159">
+                <custom-796 comment="false" x="26" y="159">
+                    <SOUND eid="804" id="0"/>
+                </custom-796>
+                <scene-say comment="false" x="26" y="186">
                     <int id="0" val="Speed Run Timer PM"/>
                     <int id="1" val="TimerReset"/>
                 </scene-say>
-                <scene-shout comment="false" x="26" y="179">
+                <scene-shout comment="false" x="26" y="206">
                     <int id="0" val="SwitchScene"/>
                 </scene-shout>
-                <custom-796 comment="false" x="26" y="199">
-                    <SOUND eid="804" id="0"/>
-                </custom-796>
             </group>
             <int id="0" val="Teleport"/>
         </event-custom>
     </group>
     <group eventID="1" id="1">
-        <scene-change-new comment="false" x="67" y="342">
+        <scene-change-new comment="false" x="43" y="357">
             <SCENE id="0"/>
             <int id="1" val="0"/>
             <int id="2" val="0.5"/>

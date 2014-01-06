@@ -9,38 +9,14 @@
                 <set-val-93-1 comment="false" x="26" y="65">
                     <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                 </set-val-93-1>
-                <for-each comment="false" x="26" y="90">
+                <if comment="false" x="26" y="90">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="115">
-                            <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="150">
-                                    <int id="0" val="2"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="1"/>
-                                </incdec>
-                            </group>
-                            <more comment="false" id="0" x="0" y="0">
-                                <str-indexof comment="false" id="0" x="0" y="0">
-                                    <for-each-item comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="Egg"/>
-                                </str-indexof>
-                                <int id="1" val="-1"/>
-                            </more>
-                        </if>
-                    </group>
-                    <get-val-93-1 comment="false" id="0" x="0" y="0"/>
-                </for-each>
-                <if comment="false" x="26" y="201">
-                    <group eventID="1" id="-1">
-                        <setanim comment="false" x="37" y="231">
+                        <setanim comment="false" x="37" y="115">
                             <ACTOR eid="43" id="0"/>
                             <int id="1" val="completed"/>
                         </setanim>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-val-93-2 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="25"/>
-                    </eq>
+                    <get-game-val-28 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
         </init>

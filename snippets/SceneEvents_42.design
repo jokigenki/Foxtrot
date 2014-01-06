@@ -135,12 +135,42 @@
                                         <set-game-val-26 comment="false" x="59" y="210">
                                             <create-list comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-26>
+                                        <set-val-376-2 comment="false" x="59" y="235">
+                                            <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                        </set-val-376-2>
+                                        <for-each comment="false" x="59" y="260">
+                                            <group eventID="1" id="-1">
+                                                <if comment="false" x="70" y="285">
+                                                    <group eventID="1" id="-1">
+                                                        <incdec comment="false" x="81" y="320">
+                                                            <int id="0" val="3"/>
+                                                            <int id="1" val="0"/>
+                                                            <int id="2" val="1"/>
+                                                        </incdec>
+                                                    </group>
+                                                    <more comment="false" id="0" x="0" y="0">
+                                                        <str-indexof comment="false" id="0" x="0" y="0">
+                                                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                                                            <int id="1" val="Egg"/>
+                                                        </str-indexof>
+                                                        <int id="1" val="-1"/>
+                                                    </more>
+                                                </if>
+                                            </group>
+                                            <get-val-376-2 comment="false" id="0" x="0" y="0"/>
+                                        </for-each>
+                                        <set-game-val-28 comment="false" x="59" y="371">
+                                            <eq comment="false" id="0" x="0" y="0">
+                                                <get-val-376-3 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="25"/>
+                                            </eq>
+                                        </set-game-val-28>
                                     </group>
                                     <load-success comment="false" id="0" x="0" y="0"/>
                                 </if>
-                                <else comment="false" x="48" y="247">
+                                <else comment="false" x="48" y="413">
                                     <group eventID="1" id="-1">
-                                        <set-game-val-16 comment="false" x="59" y="267">
+                                        <set-game-val-16 comment="false" x="59" y="433">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-game-val-16>
                                     </group>

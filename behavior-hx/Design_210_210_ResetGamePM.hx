@@ -62,6 +62,7 @@ var __Self:Actor = actor;
         setGameAttribute("Speed Run Timer", 0);
         setGameAttribute("Save Destination", "_Home|_Home");
         setGameAttribute("Last Destination", "_Home|_Home");
+        setGameAttribute("Game Complete", false);
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Home|Tutorial_05|A|B");
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType("Tutorial_05Key",getActorType(142));
         saveGame("mySave", function(success:Bool):Void {

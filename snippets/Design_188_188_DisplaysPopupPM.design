@@ -103,14 +103,19 @@
     <group eventID="5" id="0">
         <event-group-region comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <say comment="false" x="26" y="47">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="Displays Popup PM"/>
-                    <int id="2" val="RefreshPopup"/>
-                </say>
-                <set-val-188-7 comment="false" x="26" y="74">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-188-7>
+                <if comment="false" x="26" y="47">
+                    <group eventID="5" id="-1">
+                        <say comment="false" x="37" y="72">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Displays Popup PM"/>
+                            <int id="2" val="RefreshPopup"/>
+                        </say>
+                        <set-val-188-7 comment="false" x="37" y="99">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-188-7>
+                    </group>
+                    <get-val-188-11 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="0"/>
             <REGION eid="var" id="1" vid="1"/>

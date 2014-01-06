@@ -3,42 +3,58 @@
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <create-actor3 comment="false" x="26" y="40">
-                    <ACTORTYPE eid="196" id="0"/>
-                    <int id="1" val="520"/>
-                    <int id="2" val="256"/>
-                    <int id="3" val="2"/>
-                </create-actor3>
-                <fadeInOut comment="false" x="26" y="67">
-                    <ACTOR eid="lastcreated" id="0"/>
+                <toggle-image comment="false" x="26" y="40">
+                    <ACTOR eid="18" id="0"/>
+                    <int id="1" val="0"/>
+                </toggle-image>
+                <fadeTo comment="false" x="26" y="67">
+                    <ACTOR eid="18" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0"/>
+                </fadeTo>
+                <fadeInOut comment="false" x="26" y="94">
+                    <ACTOR eid="18" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="2"/>
                     <int id="3" val="9"/>
                 </fadeInOut>
-                <say comment="false" x="26" y="94">
+                <set-attribute comment="false" x="26" y="121">
+                    <ACTOR eid="18" id="0"/>
+                    <int id="1" val="Usable Item PM"/>
+                    <int id="2" val="_IsEnabled"/>
+                    <true comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+                <set-attribute comment="false" x="26" y="153">
+                    <ACTOR eid="18" id="0"/>
+                    <int id="1" val="Displays Popup PM"/>
+                    <int id="2" val="_IsEnabled"/>
+                    <true comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+                <say comment="false" x="26" y="185">
                     <ACTOR eid="16" id="0"/>
                     <int id="1" val="Activate On Event PM"/>
                     <int id="2" val="Activate"/>
                 </say>
-                <die comment="false" x="26" y="121">
+                <die comment="false" x="26" y="212">
                     <ACTOR eid="11" id="0"/>
                 </die>
-                <die comment="false" x="26" y="148">
+                <die comment="false" x="26" y="239">
                     <ACTOR eid="12" id="0"/>
                 </die>
-                <if comment="false" x="26" y="175">
+                <if comment="false" x="26" y="266">
                     <group eventID="2" id="-1">
-                        <set-val-175-2 comment="false" x="37" y="200">
+                        <set-val-175-2 comment="false" x="37" y="291">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-175-2>
-                        <for-each comment="false" x="37" y="225">
+                        <for-each comment="false" x="37" y="316">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="250">
+                                <if comment="false" x="48" y="341">
                                     <group eventID="1" id="-1">
-                                        <set-val-175-2 comment="false" x="59" y="285">
+                                        <set-val-175-2 comment="false" x="59" y="376">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-175-2>
-                                        <break comment="false" x="59" y="310"/>
+                                        <break comment="false" x="59" y="401"/>
                                     </group>
                                     <not comment="false" id="0" x="0" y="0">
                                         <contains-item comment="false" id="0" x="0" y="0">
@@ -50,9 +66,9 @@
                             </group>
                             <get-game-val-13 comment="false" id="0" x="0" y="0"/>
                         </for-each>
-                        <if comment="false" x="37" y="354">
+                        <if comment="false" x="37" y="445">
                             <group eventID="1" id="-1">
-                                <scene-say comment="false" x="48" y="379">
+                                <scene-say comment="false" x="48" y="470">
                                     <int id="0" val="Speed Run Timer PM"/>
                                     <int id="1" val="CompleteSpeedRun"/>
                                 </scene-say>
@@ -62,14 +78,14 @@
                     </group>
                     <get-game-val-10 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <set-val-175-3 comment="false" x="26" y="423">
+                <set-val-175-3 comment="false" x="26" y="514">
                     <int id="0" val="0"/>
                 </set-val-175-3>
-                <periodic comment="false" x="26" y="443">
+                <periodic comment="false" x="26" y="534">
                     <group eventID="4" id="-1">
-                        <repeat comment="false" x="37" y="470">
+                        <repeat comment="false" x="37" y="561">
                             <group eventID="2" id="-1">
-                                <create-actor3 comment="false" x="48" y="495">
+                                <create-actor3 comment="false" x="48" y="586">
                                     <ACTORTYPE eid="941" id="0"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <div comment="false" id="0" x="0" y="0">
@@ -92,14 +108,14 @@
                             </group>
                             <int id="0" val="10"/>
                         </repeat>
-                        <incdec comment="false" x="37" y="562">
+                        <incdec comment="false" x="37" y="653">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
                         </incdec>
-                        <if comment="false" x="37" y="589">
+                        <if comment="false" x="37" y="680">
                             <group eventID="4" id="-1">
-                                <cancel comment="false" x="48" y="619"/>
+                                <cancel comment="false" x="48" y="710"/>
                             </group>
                             <moreeq comment="false" id="0" x="0" y="0">
                                 <get-val-175-3 comment="false" id="0" x="0" y="0"/>
@@ -155,15 +171,30 @@
             <group eventID="4" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="4" id="-1">
-                        <if comment="false" x="37" y="67">
+                        <toggle-image comment="false" x="37" y="67">
+                            <ACTOR eid="18" id="0"/>
+                            <int id="1" val="1"/>
+                        </toggle-image>
+                        <if comment="false" x="37" y="94">
                             <group eventID="4" id="-1">
-                                <set-attribute comment="false" x="48" y="92">
+                                <set-attribute comment="false" x="48" y="119">
+                                    <ACTOR eid="18" id="0"/>
+                                    <int id="1" val="Teleport To Scene PM"/>
+                                    <int id="2" val="_DestinationSceneName"/>
+                                    <int id="3" val="_Farm1_Boss|Transition To Home All|A|A"/>
+                                </set-attribute>
+                            </group>
+                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <if comment="false" x="37" y="158">
+                            <group eventID="4" id="-1">
+                                <set-attribute comment="false" x="48" y="183">
                                     <ACTOR eid="14" id="0"/>
                                     <int id="1" val="Inventory Collectable PM"/>
                                     <int id="2" val="_CollectableId"/>
                                     <int id="3" val="Egg1_Speed"/>
                                 </set-attribute>
-                                <setanim comment="false" x="48" y="119">
+                                <setanim comment="false" x="48" y="210">
                                     <ACTOR eid="14" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="Egg1_Speed"/>

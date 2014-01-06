@@ -58,9 +58,9 @@ public var _DestinationSceneName:String;
             setGameAttribute("Last Destination", _DestinationSceneName);
 }
 
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [getSound(804)]);
         sayToScene("Speed Run Timer PM", "_customEvent_" + "TimerReset");
         shoutToScene("_customEvent_" + "SwitchScene");
-        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [getSound(804)]);
 }
 
 
