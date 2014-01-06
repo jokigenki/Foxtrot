@@ -44,51 +44,58 @@
                         <get-val-136-9 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <if comment="false" x="26" y="102">
+                <else-if comment="false" x="26" y="102">
                     <group eventID="2" id="-1">
-                        <setanim comment="false" x="37" y="140">
-                            <ACTOR eid="this" id="0"/>
-                            <get-val-136-11 comment="false" id="1" x="0" y="0"/>
-                        </setanim>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <getanim comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                        </getanim>
-                        <get-val-136-11 comment="false" id="1" x="0" y="0"/>
-                    </noteq>
-                </if>
-                <if comment="false" x="26" y="184">
-                    <group eventID="2" id="-1">
-                        <dolater comment="false" x="37" y="214">
+                        <if comment="false" x="37" y="135">
                             <group eventID="2" id="-1">
-                                <say comment="false" x="48" y="246">
+                                <setanim comment="false" x="48" y="173">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-136-11 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <get-val-136-11 comment="false" id="1" x="0" y="0"/>
+                            </noteq>
+                        </if>
+                        <if comment="false" x="37" y="217">
+                            <group eventID="2" id="-1">
+                                <dolater comment="false" x="48" y="247">
+                                    <group eventID="2" id="-1">
+                                        <say comment="false" x="59" y="279">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="Timed Shoot PM"/>
+                                            <int id="2" val="CreateProjectile"/>
+                                        </say>
+                                    </group>
+                                    <get-val-136-13 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-136-13 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="330">
+                            <group eventID="2" id="-1">
+                                <say comment="false" x="48" y="350">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Timed Shoot PM"/>
                                     <int id="2" val="CreateProjectile"/>
                                 </say>
                             </group>
-                            <get-val-136-13 comment="false" id="0" x="0" y="0"/>
-                            <ACTOR eid="this" id="2"/>
-                        </dolater>
+                        </else>
                     </group>
-                    <more comment="false" id="0" x="0" y="0">
-                        <get-val-136-13 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </more>
-                </if>
-                <else comment="false" x="26" y="297">
-                    <group eventID="2" id="-1">
-                        <say comment="false" x="37" y="317">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="Timed Shoot PM"/>
-                            <int id="2" val="CreateProjectile"/>
-                        </say>
-                    </group>
-                </else>
-                <dolater comment="false" x="26" y="356">
+                    <isonscreen comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                    </isonscreen>
+                </else-if>
+                <dolater comment="false" x="26" y="401">
                     <group eventID="1" id="-1">
-                        <shout comment="false" x="37" y="388">
+                        <shout comment="false" x="37" y="433">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="ShootProjectile"/>
                         </shout>
