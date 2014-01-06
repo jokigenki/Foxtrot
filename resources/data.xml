@@ -1285,6 +1285,26 @@
         <blank name="Item Id" order="0" type="TEXT"/>
         <blank name="Actor Type" order="1" type="ACTORTYPE"/>
     </custom-block>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="8" id="942" name="Confetti" shared="false" width="8">
+        <anim across="3" down="1" durations="100,100,100" height="8" id="0" loop="true" name="Blue" numframes="3" originx="4" originy="4" sync="false" width="24"/>
+        <anim across="3" down="1" durations="100,100,100" height="8" id="1" loop="true" name="Red" numframes="3" originx="4" originy="4" sync="false" width="24"/>
+        <anim across="3" down="1" durations="100,100,100" height="8" id="2" loop="true" name="Green" numframes="3" originx="4" originy="4" sync="false" width="24"/>
+        <anim across="3" down="1" durations="100,100,100" height="8" id="3" loop="true" name="Purple" numframes="3" originx="4" originy="4" sync="false" width="24"/>
+        <anim across="3" down="1" durations="100,100,100" height="8" id="4" loop="true" name="Gold" numframes="3" originx="4" originy="4" sync="false" width="24"/>
+        <anim across="3" down="1" durations="100,100,100" height="8" id="5" loop="true" name="White" numframes="3" originx="4" originy="4" sync="false" width="24"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="437" fixedrot="true" fric="0.2" gid="2" id="941" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="0.01" name="Confetti" oid="-1" pausable="true" rest="0.0" shared="false" sprite="942" static="false">
+        <snippets>
+            <s enabled="true" id="54">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="83">
+                <prop id="1" list="0" val="3"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
     <custom-block blocktag="custom-256" blocktype="ACTION" code="~.say(&quot;Spawn PM&quot;, &quot;ContinueSpawn&quot;);" desc="" global="false" gui="Continue Spawn" id="256" message="ContinueSpawn" name="ContinueSpawn" oid="-1" return="VOID" shared="false" snippetID="52">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>

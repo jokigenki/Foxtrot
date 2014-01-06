@@ -1128,6 +1128,8 @@
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="93" language="" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" scenespecific="true" shared="false" type="scene">
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="Local Collected" hidden="false" id="1" name="_LocalCollected" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Total Eggs" hidden="false" id="2" name="_TotalEggs" order="1"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
@@ -1687,6 +1689,7 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_17" classname="scripts.SceneEvents_17" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="175" language="" name="SceneEvents_17" oid="-1" package="scripts." sceneid="17" scenespecific="true" shared="false" type="scene">
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Run Complete?" hidden="false" id="2" name="_RunComplete" order="1"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Confetti Count" hidden="false" id="3" name="_ConfettiCount" order="2"/>
         <blocks/>
         <events>
             <event displayName="Rooster Killed" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
@@ -3576,6 +3579,7 @@
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Crate Maker" hidden="false" id="5" name="_CrateMaker" order="4"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Crate" hidden="false" id="6" name="_Crate" order="5"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Run Complete?" hidden="false" id="7" name="_RunComplete" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Confetti Count" hidden="false" id="8" name="_ConfettiCount" order="7"/>
         <blocks>
             <receiver blockID="700" id="1"/>
             <receiver blockID="701" id="2"/>
@@ -3730,6 +3734,7 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Egg Ball" hidden="false" id="2" name="_EggBall" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Crates Left" hidden="false" id="3" name="_CratesLeft" order="2"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Confetti Count" hidden="false" id="4" name="_ConfettiCount" order="3"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
@@ -3866,6 +3871,14 @@
     <snippet attachedevent="true" class="scripts.ActorEvents_939" classname="scripts.ActorEvents_939" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="436" language="" name="ActorEvents_939" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_941" classname="scripts.ActorEvents_941" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="437" language="" name="ActorEvents_941" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Random" hidden="false" id="1" name="_Random" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Scale" hidden="false" id="2" name="_Scale" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_901" classname="scripts.ActorEvents_901" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="425" language="" name="ActorEvents_901" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>

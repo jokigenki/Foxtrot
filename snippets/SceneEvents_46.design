@@ -53,10 +53,7 @@
     <group eventID="3" id="0">
         <event-type-create-kill comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <print comment="false" x="26" y="47">
-                    <int id="0" val="EGG BALL KILLED!"/>
-                </print>
-                <create-actor3 comment="false" x="26" y="67">
+                <create-actor3 comment="false" x="26" y="47">
                     <ACTORTYPE eid="757" id="0"/>
                     <get-xy comment="false" id="1" x="0" y="0">
                         <ACTOR eid="3" id="0"/>
@@ -71,7 +68,7 @@
                     </minus>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-attribute comment="false" x="26" y="112">
+                <set-attribute comment="false" x="26" y="92">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Match Horizontal Movement PM"/>
                     <int id="2" val="_Target"/>
@@ -79,7 +76,7 @@
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-attribute comment="false" x="26" y="152">
+                <set-attribute comment="false" x="26" y="132">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Match Vertical Movement PM"/>
                     <int id="2" val="_Target"/>
@@ -87,13 +84,13 @@
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-attribute comment="false" x="26" y="192">
+                <set-attribute comment="false" x="26" y="172">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Match Vertical Movement PM"/>
                     <int id="2" val="_Offset"/>
                     <int id="3" val="-35"/>
                 </set-attribute>
-                <set-attribute comment="false" x="26" y="219">
+                <set-attribute comment="false" x="26" y="199">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="Jump To Start PM"/>
                     <int id="2" val="_Target"/>
@@ -101,7 +98,7 @@
                         <ACTOR eid="3" id="0"/>
                     </actor>
                 </set-attribute>
-                <set-val-393-2 comment="false" x="26" y="259">
+                <set-val-393-2 comment="false" x="26" y="239">
                     <ACTOR eid="lastcreated" id="0"/>
                 </set-val-393-2>
             </group>
@@ -118,158 +115,155 @@
                     <int id="1" val="1"/>
                     <int id="2" val="1"/>
                 </incdec>
-                <print comment="false" x="26" y="76">
-                    <get-val-393-3 comment="false" id="0" x="0" y="0"/>
-                </print>
-                <if comment="false" x="26" y="101">
+                <if comment="false" x="26" y="76">
                     <group eventID="5" id="-1">
-                        <shout comment="false" x="37" y="131">
+                        <print comment="false" x="37" y="106">
+                            <int id="0" val="Step 1"/>
+                        </print>
+                        <set-attribute comment="false" x="37" y="126">
                             <ACTOR eid="299" id="0"/>
-                            <int id="1" val="Killed"/>
-                        </shout>
+                            <int id="1" val="Horizontal Oscillation PM"/>
+                            <int id="2" val="_CurrentVelocity"/>
+                            <int id="3" val="10"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="153">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MaxTime"/>
+                            <int id="3" val="4"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="180">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MinTime"/>
+                            <int id="3" val="2"/>
+                        </set-attribute>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-val-393-3 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="80"/>
+                        <int id="1" val="60"/>
                     </eq>
                 </if>
+                <else-if comment="false" x="26" y="219">
+                    <group eventID="5" id="-1">
+                        <print comment="false" x="37" y="249">
+                            <int id="0" val="Step 2"/>
+                        </print>
+                        <set-attribute comment="false" x="37" y="269">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Horizontal Oscillation PM"/>
+                            <int id="2" val="_CurrentVelocity"/>
+                            <int id="3" val="12"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="296">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MaxTime"/>
+                            <int id="3" val="2"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="323">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MinTime"/>
+                            <int id="3" val="1"/>
+                        </set-attribute>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="40"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="362">
+                    <group eventID="5" id="-1">
+                        <print comment="false" x="37" y="392">
+                            <int id="0" val="Step 3"/>
+                        </print>
+                        <set-attribute comment="false" x="37" y="412">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Horizontal Oscillation PM"/>
+                            <int id="2" val="_CurrentVelocity"/>
+                            <int id="3" val="14"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="439">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MaxTime"/>
+                            <int id="3" val="1"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="466">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MinTime"/>
+                            <int id="3" val="0.75"/>
+                        </set-attribute>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="20"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="505">
+                    <group eventID="5" id="-1">
+                        <print comment="false" x="37" y="535">
+                            <int id="0" val="Step 4"/>
+                        </print>
+                        <set-attribute comment="false" x="37" y="555">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Horizontal Oscillation PM"/>
+                            <int id="2" val="_CurrentVelocity"/>
+                            <int id="3" val="16"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="582">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MaxTime"/>
+                            <int id="3" val="0.75"/>
+                        </set-attribute>
+                        <set-attribute comment="false" x="37" y="609">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Random Timed Activation PM"/>
+                            <int id="2" val="_MinTime"/>
+                            <int id="3" val="0.5"/>
+                        </set-attribute>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="10"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="648">
+                    <group eventID="5" id="-1">
+                        <shout comment="false" x="37" y="678">
+                            <ACTOR eid="299" id="0"/>
+                            <int id="1" val="Killed"/>
+                        </shout>
+                        <print comment="false" x="37" y="705">
+                            <int id="0" val="KILLED!"/>
+                        </print>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-393-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </else-if>
             </group>
             <int id="0" val="1"/>
             <ACTORTYPE eid="772" id="1"/>
         </event-type-create-kill>
     </group>
-    <group eventID="5" id="1">
-        <if comment="false" x="208" y="176">
+    <group eventID="5" id="2">
+        <if comment="false" x="648" y="133">
             <group eventID="5" id="-1">
-                <print comment="false" x="219" y="206">
-                    <int id="0" val="Step 1"/>
-                </print>
-                <set-attribute comment="false" x="219" y="226">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Horizontal Oscillation PM"/>
-                    <int id="2" val="_CurrentVelocity"/>
-                    <int id="3" val="10"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="253">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MaxTime"/>
-                    <int id="3" val="4"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="280">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MinTime"/>
-                    <int id="3" val="2"/>
-                </set-attribute>
-            </group>
-            <eq comment="false" id="0" x="0" y="0">
-                <get-val-393-3 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="60"/>
-            </eq>
-        </if>
-        <else-if comment="false" x="208" y="319">
-            <group eventID="5" id="-1">
-                <print comment="false" x="219" y="349">
-                    <int id="0" val="Step 2"/>
-                </print>
-                <set-attribute comment="false" x="219" y="369">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Horizontal Oscillation PM"/>
-                    <int id="2" val="_CurrentVelocity"/>
-                    <int id="3" val="12"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="396">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MaxTime"/>
-                    <int id="3" val="2"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="423">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MinTime"/>
-                    <int id="3" val="1"/>
-                </set-attribute>
-            </group>
-            <eq comment="false" id="0" x="0" y="0">
-                <get-val-393-3 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="40"/>
-            </eq>
-        </else-if>
-        <else-if comment="false" x="208" y="462">
-            <group eventID="5" id="-1">
-                <print comment="false" x="219" y="492">
-                    <int id="0" val="Step 3"/>
-                </print>
-                <set-attribute comment="false" x="219" y="512">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Horizontal Oscillation PM"/>
-                    <int id="2" val="_CurrentVelocity"/>
-                    <int id="3" val="14"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="539">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MaxTime"/>
-                    <int id="3" val="1"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="566">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MinTime"/>
-                    <int id="3" val="0.75"/>
-                </set-attribute>
-            </group>
-            <eq comment="false" id="0" x="0" y="0">
-                <get-val-393-3 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="20"/>
-            </eq>
-        </else-if>
-        <else-if comment="false" x="208" y="605">
-            <group eventID="5" id="-1">
-                <print comment="false" x="219" y="635">
-                    <int id="0" val="Step 4"/>
-                </print>
-                <set-attribute comment="false" x="219" y="655">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Horizontal Oscillation PM"/>
-                    <int id="2" val="_CurrentVelocity"/>
-                    <int id="3" val="16"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="682">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MaxTime"/>
-                    <int id="3" val="0.75"/>
-                </set-attribute>
-                <set-attribute comment="false" x="219" y="709">
-                    <ACTOR eid="299" id="0"/>
-                    <int id="1" val="Random Timed Activation PM"/>
-                    <int id="2" val="_MinTime"/>
-                    <int id="3" val="0.5"/>
-                </set-attribute>
-            </group>
-            <eq comment="false" id="0" x="0" y="0">
-                <get-val-393-3 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="10"/>
-            </eq>
-        </else-if>
-        <else-if comment="false" x="208" y="748">
-            <group eventID="5" id="-1">
-                <shout comment="false" x="219" y="778">
+                <shout comment="false" x="659" y="163">
                     <ACTOR eid="299" id="0"/>
                     <int id="1" val="Killed"/>
                 </shout>
-                <print comment="false" x="219" y="805">
-                    <int id="0" val="KILLED!"/>
-                </print>
             </group>
             <eq comment="false" id="0" x="0" y="0">
                 <get-val-393-3 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="0"/>
+                <int id="1" val="80"/>
             </eq>
-        </else-if>
+        </if>
     </group>
     <group eventID="5" id="-1"/>
     <group eventID="6" id="0">
@@ -293,6 +287,54 @@
                     </plus>
                     <int id="3" val="0"/>
                 </create-actor3>
+                <set-val-393-4 comment="false" x="26" y="87">
+                    <int id="0" val="0"/>
+                </set-val-393-4>
+                <periodic comment="false" x="26" y="107">
+                    <group eventID="4" id="-1">
+                        <repeat comment="false" x="37" y="134">
+                            <group eventID="2" id="-1">
+                                <create-actor3 comment="false" x="48" y="159">
+                                    <ACTORTYPE eid="941" id="0"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <div comment="false" id="0" x="0" y="0">
+                                            <minus comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="640"/>
+                                                <screen-wh comment="false" id="1" x="0" y="0">
+                                                    <int id="0" val="0"/>
+                                                </screen-wh>
+                                            </minus>
+                                            <int id="1" val="2"/>
+                                        </div>
+                                        <times comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="640"/>
+                                            <random comment="false" id="1" x="0" y="0"/>
+                                        </times>
+                                    </plus>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                            </group>
+                            <int id="0" val="10"/>
+                        </repeat>
+                        <incdec comment="false" x="37" y="226">
+                            <int id="0" val="3"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                        <if comment="false" x="37" y="253">
+                            <group eventID="4" id="-1">
+                                <cancel comment="false" x="48" y="283"/>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-393-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="10"/>
+                            </moreeq>
+                        </if>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
             </group>
             <int id="0" val="1"/>
             <ACTOR eid="299" id="1"/>

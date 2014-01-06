@@ -1,2 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-437-1 comment="false" x="26" y="40">
+                    <random comment="false" id="0" x="0" y="0"/>
+                </set-val-437-1>
+                <if comment="false" x="26" y="65">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="95">
+                            <ACTOR eid="this" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <int id="0" val="Blue"/>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-437-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.17"/>
+                    </less>
+                </if>
+                <else-if comment="false" x="26" y="139">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="169">
+                            <ACTOR eid="this" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <int id="0" val="Green"/>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-437-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.34"/>
+                    </less>
+                </else-if>
+                <else-if comment="false" x="26" y="213">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="243">
+                            <ACTOR eid="this" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <int id="0" val="Red"/>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-437-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.51"/>
+                    </less>
+                </else-if>
+                <else-if comment="false" x="26" y="287">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="317">
+                            <ACTOR eid="this" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <int id="0" val="Gold"/>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-437-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.55"/>
+                    </less>
+                </else-if>
+                <else-if comment="false" x="26" y="361">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="391">
+                            <ACTOR eid="this" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <int id="0" val="Purple"/>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-437-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.86"/>
+                    </less>
+                </else-if>
+                <else comment="false" x="26" y="435">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="455">
+                            <ACTOR eid="this" id="0"/>
+                            <string-to-anim comment="false" id="1" x="0" y="0">
+                                <int id="0" val="White"/>
+                            </string-to-anim>
+                        </setanim>
+                    </group>
+                </else>
+                <set-val-437-2 comment="false" x="26" y="499">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <int id="0" val="100"/>
+                        <times comment="false" id="1" x="0" y="0">
+                            <int id="0" val="200"/>
+                            <random comment="false" id="1" x="0" y="0"/>
+                        </times>
+                    </plus>
+                </set-val-437-2>
+                <push-shove comment="false" x="26" y="534">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="-1"/>
+                    <random comment="false" id="4" x="0" y="0"/>
+                </push-shove>
+                <scaleTo comment="false" x="26" y="566">
+                    <ACTOR eid="this" id="0"/>
+                    <get-val-437-2 comment="false" id="1" x="0" y="0"/>
+                    <get-val-437-2 comment="false" id="2" x="0" y="0"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

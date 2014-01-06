@@ -62,6 +62,54 @@
                     </group>
                     <get-game-val-10 comment="false" id="0" x="0" y="0"/>
                 </if>
+                <set-val-175-3 comment="false" x="26" y="423">
+                    <int id="0" val="0"/>
+                </set-val-175-3>
+                <periodic comment="false" x="26" y="443">
+                    <group eventID="4" id="-1">
+                        <repeat comment="false" x="37" y="470">
+                            <group eventID="2" id="-1">
+                                <create-actor3 comment="false" x="48" y="495">
+                                    <ACTORTYPE eid="941" id="0"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <div comment="false" id="0" x="0" y="0">
+                                            <minus comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="640"/>
+                                                <screen-wh comment="false" id="1" x="0" y="0">
+                                                    <int id="0" val="0"/>
+                                                </screen-wh>
+                                            </minus>
+                                            <int id="1" val="2"/>
+                                        </div>
+                                        <times comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="640"/>
+                                            <random comment="false" id="1" x="0" y="0"/>
+                                        </times>
+                                    </plus>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                            </group>
+                            <int id="0" val="10"/>
+                        </repeat>
+                        <incdec comment="false" x="37" y="562">
+                            <int id="0" val="3"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                        <if comment="false" x="37" y="589">
+                            <group eventID="4" id="-1">
+                                <cancel comment="false" x="48" y="619"/>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-175-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="10"/>
+                            </moreeq>
+                        </if>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
             </group>
             <int id="0" val="RoosterKilled"/>
         </event-custom>
