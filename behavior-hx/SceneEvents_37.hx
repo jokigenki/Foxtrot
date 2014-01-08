@@ -251,6 +251,7 @@ return;
 }
 
 }, null);
+        sayToScene("Sound Manager PM", "_customBlock_PlaySoundThenMusic", [getSound(887),getSound(466),2]);
 }
 
     public function _customEvent_TimedSwitchLight13PreSwitchedOn():Void

@@ -99,26 +99,61 @@
     <group eventID="5" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <set-val-166-1 comment="false" x="26" y="40">
+                <custom-code comment="false" x="26" y="40">
+                    <int id="0" val="if (_MoveTarget == null) return;"/>
+                </custom-code>
+                <set-val-166-1 comment="false" x="26" y="60">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-166-1>
-                <code-long comment="false" x="26" y="65">
-                    <int id="0" val="if (_MoveTarget == null) return;&#10;&#10;var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;if (_MoveDelay &amp;gt; 0)&#10;{&#10;&#9;runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void&#10;&#9;{&#10;&#9;&#9;if (_IsActive) _MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;&#9;});&#10;} else {&#10;&#9;_MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;}&#10;"/>
-                </code-long>
-                <if comment="false" x="26" y="225">
+                <set-val-166-19 comment="false" x="26" y="85">
+                    <or comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="11"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-val-166-2 comment="false" id="0" x="0" y="0"/>
+                                <get-val-166-12 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </noteq>
+                        <noteq comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="11"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-val-166-3 comment="false" id="0" x="0" y="0"/>
+                                <get-val-166-13 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </noteq>
+                    </or>
+                </set-val-166-19>
+                <if comment="false" x="26" y="128">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="265">
+                        <stop comment="false" x="37" y="158"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-166-19 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <code-long comment="false" x="26" y="190">
+                    <int id="0" val="var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;if (_MoveDelay &amp;gt; 0)&#10;{&#10;&#9;runLater(1000 * _MoveDelay, function(timeTask:TimedTask):Void&#10;&#9;{&#10;&#9;&#9;if (_IsActive) _MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;&#9;});&#10;} else {&#10;&#9;_MoveTarget.moveTo(_XTarget + _XOffset, _YTarget + _YOffset, _MoveTime, trans);&#10;}&#10;"/>
+                </code-long>
+                <if comment="false" x="26" y="350">
+                    <group eventID="5" id="-1">
+                        <if comment="false" x="37" y="390">
                             <group eventID="5" id="-1">
-                                <if comment="false" x="48" y="290">
+                                <if comment="false" x="48" y="415">
                                     <group eventID="5" id="-1">
-                                        <dolater comment="false" x="59" y="320">
+                                        <dolater comment="false" x="59" y="445">
                                             <group eventID="5" id="-1">
-                                                <custom-910 comment="false" x="70" y="352">
+                                                <custom-910 comment="false" x="70" y="477">
                                                     <get-val-166-14 comment="false" id="0" x="0" y="0"/>
                                                     <scenename comment="false" id="1" x="0" y="0"/>
                                                     <ACTOR eid="this" id="2"/>
                                                 </custom-910>
-                                                <custom-909 comment="false" x="70" y="384">
+                                                <custom-909 comment="false" x="70" y="509">
                                                     <get-val-166-14 comment="false" id="0" x="0" y="0"/>
                                                     <scenename comment="false" id="1" x="0" y="0"/>
                                                     <ACTOR eid="this" id="2"/>
@@ -127,11 +162,11 @@
                                             <get-val-166-9 comment="false" id="0" x="0" y="0"/>
                                             <ACTOR eid="this" id="2"/>
                                         </dolater>
-                                        <dolater comment="false" x="59" y="428">
+                                        <dolater comment="false" x="59" y="553">
                                             <group eventID="5" id="-1">
-                                                <if comment="false" x="70" y="465">
+                                                <if comment="false" x="70" y="590">
                                                     <group eventID="5" id="-1">
-                                                        <custom-910 comment="false" x="81" y="490">
+                                                        <custom-910 comment="false" x="81" y="615">
                                                             <get-val-166-14 comment="false" id="0" x="0" y="0"/>
                                                             <scenename comment="false" id="1" x="0" y="0"/>
                                                             <ACTOR eid="this" id="2"/>
@@ -152,23 +187,23 @@
                                         <int id="1" val="0"/>
                                     </more>
                                 </if>
-                                <else comment="false" x="48" y="558">
+                                <else comment="false" x="48" y="683">
                                     <group eventID="5" id="-1">
-                                        <custom-910 comment="false" x="59" y="578">
+                                        <custom-910 comment="false" x="59" y="703">
                                             <get-val-166-14 comment="false" id="0" x="0" y="0"/>
                                             <scenename comment="false" id="1" x="0" y="0"/>
                                             <ACTOR eid="this" id="2"/>
                                         </custom-910>
-                                        <custom-909 comment="false" x="59" y="610">
+                                        <custom-909 comment="false" x="59" y="735">
                                             <get-val-166-14 comment="false" id="0" x="0" y="0"/>
                                             <scenename comment="false" id="1" x="0" y="0"/>
                                             <ACTOR eid="this" id="2"/>
                                         </custom-909>
-                                        <dolater comment="false" x="59" y="642">
+                                        <dolater comment="false" x="59" y="767">
                                             <group eventID="5" id="-1">
-                                                <if comment="false" x="70" y="674">
+                                                <if comment="false" x="70" y="799">
                                                     <group eventID="5" id="-1">
-                                                        <custom-910 comment="false" x="81" y="699">
+                                                        <custom-910 comment="false" x="81" y="824">
                                                             <get-val-166-14 comment="false" id="0" x="0" y="0"/>
                                                             <scenename comment="false" id="1" x="0" y="0"/>
                                                             <ACTOR eid="this" id="2"/>
@@ -185,9 +220,9 @@
                             </group>
                             <get-val-166-18 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="779">
+                        <else comment="false" x="37" y="904">
                             <group eventID="5" id="-1">
-                                <custom-816 comment="false" x="48" y="799">
+                                <custom-816 comment="false" x="48" y="924">
                                     <get-val-166-14 comment="false" id="0" x="0" y="0"/>
                                     <get-val-166-16 comment="false" id="1" x="0" y="0"/>
                                 </custom-816>
@@ -214,31 +249,60 @@
     <group eventID="6" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="6" id="-1">
-                <set-val-166-1 comment="false" x="26" y="40">
+                <custom-code comment="false" x="26" y="40">
+                    <int id="0" val="if (_MoveTarget == null) return;"/>
+                </custom-code>
+                <set-val-166-1 comment="false" x="26" y="60">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-166-1>
-                <code-long comment="false" x="26" y="65">
-                    <int id="0" val="if (_MoveTarget == null) return;&#10;&#10;var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;_MoveTarget.moveTo(_XStart, _YStart, _ReturnTime, trans);"/>
-                </code-long>
-                <if comment="false" x="26" y="225">
+                <set-val-166-19 comment="false" x="26" y="85">
+                    <or comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="11"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-val-166-4 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                        <noteq comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="11"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <get-val-166-5 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                    </or>
+                </set-val-166-19>
+                <if comment="false" x="26" y="128">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="265">
+                        <stop comment="false" x="37" y="158"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-166-19 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <code-long comment="false" x="26" y="190">
+                    <int id="0" val="var trans =&#10;switch(_EaseType)&#10;{&#10;&#9;case &amp;quot;None&amp;quot;:&#10;&#9;&#9;Linear.easeNone;&#10;&#9;case &amp;quot;Normal In&amp;quot;:&#10;&#9;&#9;Quad.easeIn;&#10;&#9;case &amp;quot;Normal Out&amp;quot;:&#10;&#9;&#9;Quad.easeOut;&#10;&#9;case &amp;quot;Strong In&amp;quot;:&#10;&#9;&#9;Expo.easeIn;&#10;&#9;case &amp;quot;Strong Out&amp;quot;:&#10;&#9;&#9;Expo.easeOut;&#10;&#9;default:&#10;&#9;&#9;Quad.easeOut;&#10;}&#10;&#10;_MoveTarget.moveTo(_XStart, _YStart, _ReturnTime, trans);"/>
+                </code-long>
+                <if comment="false" x="26" y="350">
+                    <group eventID="5" id="-1">
+                        <if comment="false" x="37" y="390">
                             <group eventID="5" id="-1">
-                                <custom-910 comment="false" x="48" y="290">
+                                <custom-910 comment="false" x="48" y="415">
                                     <get-val-166-15 comment="false" id="0" x="0" y="0"/>
                                     <scenename comment="false" id="1" x="0" y="0"/>
                                     <ACTOR eid="this" id="2"/>
                                 </custom-910>
-                                <custom-909 comment="false" x="48" y="322">
+                                <custom-909 comment="false" x="48" y="447">
                                     <get-val-166-15 comment="false" id="0" x="0" y="0"/>
                                     <scenename comment="false" id="1" x="0" y="0"/>
                                     <ACTOR eid="this" id="2"/>
                                 </custom-909>
-                                <dolater comment="false" x="48" y="354">
+                                <dolater comment="false" x="48" y="479">
                                     <group eventID="5" id="-1">
-                                        <if comment="false" x="59" y="386">
+                                        <if comment="false" x="59" y="511">
                                             <group eventID="5" id="-1">
-                                                <custom-910 comment="false" x="70" y="416">
+                                                <custom-910 comment="false" x="70" y="541">
                                                     <get-val-166-15 comment="false" id="0" x="0" y="0"/>
                                                     <scenename comment="false" id="1" x="0" y="0"/>
                                                     <ACTOR eid="this" id="2"/>
@@ -255,9 +319,9 @@
                             </group>
                             <get-val-166-18 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="484">
+                        <else comment="false" x="37" y="609">
                             <group eventID="5" id="-1">
-                                <custom-816 comment="false" x="48" y="504">
+                                <custom-816 comment="false" x="48" y="629">
                                     <get-val-166-15 comment="false" id="0" x="0" y="0"/>
                                     <get-val-166-17 comment="false" id="1" x="0" y="0"/>
                                 </custom-816>

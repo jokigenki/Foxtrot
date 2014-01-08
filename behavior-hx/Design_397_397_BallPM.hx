@@ -82,6 +82,10 @@ public var _LowerLeftBound:Float;
 public var _BottomBound:Float;
 
 public var _LowerTopBound:Float;
+
+public var _NSounds:Float;
+
+public var _BounceSoundName:String;
     public function _customEvent_Activate():Void
 {
         _IsActive = true;
@@ -218,6 +222,10 @@ nameMap.set("Bottom Bound", "_BottomBound");
 _BottomBound = 0.0;
 nameMap.set("Lower Top Bound", "_LowerTopBound");
 _LowerTopBound = 0.0;
+nameMap.set("N Sounds", "_NSounds");
+_NSounds = 1.0;
+nameMap.set("Bounce Sound Name", "_BounceSoundName");
+_BounceSoundName = "";
 
 	}
 	
@@ -229,6 +237,7 @@ if(wrapper.enabled){
 {
             if(_ReadyToBounce)
 {
+                sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_BounceSoundName,_NSounds]);
                 _ReadyToBounce = false;
 propertyChanged("_ReadyToBounce", _ReadyToBounce);
                 if((event.otherFromTop || event.otherFromBottom))
@@ -304,6 +313,7 @@ if(wrapper.enabled){
 {
                 if((_VelocityX < 0))
 {
+                    sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_BounceSoundName,_NSounds]);
                     _VelocityX = asNumber(-(_VelocityX));
 propertyChanged("_VelocityX", _VelocityX);
 }
@@ -314,6 +324,7 @@ propertyChanged("_VelocityX", _VelocityX);
 {
                 if((_VelocityX > 0))
 {
+                    sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_BounceSoundName,_NSounds]);
                     _VelocityX = asNumber(-(_VelocityX));
 propertyChanged("_VelocityX", _VelocityX);
 }
@@ -324,6 +335,7 @@ propertyChanged("_VelocityX", _VelocityX);
 {
                 if((_VelocityY < 0))
 {
+                    sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_BounceSoundName,_NSounds]);
                     _VelocityY = asNumber(-(_VelocityY));
 propertyChanged("_VelocityY", _VelocityY);
 }
@@ -334,6 +346,7 @@ propertyChanged("_VelocityY", _VelocityY);
 {
                 if((_VelocityY > 0))
 {
+                    sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_BounceSoundName,_NSounds]);
                     _VelocityY = asNumber(-(_VelocityY));
 propertyChanged("_VelocityY", _VelocityY);
 }

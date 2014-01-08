@@ -56,19 +56,20 @@ public var _Openinganimation:String;
 public var _CollectionEvent:String;
 
 public var _UnlockDoorOnCreate:Bool;
+
+public var _OpenDelay:Float;
     public function _customEvent_whenThisHears_CollectionEvent():Void
 {
-        if(!(_IsOpen))
+        if((_OpenDelay > 0))
 {
-            actor.setAnimation("" + _Openinganimation);
-            /* "GA: Unlocked Doors (List)" */
-            actor.say("Activate Door PM", "_customEvent_" + "UnlockDestination");
-            _IsOpen = true;
-propertyChanged("_IsOpen", _IsOpen);
-            actor.say("Usable Item PM", "_customBlock_SetIsEnabled", [true]);
-            saveGame("mySave", function(success:Bool):Void {
+            runLater(1000 * _OpenDelay, function(timeTask:TimedTask):Void {
+                        actor.say("Collectable Door PM", "_customBlock_OpenDoor");
+}, actor);
+}
 
-});
+        else
+{
+            actor.say("Collectable Door PM", "_customBlock_OpenDoor");
 }
 
 }
@@ -96,6 +97,26 @@ propertyChanged("_IsOpen", _IsOpen);
         actor.say("Usable Item PM", "_customBlock_SetIsEnabled", [_IsOpen]);
 }
 
+    
+
+/* Params are:__Self */
+public function _customBlock_OpenDoor():Void
+{
+var __Self:Actor = actor;
+        if(!(_IsOpen))
+{
+            __Self.setAnimation("" + _Openinganimation);
+            /* "GA: Unlocked Doors (List)" */
+            __Self.say("Activate Door PM", "_customEvent_" + "UnlockDestination");
+            _IsOpen = true;
+propertyChanged("_IsOpen", _IsOpen);
+            __Self.say("Usable Item PM", "_customBlock_SetIsEnabled", [true]);
+            saveGame("mySave", function(success:Bool):Void {
+
+});
+}
+
+}
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -110,6 +131,8 @@ nameMap.set("Collection Event", "_CollectionEvent");
 _CollectionEvent = "";
 nameMap.set("Unlock Door On Create?", "_UnlockDoorOnCreate");
 _UnlockDoorOnCreate = false;
+nameMap.set("Open Delay", "_OpenDelay");
+_OpenDelay = 0.5;
 nameMap.set("Actor", "actor");
 
 	}

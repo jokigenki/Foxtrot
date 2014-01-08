@@ -1143,15 +1143,18 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="Collection Event" hidden="false" id="13" name="_CollectionEvent" order="5"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Unlock Door On Create?" hidden="false" id="14" name="_UnlockDoorOnCreate" order="6"/>
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="0.5" defaultValue="0.5" desc="" dropdown="" fullname="Open Delay" hidden="false" id="15" name="_OpenDelay" order="7"/>
         <blocks>
             <receiver blockID="651" id="1"/>
             <receiver blockID="102" id="2"/>
+            <receiver blockID="947" id="3"/>
         </blocks>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="Collection Event" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
             <event displayName="Use Door Event" enabled="true" id="8" name="event-custom" order="8" repeats="true"/>
             <event displayName="On Door Activated" enabled="true" id="9" name="event-custom" order="9" repeats="true"/>
+            <event displayName="Open door" enabled="true" id="10" name="event-custom-block" order="10" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_6" classname="scripts.SceneEvents_6" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="95" language="" name="SceneEvents_6" oid="-1" package="scripts." sceneid="6" scenespecific="true" shared="false" type="scene">
@@ -1795,6 +1798,7 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="Inactive SFX Name" hidden="false" id="15" name="_InactiveSFXName" order="15"/>
         <number default="1" defaultValue="1" desc="" dropdown="" fullname="Inactive SFX Number" hidden="false" id="17" name="_InactiveSFXNumber" order="17"/>
         <number default="1" defaultValue="1" desc="" dropdown="" fullname="Active SFX Number" hidden="false" id="16" name="_ActiveSFXNumber" order="16"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Will Move?" hidden="true" id="19" name="_WillMove" order="19"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Loop Sound Whilst Moving?" hidden="false" id="18" name="_LoopSoundWhilstMoving" order="18"/>
         <blocks/>
         <events>
@@ -3357,7 +3361,9 @@
             <receiver blockID="909" id="35"/>
             <receiver blockID="885" id="32"/>
             <receiver blockID="888" id="33"/>
+            <receiver blockID="949" id="38"/>
             <receiver blockID="910" id="36"/>
+            <receiver blockID="948" id="37"/>
         </blocks>
         <events>
             <event displayName="Loop Music" enabled="true" id="4" name="event-custom-block" order="6" repeats="true"/>
@@ -3381,6 +3387,7 @@
             <event displayName="Loop scene sound for actor" enabled="true" id="27" name="event-custom-block" order="21" repeats="true"/>
             <event displayName="Is scene sound playing" enabled="true" id="26" name="event-custom-block" order="26" repeats="true"/>
             <event displayName="Stop scene sound for actor" enabled="true" id="28" name="event-custom-block" order="24" repeats="true"/>
+            <event displayName="Play sound, then music" enabled="true" id="30" name="event-custom-block" order="31" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_39" classname="scripts.SceneEvents_39" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="373" language="" name="SceneEvents_39" oid="-1" package="scripts." sceneid="39" scenespecific="true" shared="false" type="scene">
@@ -3787,6 +3794,8 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lower Left Bound" hidden="false" id="16" name="_LowerLeftBound" order="16"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Bottom Bound" hidden="false" id="19" name="_BottomBound" order="19"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lower Top Bound" hidden="false" id="18" name="_LowerTopBound" order="18"/>
+        <number default="1" defaultValue="1" desc="" dropdown="" fullname="N Sounds" hidden="false" id="21" name="_NSounds" order="21"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Bounce Sound Name" hidden="false" id="20" name="_BounceSoundName" order="20"/>
         <blocks>
             <receiver blockID="914" id="1"/>
             <receiver blockID="915" id="2"/>
@@ -3868,6 +3877,15 @@
     <snippet attachedevent="true" class="scripts.ActorEvents_945" classname="scripts.ActorEvents_945" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="441" language="" name="ActorEvents_945" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_442_442_PlaySoundWhenKilledPM" classname="scripts.Design_442_442_PlaySoundWhenKilledPM" desc="" description="" design="true" drawOrder="0" id="442" language="" name="Play Sound When Killed PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Sound Name" hidden="false" id="1" name="_SoundName" order="1"/>
+        <number default="1" defaultValue="1" desc="" dropdown="" fullname="N Sounds" hidden="false" id="2" name="_NSounds" order="2"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Killed" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_930" classname="scripts.ActorEvents_930" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="432" language="" name="ActorEvents_930" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>

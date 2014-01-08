@@ -535,6 +535,17 @@ if (item != null)
 }
 
 }
+    
+
+/* Params are:__Sound __Music __Delay */
+public function _customBlock_PlaySoundThenMusic(__Sound:Sound, __Music:Sound, __Delay:Float):Void
+{
+        sayToScene("Sound Manager PM", "_customBlock_StopCurrentMusic");
+        sayToScene("Sound Manager PM", "_customBlock_PlaySound", [__Sound]);
+        runLater(1000 * __Delay, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [__Music]);
+}, null);
+}
 
  
  	public function new(dummy:Int, engine:Engine)

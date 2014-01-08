@@ -36,34 +36,29 @@
         <event-custom comment="false" x="15" y="15">
             <group eventID="7" id="-1">
                 <if comment="false" x="26" y="45">
-                    <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="75">
-                            <ACTOR eid="this" id="0"/>
-                            <get-val-92-4 comment="false" id="1" x="0" y="0"/>
-                        </setanim>
-                        <comment-short comment="false" x="37" y="107">
-                            <int id="0" val="GA: Unlocked Doors (List)"/>
-                        </comment-short>
-                        <say comment="false" x="37" y="127">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="Activate Door PM"/>
-                            <int id="2" val="UnlockDestination"/>
-                        </say>
-                        <set-val-92-1 comment="false" x="37" y="154">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-92-1>
-                        <custom-198 comment="false" x="37" y="179">
-                            <ACTOR eid="this" id="0"/>
-                            <true comment="false" id="1" x="0" y="0"/>
-                        </custom-198>
-                        <save-game comment="false" x="37" y="211">
-                            <group eventID="7" id="-1"/>
-                        </save-game>
+                    <group eventID="7" id="-1">
+                        <dolater comment="false" x="37" y="75">
+                            <group eventID="7" id="-1">
+                                <custom-947 comment="false" x="48" y="107">
+                                    <ACTOR eid="this" id="0"/>
+                                </custom-947>
+                            </group>
+                            <get-val-92-15 comment="false" id="0" x="0" y="0"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
                     </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-val-92-1 comment="false" id="0" x="0" y="0"/>
-                    </not>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-92-15 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </more>
                 </if>
+                <else comment="false" x="26" y="158">
+                    <group eventID="7" id="-1">
+                        <custom-947 comment="false" x="37" y="178">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-947>
+                    </group>
+                </else>
             </group>
             <get-val-92-13 comment="false" id="0" x="0" y="0"/>
         </event-custom>
@@ -119,4 +114,43 @@
         </event-custom>
     </group>
     <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <receiver-3-947 comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="4" id="-1">
+                        <setanim comment="false" x="37" y="75">
+                            <get-byobval-92-947-0 comment="false" id="0" x="0" y="0"/>
+                            <get-val-92-4 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                        <comment-short comment="false" x="37" y="107">
+                            <int id="0" val="GA: Unlocked Doors (List)"/>
+                        </comment-short>
+                        <say comment="false" x="37" y="127">
+                            <get-byobval-92-947-0 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Activate Door PM"/>
+                            <int id="2" val="UnlockDestination"/>
+                        </say>
+                        <set-val-92-1 comment="false" x="37" y="159">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-92-1>
+                        <custom-198 comment="false" x="37" y="184">
+                            <get-byobval-92-947-0 comment="false" id="0" x="0" y="0"/>
+                            <true comment="false" id="1" x="0" y="0"/>
+                        </custom-198>
+                        <save-game comment="false" x="37" y="216">
+                            <group eventID="7" id="-1"/>
+                        </save-game>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-92-1 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+            <get-byobval-92-947-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-3-947>
+    </group>
+    <group eventID="10" id="-1">
+        <get-byobval-92-947-0 comment="false" x="0" y="0"/>
+    </group>
 </groups>

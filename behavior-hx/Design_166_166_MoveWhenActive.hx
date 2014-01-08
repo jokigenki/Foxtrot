@@ -79,14 +79,22 @@ public var _InactiveSFXNumber:Float;
 
 public var _ActiveSFXNumber:Float;
 
+public var _WillMove:Bool;
+
 public var _LoopSoundWhilstMoving:Bool;
     public function _customEvent_Activated():Void
 {
+        if (_MoveTarget == null) return;
         _IsActive = true;
 propertyChanged("_IsActive", _IsActive);
-        if (_MoveTarget == null) return;
+        _WillMove = (!(_MoveTarget.getX() == (_XTarget + _XOffset)) || !(_MoveTarget.getY() == (_YTarget + _YOffset)));
+propertyChanged("_WillMove", _WillMove);
+        if(!(_WillMove))
+{
+            return;
+}
 
-var trans =
+        var trans =
 switch(_EaseType)
 {
 	case "None":
@@ -158,11 +166,17 @@ if (_MoveDelay > 0)
 
     public function _customEvent_Deactivated():Void
 {
+        if (_MoveTarget == null) return;
         _IsActive = false;
 propertyChanged("_IsActive", _IsActive);
-        if (_MoveTarget == null) return;
+        _WillMove = (!(_MoveTarget.getX() == _XStart) || !(_MoveTarget.getY() == _YStart));
+propertyChanged("_WillMove", _WillMove);
+        if(!(_WillMove))
+{
+            return;
+}
 
-var trans =
+        var trans =
 switch(_EaseType)
 {
 	case "None":
@@ -243,6 +257,8 @@ nameMap.set("Inactive SFX Number", "_InactiveSFXNumber");
 _InactiveSFXNumber = 1.0;
 nameMap.set("Active SFX Number", "_ActiveSFXNumber");
 _ActiveSFXNumber = 1.0;
+nameMap.set("Will Move?", "_WillMove");
+_WillMove = false;
 nameMap.set("Loop Sound Whilst Moving?", "_LoopSoundWhilstMoving");
 _LoopSoundWhilstMoving = false;
 

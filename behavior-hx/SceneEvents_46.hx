@@ -110,7 +110,7 @@ propertyChanged("_CratesLeft", _CratesLeft);
 {
             trace("" + "Step 1");
             getActor(299).setValue("Horizontal Oscillation PM", "_CurrentVelocity", 10);
-            getActor(299).setValue("Random Timed Activation PM", "_MaxTime", 4);
+            getActor(299).setValue("Random Timed Activation PM", "_MaxTime", 3);
             getActor(299).setValue("Random Timed Activation PM", "_MinTime", 2);
 }
 
@@ -171,6 +171,7 @@ return;
 }
 
 }, null);
+        sayToScene("Sound Manager PM", "_customBlock_PlaySoundThenMusic", [getSound(887),getSound(466),2]);
 }
 });
 
