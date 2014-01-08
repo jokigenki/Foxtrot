@@ -87,7 +87,8 @@ nameMap.set("Actor", "actor");
 	
 	override public function init()
 	{
-		            _XDirection = asNumber(((randomFloat() * (_MaxXDirection - _MinXDirection)) + _MinXDirection));
+		            actor.makeAlwaysSimulate();
+        _XDirection = asNumber(((randomFloat() * (_MaxXDirection - _MinXDirection)) + _MinXDirection));
 propertyChanged("_XDirection", _XDirection);
         _YDirection = asNumber(((randomFloat() * (_MaxYDirection - _MinYDirection)) + _MinYDirection));
 propertyChanged("_YDirection", _YDirection);

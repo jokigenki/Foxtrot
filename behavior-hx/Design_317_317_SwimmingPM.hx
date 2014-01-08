@@ -129,6 +129,7 @@ if(wrapper.enabled){
 
         if(asBoolean(actor.getActorValue("In Liquid?")))
 {
+            actor.setValue("Jumping PM", "_PreventJumping", true);
             sayToScene("Sound Manager PM", "_customBlock_LoopSceneSoundForActor", [_SwimSoundName,getCurrentSceneName(),actor]);
             actor.say("Animation Manager", "_customBlock_ClearAnimCat", [_AnimationCategory]);
             if(asBoolean(actor.getActorValue("Facing Right?")))
@@ -152,6 +153,7 @@ propertyChanged("_CanSwim", _CanSwim);
 
         else
 {
+            actor.setValue("Jumping PM", "_PreventJumping", false);
             sayToScene("Sound Manager PM", "_customBlock_StopSceneSoundForActor", [_SwimSoundName,getCurrentSceneName(),actor]);
             actor.setValue("Falling PM", "_PreventFalling", false);
 }
