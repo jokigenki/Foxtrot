@@ -250,25 +250,68 @@
                                 </set-font-new>
                             </group>
                         </else>
-                        <draw-text comment="false" x="37" y="203">
+                        <set-val-202-16 comment="false" x="37" y="203">
+                            <get-font-width comment="false" id="0" x="0" y="0">
+                                <custom-341 comment="false" id="0" x="0" y="0">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-val-202-6 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-202-5 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                </custom-341>
+                            </get-font-width>
+                        </set-val-202-16>
+                        <set-val-202-15 comment="false" x="37" y="248">
+                            <div comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <screen-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </screen-wh>
+                                    <get-val-202-16 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <int id="1" val="2"/>
+                            </div>
+                        </set-val-202-15>
+                        <set-color comment="false" x="37" y="291">
+                            <color b="0" g="0" id="0" r="0"/>
+                        </set-color>
+                        <set-alpha comment="false" x="37" y="318">
+                            <int id="0" val="50"/>
+                        </set-alpha>
+                        <drawfill-rect comment="false" x="37" y="338">
+                            <int id="0" val="1"/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-val-202-15 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="5"/>
+                            </minus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <plus comment="false" id="0" x="0" y="0">
+                                    <get-val-202-11 comment="false" id="0" x="0" y="0"/>
+                                    <div comment="false" id="1" x="0" y="0">
+                                        <minus comment="false" id="0" x="0" y="0">
+                                            <screen-wh comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="1"/>
+                                            </screen-wh>
+                                            <int id="1" val="384"/>
+                                        </minus>
+                                        <int id="1" val="2"/>
+                                    </div>
+                                </plus>
+                                <int id="1" val="3"/>
+                            </plus>
+                            <int id="3" val="54"/>
+                            <int id="4" val="24"/>
+                        </drawfill-rect>
+                        <set-alpha comment="false" x="37" y="398">
+                            <int id="0" val="100"/>
+                        </set-alpha>
+                        <draw-text comment="false" x="37" y="418">
                             <custom-341 comment="false" id="0" x="0" y="0">
                                 <minus comment="false" id="0" x="0" y="0">
                                     <get-val-202-6 comment="false" id="0" x="0" y="0"/>
                                     <get-val-202-5 comment="false" id="1" x="0" y="0"/>
                                 </minus>
                             </custom-341>
-                            <plus comment="false" id="1" x="0" y="0">
-                                <get-val-202-10 comment="false" id="0" x="0" y="0"/>
-                                <div comment="false" id="1" x="0" y="0">
-                                    <minus comment="false" id="0" x="0" y="0">
-                                        <screen-wh comment="false" id="0" x="0" y="0">
-                                            <int id="0" val="0"/>
-                                        </screen-wh>
-                                        <int id="1" val="640"/>
-                                    </minus>
-                                    <int id="1" val="2"/>
-                                </div>
-                            </plus>
+                            <get-val-202-15 comment="false" id="1" x="0" y="0"/>
                             <plus comment="false" id="2" x="0" y="0">
                                 <get-val-202-11 comment="false" id="0" x="0" y="0"/>
                                 <div comment="false" id="1" x="0" y="0">
@@ -288,13 +331,13 @@
                         <get-val-202-1 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
-                <else-if comment="false" x="26" y="263">
+                <else-if comment="false" x="26" y="478">
                     <group eventID="8" id="-1">
-                        <set-font-new comment="false" x="37" y="288">
+                        <set-font-new comment="false" x="37" y="503">
                             <FONT eid="742" id="0"/>
                         </set-font-new>
-                        <to-screen-space comment="false" x="37" y="315"/>
-                        <draw-text comment="false" x="37" y="335">
+                        <to-screen-space comment="false" x="37" y="530"/>
+                        <draw-text comment="false" x="37" y="550">
                             <int id="0" val="OUT OF TIME!"/>
                             <div comment="false" id="1" x="0" y="0">
                                 <minus comment="false" id="0" x="0" y="0">

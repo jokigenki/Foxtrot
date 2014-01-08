@@ -2097,11 +2097,12 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Local Run In Progress?" hidden="true" id="7" name="_LocalRunInProgress" order="5"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Local Speed Run Collectables" hidden="true" id="8" name="_LocalSpeedRunCollectables" order="6"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Collected Speed Run Items" hidden="true" id="9" name="_CollectedSpeedRunItems" order="7"/>
-        <number default="288.0" defaultValue="288.0" desc="" dropdown="" fullname="X Position" hidden="false" id="10" name="_XPosition" order="8"/>
         <number default="30.0" defaultValue="30.0" desc="" dropdown="" fullname="Y Position" hidden="false" id="11" name="_YPosition" order="9"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Door To Open" hidden="false" id="12" name="_DoorToOpen" order="10"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Key To Kill" hidden="false" id="13" name="_KeyToKill" order="11"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Timed Out?" hidden="true" id="14" name="_TimedOut" order="12"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Draw Position" hidden="true" id="15" name="_DrawPosition" order="13"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Text Width" hidden="true" id="16" name="_TextWidth" order="14"/>
         <blocks>
             <receiver blockID="341" id="1"/>
             <receiver blockID="344" id="2"/>
