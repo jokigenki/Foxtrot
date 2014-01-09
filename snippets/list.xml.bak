@@ -3887,6 +3887,14 @@
             <event displayName="Killed" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_51" classname="scripts.SceneEvents_51" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="443" language="" name="SceneEvents_51" oid="-1" package="scripts." sceneid="51" scenespecific="true" shared="false" type="scene">
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Exit Name" hidden="false" id="1" name="_ExitName" order="0"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Current Nev" hidden="false" id="2" name="_CurrentNev" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_930" classname="scripts.ActorEvents_930" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="432" language="" name="ActorEvents_930" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>

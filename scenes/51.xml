@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="4" desc="" eventsnippetid="375" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="41" name="Tutorial_04" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
+<scene depth="4" desc="" eventsnippetid="443" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="51" name="Tutorial_05" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
     <layers>
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="1"/>
         <layer color="0,255,0" id="2" name="Player" order="3"/>
@@ -8,7 +8,7 @@
     </layers>
     <color-bg blue="255" green="255" red="255"/>
     <backgrounds>
-        <ref id="737"/>
+        <ref id="951"/>
     </backgrounds>
     <foregrounds/>
     <joints/>
@@ -16,14 +16,11 @@
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="3"/>
-        <actor a="0.0" aid="7" c="false" group="5" id="158" name="Trampoline 7" sx="1.0" sy="1.0" x="368" y="224" z="1"/>
-        <actor a="0.0" aid="8" c="false" group="13" id="483" name="Baby Fox Middle 8" sx="1.0" sy="1.0" x="382" y="160" z="1"/>
-        <actor a="0.0" aid="9" c="false" group="13" id="485" name="Baby Fox Right 9" sx="1.0" sy="1.0" x="412" y="128" z="1"/>
-        <actor a="0.0" aid="12" c="true" group="2" id="690" name="Horizontal Scene Exit Right 12" sx="1.0" sy="1.0" x="80" y="304" z="2">
+        <actor a="0.0" aid="12" c="true" group="2" id="690" name="Horizontal Scene Exit Right 12" sx="1.0" sy="1.0" x="78" y="240" z="2">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="1"/>
-                    <prop id="3" list="0" val="Tutorial_04|Tutorial_03|A|B"/>
+                    <prop id="3" list="0" val="Tutorial_05|Tutorial_04|A|B"/>
                     <prop id="4" list="0" val="13"/>
                     <prop id="6" list="0" val="true"/>
                     <prop id="7" list="0" val="true"/>
@@ -36,6 +33,39 @@
                     <prop id="14" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="17" list="0" val="0"/>
+                    <prop id="16" list="0" val="0"/>
+                    <prop id="18" list="0" val="-1"/>
+                </s>
+                <s enabled="true" id="99">
+                    <prop id="5" list="0" val=""/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="false"/>
+                    <prop id="10" list="0" val="true"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="361"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="13" c="false" group="0" id="733" name="PANTS Nev 13" sx="1.0" sy="1.0" x="192" y="240" z="2"/>
+        <actor a="0.0" aid="14" c="true" group="2" id="690" name="Horizontal Scene Exit Right 14" sx="1.0" sy="1.0" x="80" y="128" z="2">
+            <snippets>
+                <s enabled="true" id="304">
+                    <prop id="2" list="0" val="1"/>
+                    <prop id="3" list="0" val="Tutorial_05|Tutorial_06|B|A"/>
+                    <prop id="4" list="0" val="13"/>
+                    <prop id="6" list="0" val="true"/>
+                    <prop id="7" list="0" val="true"/>
+                    <prop id="8" list="0" val="false"/>
+                    <prop id="9" list="0" val="true"/>
+                    <prop id="10" list="0" val=""/>
+                    <prop id="11" list="0" val="0.5"/>
+                    <prop id="12" list="0" val="0.5"/>
+                    <prop id="13" list="0" val="0"/>
+                    <prop id="14" list="0" val="0"/>
+                    <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="No Sound"/>
@@ -49,39 +79,6 @@
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="361"/>
-            </snippets>
-        </actor>
-        <actor a="0.0" aid="13" c="false" group="0" id="733" name="PANTS Nev 13" sx="1.0" sy="1.0" x="192" y="304" z="2"/>
-        <actor a="0.0" aid="14" c="true" group="2" id="152" name="Horizontal Scene Exit 14" sx="1.0" sy="1.0" x="528" y="80" z="1">
-            <snippets>
-                <s enabled="true" id="304">
-                    <prop id="2" list="0" val="-1"/>
-                    <prop id="3" list="0" val="Tutorial_04|Tutorial_05|B|A"/>
-                    <prop id="4" list="0" val="13"/>
-                    <prop id="6" list="0" val="true"/>
-                    <prop id="7" list="0" val="true"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="9" list="0" val="true"/>
-                    <prop id="10" list="0" val=""/>
-                    <prop id="11" list="0" val="0.5"/>
-                    <prop id="12" list="0" val="0.5"/>
-                    <prop id="13" list="0" val="0"/>
-                    <prop id="14" list="0" val="0"/>
-                    <prop id="15" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                    <prop id="17" list="0" val="0"/>
-                    <prop id="16" list="0" val="0"/>
-                    <prop id="18" list="0" val="-1"/>
-                </s>
-                <s enabled="true" id="100"/>
-                <s enabled="true" id="99">
-                    <prop id="5" list="0" val=""/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="9" list="0" val="false"/>
-                    <prop id="10" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
             </snippets>
         </actor>
     </actors>
@@ -108,13 +105,13 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
+        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
-        </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -133,6 +130,10 @@
             <prop id="15" list="0" val="0"/>
             <prop id="16" list="0" val="0"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="41"/>
+        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="851"/>
             <prop id="2" list="0" val="-1"/>
@@ -140,14 +141,9 @@
             <prop id="4" list="1" val=""/>
             <prop id="5" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="41"/>
-        </s>
     </snippets>
     <terrain>
-        <p pts="8,640.0,0.0,640.0,16.0,448.0,16.0,448.0,240.0,0.0,240.0,0.0,224.0,432.0,224.0,432.0,0.0" x="0.0" y="112.0"/>
-        <p pts="4,0.0,16.0,0.0,0.0,48.0,0.0,48.0,16.0" x="320.0" y="224.0"/>
-        <p pts="22,368.0,96.0,208.0,96.0,208.0,256.0,320.0,256.0,320.0,272.0,128.0,272.0,128.0,256.0,112.0,256.0,112.0,240.0,0.0,240.0,0.0,224.0,128.0,224.0,128.0,240.0,144.0,240.0,144.0,256.0,192.0,256.0,192.0,80.0,352.0,80.0,352.0,0.0,640.0,0.0,640.0,16.0,368.0,16.0" x="0.0" y="32.0"/>
+        <p pts="18,112.0,48.0,0.0,48.0,0.0,32.0,128.0,32.0,128.0,48.0,144.0,48.0,144.0,64.0,192.0,64.0,192.0,16.0,0.0,16.0,0.0,0.0,208.0,0.0,208.0,64.0,320.0,64.0,320.0,80.0,128.0,80.0,128.0,64.0,112.0,64.0" x="0.0" y="160.0"/>
+        <p pts="8,0.0,208.0,0.0,192.0,432.0,192.0,432.0,16.0,0.0,16.0,0.0,0.0,448.0,0.0,448.0,208.0" x="0.0" y="80.0"/>
     </terrain>
 </scene>

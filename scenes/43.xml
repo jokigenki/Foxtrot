@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="6" desc="" eventsnippetid="379" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="43" name="Tutorial_05" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
+<scene depth="6" desc="" eventsnippetid="379" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="120.0" height="384" id="43" name="Tutorial_06" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
     <layers>
         <layer color="255,255,0" id="5" name="Secret Areas" order="0"/>
         <layer color="255,200,0" id="3" name="Camera Gizmo" order="1"/>
@@ -46,11 +46,11 @@
                 <s enabled="true" id="90"/>
             </snippets>
         </actor>
-        <actor a="0.0" aid="8" c="true" group="2" id="152" name="Horizontal Scene Exit 8" sx="1.0" sy="1.0" x="512" y="224" z="4">
+        <actor a="0.0" aid="8" c="true" group="2" id="152" name="Horizontal Scene Exit 8" sx="1.0" sy="1.0" x="528" y="224" z="4">
             <snippets>
                 <s enabled="true" id="304">
                     <prop id="2" list="0" val="-1"/>
-                    <prop id="3" list="0" val="Tutorial_05|Tutorial_04|A|B"/>
+                    <prop id="3" list="0" val="Tutorial_06|Tutorial_05|A|B"/>
                     <prop id="4" list="0" val="10"/>
                     <prop id="6" list="0" val="true"/>
                     <prop id="7" list="0" val="true"/>
@@ -65,7 +65,7 @@
                     <prop id="15" list="0" val="0"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
-                    <prop id="18" list="0" val="null"/>
+                    <prop id="18" list="0" val="No Sound"/>
                 </s>
                 <s enabled="true" id="100"/>
                 <s enabled="true" id="99">
@@ -108,6 +108,7 @@
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="14" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0.5"/>
                 </s>
                 <s enabled="true" id="133">
                     <prop id="14" list="0" val="9"/>
@@ -156,13 +157,13 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
+        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
-        </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -181,16 +182,16 @@
             <prop id="15" list="0" val="0"/>
             <prop id="16" list="0" val="0"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="43"/>
+        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="851"/>
             <prop id="2" list="0" val="-1"/>
             <prop id="3" list="0" val="0"/>
             <prop id="4" list="1" val=""/>
             <prop id="5" list="0" val="-1"/>
-        </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="43"/>
         </s>
     </snippets>
     <terrain>
