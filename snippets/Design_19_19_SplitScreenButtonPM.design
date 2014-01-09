@@ -327,27 +327,27 @@
                         </comment-short>
                         <if comment="false" x="37" y="90">
                             <group eventID="4" id="-1">
-                                <comment-short comment="false" x="48" y="123">
+                                <comment-short comment="false" x="48" y="128">
                                     <int id="0" val="Custom: Set &amp;quot;Jump&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <custom-94 comment="false" x="48" y="143">
+                                <custom-94 comment="false" x="48" y="148">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="Jump"/>
                                     <true comment="false" id="2" x="0" y="0"/>
                                 </custom-94>
-                                <if comment="false" x="48" y="175">
+                                <if comment="false" x="48" y="180">
                                     <group eventID="4" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="210">
+                                        <actor-set-prop comment="false" x="59" y="215">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Vertical Jump"/>
                                             <false comment="false" id="2" x="0" y="0"/>
                                         </actor-set-prop>
-                                        <if comment="false" x="59" y="242">
+                                        <if comment="false" x="59" y="247">
                                             <group eventID="4" id="-1">
-                                                <comment-short comment="false" x="70" y="267">
+                                                <comment-short comment="false" x="70" y="272">
                                                     <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                                 </comment-short>
-                                                <custom-94 comment="false" x="70" y="287">
+                                                <custom-94 comment="false" x="70" y="292">
                                                     <ACTOR eid="var" id="0" vid="4"/>
                                                     <int id="1" val="Left"/>
                                                     <true comment="false" id="2" x="0" y="0"/>
@@ -355,21 +355,21 @@
                                             </group>
                                             <get-val-19-9 comment="false" id="0" x="0" y="0"/>
                                         </if>
-                                        <else comment="false" x="59" y="331">
+                                        <else comment="false" x="59" y="336">
                                             <group eventID="4" id="-1">
-                                                <comment-short comment="false" x="70" y="351">
+                                                <comment-short comment="false" x="70" y="356">
                                                     <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                                 </comment-short>
-                                                <custom-94 comment="false" x="70" y="371">
+                                                <custom-94 comment="false" x="70" y="376">
                                                     <ACTOR eid="var" id="0" vid="4"/>
                                                     <int id="1" val="Right"/>
                                                     <true comment="false" id="2" x="0" y="0"/>
                                                 </custom-94>
                                             </group>
                                         </else>
-                                        <if comment="false" x="59" y="415">
+                                        <if comment="false" x="59" y="420">
                                             <group eventID="4" id="-1">
-                                                <set-val-19-12 comment="false" x="70" y="458">
+                                                <set-val-19-12 comment="false" x="70" y="463">
                                                     <true comment="false" id="0" x="0" y="0"/>
                                                 </set-val-19-12>
                                             </group>
@@ -394,25 +394,25 @@
                                         </moreeq>
                                     </or>
                                 </if>
-                                <else comment="false" x="48" y="507">
+                                <else comment="false" x="48" y="512">
                                     <group eventID="4" id="-1">
-                                        <actor-set-prop comment="false" x="59" y="527">
+                                        <actor-set-prop comment="false" x="59" y="532">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Vertical Jump"/>
                                             <true comment="false" id="2" x="0" y="0"/>
                                         </actor-set-prop>
-                                        <comment-short comment="false" x="59" y="559">
+                                        <comment-short comment="false" x="59" y="564">
                                             <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;false&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                         </comment-short>
-                                        <custom-94 comment="false" x="59" y="579">
+                                        <custom-94 comment="false" x="59" y="584">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Left"/>
                                             <false comment="false" id="2" x="0" y="0"/>
                                         </custom-94>
-                                        <comment-short comment="false" x="59" y="611">
+                                        <comment-short comment="false" x="59" y="616">
                                             <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;false&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                         </comment-short>
-                                        <custom-94 comment="false" x="59" y="631">
+                                        <custom-94 comment="false" x="59" y="636">
                                             <ACTOR eid="var" id="0" vid="4"/>
                                             <int id="1" val="Right"/>
                                             <false comment="false" id="2" x="0" y="0"/>
@@ -420,16 +420,19 @@
                                     </group>
                                 </else>
                             </group>
-                            <custom-97 comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="var" id="0" vid="4"/>
-                            </custom-97>
+                            <not comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Prevent Jumping"/>
+                                </actor-get-prop>
+                            </not>
                         </if>
-                        <else comment="false" x="37" y="687">
+                        <else comment="false" x="37" y="692">
                             <group eventID="4" id="-1">
-                                <comment-short comment="false" x="48" y="707">
+                                <comment-short comment="false" x="48" y="712">
                                     <int id="0" val="Custom: Set &amp;quot;UseObject&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <custom-94 comment="false" x="48" y="727">
+                                <custom-94 comment="false" x="48" y="732">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="UseObject"/>
                                     <true comment="false" id="2" x="0" y="0"/>
@@ -442,45 +445,45 @@
                         <get-val-19-2 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
-                <else comment="false" x="26" y="783">
+                <else comment="false" x="26" y="788">
                     <group eventID="4" id="-1">
-                        <actor-set-prop comment="false" x="37" y="803">
+                        <actor-set-prop comment="false" x="37" y="808">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="Vertical Jump"/>
                             <false comment="false" id="2" x="0" y="0"/>
                         </actor-set-prop>
-                        <incdec comment="false" x="37" y="835">
+                        <incdec comment="false" x="37" y="840">
                             <int id="0" val="11"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
                         </incdec>
-                        <comment-short comment="false" x="37" y="862">
+                        <comment-short comment="false" x="37" y="867">
                             <int id="0" val="Custom: Set &amp;quot;Jump&amp;quot; to &amp;lt;false&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                         </comment-short>
-                        <custom-94 comment="false" x="37" y="882">
+                        <custom-94 comment="false" x="37" y="887">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="Jump"/>
                             <false comment="false" id="2" x="0" y="0"/>
                         </custom-94>
-                        <custom-94 comment="false" x="37" y="914">
+                        <custom-94 comment="false" x="37" y="919">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="UseObject"/>
                             <false comment="false" id="2" x="0" y="0"/>
                         </custom-94>
-                        <if comment="false" x="37" y="946">
+                        <if comment="false" x="37" y="951">
                             <group eventID="4" id="-1">
-                                <comment-short comment="false" x="48" y="971">
+                                <comment-short comment="false" x="48" y="976">
                                     <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <custom-94 comment="false" x="48" y="991">
+                                <custom-94 comment="false" x="48" y="996">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="Left"/>
                                     <true comment="false" id="2" x="0" y="0"/>
                                 </custom-94>
-                                <comment-short comment="false" x="48" y="1023">
+                                <comment-short comment="false" x="48" y="1028">
                                     <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;false&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <custom-94 comment="false" x="48" y="1043">
+                                <custom-94 comment="false" x="48" y="1048">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="Right"/>
                                     <false comment="false" id="2" x="0" y="0"/>
@@ -488,20 +491,20 @@
                             </group>
                             <get-val-19-1 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else-if comment="false" x="37" y="1087">
+                        <else-if comment="false" x="37" y="1092">
                             <group eventID="4" id="-1">
-                                <comment-short comment="false" x="48" y="1112">
+                                <comment-short comment="false" x="48" y="1117">
                                     <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <custom-94 comment="false" x="48" y="1132">
+                                <custom-94 comment="false" x="48" y="1137">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="Right"/>
                                     <true comment="false" id="2" x="0" y="0"/>
                                 </custom-94>
-                                <comment-short comment="false" x="48" y="1164">
+                                <comment-short comment="false" x="48" y="1169">
                                     <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;false&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <custom-94 comment="false" x="48" y="1184">
+                                <custom-94 comment="false" x="48" y="1189">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="Left"/>
                                     <false comment="false" id="2" x="0" y="0"/>
@@ -509,40 +512,40 @@
                             </group>
                             <get-val-19-2 comment="false" id="0" x="0" y="0"/>
                         </else-if>
-                        <else comment="false" x="37" y="1228">
+                        <else comment="false" x="37" y="1233">
                             <group eventID="4" id="-1">
-                                <comment-short comment="false" x="48" y="1248">
+                                <comment-short comment="false" x="48" y="1253">
                                     <int id="0" val="Custom: Set &amp;quot;Left&amp;quot; to &amp;lt;false&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <comment-short comment="false" x="48" y="1268">
+                                <comment-short comment="false" x="48" y="1273">
                                     <int id="0" val="Custom: Set &amp;quot;Right&amp;quot; to &amp;lt;false&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                 </comment-short>
-                                <custom-94 comment="false" x="48" y="1288">
+                                <custom-94 comment="false" x="48" y="1293">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="Left"/>
                                     <false comment="false" id="2" x="0" y="0"/>
                                 </custom-94>
-                                <custom-94 comment="false" x="48" y="1320">
+                                <custom-94 comment="false" x="48" y="1325">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                     <int id="1" val="Right"/>
                                     <false comment="false" id="2" x="0" y="0"/>
                                 </custom-94>
-                                <set-val-19-11 comment="false" x="48" y="1352">
+                                <set-val-19-11 comment="false" x="48" y="1357">
                                     <int id="0" val="0"/>
                                 </set-val-19-11>
                             </group>
                         </else>
                     </group>
                 </else>
-                <if comment="false" x="26" y="1396">
+                <if comment="false" x="26" y="1401">
                     <group eventID="4" id="-1">
-                        <set-val-19-11 comment="false" x="37" y="1439">
+                        <set-val-19-11 comment="false" x="37" y="1444">
                             <int id="0" val="0"/>
                         </set-val-19-11>
-                        <set-val-19-12 comment="false" x="37" y="1459">
+                        <set-val-19-12 comment="false" x="37" y="1464">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-19-12>
-                        <actor-set-prop comment="false" x="37" y="1484">
+                        <actor-set-prop comment="false" x="37" y="1489">
                             <ACTOR eid="var" id="0" vid="4"/>
                             <int id="1" val="Vertical Jump"/>
                             <false comment="false" id="2" x="0" y="0"/>
@@ -561,14 +564,31 @@
             </group>
         </step>
     </group>
-    <group eventID="4" id="-1"/>
+    <group eventID="4" id="-1">
+        <custom-97 comment="false" x="433" y="42">
+            <ACTOR eid="var" id="0" vid="4"/>
+        </custom-97>
+    </group>
     <group eventID="5" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <draw-text comment="false" x="26" y="40">
-                    <get-val-19-13 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="100"/>
-                    <int id="2" val="25"/>
+                <set-font-new comment="false" x="26" y="40">
+                    <FONT eid="742" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <custom-97 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="4"/>
+                    </custom-97>
+                    <int id="1" val="200"/>
+                    <int id="2" val="50"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="100">
+                    <custom-93 comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="var" id="0" vid="4"/>
+                        <int id="1" val="UseObject"/>
+                    </custom-93>
+                    <int id="1" val="200"/>
+                    <int id="2" val="75"/>
                 </draw-text>
             </group>
         </draw>

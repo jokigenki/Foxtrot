@@ -42,19 +42,22 @@
                 <die comment="false" x="26" y="239">
                     <ACTOR eid="12" id="0"/>
                 </die>
-                <if comment="false" x="26" y="266">
+                <custom-713 comment="false" x="26" y="266">
+                    <ACTOR eid="7" id="0"/>
+                </custom-713>
+                <if comment="false" x="26" y="293">
                     <group eventID="2" id="-1">
-                        <set-val-175-2 comment="false" x="37" y="291">
+                        <set-val-175-2 comment="false" x="37" y="318">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-175-2>
-                        <for-each comment="false" x="37" y="316">
+                        <for-each comment="false" x="37" y="343">
                             <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="341">
+                                <if comment="false" x="48" y="368">
                                     <group eventID="1" id="-1">
-                                        <set-val-175-2 comment="false" x="59" y="376">
+                                        <set-val-175-2 comment="false" x="59" y="403">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-175-2>
-                                        <break comment="false" x="59" y="401"/>
+                                        <break comment="false" x="59" y="428"/>
                                     </group>
                                     <not comment="false" id="0" x="0" y="0">
                                         <contains-item comment="false" id="0" x="0" y="0">
@@ -66,9 +69,9 @@
                             </group>
                             <get-game-val-13 comment="false" id="0" x="0" y="0"/>
                         </for-each>
-                        <if comment="false" x="37" y="445">
+                        <if comment="false" x="37" y="472">
                             <group eventID="1" id="-1">
-                                <scene-say comment="false" x="48" y="470">
+                                <scene-say comment="false" x="48" y="497">
                                     <int id="0" val="Speed Run Timer PM"/>
                                     <int id="1" val="CompleteSpeedRun"/>
                                 </scene-say>
@@ -78,14 +81,14 @@
                     </group>
                     <get-game-val-10 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <set-val-175-3 comment="false" x="26" y="514">
+                <set-val-175-3 comment="false" x="26" y="541">
                     <int id="0" val="0"/>
                 </set-val-175-3>
-                <periodic comment="false" x="26" y="534">
+                <periodic comment="false" x="26" y="561">
                     <group eventID="4" id="-1">
-                        <repeat comment="false" x="37" y="561">
+                        <repeat comment="false" x="37" y="588">
                             <group eventID="2" id="-1">
-                                <create-actor3 comment="false" x="48" y="586">
+                                <create-actor3 comment="false" x="48" y="613">
                                     <ACTORTYPE eid="941" id="0"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <div comment="false" id="0" x="0" y="0">
@@ -108,14 +111,14 @@
                             </group>
                             <int id="0" val="10"/>
                         </repeat>
-                        <incdec comment="false" x="37" y="653">
+                        <incdec comment="false" x="37" y="680">
                             <int id="0" val="3"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
                         </incdec>
-                        <if comment="false" x="37" y="680">
+                        <if comment="false" x="37" y="707">
                             <group eventID="4" id="-1">
-                                <cancel comment="false" x="48" y="710"/>
+                                <cancel comment="false" x="48" y="737"/>
                             </group>
                             <moreeq comment="false" id="0" x="0" y="0">
                                 <get-val-175-3 comment="false" id="0" x="0" y="0"/>
@@ -126,7 +129,7 @@
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>
-                <custom-949 comment="false" x="26" y="754">
+                <custom-949 comment="false" x="26" y="781">
                     <SOUND eid="887" id="0"/>
                     <SOUND eid="466" id="1"/>
                     <int id="2" val="2"/>
@@ -186,7 +189,7 @@
                                     <ACTOR eid="18" id="0"/>
                                     <int id="1" val="Teleport To Scene PM"/>
                                     <int id="2" val="_DestinationSceneName"/>
-                                    <int id="3" val="_Farm1_Boss|Transition To Home All|A|A"/>
+                                    <int id="3" val="Farm1_Boss|Transition To Home All|A|A"/>
                                 </set-attribute>
                             </group>
                             <get-game-val-28 comment="false" id="0" x="0" y="0"/>
@@ -216,4 +219,30 @@
         </init>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-actor-create-kill comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <dolater comment="false" x="26" y="42">
+                    <group eventID="5" id="-1">
+                        <if comment="false" x="37" y="69">
+                            <group eventID="4" id="-1">
+                                <set-attribute comment="false" x="48" y="94">
+                                    <ACTOR eid="18" id="0"/>
+                                    <int id="1" val="Teleport To Scene PM"/>
+                                    <int id="2" val="_DestinationSceneName"/>
+                                    <int id="3" val="Farm1_Boss|Transition To Home All|A|A"/>
+                                </set-attribute>
+                            </group>
+                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <int id="0" val="0.5"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="14" id="1"/>
+        </event-actor-create-kill>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

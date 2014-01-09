@@ -30,36 +30,42 @@
             <group eventID="-1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <stop comment="false" x="37" y="65"/>
+                        <stop comment="false" x="37" y="78"/>
                     </group>
-                    <get-val-50-14 comment="false" id="0" x="0" y="0"/>
+                    <or comment="false" id="0" x="0" y="0">
+                        <get-val-50-14 comment="false" id="0" x="0" y="0"/>
+                        <actor-get-prop comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Prevent Jumping"/>
+                        </actor-get-prop>
+                    </or>
                 </if>
-                <comment-short comment="false" x="26" y="97">
+                <comment-short comment="false" x="26" y="110">
                     <int id="0" val="If we&amp;#039;re on the ground, we&amp;#039;re not jumping"/>
                 </comment-short>
-                <set-val-50-2 comment="false" x="26" y="117">
+                <set-val-50-2 comment="false" x="26" y="130">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-50-2>
-                <if comment="false" x="26" y="142">
+                <if comment="false" x="26" y="155">
                     <group eventID="2" id="-1">
-                        <actor-set-prop comment="false" x="37" y="180">
+                        <actor-set-prop comment="false" x="37" y="193">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Is Jumping?"/>
                             <false comment="false" id="2" x="0" y="0"/>
                         </actor-set-prop>
-                        <comment-short comment="false" x="37" y="212">
+                        <comment-short comment="false" x="37" y="225">
                             <int id="0" val="Custom: Clear Current Anim Category If Same As &amp;lt;Animation Category&amp;gt;"/>
                         </comment-short>
-                        <custom-91 comment="false" x="37" y="232">
+                        <custom-91 comment="false" x="37" y="245">
                             <ACTOR eid="this" id="0"/>
                             <get-val-50-21 comment="false" id="1" x="0" y="0"/>
                         </custom-91>
-                        <if comment="false" x="37" y="264">
+                        <if comment="false" x="37" y="277">
                             <group eventID="-1" id="-1">
-                                <set-val-50-2 comment="false" x="48" y="289">
+                                <set-val-50-2 comment="false" x="48" y="302">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-50-2>
-                                <set-val-50-27 comment="false" x="48" y="314">
+                                <set-val-50-27 comment="false" x="48" y="327">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-50-27>
                             </group>
@@ -73,11 +79,11 @@
                         </actor-get-prop>
                     </as-boolean>
                 </if>
-                <if comment="false" x="26" y="363">
+                <if comment="false" x="26" y="376">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="388">
+                        <if comment="false" x="37" y="401">
                             <group eventID="2" id="-1">
-                                <custom-719 comment="false" x="48" y="426">
+                                <custom-719 comment="false" x="48" y="439">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-719>
                             </group>
@@ -90,9 +96,9 @@
                     </group>
                     <get-val-50-23 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="477">
+                <else comment="false" x="26" y="490">
                     <group eventID="2" id="-1">
-                        <custom-719 comment="false" x="37" y="497">
+                        <custom-719 comment="false" x="37" y="510">
                             <ACTOR eid="this" id="0"/>
                         </custom-719>
                     </group>
@@ -120,13 +126,21 @@
         <receiver-3-97 comment="false" x="15" y="15">
             <group eventID="4" id="-1">
                 <return comment="false" x="26" y="45">
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-attribute comment="false" id="0" x="0" y="0">
-                            <get-byobval-50-697-0 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="Jumping PM"/>
-                            <int id="2" val="_PreventJumping"/>
-                        </get-attribute>
-                    </not>
+                    <or comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-attribute comment="false" id="0" x="0" y="0">
+                                <get-byobval-50-697-0 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Jumping PM"/>
+                                <int id="2" val="_PreventJumping"/>
+                            </get-attribute>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <get-byobval-50-697-0 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Prevent Jumping"/>
+                            </actor-get-prop>
+                        </not>
+                    </or>
                 </return>
             </group>
             <get-byobval-50-697-0 comment="false" id="0" x="0" y="0"/>
