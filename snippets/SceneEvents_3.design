@@ -83,6 +83,36 @@
                     <int id="0" val="0.2"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
+                <if comment="false" x="26" y="448">
+                    <group eventID="1" id="-1">
+                        <custom-325 comment="false" x="37" y="473">
+                            <int id="0" val="Factory2_11|Factory2_Boss|B|A"/>
+                        </custom-325>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Factory_Boss_Key"/>
+                    </custom-326>
+                </if>
+                <if comment="false" x="26" y="505">
+                    <group eventID="1" id="-1">
+                        <custom-325 comment="false" x="37" y="530">
+                            <int id="0" val="_Larder|Transition To Humpty|D|A"/>
+                        </custom-325>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <int id="0" val="LarderBossKey"/>
+                    </custom-326>
+                </if>
+                <if comment="false" x="26" y="562">
+                    <group eventID="2" id="-1">
+                        <custom-325 comment="false" x="37" y="587">
+                            <int id="0" val="Farm1_10|Farm1_Boss|B|A"/>
+                        </custom-325>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Farm_Boss_Key"/>
+                    </custom-326>
+                </if>
             </group>
         </init>
     </group>

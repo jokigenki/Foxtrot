@@ -73,6 +73,21 @@ class SceneEvents_3 extends SceneScript
 }
 
 }, null);
+        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Factory_Boss_Key")), Bool))
+{
+            scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("Factory2_11|Factory2_Boss|B|A");
+}
+
+        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("LarderBossKey")), Bool))
+{
+            scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Larder|Transition To Humpty|D|A");
+}
+
+        if(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Farm_Boss_Key")), Bool))
+{
+            scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("Farm1_10|Farm1_Boss|B|A");
+}
+
 
 	}	      	
 	

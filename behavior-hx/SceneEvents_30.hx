@@ -48,6 +48,16 @@ class SceneEvents_30 extends SceneScript
 public var _ExitName:String;
 
 public var _LiquidLevel:Float;
+    public function _customEvent_InWater():Void
+{
+        sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(961)]);
+}
+
+    public function _customEvent_OutOfWater():Void
+{
+        sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(756)]);
+}
+
 
  
  	public function new(dummy:Int, engine:Engine)

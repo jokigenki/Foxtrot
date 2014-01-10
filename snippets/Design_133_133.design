@@ -83,44 +83,38 @@
                                     <int id="1" val="0"/>
                                     <int id="2" val="1"/>
                                 </incdec>
-                                <if comment="false" x="48" y="240">
+                                <custom-796 comment="false" x="48" y="240">
+                                    <SOUND eid="var" id="0" vid="32"/>
+                                </custom-796>
+                                <if comment="false" x="48" y="267">
                                     <group eventID="4" id="-1">
-                                        <set-val-133-31 comment="false" x="59" y="270">
+                                        <set-val-133-31 comment="false" x="59" y="297">
                                             <int id="0" val="use"/>
                                         </set-val-133-31>
-                                        <scene-shout comment="false" x="59" y="290">
+                                        <scene-shout comment="false" x="59" y="317">
                                             <get-val-133-23 comment="false" id="0" x="0" y="0"/>
                                         </scene-shout>
-                                        <shout comment="false" x="59" y="315">
+                                        <shout comment="false" x="59" y="342">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-133-24 comment="false" id="1" x="0" y="0"/>
                                         </shout>
-                                        <shout comment="false" x="59" y="347">
+                                        <shout comment="false" x="59" y="374">
                                             <ACTOR eid="var" id="0" vid="21"/>
                                             <get-val-133-25 comment="false" id="1" x="0" y="0"/>
                                         </shout>
-                                        <dolater comment="false" x="59" y="379">
-                                            <group eventID="4" id="-1">
-                                                <set-val-133-18 comment="false" x="70" y="406">
-                                                    <true comment="false" id="0" x="0" y="0"/>
-                                                </set-val-133-18>
-                                            </group>
-                                            <int id="0" val="0.5"/>
-                                            <ACTOR eid="this" id="2"/>
-                                        </dolater>
                                     </group>
                                     <moreeq comment="false" id="0" x="0" y="0">
                                         <get-val-133-27 comment="false" id="0" x="0" y="0"/>
                                         <get-val-133-26 comment="false" id="1" x="0" y="0"/>
                                     </moreeq>
                                 </if>
-                                <else comment="false" x="48" y="455">
+                                <else comment="false" x="48" y="418">
                                     <group eventID="4" id="-1">
-                                        <shout comment="false" x="59" y="475">
+                                        <shout comment="false" x="59" y="438">
                                             <ACTOR eid="this" id="0"/>
                                             <get-val-133-28 comment="false" id="1" x="0" y="0"/>
                                         </shout>
-                                        <set-val-133-18 comment="false" x="59" y="507">
+                                        <set-val-133-18 comment="false" x="59" y="470">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-133-18>
                                     </group>
@@ -128,9 +122,9 @@
                             </group>
                             <get-val-133-17 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="556">
+                        <else comment="false" x="37" y="519">
                             <group eventID="4" id="-1">
-                                <set-val-133-31 comment="false" x="48" y="576">
+                                <set-val-133-31 comment="false" x="48" y="539">
                                     <int id="0" val="no"/>
                                 </set-val-133-31>
                             </group>
@@ -141,15 +135,15 @@
                         <int id="1" val="UseObject"/>
                     </custom-93>
                 </if>
-                <else-if comment="false" x="26" y="620">
+                <else-if comment="false" x="26" y="583">
                     <group eventID="4" id="-1">
-                        <set-val-133-31 comment="false" x="37" y="645">
+                        <set-val-133-31 comment="false" x="37" y="608">
                             <int id="0" val="reset"/>
                         </set-val-133-31>
-                        <set-val-133-18 comment="false" x="37" y="665">
+                        <set-val-133-18 comment="false" x="37" y="628">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-133-18>
-                        <set-val-133-17 comment="false" x="37" y="690">
+                        <set-val-133-17 comment="false" x="37" y="653">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-133-17>
                     </group>

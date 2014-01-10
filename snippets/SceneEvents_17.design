@@ -130,9 +130,9 @@
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>
                 <custom-949 comment="false" x="26" y="781">
-                    <SOUND eid="887" id="0"/>
+                    <SOUND eid="962" id="0"/>
                     <SOUND eid="466" id="1"/>
-                    <int id="2" val="2"/>
+                    <int id="2" val="3.3"/>
                 </custom-949>
             </group>
             <int id="0" val="RoosterKilled"/>
@@ -152,7 +152,29 @@
                         <if comment="false" x="37" y="110">
                             <group eventID="3" id="-1">
                                 <custom-632 comment="false" x="48" y="135">
-                                    <SOUND eid="627" id="0"/>
+                                    <SOUND eid="964" id="0"/>
+                                </custom-632>
+                            </group>
+                            <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <as-number comment="false" id="0" x="0" y="0">
+                            <get-attribute comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="8" id="0"/>
+                                <int id="1" val="Reduce Health PM"/>
+                                <int id="2" val="_CurrentHealth"/>
+                            </get-attribute>
+                        </as-number>
+                        <int id="1" val="2"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="186">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="229">
+                            <group eventID="3" id="-1">
+                                <custom-632 comment="false" x="48" y="254">
+                                    <SOUND eid="965" id="0"/>
                                 </custom-632>
                             </group>
                             <get-game-val-23 comment="false" id="0" x="0" y="0"/>

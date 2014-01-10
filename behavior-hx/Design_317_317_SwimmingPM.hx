@@ -129,8 +129,8 @@ if(wrapper.enabled){
 
         if(asBoolean(actor.getActorValue("In Liquid?")))
 {
+            shoutToScene("_customEvent_" + "InWater");
             actor.setValue("Jumping PM", "_PreventJumping", true);
-            sayToScene("Sound Manager PM", "_customBlock_LoopSceneSoundForActor", [_SwimSoundName,getCurrentSceneName(),actor]);
             actor.say("Animation Manager", "_customBlock_ClearAnimCat", [_AnimationCategory]);
             if(asBoolean(actor.getActorValue("Facing Right?")))
 {
@@ -154,8 +154,8 @@ propertyChanged("_CanSwim", _CanSwim);
         else
 {
             actor.setValue("Jumping PM", "_PreventJumping", false);
-            sayToScene("Sound Manager PM", "_customBlock_StopSceneSoundForActor", [_SwimSoundName,getCurrentSceneName(),actor]);
             actor.setValue("Falling PM", "_PreventFalling", false);
+            shoutToScene("_customEvent_" + "OutOfWater");
 }
 
         /* "Check for the jump key press, but also allow a bit of leeway for smoother jumping" */
