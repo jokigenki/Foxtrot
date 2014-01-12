@@ -9,15 +9,19 @@
                             <ACTOR eid="301" id="0"/>
                             <int id="1" val="1"/>
                         </toggle-image>
-                        <set-val-393-3 comment="false" x="37" y="94">
+                        <toggle-image comment="false" x="37" y="94">
+                            <ACTOR eid="302" id="0"/>
+                            <int id="1" val="1"/>
+                        </toggle-image>
+                        <set-val-393-3 comment="false" x="37" y="121">
                             <int id="0" val="0"/>
                         </set-val-393-3>
-                        <set-val-393-2 comment="false" x="37" y="114">
+                        <set-val-393-2 comment="false" x="37" y="141">
                             <ACTOR eid="6" id="0"/>
                         </set-val-393-2>
-                        <actors-of-type3 comment="false" x="37" y="141">
+                        <actors-of-type3 comment="false" x="37" y="168">
                             <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="173">
+                                <incdec comment="false" x="48" y="200">
                                     <int id="0" val="3"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="1"/>
@@ -171,7 +175,7 @@
                         <if comment="false" x="37" y="350">
                             <group eventID="3" id="-1">
                                 <custom-632 comment="false" x="48" y="375">
-                                    <SOUND eid="964" id="0"/>
+                                    <SOUND eid="969" id="0"/>
                                 </custom-632>
                             </group>
                             <get-game-val-23 comment="false" id="0" x="0" y="0"/>
@@ -208,7 +212,7 @@
                         <if comment="false" x="37" y="557">
                             <group eventID="5" id="-1">
                                 <custom-632 comment="false" x="48" y="582">
-                                    <SOUND eid="965" id="0"/>
+                                    <SOUND eid="970" id="0"/>
                                 </custom-632>
                             </group>
                             <get-game-val-23 comment="false" id="0" x="0" y="0"/>
@@ -312,41 +316,45 @@
                     <ACTOR eid="301" id="0"/>
                     <int id="1" val="0"/>
                 </toggle-image>
-                <fadeTo comment="false" x="26" y="159">
+                <toggle-image comment="false" x="26" y="159">
+                    <ACTOR eid="302" id="0"/>
+                    <int id="1" val="0"/>
+                </toggle-image>
+                <fadeTo comment="false" x="26" y="186">
                     <ACTOR eid="301" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="0"/>
                     <int id="3" val="0"/>
                 </fadeTo>
-                <fadeInOut comment="false" x="26" y="186">
+                <fadeInOut comment="false" x="26" y="213">
                     <ACTOR eid="301" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="2"/>
                     <int id="3" val="9"/>
                 </fadeInOut>
-                <custom-713 comment="false" x="26" y="213">
+                <custom-713 comment="false" x="26" y="240">
                     <ACTOR eid="300" id="0"/>
                 </custom-713>
-                <set-attribute comment="false" x="26" y="240">
+                <set-attribute comment="false" x="26" y="267">
                     <ACTOR eid="301" id="0"/>
                     <int id="1" val="Usable Item PM"/>
                     <int id="2" val="_IsEnabled"/>
                     <true comment="false" id="3" x="0" y="0"/>
                 </set-attribute>
-                <set-attribute comment="false" x="26" y="272">
+                <set-attribute comment="false" x="26" y="299">
                     <ACTOR eid="301" id="0"/>
                     <int id="1" val="Displays Popup PM"/>
                     <int id="2" val="_IsEnabled"/>
                     <true comment="false" id="3" x="0" y="0"/>
                 </set-attribute>
-                <set-val-393-4 comment="false" x="26" y="304">
+                <set-val-393-4 comment="false" x="26" y="331">
                     <int id="0" val="0"/>
                 </set-val-393-4>
-                <periodic comment="false" x="26" y="324">
+                <periodic comment="false" x="26" y="351">
                     <group eventID="4" id="-1">
-                        <repeat comment="false" x="37" y="351">
+                        <repeat comment="false" x="37" y="378">
                             <group eventID="2" id="-1">
-                                <create-actor3 comment="false" x="48" y="376">
+                                <create-actor3 comment="false" x="48" y="403">
                                     <ACTORTYPE eid="941" id="0"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <div comment="false" id="0" x="0" y="0">
@@ -369,14 +377,14 @@
                             </group>
                             <int id="0" val="10"/>
                         </repeat>
-                        <incdec comment="false" x="37" y="443">
+                        <incdec comment="false" x="37" y="470">
                             <int id="0" val="4"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
                         </incdec>
-                        <if comment="false" x="37" y="470">
+                        <if comment="false" x="37" y="497">
                             <group eventID="4" id="-1">
-                                <cancel comment="false" x="48" y="500"/>
+                                <cancel comment="false" x="48" y="527"/>
                             </group>
                             <moreeq comment="false" id="0" x="0" y="0">
                                 <get-val-393-4 comment="false" id="0" x="0" y="0"/>
@@ -387,7 +395,7 @@
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>
-                <custom-949 comment="false" x="26" y="544">
+                <custom-949 comment="false" x="26" y="571">
                     <SOUND eid="962" id="0"/>
                     <SOUND eid="466" id="1"/>
                     <int id="2" val="3.3"/>

@@ -80,6 +80,10 @@ public var _SwipeJumpForce:Float;
 public var _PlaySound:Bool;
 
 public var _SFXNumber:Float;
+
+public var _LandingSFXName:String;
+
+public var _LandingSFXNumber:Float;
     
 
 /* Params are:__Self __Value */
@@ -284,6 +288,10 @@ nameMap.set("Play Sound?", "_PlaySound");
 _PlaySound = false;
 nameMap.set("SFX Number", "_SFXNumber");
 _SFXNumber = 1.0;
+nameMap.set("Landing SFX Name", "_LandingSFXName");
+_LandingSFXName = "";
+nameMap.set("Landing SFX Number", "_LandingSFXNumber");
+_LandingSFXNumber = 0;
 
 	}
 	
@@ -308,6 +316,11 @@ if(wrapper.enabled){
 propertyChanged("_CanJump", _CanJump);
         if(asBoolean(actor.getActorValue("On Ground?")))
 {
+            if(actor.getActorValue("Is Jumping?"))
+{
+                sayToScene("Sound Manager PM", "_customBlock_PlayRandomSoundFromSet", [_LandingSFXName,_LandingSFXNumber]);
+}
+
             actor.setActorValue("Is Jumping?", false);
             /* "Custom: Clear Current Anim Category If Same As <Animation Category>" */
             actor.say("Animation Manager", "_customBlock_ClearAnimCat", [_AnimationCategory]);

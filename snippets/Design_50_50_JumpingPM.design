@@ -48,24 +48,36 @@
                 </set-val-50-2>
                 <if comment="false" x="26" y="155">
                     <group eventID="2" id="-1">
-                        <actor-set-prop comment="false" x="37" y="193">
+                        <if comment="false" x="37" y="193">
+                            <group eventID="2" id="-1">
+                                <custom-816 comment="false" x="48" y="226">
+                                    <get-val-50-29 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-50-30 comment="false" id="1" x="0" y="0"/>
+                                </custom-816>
+                            </group>
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="Is Jumping?"/>
+                            </actor-get-prop>
+                        </if>
+                        <actor-set-prop comment="false" x="37" y="263">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="Is Jumping?"/>
                             <false comment="false" id="2" x="0" y="0"/>
                         </actor-set-prop>
-                        <comment-short comment="false" x="37" y="225">
+                        <comment-short comment="false" x="37" y="295">
                             <int id="0" val="Custom: Clear Current Anim Category If Same As &amp;lt;Animation Category&amp;gt;"/>
                         </comment-short>
-                        <custom-91 comment="false" x="37" y="245">
+                        <custom-91 comment="false" x="37" y="315">
                             <ACTOR eid="this" id="0"/>
                             <get-val-50-21 comment="false" id="1" x="0" y="0"/>
                         </custom-91>
-                        <if comment="false" x="37" y="277">
+                        <if comment="false" x="37" y="347">
                             <group eventID="-1" id="-1">
-                                <set-val-50-2 comment="false" x="48" y="302">
+                                <set-val-50-2 comment="false" x="48" y="372">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-50-2>
-                                <set-val-50-27 comment="false" x="48" y="327">
+                                <set-val-50-27 comment="false" x="48" y="397">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-50-27>
                             </group>
@@ -79,11 +91,11 @@
                         </actor-get-prop>
                     </as-boolean>
                 </if>
-                <if comment="false" x="26" y="376">
+                <if comment="false" x="26" y="446">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="401">
+                        <if comment="false" x="37" y="471">
                             <group eventID="2" id="-1">
-                                <custom-719 comment="false" x="48" y="439">
+                                <custom-719 comment="false" x="48" y="509">
                                     <ACTOR eid="this" id="0"/>
                                 </custom-719>
                             </group>
@@ -96,9 +108,9 @@
                     </group>
                     <get-val-50-23 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="490">
+                <else comment="false" x="26" y="560">
                     <group eventID="2" id="-1">
-                        <custom-719 comment="false" x="37" y="510">
+                        <custom-719 comment="false" x="37" y="580">
                             <ACTOR eid="this" id="0"/>
                         </custom-719>
                     </group>

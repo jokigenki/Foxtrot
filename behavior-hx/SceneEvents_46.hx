@@ -80,6 +80,7 @@ nameMap.set("Boss Egg", "_BossEgg");
 	{
 		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
                     getActor(301).disableActorDrawing();
+                    getActor(302).disableActorDrawing();
                     _CratesLeft = asNumber(0);
 propertyChanged("_CratesLeft", _CratesLeft);
                     _EggBall = getActor(6);
@@ -124,7 +125,7 @@ propertyChanged("_CratesLeft", _CratesLeft);
             getActor(299).setValue("Random Timed Activation PM", "_MinTime", 1);
             if(getGameAttribute("Is Music On?"))
 {
-                sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(964)]);
+                sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(969)]);
 }
 
 }
@@ -137,7 +138,7 @@ propertyChanged("_CratesLeft", _CratesLeft);
             getActor(299).setValue("Random Timed Activation PM", "_MinTime", 0.75);
             if(getGameAttribute("Is Music On?"))
 {
-                sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(965)]);
+                sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [getSound(970)]);
 }
 
 }
@@ -163,6 +164,7 @@ if(wrapper.enabled){
         getActor(302).setX((getActor(299).getX() + 18));
         getActor(302).setY((getActor(299).getY() + 9));
         getActor(301).enableActorDrawing();
+        getActor(302).enableActorDrawing();
         getActor(301).fadeTo(0 / 100, 0, Linear.easeNone);
         getActor(301).fadeTo(1, 2, Quad.easeOut);
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_LockDoorActor(getActor(300));
