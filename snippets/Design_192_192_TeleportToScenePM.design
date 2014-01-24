@@ -3,29 +3,17 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="1" id="-1">
-                        <set-game-val-20 comment="false" x="37" y="65">
-                            <get-game-val-15 comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-20>
-                    </group>
-                    <get-game-val-10 comment="false" id="0" x="0" y="0"/>
-                </if>
-                <else comment="false" x="26" y="102">
-                    <group eventID="1" id="-1">
-                        <set-game-val-20 comment="false" x="37" y="122">
-                            <get-val-192-2 comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-20>
-                    </group>
-                </else>
-                <custom-796 comment="false" x="26" y="159">
+                <set-game-val-20 comment="false" x="26" y="40">
+                    <get-val-192-2 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-20>
+                <custom-796 comment="false" x="26" y="65">
                     <SOUND eid="804" id="0"/>
                 </custom-796>
-                <scene-say comment="false" x="26" y="186">
+                <scene-say comment="false" x="26" y="92">
                     <int id="0" val="Speed Run Timer PM"/>
                     <int id="1" val="TimerReset"/>
                 </scene-say>
-                <scene-shout comment="false" x="26" y="206">
+                <scene-shout comment="false" x="26" y="112">
                     <int id="0" val="SwitchScene"/>
                 </scene-shout>
             </group>
@@ -52,5 +40,20 @@
             <int id="4" val="0.5"/>
         </scene-change-new>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="1" id="4">
+        <if comment="false" x="160" y="227">
+            <group eventID="1" id="-1">
+                <set-game-val-20 comment="false" x="171" y="252">
+                    <int id="0" val=""/>
+                </set-game-val-20>
+            </group>
+            <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+        </if>
+        <else comment="false" x="160" y="284">
+            <group eventID="1" id="-1"/>
+        </else>
+    </group>
+    <group eventID="1" id="-1">
+        <get-game-val-15 comment="false" x="434" y="227"/>
+    </group>
 </groups>
