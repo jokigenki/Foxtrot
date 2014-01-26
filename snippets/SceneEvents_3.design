@@ -84,33 +84,42 @@
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
                 <if comment="false" x="26" y="448">
-                    <group eventID="1" id="-1">
-                        <custom-325 comment="false" x="37" y="473">
-                            <int id="0" val="Factory2_11|Factory2_Boss|B|A"/>
-                        </custom-325>
-                    </group>
-                    <custom-326 comment="false" id="0" x="0" y="0">
-                        <int id="0" val="Factory_Boss_Key"/>
-                    </custom-326>
-                </if>
-                <if comment="false" x="26" y="505">
-                    <group eventID="1" id="-1">
-                        <custom-325 comment="false" x="37" y="530">
-                            <int id="0" val="_Larder|Transition To Humpty|D|A"/>
-                        </custom-325>
-                    </group>
-                    <custom-326 comment="false" id="0" x="0" y="0">
-                        <int id="0" val="LarderBossKey"/>
-                    </custom-326>
-                </if>
-                <if comment="false" x="26" y="562">
                     <group eventID="2" id="-1">
-                        <custom-325 comment="false" x="37" y="587">
+                        <print comment="false" x="37" y="473">
+                            <int id="0" val="Farm Boss Key Collected"/>
+                        </print>
+                        <custom-325 comment="false" x="37" y="493">
                             <int id="0" val="Farm1_10|Farm1_Boss|B|A"/>
                         </custom-325>
                     </group>
                     <custom-326 comment="false" id="0" x="0" y="0">
                         <int id="0" val="Farm_Boss_Key"/>
+                    </custom-326>
+                </if>
+                <if comment="false" x="26" y="525">
+                    <group eventID="1" id="-1">
+                        <print comment="false" x="37" y="550">
+                            <int id="0" val="Factory Boss Key Collected"/>
+                        </print>
+                        <custom-325 comment="false" x="37" y="570">
+                            <int id="0" val="Factory2_11|Factory2_Boss|B|A"/>
+                        </custom-325>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <int id="0" val="FactoryBossKey"/>
+                    </custom-326>
+                </if>
+                <if comment="false" x="26" y="602">
+                    <group eventID="1" id="-1">
+                        <print comment="false" x="37" y="627">
+                            <int id="0" val="Larder Boss Key Collected"/>
+                        </print>
+                        <custom-325 comment="false" x="37" y="647">
+                            <int id="0" val="_Larder|Transition To Humpty|D|A"/>
+                        </custom-325>
+                    </group>
+                    <custom-326 comment="false" id="0" x="0" y="0">
+                        <int id="0" val="LarderBossKey"/>
                     </custom-326>
                 </if>
             </group>

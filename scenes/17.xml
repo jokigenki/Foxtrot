@@ -65,8 +65,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="15" list="0" val=""/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val=""/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -97,6 +97,7 @@
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="133">
+                    <prop id="32" list="0" val="-1"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="false"/>
                     <prop id="16" list="0" val=""/>
@@ -115,7 +116,7 @@
                     <prop id="30" list="0" val="4"/>
                 </s>
                 <s enabled="true" id="192">
-                    <prop id="2" list="0" val="_Farm1_Boss|Transition To Home More|A|A"/>
+                    <prop id="2" list="0" val="_Farm1_Boss|Transition To Home All|A|A"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="132"/>
@@ -138,8 +139,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="15" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -151,10 +152,11 @@
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val=""/>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="15" list="0" val="0.5"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0.5"/>
                 </s>
                 <s enabled="true" id="133">
+                    <prop id="32" list="0" val=""/>
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="false"/>
@@ -340,6 +342,11 @@
         </actor>
         <actor a="0.0" aid="14" c="true" group="3" id="205" name="Egg Push 14" sx="1.0" sy="1.0" x="294" y="33" z="1">
             <snippets>
+                <s enabled="true" id="440">
+                    <prop id="1" list="1" val=""/>
+                    <prop id="2" list="0" val="0.0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
                 <s enabled="true" id="64">
                     <prop id="1" list="0" val="EggCollected"/>
                     <prop id="2" list="0" val="Egg1_Boss"/>

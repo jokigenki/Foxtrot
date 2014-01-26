@@ -42,7 +42,7 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_50 extends SceneScript
+class SceneEvents_6 extends SceneScript
 {          	
 	
  
@@ -54,10 +54,11 @@ class SceneEvents_50 extends SceneScript
 	
 	override public function init()
 	{
-		            setGameAttribute("Last Destination", "_Home|_Home|A|A");
-        runLater(1000 * 8, function(timeTask:TimedTask):Void {
-                    shoutToScene("_customEvent_" + "SwitchScene");
-}, null);
+		            if(!(cast((scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ItemHasBeenCollected("Egg1_Boss")), Bool)))
+{
+            recycleActor(getActor(11));
+}
+
 
 	}	      	
 	

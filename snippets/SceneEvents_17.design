@@ -134,6 +134,17 @@
                     <SOUND eid="466" id="1"/>
                     <int id="2" val="3.3"/>
                 </custom-949>
+                <if comment="false" x="26" y="808">
+                    <group eventID="4" id="-1">
+                        <set-attribute comment="false" x="37" y="833">
+                            <ACTOR eid="18" id="0"/>
+                            <int id="1" val="Teleport To Scene PM"/>
+                            <int id="2" val="_DestinationSceneName"/>
+                            <int id="3" val="Farm1_Boss|Transition To Home All|A|A"/>
+                        </set-attribute>
+                    </group>
+                    <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="RoosterKilled"/>
         </event-custom>
@@ -208,23 +219,12 @@
                         <if comment="false" x="37" y="94">
                             <group eventID="4" id="-1">
                                 <set-attribute comment="false" x="48" y="119">
-                                    <ACTOR eid="18" id="0"/>
-                                    <int id="1" val="Teleport To Scene PM"/>
-                                    <int id="2" val="_DestinationSceneName"/>
-                                    <int id="3" val="Farm1_Boss|Transition To Home All|A|A"/>
-                                </set-attribute>
-                            </group>
-                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
-                        </if>
-                        <if comment="false" x="37" y="158">
-                            <group eventID="4" id="-1">
-                                <set-attribute comment="false" x="48" y="183">
                                     <ACTOR eid="14" id="0"/>
                                     <int id="1" val="Inventory Collectable PM"/>
                                     <int id="2" val="_CollectableId"/>
                                     <int id="3" val="Egg1_Speed"/>
                                 </set-attribute>
-                                <setanim comment="false" x="48" y="210">
+                                <setanim comment="false" x="48" y="146">
                                     <ACTOR eid="14" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="Egg1_Speed"/>

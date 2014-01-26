@@ -84,9 +84,14 @@
     <group eventID="3" id="0">
         <event-custom comment="false" x="15" y="11">
             <group eventID="3" id="-1">
-                <custom-632 comment="false" x="26" y="36">
-                    <SOUND eid="961" id="0"/>
-                </custom-632>
+                <if comment="false" x="26" y="36">
+                    <group eventID="3" id="-1">
+                        <custom-632 comment="false" x="37" y="61">
+                            <SOUND eid="961" id="0"/>
+                        </custom-632>
+                    </group>
+                    <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="InWater"/>
         </event-custom>
@@ -95,9 +100,14 @@
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <custom-632 comment="false" x="26" y="40">
-                    <SOUND eid="756" id="0"/>
-                </custom-632>
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <custom-632 comment="false" x="37" y="65">
+                            <SOUND eid="756" id="0"/>
+                        </custom-632>
+                    </group>
+                    <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="OutOfWater"/>
         </event-custom>

@@ -60,7 +60,128 @@
                 <set-val-386-9 comment="false" x="26" y="40">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-386-9>
-                <set-val-386-13 comment="false" x="26" y="65">
+                <if comment="false" x="26" y="65">
+                    <group eventID="2" id="-1">
+                        <custom-973 comment="false" x="37" y="100">
+                            <get-val-386-7 comment="false" id="0" x="0" y="0"/>
+                        </custom-973>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <str-empty comment="false" id="0" x="0" y="0">
+                            <get-val-386-7 comment="false" id="0" x="0" y="0"/>
+                        </str-empty>
+                    </not>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="3">
+        <set-val-386-13 comment="false" x="54" y="270">
+            <times comment="false" id="0" x="0" y="0">
+                <get-val-386-6 comment="false" id="0" x="0" y="0"/>
+                <str-length comment="false" id="1" x="0" y="0">
+                    <get-val-386-7 comment="false" id="0" x="0" y="0"/>
+                </str-length>
+            </times>
+        </set-val-386-13>
+        <periodic comment="false" x="54" y="305">
+            <group eventID="2" id="-1">
+                <if comment="false" x="65" y="337">
+                    <group eventID="2" id="-1">
+                        <cancel comment="false" x="76" y="362"/>
+                    </group>
+                    <get-val-386-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="65" y="394">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="76" y="414">
+                            <group eventID="2" id="-1">
+                                <custom-856 comment="false" x="87" y="449">
+                                    <int id="0" val="Typewriter SFX"/>
+                                    <scenename comment="false" id="1" x="0" y="0"/>
+                                </custom-856>
+                                <cancel comment="false" x="87" y="474"/>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-386-8 comment="false" id="0" x="0" y="0"/>
+                                <str-length comment="false" id="1" x="0" y="0">
+                                    <get-val-386-7 comment="false" id="0" x="0" y="0"/>
+                                </str-length>
+                            </moreeq>
+                        </if>
+                        <else comment="false" x="76" y="506">
+                            <group eventID="2" id="-1">
+                                <set-val-386-5 comment="false" x="87" y="526">
+                                    <str-substring comment="false" id="0" x="0" y="0">
+                                        <get-val-386-7 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="0"/>
+                                        <plus comment="false" id="2" x="0" y="0">
+                                            <get-val-386-8 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="1"/>
+                                        </plus>
+                                    </str-substring>
+                                </set-val-386-5>
+                                <set-val-386-9 comment="false" x="87" y="561">
+                                    <str-split comment="false" id="0" x="0" y="0">
+                                        <get-val-386-5 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="|"/>
+                                    </str-split>
+                                </set-val-386-9>
+                                <if comment="false" x="87" y="591">
+                                    <group eventID="2" id="-1">
+                                        <if comment="false" x="98" y="631">
+                                            <group eventID="2" id="-1">
+                                                <custom-796 comment="false" x="109" y="661">
+                                                    <SOUND eid="var" id="0" vid="12"/>
+                                                </custom-796>
+                                            </group>
+                                            <less comment="false" id="0" x="0" y="0">
+                                                <random comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="0.5"/>
+                                            </less>
+                                        </if>
+                                        <else comment="false" x="98" y="700">
+                                            <group eventID="2" id="-1">
+                                                <custom-796 comment="false" x="109" y="720">
+                                                    <SOUND eid="var" id="0" vid="14"/>
+                                                </custom-796>
+                                            </group>
+                                        </else>
+                                    </group>
+                                    <noteq comment="false" id="0" x="0" y="0">
+                                        <str-substring comment="false" id="0" x="0" y="0">
+                                            <get-val-386-7 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-386-8 comment="false" id="1" x="0" y="0"/>
+                                            <plus comment="false" id="2" x="0" y="0">
+                                                <get-val-386-8 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="1"/>
+                                            </plus>
+                                        </str-substring>
+                                        <int id="1" val=" "/>
+                                    </noteq>
+                                </if>
+                            </group>
+                        </else>
+                        <incdec comment="false" x="76" y="783">
+                            <int id="0" val="8"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                    </group>
+                </else>
+            </group>
+            <get-val-386-6 comment="false" id="0" x="0" y="0"/>
+            <ACTOR eid="lastcreated" id="2"/>
+        </periodic>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receiver-1-973 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-386-7 comment="false" x="26" y="45">
+                    <get-byobval-386-973-0 comment="false" id="0" x="0" y="0"/>
+                </set-val-386-7>
+                <set-val-386-13 comment="false" x="26" y="70">
                     <times comment="false" id="0" x="0" y="0">
                         <get-val-386-6 comment="false" id="0" x="0" y="0"/>
                         <str-length comment="false" id="1" x="0" y="0">
@@ -68,23 +189,23 @@
                         </str-length>
                     </times>
                 </set-val-386-13>
-                <periodic comment="false" x="26" y="100">
+                <periodic comment="false" x="26" y="105">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="132">
+                        <if comment="false" x="37" y="137">
                             <group eventID="2" id="-1">
-                                <cancel comment="false" x="48" y="157"/>
+                                <cancel comment="false" x="48" y="162"/>
                             </group>
                             <get-val-386-1 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="189">
+                        <else comment="false" x="37" y="194">
                             <group eventID="2" id="-1">
-                                <if comment="false" x="48" y="209">
+                                <if comment="false" x="48" y="214">
                                     <group eventID="2" id="-1">
-                                        <custom-856 comment="false" x="59" y="244">
+                                        <custom-856 comment="false" x="59" y="249">
                                             <int id="0" val="Typewriter SFX"/>
                                             <scenename comment="false" id="1" x="0" y="0"/>
                                         </custom-856>
-                                        <cancel comment="false" x="59" y="269"/>
+                                        <cancel comment="false" x="59" y="274"/>
                                     </group>
                                     <moreeq comment="false" id="0" x="0" y="0">
                                         <get-val-386-8 comment="false" id="0" x="0" y="0"/>
@@ -93,9 +214,9 @@
                                         </str-length>
                                     </moreeq>
                                 </if>
-                                <else comment="false" x="48" y="301">
+                                <else comment="false" x="48" y="306">
                                     <group eventID="2" id="-1">
-                                        <set-val-386-5 comment="false" x="59" y="321">
+                                        <set-val-386-5 comment="false" x="59" y="326">
                                             <str-substring comment="false" id="0" x="0" y="0">
                                                 <get-val-386-7 comment="false" id="0" x="0" y="0"/>
                                                 <int id="1" val="0"/>
@@ -105,17 +226,17 @@
                                                 </plus>
                                             </str-substring>
                                         </set-val-386-5>
-                                        <set-val-386-9 comment="false" x="59" y="356">
+                                        <set-val-386-9 comment="false" x="59" y="361">
                                             <str-split comment="false" id="0" x="0" y="0">
                                                 <get-val-386-5 comment="false" id="0" x="0" y="0"/>
                                                 <int id="1" val="|"/>
                                             </str-split>
                                         </set-val-386-9>
-                                        <if comment="false" x="59" y="386">
+                                        <if comment="false" x="59" y="391">
                                             <group eventID="2" id="-1">
-                                                <if comment="false" x="70" y="426">
+                                                <if comment="false" x="70" y="431">
                                                     <group eventID="2" id="-1">
-                                                        <custom-796 comment="false" x="81" y="456">
+                                                        <custom-796 comment="false" x="81" y="461">
                                                             <SOUND eid="var" id="0" vid="12"/>
                                                         </custom-796>
                                                     </group>
@@ -124,9 +245,9 @@
                                                         <int id="1" val="0.5"/>
                                                     </less>
                                                 </if>
-                                                <else comment="false" x="70" y="495">
+                                                <else comment="false" x="70" y="500">
                                                     <group eventID="2" id="-1">
-                                                        <custom-796 comment="false" x="81" y="515">
+                                                        <custom-796 comment="false" x="81" y="520">
                                                             <SOUND eid="var" id="0" vid="14"/>
                                                         </custom-796>
                                                     </group>
@@ -146,7 +267,7 @@
                                         </if>
                                     </group>
                                 </else>
-                                <incdec comment="false" x="48" y="578">
+                                <incdec comment="false" x="48" y="583">
                                     <int id="0" val="8"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="1"/>
@@ -158,31 +279,10 @@
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>
             </group>
-        </init>
+            <get-byobval-386-973-0 comment="false" id="0" x="0" y="0"/>
+        </receiver-1-973>
     </group>
-    <group eventID="2" id="1">
-        <dolater comment="false" x="572" y="202">
-            <group eventID="2" id="-1">
-                <custom-857 comment="false" x="583" y="229">
-                    <int id="0" val="Typewriter SFX"/>
-                    <scenename comment="false" id="1" x="0" y="0"/>
-                </custom-857>
-            </group>
-            <int id="0" val="0.1"/>
-            <ACTOR eid="lastcreated" id="2"/>
-        </dolater>
+    <group eventID="3" id="-1">
+        <get-byobval-386-973-0 comment="false" x="0" y="0"/>
     </group>
-    <group eventID="2" id="2">
-        <custom-911 comment="false" x="473" y="126">
-            <str-substring comment="false" id="0" x="0" y="0">
-                <get-val-386-7 comment="false" id="0" x="0" y="0"/>
-                <get-val-386-8 comment="false" id="1" x="0" y="0"/>
-                <plus comment="false" id="2" x="0" y="0">
-                    <get-val-386-8 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="1"/>
-                </plus>
-            </str-substring>
-        </custom-911>
-    </group>
-    <group eventID="2" id="-1"/>
 </groups>

@@ -15,8 +15,8 @@
     <foregrounds/>
     <joints/>
     <regions>
-        <region b="64" g="64" h="16" id="0" name="Region 0" pts="4,-41.0,-8.0,41.0,-8.0,41.0,8.0,-41.0,8.0" r="64" type="box" w="82" x="399" y="288"/>
-        <region b="64" g="64" h="16" id="1" name="Region 1" pts="4,-17.0,-8.0,17.0,-8.0,17.0,8.0,-17.0,8.0" r="64" type="box" w="34" x="304" y="272"/>
+        <region b="64" g="64" h="16" id="0" name="Region 0" pts="4,-41.0,8.0,41.0,8.0,41.0,-8.0,-41.0,-8.0" r="64" type="box" w="82" x="399" y="288"/>
+        <region b="64" g="64" h="16" id="1" name="Region 1" pts="4,-17.0,8.0,17.0,8.0,17.0,-8.0,-17.0,-8.0" r="64" type="box" w="34" x="304" y="272"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -37,8 +37,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -51,8 +51,8 @@
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0.5"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="133">
                     <prop id="32" list="0" val=""/>
@@ -91,8 +91,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -105,8 +105,8 @@
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0.5"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="133">
                     <prop id="32" list="0" val=""/>
@@ -146,8 +146,8 @@
                     <prop id="12" list="0" val="0.2"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="null"/>
@@ -160,8 +160,8 @@
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="14" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0.5"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="133">
                     <prop id="32" list="0" val=""/>
@@ -200,8 +200,8 @@
                     <prop id="12" list="0" val="0.2"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="null"/>
@@ -214,8 +214,8 @@
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="14" list="0" val="true"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0.5"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="133">
                     <prop id="32" list="0" val=""/>
@@ -513,15 +513,6 @@
         <actor a="0.0" aid="70" c="true" group="10" id="586" name="Moving Spikes 70" sx="1.0" sy="1.0" x="608" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -533,6 +524,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -550,8 +550,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -568,15 +568,6 @@
         <actor a="0.0" aid="71" c="true" group="10" id="586" name="Moving Spikes 71" sx="1.0" sy="1.0" x="624" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.9"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -588,6 +579,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.9"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -605,8 +605,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -623,15 +623,6 @@
         <actor a="0.0" aid="76" c="true" group="10" id="586" name="Moving Spikes 76" sx="1.0" sy="1.0" x="704" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.4"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -643,6 +634,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.4"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -660,8 +660,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -678,15 +678,6 @@
         <actor a="0.0" aid="77" c="true" group="10" id="586" name="Moving Spikes 77" sx="1.0" sy="1.0" x="720" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.3"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -698,6 +689,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.3"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -715,8 +715,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -733,15 +733,6 @@
         <actor a="0.0" aid="78" c="true" group="10" id="586" name="Moving Spikes 78" sx="1.0" sy="1.0" x="736" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.2"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -753,6 +744,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.2"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -770,8 +770,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -788,15 +788,6 @@
         <actor a="0.0" aid="79" c="true" group="10" id="586" name="Moving Spikes 79" sx="1.0" sy="1.0" x="752" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.1"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -808,6 +799,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.1"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -825,8 +825,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -843,15 +843,6 @@
         <actor a="0.0" aid="72" c="true" group="10" id="586" name="Moving Spikes 72" sx="1.0" sy="1.0" x="640" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.8"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -863,6 +854,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.8"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -880,8 +880,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -898,15 +898,6 @@
         <actor a="0.0" aid="73" c="true" group="10" id="586" name="Moving Spikes 73" sx="1.0" sy="1.0" x="656" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.7"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -918,6 +909,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.7"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -935,8 +935,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -953,15 +953,6 @@
         <actor a="0.0" aid="74" c="true" group="10" id="586" name="Moving Spikes 74" sx="1.0" sy="1.0" x="672" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.6"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -973,6 +964,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.6"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -990,8 +990,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1008,15 +1008,6 @@
         <actor a="0.0" aid="75" c="true" group="10" id="586" name="Moving Spikes 75" sx="1.0" sy="1.0" x="688" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.5"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1028,6 +1019,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.5"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1045,8 +1045,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1063,15 +1063,6 @@
         <actor a="0.0" aid="85" c="true" group="10" id="586" name="Moving Spikes 85" sx="1.0" sy="1.0" x="848" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.5"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1083,6 +1074,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.5"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1100,8 +1100,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1118,15 +1118,6 @@
         <actor a="0.0" aid="84" c="true" group="10" id="586" name="Moving Spikes 84" sx="1.0" sy="1.0" x="832" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.4"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1138,6 +1129,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.4"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1155,8 +1155,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1173,15 +1173,6 @@
         <actor a="0.0" aid="87" c="true" group="10" id="586" name="Moving Spikes 87" sx="1.0" sy="1.0" x="880" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.7"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1193,6 +1184,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.7"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1210,8 +1210,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1228,15 +1228,6 @@
         <actor a="0.0" aid="86" c="true" group="10" id="586" name="Moving Spikes 86" sx="1.0" sy="1.0" x="864" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.6"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1248,6 +1239,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.6"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1265,8 +1265,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1283,15 +1283,6 @@
         <actor a="0.0" aid="81" c="true" group="10" id="586" name="Moving Spikes 81" sx="1.0" sy="1.0" x="768" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1303,6 +1294,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1320,8 +1320,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1338,15 +1338,6 @@
         <actor a="0.0" aid="80" c="true" group="10" id="586" name="Moving Spikes 80" sx="1.0" sy="1.0" x="784" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.1"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1358,6 +1349,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.1"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1375,8 +1375,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1393,15 +1393,6 @@
         <actor a="0.0" aid="83" c="true" group="10" id="586" name="Moving Spikes 83" sx="1.0" sy="1.0" x="816" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.3"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1413,6 +1404,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.3"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1430,8 +1430,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1448,15 +1448,6 @@
         <actor a="0.0" aid="82" c="true" group="10" id="586" name="Moving Spikes 82" sx="1.0" sy="1.0" x="800" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.2"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1468,6 +1459,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.2"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1485,8 +1485,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1503,15 +1503,6 @@
         <actor a="0.0" aid="89" c="true" group="10" id="586" name="Moving Spikes 89" sx="1.0" sy="1.0" x="912" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.9"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1523,6 +1514,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.9"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1540,8 +1540,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1558,15 +1558,6 @@
         <actor a="0.0" aid="88" c="true" group="10" id="586" name="Moving Spikes 88" sx="1.0" sy="1.0" x="896" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="0.8"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1578,6 +1569,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="0.8"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1595,8 +1595,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1613,15 +1613,6 @@
         <actor a="0.0" aid="90" c="true" group="10" id="586" name="Moving Spikes 90" sx="1.0" sy="1.0" x="928" y="336" z="6">
             <snippets>
                 <s enabled="true" id="309"/>
-                <s enabled="true" id="242">
-                    <prop id="1" list="0" val="1"/>
-                    <prop id="3" list="0" val="true"/>
-                    <prop id="5" list="0" val="0.5"/>
-                    <prop id="6" list="0" val="1.5"/>
-                    <prop id="7" list="0" val="false"/>
-                    <prop id="8" list="0" val="false"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
-                </s>
                 <s enabled="true" id="148">
                     <prop id="1" list="0" val="false"/>
                     <prop id="2" list="0" val="false"/>
@@ -1633,6 +1624,15 @@
                     </prop>
                     <prop id="6" list="0" val="Burn Out PM"/>
                     <prop id="7" list="0" val="false"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                </s>
+                <s enabled="true" id="242">
+                    <prop id="1" list="0" val="1"/>
+                    <prop id="3" list="0" val="true"/>
+                    <prop id="5" list="0" val="0.5"/>
+                    <prop id="6" list="0" val="1.5"/>
+                    <prop id="7" list="0" val="false"/>
+                    <prop id="8" list="0" val="false"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                 </s>
                 <s enabled="true" id="166">
@@ -1650,8 +1650,8 @@
                     <prop id="12" list="0" val="0"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val=""/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val=""/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="1"/>
                     <prop id="16" list="0" val="1"/>
                     <prop id="19" list="0" val="false"/>
@@ -1692,13 +1692,13 @@
             <prop id="23" list="0" val="0"/>
             <prop id="22" list="0" val="0"/>
         </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
+        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
-        </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -1744,6 +1744,11 @@
             <prop id="27" list="0" val="0"/>
             <prop id="26" list="0" val="0"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="27"/>
+            <prop id="3" list="0" val="55"/>
+        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="756"/>
             <prop id="2" list="0" val="-1"/>
@@ -1751,18 +1756,13 @@
             <prop id="4" list="1" val=""/>
             <prop id="5" list="0" val="-1"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="27"/>
-            <prop id="3" list="0" val="55"/>
-        </s>
     </snippets>
     <terrain>
-        <p pts="38,912.0,32.0,912.0,320.0,832.0,320.0,832.0,352.0,464.0,352.0,464.0,320.0,448.0,320.0,448.0,352.0,96.0,352.0,96.0,304.0,112.0,304.0,112.0,288.0,128.0,288.0,128.0,336.0,432.0,336.0,432.0,304.0,480.0,304.0,480.0,336.0,816.0,336.0,816.0,304.0,896.0,304.0,896.0,224.0,800.0,224.0,800.0,240.0,784.0,240.0,784.0,256.0,496.0,256.0,496.0,240.0,480.0,240.0,480.0,224.0,80.0,224.0,80.0,208.0,896.0,208.0,896.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0" x="128.0" y="0.0"/>
         <p pts="14,64.0,192.0,64.0,208.0,16.0,208.0,16.0,256.0,48.0,256.0,48.0,272.0,16.0,272.0,16.0,384.0,0.0,384.0,0.0,0.0,16.0,0.0,16.0,64.0,880.0,64.0,880.0,192.0" x="80.0" y="0.0"/>
+        <p pts="38,912.0,32.0,912.0,320.0,832.0,320.0,832.0,352.0,464.0,352.0,464.0,320.0,448.0,320.0,448.0,352.0,96.0,352.0,96.0,304.0,112.0,304.0,112.0,288.0,128.0,288.0,128.0,336.0,432.0,336.0,432.0,304.0,480.0,304.0,480.0,336.0,816.0,336.0,816.0,304.0,896.0,304.0,896.0,224.0,800.0,224.0,800.0,240.0,784.0,240.0,784.0,256.0,496.0,256.0,496.0,240.0,480.0,240.0,480.0,224.0,80.0,224.0,80.0,208.0,896.0,208.0,896.0,48.0,0.0,48.0,0.0,0.0,16.0,0.0,16.0,32.0" x="128.0" y="0.0"/>
         <p pts="4,16.0,128.0,0.0,128.0,0.0,0.0,16.0,0.0" x="976.0" y="64.0"/>
-        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="176.0" y="208.0"/>
         <p pts="4,16.0,0.0,16.0,80.0,0.0,80.0,0.0,0.0" x="112.0" y="304.0"/>
         <p pts="16,848.0,80.0,848.0,0.0,0.0,0.0,0.0,80.0,496.0,80.0,496.0,96.0,560.0,96.0,560.0,80.0,608.0,80.0,608.0,96.0,672.0,96.0,672.0,64.0,720.0,64.0,720.0,96.0,784.0,96.0,784.0,80.0" x="96.0" y="80.0"/>
+        <p pts="4,16.0,0.0,16.0,16.0,0.0,16.0,0.0,0.0" x="176.0" y="208.0"/>
     </terrain>
 </scene>

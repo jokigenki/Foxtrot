@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="1" desc="" eventsnippetid="439" extheight="448" extwidth="704" extx="-32" exty="-32" format="2.1" gravx="-0.0" gravy="0.0" height="384" id="50" name="Transition To Home All" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
+<scene depth="2" desc="" eventsnippetid="439" extheight="448" extwidth="704" extx="-32" exty="-32" format="2.1" gravx="-0.0" gravy="0.0" height="384" id="50" name="Transition To Home All" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
     <layers>
-        <layer color="100,168,234" id="0" name="Layer 0" order="0"/>
+        <layer color="0,0,255" id="1" name="Layer 1" order="0"/>
+        <layer color="100,168,234" id="0" name="Layer 0" order="1"/>
     </layers>
     <color-bg blue="0" green="0" red="0"/>
     <backgrounds/>
@@ -12,6 +13,7 @@
     <actors>
         <actor a="0.0" aid="1" c="false" group="2" id="952" name="Vignette All Eggs 1" sx="1.0" sy="1.0" x="118" y="160" z="0"/>
         <actor a="0.0" aid="2" c="false" group="2" id="39" name="Camera Gizmo 2" sx="1.0" sy="1.0" x="312" y="184" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="2" id="954" name="Vignette Get Eggs 3" sx="1.0" sy="1.0" x="118" y="160" z="1"/>
     </actors>
     <snippets>
         <s enabled="true" id="21">
@@ -26,7 +28,7 @@
             <prop id="4" list="0" val="155"/>
             <prop id="5" list="0" val=""/>
             <prop id="6" list="0" val="0.08"/>
-            <prop id="7" list="0" val="You've got ALL THE EGGS!?!|You're AMAZING!|Well done you."/>
+            <prop id="7" list="0" val=""/>
             <prop id="8" list="0" val="0"/>
             <prop id="9" list="1" val=""/>
             <prop id="10" list="0" val="0"/>

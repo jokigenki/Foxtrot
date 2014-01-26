@@ -3,15 +3,18 @@
     <group eventID="1" id="0">
         <event-actor-create-kill comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-val-440-1 comment="false" x="26" y="42">
+                <set-val-440-2 comment="false" x="26" y="42">
+                    <int id="0" val="0"/>
+                </set-val-440-2>
+                <set-val-440-1 comment="false" x="26" y="62">
                     <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                 </set-val-440-1>
-                <for-each comment="false" x="26" y="67">
+                <for-each comment="false" x="26" y="87">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="92">
+                        <if comment="false" x="37" y="112">
                             <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="127">
-                                    <int id="0" val="0"/>
+                                <incdec comment="false" x="48" y="147">
+                                    <int id="0" val="2"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="1"/>
                                 </incdec>
@@ -27,11 +30,17 @@
                     </group>
                     <get-val-440-1 comment="false" id="0" x="0" y="0"/>
                 </for-each>
-                <set-game-val-28 comment="false" x="26" y="178">
-                    <eq comment="false" id="0" x="0" y="0">
+                <print comment="false" x="26" y="198">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Total Eggs: "/>
+                        <get-val-440-2 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </print>
+                <set-game-val-28 comment="false" x="26" y="228">
+                    <moreeq comment="false" id="0" x="0" y="0">
                         <get-val-440-2 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="25"/>
-                    </eq>
+                    </moreeq>
                 </set-game-val-28>
             </group>
             <int id="0" val="1"/>

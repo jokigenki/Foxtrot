@@ -18,7 +18,37 @@
                 </if>
                 <if comment="false" x="26" y="129">
                     <group eventID="1" id="-1">
-                        <set-val-61-5 comment="false" x="37" y="167">
+                        <set-val-61-2 comment="false" x="37" y="172">
+                            <neg comment="false" id="0" x="0" y="0">
+                                <get-val-61-2 comment="false" id="0" x="0" y="0"/>
+                            </neg>
+                        </set-val-61-2>
+                        <set-val-61-5 comment="false" x="37" y="202">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-61-5>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <int id="1" val=" 0"/>
+                        </less>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <scene-wh comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </scene-wh>
+                        </more>
+                    </or>
+                </if>
+                <else-if comment="false" x="26" y="239">
+                    <group eventID="1" id="-1">
+                        <set-val-61-5 comment="false" x="37" y="277">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-61-5>
                     </group>
@@ -26,15 +56,15 @@
                         <ACTOR eid="this" id="0"/>
                         <get-val-61-1 comment="false" id="1" x="0" y="0"/>
                     </is-in-region>
-                </if>
-                <else-if comment="false" x="26" y="204">
+                </else-if>
+                <else-if comment="false" x="26" y="314">
                     <group eventID="1" id="-1">
-                        <set-val-61-2 comment="false" x="37" y="234">
+                        <set-val-61-2 comment="false" x="37" y="344">
                             <neg comment="false" id="0" x="0" y="0">
                                 <get-val-61-2 comment="false" id="0" x="0" y="0"/>
                             </neg>
                         </set-val-61-2>
-                        <set-val-61-5 comment="false" x="37" y="264">
+                        <set-val-61-5 comment="false" x="37" y="374">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-61-5>
                     </group>
@@ -42,7 +72,7 @@
                         <get-val-61-5 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </else-if>
-                <set-dxy comment="false" x="26" y="301">
+                <set-dxy comment="false" x="26" y="411">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="0"/>
                     <get-val-61-2 comment="false" id="2" x="0" y="0"/>

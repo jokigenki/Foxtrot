@@ -395,11 +395,24 @@
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>
-                <custom-949 comment="false" x="26" y="571">
-                    <SOUND eid="962" id="0"/>
-                    <SOUND eid="466" id="1"/>
-                    <int id="2" val="3.3"/>
-                </custom-949>
+                <if comment="false" x="26" y="571">
+                    <group eventID="6" id="-1">
+                        <custom-949 comment="false" x="37" y="596">
+                            <SOUND eid="962" id="0"/>
+                            <SOUND eid="466" id="1"/>
+                            <int id="2" val="3.3"/>
+                        </custom-949>
+                    </group>
+                    <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <actors-of-type3 comment="false" x="26" y="635">
+                    <group eventID="6" id="-1">
+                        <die comment="false" x="37" y="667">
+                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                        </die>
+                    </group>
+                    <ACTORTYPE eid="354" id="0"/>
+                </actors-of-type3>
             </group>
             <int id="0" val="1"/>
             <ACTOR eid="299" id="1"/>
@@ -411,9 +424,17 @@
             <group eventID="7" id="-1">
                 <dolater comment="false" x="26" y="42">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="69">
+                        <print comment="false" x="37" y="69">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Is Game Complete? "/>
+                                <tostring comment="false" id="1" x="0" y="0">
+                                    <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                                </tostring>
+                            </str-combine>
+                        </print>
+                        <if comment="false" x="37" y="104">
                             <group eventID="4" id="-1">
-                                <set-attribute comment="false" x="48" y="94">
+                                <set-attribute comment="false" x="48" y="129">
                                     <ACTOR eid="301" id="0"/>
                                     <int id="1" val="Teleport To Scene PM"/>
                                     <int id="2" val="_DestinationSceneName"/>

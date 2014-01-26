@@ -123,7 +123,15 @@ if(wrapper.enabled){
             return;
 }
 
-        if(isInRegion(actor, _MotionRegion))
+        if(((actor.getX() < 0) || (actor.getX() > getSceneWidth())))
+{
+            _CurrentVelocity = asNumber(-(_CurrentVelocity));
+propertyChanged("_CurrentVelocity", _CurrentVelocity);
+            _HasSwitchedDirection = true;
+propertyChanged("_HasSwitchedDirection", _HasSwitchedDirection);
+}
+
+        else if(isInRegion(actor, _MotionRegion))
 {
             _HasSwitchedDirection = false;
 propertyChanged("_HasSwitchedDirection", _HasSwitchedDirection);

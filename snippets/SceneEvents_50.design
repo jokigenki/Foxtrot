@@ -3,20 +3,98 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-game-val-20 comment="false" x="26" y="40">
+                <set-val-439-1 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-439-1>
+                <set-val-439-2 comment="false" x="26" y="60">
+                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                </set-val-439-2>
+                <for-each comment="false" x="26" y="85">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="110">
+                            <group eventID="1" id="-1">
+                                <incdec comment="false" x="48" y="145">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </incdec>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <str-indexof comment="false" id="0" x="0" y="0">
+                                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="Egg"/>
+                                </str-indexof>
+                                <int id="1" val="-1"/>
+                            </more>
+                        </if>
+                    </group>
+                    <get-val-439-2 comment="false" id="0" x="0" y="0"/>
+                </for-each>
+                <print comment="false" x="26" y="196">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Total Eggs: "/>
+                        <get-val-439-1 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </print>
+                <set-game-val-28 comment="false" x="26" y="226">
+                    <moreeq comment="false" id="0" x="0" y="0">
+                        <get-val-439-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="25"/>
+                    </moreeq>
+                </set-game-val-28>
+                <if comment="false" x="26" y="256">
+                    <group eventID="1" id="-1">
+                        <toggle-image comment="false" x="37" y="281">
+                            <ACTOR eid="3" id="0"/>
+                            <int id="1" val="1"/>
+                        </toggle-image>
+                        <set-game-val-29 comment="false" x="37" y="308">
+                            <int id="0" val="You&amp;#039;ve got ALL THE EGGS!?!|You&amp;#039;re AMAZING!|Well done you."/>
+                        </set-game-val-29>
+                    </group>
+                    <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="340">
+                    <group eventID="1" id="-1">
+                        <toggle-image comment="false" x="37" y="360">
+                            <ACTOR eid="3" id="0"/>
+                            <int id="1" val="0"/>
+                        </toggle-image>
+                        <set-game-val-29 comment="false" x="37" y="387">
+                            <int id="0" val="You&amp;#039;ve beat the boss!|But there are more|eggs to collect..."/>
+                        </set-game-val-29>
+                    </group>
+                </else>
+                <set-game-val-20 comment="false" x="26" y="419">
                     <int id="0" val="_Home|_Home|A|A"/>
                 </set-game-val-20>
-                <dolater comment="false" x="26" y="60">
+                <dolater comment="false" x="26" y="439">
                     <group eventID="1" id="-1">
-                        <scene-shout comment="false" x="37" y="87">
+                        <scene-shout comment="false" x="37" y="466">
                             <int id="0" val="SwitchScene"/>
                         </scene-shout>
                     </group>
                     <int id="0" val="8"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
+                <dolater comment="false" x="26" y="498">
+                    <group eventID="1" id="-1">
+                        <custom-973 comment="false" x="37" y="525">
+                            <get-game-val-29 comment="false" id="0" x="0" y="0"/>
+                        </custom-973>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
             </group>
         </init>
+    </group>
+    <group eventID="1" id="1">
+        <scene-set-attribute comment="false" x="373" y="213">
+            <int id="0" val="Typewriter Text PM"/>
+            <int id="1" val="_TextToDraw"/>
+            <int id="2" val=""/>
+        </scene-set-attribute>
     </group>
     <group eventID="1" id="-1"/>
 </groups>
