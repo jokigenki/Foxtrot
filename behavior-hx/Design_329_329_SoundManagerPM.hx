@@ -591,6 +591,13 @@ return;
 }
 
 }, null);
+    addKeyStateListener("Esc", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void {
+if(wrapper.enabled && pressed){
+        saveGame("mySave", function(success:Bool):Void {
+            switchScene(52, createFadeOut((0.5)),createFadeIn((0.5)));
+});
+}
+});
 
 	}	      	
 	

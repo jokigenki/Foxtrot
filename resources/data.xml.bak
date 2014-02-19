@@ -910,6 +910,23 @@
     <music atlasID="0" desc="" id="964" loop="true" name="Boss x2 Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="965" loop="true" name="Boss x3 Theme" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="847" loop="true" name="Break Crate SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <sprite atlasID="6" default="0" defaultAnimation="0" desc="" height="40" id="985" name="Buttons" shared="false" width="100">
+        <anim across="1" down="1" durations="100" height="40" id="0" loop="true" name="Animation 0" numframes="1" originx="50" originy="20" sync="false" width="100">
+            <poly data="4,0,0,100,0,100,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <sprite atlasID="6" default="0" defaultAnimation="0" desc="" height="40" id="989" name="ButtonsButton" shared="false" width="100">
+        <anim across="1" down="1" durations="100" height="40" id="0" loop="true" name="button" numframes="1" originx="50" originy="20" sync="false" width="100">
+            <poly data="4,0,0,100,0,100,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="40" id="1" loop="true" name="split" numframes="1" originx="50" originy="20" sync="false" width="100">
+            <poly data="4,0,0,100,0,100,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="6" bodytype="0" continuous="true" desc="" eventsnippetid="450" fixedrot="false" fric="0.2" gid="3" id="988" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="ButtonsButton" oid="-1" pausable="true" rest="0.0" shared="false" sprite="989" static="true">
+        <snippets/>
+    </actor>
+    <custom-block blocktag="custom-983" blocktype="ACTION" code="sayToScene(&quot;Split Screen Button PM&quot;, &quot;ButtonUpdate&quot;);" desc="" global="false" gui="Button update" id="983" message="ButtonUpdate" name="ButtonUpdate" oid="-1" return="VOID" shared="false" snippetID="19"/>
     <music atlasID="0" desc="" id="821" loop="true" name="Cable SFX" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <custom-block blocktag="custom-64" blocktype="NORMAL" code="Number((scripts.Design_27_27_ActorExtrasPM.CalculateDistance(~,~)))" desc="Calculates distance between the centre points of 2 actors." global="true" gui="distance between %0 and %1" id="64" message="CalculateDistance" name="CalculateDistance" oid="-1" return="NUMBER" shared="false" snippetID="27">
         <blank name="First Actor" order="0" type="ACTOR"/>
@@ -7379,6 +7396,17 @@
         <blank name="Actor" order="2" type="ACTOR"/>
         <blank name="Behaviour Name" order="3" type="TEXT"/>
     </custom-block>
+    <sprite atlasID="6" default="0" defaultAnimation="0" desc="" height="40" id="991" name="SFXButton" shared="false" width="100">
+        <anim across="1" down="1" durations="100" height="40" id="0" loop="true" name="music" numframes="1" originx="50" originy="20" sync="false" width="100">
+            <poly data="4,0,0,100,0,100,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="40" id="1" loop="true" name="sfx" numframes="1" originx="50" originy="20" sync="false" width="100">
+            <poly data="4,0,0,100,0,100,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="sfx" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="6" bodytype="0" continuous="true" desc="" eventsnippetid="451" fixedrot="false" fric="0.2" gid="3" id="990" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="SFXButton" oid="-1" pausable="true" rest="0.0" shared="false" sprite="991" static="true">
+        <snippets/>
+    </actor>
     <custom-block blocktag="custom-709" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_37&quot;, &quot;ShootGrenade&quot;, ~);" desc="" global="false" gui="Shoot grenade from %0" id="709" message="ShootGrenade" name="ShootGrenade" oid="-1" return="VOID" shared="false" snippetID="362">
         <blank name="Grenade Maker" order="0" type="ACTOR"/>
     </custom-block>
@@ -7663,9 +7691,13 @@
         <blank name="Text" order="0" type="TEXT"/>
         <blank name="Divider" order="1" type="TEXT"/>
     </custom-block>
+    <custom-block blocktag="custom-982" blocktype="ACTION" code="sayToScene(&quot;Split Screen Button PM&quot;, &quot;SplitUpdate&quot;);" desc="" global="false" gui="Split update" id="982" message="SplitUpdate" name="SplitUpdate" oid="-1" return="VOID" shared="false" snippetID="19"/>
     <custom-block blocktag="custom-689" blocktype="ACTION" code="~.say(&quot;Goose Head Maker PM&quot;, &quot;Start&quot;);" desc="" global="false" gui="Start" id="689" message="Start" name="Start" oid="-1" return="VOID" shared="false" snippetID="349">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
+    <actor adamp="0.0" ascale="true" atlasID="6" bodytype="0" continuous="true" desc="" eventsnippetid="448" fixedrot="false" fric="0.2" gid="3" id="984" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="StartButton" oid="-1" pausable="true" rest="0.0" shared="false" sprite="985" static="true">
+        <snippets/>
+    </actor>
     <custom-block blocktag="custom-555" blocktype="ACTION" code="~.say(&quot;Complex Movement PM&quot;, &quot;StartNextAction&quot;);" desc="" global="false" gui="Start next action for %0" id="555" message="StartNextAction" name="StartNextAction" oid="-1" return="VOID" shared="false" snippetID="298">
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>

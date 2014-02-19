@@ -10,19 +10,24 @@
                 </set-val-19-13>
                 <if comment="false" x="26" y="105">
                     <group eventID="1" id="-1">
-                        <set-val-19-14 comment="false" x="37" y="148">
+                        <set-val-19-25 comment="false" x="37" y="148">
+                            <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </mobile-multitouch>
+                        </set-val-19-25>
+                        <set-val-19-14 comment="false" x="37" y="181">
                             <mobile-multitouch comment="false" id="0" x="0" y="0">
                                 <int id="0" val="1"/>
                             </mobile-multitouch>
                         </set-val-19-14>
-                        <set-val-19-16 comment="false" x="37" y="181">
+                        <set-val-19-16 comment="false" x="37" y="214">
                             <mobile-multitouch comment="false" id="0" x="0" y="0">
                                 <int id="0" val="2"/>
                             </mobile-multitouch>
                         </set-val-19-16>
-                        <if comment="false" x="37" y="214">
+                        <if comment="false" x="37" y="247">
                             <group eventID="1" id="-1">
-                                <set-val-19-7 comment="false" x="48" y="244">
+                                <set-val-19-7 comment="false" x="48" y="277">
                                     <mobile-multitouch comment="false" id="0" x="0" y="0">
                                         <int id="0" val="0"/>
                                     </mobile-multitouch>
@@ -33,12 +38,12 @@
                                 <int id="1" val="-1"/>
                             </eq>
                         </if>
-                        <set-val-19-1 comment="false" x="37" y="289">
+                        <set-val-19-1 comment="false" x="37" y="322">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-19-1>
-                        <if comment="false" x="37" y="314">
+                        <if comment="false" x="37" y="347">
                             <group eventID="1" id="-1">
-                                <set-val-19-9 comment="false" x="48" y="344">
+                                <set-val-19-9 comment="false" x="48" y="377">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-19-9>
                             </group>
@@ -59,21 +64,21 @@
                         </div>
                     </less>
                 </if>
-                <else comment="false" x="26" y="393">
+                <else comment="false" x="26" y="426">
                     <group eventID="1" id="-1">
-                        <set-val-19-15 comment="false" x="37" y="413">
+                        <set-val-19-15 comment="false" x="37" y="446">
                             <mobile-multitouch comment="false" id="0" x="0" y="0">
                                 <int id="0" val="1"/>
                             </mobile-multitouch>
                         </set-val-19-15>
-                        <set-val-19-17 comment="false" x="37" y="446">
+                        <set-val-19-17 comment="false" x="37" y="479">
                             <mobile-multitouch comment="false" id="0" x="0" y="0">
                                 <int id="0" val="2"/>
                             </mobile-multitouch>
                         </set-val-19-17>
-                        <if comment="false" x="37" y="479">
+                        <if comment="false" x="37" y="512">
                             <group eventID="1" id="-1">
-                                <set-val-19-8 comment="false" x="48" y="509">
+                                <set-val-19-8 comment="false" x="48" y="542">
                                     <mobile-multitouch comment="false" id="0" x="0" y="0">
                                         <int id="0" val="0"/>
                                     </mobile-multitouch>
@@ -84,12 +89,12 @@
                                 <int id="1" val="-1"/>
                             </eq>
                         </if>
-                        <set-val-19-2 comment="false" x="37" y="554">
+                        <set-val-19-2 comment="false" x="37" y="587">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-19-2>
-                        <if comment="false" x="37" y="579">
+                        <if comment="false" x="37" y="612">
                             <group eventID="1" id="-1">
-                                <set-val-19-9 comment="false" x="48" y="609">
+                                <set-val-19-9 comment="false" x="48" y="642">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-19-9>
                             </group>
@@ -103,84 +108,42 @@
             <int id="0" val="0"/>
         </event-device-multitouch>
     </group>
-    <group eventID="1" id="1">
-        <print comment="false" x="494" y="104">
-            <str-combine comment="false" id="0" x="0" y="0">
-                <int id="0" val="Screen: "/>
-                <screen-wh comment="false" id="1" x="0" y="0">
-                    <int id="0" val="0"/>
-                </screen-wh>
-            </str-combine>
-        </print>
-        <print comment="false" x="494" y="142">
-            <str-combine comment="false" id="0" x="0" y="0">
-                <int id="0" val="Scene:"/>
-                <scene-wh comment="false" id="1" x="0" y="0">
-                    <int id="0" val="0"/>
-                </scene-wh>
-            </str-combine>
-        </print>
-    </group>
     <group eventID="1" id="-1"/>
+    <group eventID="16" id="0">
+        <event-device-multitouch comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <if comment="false" x="26" y="55">
+                    <group eventID="16" id="-1">
+                        <set-val-19-25 comment="false" x="37" y="85">
+                            <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </mobile-multitouch>
+                        </set-val-19-25>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Button"/>
+                    </eq>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+        </event-device-multitouch>
+    </group>
+    <group eventID="16" id="-1"/>
     <group eventID="2" id="0">
         <event-device-multitouch comment="false" x="15" y="15">
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="55">
                     <group eventID="2" id="-1">
-                        <set-val-19-22 comment="false" x="37" y="93">
-                            <minus comment="false" id="0" x="0" y="0">
-                                <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="1"/>
-                                </mobile-multitouch>
-                                <get-val-19-14 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </set-val-19-22>
-                        <set-val-19-23 comment="false" x="37" y="131">
-                            <minus comment="false" id="0" x="0" y="0">
-                                <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="2"/>
-                                </mobile-multitouch>
-                                <get-val-19-16 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </set-val-19-23>
-                        <if comment="false" x="37" y="169">
-                            <group eventID="2" id="-1">
-                                <set-val-19-18 comment="false" x="48" y="209">
-                                    <true comment="false" id="0" x="0" y="0"/>
-                                </set-val-19-18>
-                                <set-val-19-20 comment="false" x="48" y="234">
-                                    <atan2 comment="false" id="0" x="0" y="0">
-                                        <get-val-19-23 comment="false" id="0" x="0" y="0"/>
-                                        <get-val-19-22 comment="false" id="1" x="0" y="0"/>
-                                    </atan2>
-                                </set-val-19-20>
-                            </group>
-                            <and comment="false" id="0" x="0" y="0">
-                                <more comment="false" id="0" x="0" y="0">
-                                    <neg comment="false" id="0" x="0" y="0">
-                                        <get-val-19-23 comment="false" id="0" x="0" y="0"/>
-                                    </neg>
-                                    <get-val-19-19 comment="false" id="1" x="0" y="0"/>
-                                </more>
-                                <more comment="false" id="1" x="0" y="0">
-                                    <abs comment="false" id="0" x="0" y="0">
-                                        <get-val-19-23 comment="false" id="0" x="0" y="0"/>
-                                    </abs>
-                                    <abs comment="false" id="1" x="0" y="0">
-                                        <get-val-19-22 comment="false" id="0" x="0" y="0"/>
-                                    </abs>
-                                </more>
-                            </and>
-                        </if>
-                        <set-val-19-7 comment="false" x="37" y="276">
+                        <set-val-19-7 comment="false" x="37" y="93">
                             <int id="0" val="-1"/>
                         </set-val-19-7>
-                        <set-val-19-1 comment="false" x="37" y="296">
+                        <set-val-19-1 comment="false" x="37" y="113">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-19-1>
-                        <if comment="false" x="37" y="321">
+                        <if comment="false" x="37" y="138">
                             <group eventID="2" id="-1">
-                                <set-val-19-9 comment="false" x="48" y="346">
+                                <set-val-19-9 comment="false" x="48" y="163">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-19-9>
                             </group>
@@ -194,62 +157,17 @@
                         <get-val-19-7 comment="false" id="1" x="0" y="0"/>
                     </eq>
                 </if>
-                <if comment="false" x="26" y="395">
+                <if comment="false" x="26" y="212">
                     <group eventID="2" id="-1">
-                        <set-val-19-22 comment="false" x="37" y="433">
-                            <minus comment="false" id="0" x="0" y="0">
-                                <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="1"/>
-                                </mobile-multitouch>
-                                <get-val-19-15 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </set-val-19-22>
-                        <set-val-19-23 comment="false" x="37" y="471">
-                            <minus comment="false" id="0" x="0" y="0">
-                                <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="2"/>
-                                </mobile-multitouch>
-                                <get-val-19-17 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </set-val-19-23>
-                        <if comment="false" x="37" y="509">
-                            <group eventID="2" id="-1">
-                                <set-val-19-18 comment="false" x="48" y="549">
-                                    <true comment="false" id="0" x="0" y="0"/>
-                                </set-val-19-18>
-                                <set-val-19-20 comment="false" x="48" y="574">
-                                    <atan2 comment="false" id="0" x="0" y="0">
-                                        <get-val-19-23 comment="false" id="0" x="0" y="0"/>
-                                        <get-val-19-22 comment="false" id="1" x="0" y="0"/>
-                                    </atan2>
-                                </set-val-19-20>
-                            </group>
-                            <and comment="false" id="0" x="0" y="0">
-                                <more comment="false" id="0" x="0" y="0">
-                                    <neg comment="false" id="0" x="0" y="0">
-                                        <get-val-19-23 comment="false" id="0" x="0" y="0"/>
-                                    </neg>
-                                    <get-val-19-19 comment="false" id="1" x="0" y="0"/>
-                                </more>
-                                <more comment="false" id="1" x="0" y="0">
-                                    <abs comment="false" id="0" x="0" y="0">
-                                        <get-val-19-23 comment="false" id="0" x="0" y="0"/>
-                                    </abs>
-                                    <abs comment="false" id="1" x="0" y="0">
-                                        <get-val-19-22 comment="false" id="0" x="0" y="0"/>
-                                    </abs>
-                                </more>
-                            </and>
-                        </if>
-                        <set-val-19-8 comment="false" x="37" y="616">
+                        <set-val-19-8 comment="false" x="37" y="250">
                             <int id="0" val="-1"/>
                         </set-val-19-8>
-                        <set-val-19-2 comment="false" x="37" y="636">
+                        <set-val-19-2 comment="false" x="37" y="270">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-19-2>
-                        <if comment="false" x="37" y="661">
+                        <if comment="false" x="37" y="295">
                             <group eventID="2" id="-1">
-                                <set-val-19-9 comment="false" x="48" y="686">
+                                <set-val-19-9 comment="false" x="48" y="320">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-19-9>
                             </group>
@@ -267,42 +185,25 @@
             <int id="0" val="2"/>
         </event-device-multitouch>
     </group>
-    <group eventID="2" id="1">
-        <if comment="false" x="375" y="652">
-            <group eventID="2" id="-1">
-                <actor-set-prop comment="false" x="386" y="677">
-                    <ACTOR eid="var" id="0" vid="4"/>
-                    <int id="1" val="Swipe Jump"/>
-                    <true comment="false" id="2" x="0" y="0"/>
-                </actor-set-prop>
-                <actor-set-prop comment="false" x="386" y="709">
-                    <ACTOR eid="var" id="0" vid="4"/>
-                    <int id="1" val="Swipe Jump Direction"/>
-                    <get-val-19-20 comment="false" id="2" x="0" y="0"/>
-                </actor-set-prop>
-                <set-val-19-18 comment="false" x="386" y="741">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-19-18>
-            </group>
-            <get-val-19-18 comment="false" id="0" x="0" y="0"/>
-        </if>
-    </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <set-val-19-7 comment="false" x="26" y="40">
+                <set-val-19-24 comment="false" x="26" y="40">
+                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                </set-val-19-24>
+                <set-val-19-7 comment="false" x="26" y="65">
                     <int id="0" val="-1"/>
                 </set-val-19-7>
-                <set-val-19-8 comment="false" x="26" y="60">
+                <set-val-19-8 comment="false" x="26" y="85">
                     <int id="0" val="-1"/>
                 </set-val-19-8>
-                <set-val-19-11 comment="false" x="26" y="80">
+                <set-val-19-11 comment="false" x="26" y="105">
                     <int id="0" val="0"/>
                 </set-val-19-11>
-                <if comment="false" x="26" y="100">
+                <if comment="false" x="26" y="125">
                     <group eventID="3" id="-1">
-                        <disable-snippet comment="false" x="37" y="138"/>
+                        <disable-snippet comment="false" x="37" y="163"/>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <is-platform comment="false" id="0" x="0" y="0">
@@ -310,7 +211,7 @@
                         </is-platform>
                     </not>
                 </if>
-                <set-val-19-13 comment="false" x="26" y="170">
+                <set-val-19-13 comment="false" x="26" y="195">
                     <int id="0" val="0"/>
                 </set-val-19-13>
             </group>
@@ -320,6 +221,46 @@
     <group eventID="4" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <custom-982 comment="false" x="37" y="70"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Split"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="102">
+                    <group eventID="2" id="-1">
+                        <custom-983 comment="false" x="37" y="132"/>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Button"/>
+                    </eq>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-font-new comment="false" x="26" y="40">
+                    <FONT eid="742" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="200"/>
+                    <int id="2" val="50"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="14" id="0">
+        <receiver-9-982 comment="false" x="15" y="15">
+            <group eventID="14" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="4" id="-1">
                         <set-val-19-10 comment="false" x="37" y="83">
@@ -604,36 +545,138 @@
                     </and>
                 </if>
             </group>
-        </step>
+        </receiver-9-982>
     </group>
-    <group eventID="4" id="-1">
-        <custom-97 comment="false" x="631" y="75">
-            <ACTOR eid="var" id="0" vid="4"/>
-        </custom-97>
-    </group>
-    <group eventID="5" id="0">
-        <draw comment="false" x="15" y="15">
-            <group eventID="5" id="-1">
-                <set-font-new comment="false" x="26" y="40">
-                    <FONT eid="742" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="67">
-                    <custom-97 comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="4"/>
-                    </custom-97>
-                    <int id="1" val="200"/>
-                    <int id="2" val="50"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="100">
-                    <custom-93 comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="var" id="0" vid="4"/>
-                        <int id="1" val="UseObject"/>
-                    </custom-93>
-                    <int id="1" val="200"/>
-                    <int id="2" val="75"/>
-                </draw-text>
+    <group eventID="14" id="-1"/>
+    <group eventID="15" id="0">
+        <receiver-10-983 comment="false" x="15" y="15">
+            <group eventID="15" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="15" id="-1">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="15" id="-1">
+                                <custom-94 comment="false" x="48" y="100">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Left"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <custom-94 comment="false" x="48" y="132">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Right"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-val-19-14 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-19-13 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <int id="1" val="5"/>
+                            </more>
+                        </if>
+                        <else-if comment="false" x="37" y="176">
+                            <group eventID="15" id="-1">
+                                <custom-94 comment="false" x="48" y="211">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Left"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <custom-94 comment="false" x="48" y="243">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Right"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-val-19-14 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-19-13 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <int id="1" val="-5"/>
+                            </less>
+                        </else-if>
+                        <else comment="false" x="37" y="287">
+                            <group eventID="15" id="-1">
+                                <custom-94 comment="false" x="48" y="307">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Left"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <custom-94 comment="false" x="48" y="339">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Right"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-19-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="395">
+                    <group eventID="15" id="-1">
+                        <custom-94 comment="false" x="37" y="415">
+                            <ACTOR eid="var" id="0" vid="4"/>
+                            <int id="1" val="Left"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                        <custom-94 comment="false" x="37" y="447">
+                            <ACTOR eid="var" id="0" vid="4"/>
+                            <int id="1" val="Right"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="491">
+                    <group eventID="15" id="-1">
+                        <if comment="false" x="37" y="516">
+                            <group eventID="4" id="-1">
+                                <comment-short comment="false" x="48" y="554">
+                                    <int id="0" val="Custom: Set &amp;quot;Jump&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
+                                </comment-short>
+                                <custom-94 comment="false" x="48" y="574">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Jump"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="Prevent Jumping"/>
+                                </actor-get-prop>
+                            </not>
+                        </if>
+                        <else comment="false" x="37" y="618">
+                            <group eventID="4" id="-1">
+                                <comment-short comment="false" x="48" y="638">
+                                    <int id="0" val="Custom: Set &amp;quot;UseObject&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
+                                </comment-short>
+                                <custom-94 comment="false" x="48" y="658">
+                                    <ACTOR eid="var" id="0" vid="4"/>
+                                    <int id="1" val="UseObject"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                        </else>
+                    </group>
+                    <get-val-19-2 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="714">
+                    <group eventID="15" id="-1">
+                        <custom-94 comment="false" x="37" y="734">
+                            <ACTOR eid="var" id="0" vid="4"/>
+                            <int id="1" val="Jump"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                        <custom-94 comment="false" x="37" y="766">
+                            <ACTOR eid="var" id="0" vid="4"/>
+                            <int id="1" val="UseObject"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                    </group>
+                </else>
             </group>
-        </draw>
+        </receiver-10-983>
     </group>
-    <group eventID="5" id="-1"/>
+    <group eventID="15" id="-1"/>
 </groups>

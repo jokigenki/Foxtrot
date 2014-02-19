@@ -34,19 +34,29 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Right Touch Start X" hidden="true" id="15" name="_RightTouchStartX" order="11"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Right Touch Start Y" hidden="true" id="17" name="_RightTouchStartY" order="13"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Left Touch Start Y" hidden="true" id="16" name="_LeftTouchStartY" order="12"/>
-        <number default="10" defaultValue="10" desc="" dropdown="" fullname="Swipe Threshold" hidden="false" id="19" name="_SwipeThreshold" order="15"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Swiped" hidden="true" id="18" name="_Swiped" order="14"/>
-        <number default="5" defaultValue="5" desc="" dropdown="" fullname="Swipe X Speed Threshold" hidden="false" id="21" name="_SwipeXSpeedThreshold" order="17"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Swipe Direction" hidden="true" id="20" name="_SwipeDirection" order="16"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Swipe Length Y" hidden="true" id="23" name="_SwipeLengthY" order="19"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Swipe Length X" hidden="true" id="22" name="_SwipeLengthX" order="18"/>
-        <blocks/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Drag X" hidden="true" id="25" name="_DragX" order="15"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="Mode" hidden="true" id="24" name="_Mode" order="14"/>
+        <blocks>
+            <receiver blockID="974" id="1"/>
+            <receiver blockID="975" id="2"/>
+            <receiver blockID="976" id="3"/>
+            <receiver blockID="977" id="4"/>
+            <receiver blockID="978" id="5"/>
+            <receiver blockID="979" id="6"/>
+            <receiver blockID="980" id="7"/>
+            <receiver blockID="981" id="8"/>
+            <receiver blockID="982" id="9"/>
+            <receiver blockID="983" id="10"/>
+        </blocks>
         <events>
-            <event displayName="Multi-Touch" enabled="true" id="1" name="event-device-multitouch" order="2" repeats="true"/>
-            <event displayName="Multi-Touch" enabled="true" id="2" name="event-device-multitouch" order="3" repeats="true"/>
+            <event displayName="Touch drag" enabled="true" id="16" name="event-device-multitouch" order="3" repeats="true"/>
+            <event displayName="Touch start" enabled="true" id="1" name="event-device-multitouch" order="2" repeats="true"/>
+            <event displayName="Touch end" enabled="true" id="2" name="event-device-multitouch" order="4" repeats="true"/>
             <event displayName="Created" enabled="true" id="3" name="init" order="1" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="4" name="step" order="4" repeats="true"/>
-            <event displayName="Drawing" enabled="false" id="5" name="draw" order="5" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="4" name="step" order="5" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="5" name="draw" order="10" repeats="true"/>
+            <event displayName="Split update" enabled="true" id="14" name="event-custom-block" order="15" repeats="true"/>
+            <event displayName="Button update" enabled="true" id="15" name="event-custom-block" order="16" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_21_21_SceneTransitionPM" classname="scripts.Design_21_21_SceneTransitionPM" desc="" description="" design="true" drawOrder="0" id="21" language="" name="Scene Transition PM" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
@@ -3395,6 +3405,7 @@
             <event displayName="Loop scene sound for actor" enabled="true" id="27" name="event-custom-block" order="21" repeats="true"/>
             <event displayName="Is scene sound playing" enabled="true" id="26" name="event-custom-block" order="26" repeats="true"/>
             <event displayName="Stop scene sound for actor" enabled="true" id="28" name="event-custom-block" order="24" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="31" name="event-key-press-release" order="32" repeats="true"/>
             <event displayName="Play sound, then music" enabled="true" id="30" name="event-custom-block" order="31" repeats="true"/>
         </events>
     </snippet>
@@ -3922,6 +3933,12 @@
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_52" classname="scripts.SceneEvents_52" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="447" language="" name="SceneEvents_52" oid="-1" package="scripts." sceneid="52" scenespecific="true" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Keyboard" enabled="true" id="1" name="event-key-press-release" order="1" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_930" classname="scripts.ActorEvents_930" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="432" language="" name="ActorEvents_930" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
         <events/>
@@ -4093,6 +4110,26 @@
         <events>
             <event displayName="Actor - Any" enabled="true" id="1" name="collide" order="1" repeats="true"/>
             <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_990" classname="scripts.ActorEvents_990" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="451" language="" name="ActorEvents_990" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_988" classname="scripts.ActorEvents_988" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="450" language="" name="ActorEvents_988" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_984" classname="scripts.ActorEvents_984" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="448" language="" name="ActorEvents_984" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
         </events>
     </snippet>
 </pack>
