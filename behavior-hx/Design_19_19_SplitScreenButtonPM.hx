@@ -201,13 +201,13 @@ public function _customBlock_ButtonUpdate():Void
 {
         if(_LeftPressed)
 {
-            if(((_LeftTouchStartX - _LastXTouch) > 5))
+            if(((_LeftTouchStartX - _DragX) > 5))
 {
                 _ActorToControl.say("Control Adapter PM", "_customBlock_SetIsOn", ["Left",true]);
                 _ActorToControl.say("Control Adapter PM", "_customBlock_SetIsOn", ["Right",false]);
 }
 
-            else if(((_LeftTouchStartX - _LastXTouch) < -5))
+            else if(((_LeftTouchStartX - _DragX) < -5))
 {
                 _ActorToControl.say("Control Adapter PM", "_customBlock_SetIsOn", ["Left",false]);
                 _ActorToControl.say("Control Adapter PM", "_customBlock_SetIsOn", ["Right",true]);
@@ -360,7 +360,7 @@ propertyChanged("_LeftWasFirstPressed", _LeftWasFirstPressed);
 });
     addMultiTouchMoveListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
-        if((_Mode == "Button"))
+        if((((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE) < (getScreenWidth() / 2)) && (_Mode == "Button")))
 {
             _DragX = asNumber((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE));
 propertyChanged("_DragX", _DragX);
@@ -412,12 +412,6 @@ if(wrapper.enabled){
             sayToScene("Split Screen Button PM", "_customBlock_ButtonUpdate");
 }
 
-}
-});
-    addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void {
-if(wrapper.enabled){
-        g.setFont(getFont(742));
-        g.drawString("" + _Mode, 200, 50);
 }
 });
 

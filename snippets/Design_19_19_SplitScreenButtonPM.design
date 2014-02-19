@@ -114,16 +114,29 @@
             <group eventID="16" id="-1">
                 <if comment="false" x="26" y="55">
                     <group eventID="16" id="-1">
-                        <set-val-19-25 comment="false" x="37" y="85">
+                        <set-val-19-25 comment="false" x="37" y="103">
                             <mobile-multitouch comment="false" id="0" x="0" y="0">
                                 <int id="0" val="1"/>
                             </mobile-multitouch>
                         </set-val-19-25>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-val-19-24 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="Button"/>
-                    </eq>
+                    <and comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </mobile-multitouch>
+                            <div comment="false" id="1" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </screen-wh>
+                                <int id="1" val="2"/>
+                            </div>
+                        </less>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Button"/>
+                        </eq>
+                    </and>
                 </if>
             </group>
             <int id="0" val="1"/>
@@ -569,7 +582,7 @@
                             <more comment="false" id="0" x="0" y="0">
                                 <minus comment="false" id="0" x="0" y="0">
                                     <get-val-19-14 comment="false" id="0" x="0" y="0"/>
-                                    <get-val-19-13 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-19-25 comment="false" id="1" x="0" y="0"/>
                                 </minus>
                                 <int id="1" val="5"/>
                             </more>
@@ -590,7 +603,7 @@
                             <less comment="false" id="0" x="0" y="0">
                                 <minus comment="false" id="0" x="0" y="0">
                                     <get-val-19-14 comment="false" id="0" x="0" y="0"/>
-                                    <get-val-19-13 comment="false" id="1" x="0" y="0"/>
+                                    <get-val-19-25 comment="false" id="1" x="0" y="0"/>
                                 </minus>
                                 <int id="1" val="-5"/>
                             </less>
