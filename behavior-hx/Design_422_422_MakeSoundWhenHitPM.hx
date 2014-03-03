@@ -25,6 +25,8 @@ import com.stencyl.utils.Utils;
 import nme.ui.Mouse;
 import nme.display.Graphics;
 import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
 import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
@@ -107,9 +109,9 @@ nameMap.set("Minimum Velocity For Sound", "_MinimumVelocityForSound");
 _MinimumVelocityForSound = -10.0;
 nameMap.set("Stored X Speed", "_StoredXSpeed");
 _StoredXSpeed = 0.0;
-nameMap.set("Actor", "actor");
 nameMap.set("Stored Y Speed", "_StoredYSpeed");
 _StoredYSpeed = 0.0;
+nameMap.set("Actor", "actor");
 
 	}
 	

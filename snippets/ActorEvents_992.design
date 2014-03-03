@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-val-452-5 comment="false" x="37" y="67">
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="ActorToControl"/>
+                            </actor-get-prop>
+                        </set-val-452-5>
+                    </group>
+                    <int id="0" val="0.1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="4" id="-1">
+                        <custom-94 comment="false" x="37" y="75">
+                            <ACTOR eid="var" id="0" vid="5"/>
+                            <int id="1" val="Left"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="5"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="4" id="-1">
+                        <custom-94 comment="false" x="37" y="75">
+                            <ACTOR eid="var" id="0" vid="5"/>
+                            <int id="1" val="Left"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </custom-94>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="5"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="4"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-device-multitouch comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="55">
+                    <group eventID="4" id="-1">
+                        <if comment="false" x="37" y="88">
+                            <group eventID="5" id="-1">
+                                <set-val-452-6 comment="false" x="48" y="134">
+                                    <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </mobile-multitouch>
+                                </set-val-452-6>
+                                <custom-94 comment="false" x="48" y="167">
+                                    <ACTOR eid="var" id="0" vid="5"/>
+                                    <int id="1" val="Left"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                            <custom-1004 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <mobile-multitouch comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </mobile-multitouch>
+                                <mobile-multitouch comment="false" id="2" x="0" y="0">
+                                    <int id="0" val="2"/>
+                                </mobile-multitouch>
+                            </custom-1004>
+                        </if>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="5"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+            </group>
+            <int id="0" val="0"/>
+        </event-device-multitouch>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-device-multitouch comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <if comment="false" x="26" y="55">
+                    <group eventID="4" id="-1">
+                        <if comment="false" x="37" y="88">
+                            <group eventID="6" id="-1">
+                                <custom-94 comment="false" x="48" y="126">
+                                    <ACTOR eid="var" id="0" vid="5"/>
+                                    <int id="1" val="Left"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <set-val-452-6 comment="false" x="48" y="158">
+                                    <int id="0" val="-1"/>
+                                </set-val-452-6>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </mobile-multitouch>
+                                <get-val-452-6 comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="5"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+            </group>
+            <int id="0" val="2"/>
+        </event-device-multitouch>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="9" id="0">
+        <event-device-multitouch comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <if comment="false" x="26" y="55">
+                    <group eventID="4" id="-1">
+                        <if comment="false" x="37" y="88">
+                            <group eventID="5" id="-1">
+                                <set-val-452-6 comment="false" x="48" y="134">
+                                    <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </mobile-multitouch>
+                                </set-val-452-6>
+                                <custom-94 comment="false" x="48" y="167">
+                                    <ACTOR eid="var" id="0" vid="5"/>
+                                    <int id="1" val="Left"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                            </group>
+                            <custom-1004 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <mobile-multitouch comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </mobile-multitouch>
+                                <mobile-multitouch comment="false" id="2" x="0" y="0">
+                                    <int id="0" val="2"/>
+                                </mobile-multitouch>
+                            </custom-1004>
+                        </if>
+                        <else-if comment="false" x="37" y="211">
+                            <group eventID="9" id="-1">
+                                <custom-94 comment="false" x="48" y="249">
+                                    <ACTOR eid="var" id="0" vid="5"/>
+                                    <int id="1" val="Left"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </custom-94>
+                                <set-val-452-6 comment="false" x="48" y="281">
+                                    <int id="0" val="-1"/>
+                                </set-val-452-6>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-452-6 comment="false" id="0" x="0" y="0"/>
+                                <mobile-multitouch comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </mobile-multitouch>
+                            </eq>
+                        </else-if>
+                    </group>
+                    <value comment="false" id="0" x="0" y="0">
+                        <int id="0" val="5"/>
+                        <int id="1" val="0"/>
+                    </value>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+        </event-device-multitouch>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <receiver-3-1004 comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="5" id="-1">
+                        <if comment="false" x="37" y="93">
+                            <group eventID="5" id="-1">
+                                <return comment="false" x="48" y="141">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </return>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <moreeq comment="false" id="0" x="0" y="0">
+                                    <get-byobval-452-1004-2 comment="false" id="0" x="0" y="0"/>
+                                    <get-xy comment="false" id="1" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                </moreeq>
+                                <lesseq comment="false" id="1" x="0" y="0">
+                                    <get-byobval-452-1004-2 comment="false" id="0" x="0" y="0"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <get-xy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-xy>
+                                        <get-wh comment="false" id="1" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-wh>
+                                    </plus>
+                                </lesseq>
+                            </and>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <moreeq comment="false" id="0" x="0" y="0">
+                            <get-byobval-452-1004-1 comment="false" id="0" x="0" y="0"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </moreeq>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <get-byobval-452-1004-1 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-wh>
+                            </plus>
+                        </lesseq>
+                    </and>
+                </if>
+                <return comment="false" x="26" y="190">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </return>
+            </group>
+            <get-byobval-452-1004-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-452-1004-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-452-1004-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-3-1004>
+    </group>
+    <group eventID="10" id="-1">
+        <get-byobval-452-1004-0 comment="false" x="0" y="0"/>
+        <get-byobval-452-1004-1 comment="false" x="0" y="0"/>
+        <get-byobval-452-1004-2 comment="false" x="0" y="0"/>
+    </group>
+</groups>

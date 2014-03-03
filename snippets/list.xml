@@ -2009,6 +2009,10 @@
             <receiver blockID="539" id="15"/>
             <receiver blockID="757" id="17"/>
             <receiver blockID="553" id="16"/>
+            <receiver blockID="999" id="19"/>
+            <receiver blockID="998" id="18"/>
+            <receiver blockID="1001" id="21"/>
+            <receiver blockID="1000" id="20"/>
         </blocks>
         <events>
             <event displayName="Set game attribute" enabled="true" id="1" name="event-custom-block-global" order="2" repeats="true"/>
@@ -4110,6 +4114,62 @@
         <events>
             <event displayName="Actor - Any" enabled="true" id="1" name="collide" order="1" repeats="true"/>
             <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_996" classname="scripts.ActorEvents_996" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="454" language="" name="ActorEvents_996" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Actor To Control" hidden="false" id="1" name="_ActorToControl" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Touch Id" hidden="false" id="2" name="_TouchId" order="1"/>
+        <blocks>
+            <receiver blockID="998" id="1"/>
+            <receiver blockID="999" id="2"/>
+            <receiver blockID="1000" id="3"/>
+            <receiver blockID="1001" id="4"/>
+        </blocks>
+        <events>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="press" enabled="false" id="3" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="release" enabled="false" id="4" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="touch on" enabled="true" id="5" name="event-device-multitouch" order="5" repeats="true"/>
+            <event displayName="touch off" enabled="true" id="6" name="event-device-multitouch" order="8" repeats="true"/>
+            <event displayName="touch inside" enabled="true" id="7" name="event-custom-block" order="9" repeats="true"/>
+            <event displayName="touch drag" enabled="true" id="8" name="event-device-multitouch" order="7" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_994" classname="scripts.ActorEvents_994" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="453" language="" name="ActorEvents_994" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Actor To Control" hidden="false" id="1" name="_ActorToControl" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Touch Id" hidden="false" id="2" name="_TouchId" order="1"/>
+        <blocks>
+            <receiver blockID="1005" id="1"/>
+            <receiver blockID="1006" id="2"/>
+            <receiver blockID="1007" id="3"/>
+            <receiver blockID="1008" id="4"/>
+        </blocks>
+        <events>
+            <event displayName="Created" enabled="true" id="3" name="init" order="2" repeats="true"/>
+            <event displayName="press" enabled="false" id="4" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="release" enabled="false" id="5" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="touch on" enabled="true" id="6" name="event-device-multitouch" order="5" repeats="true"/>
+            <event displayName="touch off" enabled="true" id="7" name="event-device-multitouch" order="7" repeats="true"/>
+            <event displayName="touch drag" enabled="true" id="8" name="event-device-multitouch" order="6" repeats="true"/>
+            <event displayName="Touch inside" enabled="true" id="10" name="event-custom-block" order="9" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_992" classname="scripts.ActorEvents_992" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="452" language="" name="ActorEvents_992" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Actor To Control" hidden="false" id="5" name="_ActorToControl" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Touch Id" hidden="false" id="6" name="_TouchId" order="1"/>
+        <blocks>
+            <receiver blockID="1002" id="1"/>
+            <receiver blockID="1003" id="2"/>
+            <receiver blockID="1004" id="3"/>
+        </blocks>
+        <events>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="press" enabled="false" id="3" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="release" enabled="false" id="4" name="event-mouse-enter-exit-actor" order="5" repeats="true"/>
+            <event displayName="touch on" enabled="true" id="5" name="event-device-multitouch" order="6" repeats="true"/>
+            <event displayName="touch off" enabled="true" id="6" name="event-device-multitouch" order="8" repeats="true"/>
+            <event displayName="touch drag" enabled="true" id="9" name="event-device-multitouch" order="7" repeats="true"/>
+            <event displayName="touch inside" enabled="true" id="10" name="event-custom-block" order="9" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_990" classname="scripts.ActorEvents_990" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="451" language="" name="ActorEvents_990" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">

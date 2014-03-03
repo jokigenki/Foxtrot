@@ -25,6 +25,8 @@ import com.stencyl.utils.Utils;
 import nme.ui.Mouse;
 import nme.display.Graphics;
 import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
 import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
@@ -291,7 +293,7 @@ _SFXNumber = 1.0;
 nameMap.set("Landing SFX Name", "_LandingSFXName");
 _LandingSFXName = "";
 nameMap.set("Landing SFX Number", "_LandingSFXNumber");
-_LandingSFXNumber = 0;
+_LandingSFXNumber = 0.0;
 
 	}
 	

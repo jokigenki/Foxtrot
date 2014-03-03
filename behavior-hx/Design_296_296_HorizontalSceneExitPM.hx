@@ -25,6 +25,8 @@ import com.stencyl.utils.Utils;
 import nme.ui.Mouse;
 import nme.display.Graphics;
 import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
 import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
@@ -80,9 +82,9 @@ _DoorIsReady = false;
 nameMap.set("Actor by door", "_Actorbydoor");
 nameMap.set("Exit only when on ground", "_Exitonlywhenonground");
 _Exitonlywhenonground = false;
+nameMap.set("Actor", "actor");
 nameMap.set("Save Exit?", "_SaveExit");
 _SaveExit = true;
-nameMap.set("Actor", "actor");
 
 	}
 	

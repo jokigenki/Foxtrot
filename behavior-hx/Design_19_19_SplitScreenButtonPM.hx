@@ -25,6 +25,8 @@ import com.stencyl.utils.Utils;
 import nme.ui.Mouse;
 import nme.display.Graphics;
 import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
 import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
@@ -283,7 +285,7 @@ _RightTouchStartY = 0.0;
 nameMap.set("Left Touch Start Y", "_LeftTouchStartY");
 _LeftTouchStartY = 0.0;
 nameMap.set("Drag X", "_DragX");
-_DragX = 0;
+_DragX = 0.0;
 nameMap.set("Mode", "_Mode");
 _Mode = "";
 
@@ -306,6 +308,17 @@ propertyChanged("_CurrentFudge", _CurrentFudge);
 
         _LastXTouch = asNumber(0);
 propertyChanged("_LastXTouch", _LastXTouch);
+        if((_Mode == "Button"))
+{
+            createRecycledActor(getActorType(992), ((650 - getScreenWidth()) / 2), (315 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+            getLastCreatedActor().setActorValue("ActorToControl", _ActorToControl);
+            createRecycledActor(getActorType(994), ((788 - getScreenWidth()) / 2), (315 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+            getLastCreatedActor().setActorValue("ActorToControl", _ActorToControl);
+            createRecycledActor(getActorType(996), (571 - ((640 - getScreenWidth()) / 2)), (315 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+            getLastCreatedActor().setActorValue("ActorToControl", _ActorToControl);
+            disableThisBehavior();
+}
+
     addMultiTouchStartListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
         _LastXTouch = asNumber((event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE));

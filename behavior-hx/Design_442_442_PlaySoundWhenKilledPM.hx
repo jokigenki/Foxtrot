@@ -25,6 +25,8 @@ import com.stencyl.utils.Utils;
 import nme.ui.Mouse;
 import nme.display.Graphics;
 import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
 import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
@@ -56,7 +58,7 @@ public var _NSounds:Float;
 		nameMap.set("Sound Name", "_SoundName");
 _SoundName = "";
 nameMap.set("N Sounds", "_NSounds");
-_NSounds = 1;
+_NSounds = 1.0;
 nameMap.set("Actor", "actor");
 
 	}

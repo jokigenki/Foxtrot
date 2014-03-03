@@ -25,6 +25,8 @@ import com.stencyl.utils.Utils;
 import nme.ui.Mouse;
 import nme.display.Graphics;
 import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
 import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
@@ -76,7 +78,7 @@ _IsHit = false;
 nameMap.set("Splash SFX Name", "_SplashSFXName");
 _SplashSFXName = "";
 nameMap.set("Splash SFX Number", "_SplashSFXNumber");
-_SplashSFXNumber = 1;
+_SplashSFXNumber = 1.0;
 nameMap.set("Actor", "actor");
 
 	}

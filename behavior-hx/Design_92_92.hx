@@ -25,6 +25,8 @@ import com.stencyl.utils.Utils;
 import nme.ui.Mouse;
 import nme.display.Graphics;
 import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
 import nme.events.Event;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
@@ -131,9 +133,9 @@ nameMap.set("Collection Event", "_CollectionEvent");
 _CollectionEvent = "";
 nameMap.set("Unlock Door On Create?", "_UnlockDoorOnCreate");
 _UnlockDoorOnCreate = false;
+nameMap.set("Actor", "actor");
 nameMap.set("Open Delay", "_OpenDelay");
 _OpenDelay = 0.5;
-nameMap.set("Actor", "actor");
 
 	}
 	
