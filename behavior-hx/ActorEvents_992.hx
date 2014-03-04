@@ -74,7 +74,7 @@ var __Self:Actor = actor;
 		super(actor, engine);	
 		nameMap.set("Actor To Control", "_ActorToControl");
 nameMap.set("Touch Id", "_TouchId");
-_TouchId = 0;
+_TouchId = 0.0;
 
 	}
 	

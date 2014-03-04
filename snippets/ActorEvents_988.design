@@ -46,9 +46,15 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <if comment="false" x="26" y="40">
+                <print comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="CONTROL MODE: -------------------------------"/>
+                        <get-game-val-30 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </print>
+                <if comment="false" x="26" y="70">
                     <group eventID="2" id="-1">
-                        <setanim comment="false" x="37" y="70">
+                        <setanim comment="false" x="37" y="100">
                             <ACTOR eid="this" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="button"/>
@@ -60,9 +66,9 @@
                         <int id="1" val="Button"/>
                     </eq>
                 </if>
-                <else-if comment="false" x="26" y="114">
+                <else-if comment="false" x="26" y="144">
                     <group eventID="2" id="-1">
-                        <setanim comment="false" x="37" y="144">
+                        <setanim comment="false" x="37" y="174">
                             <ACTOR eid="this" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="split"/>

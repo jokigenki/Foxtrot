@@ -3,9 +3,17 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
+                <print comment="false" x="26" y="40">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="MUSIC ON: -------------------------------"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                        </tostring>
+                    </str-combine>
+                </print>
+                <if comment="false" x="26" y="75">
                     <group eventID="1" id="-1">
-                        <setanim comment="false" x="37" y="65">
+                        <setanim comment="false" x="37" y="100">
                             <ACTOR eid="this" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="music"/>
@@ -14,9 +22,9 @@
                     </group>
                     <get-game-val-23 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="109">
+                <else comment="false" x="26" y="144">
                     <group eventID="1" id="-1">
-                        <setanim comment="false" x="37" y="129">
+                        <setanim comment="false" x="37" y="164">
                             <ACTOR eid="this" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="sfx"/>
