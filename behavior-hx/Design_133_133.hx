@@ -81,10 +81,10 @@ public var _ActivationAreaHeight:Float;
     
 
 /* Params are:__Self __value */
-public function _customBlock_SetIsEnabled(__value:Bool):Void
+public function _customBlock_SetIsEnabled(__Value:Bool):Void
 {
 var __Self:Actor = actor;
-        __Self.setValue("Usable Item PM", "_IsEnabled", __value);
+        __Self.setValue("Usable Item PM", "_IsEnabled", __Value);
 }
 
  
