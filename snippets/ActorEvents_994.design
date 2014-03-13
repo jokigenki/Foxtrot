@@ -196,11 +196,59 @@
     <group eventID="10" id="0">
         <receiver-4-1008 comment="false" x="15" y="15">
             <group eventID="10" id="-1">
-                <if comment="false" x="26" y="45">
+                <print comment="false" x="26" y="45">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="X:"/>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <get-byobval-453-1008-1 comment="false" id="0" x="0" y="0"/>
+                            <str-combine comment="false" id="1" x="0" y="0">
+                                <int id="0" val=" Y:"/>
+                                <get-byobval-453-1008-2 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                        </str-combine>
+                    </str-combine>
+                </print>
+                <print comment="false" x="26" y="85">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="L:"/>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <str-combine comment="false" id="1" x="0" y="0">
+                                <int id="0" val=" T:"/>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                            </str-combine>
+                        </str-combine>
+                    </str-combine>
+                </print>
+                <print comment="false" x="26" y="133">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="W:"/>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <get-wh comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-wh>
+                            <str-combine comment="false" id="1" x="0" y="0">
+                                <int id="0" val=" H:"/>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-wh>
+                            </str-combine>
+                        </str-combine>
+                    </str-combine>
+                </print>
+                <if comment="false" x="26" y="181">
                     <group eventID="5" id="-1">
-                        <if comment="false" x="37" y="93">
+                        <if comment="false" x="37" y="229">
                             <group eventID="5" id="-1">
-                                <return comment="false" x="48" y="141">
+                                <return comment="false" x="48" y="277">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </return>
                             </group>
@@ -251,7 +299,7 @@
                         </lesseq>
                     </and>
                 </if>
-                <return comment="false" x="26" y="190">
+                <return comment="false" x="26" y="326">
                     <false comment="false" id="0" x="0" y="0"/>
                 </return>
             </group>

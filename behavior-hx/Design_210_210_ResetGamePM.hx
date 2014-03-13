@@ -68,7 +68,7 @@ var __Self:Actor = actor;
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_UnlockExit("_Home|Tutorial_05|A|B");
         scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_CollectItemWithType("Tutorial_05Key",getActorType(142));
         saveGame("mySave", function(success:Bool):Void {
-            reloadCurrentScene(createFadeOut((0.5)),createFadeIn((0.5)));
+            switchScene(42, createFadeOut((0.5)),createFadeIn((0.5)));
 });
 }
 

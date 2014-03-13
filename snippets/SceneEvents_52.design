@@ -12,4 +12,136 @@
         </event-key-press-release>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <load-game comment="false" x="37" y="70">
+                            <group eventID="1" id="-1">
+                                <if comment="false" x="48" y="95">
+                                    <group eventID="1" id="-1">
+                                        <set-game-val-22 comment="false" x="59" y="120">
+                                            <int id="0" val="None"/>
+                                        </set-game-val-22>
+                                        <set-game-val-24 comment="false" x="59" y="140">
+                                            <int id="0" val="0"/>
+                                        </set-game-val-24>
+                                        <set-game-val-16 comment="false" x="59" y="160">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-16>
+                                        <set-game-val-10 comment="false" x="59" y="185">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-10>
+                                        <set-game-val-26 comment="false" x="59" y="210">
+                                            <create-list comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-26>
+                                        <set-val-447-1 comment="false" x="59" y="235">
+                                            <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                        </set-val-447-1>
+                                        <for-each comment="false" x="59" y="260">
+                                            <group eventID="1" id="-1">
+                                                <if comment="false" x="70" y="285">
+                                                    <group eventID="1" id="-1">
+                                                        <incdec comment="false" x="81" y="320">
+                                                            <int id="0" val="2"/>
+                                                            <int id="1" val="0"/>
+                                                            <int id="2" val="1"/>
+                                                        </incdec>
+                                                    </group>
+                                                    <more comment="false" id="0" x="0" y="0">
+                                                        <str-indexof comment="false" id="0" x="0" y="0">
+                                                            <for-each-item comment="false" id="0" x="0" y="0"/>
+                                                            <int id="1" val="Egg"/>
+                                                        </str-indexof>
+                                                        <int id="1" val="-1"/>
+                                                    </more>
+                                                </if>
+                                            </group>
+                                            <get-val-447-1 comment="false" id="0" x="0" y="0"/>
+                                        </for-each>
+                                        <set-game-val-28 comment="false" x="59" y="371">
+                                            <eq comment="false" id="0" x="0" y="0">
+                                                <get-val-447-2 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="25"/>
+                                            </eq>
+                                        </set-game-val-28>
+                                    </group>
+                                    <load-success comment="false" id="0" x="0" y="0"/>
+                                </if>
+                                <else comment="false" x="48" y="413">
+                                    <group eventID="1" id="-1">
+                                        <set-game-val-16 comment="false" x="59" y="433">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-16>
+                                    </group>
+                                </else>
+                                <if comment="false" x="48" y="470">
+                                    <group eventID="1" id="-1">
+                                        <set-game-val-20 comment="false" x="59" y="500">
+                                            <custom-552 comment="false" id="0" x="0" y="0">
+                                                <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                            </custom-552>
+                                        </set-game-val-20>
+                                    </group>
+                                    <noteq comment="false" id="0" x="0" y="0">
+                                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="none"/>
+                                    </noteq>
+                                </if>
+                            </group>
+                        </load-game>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-16 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <else comment="false" x="26" y="566">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="586">
+                            <group eventID="2" id="-1">
+                                <set-game-val-20 comment="false" x="48" y="616">
+                                    <custom-552 comment="false" id="0" x="0" y="0">
+                                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                    </custom-552>
+                                </set-game-val-20>
+                            </group>
+                            <noteq comment="false" id="0" x="0" y="0">
+                                <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="none"/>
+                            </noteq>
+                        </if>
+                    </group>
+                </else>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1">
+        <and comment="false" x="376" y="248">
+            <int id="0" val=""/>
+            <noteq comment="false" id="1" x="0" y="0">
+                <get-item comment="false" id="0" x="0" y="0">
+                    <str-split comment="false" id="0" x="0" y="0">
+                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="|"/>
+                    </str-split>
+                    <int id="1" val="1"/>
+                </get-item>
+                <int id="1" val="_Home"/>
+            </noteq>
+        </and>
+        <and comment="false" x="378" y="314">
+            <int id="0" val=""/>
+            <noteq comment="false" id="1" x="0" y="0">
+                <get-item comment="false" id="0" x="0" y="0">
+                    <str-split comment="false" id="0" x="0" y="0">
+                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="|"/>
+                    </str-split>
+                    <int id="1" val="1"/>
+                </get-item>
+                <int id="1" val="_Home"/>
+            </noteq>
+        </and>
+    </group>
 </groups>

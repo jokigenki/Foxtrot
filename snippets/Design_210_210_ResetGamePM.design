@@ -51,17 +51,26 @@
                 </custom-327>
                 <save-game comment="false" x="26" y="392">
                     <group eventID="1" id="-1">
-                        <scene-reload-new comment="false" x="37" y="417">
-                            <int id="0" val="0"/>
-                            <int id="1" val="0.5"/>
-                            <int id="2" val="0"/>
-                            <int id="3" val="0.5"/>
-                        </scene-reload-new>
+                        <scene-change-new comment="false" x="37" y="417">
+                            <SCENE eid="42" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0.5"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0.5"/>
+                        </scene-change-new>
                     </group>
                 </save-game>
             </group>
             <int id="0" val=""/>
         </receiver-1-349>
+    </group>
+    <group eventID="1" id="1">
+        <scene-reload-new comment="false" x="69" y="502">
+            <int id="0" val="0"/>
+            <int id="1" val="0.5"/>
+            <int id="2" val="0"/>
+            <int id="3" val="0.5"/>
+        </scene-reload-new>
     </group>
     <group eventID="1" id="-1"/>
 </groups>

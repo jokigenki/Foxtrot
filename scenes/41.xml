@@ -34,8 +34,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="No Sound"/>
@@ -67,8 +67,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="15" list="0" val="0"/>
+                    <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="-1"/>
@@ -111,13 +111,13 @@
             <prop id="25" list="0" val="0"/>
             <prop id="24" list="0" val=""/>
         </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
-        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
+        </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
         </s>
         <s enabled="true" id="202">
             <prop id="1" list="0" val="false"/>
@@ -136,10 +136,6 @@
             <prop id="15" list="0" val="0"/>
             <prop id="16" list="0" val="0"/>
         </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="41"/>
-        </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="851"/>
             <prop id="2" list="0" val="-1"/>
@@ -147,10 +143,14 @@
             <prop id="4" list="1" val=""/>
             <prop id="5" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="41"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="4,0.0,16.0,0.0,0.0,48.0,0.0,48.0,16.0" x="320.0" y="224.0"/>
-        <p pts="22,368.0,96.0,208.0,96.0,208.0,256.0,320.0,256.0,320.0,272.0,128.0,272.0,128.0,256.0,112.0,256.0,112.0,240.0,0.0,240.0,0.0,224.0,128.0,224.0,128.0,240.0,144.0,240.0,144.0,256.0,192.0,256.0,192.0,80.0,352.0,80.0,352.0,0.0,640.0,0.0,640.0,16.0,368.0,16.0" x="0.0" y="32.0"/>
         <p pts="8,640.0,0.0,640.0,16.0,448.0,16.0,448.0,240.0,0.0,240.0,0.0,224.0,432.0,224.0,432.0,0.0" x="0.0" y="112.0"/>
+        <p pts="22,368.0,96.0,208.0,96.0,208.0,256.0,320.0,256.0,320.0,272.0,128.0,272.0,128.0,256.0,112.0,256.0,112.0,240.0,0.0,240.0,0.0,224.0,128.0,224.0,128.0,240.0,144.0,240.0,144.0,256.0,192.0,256.0,192.0,80.0,352.0,80.0,352.0,0.0,640.0,0.0,640.0,16.0,368.0,16.0" x="0.0" y="32.0"/>
+        <p pts="4,0.0,16.0,0.0,0.0,48.0,0.0,48.0,16.0" x="320.0" y="224.0"/>
     </terrain>
 </scene>

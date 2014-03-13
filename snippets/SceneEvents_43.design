@@ -42,6 +42,34 @@
                 <dolater comment="false" x="26" y="121">
                     <group eventID="2" id="-1">
                         <custom-747 comment="false" x="37" y="148"/>
+                        <if comment="false" x="37" y="168">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="198">
+                                    <ACTOR eid="13" id="0"/>
+                                    <string-to-anim comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="buttons"/>
+                                    </string-to-anim>
+                                </setanim>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Button"/>
+                            </eq>
+                        </if>
+                        <else-if comment="false" x="37" y="242">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="272">
+                                    <ACTOR eid="13" id="0"/>
+                                    <string-to-anim comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="split"/>
+                                    </string-to-anim>
+                                </setanim>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Split"/>
+                            </eq>
+                        </else-if>
                     </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>

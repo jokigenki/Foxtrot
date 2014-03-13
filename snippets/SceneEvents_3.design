@@ -24,43 +24,7 @@
                         </say>
                         <if comment="false" x="37" y="173">
                             <group eventID="1" id="-1">
-                                <set-game-val-20 comment="false" x="48" y="218">
-                                    <custom-552 comment="false" id="0" x="0" y="0">
-                                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                                    </custom-552>
-                                </set-game-val-20>
-                                <set-attribute comment="false" x="48" y="248">
-                                    <ACTOR eid="18" id="0"/>
-                                    <int id="1" val="Activate Door PM"/>
-                                    <int id="2" val="_Destination"/>
-                                    <get-game-val-21 comment="false" id="3" x="0" y="0"/>
-                                </set-attribute>
-                                <say comment="false" x="48" y="280">
-                                    <ACTOR eid="18" id="0"/>
-                                    <int id="1" val="Collectable Door PM"/>
-                                    <int id="2" val="DoorActivated"/>
-                                </say>
-                            </group>
-                            <and comment="false" id="0" x="0" y="0">
-                                <noteq comment="false" id="0" x="0" y="0">
-                                    <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="none"/>
-                                </noteq>
-                                <noteq comment="false" id="1" x="0" y="0">
-                                    <get-item comment="false" id="0" x="0" y="0">
-                                        <str-split comment="false" id="0" x="0" y="0">
-                                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                                            <int id="1" val="|"/>
-                                        </str-split>
-                                        <int id="1" val="1"/>
-                                    </get-item>
-                                    <int id="1" val="_Home"/>
-                                </noteq>
-                            </and>
-                        </if>
-                        <if comment="false" x="37" y="319">
-                            <group eventID="1" id="-1">
-                                <set-attribute comment="false" x="48" y="344">
+                                <set-attribute comment="false" x="48" y="198">
                                     <ACTOR eid="19" id="0"/>
                                     <int id="1" val="Displays Popup PM"/>
                                     <int id="2" val="_PopupType"/>
@@ -68,7 +32,7 @@
                                         <ACTORTYPE eid="945" id="0"/>
                                     </pick-type>
                                 </set-attribute>
-                                <set-attribute comment="false" x="48" y="384">
+                                <set-attribute comment="false" x="48" y="238">
                                     <ACTOR eid="19" id="0"/>
                                     <int id="1" val="Displays Popup PM"/>
                                     <int id="2" val="_InactivePopupType"/>
@@ -83,12 +47,12 @@
                     <int id="0" val="0.2"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <if comment="false" x="26" y="448">
+                <if comment="false" x="26" y="302">
                     <group eventID="2" id="-1">
-                        <print comment="false" x="37" y="473">
+                        <print comment="false" x="37" y="327">
                             <int id="0" val="Farm Boss Key Collected"/>
                         </print>
-                        <custom-325 comment="false" x="37" y="493">
+                        <custom-325 comment="false" x="37" y="347">
                             <int id="0" val="Farm1_10|Farm1_Boss|B|A"/>
                         </custom-325>
                     </group>
@@ -96,12 +60,12 @@
                         <int id="0" val="Farm_Boss_Key"/>
                     </custom-326>
                 </if>
-                <if comment="false" x="26" y="525">
+                <if comment="false" x="26" y="379">
                     <group eventID="1" id="-1">
-                        <print comment="false" x="37" y="550">
+                        <print comment="false" x="37" y="404">
                             <int id="0" val="Factory Boss Key Collected"/>
                         </print>
-                        <custom-325 comment="false" x="37" y="570">
+                        <custom-325 comment="false" x="37" y="424">
                             <int id="0" val="Factory2_11|Factory2_Boss|B|A"/>
                         </custom-325>
                     </group>
@@ -109,12 +73,12 @@
                         <int id="0" val="FactoryBossKey"/>
                     </custom-326>
                 </if>
-                <if comment="false" x="26" y="602">
+                <if comment="false" x="26" y="456">
                     <group eventID="1" id="-1">
-                        <print comment="false" x="37" y="627">
+                        <print comment="false" x="37" y="481">
                             <int id="0" val="Larder Boss Key Collected"/>
                         </print>
-                        <custom-325 comment="false" x="37" y="647">
+                        <custom-325 comment="false" x="37" y="501">
                             <int id="0" val="_Larder|Transition To Humpty|D|A"/>
                         </custom-325>
                     </group>
@@ -124,6 +88,44 @@
                 </if>
             </group>
         </init>
+    </group>
+    <group eventID="1" id="1">
+        <if comment="false" x="427" y="320">
+            <group eventID="1" id="-1">
+                <set-game-val-20 comment="false" x="438" y="365">
+                    <custom-552 comment="false" id="0" x="0" y="0">
+                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                    </custom-552>
+                </set-game-val-20>
+                <set-attribute comment="false" x="438" y="395">
+                    <ACTOR eid="18" id="0"/>
+                    <int id="1" val="Activate Door PM"/>
+                    <int id="2" val="_Destination"/>
+                    <get-game-val-21 comment="false" id="3" x="0" y="0"/>
+                </set-attribute>
+                <say comment="false" x="438" y="427">
+                    <ACTOR eid="18" id="0"/>
+                    <int id="1" val="Collectable Door PM"/>
+                    <int id="2" val="DoorActivated"/>
+                </say>
+            </group>
+            <and comment="false" id="0" x="0" y="0">
+                <noteq comment="false" id="0" x="0" y="0">
+                    <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="none"/>
+                </noteq>
+                <noteq comment="false" id="1" x="0" y="0">
+                    <get-item comment="false" id="0" x="0" y="0">
+                        <str-split comment="false" id="0" x="0" y="0">
+                            <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="|"/>
+                        </str-split>
+                        <int id="1" val="1"/>
+                    </get-item>
+                    <int id="1" val="_Home"/>
+                </noteq>
+            </and>
+        </if>
     </group>
     <group eventID="1" id="-1"/>
 </groups>

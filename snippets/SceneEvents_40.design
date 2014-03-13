@@ -60,6 +60,34 @@
                                 <get-game-val-25 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </if>
+                        <if comment="false" x="37" y="329">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="359">
+                                    <ACTOR eid="13" id="0"/>
+                                    <string-to-anim comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="buttons"/>
+                                    </string-to-anim>
+                                </setanim>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Button"/>
+                            </eq>
+                        </if>
+                        <else-if comment="false" x="37" y="403">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="433">
+                                    <ACTOR eid="13" id="0"/>
+                                    <string-to-anim comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="split"/>
+                                    </string-to-anim>
+                                </setanim>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="Split"/>
+                            </eq>
+                        </else-if>
                     </group>
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>

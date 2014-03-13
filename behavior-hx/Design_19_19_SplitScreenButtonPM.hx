@@ -319,7 +319,6 @@ propertyChanged("_LastXTouch", _LastXTouch);
             createRecycledActor(getActorType(996), (566 - ((640 - getScreenWidth()) / 2)), (310 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
             getLastCreatedActor().setActorValue("ActorToControl", _ActorToControl);
             getLastCreatedActor().anchorToScreen();
-            disableThisBehavior();
 }
 
     addMultiTouchStartListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
