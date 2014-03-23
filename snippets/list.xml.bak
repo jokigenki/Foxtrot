@@ -3944,6 +3944,9 @@
         <events>
             <event displayName="Keyboard" enabled="true" id="1" name="event-key-press-release" order="1" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Show confirm" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Hide confirm" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Reset Game" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_930" classname="scripts.ActorEvents_930" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="432" language="" name="ActorEvents_930" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
@@ -4165,11 +4168,15 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_1013" classname="scripts.ActorEvents_1013" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="457" language="" name="ActorEvents_1013" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_1011" classname="scripts.ActorEvents_1011" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="456" language="" name="ActorEvents_1011" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.ActorEvents_1009" classname="scripts.ActorEvents_1009" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="455" language="" name="ActorEvents_1009" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
         <blocks/>

@@ -23,7 +23,7 @@
                     <prop id="3" list="0" val="_Home|Tutorial_05|A|B"/>
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="-1"/>
-                    <prop id="6" list="0" val="false"/>
+                    <prop id="6" list="0" val="true"/>
                     <prop id="7" list="0" val="true"/>
                     <prop id="8" list="0" val="false"/>
                     <prop id="9" list="0" val="true"/>
@@ -32,8 +32,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="15" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -46,8 +46,8 @@
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="15" list="0" val="0.5"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0.5"/>
                 </s>
                 <s enabled="true" id="133">
                     <prop id="32" list="0" val="-1"/>
@@ -78,7 +78,7 @@
                     <prop id="3" list="0" val="_Home|_Larder|B|A"/>
                     <prop id="4" list="0" val="3"/>
                     <prop id="5" list="0" val="-1"/>
-                    <prop id="6" list="0" val="false"/>
+                    <prop id="6" list="0" val="true"/>
                     <prop id="7" list="0" val="true"/>
                     <prop id="8" list="0" val="false"/>
                     <prop id="9" list="0" val="true"/>
@@ -87,8 +87,8 @@
                     <prop id="12" list="0" val="0.5"/>
                     <prop id="13" list="0" val="0"/>
                     <prop id="14" list="0" val="0"/>
-                    <prop id="15" list="0" val="0"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0"/>
                     <prop id="17" list="0" val="0"/>
                     <prop id="16" list="0" val="0"/>
                     <prop id="18" list="0" val="792"/>
@@ -101,11 +101,11 @@
                     <prop id="4" list="0" val="Opening"/>
                     <prop id="13" list="0" val="KeyCollected"/>
                     <prop id="14" list="0" val="false"/>
-                    <prop id="15" list="0" val="0.5"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="15" list="0" val="0.5"/>
                 </s>
                 <s enabled="true" id="133">
-                    <prop id="32" list="0" val="No Sound"/>
+                    <prop id="32" list="0" val="-1"/>
                     <prop id="14" list="0" val="9"/>
                     <prop id="2147483647" list="0" val="thisactor"/>
                     <prop id="17" list="0" val="false"/>
@@ -178,18 +178,13 @@
             <prop id="25" list="0" val="0"/>
             <prop id="24" list="0" val=""/>
         </s>
+        <s enabled="true" id="190">
+            <prop id="1" list="0" val="-1"/>
+        </s>
         <s enabled="true" id="21">
             <prop id="1" list="0" val=""/>
             <prop id="2" list="0" val=""/>
             <prop id="3" list="0" val="0"/>
-        </s>
-        <s enabled="true" id="190">
-            <prop id="1" list="0" val="-1"/>
-        </s>
-        <s enabled="true" id="303">
-            <prop id="1" list="0" val="0.5"/>
-            <prop id="2" list="0" val="3"/>
-            <prop id="3" list="0" val="-1"/>
         </s>
         <s enabled="true" id="329">
             <prop id="1" list="0" val="466"/>
@@ -198,9 +193,14 @@
             <prop id="4" list="1" val=""/>
             <prop id="5" list="0" val="-1"/>
         </s>
+        <s enabled="true" id="303">
+            <prop id="1" list="0" val="0.5"/>
+            <prop id="2" list="0" val="3"/>
+            <prop id="3" list="0" val="-1"/>
+        </s>
     </snippets>
     <terrain>
-        <p pts="4,0.0,208.0,0.0,0.0,480.0,0.0,480.0,208.0" x="80.0" y="80.0"/>
         <p pts="12,304.0,128.0,304.0,96.0,0.0,96.0,0.0,176.0,448.0,176.0,448.0,0.0,0.0,0.0,0.0,80.0,320.0,80.0,320.0,112.0,352.0,112.0,352.0,128.0" x="96.0" y="96.0"/>
+        <p pts="4,0.0,208.0,0.0,0.0,480.0,0.0,480.0,208.0" x="80.0" y="80.0"/>
     </terrain>
 </scene>

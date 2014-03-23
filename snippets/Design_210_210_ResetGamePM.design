@@ -34,24 +34,17 @@
                     <int id="0" val="0"/>
                 </set-game-val-8>
                 <set-game-val-21 comment="false" x="26" y="280">
-                    <int id="0" val="_Home|_Home"/>
+                    <int id="0" val="Tutorial_01|Tutorial_01"/>
                 </set-game-val-21>
                 <set-game-val-20 comment="false" x="26" y="300">
-                    <int id="0" val="_Home|_Home"/>
+                    <int id="0" val="Tutorial_01|Tutorial_01"/>
                 </set-game-val-20>
                 <set-game-val-28 comment="false" x="26" y="320">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-28>
-                <custom-325 comment="false" x="26" y="345">
-                    <int id="0" val="_Home|Tutorial_05|A|B"/>
-                </custom-325>
-                <custom-327 comment="false" x="26" y="365">
-                    <int id="0" val="Tutorial_05Key"/>
-                    <ACTORTYPE eid="142" id="1"/>
-                </custom-327>
-                <save-game comment="false" x="26" y="392">
+                <save-game comment="false" x="26" y="345">
                     <group eventID="1" id="-1">
-                        <scene-change-new comment="false" x="37" y="417">
+                        <scene-change-new comment="false" x="37" y="370">
                             <SCENE eid="42" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0.5"/>
@@ -71,6 +64,15 @@
             <int id="2" val="0"/>
             <int id="3" val="0.5"/>
         </scene-reload-new>
+    </group>
+    <group eventID="1" id="2">
+        <custom-325 comment="false" x="498" y="256">
+            <int id="0" val="_Home|Tutorial_05|A|B"/>
+        </custom-325>
+        <custom-327 comment="false" x="498" y="276">
+            <int id="0" val="Tutorial_05Key"/>
+            <ACTORTYPE eid="142" id="1"/>
+        </custom-327>
     </group>
     <group eventID="1" id="-1"/>
 </groups>

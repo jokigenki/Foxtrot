@@ -1350,7 +1350,11 @@
         <anim across="1" down="1" durations="100" height="24" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="12" sync="false" width="64"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="457" fixedrot="false" fric="0.2" gid="2" id="1013" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="ConfirmButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="1014" static="true">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="210">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
     <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="32" id="1010" name="ContinueButton" shared="false" width="136">
         <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="enabled" numframes="1" originx="68" originy="16" sync="false" width="136">
@@ -7939,11 +7943,7 @@
         <blank name="Self" order="0" type="ACTOR"/>
     </custom-block>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="448" fixedrot="false" fric="0.2" gid="3" id="984" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="StartButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="985" static="true">
-        <snippets>
-            <s enabled="true" id="210">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <sprite atlasID="6" default="0" defaultAnimation="0" desc="" height="21" id="1037" name="StartMenuButton" shared="false" width="21">
         <anim across="1" down="1" durations="100" height="21" id="0" loop="true" name="Animation 0" numframes="1" originx="10" originy="10" sync="false" width="21"/>

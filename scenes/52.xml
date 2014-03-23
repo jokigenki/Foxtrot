@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="2" desc="" eventsnippetid="447" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="0.0" height="384" id="52" name="Start Screen" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
+<scene depth="4" desc="" eventsnippetid="447" extheight="416" extwidth="672" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="0.0" height="384" id="52" name="Start Screen" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="640">
     <layers>
-        <layer color="0,0,255" id="1" name="Layer 1" order="0"/>
-        <layer color="100,168,234" id="0" name="Layer 0" order="1"/>
+        <layer color="0,255,0" id="2" name="Layer 2" order="0"/>
+        <layer color="255,200,0" id="3" name="Layer 3" order="1"/>
+        <layer color="0,0,255" id="1" name="Layer 1" order="2"/>
+        <layer color="100,168,234" id="0" name="Layer 0" order="3"/>
     </layers>
     <color-bg blue="0" green="0" red="0"/>
     <backgrounds>
@@ -22,6 +24,9 @@
         <actor a="0.0" aid="7" c="false" group="2" id="1019" name="txtMusic 7" sx="1.0" sy="1.0" x="396" y="156" z="0"/>
         <actor a="0.0" aid="8" c="false" group="2" id="1021" name="txtNewGame 8" sx="1.0" sy="1.0" x="396" y="199" z="0"/>
         <actor a="0.0" aid="9" c="false" group="2" id="1023" name="txtContinue 9" sx="1.0" sy="1.0" x="396" y="239" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="2" id="1015" name="NewGamePopUp 10" sx="1.0" sy="1.0" x="216" y="140" z="3"/>
+        <actor a="0.0" aid="11" c="false" group="2" id="1013" name="ConfirmButton 11" sx="1.0" sy="1.0" x="234" y="203" z="2"/>
+        <actor a="0.0" aid="12" c="false" group="2" id="1011" name="CancelButton 12" sx="1.0" sy="1.0" x="341" y="204" z="2"/>
     </actors>
     <snippets>
         <s enabled="true" id="21">
