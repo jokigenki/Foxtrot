@@ -3947,6 +3947,9 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_52" classname="scripts.SceneEvents_52" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="447" language="" name="SceneEvents_52" oid="-1" package="scripts." sceneid="52" scenespecific="true" shared="false" type="scene">
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="Local Collected" hidden="false" id="1" name="_LocalCollected" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Total Eggs" hidden="false" id="2" name="_TotalEggs" order="1"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Confirm Panel Y" hidden="false" id="3" name="_ConfirmPanelY" order="2"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Confirm Button Y" hidden="false" id="4" name="_ConfirmButtonY" order="3"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Cancel Button Y" hidden="false" id="5" name="_CancelButtonY" order="4"/>
         <blocks/>
         <events>
             <event displayName="Keyboard" enabled="true" id="1" name="event-key-press-release" order="1" repeats="true"/>
