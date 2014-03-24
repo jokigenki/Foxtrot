@@ -111,14 +111,10 @@
                         <set-val-379-3 comment="false" x="37" y="192">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-379-3>
-                        <scene-set-attribute comment="false" x="37" y="219">
-                            <int id="0" val="Split Screen Button PM"/>
-                            <int id="1" val="_ActorToControl"/>
-                            <actor comment="false" id="2" x="0" y="0">
-                                <ACTOR eid="lastcreated" id="0"/>
-                            </actor>
-                        </scene-set-attribute>
-                        <set-attribute comment="false" x="37" y="252">
+                        <custom-1039 comment="false" x="37" y="219">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </custom-1039>
+                        <set-attribute comment="false" x="37" y="246">
                             <ACTOR eid="9" id="0"/>
                             <int id="1" val="Activate Door PM"/>
                             <int id="2" val="_ActorToMove"/>
@@ -126,7 +122,7 @@
                                 <ACTOR eid="lastcreated" id="0"/>
                             </actor>
                         </set-attribute>
-                        <set-attribute comment="false" x="37" y="292">
+                        <set-attribute comment="false" x="37" y="286">
                             <ACTOR eid="8" id="0"/>
                             <int id="1" val="Activate Door PM"/>
                             <int id="2" val="_ActorToMove"/>
@@ -134,23 +130,23 @@
                                 <ACTOR eid="lastcreated" id="0"/>
                             </actor>
                         </set-attribute>
-                        <actor-enabledisable-snippet comment="false" x="37" y="332">
+                        <actor-enabledisable-snippet comment="false" x="37" y="326">
                             <ACTOR eid="12" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="Displays Popup PM"/>
                         </actor-enabledisable-snippet>
-                        <set-xy comment="false" x="37" y="359">
+                        <set-xy comment="false" x="37" y="353">
                             <get-val-379-4 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="240"/>
                         </set-xy>
-                        <fadeTo comment="false" x="37" y="391">
+                        <fadeTo comment="false" x="37" y="385">
                             <get-val-379-4 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="100"/>
                             <int id="2" val="1"/>
                             <int id="3" val="0"/>
                         </fadeTo>
-                        <setanim comment="false" x="37" y="423">
+                        <setanim comment="false" x="37" y="417">
                             <ACTOR eid="11" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="closed"/>
@@ -161,9 +157,9 @@
                         <get-game-val-25 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <else comment="false" x="26" y="467">
+                <else comment="false" x="26" y="461">
                     <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="487">
+                        <create-actor3 comment="false" x="37" y="481">
                             <ACTORTYPE eid="733" id="0"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <get-val-379-3 comment="false" id="0" x="0" y="0"/>
@@ -175,7 +171,7 @@
                             </get-xy>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <actor-set-prop comment="false" x="37" y="532">
+                        <actor-set-prop comment="false" x="37" y="526">
                             <actor comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="lastcreated" id="0"/>
                             </actor>
@@ -185,20 +181,16 @@
                                 <int id="1" val="Facing Right?"/>
                             </actor-get-prop>
                         </actor-set-prop>
-                        <die comment="false" x="37" y="577">
+                        <die comment="false" x="37" y="571">
                             <get-val-379-3 comment="false" id="0" x="0" y="0"/>
                         </die>
-                        <set-val-379-3 comment="false" x="37" y="609">
+                        <set-val-379-3 comment="false" x="37" y="603">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-379-3>
-                        <scene-set-attribute comment="false" x="37" y="636">
-                            <int id="0" val="Split Screen Button PM"/>
-                            <int id="1" val="_ActorToControl"/>
-                            <actor comment="false" id="2" x="0" y="0">
-                                <ACTOR eid="lastcreated" id="0"/>
-                            </actor>
-                        </scene-set-attribute>
-                        <set-attribute comment="false" x="37" y="669">
+                        <custom-1039 comment="false" x="37" y="630">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </custom-1039>
+                        <set-attribute comment="false" x="37" y="657">
                             <ACTOR eid="9" id="0"/>
                             <int id="1" val="Activate Door PM"/>
                             <int id="2" val="_ActorToMove"/>
@@ -206,7 +198,7 @@
                                 <ACTOR eid="lastcreated" id="0"/>
                             </actor>
                         </set-attribute>
-                        <set-attribute comment="false" x="37" y="709">
+                        <set-attribute comment="false" x="37" y="697">
                             <ACTOR eid="8" id="0"/>
                             <int id="1" val="Activate Door PM"/>
                             <int id="2" val="_ActorToMove"/>
@@ -214,25 +206,25 @@
                                 <ACTOR eid="lastcreated" id="0"/>
                             </actor>
                         </set-attribute>
-                        <actor-enabledisable-snippet comment="false" x="37" y="749">
+                        <actor-enabledisable-snippet comment="false" x="37" y="737">
                             <ACTOR eid="12" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="Displays Popup PM"/>
                         </actor-enabledisable-snippet>
-                        <setanim comment="false" x="37" y="776">
+                        <setanim comment="false" x="37" y="764">
                             <ACTOR eid="11" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="open"/>
                             </string-to-anim>
                         </setanim>
-                        <if comment="false" x="37" y="808">
+                        <if comment="false" x="37" y="796">
                             <group eventID="3" id="-1">
-                                <set-xy comment="false" x="48" y="841">
+                                <set-xy comment="false" x="48" y="829">
                                     <ACTOR eid="7" id="0"/>
                                     <int id="1" val="1"/>
                                     <int id="2" val="174"/>
                                 </set-xy>
-                                <fadeTo comment="false" x="48" y="868">
+                                <fadeTo comment="false" x="48" y="856">
                                     <ACTOR eid="7" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="0"/>
@@ -243,47 +235,47 @@
                                 <ACTOR eid="var" id="0" vid="4"/>
                             </isalive>
                         </if>
-                        <else comment="false" x="37" y="907">
+                        <else comment="false" x="37" y="895">
                             <group eventID="3" id="-1">
-                                <custom-713 comment="false" x="48" y="927">
+                                <custom-713 comment="false" x="48" y="915">
                                     <ACTOR eid="9" id="0"/>
                                 </custom-713>
-                                <custom-749 comment="false" x="48" y="954">
+                                <custom-749 comment="false" x="48" y="942">
                                     <int id="0" val="Tutorial_05Key"/>
                                     <ACTORTYPE eid="142" id="1"/>
                                 </custom-749>
-                                <create-actor3 comment="false" x="48" y="981">
+                                <create-actor3 comment="false" x="48" y="969">
                                     <ACTORTYPE eid="142" id="0"/>
                                     <int id="1" val="209"/>
                                     <int id="2" val="174"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <fadeTo comment="false" x="48" y="1008">
+                                <fadeTo comment="false" x="48" y="996">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="0"/>
                                     <int id="3" val="0"/>
                                 </fadeTo>
-                                <set-val-379-4 comment="false" x="48" y="1035">
+                                <set-val-379-4 comment="false" x="48" y="1023">
                                     <ACTOR eid="lastcreated" id="0"/>
                                 </set-val-379-4>
-                                <backforward comment="false" x="48" y="1062">
+                                <backforward comment="false" x="48" y="1050">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="2"/>
                                 </backforward>
-                                <set-attribute comment="false" x="48" y="1089">
+                                <set-attribute comment="false" x="48" y="1077">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="Collectable Trigger PM"/>
                                     <int id="2" val="_CollectionEvent"/>
                                     <int id="3" val="KeyCollected"/>
                                 </set-attribute>
-                                <set-attribute comment="false" x="48" y="1116">
+                                <set-attribute comment="false" x="48" y="1104">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="Collectable Trigger PM"/>
                                     <int id="2" val="_CollectableId"/>
                                     <int id="3" val="Tutorial_05Key"/>
                                 </set-attribute>
-                                <set-attribute comment="false" x="48" y="1143">
+                                <set-attribute comment="false" x="48" y="1131">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="Collectable Trigger PM"/>
                                     <int id="2" val="_TargetActor"/>
@@ -297,6 +289,24 @@
                 </else>
             </group>
         </receiver-1-747>
+    </group>
+    <group eventID="3" id="1">
+        <scene-set-attribute comment="false" x="511" y="179">
+            <int id="0" val="Split Screen Button PM"/>
+            <int id="1" val="_ActorToControl"/>
+            <actor comment="false" id="2" x="0" y="0">
+                <ACTOR eid="lastcreated" id="0"/>
+            </actor>
+        </scene-set-attribute>
+    </group>
+    <group eventID="3" id="2">
+        <scene-set-attribute comment="false" x="386" y="595">
+            <int id="0" val="Split Screen Button PM"/>
+            <int id="1" val="_ActorToControl"/>
+            <actor comment="false" id="2" x="0" y="0">
+                <ACTOR eid="lastcreated" id="0"/>
+            </actor>
+        </scene-set-attribute>
     </group>
     <group eventID="3" id="-1"/>
 </groups>

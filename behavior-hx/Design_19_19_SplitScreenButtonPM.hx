@@ -78,6 +78,12 @@ public var _LeftTouchStartY:Float;
 public var _DragX:Float;
 
 public var _Mode:String;
+
+public var _RightButton:Actor;
+
+public var _LeftButton:Actor;
+
+public var _ActionButton:Actor;
     
 
 /* Params are:*/
@@ -252,6 +258,18 @@ public function _customBlock_ButtonUpdate():Void
 }
 
 }
+    
+
+/* Params are:__Control */
+public function _customBlock_SetActorToControl(__Control:Actor):Void
+{
+        _ActorToControl = __Control;
+propertyChanged("_ActorToControl", _ActorToControl);
+        _RightButton.setActorValue("ActorToControl", __Control);
+        _LeftButton.setActorValue("ActorToControl", __Control);
+        _ActionButton.setActorValue("ActorToControl", __Control);
+        trace("" + (("" + "Set actor to control to ") + ("" + ("" + __Control))));
+}
 
  
  	public function new(dummy:Int, engine:Engine)
@@ -288,6 +306,9 @@ nameMap.set("Drag X", "_DragX");
 _DragX = 0.0;
 nameMap.set("Mode", "_Mode");
 _Mode = "";
+nameMap.set("Right Button", "_RightButton");
+nameMap.set("Left Button", "_LeftButton");
+nameMap.set("Action Button", "_ActionButton");
 
 	}
 	
@@ -311,15 +332,18 @@ propertyChanged("_LastXTouch", _LastXTouch);
         if((_Mode == "Button"))
 {
             createRecycledActor(getActorType(992), ((660 - getScreenWidth()) / 2), (310 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
-            getLastCreatedActor().setActorValue("ActorToControl", _ActorToControl);
+            _LeftButton = getLastCreatedActor();
+propertyChanged("_LeftButton", _LeftButton);
             getLastCreatedActor().anchorToScreen();
             createRecycledActor(getActorType(994), ((798 - getScreenWidth()) / 2), (310 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
-            getLastCreatedActor().setActorValue("ActorToControl", _ActorToControl);
+            _RightButton = getLastCreatedActor();
+propertyChanged("_RightButton", _RightButton);
             getLastCreatedActor().anchorToScreen();
             createRecycledActor(getActorType(996), (566 - ((640 - getScreenWidth()) / 2)), (310 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
-            getLastCreatedActor().setActorValue("ActorToControl", _ActorToControl);
+            _ActionButton = getLastCreatedActor();
+propertyChanged("_ActionButton", _ActionButton);
             getLastCreatedActor().anchorToScreen();
-            disableThisBehavior();
+            sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [_ActorToControl]);
 }
 
     addMultiTouchStartListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
@@ -421,11 +445,6 @@ if(wrapper.enabled){
         if((_Mode == "Split"))
 {
             sayToScene("Split Screen Button PM", "_customBlock_SplitUpdate");
-}
-
-        else if((_Mode == "Button"))
-{
-            sayToScene("Split Screen Button PM", "_customBlock_ButtonUpdate");
 }
 
 }

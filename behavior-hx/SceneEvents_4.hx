@@ -44,44 +44,34 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_40 extends SceneScript
+class SceneEvents_4 extends SceneScript
 {          	
 	
-public var _ExitName:String;
+public var _LocalCollected:Array<Dynamic>;
+
+public var _TotalEggs:Float;
 
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
+		nameMap.set("Local Collected", "_LocalCollected");
+_LocalCollected = [];
+nameMap.set("Total Eggs", "_TotalEggs");
+_TotalEggs = 0.0;
 
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    if(!(getGameAttribute("In Pants?")))
+		            setGameAttribute("Speed Run In Progress", false);
+        _LocalCollected = getGameAttribute("Collected Items");
+propertyChanged("_LocalCollected", _LocalCollected);
+        if(getGameAttribute("Game Complete"))
 {
-                        createRecycledActor(getActorType(9), getActor(11).getX(), getActor(11).getY(), Script.FRONT);
-                        getLastCreatedActor().setActorValue("Facing Right?", getActor(11).getActorValue("Facing Right?"));
-                        recycleActor(getActor(11));
-                        sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
-                        getActor(10).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-                        getActor(9).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+            getActor(43).setAnimation("" + "completed");
 }
 
-                    if((getGameAttribute("ControlMode") == "Button"))
-{
-                        getActor(13).setAnimation("" + ("" + "buttons"));
-}
-
-                    else if((getGameAttribute("ControlMode") == "Split"))
-{
-                        getActor(13).setAnimation("" + ("" + "split"));
-}
-
-}, null);
 
 	}	      	
 	

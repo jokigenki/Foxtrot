@@ -44,44 +44,24 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_40 extends SceneScript
+class ActorEvents_1013 extends ActorScript
 {          	
 	
-public var _ExitName:String;
-
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-
+		super(actor, engine);	
+		
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    if(!(getGameAttribute("In Pants?")))
-{
-                        createRecycledActor(getActorType(9), getActor(11).getX(), getActor(11).getY(), Script.FRONT);
-                        getLastCreatedActor().setActorValue("Facing Right?", getActor(11).getActorValue("Facing Right?"));
-                        recycleActor(getActor(11));
-                        sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
-                        getActor(10).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-                        getActor(9).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+		    addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void {
+if(wrapper.enabled && 3 == mouseState){
+        shoutToScene("_customEvent_" + "ResetGame");
+        actor.say("Reset Game PM", "_customBlock_ResetGame");
 }
-
-                    if((getGameAttribute("ControlMode") == "Button"))
-{
-                        getActor(13).setAnimation("" + ("" + "buttons"));
-}
-
-                    else if((getGameAttribute("ControlMode") == "Split"))
-{
-                        getActor(13).setAnimation("" + ("" + "split"));
-}
-
-}, null);
+});
 
 	}	      	
 	

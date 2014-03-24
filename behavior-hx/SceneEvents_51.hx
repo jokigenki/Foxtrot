@@ -44,10 +44,12 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_40 extends SceneScript
+class SceneEvents_51 extends SceneScript
 {          	
 	
 public var _ExitName:String;
+
+public var _CurrentNev:Actor;
 
  
  	public function new(dummy:Int, engine:Engine)
@@ -55,6 +57,7 @@ public var _ExitName:String;
 		super(engine);
 		nameMap.set("Exit Name", "_ExitName");
 _ExitName = "";
+nameMap.set("Current Nev", "_CurrentNev");
 
 	}
 	
@@ -63,22 +66,12 @@ _ExitName = "";
 		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
                     if(!(getGameAttribute("In Pants?")))
 {
-                        createRecycledActor(getActorType(9), getActor(11).getX(), getActor(11).getY(), Script.FRONT);
-                        getLastCreatedActor().setActorValue("Facing Right?", getActor(11).getActorValue("Facing Right?"));
-                        recycleActor(getActor(11));
+                        createRecycledActor(getActorType(9), getActor(13).getX(), getActor(13).getY(), Script.FRONT);
+                        getLastCreatedActor().setActorValue("Facing Right?", getActor(13).getActorValue("Facing Right?"));
+                        recycleActor(getActor(13));
                         sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
-                        getActor(10).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-                        getActor(9).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-}
-
-                    if((getGameAttribute("ControlMode") == "Button"))
-{
-                        getActor(13).setAnimation("" + ("" + "buttons"));
-}
-
-                    else if((getGameAttribute("ControlMode") == "Split"))
-{
-                        getActor(13).setAnimation("" + ("" + "split"));
+                        getActor(12).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+                        getActor(14).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
 }
 
 }, null);

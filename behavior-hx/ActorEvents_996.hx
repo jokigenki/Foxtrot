@@ -80,12 +80,10 @@ _TouchId = 0.0;
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    _ActorToControl = actor.getActorValue("ActorToControl");
-propertyChanged("_ActorToControl", _ActorToControl);
-}, actor);
-    addMultiTouchStartListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
+		    addMultiTouchStartListener(function(event:TouchEvent, list:Array<Dynamic>):Void {
 if(wrapper.enabled){
+        _ActorToControl = actor.getActorValue("ActorToControl");
+propertyChanged("_ActorToControl", _ActorToControl);
         if((hasValue(_ActorToControl) != false))
 {
             if(cast((actor.say("ActorEvents_996", "_customBlock_TouchIsInside", [(event.stageX - Engine.screenOffsetX) / (Engine.screenScaleX * Engine.SCALE),(event.stageY - Engine.screenOffsetY) / (Engine.screenScaleY * Engine.SCALE)])), Bool))

@@ -69,7 +69,7 @@ nameMap.set("Current Nev", "_CurrentNev");
                         createRecycledActor(getActorType(9), getActor(13).getX(), getActor(13).getY(), Script.FRONT);
                         getLastCreatedActor().setActorValue("Facing Right?", getActor(13).getActorValue("Facing Right?"));
                         recycleActor(getActor(13));
-                        setValueForScene("Split Screen Button PM", "_ActorToControl", getLastCreatedActor());
+                        sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
                         getActor(12).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
                         getActor(11).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
 }

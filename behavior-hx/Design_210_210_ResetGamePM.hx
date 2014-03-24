@@ -44,45 +44,43 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_40 extends SceneScript
+class Design_210_210_ResetGamePM extends ActorScript
 {          	
-	
-public var _ExitName:String;
+	    
+
+/* Params are: */
+public function _customBlock_ResetGame():Void
+{
+var __Self:Actor = actor;
+        setGameAttribute("Game Was Loaded", true);
+        setGameAttribute("Collected Items", new Array<Dynamic>());
+        setGameAttribute("Collected Speed Run Items", new Array<Dynamic>());
+        setGameAttribute("Inventory New", new Array<Dynamic>());
+        setGameAttribute("Inventory", new Array<Dynamic>());
+        setGameAttribute("Speed Run Collectables", new Array<Dynamic>());
+        setGameAttribute("Unlocked Doors", new Array<Dynamic>());
+        setGameAttribute("Unlocked Speed Run Doors", new Array<Dynamic>());
+        setGameAttribute("Gold Keys", 0);
+        setGameAttribute("Speed Run Timer", 0);
+        setGameAttribute("Save Destination", "Tutorial_01|Tutorial_01");
+        setGameAttribute("Last Destination", "Tutorial_01|Tutorial_01");
+        setGameAttribute("Game Complete", false);
+        saveGame("mySave", function(success:Bool):Void {
+            switchScene(42, createFadeOut((0.5)),createFadeIn((0.5)));
+});
+}
 
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
+		super(actor, engine);	
+		nameMap.set("Actor", "actor");
 
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    if(!(getGameAttribute("In Pants?")))
-{
-                        createRecycledActor(getActorType(9), getActor(11).getX(), getActor(11).getY(), Script.FRONT);
-                        getLastCreatedActor().setActorValue("Facing Right?", getActor(11).getActorValue("Facing Right?"));
-                        recycleActor(getActor(11));
-                        sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
-                        getActor(10).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-                        getActor(9).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-}
-
-                    if((getGameAttribute("ControlMode") == "Button"))
-{
-                        getActor(13).setAnimation("" + ("" + "buttons"));
-}
-
-                    else if((getGameAttribute("ControlMode") == "Split"))
-{
-                        getActor(13).setAnimation("" + ("" + "split"));
-}
-
-}, null);
-
+		
 	}	      	
 	
 	override public function forwardMessage(msg:String)

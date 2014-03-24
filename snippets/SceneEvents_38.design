@@ -58,14 +58,7 @@
                                 <die comment="false" x="48" y="324">
                                     <ACTOR eid="6" id="0"/>
                                 </die>
-                                <scene-set-attribute comment="false" x="48" y="351">
-                                    <int id="0" val="Split Screen Button PM"/>
-                                    <int id="1" val="_ActorToControl"/>
-                                    <actor comment="false" id="2" x="0" y="0">
-                                        <ACTOR eid="lastcreated" id="0"/>
-                                    </actor>
-                                </scene-set-attribute>
-                                <set-attribute comment="false" x="48" y="384">
+                                <set-attribute comment="false" x="48" y="351">
                                     <ACTOR eid="4" id="0"/>
                                     <int id="1" val="Activate Door PM"/>
                                     <int id="2" val="_ActorToMove"/>
@@ -73,14 +66,17 @@
                                         <ACTOR eid="lastcreated" id="0"/>
                                     </actor>
                                 </set-attribute>
+                                <custom-1039 comment="false" x="48" y="391">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </custom-1039>
                             </group>
                             <not comment="false" id="0" x="0" y="0">
                                 <get-game-val-25 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </if>
-                        <if comment="false" x="37" y="436">
+                        <if comment="false" x="37" y="430">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="466">
+                                <setanim comment="false" x="48" y="460">
                                     <ACTOR eid="7" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="buttons"/>
@@ -92,9 +88,9 @@
                                 <int id="1" val="Button"/>
                             </eq>
                         </if>
-                        <else-if comment="false" x="37" y="510">
+                        <else-if comment="false" x="37" y="504">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="540">
+                                <setanim comment="false" x="48" y="534">
                                     <ACTOR eid="7" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="split"/>
@@ -112,6 +108,20 @@
                 </dolater>
             </group>
         </init>
+    </group>
+    <group eventID="1" id="1">
+        <scene-set-attribute comment="false" x="491" y="120">
+            <int id="0" val="Split Screen Button PM"/>
+            <int id="1" val="_ActorToControl"/>
+            <actor comment="false" id="2" x="0" y="0">
+                <ACTOR eid="lastcreated" id="0"/>
+            </actor>
+        </scene-set-attribute>
+    </group>
+    <group eventID="1" id="2">
+        <custom-1039 comment="false" x="511" y="407">
+            <ACTOR eid="lastcreated" id="0"/>
+        </custom-1039>
     </group>
     <group eventID="1" id="-1"/>
 </groups>

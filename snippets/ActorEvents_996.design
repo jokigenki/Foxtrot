@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="2" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <dolater comment="false" x="26" y="40">
-                    <group eventID="2" id="-1">
-                        <set-val-454-1 comment="false" x="37" y="67">
-                            <actor-get-prop comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="ActorToControl"/>
-                            </actor-get-prop>
-                        </set-val-454-1>
-                    </group>
-                    <int id="0" val="0.1"/>
-                    <ACTOR eid="this" id="2"/>
-                </dolater>
-            </group>
-        </init>
-    </group>
-    <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="3" id="-1">
@@ -98,21 +79,27 @@
     <group eventID="5" id="0">
         <event-device-multitouch comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <if comment="false" x="26" y="55">
+                <set-val-454-1 comment="false" x="26" y="55">
+                    <actor-get-prop comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="ActorToControl"/>
+                    </actor-get-prop>
+                </set-val-454-1>
+                <if comment="false" x="26" y="95">
                     <group eventID="3" id="-1">
-                        <if comment="false" x="37" y="88">
+                        <if comment="false" x="37" y="128">
                             <group eventID="5" id="-1">
-                                <set-val-454-2 comment="false" x="48" y="134">
+                                <set-val-454-2 comment="false" x="48" y="174">
                                     <mobile-multitouch comment="false" id="0" x="0" y="0">
                                         <int id="0" val="0"/>
                                     </mobile-multitouch>
                                 </set-val-454-2>
-                                <if comment="false" x="48" y="167">
+                                <if comment="false" x="48" y="207">
                                     <group eventID="4" id="-1">
-                                        <comment-short comment="false" x="59" y="205">
+                                        <comment-short comment="false" x="59" y="245">
                                             <int id="0" val="Custom: Set &amp;quot;Jump&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                         </comment-short>
-                                        <custom-94 comment="false" x="59" y="225">
+                                        <custom-94 comment="false" x="59" y="265">
                                             <ACTOR eid="var" id="0" vid="1"/>
                                             <int id="1" val="Jump"/>
                                             <true comment="false" id="2" x="0" y="0"/>
@@ -125,12 +112,12 @@
                                         </actor-get-prop>
                                     </not>
                                 </if>
-                                <else comment="false" x="48" y="269">
+                                <else comment="false" x="48" y="309">
                                     <group eventID="4" id="-1">
-                                        <comment-short comment="false" x="59" y="289">
+                                        <comment-short comment="false" x="59" y="329">
                                             <int id="0" val="Custom: Set &amp;quot;UseObject&amp;quot; to &amp;lt;true&amp;gt; for &amp;lt;Actor To Control&amp;gt;"/>
                                         </comment-short>
-                                        <custom-94 comment="false" x="59" y="309">
+                                        <custom-94 comment="false" x="59" y="349">
                                             <ACTOR eid="var" id="0" vid="1"/>
                                             <int id="1" val="UseObject"/>
                                             <true comment="false" id="2" x="0" y="0"/>

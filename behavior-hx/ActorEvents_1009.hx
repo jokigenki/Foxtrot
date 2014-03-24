@@ -44,44 +44,41 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_40 extends SceneScript
+class ActorEvents_1009 extends ActorScript
 {          	
 	
-public var _ExitName:String;
-
  
- 	public function new(dummy:Int, engine:Engine)
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
 	{
-		super(engine);
-		nameMap.set("Exit Name", "_ExitName");
-_ExitName = "";
-
+		super(actor, engine);	
+		
 	}
 	
 	override public function init()
 	{
 		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
-                    if(!(getGameAttribute("In Pants?")))
+                    if(!(getGameAttribute("Save Destination") == "none"))
 {
-                        createRecycledActor(getActorType(9), getActor(11).getX(), getActor(11).getY(), Script.FRONT);
-                        getLastCreatedActor().setActorValue("Facing Right?", getActor(11).getActorValue("Facing Right?"));
-                        recycleActor(getActor(11));
-                        sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
-                        getActor(10).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-                        getActor(9).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
+                        setGameAttribute("Last Destination", "" + (scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ReverseDestination(getGameAttribute("Save Destination"))));
+                        actor.setAnimation("" + ("" + "enabled"));
 }
 
-                    if((getGameAttribute("ControlMode") == "Button"))
+                    else
 {
-                        getActor(13).setAnimation("" + ("" + "buttons"));
+                        actor.setAnimation("" + ("" + "disabled"));
 }
 
-                    else if((getGameAttribute("ControlMode") == "Split"))
+}, actor);
+    addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void {
+if(wrapper.enabled && 5 == mouseState){
+        if(!(getGameAttribute("Save Destination") == "none"))
 {
-                        getActor(13).setAnimation("" + ("" + "split"));
+            setGameAttribute("Last Destination", "" + (scripts.Design_206_206_DoorsAndInventoryExtrasPM._customBlock_ReverseDestination(getGameAttribute("Save Destination"))));
+            shoutToScene("_customEvent_" + "SwitchScene");
 }
 
-}, null);
+}
+});
 
 	}	      	
 	

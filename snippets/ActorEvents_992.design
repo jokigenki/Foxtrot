@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="2" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <dolater comment="false" x="26" y="40">
-                    <group eventID="2" id="-1">
-                        <set-val-452-5 comment="false" x="37" y="67">
-                            <actor-get-prop comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="ActorToControl"/>
-                            </actor-get-prop>
-                        </set-val-452-5>
-                    </group>
-                    <int id="0" val="0.1"/>
-                    <ACTOR eid="this" id="2"/>
-                </dolater>
-            </group>
-        </init>
-    </group>
-    <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="3" id="-1">
@@ -66,21 +47,27 @@
     <group eventID="5" id="0">
         <event-device-multitouch comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <if comment="false" x="26" y="55">
+                <set-val-452-5 comment="false" x="26" y="55">
+                    <actor-get-prop comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="ActorToControl"/>
+                    </actor-get-prop>
+                </set-val-452-5>
+                <if comment="false" x="26" y="95">
                     <group eventID="4" id="-1">
-                        <if comment="false" x="37" y="88">
+                        <if comment="false" x="37" y="128">
                             <group eventID="5" id="-1">
-                                <set-val-452-6 comment="false" x="48" y="134">
+                                <set-val-452-6 comment="false" x="48" y="174">
                                     <mobile-multitouch comment="false" id="0" x="0" y="0">
                                         <int id="0" val="0"/>
                                     </mobile-multitouch>
                                 </set-val-452-6>
-                                <custom-94 comment="false" x="48" y="167">
+                                <custom-94 comment="false" x="48" y="207">
                                     <ACTOR eid="var" id="0" vid="5"/>
                                     <int id="1" val="Left"/>
                                     <true comment="false" id="2" x="0" y="0"/>
                                 </custom-94>
-                                <custom-94 comment="false" x="48" y="199">
+                                <custom-94 comment="false" x="48" y="239">
                                     <ACTOR eid="var" id="0" vid="5"/>
                                     <int id="1" val="Right"/>
                                     <false comment="false" id="2" x="0" y="0"/>

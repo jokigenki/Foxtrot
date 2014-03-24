@@ -66,7 +66,7 @@ _ExitName = "";
                         createRecycledActor(getActorType(9), getActor(8).getX(), getActor(8).getY(), Script.FRONT);
                         getLastCreatedActor().setActorValue("Facing Right?", getActor(8).getActorValue("Facing Right?"));
                         recycleActor(getActor(8));
-                        setValueForScene("Split Screen Button PM", "_ActorToControl", getLastCreatedActor());
+                        sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
                         getActor(6).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
                         getActor(7).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
 }

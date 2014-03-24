@@ -44,7 +44,7 @@ import motion.easing.Sine;
 
 
 
-class SceneEvents_40 extends SceneScript
+class SceneEvents_38 extends SceneScript
 {          	
 	
 public var _ExitName:String;
@@ -61,24 +61,31 @@ _ExitName = "";
 	override public function init()
 	{
 		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    trace("" + getGameAttribute("Last Destination"));
+                    trace("" + ("" + getGameAttribute("Last Destination")).indexOf("Tutorial"));
+                    if(!(("" + getGameAttribute("Last Destination")).indexOf("Tutorial") == 0))
+{
+                        trace("" + "PANTS!");
+                        setGameAttribute("In Pants?", true);
+}
+
                     if(!(getGameAttribute("In Pants?")))
 {
-                        createRecycledActor(getActorType(9), getActor(11).getX(), getActor(11).getY(), Script.FRONT);
-                        getLastCreatedActor().setActorValue("Facing Right?", getActor(11).getActorValue("Facing Right?"));
-                        recycleActor(getActor(11));
+                        createRecycledActor(getActorType(9), getActor(6).getX(), getActor(6).getY(), Script.FRONT);
+                        getLastCreatedActor().setActorValue("Facing Right?", getActor(6).getActorValue("Facing Right?"));
+                        recycleActor(getActor(6));
+                        getActor(4).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
                         sayToScene("Split Screen Button PM", "_customBlock_SetActorToControl", [getLastCreatedActor()]);
-                        getActor(10).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
-                        getActor(9).setValue("Activate Door PM", "_ActorToMove", getLastCreatedActor());
 }
 
                     if((getGameAttribute("ControlMode") == "Button"))
 {
-                        getActor(13).setAnimation("" + ("" + "buttons"));
+                        getActor(7).setAnimation("" + ("" + "buttons"));
 }
 
                     else if((getGameAttribute("ControlMode") == "Split"))
 {
-                        getActor(13).setAnimation("" + ("" + "split"));
+                        getActor(7).setAnimation("" + ("" + "split"));
 }
 
 }, null);
