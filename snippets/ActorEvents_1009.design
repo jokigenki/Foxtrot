@@ -8,11 +8,9 @@
                         <if comment="false" x="37" y="67">
                             <group eventID="1" id="-1">
                                 <set-game-val-20 comment="false" x="48" y="97">
-                                    <custom-552 comment="false" id="0" x="0" y="0">
-                                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                                    </custom-552>
+                                    <get-game-val-21 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-20>
-                                <setanim comment="false" x="48" y="127">
+                                <setanim comment="false" x="48" y="122">
                                     <ACTOR eid="this" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="enabled"/>
@@ -24,9 +22,9 @@
                                 <int id="1" val="none"/>
                             </noteq>
                         </if>
-                        <else comment="false" x="37" y="171">
+                        <else comment="false" x="37" y="166">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="191">
+                                <setanim comment="false" x="48" y="186">
                                     <ACTOR eid="this" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="disabled"/>
@@ -41,23 +39,22 @@
             </group>
         </init>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="1" id="-1">
+        <custom-552 comment="false" x="555" y="94">
+            <int id="0" val=""/>
+        </custom-552>
+    </group>
     <group eventID="3" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="42">
                     <group eventID="1" id="-1">
-                        <set-game-val-20 comment="false" x="37" y="72">
-                            <custom-552 comment="false" id="0" x="0" y="0">
-                                <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                            </custom-552>
-                        </set-game-val-20>
-                        <scene-shout comment="false" x="37" y="102">
+                        <scene-shout comment="false" x="37" y="72">
                             <int id="0" val="SwitchScene"/>
                         </scene-shout>
                     </group>
                     <noteq comment="false" id="0" x="0" y="0">
-                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-20 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="none"/>
                     </noteq>
                 </if>
@@ -66,7 +63,15 @@
             <int id="1" val="4"/>
         </event-mouse-enter-exit-actor>
     </group>
+    <group eventID="3" id="1">
+        <set-game-val-20 comment="false" x="283" y="145">
+            <custom-552 comment="false" id="0" x="0" y="0">
+                <get-game-val-21 comment="false" id="0" x="0" y="0"/>
+            </custom-552>
+        </set-game-val-20>
+    </group>
     <group eventID="3" id="-1">
+        <get-game-val-21 comment="false" x="422" y="73"/>
         <and comment="false" x="114" y="211">
             <int id="0" val=""/>
             <noteq comment="false" id="1" x="0" y="0">

@@ -33,9 +33,7 @@
             <get-byobval-19-1039-0 comment="false" id="0" x="0" y="0"/>
         </receiver-11-1039>
     </group>
-    <group eventID="17" id="-1">
-        <get-byobval-19-1039-0 comment="false" x="0" y="0"/>
-    </group>
+    <group eventID="17" id="-1"/>
     <group eventID="16" id="0">
         <event-device-multitouch comment="false" x="15" y="15">
             <group eventID="16" id="-1">
@@ -263,9 +261,34 @@
                 <set-val-19-13 comment="false" x="26" y="195">
                     <int id="0" val="0"/>
                 </set-val-19-13>
-                <if comment="false" x="26" y="215">
+                <create-actor3 comment="false" x="26" y="215">
+                    <ACTORTYPE eid="1036" id="0"/>
+                    <div comment="false" id="1" x="0" y="0">
+                        <minus comment="false" id="0" x="0" y="0">
+                            <int id="0" val="660"/>
+                            <screen-wh comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </screen-wh>
+                        </minus>
+                        <int id="1" val="2"/>
+                    </div>
+                    <minus comment="false" id="2" x="0" y="0">
+                        <int id="0" val="50"/>
+                        <div comment="false" id="1" x="0" y="0">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <int id="0" val="384"/>
+                                <screen-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </screen-wh>
+                            </minus>
+                            <int id="1" val="2"/>
+                        </div>
+                    </minus>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <if comment="false" x="26" y="270">
                     <group eventID="3" id="-1">
-                        <create-actor3 comment="false" x="37" y="245">
+                        <create-actor3 comment="false" x="37" y="300">
                             <ACTORTYPE eid="992" id="0"/>
                             <div comment="false" id="1" x="0" y="0">
                                 <minus comment="false" id="0" x="0" y="0">
@@ -290,13 +313,13 @@
                             </minus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-19-26 comment="false" x="37" y="300">
+                        <set-val-19-26 comment="false" x="37" y="355">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-19-26>
-                        <anchor-screen comment="false" x="37" y="327">
+                        <anchor-screen comment="false" x="37" y="382">
                             <ACTOR eid="lastcreated" id="0"/>
                         </anchor-screen>
-                        <create-actor3 comment="false" x="37" y="354">
+                        <create-actor3 comment="false" x="37" y="409">
                             <ACTORTYPE eid="994" id="0"/>
                             <div comment="false" id="1" x="0" y="0">
                                 <minus comment="false" id="0" x="0" y="0">
@@ -321,13 +344,13 @@
                             </minus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-19-27 comment="false" x="37" y="409">
+                        <set-val-19-27 comment="false" x="37" y="464">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-19-27>
-                        <anchor-screen comment="false" x="37" y="436">
+                        <anchor-screen comment="false" x="37" y="491">
                             <ACTOR eid="lastcreated" id="0"/>
                         </anchor-screen>
-                        <create-actor3 comment="false" x="37" y="463">
+                        <create-actor3 comment="false" x="37" y="518">
                             <ACTORTYPE eid="996" id="0"/>
                             <minus comment="false" id="1" x="0" y="0">
                                 <int id="0" val="566"/>
@@ -355,13 +378,13 @@
                             </minus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-19-28 comment="false" x="37" y="518">
+                        <set-val-19-28 comment="false" x="37" y="573">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-19-28>
-                        <anchor-screen comment="false" x="37" y="545">
+                        <anchor-screen comment="false" x="37" y="600">
                             <ACTOR eid="lastcreated" id="0"/>
                         </anchor-screen>
-                        <custom-1039 comment="false" x="37" y="572">
+                        <custom-1039 comment="false" x="37" y="627">
                             <ACTOR eid="var" id="0" vid="4"/>
                         </custom-1039>
                     </group>
@@ -372,9 +395,6 @@
                 </if>
             </group>
         </init>
-    </group>
-    <group eventID="3" id="1">
-        <disable-snippet comment="false" x="459" y="134"/>
     </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
