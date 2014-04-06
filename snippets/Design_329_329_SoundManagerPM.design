@@ -281,7 +281,7 @@
                 <code-long comment="false" x="26" y="45">
                     <int id="0" val="if (__SetName == null || __SetName == &amp;quot;&amp;quot;) return;&#10;var soundIndex = randomInt(1, __NumberOfSounds);&#10;var soundName = __SetName;&#10;if (__NumberOfSounds &amp;gt; 1) soundName = soundName + &amp;quot; &amp;quot; + soundIndex + &amp;quot; SFX&amp;quot;;&#10;else soundName = soundName + &amp;quot; SFX&amp;quot;;&#10;var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);&#10;if (sound == null)&#10;{&#10;&#9;trace(&amp;quot;Sound &amp;quot; + soundName + &amp;quot; is missing!&amp;quot;);&#10;&#9;return;&#10;}&#10;"/>
                 </code-long>
-                <play-sound4 comment="false" x="26" y="235">
+                <play-sound4 comment="false" x="26" y="205">
                     <int id="0" val="0"/>
                     <code-short comment="false" id="1" x="0" y="0">
                         <int id="0" val="sound"/>
@@ -476,7 +476,7 @@
                         <code-long comment="false" x="37" y="125">
                             <int id="0" val="var item = _LocalSceneSounds[index0];&#10;if (item != null)&#10;{&#10;&#9;var comps = item.split(&amp;quot;|&amp;quot;);&#10;&#9;var soundName = comps[0];&#10;&#9;var sceneName = &amp;quot;&amp;quot; + comps[1];&#10;&#9;var channel = Std.parseInt(comps[2]);&#10;&#10;&#9;if (sceneName == __SceneName &amp;amp;&amp;amp; soundName == __SoundName)&#10;&#9;{&#10;&#9;&#9;trace(&amp;quot;Stop sound on channel &amp;quot; + (channel + 2));&#10;&#9;&#9;stopSoundOnChannel(channel + 2);&#10;&#9;&#9;_LocalSceneSounds[index0] = null;&#10;&#9;&#9;break;&#10;&#9;}&#10;}&#10;&#10;"/>
                         </code-long>
-                        <set-game-val-26 comment="false" x="37" y="315">
+                        <set-game-val-26 comment="false" x="37" y="285">
                             <get-val-329-4 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-26>
                     </group>
@@ -557,7 +557,7 @@
                     </group>
                     <get-val-329-3 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <return comment="false" x="26" y="327">
+                <return comment="false" x="26" y="297">
                     <false comment="false" id="0" x="0" y="0"/>
                 </return>
             </group>
@@ -597,11 +597,11 @@
                 <code-long comment="false" x="26" y="45">
                     <int id="0" val="if (__SoundSet == null || __SoundSet == &amp;quot;&amp;quot;) return;&#10;var soundIndex = randomInt(1, __NumberOfSounds);&#10;var soundName = __SoundSet;&#10;if (__NumberOfSounds &amp;gt; 1) soundName = soundName + &amp;quot; &amp;quot; + soundIndex + &amp;quot; SFX&amp;quot;;&#10;else soundName = soundName + &amp;quot; SFX&amp;quot;;&#10;var sound = cast(scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(soundName), Sound);&#10;if (sound == null)&#10;{&#10;&#9;trace(&amp;quot;Sound &amp;quot; + soundName + &amp;quot; is missing!&amp;quot;);&#10;&#9;return;&#10;}&#10;"/>
                 </code-long>
-                <set-volume-channel comment="false" x="26" y="235">
+                <set-volume-channel comment="false" x="26" y="205">
                     <get-byobval-329-876-2 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="1"/>
                 </set-volume-channel>
-                <play-sound-channel comment="false" x="26" y="260">
+                <play-sound-channel comment="false" x="26" y="230">
                     <int id="0" val="0"/>
                     <code-short comment="false" id="1" x="0" y="0">
                         <int id="0" val="sound"/>
@@ -680,7 +680,7 @@
                         <code-long comment="false" x="37" y="125">
                             <int id="0" val="var item = _LocalSceneSounds[index0];&#10;if (item != null)&#10;{&#10;&#9;var comps = item.split(&amp;quot;|&amp;quot;);&#10;&#9;var soundName = comps[0];&#10;&#9;var sceneName = &amp;quot;&amp;quot; + comps[1];&#10;&#9;var channel = Std.parseInt(comps[2]);&#10;&#9;//ignore actor name as we need to stop all sounds&#10;&#9;&#10;&#9;if (sceneName != __SceneName)&#10;&#9;{&#10;&#9;&#9;stopSoundOnChannel(channel + 2);&#10;&#9;&#9;_LocalSceneSounds[index0] = null;&#10;&#9;}&#10;}&#10;&#10;"/>
                         </code-long>
-                        <set-game-val-26 comment="false" x="37" y="315">
+                        <set-game-val-26 comment="false" x="37" y="285">
                             <get-val-329-4 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-26>
                     </group>
@@ -707,7 +707,7 @@
                         <code-long comment="false" x="37" y="125">
                             <int id="0" val="var item = _LocalSceneSounds[index0];&#10;if (item != null)&#10;{&#10;&#9;var comps = item.split(&amp;quot;|&amp;quot;);&#10;&#9;var soundName = comps[0];&#10;&#9;var sceneName = &amp;quot;&amp;quot; + comps[1];&#10;&#9;var channel = Std.parseInt(comps[2]);&#10;&#9;//ignore the actor name as we need to stop all sounds&#10;&#9;&#10;&#9;if (sceneName == __SceneName)&#10;&#9;{&#10;&#9;&#9;stopSoundOnChannel(channel + 2);&#10;&#9;&#9;_LocalSceneSounds[index0] = null;&#10;&#9;}&#10;}&#10;&#10;"/>
                         </code-long>
-                        <set-game-val-26 comment="false" x="37" y="315">
+                        <set-game-val-26 comment="false" x="37" y="285">
                             <get-val-329-4 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-26>
                     </group>
@@ -905,7 +905,7 @@
                     </group>
                     <get-val-329-3 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <return comment="false" x="26" y="327">
+                <return comment="false" x="26" y="297">
                     <false comment="false" id="0" x="0" y="0"/>
                 </return>
             </group>
@@ -931,7 +931,7 @@
                         <code-long comment="false" x="37" y="125">
                             <int id="0" val="var item = _LocalSceneSounds[index0];&#10;if (item != null)&#10;{&#10;&#9;var comps = item.split(&amp;quot;|&amp;quot;);&#10;&#9;var soundName = comps[0];&#10;&#9;var sceneName = &amp;quot;&amp;quot; + comps[1];&#10;&#9;var channel = Std.parseInt(comps[2]);&#10;&#9;var actorName = &amp;quot;&amp;quot; + comps[3];&#10;&#9;var thisActorName = scripts.Design_27_27_ActorExtrasPM._customBlock_SceneNameForActor(__Actor);&#10;&#10;&#9;if (sceneName == __SceneName &amp;amp;&amp;amp;&#10;&#9;&#9;soundName == __SoundName &amp;amp;&amp;amp;&#10;&#9;&#9;actorName == thisActorName)&#10;&#9;{&#10;&#9;&#9;trace(&amp;quot;Stop sound on channel &amp;quot; + (channel + 2));&#10;&#9;&#9;stopSoundOnChannel(channel + 2);&#10;&#9;&#9;_LocalSceneSounds[index0] = null;&#10;&#9;&#9;break;&#10;&#9;}&#10;}&#10;&#10;"/>
                         </code-long>
-                        <set-game-val-26 comment="false" x="37" y="315">
+                        <set-game-val-26 comment="false" x="37" y="285">
                             <get-val-329-4 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-26>
                     </group>
@@ -944,26 +944,6 @@
         </receiver-36-910>
     </group>
     <group eventID="28" id="-1"/>
-    <group eventID="31" id="0">
-        <event-key-press-release comment="false" x="15" y="15">
-            <group eventID="31" id="-1">
-                <save-game comment="false" x="26" y="42">
-                    <group eventID="31" id="-1">
-                        <scene-change-new comment="false" x="37" y="67">
-                            <SCENE eid="52" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="0.5"/>
-                            <int id="3" val="0"/>
-                            <int id="4" val="0.5"/>
-                        </scene-change-new>
-                    </group>
-                </save-game>
-            </group>
-            <CONTROL eid="7" id="0"/>
-            <int id="1" val="0"/>
-        </event-key-press-release>
-    </group>
-    <group eventID="31" id="-1"/>
     <group eventID="30" id="0">
         <receiver-38-949 comment="false" x="15" y="15">
             <group eventID="30" id="-1">
@@ -987,6 +967,37 @@
         </receiver-38-949>
     </group>
     <group eventID="30" id="-1"/>
+    <group eventID="34" id="0">
+        <event-key-press-release comment="false" x="15" y="15">
+            <group eventID="34" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="34" id="-1">
+                        <scene-change-new comment="false" x="37" y="72">
+                            <SCENE eid="52" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0.5"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0.5"/>
+                        </scene-change-new>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <scenename comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="Start Screen"/>
+                    </noteq>
+                </if>
+                <else comment="false" x="26" y="111">
+                    <group eventID="34" id="-1">
+                        <custom-code comment="false" x="37" y="131">
+                            <int id="0" val="nme.system.System.exit(1);"/>
+                        </custom-code>
+                    </group>
+                </else>
+            </group>
+            <CONTROL eid="7" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="34" id="-1"/>
     <group eventID="32" id="0">
         <event-focus-changed comment="false" x="15" y="15">
             <group eventID="32" id="-1">

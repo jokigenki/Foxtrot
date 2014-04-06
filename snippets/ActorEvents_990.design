@@ -41,31 +41,38 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="42">
                     <group eventID="1" id="-1">
-                        <set-game-val-23 comment="false" x="37" y="67">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-23>
-                        <setanim comment="false" x="37" y="92">
+                        <print comment="false" x="37" y="67">
+                            <int id="0" val="MUSIC OFF"/>
+                        </print>
+                        <setanim comment="false" x="37" y="87">
                             <ACTOR eid="this" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="sfx"/>
                             </string-to-anim>
                         </setanim>
+                        <custom-635 comment="false" x="37" y="119"/>
                     </group>
                     <get-game-val-23 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="136">
+                <else comment="false" x="26" y="151">
                     <group eventID="1" id="-1">
-                        <set-game-val-23 comment="false" x="37" y="156">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-23>
-                        <setanim comment="false" x="37" y="181">
+                        <print comment="false" x="37" y="171">
+                            <int id="0" val="MUSIC ON"/>
+                        </print>
+                        <setanim comment="false" x="37" y="191">
                             <ACTOR eid="this" id="0"/>
                             <string-to-anim comment="false" id="1" x="0" y="0">
                                 <int id="0" val="music"/>
                             </string-to-anim>
                         </setanim>
+                        <custom-632 comment="false" x="37" y="223">
+                            <SOUND eid="851" id="0"/>
+                        </custom-632>
                     </group>
                 </else>
+                <save-game comment="false" x="26" y="262">
+                    <group eventID="2" id="-1"/>
+                </save-game>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="4"/>

@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="1" id="0">
-        <event-key-press-release comment="false" x="15" y="15">
-            <group eventID="1" id="-1">
-                <custom-code comment="false" x="26" y="42">
-                    <int id="0" val="nme.system.System.exit(1);"/>
-                </custom-code>
-            </group>
-            <CONTROL eid="7" id="0"/>
-            <int id="1" val="0"/>
-        </event-key-press-release>
-    </group>
-    <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
                 <scene-shout comment="false" x="26" y="40">
                     <int id="0" val="HideConfirm"/>
                 </scene-shout>
-                <if comment="false" x="26" y="60">
+                <set-val-447-3 comment="false" x="26" y="60">
+                    <int id="0" val="140"/>
+                </set-val-447-3>
+                <set-val-447-5 comment="false" x="26" y="80">
+                    <int id="0" val="203"/>
+                </set-val-447-5>
+                <set-val-447-4 comment="false" x="26" y="100">
+                    <int id="0" val="203"/>
+                </set-val-447-4>
+                <if comment="false" x="26" y="120">
                     <group eventID="1" id="-1">
-                        <load-game comment="false" x="37" y="90">
+                        <load-game comment="false" x="37" y="150">
                             <group eventID="1" id="-1">
-                                <set-val-447-3 comment="false" x="48" y="115">
-                                    <int id="0" val="140"/>
-                                </set-val-447-3>
-                                <set-val-447-5 comment="false" x="48" y="135">
-                                    <int id="0" val="203"/>
-                                </set-val-447-5>
-                                <set-val-447-4 comment="false" x="48" y="155">
-                                    <int id="0" val="203"/>
-                                </set-val-447-4>
                                 <if comment="false" x="48" y="175">
                                     <group eventID="1" id="-1">
                                         <set-game-val-22 comment="false" x="59" y="200">
@@ -129,7 +117,7 @@
         </init>
     </group>
     <group eventID="2" id="-1">
-        <and comment="false" x="376" y="248">
+        <and comment="false" x="387" y="125">
             <int id="0" val=""/>
             <noteq comment="false" id="1" x="0" y="0">
                 <get-item comment="false" id="0" x="0" y="0">
@@ -142,7 +130,7 @@
                 <int id="1" val="_Home"/>
             </noteq>
         </and>
-        <and comment="false" x="378" y="314">
+        <and comment="false" x="401" y="209">
             <int id="0" val=""/>
             <noteq comment="false" id="1" x="0" y="0">
                 <get-item comment="false" id="0" x="0" y="0">
@@ -258,11 +246,6 @@
             </group>
             <int id="0" val="ResetGame"/>
         </event-custom>
-    </group>
-    <group eventID="5" id="1">
-        <custom-349 comment="false" x="55" y="166">
-            <ACTOR eid="lastcreated" id="0"/>
-        </custom-349>
     </group>
     <group eventID="5" id="-1"/>
 </groups>

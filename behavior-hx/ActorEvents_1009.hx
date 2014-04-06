@@ -44,7 +44,7 @@ import motion.easing.Sine;
 
 
 
-class ActorEvents_990 extends ActorScript
+class ActorEvents_1009 extends ActorScript
 {          	
 	
  
@@ -56,29 +56,24 @@ class ActorEvents_990 extends ActorScript
 	
 	override public function init()
 	{
-		            trace("" + (("" + "MUSIC ON: -------------------------------") + ("" + ("" + getGameAttribute("Is Music On?")))));
-        if(getGameAttribute("Is Music On?"))
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    if(!(getGameAttribute("Save Destination") == "none"))
 {
-            actor.setAnimation("" + ("" + "music"));
+                        setGameAttribute("Last Destination", getGameAttribute("Save Destination"));
+                        actor.setAnimation("" + ("" + "enabled"));
 }
 
-        else
+                    else
 {
-            actor.setAnimation("" + ("" + "sfx"));
+                        actor.setAnimation("" + ("" + "disabled"));
 }
 
+}, actor);
     addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void {
 if(wrapper.enabled && 5 == mouseState){
-        if(getGameAttribute("Is Music On?"))
+        if(!(getGameAttribute("Last Destination") == "none"))
 {
-            setGameAttribute("Is Music On?", false);
-            actor.setAnimation("" + ("" + "sfx"));
-}
-
-        else
-{
-            setGameAttribute("Is Music On?", true);
-            actor.setAnimation("" + ("" + "music"));
+            shoutToScene("_customEvent_" + "SwitchScene");
 }
 
 }
