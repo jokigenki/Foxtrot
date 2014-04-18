@@ -230,19 +230,22 @@
             <group eventID="8" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="8" id="-1">
-                        <toggle-image comment="false" x="37" y="67">
+                        <custom-713 comment="false" x="37" y="67">
+                            <ACTOR eid="4" id="0"/>
+                        </custom-713>
+                        <toggle-image comment="false" x="37" y="94">
                             <ACTOR eid="19" id="0"/>
                             <int id="1" val="1"/>
                         </toggle-image>
-                        <if comment="false" x="37" y="94">
+                        <if comment="false" x="37" y="121">
                             <group eventID="4" id="-1">
-                                <set-attribute comment="false" x="48" y="119">
+                                <set-attribute comment="false" x="48" y="146">
                                     <ACTOR eid="15" id="0"/>
                                     <int id="1" val="Inventory Collectable PM"/>
                                     <int id="2" val="_CollectableId"/>
                                     <int id="3" val="Egg2_Speed"/>
                                 </set-attribute>
-                                <setanim comment="false" x="48" y="146">
+                                <setanim comment="false" x="48" y="173">
                                     <ACTOR eid="15" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="Egg2_Speed"/>
@@ -255,28 +258,28 @@
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <set-val-362-4 comment="false" x="26" y="202">
+                <set-val-362-4 comment="false" x="26" y="229">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-362-4>
-                <add-list comment="false" x="26" y="227">
+                <add-list comment="false" x="26" y="254">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="12" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="260">
+                <add-list comment="false" x="26" y="287">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="9" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="293">
+                <add-list comment="false" x="26" y="320">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="10" id="0"/>
                     </actor>
                 </add-list>
-                <add-list comment="false" x="26" y="326">
+                <add-list comment="false" x="26" y="353">
                     <get-val-362-4 comment="false" id="0" x="0" y="0"/>
                     <actor comment="false" id="1" x="0" y="0">
                         <ACTOR eid="11" id="0"/>
@@ -284,11 +287,6 @@
                 </add-list>
             </group>
         </init>
-    </group>
-    <group eventID="8" id="1">
-        <custom-713 comment="false" x="422" y="55">
-            <ACTOR eid="4" id="0"/>
-        </custom-713>
     </group>
     <group eventID="8" id="2">
         <if comment="false" x="327" y="407">
