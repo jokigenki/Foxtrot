@@ -42,6 +42,20 @@ import motion.easing.Quart;
 import motion.easing.Quint;
 import motion.easing.Sine;
 
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
 
 
 class Design_304_304_ActivateDoorPM extends ActorScript
@@ -100,9 +114,9 @@ propertyChanged("_DoorReady", _DoorReady);
             if((_ExitSide < 0))
 {
                 actor.setActorValue("Facing Right?", false);
-                _SlideToX = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float) - (actor.getWidth() + 5)));
+                _SlideToX = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float) - ((actor.getWidth()) + 5)));
 propertyChanged("_SlideToX", _SlideToX);
-                _SlideStartX = asNumber((actor.getXCenter() - actor.getWidth()));
+                _SlideStartX = asNumber((actor.getXCenter() - (actor.getWidth())));
 propertyChanged("_SlideStartX", _SlideStartX);
 }
 
@@ -111,7 +125,7 @@ propertyChanged("_SlideStartX", _SlideStartX);
                 actor.setActorValue("Facing Right?", true);
                 _SlideToX = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorRight(actor)), Float) + 5));
 propertyChanged("_SlideToX", _SlideToX);
-                _SlideStartX = asNumber((actor.getXCenter() + actor.getWidth()));
+                _SlideStartX = asNumber((actor.getXCenter() + (actor.getWidth())));
 propertyChanged("_SlideStartX", _SlideStartX);
 }
 
@@ -137,9 +151,9 @@ propertyChanged("_SlideStartX", _SlideStartX);
 
             if((_ExitVertical < 0))
 {
-                _SlideToY = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float) - (actor.getHeight() + 5)));
+                _SlideToY = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float) - ((actor.getHeight()) + 5)));
 propertyChanged("_SlideToY", _SlideToY);
-                _SlideStartY = asNumber((actor.getYCenter() - actor.getHeight()));
+                _SlideStartY = asNumber((actor.getYCenter() - (actor.getHeight())));
 propertyChanged("_SlideStartY", _SlideStartY);
 }
 
@@ -147,7 +161,7 @@ propertyChanged("_SlideStartY", _SlideStartY);
 {
                 _SlideToY = asNumber((cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) + 5));
 propertyChanged("_SlideToY", _SlideToY);
-                _SlideStartY = asNumber((actor.getYCenter() + actor.getHeight()));
+                _SlideStartY = asNumber((actor.getYCenter() + (actor.getHeight())));
 propertyChanged("_SlideStartY", _SlideStartY);
 }
 
@@ -190,7 +204,7 @@ propertyChanged("_DoorReady", _DoorReady);
             _ActorToMove.fadeTo(0 / 100, _ExitTime, Quad.easeOut);
             if(_SlideToCentre)
 {
-                _ActorToMove.moveTo(actor.getX(), (cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) - _ActorToMove.getHeight()), _ExitTime, Expo.easeOut);
+                _ActorToMove.moveTo(actor.getX(), (cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorBottom(actor)), Float) - (_ActorToMove.getHeight())), _ExitTime, Expo.easeOut);
 }
 
             else if(_MoveToLastX)
@@ -265,9 +279,9 @@ nameMap.set("Exit Vertical", "_ExitVertical");
 _ExitVertical = 0.0;
 nameMap.set("Slide To X", "_SlideToX");
 _SlideToX = 0.0;
+nameMap.set("Actor", "actor");
 nameMap.set("Slide To Y", "_SlideToY");
 _SlideToY = 0.0;
-nameMap.set("Actor", "actor");
 nameMap.set("Slide Start Y", "_SlideStartY");
 _SlideStartY = 0.0;
 nameMap.set("Slide Start X", "_SlideStartX");

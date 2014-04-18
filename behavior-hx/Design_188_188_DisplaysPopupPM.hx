@@ -42,6 +42,20 @@ import motion.easing.Quart;
 import motion.easing.Quint;
 import motion.easing.Sine;
 
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
 
 
 class Design_188_188_DisplaysPopupPM extends ActorScript
@@ -110,7 +124,7 @@ nameMap.set("Actor", "actor");
 	{
 		            if(!(asBoolean(_ActivationRegion)))
 {
-            createBoxRegion(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float), cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float), actor.getWidth(), actor.getHeight());
+            createBoxRegion(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorLeft(actor)), Float), cast((scripts.Design_27_27_ActorExtrasPM._customBlock_GetActorTop(actor)), Float), (actor.getWidth()), (actor.getHeight()));
             _XPos = asNumber((actor.getX() + _XOffset));
 propertyChanged("_XPos", _XPos);
             _YPos = asNumber((actor.getY() + _YOffset));

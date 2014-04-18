@@ -13,30 +13,39 @@
                     <group eventID="1" id="-1">
                         <if comment="false" x="37" y="112">
                             <group eventID="1" id="-1">
-                                <incdec comment="false" x="48" y="147">
+                                <incdec comment="false" x="48" y="152">
                                     <int id="0" val="2"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="1"/>
                                 </incdec>
                             </group>
-                            <more comment="false" id="0" x="0" y="0">
-                                <str-indexof comment="false" id="0" x="0" y="0">
-                                    <for-each-item comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="Egg"/>
-                                </str-indexof>
-                                <int id="1" val="-1"/>
-                            </more>
+                            <and comment="false" id="0" x="0" y="0">
+                                <more comment="false" id="0" x="0" y="0">
+                                    <str-indexof comment="false" id="0" x="0" y="0">
+                                        <for-each-item comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="Egg"/>
+                                    </str-indexof>
+                                    <int id="1" val="-1"/>
+                                </more>
+                                <more comment="false" id="1" x="0" y="0">
+                                    <str-indexof comment="false" id="0" x="0" y="0">
+                                        <for-each-item comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="_"/>
+                                    </str-indexof>
+                                    <int id="1" val="-1"/>
+                                </more>
+                            </and>
                         </if>
                     </group>
                     <get-val-440-1 comment="false" id="0" x="0" y="0"/>
                 </for-each>
-                <print comment="false" x="26" y="198">
+                <print comment="false" x="26" y="203">
                     <str-combine comment="false" id="0" x="0" y="0">
                         <int id="0" val="Total Eggs: "/>
                         <get-val-440-2 comment="false" id="1" x="0" y="0"/>
                     </str-combine>
                 </print>
-                <set-game-val-28 comment="false" x="26" y="228">
+                <set-game-val-28 comment="false" x="26" y="233">
                     <moreeq comment="false" id="0" x="0" y="0">
                         <get-val-440-2 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="25"/>

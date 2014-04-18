@@ -104,25 +104,22 @@
             <group eventID="6" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="6" id="-1">
-                        <print comment="false" x="37" y="65">
-                            <int id="0" val="STOP CURRENT MUSIC"/>
-                        </print>
-                        <control-sound-channel comment="false" x="37" y="85">
+                        <control-sound-channel comment="false" x="37" y="65">
                             <int id="0" val="0"/>
                             <int id="1" val="0"/>
                         </control-sound-channel>
-                        <set-game-val-22 comment="false" x="37" y="112">
+                        <set-game-val-22 comment="false" x="37" y="92">
                             <int id="0" val="None"/>
                         </set-game-val-22>
-                        <set-game-val-23 comment="false" x="37" y="132">
+                        <set-game-val-23 comment="false" x="37" y="112">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-23>
                     </group>
                     <get-game-val-23 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <if comment="false" x="26" y="169">
+                <if comment="false" x="26" y="149">
                     <group eventID="4" id="-1">
-                        <say comment="false" x="37" y="202">
+                        <say comment="false" x="37" y="182">
                             <ACTOR eid="var" id="0" vid="2"/>
                             <int id="1" val="Music Toggle PM"/>
                             <int id="2" val="MusicOff"/>
@@ -135,6 +132,11 @@
                 </if>
             </group>
         </receiver-8-635>
+    </group>
+    <group eventID="6" id="1">
+        <print comment="false" x="325" y="37">
+            <int id="0" val="STOP CURRENT MUSIC"/>
+        </print>
     </group>
     <group eventID="6" id="-1"/>
     <group eventID="7" id="0">
@@ -198,19 +200,21 @@
     <group eventID="8" id="0">
         <receiver-9-642 comment="false" x="15" y="15">
             <group eventID="8" id="-1">
-                <print comment="false" x="26" y="40">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="LOOP CURRENT MUSIC"/>
-                        <tostring comment="false" id="1" x="0" y="0">
-                            <get-val-329-1 comment="false" id="0" x="0" y="0"/>
-                        </tostring>
-                    </str-combine>
-                </print>
-                <custom-632 comment="false" x="26" y="75">
+                <custom-632 comment="false" x="26" y="40">
                     <get-val-329-1 comment="false" id="0" x="0" y="0"/>
                 </custom-632>
             </group>
         </receiver-9-642>
+    </group>
+    <group eventID="8" id="1">
+        <print comment="false" x="261" y="65">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="LOOP CURRENT MUSIC"/>
+                <tostring comment="false" id="1" x="0" y="0">
+                    <get-val-329-1 comment="false" id="0" x="0" y="0"/>
+                </tostring>
+            </str-combine>
+        </print>
     </group>
     <group eventID="8" id="-1"/>
     <group eventID="11" id="0">
@@ -491,24 +495,12 @@
     <group eventID="19" id="0">
         <receiver-24-861 comment="false" x="15" y="15">
             <group eventID="19" id="-1">
-                <print comment="false" x="26" y="45">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="LOOPING "/>
-                        <str-combine comment="false" id="1" x="0" y="0">
-                            <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
-                            <str-combine comment="false" id="1" x="0" y="0">
-                                <int id="0" val=" ON "/>
-                                <get-byobval-329-861-1 comment="false" id="1" x="0" y="0"/>
-                            </str-combine>
-                        </str-combine>
-                    </str-combine>
-                </print>
-                <custom-code comment="false" x="26" y="85">
+                <custom-code comment="false" x="26" y="45">
                     <int id="0" val="_Sound = cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound);"/>
                 </custom-code>
-                <if comment="false" x="26" y="105">
+                <if comment="false" x="26" y="65">
                     <group eventID="12" id="-1">
-                        <play-sound-channel comment="false" x="37" y="138">
+                        <play-sound-channel comment="false" x="37" y="98">
                             <int id="0" val="1"/>
                             <SOUND eid="var" id="1" vid="5"/>
                             <get-byobval-329-861-1 comment="false" id="2" x="0" y="0"/>
@@ -519,9 +511,9 @@
                         <int id="1" val="0"/>
                     </value>
                 </if>
-                <else comment="false" x="26" y="182">
+                <else comment="false" x="26" y="142">
                     <group eventID="12" id="-1">
-                        <print comment="false" x="37" y="202">
+                        <print comment="false" x="37" y="162">
                             <str-combine comment="false" id="0" x="0" y="0">
                                 <int id="0" val="Sound "/>
                                 <str-combine comment="false" id="1" x="0" y="0">
@@ -536,6 +528,20 @@
             <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
             <get-byobval-329-861-1 comment="false" id="1" x="0" y="0"/>
         </receiver-24-861>
+    </group>
+    <group eventID="19" id="1">
+        <print comment="false" x="468" y="177">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="LOOPING "/>
+                <str-combine comment="false" id="1" x="0" y="0">
+                    <get-byobval-329-861-0 comment="false" id="0" x="0" y="0"/>
+                    <str-combine comment="false" id="1" x="0" y="0">
+                        <int id="0" val=" ON "/>
+                        <get-byobval-329-861-1 comment="false" id="1" x="0" y="0"/>
+                    </str-combine>
+                </str-combine>
+            </str-combine>
+        </print>
     </group>
     <group eventID="19" id="-1"/>
     <group eventID="18" id="0">

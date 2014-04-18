@@ -42,6 +42,20 @@ import motion.easing.Quart;
 import motion.easing.Quint;
 import motion.easing.Sine;
 
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
 
 
 class Design_56_56_PivotPM extends ActorScript
@@ -164,9 +178,9 @@ propertyChanged("_YPos", _YPos);
 propertyChanged("_Lift", _Lift);
             if(((_LiftOffsetX == 0) && (_LiftOffsetY == 0)))
 {
-                _LiftOffsetX = asNumber(_Lift.getWidth()/2);
+                _LiftOffsetX = asNumber((_Lift.getWidth()/2));
 propertyChanged("_LiftOffsetX", _LiftOffsetX);
-                _LiftOffsetY = asNumber(_Lift.getHeight()/2);
+                _LiftOffsetY = asNumber((_Lift.getHeight()/2));
 propertyChanged("_LiftOffsetY", _LiftOffsetY);
                 _Lift.setX((_Lift.getX() - _LiftOffsetX));
                 _Lift.setY((_Lift.getY() - _LiftOffsetY));

@@ -42,6 +42,20 @@ import motion.easing.Quart;
 import motion.easing.Quint;
 import motion.easing.Sine;
 
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
 
 
 class Design_191_191_DisplayOnCollectedPM extends ActorScript
@@ -70,8 +84,8 @@ var __Self:Actor = actor;
         createRecycledActor(_ItemCollectBackground, (((getScreenWidth() / 2) + getScreenX()) - 32), (((getScreenHeight() / 2) + getScreenY()) - 32), Script.FRONT);
         createRecycledActor(_CollectionDisplayType, getLastCreatedActor().getXCenter(), getLastCreatedActor().getYCenter(), Script.FRONT);
         trace("" + (("" + getLastCreatedActor().getXCenter()) + ("" + (("" + ":") + ("" + getLastCreatedActor().getYCenter())))));
-        getLastCreatedActor().setX((getLastCreatedActor().getX() - (getLastCreatedActor().getWidth() / 2)));
-        getLastCreatedActor().setY((getLastCreatedActor().getY() - (getLastCreatedActor().getHeight() / 2)));
+        getLastCreatedActor().setX((getLastCreatedActor().getX() - ((getLastCreatedActor().getWidth()) / 2)));
+        getLastCreatedActor().setY((getLastCreatedActor().getY() - ((getLastCreatedActor().getHeight()) / 2)));
         getLastCreatedActor().setActorValue("Collection Display", true);
         getLastCreatedActor().setActorValue("Collection Animation", ("" + actor.getAnimation()));
         sayToScene("Sound Manager PM", "_customBlock_PlaySound", [_SFX]);

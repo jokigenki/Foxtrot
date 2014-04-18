@@ -212,19 +212,22 @@
             <group eventID="4" id="-1">
                 <dolater comment="false" x="26" y="40">
                     <group eventID="4" id="-1">
-                        <toggle-image comment="false" x="37" y="67">
+                        <custom-713 comment="false" x="37" y="67">
+                            <ACTOR eid="7" id="0"/>
+                        </custom-713>
+                        <toggle-image comment="false" x="37" y="94">
                             <ACTOR eid="18" id="0"/>
                             <int id="1" val="1"/>
                         </toggle-image>
-                        <if comment="false" x="37" y="94">
+                        <if comment="false" x="37" y="121">
                             <group eventID="4" id="-1">
-                                <set-attribute comment="false" x="48" y="119">
+                                <set-attribute comment="false" x="48" y="146">
                                     <ACTOR eid="14" id="0"/>
                                     <int id="1" val="Inventory Collectable PM"/>
                                     <int id="2" val="_CollectableId"/>
                                     <int id="3" val="Egg1_Speed"/>
                                 </set-attribute>
-                                <setanim comment="false" x="48" y="146">
+                                <setanim comment="false" x="48" y="173">
                                     <ACTOR eid="14" id="0"/>
                                     <string-to-anim comment="false" id="1" x="0" y="0">
                                         <int id="0" val="Egg1_Speed"/>

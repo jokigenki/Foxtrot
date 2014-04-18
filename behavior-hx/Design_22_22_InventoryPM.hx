@@ -42,6 +42,20 @@ import motion.easing.Quart;
 import motion.easing.Quint;
 import motion.easing.Sine;
 
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
 
 
 class Design_22_22_InventoryPM extends SceneScript
@@ -124,7 +138,7 @@ propertyChanged("_LastActor", _LastActor);
                     /* "Custom: <Last Actor> is null" */
                     if(!(cast((scripts.Design_27_27_ActorExtrasPM._customBlock_ActorIsNull(_LastActor)), Bool)))
 {
-                        _CurrentWidth += (_LastActor.getWidth() + _ItemSpacing);
+                        _CurrentWidth += ((_LastActor.getWidth()) + _ItemSpacing);
 propertyChanged("_CurrentWidth", _CurrentWidth);
 }
 

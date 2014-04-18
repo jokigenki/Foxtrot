@@ -42,6 +42,20 @@ import motion.easing.Quart;
 import motion.easing.Quint;
 import motion.easing.Sine;
 
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
 
 
 class SceneEvents_52 extends SceneScript
@@ -116,7 +130,7 @@ propertyChanged("_ConfirmButtonY", _ConfirmButtonY);
 propertyChanged("_LocalCollected", _LocalCollected);
                     for(item in cast(_LocalCollected, Array<Dynamic>))
 {
-                        if((("" + item).indexOf("Egg") > -1))
+                        if(((("" + item).indexOf("Egg") > -1) && (("" + item).indexOf("_") > -1)))
 {
                             _TotalEggs += 1;
 propertyChanged("_TotalEggs", _TotalEggs);
@@ -124,6 +138,7 @@ propertyChanged("_TotalEggs", _TotalEggs);
 
 }
 
+                    trace("" + (("" + "TOTAL AEEGGS:") + ("" + _TotalEggs)));
                     setGameAttribute("Game Complete", (_TotalEggs == 25));
 }
 

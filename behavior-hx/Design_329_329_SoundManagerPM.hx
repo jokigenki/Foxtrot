@@ -42,6 +42,20 @@ import motion.easing.Quart;
 import motion.easing.Quint;
 import motion.easing.Sine;
 
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
 
 
 class Design_329_329_SoundManagerPM extends SceneScript
@@ -80,7 +94,6 @@ public function _customBlock_LoopMusic(__Music:Sound):Void
 /* Params are:*/
 public function _customBlock_LoopCurrentMusic():Void
 {
-        trace("" + (("" + "LOOP CURRENT MUSIC") + ("" + ("" + _Music))));
         sayToScene("Sound Manager PM", "_customBlock_LoopMusic", [_Music]);
 }
     
@@ -108,7 +121,6 @@ public function _customBlock_StopCurrentMusic():Void
 {
         if(getGameAttribute("Is Music On?"))
 {
-            trace("" + "STOP CURRENT MUSIC");
             stopSoundOnChannel(Std.int(0));
             setGameAttribute("Current Music", "None");
             setGameAttribute("Is Music On?", false);
@@ -460,7 +472,6 @@ if (item != null)
 /* Params are:__SoundName __Channel */
 public function _customBlock_LoopSoundNamed(__SoundName:String, __Channel:Float):Void
 {
-        trace("" + (("" + "LOOPING ") + ("" + (("" + __SoundName) + ("" + (("" + " ON ") + ("" + __Channel)))))));
         _Sound = cast((scripts.Design_207_207_StencylExtrasPM._customBlock_GetNamedSound(__SoundName)), Sound);
         if((hasValue(_Sound) != false))
 {

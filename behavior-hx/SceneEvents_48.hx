@@ -58,10 +58,21 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_19 extends SceneScript
+class SceneEvents_48 extends SceneScript
 {          	
 	
 public var _ExitName:String;
+
+public var _BombCrate:Actor;
+    public function _customEvent_TimedSwitchLight11PreSwitchedOn():Void
+{
+        if(((hasValue(_BombCrate) != false) && _BombCrate.isAlive()))
+{
+            _BombCrate.setValue("Explode After Time PM", "_ExplodeAfterSeconds", 0.5);
+}
+
+}
+
 
  
  	public function new(dummy:Int, engine:Engine)
@@ -69,14 +80,58 @@ public var _ExitName:String;
 		super(engine);
 		nameMap.set("Exit Name", "_ExitName");
 _ExitName = "";
+nameMap.set("Bomb Crate", "_BombCrate");
 
 	}
 	
 	override public function init()
 	{
-		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+		            if(!(getGameAttribute("Speed Run In Progress")))
+{
+            recycleActor(getActor(54));
+            recycleActor(getActor(55));
+}
+
+        runLater(1000 * 0.2, function(timeTask:TimedTask):Void {
                     sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Conveyor Loop SFX",getCurrentSceneName()]);
 }, null);
+    addActorEntersRegionListener(getRegion(1), function(a:Actor, list:Array<Dynamic>):Void  {
+if(wrapper.enabled && sameAsAny(getActorType(653),a.getType(),a.getGroup())){
+        a.applyImpulse(0, -1, 75);
+        getActor(9).say("Activate On Event PM", "_customEvent_" + "Activate");
+}
+});
+    addWhenTypeGroupCreatedListener(getActorType(653), function(eventActor:Actor, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        _BombCrate = eventActor;
+propertyChanged("_BombCrate", _BombCrate);
+}
+});
+    addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void  {
+if(wrapper.enabled && sameAsAny(getActorType(653),a.getType(),a.getGroup())){
+        a.applyImpulse(1, 0, 75);
+}
+});
+    addWhenTypeGroupKilledListener(getActorType(653), function(eventActor:Actor, list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        getActor(9).say("Activate On Event PM", "_customEvent_" + "Deactivate");
+}
+});
+    addWhenKilledListener(getActor(52), function(list:Array<Dynamic>):Void {
+if(wrapper.enabled){
+        if(getGameAttribute("Speed Run In Progress"))
+{
+            recycleActor(getActor(54));
+            recycleActor(getActor(55));
+}
+
+}
+});
+    addActorEntersRegionListener(getRegion(1), function(a:Actor, list:Array<Dynamic>):Void  {
+if(wrapper.enabled && sameAs(getActor(3), a)){
+        getActor(8).say("Spawn PM", "_customEvent_" + "Activated");
+}
+});
 
 	}	      	
 	

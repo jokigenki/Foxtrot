@@ -58,19 +58,26 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_403 extends ActorScript
+class SceneEvents_31 extends SceneScript
 {          	
 	
+public var _ExitName:String;
+
  
- 	public function new(dummy:Int, actor:Actor, engine:Engine)
+ 	public function new(dummy:Int, engine:Engine)
 	{
-		super(actor, engine);	
-		
+		super(engine);
+		nameMap.set("Exit Name", "_ExitName");
+_ExitName = "";
+
 	}
 	
 	override public function init()
 	{
-		
+		            runLater(1000 * 0.1, function(timeTask:TimedTask):Void {
+                    sayToScene("Sound Manager PM", "_customBlock_LoopSceneSound", ["Lift Loop SFX",getCurrentSceneName()]);
+}, null);
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)
