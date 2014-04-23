@@ -34,6 +34,40 @@
         </receiver-11-1039>
     </group>
     <group eventID="17" id="-1"/>
+    <group eventID="16" id="0">
+        <event-device-multitouch comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <if comment="false" x="26" y="55">
+                    <group eventID="16" id="-1">
+                        <set-val-19-25 comment="false" x="37" y="103">
+                            <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </mobile-multitouch>
+                        </set-val-19-25>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </mobile-multitouch>
+                            <div comment="false" id="1" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </screen-wh>
+                                <int id="1" val="2"/>
+                            </div>
+                        </less>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Button"/>
+                        </eq>
+                    </and>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+        </event-device-multitouch>
+    </group>
+    <group eventID="16" id="-1"/>
     <group eventID="1" id="0">
         <event-device-multitouch comment="false" x="15" y="32">
             <group eventID="1" id="-1">
@@ -143,40 +177,6 @@
         </event-device-multitouch>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="16" id="0">
-        <event-device-multitouch comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <if comment="false" x="26" y="55">
-                    <group eventID="16" id="-1">
-                        <set-val-19-25 comment="false" x="37" y="103">
-                            <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                <int id="0" val="1"/>
-                            </mobile-multitouch>
-                        </set-val-19-25>
-                    </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <less comment="false" id="0" x="0" y="0">
-                            <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                <int id="0" val="1"/>
-                            </mobile-multitouch>
-                            <div comment="false" id="1" x="0" y="0">
-                                <screen-wh comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="0"/>
-                                </screen-wh>
-                                <int id="1" val="2"/>
-                            </div>
-                        </less>
-                        <eq comment="false" id="1" x="0" y="0">
-                            <get-val-19-24 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="Button"/>
-                        </eq>
-                    </and>
-                </if>
-            </group>
-            <int id="0" val="1"/>
-        </event-device-multitouch>
-    </group>
-    <group eventID="16" id="-1"/>
     <group eventID="2" id="0">
         <event-device-multitouch comment="false" x="15" y="15">
             <group eventID="2" id="-1">

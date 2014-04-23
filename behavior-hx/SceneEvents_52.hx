@@ -121,6 +121,12 @@ propertyChanged("_ConfirmButtonY", _ConfirmButtonY);
             loadGame("mySave", function(success:Bool):Void {
                 if(success)
 {
+                    trace("" + (("" + "LOADED : ") + ("" + getGameAttribute("ControlMode"))));
+                    if(("" + getGameAttribute("ControlMode")) == (""))
+{
+                        setGameAttribute("ControlMode", "Split");
+}
+
                     setGameAttribute("Current Music", "None");
                     setGameAttribute("Current Atlases", "0");
                     setGameAttribute("Game Was Loaded", true);
@@ -138,7 +144,7 @@ propertyChanged("_TotalEggs", _TotalEggs);
 
 }
 
-                    trace("" + (("" + "TOTAL AEEGGS:") + ("" + _TotalEggs)));
+                    trace("" + (("" + "TOTAL EGGS:") + ("" + _TotalEggs)));
                     setGameAttribute("Game Complete", (_TotalEggs == 25));
 }
 
