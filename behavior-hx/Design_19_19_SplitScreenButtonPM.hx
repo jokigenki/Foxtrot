@@ -279,10 +279,14 @@ public function _customBlock_SetActorToControl(__Control:Actor):Void
 {
         _ActorToControl = __Control;
 propertyChanged("_ActorToControl", _ActorToControl);
-        _RightButton.setActorValue("ActorToControl", __Control);
-        _LeftButton.setActorValue("ActorToControl", __Control);
-        _ActionButton.setActorValue("ActorToControl", __Control);
-        trace("" + (("" + "Set actor to control to ") + ("" + ("" + __Control))));
+        if(_RightButton != null)
+{
+            _RightButton.setActorValue("ActorToControl", __Control);
+            _LeftButton.setActorValue("ActorToControl", __Control);
+            _ActionButton.setActorValue("ActorToControl", __Control);
+            trace("" + (("" + "Set actor to control to ") + ("" + ("" + __Control))));
+}
+
 }
 
  
