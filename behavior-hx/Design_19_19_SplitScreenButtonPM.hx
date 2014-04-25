@@ -20,6 +20,7 @@ import com.stencyl.models.Font;
 
 import com.stencyl.Engine;
 import com.stencyl.Input;
+import com.stencyl.Key;
 import com.stencyl.utils.Utils;
 
 import nme.ui.Mouse;
@@ -28,6 +29,7 @@ import nme.display.BlendMode;
 import nme.display.BitmapData;
 import nme.display.Bitmap;
 import nme.events.Event;
+import nme.events.KeyboardEvent;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
@@ -349,18 +351,18 @@ propertyChanged("_CurrentFudge", _CurrentFudge);
 {
             _LastXTouch = asNumber(0);
 propertyChanged("_LastXTouch", _LastXTouch);
-            createRecycledActor(getActorType(1036), ((660 - getScreenWidth()) / 2), (50 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+            createRecycledActor(getActorType(1036), ((620 - getScreenWidth()) / 2), (32 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
             if((_Mode == "Button"))
 {
-                createRecycledActor(getActorType(992), ((660 - getScreenWidth()) / 2), (310 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+                createRecycledActor(getActorType(992), ((610 - getScreenWidth()) / 2), (300 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
                 _LeftButton = getLastCreatedActor();
 propertyChanged("_LeftButton", _LeftButton);
                 getLastCreatedActor().anchorToScreen();
-                createRecycledActor(getActorType(994), ((798 - getScreenWidth()) / 2), (310 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+                createRecycledActor(getActorType(994), ((720 - getScreenWidth()) / 2), (300 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
                 _RightButton = getLastCreatedActor();
 propertyChanged("_RightButton", _RightButton);
                 getLastCreatedActor().anchorToScreen();
-                createRecycledActor(getActorType(996), (566 - ((640 - getScreenWidth()) / 2)), (310 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+                createRecycledActor(getActorType(996), (550 - ((640 - getScreenWidth()) / 2)), (300 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
                 _ActionButton = getLastCreatedActor();
 propertyChanged("_ActionButton", _ActionButton);
                 getLastCreatedActor().anchorToScreen();
