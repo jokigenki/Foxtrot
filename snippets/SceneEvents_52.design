@@ -148,7 +148,7 @@
         </init>
     </group>
     <group eventID="2" id="-1">
-        <and comment="false" x="387" y="125">
+        <and comment="false" x="401" y="209">
             <int id="0" val=""/>
             <noteq comment="false" id="1" x="0" y="0">
                 <get-item comment="false" id="0" x="0" y="0">
@@ -161,7 +161,7 @@
                 <int id="1" val="_Home"/>
             </noteq>
         </and>
-        <and comment="false" x="401" y="209">
+        <and comment="false" x="387" y="125">
             <int id="0" val=""/>
             <noteq comment="false" id="1" x="0" y="0">
                 <get-item comment="false" id="0" x="0" y="0">
@@ -193,23 +193,21 @@
                     <int id="1" val="1"/>
                     <get-val-447-3 comment="false" id="2" x="0" y="0"/>
                 </set-xy>
+                <toggle-image comment="false" x="26" y="136">
+                    <ACTOR eid="10" id="0"/>
+                    <int id="1" val="0"/>
+                </toggle-image>
+                <toggle-image comment="false" x="26" y="163">
+                    <ACTOR eid="11" id="0"/>
+                    <int id="1" val="0"/>
+                </toggle-image>
+                <toggle-image comment="false" x="26" y="190">
+                    <ACTOR eid="12" id="0"/>
+                    <int id="1" val="0"/>
+                </toggle-image>
             </group>
             <int id="0" val="ShowConfirm"/>
         </event-custom>
-    </group>
-    <group eventID="3" id="1">
-        <toggle-image comment="false" x="494" y="150">
-            <ACTOR eid="10" id="0"/>
-            <int id="1" val="0"/>
-        </toggle-image>
-        <toggle-image comment="false" x="494" y="177">
-            <ACTOR eid="11" id="0"/>
-            <int id="1" val="0"/>
-        </toggle-image>
-        <toggle-image comment="false" x="494" y="204">
-            <ACTOR eid="12" id="0"/>
-            <int id="1" val="0"/>
-        </toggle-image>
     </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
@@ -236,30 +234,28 @@
                         <int id="0" val="1"/>
                     </scene-wh>
                 </set-xy>
+                <toggle-image comment="false" x="26" y="160">
+                    <ACTOR eid="10" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
+                <toggle-image comment="false" x="26" y="187">
+                    <ACTOR eid="11" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
+                <toggle-image comment="false" x="26" y="214">
+                    <ACTOR eid="12" id="0"/>
+                    <int id="1" val="1"/>
+                </toggle-image>
             </group>
             <int id="0" val="HideConfirm"/>
         </event-custom>
     </group>
-    <group eventID="4" id="1">
-        <toggle-image comment="false" x="599" y="241">
-            <ACTOR eid="10" id="0"/>
-            <int id="1" val="1"/>
-        </toggle-image>
-        <toggle-image comment="false" x="599" y="268">
-            <ACTOR eid="11" id="0"/>
-            <int id="1" val="1"/>
-        </toggle-image>
-        <toggle-image comment="false" x="599" y="295">
-            <ACTOR eid="12" id="0"/>
-            <int id="1" val="1"/>
-        </toggle-image>
-    </group>
     <group eventID="4" id="-1">
-        <minus comment="false" x="108" y="220">
+        <minus comment="false" x="362" y="298">
             <int id="0" val=""/>
             <int id="1" val="100"/>
         </minus>
-        <minus comment="false" x="185" y="254">
+        <minus comment="false" x="146" y="343">
             <int id="0" val=""/>
             <int id="1" val="100"/>
         </minus>

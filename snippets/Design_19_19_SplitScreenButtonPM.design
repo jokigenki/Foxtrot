@@ -41,40 +41,6 @@
         </receiver-11-1039>
     </group>
     <group eventID="17" id="-1"/>
-    <group eventID="16" id="0">
-        <event-device-multitouch comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <if comment="false" x="26" y="55">
-                    <group eventID="16" id="-1">
-                        <set-val-19-25 comment="false" x="37" y="103">
-                            <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                <int id="0" val="1"/>
-                            </mobile-multitouch>
-                        </set-val-19-25>
-                    </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <less comment="false" id="0" x="0" y="0">
-                            <mobile-multitouch comment="false" id="0" x="0" y="0">
-                                <int id="0" val="1"/>
-                            </mobile-multitouch>
-                            <div comment="false" id="1" x="0" y="0">
-                                <screen-wh comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="0"/>
-                                </screen-wh>
-                                <int id="1" val="2"/>
-                            </div>
-                        </less>
-                        <eq comment="false" id="1" x="0" y="0">
-                            <get-val-19-24 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="Button"/>
-                        </eq>
-                    </and>
-                </if>
-            </group>
-            <int id="0" val="1"/>
-        </event-device-multitouch>
-    </group>
-    <group eventID="16" id="-1"/>
     <group eventID="1" id="0">
         <event-device-multitouch comment="false" x="15" y="32">
             <group eventID="1" id="-1">
@@ -184,6 +150,40 @@
         </event-device-multitouch>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="16" id="0">
+        <event-device-multitouch comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <if comment="false" x="26" y="55">
+                    <group eventID="16" id="-1">
+                        <set-val-19-25 comment="false" x="37" y="103">
+                            <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </mobile-multitouch>
+                        </set-val-19-25>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <less comment="false" id="0" x="0" y="0">
+                            <mobile-multitouch comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </mobile-multitouch>
+                            <div comment="false" id="1" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </screen-wh>
+                                <int id="1" val="2"/>
+                            </div>
+                        </less>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Button"/>
+                        </eq>
+                    </and>
+                </if>
+            </group>
+            <int id="0" val="1"/>
+        </event-device-multitouch>
+    </group>
+    <group eventID="16" id="-1"/>
     <group eventID="2" id="0">
         <event-device-multitouch comment="false" x="15" y="15">
             <group eventID="2" id="-1">
@@ -270,130 +270,160 @@
                         <set-val-19-13 comment="false" x="37" y="215">
                             <int id="0" val="0"/>
                         </set-val-19-13>
-                        <create-actor3 comment="false" x="37" y="235">
-                            <ACTORTYPE eid="1036" id="0"/>
-                            <div comment="false" id="1" x="0" y="0">
+                        <set-val-19-31 comment="false" x="37" y="235">
+                            <int id="0" val="0"/>
+                        </set-val-19-31>
+                        <set-val-19-32 comment="false" x="37" y="255">
+                            <screen-wh comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </screen-wh>
+                        </set-val-19-32>
+                        <set-val-19-29 comment="false" x="37" y="288">
+                            <int id="0" val="0"/>
+                        </set-val-19-29>
+                        <set-val-19-30 comment="false" x="37" y="308">
+                            <screen-wh comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </screen-wh>
+                        </set-val-19-30>
+                        <set-val-19-33 comment="false" x="37" y="341">
+                            <div comment="false" id="0" x="0" y="0">
                                 <minus comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="620"/>
-                                    <screen-wh comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="0"/>
-                                    </screen-wh>
+                                    <get-val-19-30 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-19-29 comment="false" id="1" x="0" y="0"/>
                                 </minus>
-                                <int id="1" val="2"/>
+                                <int id="1" val="100"/>
                             </div>
-                            <minus comment="false" id="2" x="0" y="0">
-                                <int id="0" val="32"/>
-                                <div comment="false" id="1" x="0" y="0">
-                                    <minus comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="384"/>
-                                        <screen-wh comment="false" id="1" x="0" y="0">
-                                            <int id="0" val="1"/>
-                                        </screen-wh>
-                                    </minus>
-                                    <int id="1" val="2"/>
-                                </div>
-                            </minus>
+                        </set-val-19-33>
+                        <set-val-19-34 comment="false" x="37" y="376">
+                            <div comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-val-19-32 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-19-31 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                                <int id="1" val="100"/>
+                            </div>
+                        </set-val-19-34>
+                        <print comment="false" x="37" y="411">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <str-combine comment="false" id="0" x="0" y="0">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="top:"/>
+                                        <get-val-19-31 comment="false" id="1" x="0" y="0"/>
+                                    </str-combine>
+                                    <str-combine comment="false" id="1" x="0" y="0">
+                                        <int id="0" val=" bottom:"/>
+                                        <get-val-19-32 comment="false" id="1" x="0" y="0"/>
+                                    </str-combine>
+                                </str-combine>
+                                <str-combine comment="false" id="1" x="0" y="0">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <int id="0" val=" left:"/>
+                                        <get-val-19-29 comment="false" id="1" x="0" y="0"/>
+                                    </str-combine>
+                                    <str-combine comment="false" id="1" x="0" y="0">
+                                        <int id="0" val=" right:"/>
+                                        <get-val-19-30 comment="false" id="1" x="0" y="0"/>
+                                    </str-combine>
+                                </str-combine>
+                            </str-combine>
+                        </print>
+                        <create-actor3 comment="false" x="37" y="451">
+                            <ACTORTYPE eid="1036" id="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-val-19-33 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="4"/>
+                            </times>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <int id="0" val="21"/>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <get-val-19-34 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="4"/>
+                                </times>
+                            </plus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <if comment="false" x="37" y="290">
+                        <anchor-screen comment="false" x="37" y="493">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </anchor-screen>
+                        <if comment="false" x="37" y="520">
                             <group eventID="3" id="-1">
-                                <create-actor3 comment="false" x="48" y="320">
+                                <create-actor3 comment="false" x="48" y="550">
                                     <ACTORTYPE eid="992" id="0"/>
-                                    <div comment="false" id="1" x="0" y="0">
-                                        <minus comment="false" id="0" x="0" y="0">
-                                            <int id="0" val="610"/>
-                                            <screen-wh comment="false" id="1" x="0" y="0">
-                                                <int id="0" val="0"/>
-                                            </screen-wh>
-                                        </minus>
-                                        <int id="1" val="2"/>
-                                    </div>
+                                    <times comment="false" id="1" x="0" y="0">
+                                        <get-val-19-33 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="4"/>
+                                    </times>
                                     <minus comment="false" id="2" x="0" y="0">
-                                        <int id="0" val="300"/>
-                                        <div comment="false" id="1" x="0" y="0">
-                                            <minus comment="false" id="0" x="0" y="0">
-                                                <int id="0" val="384"/>
-                                                <screen-wh comment="false" id="1" x="0" y="0">
-                                                    <int id="0" val="1"/>
-                                                </screen-wh>
-                                            </minus>
-                                            <int id="1" val="2"/>
-                                        </div>
+                                        <get-val-19-32 comment="false" id="0" x="0" y="0"/>
+                                        <plus comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="64"/>
+                                            <times comment="false" id="1" x="0" y="0">
+                                                <get-val-19-34 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="6"/>
+                                            </times>
+                                        </plus>
                                     </minus>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-val-19-26 comment="false" x="48" y="375">
+                                <set-val-19-26 comment="false" x="48" y="597">
                                     <ACTOR eid="lastcreated" id="0"/>
                                 </set-val-19-26>
-                                <anchor-screen comment="false" x="48" y="402">
+                                <anchor-screen comment="false" x="48" y="624">
                                     <ACTOR eid="lastcreated" id="0"/>
                                 </anchor-screen>
-                                <create-actor3 comment="false" x="48" y="429">
+                                <create-actor3 comment="false" x="48" y="651">
                                     <ACTORTYPE eid="994" id="0"/>
-                                    <div comment="false" id="1" x="0" y="0">
-                                        <minus comment="false" id="0" x="0" y="0">
-                                            <int id="0" val="720"/>
-                                            <screen-wh comment="false" id="1" x="0" y="0">
-                                                <int id="0" val="0"/>
-                                            </screen-wh>
-                                        </minus>
-                                        <int id="1" val="2"/>
-                                    </div>
-                                    <minus comment="false" id="2" x="0" y="0">
-                                        <int id="0" val="300"/>
-                                        <div comment="false" id="1" x="0" y="0">
-                                            <minus comment="false" id="0" x="0" y="0">
-                                                <int id="0" val="384"/>
-                                                <screen-wh comment="false" id="1" x="0" y="0">
-                                                    <int id="0" val="1"/>
-                                                </screen-wh>
-                                            </minus>
-                                            <int id="1" val="2"/>
-                                        </div>
-                                    </minus>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <plus comment="false" id="0" x="0" y="0">
+                                            <get-xy comment="false" id="0" x="0" y="0">
+                                                <ACTOR eid="var" id="0" vid="26"/>
+                                                <int id="1" val="0"/>
+                                            </get-xy>
+                                            <get-wh comment="false" id="1" x="0" y="0">
+                                                <ACTOR eid="var" id="0" vid="26"/>
+                                                <int id="1" val="0"/>
+                                            </get-wh>
+                                        </plus>
+                                        <int id="1" val="20"/>
+                                    </plus>
+                                    <get-xy comment="false" id="2" x="0" y="0">
+                                        <ACTOR eid="var" id="0" vid="26"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-val-19-27 comment="false" x="48" y="484">
+                                <set-val-19-27 comment="false" x="48" y="701">
                                     <ACTOR eid="lastcreated" id="0"/>
                                 </set-val-19-27>
-                                <anchor-screen comment="false" x="48" y="511">
+                                <anchor-screen comment="false" x="48" y="728">
                                     <ACTOR eid="lastcreated" id="0"/>
                                 </anchor-screen>
-                                <create-actor3 comment="false" x="48" y="538">
+                                <create-actor3 comment="false" x="48" y="755">
                                     <ACTORTYPE eid="996" id="0"/>
                                     <minus comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="550"/>
-                                        <div comment="false" id="1" x="0" y="0">
-                                            <minus comment="false" id="0" x="0" y="0">
-                                                <int id="0" val="640"/>
-                                                <screen-wh comment="false" id="1" x="0" y="0">
-                                                    <int id="0" val="0"/>
-                                                </screen-wh>
-                                            </minus>
-                                            <int id="1" val="2"/>
-                                        </div>
+                                        <get-val-19-30 comment="false" id="0" x="0" y="0"/>
+                                        <plus comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="64"/>
+                                            <times comment="false" id="1" x="0" y="0">
+                                                <get-val-19-33 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="4"/>
+                                            </times>
+                                        </plus>
                                     </minus>
-                                    <minus comment="false" id="2" x="0" y="0">
-                                        <int id="0" val="300"/>
-                                        <div comment="false" id="1" x="0" y="0">
-                                            <minus comment="false" id="0" x="0" y="0">
-                                                <int id="0" val="384"/>
-                                                <screen-wh comment="false" id="1" x="0" y="0">
-                                                    <int id="0" val="1"/>
-                                                </screen-wh>
-                                            </minus>
-                                            <int id="1" val="2"/>
-                                        </div>
-                                    </minus>
+                                    <get-xy comment="false" id="2" x="0" y="0">
+                                        <ACTOR eid="var" id="0" vid="26"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-val-19-28 comment="false" x="48" y="593">
+                                <set-val-19-28 comment="false" x="48" y="802">
                                     <ACTOR eid="lastcreated" id="0"/>
                                 </set-val-19-28>
-                                <anchor-screen comment="false" x="48" y="620">
+                                <anchor-screen comment="false" x="48" y="829">
                                     <ACTOR eid="lastcreated" id="0"/>
                                 </anchor-screen>
-                                <custom-1039 comment="false" x="48" y="647">
+                                <custom-1039 comment="false" x="48" y="856">
                                     <ACTOR eid="var" id="0" vid="4"/>
                                 </custom-1039>
                             </group>
@@ -438,16 +468,37 @@
     <group eventID="5" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <set-font-new comment="false" x="26" y="40">
-                    <FONT eid="742" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="67">
-                    <get-val-19-24 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="200"/>
-                    <int id="2" val="50"/>
-                </draw-text>
+                <set-color comment="false" x="26" y="40">
+                    <color b="0" g="200" id="0" r="255"/>
+                </set-color>
+                <set-alpha comment="false" x="26" y="67">
+                    <int id="0" val="50"/>
+                </set-alpha>
+                <drawfill-rect comment="false" x="26" y="87">
+                    <int id="0" val="1"/>
+                    <get-val-19-29 comment="false" id="1" x="0" y="0"/>
+                    <get-val-19-31 comment="false" id="2" x="0" y="0"/>
+                    <minus comment="false" id="3" x="0" y="0">
+                        <get-val-19-30 comment="false" id="0" x="0" y="0"/>
+                        <get-val-19-29 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                    <minus comment="false" id="4" x="0" y="0">
+                        <get-val-19-32 comment="false" id="0" x="0" y="0"/>
+                        <get-val-19-31 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </drawfill-rect>
             </group>
         </draw>
+    </group>
+    <group eventID="5" id="1">
+        <set-font-new comment="false" x="206" y="226">
+            <FONT eid="742" id="0"/>
+        </set-font-new>
+        <draw-text comment="false" x="206" y="253">
+            <get-val-19-24 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="200"/>
+            <int id="2" val="50"/>
+        </draw-text>
     </group>
     <group eventID="5" id="-1"/>
     <group eventID="14" id="0">

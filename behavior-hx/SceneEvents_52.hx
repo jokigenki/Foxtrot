@@ -75,6 +75,9 @@ public var _CancelButtonY:Float;
         getActor(12).setY(_CancelButtonY);
         getActor(11).setY(_ConfirmButtonY);
         getActor(10).setY(_ConfirmPanelY);
+        getActor(10).enableActorDrawing();
+        getActor(11).enableActorDrawing();
+        getActor(12).enableActorDrawing();
 }
 
     public function _customEvent_HideConfirm():Void
@@ -82,6 +85,9 @@ public var _CancelButtonY:Float;
         getActor(12).setY(getSceneHeight());
         getActor(11).setY(getSceneHeight());
         getActor(10).setY(getSceneHeight());
+        getActor(10).disableActorDrawing();
+        getActor(11).disableActorDrawing();
+        getActor(12).disableActorDrawing();
 }
 
     public function _customEvent_ResetGame():Void

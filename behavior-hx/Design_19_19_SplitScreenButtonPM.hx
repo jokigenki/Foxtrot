@@ -20,7 +20,6 @@ import com.stencyl.models.Font;
 
 import com.stencyl.Engine;
 import com.stencyl.Input;
-import com.stencyl.Key;
 import com.stencyl.utils.Utils;
 
 import nme.ui.Mouse;
@@ -29,7 +28,6 @@ import nme.display.BlendMode;
 import nme.display.BitmapData;
 import nme.display.Bitmap;
 import nme.events.Event;
-import nme.events.KeyboardEvent;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
@@ -99,7 +97,19 @@ public var _RightButton:Actor;
 
 public var _LeftButton:Actor;
 
+public var _LeftScreenEdge:Float;
+
 public var _ActionButton:Actor;
+
+public var _TopScreenEdge:Float;
+
+public var _RightScreenEdge:Float;
+
+public var _OnePercentOfHeight:Float;
+
+public var _BottomScreenEdge:Float;
+
+public var _OnePercentOfWidth:Float;
     
 
 /* Params are:*/
@@ -328,7 +338,19 @@ nameMap.set("Mode", "_Mode");
 _Mode = "";
 nameMap.set("Right Button", "_RightButton");
 nameMap.set("Left Button", "_LeftButton");
+nameMap.set("Left Screen Edge", "_LeftScreenEdge");
+_LeftScreenEdge = 0.0;
 nameMap.set("Action Button", "_ActionButton");
+nameMap.set("Top Screen Edge", "_TopScreenEdge");
+_TopScreenEdge = 0.0;
+nameMap.set("Right Screen Edge", "_RightScreenEdge");
+_RightScreenEdge = 0.0;
+nameMap.set("One Percent Of Height", "_OnePercentOfHeight");
+_OnePercentOfHeight = 0.0;
+nameMap.set("Bottom Screen Edge", "_BottomScreenEdge");
+_BottomScreenEdge = 0.0;
+nameMap.set("One Percent Of Width", "_OnePercentOfWidth");
+_OnePercentOfWidth = 0.0;
 
 	}
 	
@@ -351,18 +373,32 @@ propertyChanged("_CurrentFudge", _CurrentFudge);
 {
             _LastXTouch = asNumber(0);
 propertyChanged("_LastXTouch", _LastXTouch);
-            createRecycledActor(getActorType(1036), ((620 - getScreenWidth()) / 2), (32 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+            _TopScreenEdge = asNumber(0);
+propertyChanged("_TopScreenEdge", _TopScreenEdge);
+            _BottomScreenEdge = asNumber(getScreenHeight());
+propertyChanged("_BottomScreenEdge", _BottomScreenEdge);
+            _LeftScreenEdge = asNumber(0);
+propertyChanged("_LeftScreenEdge", _LeftScreenEdge);
+            _RightScreenEdge = asNumber(getScreenWidth());
+propertyChanged("_RightScreenEdge", _RightScreenEdge);
+            _OnePercentOfWidth = asNumber(((_RightScreenEdge - _LeftScreenEdge) / 100));
+propertyChanged("_OnePercentOfWidth", _OnePercentOfWidth);
+            _OnePercentOfHeight = asNumber(((_BottomScreenEdge - _TopScreenEdge) / 100));
+propertyChanged("_OnePercentOfHeight", _OnePercentOfHeight);
+            trace("" + (("" + (("" + (("" + "top:") + ("" + _TopScreenEdge))) + ("" + (("" + " bottom:") + ("" + _BottomScreenEdge))))) + ("" + (("" + (("" + " left:") + ("" + _LeftScreenEdge))) + ("" + (("" + " right:") + ("" + _RightScreenEdge)))))));
+            createRecycledActor(getActorType(1036), (_OnePercentOfWidth * 4), (21 + (_OnePercentOfHeight * 4)), Script.FRONT);
+            getLastCreatedActor().anchorToScreen();
             if((_Mode == "Button"))
 {
-                createRecycledActor(getActorType(992), ((610 - getScreenWidth()) / 2), (300 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+                createRecycledActor(getActorType(992), (_OnePercentOfWidth * 4), (_BottomScreenEdge - (64 + (_OnePercentOfHeight * 6))), Script.FRONT);
                 _LeftButton = getLastCreatedActor();
 propertyChanged("_LeftButton", _LeftButton);
                 getLastCreatedActor().anchorToScreen();
-                createRecycledActor(getActorType(994), ((720 - getScreenWidth()) / 2), (300 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+                createRecycledActor(getActorType(994), ((_LeftButton.getX() + (_LeftButton.getWidth())) + 20), _LeftButton.getY(), Script.FRONT);
                 _RightButton = getLastCreatedActor();
 propertyChanged("_RightButton", _RightButton);
                 getLastCreatedActor().anchorToScreen();
-                createRecycledActor(getActorType(996), (550 - ((640 - getScreenWidth()) / 2)), (300 - ((384 - getScreenHeight()) / 2)), Script.FRONT);
+                createRecycledActor(getActorType(996), (_RightScreenEdge - (64 + (_OnePercentOfWidth * 4))), _LeftButton.getY(), Script.FRONT);
                 _ActionButton = getLastCreatedActor();
 propertyChanged("_ActionButton", _ActionButton);
                 getLastCreatedActor().anchorToScreen();

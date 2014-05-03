@@ -262,7 +262,7 @@ propertyChanged("_TargetYScreen", _TargetYScreen);
 propertyChanged("_CurrentXScreen", _CurrentXScreen);
                 _CurrentYScreen = asNumber(_TargetYScreen);
 propertyChanged("_CurrentYScreen", _CurrentYScreen);
-                _CameraGizmo.moveTo((_ScreenCentreX + (_ScreenGapX * _TargetXScreen)), (_ScreenCentreY + (_ScreenGapY * _TargetYScreen)), _SlideTime, Quad.easeOut);
+                _CameraGizmo.moveTo(Math.round((_ScreenCentreX + (_ScreenGapX * _TargetXScreen))), Math.round((_ScreenCentreY + (_ScreenGapY * _TargetYScreen))), _SlideTime, Quad.easeOut);
                 _IsSliding = true;
 propertyChanged("_IsSliding", _IsSliding);
                 runLater(1000 * _SlideTime, function(timeTask:TimedTask):Void {

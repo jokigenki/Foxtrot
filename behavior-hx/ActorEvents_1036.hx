@@ -20,7 +20,6 @@ import com.stencyl.models.Font;
 
 import com.stencyl.Engine;
 import com.stencyl.Input;
-import com.stencyl.Key;
 import com.stencyl.utils.Utils;
 
 import nme.ui.Mouse;
@@ -29,7 +28,6 @@ import nme.display.BlendMode;
 import nme.display.BitmapData;
 import nme.display.Bitmap;
 import nme.events.Event;
-import nme.events.KeyboardEvent;
 import nme.events.TouchEvent;
 import nme.net.URLLoader;
 
