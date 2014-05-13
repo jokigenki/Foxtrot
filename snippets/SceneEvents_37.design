@@ -288,7 +288,7 @@
             </group>
         </init>
     </group>
-    <group eventID="8" id="2">
+    <group eventID="8" id="1">
         <if comment="false" x="327" y="407">
             <group eventID="4" id="-1">
                 <set-attribute comment="false" x="338" y="432">
@@ -616,11 +616,16 @@
                     <int id="0" val="0.1"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>
-                <custom-949 comment="false" x="26" y="835">
-                    <SOUND eid="962" id="0"/>
-                    <SOUND eid="466" id="1"/>
-                    <int id="2" val="3.3"/>
-                </custom-949>
+                <if comment="false" x="26" y="835">
+                    <group eventID="10" id="-1">
+                        <custom-949 comment="false" x="37" y="860">
+                            <SOUND eid="962" id="0"/>
+                            <SOUND eid="466" id="1"/>
+                            <int id="2" val="3.3"/>
+                        </custom-949>
+                    </group>
+                    <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="GooseTankKilled"/>
         </event-custom>
